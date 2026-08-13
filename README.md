@@ -91,8 +91,8 @@ See the [product architecture](docs/architecture/PRODUCT_ARCHITECTURE.md) and [c
 Download the v0.2.0 x64 MSI or NSIS installer from the [public GitHub Release](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.2.0). The release includes a `SHA256SUMS` file; verify a download in PowerShell with:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 ".\Desk Code Agent_0.2.0_x64_en-US.msi"
-Get-FileHash -Algorithm SHA256 ".\Desk Code Agent_0.2.0_x64-setup.exe"
+Get-FileHash -Algorithm SHA256 ".\Desk.Code.Agent_0.2.0_x64_en-US.msi"
+Get-FileHash -Algorithm SHA256 ".\Desk.Code.Agent_0.2.0_x64-setup.exe"
 ```
 
 The installers are currently unsigned because trusted signing credentials are deferred. Windows may show its normal publisher or reputation warning. The desktop requires WebView2; when it is absent, Tauri's default installer mode may download Microsoft's WebView2 bootstrapper once. Repository inspection does not require Git. Node, Rust, Visual Studio, model weights, and a model server are not bundled.

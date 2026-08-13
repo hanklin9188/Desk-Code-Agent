@@ -13,14 +13,14 @@ For active continuation work, remaining gates use `READY`, `ACTIVE`,
 
 ## Active maintenance work package — DESKTOP_UX_V0_2_0_RELEASE_CANDIDATE
 
-State: `V0_2_0_RELEASE_CANDIDATE_PASS_DRAFT_PR_OPEN_CI_GREEN`
+State: `V0_2_0_RELEASE_PUBLISHED`
 
 The owner reopened the published product for a bounded first-use, visual-
 comfort, Windows package, and GitHub presentation refinement. This does not
 reopen capability research, model selection, or mutation.
 `RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT` and
 `KEEP_MUTATION_DISABLED` remain unchanged. The public v0.1.0 history and assets
-remain immutable; v0.2.0 is a separate review-branch release candidate.
+remain immutable; v0.2.0 is now the current public release.
 
 Completed implementation:
 
@@ -77,14 +77,15 @@ Validation status:
 - independent Spec/Product and Security/Engineering re-reviews: PASS with no
   unresolved High or Medium findings;
 - scoped staging/privacy review, intentional branch commits, normal branch
-  push, and Draft PR: PASS; GitHub PR #1 is open as a draft;
+  push, PR #1 merge, annotated tag, and public GitHub Release: PASS;
 - remote CI: PASS for both the Linux design/test/web-build job and the Windows
   native fmt/test/clippy job.
 
-The authorized release-candidate work package is complete. Remaining actions
-are protected publication decisions: owner review/merge, tag, GitHub Release,
-binary upload, and social-preview Settings upload. They are not performed in
-this work package without separate post-review authorization.
+The authorized v0.2.0 publication work package is complete. PR #1 was merged
+with merge commit `feb3739601c1577818b9faf346a528d95ef09f14`; annotated tag
+`v0.2.0` targets that commit; the public non-draft release contains the
+checksum-verified unsigned MSI and NSIS. Optional trusted signing and GitHub
+Settings social-preview upload remain deferred.
 
 Explicitly deferred/out of scope: GitHub URL cloning, semantic indexing or task
 execution against a desktop-selected repository, mutation, a new model/research
@@ -979,13 +980,13 @@ release supplement. Use the newest immutable `m10-release-prep-*` result and
 
 ## Protected actions
 
-### Active v0.2.0 release-candidate closure — 2026-08-13
+### Completed v0.2.0 public-release closure — 2026-08-13
 
-The owner-authorized `implementation/V0_2_0_RELEASE_CANDIDATE_CONTRACT.md`
-supersedes the historical no-Git-delivery paragraph below for this narrowly
-scoped work package. It permits an intentional feature-branch commit, normal
-push, and Draft PR only; merge, tag, GitHub Release, binary upload, signing,
-force push, social-preview mutation, and direct main push remain forbidden.
+The owner-authorized final release invocation extended the reviewed candidate
+contract to PR #1 merge, annotated `v0.2.0` tag creation, public GitHub Release,
+and unsigned MSI/NSIS/checksum publication. Force push, signing without trusted
+credentials, v0.1.0 mutation, model publication, and autonomous mutation remain
+forbidden.
 
 The final native acquisition boundary starts no Git or other child process,
 reads bounded repository-reported HEAD/ref text as untrusted metadata, does not
@@ -997,12 +998,17 @@ and clean-profile NSIS lifecycle pass. Exact build-input source identity is
 `24f2bd1f71ca66c2a3f9db01e166fc8fb368bf9dd7f9ee704cab04be5bca70ec`
 (2,390 files; 89,503,124 bytes; Linux/NTFS exact). Canonical MSI/NSIS hashes
 are recorded in `WINDOWS_PACKAGING_RELEASE_QA_REPORT.v4.json`; v2/v3 packages
-are superseded and must not be published. Exact staged privacy review and both
-independent final reviews passed; commits `c5665d9` and `8bcdeb6` are pushed to
-`agent/desktop-ux-v0.2.0`; Draft PR #1 is open; and both remote CI jobs are
-green. Target-model and benchmark calls remain zero. Merge, tag, release,
-binary upload, and social-preview mutation remain protected and unperformed.
+are superseded and were not published. Exact staged privacy review and both
+independent final reviews passed; PR #1 merged to public `main`; annotated tag
+`v0.2.0` targets the merge commit; the release is public/latest; and fresh
+downloads of both installers passed the published checksum manifest. The
+canonical closure record is `PUBLIC_RELEASE_v0.2.0_REPORT.v1.json`. Target-
+model and benchmark calls remain zero. Signing and optional GitHub Settings
+social-preview upload remain deferred.
 
 The existing Qwen3.5-4B and explicitly approved Qwen2.5-Coder-3B snapshots remain in ignored runtime caches. For tournament Session B, the owner separately authorized only the exact BF16 snapshots `Qwen/Qwen2.5-Coder-7B-Instruct@c03e6d358207e414f1eca0bb1891e29f1db0e242`, `TIGER-Lab/FIM-7B@5a1d4294185e4fa0bbd40750c87d0beab7e67a3a`, and `SWE-bench/SWE-agent-LM-7B@a44fce0216647696a7437126e82fc1eaa34008d7`, plus derived-at-load vLLM FP8 per-tensor validation. Those snapshots are now verified in the ignored cache. Authorization does not extend to another model/revision, a pre-quantized snapshot, AWQ/GPTQ/INT4, automatic fallback, dependency installation, sudo/admin operations, Git commit/remote/push/PR, tag, release, signing, or other protected external action. No external GitHub write is authorized by this plan.
 
-Repository boundary: Desk Code Agent is now an independent local Git repository at its project root with branch `main`, no remote and no commits. The unrelated outer repository and its `https://github.com/czhang024/ParallelControl` remote were not modified. All project files remain untracked pending full validation, secret/staging review and an intentional local baseline commit. Adding the canonical remote or any GitHub write remains `NEED_APPROVAL`.
+Repository boundary: Desk Code Agent is an independent repository published at
+`hanklin9188/Desk-Code-Agent`. Public `main`, PR #1, annotated `v0.2.0`, and the
+v0.2.0 release are verified. Unrelated local research artifacts remain
+untracked and excluded from publication.

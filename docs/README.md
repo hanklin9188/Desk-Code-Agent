@@ -9,7 +9,7 @@
 5. [Visualization dashboard](productization/VISUALIZATION_DASHBOARD.md)
 6. [Demo plan](productization/DEMO_PLAN.md)
 7. [Media capture and storyboard](media/README.md)
-8. [v0.2.0 release-candidate notes](releases/v0.2.0.md)
+8. [v0.2.0 release notes](releases/v0.2.0.md)
 9. [v0.1.0 historical release notes](releases/v0.1.0.md)
 10. [Third-party notices](../THIRD_PARTY_NOTICES.md)
 11. [Apache-2.0 root license](../LICENSE)

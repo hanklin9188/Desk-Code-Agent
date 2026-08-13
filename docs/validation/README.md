@@ -2,7 +2,7 @@
 
 Records here contain exact commands, environment, status, artifact hashes and open risks. `NOT_RUN`, `TIMEOUT`, `CANCELLED` and `UNKNOWN` are never converted to `PASS`. Conversation statements are not evidence.
 
-## Current v0.2.0 release-candidate validation
+## Current v0.2.0 release validation
 
 - [`2026-08-13-desktop-ux-onboarding-refinement.md`](2026-08-13-desktop-ux-onboarding-refinement.md) — empty-first onboarding, native read-only repository inspection, typography/theme/motion/responsive refinement, and explicit guided-demo separation.
 - [`FINAL_MEDIA_CAPTURE_REPORT.v2.json`](FINAL_MEDIA_CAPTURE_REPORT.v2.json) — current 1440×900 presentation media, social preview, source closure, privacy scan, and checksums.
@@ -33,6 +33,7 @@ append-only public-release report carry the release closure.
 
 ## Final completion evidence
 
+- [`PUBLIC_RELEASE_v0.2.0_REPORT.v1.json`](PUBLIC_RELEASE_v0.2.0_REPORT.v1.json)
 - [`PUBLIC_RELEASE_v0.1.0_REPORT.v1.json`](PUBLIC_RELEASE_v0.1.0_REPORT.v1.json)
 - [`FINAL_APACHE_PUBLICATION_CLOSURE_REPORT.v1.json`](FINAL_APACHE_PUBLICATION_CLOSURE_REPORT.v1.json)
 - [`FINAL_PROJECT_STATE.v2.json`](FINAL_PROJECT_STATE.v2.json)

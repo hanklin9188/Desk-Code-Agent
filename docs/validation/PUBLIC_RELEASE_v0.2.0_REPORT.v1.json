@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "reportId": "desk-code-agent-public-release-v0.2.0-v1",
+  "status": "PASS_PUBLIC_UNSIGNED_WINDOWS_RELEASE",
+  "repository": "hanklin9188/Desk-Code-Agent",
+  "pullRequest": {
+    "number": 1,
+    "url": "https://github.com/hanklin9188/Desk-Code-Agent/pull/1",
+    "finalHeadSha": "1e720e9307a5f85d55af5c6298eb52b3ac05da68",
+    "mergeMethod": "MERGE_COMMIT",
+    "mergeCommitSha": "feb3739601c1577818b9faf346a528d95ef09f14",
+    "mergedAt": "2026-08-13T05:41:21Z",
+    "requiredCi": {
+      "designTestsAndWebBuild": "PASS",
+      "nativeRepositoryBoundary": "PASS"
+    }
+  },
+  "releasedSource": {
+    "mainSha": "feb3739601c1577818b9faf346a528d95ef09f14",
+    "tag": "v0.2.0",
+    "annotatedTagObjectSha": "6a15fc6ddc0250334b84aa6e61261548a98fce93",
+    "tagTargetSha": "feb3739601c1577818b9faf346a528d95ef09f14",
+    "buildInputIdentity": {
+      "files": 2390,
+      "bytes": 89503124,
+      "sha256": "24f2bd1f71ca66c2a3f9db01e166fc8fb368bf9dd7f9ee704cab04be5bca70ec",
+      "linuxWindowsNtfsEquality": "PASS_EXACT"
+    }
+  },
+  "githubRelease": {
+    "id": "RE_kwDOT22G_M4WCQO_",
+    "title": "Desk Code Agent v0.2.0",
+    "url": "https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.2.0",
+    "publishedAt": "2026-08-13T05:41:58Z",
+    "draft": false,
+    "prerelease": false,
+    "latest": true
+  },
+  "publicAssets": [
+    {
+      "kind": "MSI",
+      "filename": "Desk.Code.Agent_0.2.0_x64_en-US.msi",
+      "bytes": 2123626,
+      "sha256": "279f4a8dc6c97db5e1af540627d3892c6827f2b607d25ecd72adc6ccfc854f86",
+      "signing": "NOT_SIGNED",
+      "freshDownloadVerification": "PASS"
+    },
+    {
+      "kind": "NSIS",
+      "filename": "Desk.Code.Agent_0.2.0_x64-setup.exe",
+      "bytes": 1271455,
+      "sha256": "732b2319f9a1dd4618c650d7dd1c1d88b60358edc6ccc840f65139603c132b4b",
+      "signing": "NOT_SIGNED",
+      "freshDownloadVerification": "PASS"
+    },
+    {
+      "kind": "SHA256SUMS",
+      "filename": "SHA256SUMS-v0.2.0.txt",
+      "bytes": 204,
+      "sha256": "2573a33064e951dec737dfb8503139d508b95ffff560c911c8a3c3ea0702c464",
+      "freshDownloadVerification": "PASS_BOTH_PUBLIC_INSTALLERS"
+    }
+  ],
+  "dependencyAndLicenseClosure": {
+    "runtimeDependencies": 205,
+    "npm": 5,
+    "cargo": 200,
+    "authoritativeTexts": "205/205",
+    "uniquePinnedTexts": 126,
+    "unresolvedLegalBlockers": 0,
+    "sbomSha256": "a4276b84e5263ef26acee8d5bff33b96b3cdaf773df723838796bff2a31c7ba0",
+    "npmVulnerabilities": 0,
+    "rustSecVulnerabilities": 0,
+    "rustSecInformational": {
+      "unmaintained": 16,
+      "unsound": 1,
+      "disposition": "REVIEWED_AND_DISCLOSED_FOR_WINDOWS_CLOSURE"
+    }
+  },
+  "repositoryAcquisitionSecurity": {
+    "gitOrArbitraryChildProcessStarted": 0,
+    "maliciousFilterExecution": 0,
+    "workingTreeStatus": "NOT_CHECKED_SAFETY_BOUNDARY",
+    "repositoryMetadataTrust": "UNTRUSTED_REPOSITORY_REPORTED",
+    "absolutePathRendered": false,
+    "gitInstallationRequired": false
+  },
+  "publicSurfaceVerification": {
+    "repository": "PASS_HTTP_200",
+    "readme": "PASS_V0_2_0_CURRENT_RELEASE_AND_FIVE_CURRENT_UI_SCREENSHOTS",
+    "license": "PASS_APACHE_2_0",
+    "thirdPartyNotices": "PASS",
+    "benchmarks": "PASS",
+    "documentation": "PASS",
+    "media": "PASS_FIVE_SCREENSHOTS_AND_SOCIAL_PREVIEW_HTTP_200",
+    "publicFacingLocalPathHits": 0
+  },
+  "productInvariants": {
+    "researchState": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "mutationState": "KEEP_MUTATION_DISABLED",
+    "targetModelCalls": 0,
+    "benchmarkCalls": 0
+  },
+  "accessibility": {
+    "narratorSpokenOutput": "DEFERRED_NONBLOCKING_NO_CERTIFICATION_CLAIM"
+  },
+  "deferred": [
+    "TRUSTED_WINDOWS_SIGNING_CREDENTIALS",
+    "OPTIONAL_GITHUB_SETTINGS_SOCIAL_PREVIEW_UPLOAD"
+  ]
+}
