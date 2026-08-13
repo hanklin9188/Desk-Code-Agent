@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "preregistration": {
+    "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_PREREGISTRATION.v1.json",
+    "sha256": "41c24a0c8eacdbc57636e942ef0c4c78047dbc899bdaed83e83a2d421466a926"
+  },
+  "method": "STATIC_DOTTED_FIELD_EXTRACTION_PLUS_RUNTIME_PATH_EXISTENCE",
+  "rows": [
+    {
+      "source": "runner",
+      "field": "model.backendVersion",
+      "valid": true
+    },
+    {
+      "source": "runner",
+      "field": "model.modelId",
+      "valid": true
+    },
+    {
+      "source": "runner",
+      "field": "model.revision",
+      "valid": true
+    },
+    {
+      "source": "runner",
+      "field": "schedule",
+      "valid": true
+    },
+    {
+      "source": "runner",
+      "field": "seed",
+      "valid": true
+    },
+    {
+      "source": "materializer",
+      "field": "control.interface",
+      "valid": true
+    },
+    {
+      "source": "materializer",
+      "field": "control.systemPrompt",
+      "valid": true
+    },
+    {
+      "source": "materializer",
+      "field": "schema",
+      "valid": true
+    },
+    {
+      "source": "materializer",
+      "field": "treatment.suffix",
+      "valid": true
+    },
+    {
+      "source": "materializer",
+      "field": "treatment.systemPromptConstruction",
+      "valid": true
+    }
+  ],
+  "validReferences": 10,
+  "invalidReferences": 0
+}

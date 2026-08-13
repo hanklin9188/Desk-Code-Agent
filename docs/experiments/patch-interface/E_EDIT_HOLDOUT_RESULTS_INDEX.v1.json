@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "indexId": "dca-e-edit-untouched-holdout-results-index-v1",
+  "status": "PASS_COMPLETE",
+  "generatedAt": "2026-08-11T03:14:15.580Z",
+  "artifacts": {
+    "candidate": {
+      "path": "docs/experiments/patch-interface/E_EDIT_CANDIDATE.v1.json",
+      "sha256": "7abdcd7cfe84b3e3e6844ecc81c8a4c783a9af53e45dcbb0489fa0e157a32fbc"
+    },
+    "preregistration": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PREREGISTRATION.v2.json",
+      "sha256": "5e1d4ece269cd807f625ef7f0c41b1867dce5600f25e4080bfcf02746e4833c5"
+    },
+    "seal": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_SEAL.v2.json",
+      "sha256": "51b7c6d79d7f07eab84017488aeae6aa8a061430af36eda3df34348b76f9f823"
+    },
+    "sessionA": {
+      "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_SESSION_A.v2.json",
+      "sha256": "103143d67d7636771df5244d7168cee4b1b6eda4675489cf2f175b64bbc294dd"
+    },
+    "sessionB": {
+      "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_SESSION_B.v2.json",
+      "sha256": "8a553c4cd080c71282c71148f146bf9198b359b1ff16268eeba1e839312ec4b9"
+    },
+    "baseline": {
+      "path": "docs/experiments/runs/e-edit-holdout-baseline-20260811T110600Z/result.json",
+      "sha256": "8358b36d6bebd8b5a5322497698e7679552f5018c9825ee83febcb060b51323e"
+    },
+    "eEdit": {
+      "path": "docs/experiments/runs/e-edit-holdout-p2-20260811T111300Z/result.json",
+      "sha256": "e6eb86b1837525581c134fc0e3cc24ea51e83bfeac7594af76809338b17f797f"
+    },
+    "retry": {
+      "path": "docs/experiments/runs/e-edit-holdout-retry-v1/result.json",
+      "sha256": "b317464943c2c9623353143a42539208bf4706ff9e65720b63b81c0bb6c63592"
+    },
+    "paired": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PAIRED_RESULTS.v2.json",
+      "sha256": "9564d1c970c08fe2654c62b41ec0fb8d71f6c10d4e803338891fd76effef1f20"
+    },
+    "promotion": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PROMOTION_DECISION.v2.json",
+      "sha256": "816d457d295654806b6aac3d35bb710c83c6fceca8e22920a58f7774b788be22"
+    },
+    "failureDecomposition": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_FAILURE_DECOMPOSITION.v1.json",
+      "sha256": "69cd74acf9f3fc6e39bc21727f827f56d67276d41b54fb4213b1ad2b05d9e10c"
+    },
+    "productDecision": {
+      "path": "docs/experiments/patch-interface/E_EDIT_PRODUCT_DECISION.v1.json",
+      "sha256": "1d945242f7b6e6b4050d229a68c1cff8e2d8dd37eb71be19246f0eaa6bcd064c"
+    },
+    "capabilityCeiling": {
+      "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v4.json",
+      "sha256": "4882b77182428b328909d3772febd2e900e2f5d1d1fcc14c84c6c11b28e9c8bd"
+    },
+    "tournamentProtocol": {
+      "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PROTOCOL.v1.json",
+      "sha256": "62b4ac12a82e90f42a9e532ec9b7fa60e7bca383ba56726425ae4d8857aad713"
+    },
+    "releaseSupplement": {
+      "path": "artifacts/release/e-edit-holdout-release-gate-supplement.v1.json",
+      "sha256": "32ed64f1ed0011eeb6085058f86c6dec371df8aec8f362f7117c1bc64cddbfd9"
+    },
+    "finalReport": {
+      "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_FINAL_REPORT.v1.json",
+      "sha256": "d64fbe279a87781484ec1f4f245ba16fca029c56094e1d95e31f593d412fce82"
+    }
+  },
+  "conclusions": {
+    "oneShotGate": "E_EDIT_HOLDOUT_GATE_FAIL",
+    "productMutationDecision": "KEEP_MUTATION_DISABLED",
+    "eEditStatus": "RESEARCH_ONLY_MUTATION_INTERFACE",
+    "retry": "NOT_ELIGIBLE_ZERO_CALLS",
+    "modelScaleGate": "JUSTIFIED_PROTOCOL_ONLY_NO_ACQUISITION"
+  },
+  "physicalLineageTotal": 1169
+}

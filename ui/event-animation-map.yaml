@@ -1,0 +1,77 @@
+schema_version: 1
+principle: UI animation is driven only by typed runtime events.
+events:
+- type: run.started
+  target: global-run-status
+  motion: fade-status
+  duration_ms: 160
+- type: repo.index.started
+  target: repository-index-card
+  motion: stage-progress
+  duration_ms: 230
+- type: repo.index.progress
+  target: repository-counts
+  motion: number-crossfade
+  throttle_hz: 4
+- type: agent.dispatched
+  target: agent-node
+  motion: queued-ring
+  duration_ms: 160
+- type: agent.started
+  target: agent-node
+  motion: active-breathe
+  duration_ms: 2000
+  continuous: true
+- type: skill.started
+  target: skill-badge
+  motion: fade-and-highlight
+  duration_ms: 160
+- type: tool.started
+  target: flow-edge
+  motion: single-travelling-dot
+  duration_ms: 420
+- type: tool.completed
+  target: tool-chip
+  motion: status-settle
+  duration_ms: 160
+- type: evidence.retrieved
+  target: evidence-counter
+  motion: increment-crossfade
+  duration_ms: 160
+- type: patch.created
+  target: diff-tab
+  motion: badge-pop
+  duration_ms: 160
+- type: verification.stage_started
+  target: verification-stage
+  motion: active-track
+  duration_ms: 230
+- type: verification.stage_passed
+  target: verification-stage
+  motion: check-settle
+  duration_ms: 180
+- type: verification.stage_failed
+  target: verification-stage
+  motion: restrained-nudge
+  duration_ms: 180
+- type: retry.started
+  target: flow-back-edge
+  motion: evidence-labelled-return
+  duration_ms: 360
+- type: approval.requested
+  target: approval-management-bar
+  motion: slide-small-and-fade
+  duration_ms: 230
+- type: run.completed
+  target: global-run-status
+  motion: success-settle
+  duration_ms: 230
+- type: run.cancelled
+  target: all-active-nodes
+  motion: stop-and-fade
+  duration_ms: 100
+reduced_motion:
+  replace_transform_with: opacity/background/status changes
+  travelling_dot: instant source and destination highlight
+  continuous_loops: disabled
+  layout_animation: disabled or short crossfade

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 2,
+  "sessionId": "dca-privacy-safe-semantic-observability-v2-session-a",
+  "session": "V2_SESSION_A",
+  "status": "PASS",
+  "classification": "ZERO_TARGET_MODEL_CALL_INFRASTRUCTURE_RECOVERY_AND_NEW_GENERATION_FREEZE",
+  "completedAt": "2026-08-11T20:31:56.850Z",
+  "artifacts": {
+    "supersession": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SUPERSESSION.v2.json",
+      "sha256": "8a716a5e16a33df50e60d3b79069b65d7b1b6dba2a794bc68efb2ec28719e01e"
+    },
+    "manifest": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_TASK_MANIFEST.v2.json",
+      "sha256": "ab7aa471e02911f0c24d97cf30e39304f0927bec476e524c4a09c9e89108c010"
+    },
+    "repositories": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_REPOSITORIES.v2.json",
+      "sha256": "5b30ad3f3a678478f5d00c88bd9585dbdf26bfcae7b8d584282d76b8d72831af"
+    },
+    "hiddenOracle": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_ORACLE.v2.sealed.json",
+      "sha256": "afe6d80b81f4442f00a98b48ddac270d57f9c3cc4d59dee246e9e3a24380be7a"
+    },
+    "L1Schema": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_L1_SCHEMA.v2.json",
+      "sha256": "b40cf1819135d2cc64fd0573a67880c259e2d4c717aab414e26f583e31359bad"
+    },
+    "totality": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_OBSERVABILITY_V2_TOTALITY_VALIDATION.v2.json",
+      "sha256": "2db52b5ba423d2e01188ac1c5d47ec8a3111b105b5f433ff08bef6e2d1772f2c"
+    },
+    "runnerSeal": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B_RUNNER_SEAL.v2.json",
+      "sha256": "776b542a866198969a3bd71aedc3d6a46b11eaa8ab9aef37f300d2d46dec98a9"
+    },
+    "dryRun": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B_DRY_RUN.v2.json",
+      "sha256": "0d365cbf32e608e76981c09d5e8a34473ed69f6cd1f49e3f7a22c16b99fcd4b6"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PREREGISTRATION.v2.json",
+      "sha256": "10a830c2f24aac861de17df007c38cfb577df26136fcd1aa6c778b38e503e407"
+    },
+    "validation": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_A_VALIDATION.v2.json",
+      "sha256": "33d6d9027ad194aa9d892668a8ebf71efeafc8669d6dbbc8718555cd3081e599"
+    },
+    "review": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_A_REVIEW.v2.json",
+      "sha256": "e8cc68f63e096eb332adec46f7ed12b9d9e82cc672132e7ab534f66678714774"
+    }
+  },
+  "population": {
+    "tasks": 80,
+    "reusedUncalled": 76,
+    "newReplacements": 4,
+    "consumedOverlap": 0,
+    "historical95Overlap": 0,
+    "fingerprintDuplicates": 0,
+    "replacementReferencePasses": 4
+  },
+  "invariant": "EVERY_COMPLETED_PHYSICAL_MODEL_CALL_EXACTLY_ONE_L0_AND_ONE_L1",
+  "cleanup": {
+    "targetModelCalls": 0,
+    "vllmProcesses": 0,
+    "port8000Clear": true,
+    "modelGpuAllocationMiB": 0,
+    "ephemeralStateAbsent": true,
+    "callEventsBytes": 0,
+    "checkpointBytes": 0,
+    "L0Packets": 0,
+    "L1Packets": 0
+  },
+  "productStatus": {
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "FIMPromotionChanged": false,
+    "EEDITP2ProductionChanged": false
+  },
+  "protectedActions": {
+    "targetModelCall": false,
+    "vllmStart": false,
+    "modelDownload": false,
+    "retry": false,
+    "reviewer": false,
+    "L2": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  },
+  "next": "V2_SESSION_B_SEPARATE_INVOCATION_REQUIRED",
+  "stop": "V2_SESSION_A_BOUNDARY_REACHED"
+}

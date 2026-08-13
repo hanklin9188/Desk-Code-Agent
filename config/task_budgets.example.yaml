@@ -1,0 +1,36 @@
+version: 1
+defaults:
+  max_search_rounds: 4
+  max_patch_attempts: 3
+  max_review_rounds: 2
+  max_relevant_files: 8
+  max_modified_files: 5
+  max_changed_lines: 400
+  max_agent_calls: 10
+  max_tool_calls: 80
+  max_context_tokens: 8192
+  max_single_file_tokens: 2200
+  command_timeout_seconds: 300
+  task_timeout_seconds: 1800
+
+levels:
+  L1_local:
+    max_modified_files: 1
+    auto_execute: true
+  L2_small_cross_file:
+    max_modified_files: 5
+    auto_execute: true
+  L3_repo_navigation:
+    max_modified_files: 8
+    approval_if_no_reliable_oracle: true
+  L4_architecture:
+    auto_execute: false
+    mode: REPORT_ONLY
+
+hard_blocks:
+  - force_push_main
+  - destructive_filesystem_outside_worktree
+  - secret_exfiltration
+  - privileged_command_without_approval
+  - production_deployment
+  - irreversible_database_migration

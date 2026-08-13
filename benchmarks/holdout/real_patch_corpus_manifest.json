@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "corpus_id": "dca-realistic-patch-g1",
+  "classification": "SEALED_REALISTIC_EXECUTABLE_PATCH_CORPUS",
+  "tasks": [
+    {
+      "task_id": "patch-g1-01-ts-config-service-bounded-clamp",
+      "repository_id": "ts-config-service",
+      "language": "typescript",
+      "build_system": "Node type stripping",
+      "test_framework": "node:test",
+      "fault_pattern": "bounded-clamp",
+      "source_path": "src/repair_bounded_clamp_1.ts",
+      "task": "Repair repair_bounded_clamp_1 in ts-config-service. Clamp inclusively to zero and the supplied upper limit.",
+      "requirement": "Clamp inclusively to zero and the supplied upper limit.",
+      "allowed_files": [
+        "src/repair_bounded_clamp_1.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-02-ts-config-service-division-zero",
+      "repository_id": "ts-config-service",
+      "language": "typescript",
+      "build_system": "Node type stripping",
+      "test_framework": "node:test",
+      "fault_pattern": "division-zero",
+      "source_path": "src/repair_division_zero_2.ts",
+      "task": "Repair repair_division_zero_2 in ts-config-service. Return null when no denominator exists; preserve ordinary averages.",
+      "requirement": "Return null when no denominator exists; preserve ordinary averages.",
+      "allowed_files": [
+        "src/repair_division_zero_2.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-03-ts-config-service-duration-unit",
+      "repository_id": "ts-config-service",
+      "language": "typescript",
+      "build_system": "Node type stripping",
+      "test_framework": "node:test",
+      "fault_pattern": "duration-unit",
+      "source_path": "src/repair_duration_unit_3.ts",
+      "task": "Repair repair_duration_unit_3 in ts-config-service. Convert API seconds to scheduler milliseconds exactly once.",
+      "requirement": "Convert API seconds to scheduler milliseconds exactly once.",
+      "allowed_files": [
+        "src/repair_duration_unit_3.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-04-ts-config-service-tail-selection",
+      "repository_id": "ts-config-service",
+      "language": "typescript",
+      "build_system": "Node type stripping",
+      "test_framework": "node:test",
+      "fault_pattern": "tail-selection",
+      "source_path": "src/repair_tail_selection_4.ts",
+      "task": "Repair repair_tail_selection_4 in ts-config-service. Return exactly the newest count items in original order.",
+      "requirement": "Return exactly the newest count items in original order.",
+      "allowed_files": [
+        "src/repair_tail_selection_4.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-05-python-ledger-unicode-prefix",
+      "repository_id": "python-ledger",
+      "language": "python",
+      "build_system": "Python module",
+      "test_framework": "unittest",
+      "fault_pattern": "unicode-prefix",
+      "source_path": "app/repair_unicode_prefix_5.py",
+      "task": "Repair repair_unicode_prefix_5 in python-ledger. Take a Unicode character prefix without stripping non-ASCII text.",
+      "requirement": "Take a Unicode character prefix without stripping non-ASCII text.",
+      "allowed_files": [
+        "app/repair_unicode_prefix_5.py"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-06-python-ledger-bounded-clamp",
+      "repository_id": "python-ledger",
+      "language": "python",
+      "build_system": "Python module",
+      "test_framework": "unittest",
+      "fault_pattern": "bounded-clamp",
+      "source_path": "app/repair_bounded_clamp_6.py",
+      "task": "Repair repair_bounded_clamp_6 in python-ledger. Clamp inclusively to zero and the supplied upper limit.",
+      "requirement": "Clamp inclusively to zero and the supplied upper limit.",
+      "allowed_files": [
+        "app/repair_bounded_clamp_6.py"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-07-python-ledger-division-zero",
+      "repository_id": "python-ledger",
+      "language": "python",
+      "build_system": "Python module",
+      "test_framework": "unittest",
+      "fault_pattern": "division-zero",
+      "source_path": "app/repair_division_zero_7.py",
+      "task": "Repair repair_division_zero_7 in python-ledger. Return None when no denominator exists; preserve ordinary averages.",
+      "requirement": "Return None when no denominator exists; preserve ordinary averages.",
+      "allowed_files": [
+        "app/repair_division_zero_7.py"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-08-python-ledger-duration-unit",
+      "repository_id": "python-ledger",
+      "language": "python",
+      "build_system": "Python module",
+      "test_framework": "unittest",
+      "fault_pattern": "duration-unit",
+      "source_path": "app/repair_duration_unit_8.py",
+      "task": "Repair repair_duration_unit_8 in python-ledger. Convert API seconds to scheduler milliseconds exactly once.",
+      "requirement": "Convert API seconds to scheduler milliseconds exactly once.",
+      "allowed_files": [
+        "app/repair_duration_unit_8.py"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-09-mixed-portal-nullable-normalization",
+      "repository_id": "mixed-portal",
+      "language": "typescript",
+      "build_system": "TypeScript frontend + Python backend",
+      "test_framework": "node:test",
+      "fault_pattern": "nullable-normalization",
+      "source_path": "src/repair_nullable_normalization_9.ts",
+      "task": "Repair repair_nullable_normalization_9 in mixed-portal. Normalize present text while preserving null as absent.",
+      "requirement": "Normalize present text while preserving null as absent.",
+      "allowed_files": [
+        "src/repair_nullable_normalization_9.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-10-mixed-portal-unicode-prefix",
+      "repository_id": "mixed-portal",
+      "language": "typescript",
+      "build_system": "TypeScript frontend + Python backend",
+      "test_framework": "node:test",
+      "fault_pattern": "unicode-prefix",
+      "source_path": "src/repair_unicode_prefix_10.ts",
+      "task": "Repair repair_unicode_prefix_10 in mixed-portal. Take a Unicode code-point prefix without stripping non-ASCII text.",
+      "requirement": "Take a Unicode code-point prefix without stripping non-ASCII text.",
+      "allowed_files": [
+        "src/repair_unicode_prefix_10.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-11-mixed-portal-bounded-clamp",
+      "repository_id": "mixed-portal",
+      "language": "typescript",
+      "build_system": "TypeScript frontend + Python backend",
+      "test_framework": "node:test",
+      "fault_pattern": "bounded-clamp",
+      "source_path": "src/repair_bounded_clamp_11.ts",
+      "task": "Repair repair_bounded_clamp_11 in mixed-portal. Clamp inclusively to zero and the supplied upper limit.",
+      "requirement": "Clamp inclusively to zero and the supplied upper limit.",
+      "allowed_files": [
+        "src/repair_bounded_clamp_11.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-12-mixed-portal-division-zero",
+      "repository_id": "mixed-portal",
+      "language": "typescript",
+      "build_system": "TypeScript frontend + Python backend",
+      "test_framework": "node:test",
+      "fault_pattern": "division-zero",
+      "source_path": "src/repair_division_zero_12.ts",
+      "task": "Repair repair_division_zero_12 in mixed-portal. Return null when no denominator exists; preserve ordinary averages.",
+      "requirement": "Return null when no denominator exists; preserve ordinary averages.",
+      "allowed_files": [
+        "src/repair_division_zero_12.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-13-ts-event-worker-strict-integer",
+      "repository_id": "ts-event-worker",
+      "language": "typescript",
+      "build_system": "Node type stripping",
+      "test_framework": "node:test",
+      "fault_pattern": "strict-integer",
+      "source_path": "src/repair_strict_integer_13.ts",
+      "task": "Repair repair_strict_integer_13 in ts-event-worker. Accept a complete positive integer token and reject trailing data.",
+      "requirement": "Accept a complete positive integer token and reject trailing data.",
+      "allowed_files": [
+        "src/repair_strict_integer_13.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-14-ts-event-worker-nullable-normalization",
+      "repository_id": "ts-event-worker",
+      "language": "typescript",
+      "build_system": "Node type stripping",
+      "test_framework": "node:test",
+      "fault_pattern": "nullable-normalization",
+      "source_path": "src/repair_nullable_normalization_14.ts",
+      "task": "Repair repair_nullable_normalization_14 in ts-event-worker. Normalize present text while preserving null as absent.",
+      "requirement": "Normalize present text while preserving null as absent.",
+      "allowed_files": [
+        "src/repair_nullable_normalization_14.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-15-ts-event-worker-unicode-prefix",
+      "repository_id": "ts-event-worker",
+      "language": "typescript",
+      "build_system": "Node type stripping",
+      "test_framework": "node:test",
+      "fault_pattern": "unicode-prefix",
+      "source_path": "src/repair_unicode_prefix_15.ts",
+      "task": "Repair repair_unicode_prefix_15 in ts-event-worker. Take a Unicode code-point prefix without stripping non-ASCII text.",
+      "requirement": "Take a Unicode code-point prefix without stripping non-ASCII text.",
+      "allowed_files": [
+        "src/repair_unicode_prefix_15.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-16-ts-event-worker-bounded-clamp",
+      "repository_id": "ts-event-worker",
+      "language": "typescript",
+      "build_system": "Node type stripping",
+      "test_framework": "node:test",
+      "fault_pattern": "bounded-clamp",
+      "source_path": "src/repair_bounded_clamp_16.ts",
+      "task": "Repair repair_bounded_clamp_16 in ts-event-worker. Clamp inclusively to zero and the supplied upper limit.",
+      "requirement": "Clamp inclusively to zero and the supplied upper limit.",
+      "allowed_files": [
+        "src/repair_bounded_clamp_16.ts"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-17-python-cli-falsy-map-value",
+      "repository_id": "python-cli",
+      "language": "python",
+      "build_system": "Python module",
+      "test_framework": "unittest",
+      "fault_pattern": "falsy-map-value",
+      "source_path": "app/repair_falsy_map_value_17.py",
+      "task": "Repair repair_falsy_map_value_17 in python-cli. Preserve stored zero while returning None only for a missing key.",
+      "requirement": "Preserve stored zero while returning None only for a missing key.",
+      "allowed_files": [
+        "app/repair_falsy_map_value_17.py"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-18-python-cli-strict-integer",
+      "repository_id": "python-cli",
+      "language": "python",
+      "build_system": "Python module",
+      "test_framework": "unittest",
+      "fault_pattern": "strict-integer",
+      "source_path": "app/repair_strict_integer_18.py",
+      "task": "Repair repair_strict_integer_18 in python-cli. Accept a complete positive integer token and reject trailing data.",
+      "requirement": "Accept a complete positive integer token and reject trailing data.",
+      "allowed_files": [
+        "app/repair_strict_integer_18.py"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-19-python-cli-nullable-normalization",
+      "repository_id": "python-cli",
+      "language": "python",
+      "build_system": "Python module",
+      "test_framework": "unittest",
+      "fault_pattern": "nullable-normalization",
+      "source_path": "app/repair_nullable_normalization_19.py",
+      "task": "Repair repair_nullable_normalization_19 in python-cli. Normalize present text while preserving None as absent.",
+      "requirement": "Normalize present text while preserving None as absent.",
+      "allowed_files": [
+        "app/repair_nullable_normalization_19.py"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-20-python-cli-unicode-prefix",
+      "repository_id": "python-cli",
+      "language": "python",
+      "build_system": "Python module",
+      "test_framework": "unittest",
+      "fault_pattern": "unicode-prefix",
+      "source_path": "app/repair_unicode_prefix_20.py",
+      "task": "Repair repair_unicode_prefix_20 in python-cli. Take a Unicode character prefix without stripping non-ASCII text.",
+      "requirement": "Take a Unicode character prefix without stripping non-ASCII text.",
+      "allowed_files": [
+        "app/repair_unicode_prefix_20.py"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-21-mixed-data-pipeline-tail-selection",
+      "repository_id": "mixed-data-pipeline",
+      "language": "python",
+      "build_system": "Python stage + TypeScript adapter",
+      "test_framework": "unittest",
+      "fault_pattern": "tail-selection",
+      "source_path": "app/repair_tail_selection_21.py",
+      "task": "Repair repair_tail_selection_21 in mixed-data-pipeline. Return exactly the newest count items in original order.",
+      "requirement": "Return exactly the newest count items in original order.",
+      "allowed_files": [
+        "app/repair_tail_selection_21.py"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-22-mixed-data-pipeline-falsy-map-value",
+      "repository_id": "mixed-data-pipeline",
+      "language": "python",
+      "build_system": "Python stage + TypeScript adapter",
+      "test_framework": "unittest",
+      "fault_pattern": "falsy-map-value",
+      "source_path": "app/repair_falsy_map_value_22.py",
+      "task": "Repair repair_falsy_map_value_22 in mixed-data-pipeline. Preserve stored zero while returning None only for a missing key.",
+      "requirement": "Preserve stored zero while returning None only for a missing key.",
+      "allowed_files": [
+        "app/repair_falsy_map_value_22.py"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-23-mixed-data-pipeline-strict-integer",
+      "repository_id": "mixed-data-pipeline",
+      "language": "python",
+      "build_system": "Python stage + TypeScript adapter",
+      "test_framework": "unittest",
+      "fault_pattern": "strict-integer",
+      "source_path": "app/repair_strict_integer_23.py",
+      "task": "Repair repair_strict_integer_23 in mixed-data-pipeline. Accept a complete positive integer token and reject trailing data.",
+      "requirement": "Accept a complete positive integer token and reject trailing data.",
+      "allowed_files": [
+        "app/repair_strict_integer_23.py"
+      ],
+      "max_changed_lines": 8
+    },
+    {
+      "task_id": "patch-g1-24-mixed-data-pipeline-nullable-normalization",
+      "repository_id": "mixed-data-pipeline",
+      "language": "python",
+      "build_system": "Python stage + TypeScript adapter",
+      "test_framework": "unittest",
+      "fault_pattern": "nullable-normalization",
+      "source_path": "app/repair_nullable_normalization_24.py",
+      "task": "Repair repair_nullable_normalization_24 in mixed-data-pipeline. Normalize present text while preserving None as absent.",
+      "requirement": "Normalize present text while preserving None as absent.",
+      "allowed_files": [
+        "app/repair_nullable_normalization_24.py"
+      ],
+      "max_changed_lines": 8
+    }
+  ],
+  "manifest_hash": "3fee0db87f73439a92bb6b4d6681f285fbffbce2ddef0e87aa0b079820d28592",
+  "oracle_hash": "be16300886c5babee8bb0bbbd27fc18434968573210723c2f731ecb0ffc53b9a",
+  "integrity": {
+    "status": "PASS",
+    "tasks": 24,
+    "repositories": 6,
+    "languages": [
+      "typescript",
+      "python"
+    ],
+    "answer_counts": {
+      "A": 8,
+      "B": 8,
+      "C": 8
+    },
+    "errors": []
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "CODE_FORMATION_CONTROL_RECOVERY_GENERATION",
+  "session": "B",
+  "status": "CONTROL_SANITY_GATE_FAIL",
+  "classification": "STOPPED_BEFORE_PRIMARY_CALLS",
+  "completedAt": "2026-08-12T04:10:45.913Z",
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_A.v2.json",
+      "sha256": "7e68597e3f116eafd3e3ebeae8734f98d9564c7bdcb1d459ad4c1eb768d73b46"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_PREREGISTRATION.v2.json",
+      "sha256": "f36280c42a506bbdc0f10632334ad390de2433a644cb160cacc2c942c5f15f6a"
+    },
+    "runnerSeal": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RUNNER_SEAL.v2.json",
+      "sha256": "4c7287fbf7fedeea7dc0d83d4763fa54c2299326205183da32777c0e6c8f7241"
+    },
+    "priorIndex": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RESULTS_INDEX.v4.json",
+      "sha256": "09a293861bfd4f6448c84f525736f2ea02df001eb81c50176b19186ab2416b81"
+    },
+    "failure": {
+      "path": "docs/experiments/runs/code-formation-control-recovery-v1/CONTROL_SANITY_GATE_FAIL.json",
+      "sha256": "c8079d7da32da5f3313a60e0977c9235aaf0f21709ebe76eef3ca05d2176cf02"
+    }
+  },
+  "sanity": {
+    "calls": 1,
+    "retries": 0,
+    "responseReceived": true,
+    "jsonParsed": true,
+    "schemaValidated": true,
+    "validP2Action": false,
+    "normalizationClassification": "UNSAFE_EDIT",
+    "actionValidationCode": "RANGE_EDIT_ACCEPTED",
+    "patchConstructionCode": "RANGE_OUTSIDE_ALLOWED_SCOPE",
+    "finishReason": "STOP",
+    "modelError": "NONE",
+    "tokens": "NOT_RETAINED_BY_FROZEN_SANITY_LEDGER",
+    "latencyMs": "NOT_RETAINED_BY_FROZEN_SANITY_LEDGER",
+    "events": {
+      "path": "docs/experiments/runs/code-formation-control-recovery-v1/sanity-events.jsonl",
+      "sha256": "be8f8aab7eab36dd7c77ff7134ed16c0f0ec9ef6328e601aa5361ec1066d70ed",
+      "rows": 2
+    }
+  },
+  "primary": {
+    "plannedCalls": 80,
+    "actualCalls": 0,
+    "controlCalls": 0,
+    "treatmentCalls": 0,
+    "completePairs": 0,
+    "retries": 0,
+    "reviewers": 0,
+    "callEventsBytes": 0,
+    "observationsBytes": 0
+  },
+  "control": {
+    "validP2": 0,
+    "patchConstruction": 0,
+    "syntax": 0,
+    "visible": 0,
+    "hidden": 0,
+    "strict": 0
+  },
+  "treatment": {
+    "validBaseP2": 0,
+    "formationReached": 0,
+    "constraintAccepted": 0,
+    "constraintRejected": 0,
+    "patchConstruction": 0,
+    "syntax": 0,
+    "visible": 0,
+    "hidden": 0,
+    "strict": 0
+  },
+  "formationReachability": {
+    "required": 20,
+    "observed": 0,
+    "gate": "NOT_EVALUATED_PRIMARY_NOT_STARTED"
+  },
+  "pairedTransitions": {},
+  "parserActionFailureReasons": {
+    "sanity": {
+      "RANGE_OUTSIDE_ALLOWED_SCOPE": 1
+    },
+    "primary": {}
+  },
+  "safetyPrivacy": {
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0,
+    "invalidScopeChanges": 0,
+    "rawOutputsRetained": 0,
+    "rawEditBodiesRetained": 0,
+    "L2": false
+  },
+  "lineage": {
+    "sanityEvents": 2,
+    "primaryEvents": 0,
+    "primaryObservations": 0,
+    "duplicateCalls": 0
+  },
+  "cleanup": {
+    "modelProcesses": 0,
+    "port8000Clear": true,
+    "gpuComputeProcesses": 0,
+    "ephemeralStateAbsent": true,
+    "disposableWorkspaces": 0,
+    "stateEvidence": {
+      "tournament-start.json": {
+        "sha256": "ce423f5d15da5444343936087a0fa09ee406e9112ee2e314b0082f81e6291969",
+        "bytes": 93
+      },
+      "tournament-launch.json": {
+        "sha256": "ef28a93869721b82e36fdcfa00eecb77b9f73cd0ec5fc0b8d4b6e42f027a8d7b",
+        "bytes": 2063
+      }
+    }
+  },
+  "interpretationPerformed": false,
+  "treatmentEffectConclusion": "NOT_PERFORMED",
+  "sessionCReady": false,
+  "stop": "SESSION_B_CONTROL_SANITY_GATE_BOUNDARY_REACHED"
+}

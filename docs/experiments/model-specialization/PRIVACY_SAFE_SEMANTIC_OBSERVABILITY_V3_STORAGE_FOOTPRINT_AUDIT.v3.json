@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 3,
+  "auditId": "dca-privacy-safe-observability-v3-storage-footprint-audit",
+  "status": "PASS",
+  "recordedAt": "2026-08-11T21:14:06.931Z",
+  "current": {
+    "repositoryLogicalBytes": 77229416448,
+    "modelCacheBytes": 66889424896,
+    "runtimeModelBytes": 8167583744,
+    "nodeModulesBytes": 217178112,
+    "currentCapacity": {
+      "totalBytes": 1081101176832,
+      "freeBytes": 339314647040
+    },
+    "gitWorktrees": 1
+  },
+  "incident": {
+    "approximateDisposableBytes": 318000000000,
+    "concurrentCopies": 5,
+    "measuredCopyRangeBytes": {
+      "minimum": 40000000000,
+      "maximum": 72000000000
+    },
+    "cause": "Five full repository isolation copies were retained concurrently. Each copied the reusable .runtime/model cache and runtime/model environment instead of only task fixture files.",
+    "disposition": {
+      "required": [
+        "single canonical model snapshot/cache",
+        "single runtime environment",
+        "source repository",
+        "sealed evidence"
+      ],
+      "reusableNeverCopyIntoTaskWorkspace": [
+        ".runtime/model",
+        "runtime/model",
+        "node_modules"
+      ],
+      "disposable": [
+        "per-task fixture repository",
+        "hidden verification files",
+        "temporary git metadata"
+      ],
+      "unexpectedlyRetained": [
+        "five full repository copies including model/cache content"
+      ],
+      "uniqueEvidenceDeleted": false
+    }
+  },
+  "frozenPolicy": {
+    "maximumLiveDisposableIsolations": 1,
+    "taskWorkspaceContainsOnly": [
+      "selected task repository files",
+      "hidden verification files",
+      "ephemeral git metadata"
+    ],
+    "formula": {
+      "workspaceAmplification": 8,
+      "minimumWorkspaceBytes": 268435456,
+      "runtimeModelReserveBytes": 8589934592,
+      "minimumSafetyMarginBytes": 17179869184,
+      "safetyMarginFractionOfFilesystem": 0.05,
+      "formula": "max(maxTaskFixtureBytes*8,256MiB)+8GiB+max(16GiB,totalBytes*0.05)"
+    },
+    "maxTaskFixtureBytes": 3483,
+    "thresholdAtSeal": {
+      "estimatedMaximumTaskWorkspaceBytes": 268435456,
+      "runtimeModelReserveBytes": 8589934592,
+      "safetyMarginBytes": 54055058842,
+      "requiredFreeBytes": 62913428890
+    },
+    "capacityGate": "freeBytes>=requiredFreeBytes",
+    "cleanupBeforeNextCall": true
+  }
+}

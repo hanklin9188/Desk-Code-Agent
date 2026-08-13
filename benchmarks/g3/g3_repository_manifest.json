@@ -1,0 +1,951 @@
+{
+  "schema_version": 1,
+  "suite_id": "dca-naturalistic-open-ended-g3",
+  "preregistration_sha256": "17380638021a09b24ac64b53ebb2090bef6b313943e0e7c90f1101eab99a6200",
+  "repository_payload_sha256": "8120dfc4ce96038544a32987c75a56c2e2fa2a0cacd3bb4285e12eb30810a4e8",
+  "repositories": [
+    {
+      "id": "werkzeug",
+      "url": "https://github.com/pallets/werkzeug.git",
+      "local_directory": "werkzeug",
+      "commit_sha": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "branch": "main",
+      "dirty": false,
+      "license_path": "LICENSE.txt",
+      "license_local": "BSD-3-Clause",
+      "readme_path": "README.md",
+      "entry_path": "src/werkzeug/__init__.py",
+      "source_path": "src/werkzeug/datastructures/__init__.py",
+      "test_path": "tests/sansio/__init__.py",
+      "build_path": ".github/workflows/lock.yaml",
+      "dependency_manifest": "pyproject.toml",
+      "files": 291,
+      "loc": 43578,
+      "languages": {
+        "Python": 138,
+        "JavaScript": 1
+      },
+      "build_commands_detected": [],
+      "test_commands_detected": [
+        "python -m pytest"
+      ],
+      "dependency_manifests": [
+        "docs/Makefile",
+        "pyproject.toml"
+      ],
+      "split_role": "development",
+      "ecosystem": "python",
+      "selection_provenance": "mature Python web utility",
+      "tree_sha256": "9a79a767c62acf0467d02dcb99f0dc736a1bd0e491a35a23d2e6d7c39fd48147"
+    },
+    {
+      "id": "ky",
+      "url": "https://github.com/sindresorhus/ky.git",
+      "local_directory": "ky",
+      "commit_sha": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "branch": "main",
+      "dirty": false,
+      "license_path": "license",
+      "license_local": "MIT",
+      "readme_path": "readme.md",
+      "entry_path": "source/index.ts",
+      "source_path": "source/core/constants.ts",
+      "test_path": "test/base-url.ts",
+      "build_path": ".github/workflows/main.yml",
+      "dependency_manifest": "package.json",
+      "files": 68,
+      "loc": 20881,
+      "languages": {
+        "TypeScript": 53
+      },
+      "build_commands_detected": [
+        "npm run build"
+      ],
+      "test_commands_detected": [
+        "npm test"
+      ],
+      "dependency_manifests": [
+        "package.json"
+      ],
+      "split_role": "development",
+      "ecosystem": "javascript",
+      "selection_provenance": "typed HTTP client",
+      "tree_sha256": "7d2569d2f4a783e047fc6d1d146b1b1aa17ec4a85334a0b53a4d4cad2256b8b9"
+    },
+    {
+      "id": "echo",
+      "url": "https://github.com/labstack/echo.git",
+      "local_directory": "echo",
+      "commit_sha": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "MIT",
+      "readme_path": "README.md",
+      "entry_path": "server.go",
+      "source_path": "bind.go",
+      "test_path": "bind_cache_test.go",
+      "build_path": ".github/workflows/checks.yml",
+      "dependency_manifest": "go.mod",
+      "files": 137,
+      "loc": 45069,
+      "languages": {
+        "Go": 104
+      },
+      "build_commands_detected": [
+        "go build ./..."
+      ],
+      "test_commands_detected": [
+        "go test ./..."
+      ],
+      "dependency_manifests": [
+        "Makefile",
+        "go.mod"
+      ],
+      "split_role": "development",
+      "ecosystem": "go",
+      "selection_provenance": "Go web framework",
+      "tree_sha256": "ab46a5b515a52d7c514ba0dbe151280586d0dc7ba46f7ec0af59ed7059f7264e"
+    },
+    {
+      "id": "anyhow",
+      "url": "https://github.com/dtolnay/anyhow.git",
+      "local_directory": "anyhow",
+      "commit_sha": "bf3ed9149f4334c984c1ad252b534107b307078c",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE-APACHE",
+      "license_local": "MIT OR Apache-2.0",
+      "readme_path": "README.md",
+      "entry_path": "src/lib.rs",
+      "source_path": "src/backtrace.rs",
+      "test_path": "tests/test_backtrace.rs",
+      "build_path": ".github/workflows/ci.yml",
+      "dependency_manifest": "Cargo.toml",
+      "files": 54,
+      "loc": 6281,
+      "languages": {
+        "Rust": 37
+      },
+      "build_commands_detected": [
+        "cargo build --locked"
+      ],
+      "test_commands_detected": [
+        "cargo test --locked"
+      ],
+      "dependency_manifests": [
+        "Cargo.toml",
+        "tests/crate/Cargo.toml"
+      ],
+      "split_role": "development",
+      "ecosystem": "rust",
+      "selection_provenance": "Rust error library",
+      "tree_sha256": "7925fb8de90e62437d66abf43cd754a67c0c220eecd20e44f0289291714824e2"
+    },
+    {
+      "id": "zlib",
+      "url": "https://github.com/madler/zlib.git",
+      "local_directory": "zlib",
+      "commit_sha": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "branch": "develop",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "Zlib",
+      "readme_path": "README",
+      "entry_path": "adler32.c",
+      "source_path": "compress.c",
+      "test_path": "contrib/blast/blast-test.c",
+      "build_path": ".github/workflows/c-std.yml",
+      "dependency_manifest": "CMakeLists.txt",
+      "files": 270,
+      "loc": 51592,
+      "languages": {
+        "C": 43,
+        "C/C++ Header": 31,
+        "C++": 5
+      },
+      "build_commands_detected": [
+        "cmake --build <configured-build>"
+      ],
+      "test_commands_detected": [
+        "ctest --test-dir <configured-build>"
+      ],
+      "dependency_manifests": [
+        "CMakeLists.txt",
+        "Makefile",
+        "contrib/CMakeLists.txt",
+        "contrib/ada/CMakeLists.txt",
+        "contrib/ada/test/CMakeLists.txt",
+        "contrib/blast/CMakeLists.txt",
+        "contrib/blast/Makefile",
+        "contrib/blast/test/CMakeLists.txt",
+        "contrib/crc32vx/CMakeLists.txt",
+        "contrib/gcc_gvmat64/CMakeLists.txt",
+        "contrib/infback9/CMakeLists.txt",
+        "contrib/iostream3/CMakeLists.txt",
+        "contrib/iostream3/test/CMakeLists.txt",
+        "contrib/minizip/CMakeLists.txt",
+        "contrib/minizip/Makefile",
+        "contrib/minizip/test/CMakeLists.txt",
+        "contrib/puff/CMakeLists.txt",
+        "contrib/puff/Makefile",
+        "contrib/puff/test/CMakeLists.txt",
+        "contrib/testzlib/CMakeLists.txt",
+        "contrib/zlib1-dll/CMakeLists.txt",
+        "contrib/zlib1-dll/test/CMakeLists.txt",
+        "test/CMakeLists.txt"
+      ],
+      "split_role": "development",
+      "ecosystem": "c-cpp",
+      "selection_provenance": "C compression library",
+      "tree_sha256": "c42fe12f800ecf1512847cf2c1bcb115180adf648f4b04ac30205f7e28917674"
+    },
+    {
+      "id": "gson",
+      "url": "https://github.com/google/gson.git",
+      "local_directory": "gson",
+      "commit_sha": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+      "branch": "main",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "Apache-2.0",
+      "readme_path": "README.md",
+      "entry_path": "gson/src/main/java/module-info.java",
+      "source_path": "gson/src/main/java/com/google/gson/ExclusionStrategy.java",
+      "test_path": "gson/src/test/java/com/google/gson/ExposeAnnotationExclusionStrategyTest.java",
+      "build_path": ".github/workflows/build.yml",
+      "dependency_manifest": "extras/pom.xml",
+      "files": 313,
+      "loc": 61479,
+      "languages": {
+        "Java": 264
+      },
+      "build_commands_detected": [
+        "mvn package"
+      ],
+      "test_commands_detected": [
+        "mvn test"
+      ],
+      "dependency_manifests": [
+        "extras/pom.xml",
+        "gson/pom.xml",
+        "metrics/pom.xml",
+        "pom.xml",
+        "proto/pom.xml",
+        "test-graal-native-image/pom.xml",
+        "test-jpms/pom.xml",
+        "test-shrinker/pom.xml"
+      ],
+      "split_role": "development",
+      "ecosystem": "jvm",
+      "selection_provenance": "Java JSON library",
+      "tree_sha256": "403c5b0759293b46dab2d80f2e806c428ae8961469b5ce4aa97bdb4bce406a30"
+    },
+    {
+      "id": "pluggy",
+      "url": "https://github.com/pytest-dev/pluggy.git",
+      "local_directory": "pluggy",
+      "commit_sha": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "branch": "main",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "MIT",
+      "readme_path": "README.rst",
+      "entry_path": "src/pluggy/__init__.py",
+      "source_path": "src/pluggy/_callers.py",
+      "test_path": "testing/conftest.py",
+      "build_path": ".github/workflows/deploy.yml",
+      "dependency_manifest": "pyproject.toml",
+      "files": 79,
+      "loc": 8429,
+      "languages": {
+        "Python": 31
+      },
+      "build_commands_detected": [],
+      "test_commands_detected": [
+        "python -m pytest"
+      ],
+      "dependency_manifests": [
+        "docs/examples/eggsample-spam/setup.py",
+        "docs/examples/eggsample/setup.py",
+        "pyproject.toml"
+      ],
+      "split_role": "validation",
+      "ecosystem": "python",
+      "selection_provenance": "Python plugin runtime",
+      "tree_sha256": "e3c94bf8f825ce6a4659ab05f5250d7c4d5067d9f577a37b74aad03bfcc36a03"
+    },
+    {
+      "id": "p-queue",
+      "url": "https://github.com/sindresorhus/p-queue.git",
+      "local_directory": "p-queue",
+      "commit_sha": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "branch": "main",
+      "dirty": false,
+      "license_path": "license",
+      "license_local": "MIT",
+      "readme_path": "readme.md",
+      "entry_path": "source/index.ts",
+      "source_path": "source/lower-bound.ts",
+      "test_path": "test/advanced.ts",
+      "build_path": ".github/workflows/main.yml",
+      "dependency_manifest": "package.json",
+      "files": 24,
+      "loc": 8041,
+      "languages": {
+        "TypeScript": 14
+      },
+      "build_commands_detected": [
+        "npm run build"
+      ],
+      "test_commands_detected": [
+        "npm test"
+      ],
+      "dependency_manifests": [
+        "package.json"
+      ],
+      "split_role": "validation",
+      "ecosystem": "javascript",
+      "selection_provenance": "typed promise queue",
+      "tree_sha256": "766a1f8edbf14dea1281299a392f54591cc711bbdef897ac33adc1d377cbf4c2"
+    },
+    {
+      "id": "viper",
+      "url": "https://github.com/spf13/viper.git",
+      "local_directory": "viper",
+      "commit_sha": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "MIT",
+      "readme_path": "README.md",
+      "entry_path": "encoding.go",
+      "source_path": "errors.go",
+      "test_path": "encoding_test.go",
+      "build_path": ".github/workflows/checks.yaml",
+      "dependency_manifest": "go.mod",
+      "files": 65,
+      "loc": 8932,
+      "languages": {
+        "Go": 33
+      },
+      "build_commands_detected": [
+        "go build ./..."
+      ],
+      "test_commands_detected": [
+        "go test ./..."
+      ],
+      "dependency_manifests": [
+        "Makefile",
+        "go.mod",
+        "remote/go.mod"
+      ],
+      "split_role": "validation",
+      "ecosystem": "go",
+      "selection_provenance": "Go configuration library",
+      "tree_sha256": "ab826f52e7e560e6081f7a2183975ec4f6ea7e63dee9fa4d6e5eaa22aeb73416"
+    },
+    {
+      "id": "fd",
+      "url": "https://github.com/sharkdp/fd.git",
+      "local_directory": "fd",
+      "commit_sha": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE-APACHE",
+      "license_local": "MIT OR Apache-2.0",
+      "readme_path": "README.md",
+      "entry_path": "src/main.rs",
+      "source_path": "src/exec/mod.rs",
+      "test_path": "tests/testenv/mod.rs",
+      "build_path": ".github/workflows/CICD.yml",
+      "dependency_manifest": "Cargo.toml",
+      "files": 58,
+      "loc": 10719,
+      "languages": {
+        "Rust": 24
+      },
+      "build_commands_detected": [
+        "cargo build --locked"
+      ],
+      "test_commands_detected": [
+        "cargo test --locked"
+      ],
+      "dependency_manifests": [
+        "Cargo.toml",
+        "Makefile"
+      ],
+      "split_role": "validation",
+      "ecosystem": "rust",
+      "selection_provenance": "Rust command-line application",
+      "tree_sha256": "7aa6ea85d48c4f1533121b8c2bd30d51c35e68c0be3ac067c88893bb007af84c"
+    },
+    {
+      "id": "libexpat",
+      "url": "https://github.com/libexpat/libexpat.git",
+      "local_directory": "libexpat",
+      "commit_sha": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "COPYING",
+      "license_local": "MIT",
+      "readme_path": "README.md",
+      "entry_path": "expat/lib/ascii.h",
+      "source_path": "expat/lib/asciitab.h",
+      "test_path": "expat/tests/acc_tests.c",
+      "build_path": ".github/workflows/autotools-cmake.yml",
+      "dependency_manifest": "expat/CMakeLists.txt",
+      "files": 220,
+      "loc": 46606,
+      "languages": {
+        "C": 41,
+        "C++": 1,
+        "C/C++ Header": 40,
+        "Python": 2
+      },
+      "build_commands_detected": [
+        "make"
+      ],
+      "test_commands_detected": [
+        "ctest --test-dir <configured-build>"
+      ],
+      "dependency_manifests": [
+        "expat/CMakeLists.txt"
+      ],
+      "split_role": "validation",
+      "ecosystem": "c-cpp",
+      "selection_provenance": "C XML parser",
+      "tree_sha256": "dd1b94b48d013e026a3763273b6cfcd1a4be0c3e147925e1d71cac6c7d212ea7"
+    },
+    {
+      "id": "jsoup",
+      "url": "https://github.com/jhy/jsoup.git",
+      "local_directory": "jsoup",
+      "commit_sha": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "MIT",
+      "readme_path": "README.md",
+      "entry_path": "src/main/java11/module-info.java",
+      "source_path": "src/main/java/org/jsoup/Connection.java",
+      "test_path": "src/test/java/org/jsoup/helper/HttpConnectionTest.java",
+      "build_path": ".github/workflows/build.yml",
+      "dependency_manifest": "pom.xml",
+      "files": 307,
+      "loc": 60421,
+      "languages": {
+        "Java": 195
+      },
+      "build_commands_detected": [
+        "mvn package"
+      ],
+      "test_commands_detected": [
+        "mvn test"
+      ],
+      "dependency_manifests": [
+        "pom.xml"
+      ],
+      "split_role": "validation",
+      "ecosystem": "jvm",
+      "selection_provenance": "Java HTML parser",
+      "tree_sha256": "ead5e4f91c1d8fdb3de835b0cf497c47f2bb4c7e4814d4d975bbaeda8d190ed6"
+    },
+    {
+      "id": "cachecontrol",
+      "url": "https://github.com/psf/cachecontrol.git",
+      "local_directory": "cachecontrol",
+      "commit_sha": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE.txt",
+      "license_local": "Apache-2.0",
+      "readme_path": "README.rst",
+      "entry_path": "cachecontrol/__init__.py",
+      "source_path": "cachecontrol/caches/__init__.py",
+      "test_path": "tests/__init__.py",
+      "build_path": ".github/workflows/release.yml",
+      "dependency_manifest": "pyproject.toml",
+      "files": 57,
+      "loc": 5148,
+      "languages": {
+        "Python": 31
+      },
+      "build_commands_detected": [],
+      "test_commands_detected": [
+        "python -m pytest"
+      ],
+      "dependency_manifests": [
+        "Makefile",
+        "docs/Makefile",
+        "pyproject.toml"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "python",
+      "selection_provenance": "Python HTTP cache library",
+      "tree_sha256": "802e5318f8fca8253fd9c4b48585e2c82d3dfede932e58673f783b08fd30e997"
+    },
+    {
+      "id": "pyjwt",
+      "url": "https://github.com/jpadilla/pyjwt.git",
+      "local_directory": "pyjwt",
+      "commit_sha": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "MIT",
+      "readme_path": "README.rst",
+      "entry_path": "jwt/__init__.py",
+      "source_path": "docs/conf.py",
+      "test_path": "tests/__init__.py",
+      "build_path": ".github/workflows/enforce-changelog-entry.yml",
+      "dependency_manifest": "pyproject.toml",
+      "files": 92,
+      "loc": 11245,
+      "languages": {
+        "Python": 26
+      },
+      "build_commands_detected": [],
+      "test_commands_detected": [
+        "python -m pytest"
+      ],
+      "dependency_manifests": [
+        "docs/Makefile",
+        "pyproject.toml"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "python",
+      "selection_provenance": "Python token library",
+      "tree_sha256": "4cf1bdaa7dbcefac9104d1b0343b2776083132c60561bbb418f639b9187f9170"
+    },
+    {
+      "id": "multidict",
+      "url": "https://github.com/aio-libs/multidict.git",
+      "local_directory": "multidict",
+      "commit_sha": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "Apache-2.0",
+      "readme_path": "CHANGES/README.rst",
+      "entry_path": "multidict/__init__.py",
+      "source_path": "setup.py",
+      "test_path": "tests/conftest.py",
+      "build_path": ".github/workflows/auto-merge.yml",
+      "dependency_manifest": "pyproject.toml",
+      "files": 157,
+      "loc": 22616,
+      "languages": {
+        "Python": 34,
+        "C": 1,
+        "C/C++ Header": 9
+      },
+      "build_commands_detected": [],
+      "test_commands_detected": [
+        "python -m pytest"
+      ],
+      "dependency_manifests": [
+        "Makefile",
+        "docs/Makefile",
+        "pyproject.toml",
+        "setup.cfg",
+        "setup.py"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "python",
+      "selection_provenance": "Python/C multidict implementation",
+      "tree_sha256": "5cc69f59c8c71e64c4a1da5b9758434cec1dda79f2aa7f4d2def83d3cd87e75a"
+    },
+    {
+      "id": "zod",
+      "url": "https://github.com/colinhacks/zod.git",
+      "local_directory": "zod",
+      "commit_sha": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "branch": "main",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "MIT",
+      "readme_path": "README.md",
+      "entry_path": "packages/resolution/src/index.ts",
+      "source_path": "packages/zod/src/index.ts",
+      "test_path": "packages/zod/src/v4/classic/tests/index.test.ts",
+      "build_path": ".github/workflows/claude-code-review.yml",
+      "dependency_manifest": "package.json",
+      "files": 582,
+      "loc": 87093,
+      "languages": {
+        "JavaScript": 5,
+        "TypeScript": 373,
+        "TSX": 29
+      },
+      "build_commands_detected": [
+        "npm run build"
+      ],
+      "test_commands_detected": [
+        "npm test"
+      ],
+      "dependency_manifests": [
+        "package.json",
+        "packages/bench/package.json",
+        "packages/docs/package.json",
+        "packages/integration/package.json",
+        "packages/resolution/package.json",
+        "packages/treeshake/package.json",
+        "packages/tsc/package.json",
+        "packages/zod/package.json"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "javascript",
+      "selection_provenance": "TypeScript schema library",
+      "tree_sha256": "33570b88116ac2cfeb2e197eb0a302405b720a4a093bb898acea5a8ab55ed2a3"
+    },
+    {
+      "id": "dotenv",
+      "url": "https://github.com/motdotla/dotenv.git",
+      "local_directory": "dotenv",
+      "commit_sha": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "BSD-2-Clause",
+      "readme_path": "README.md",
+      "entry_path": "lib/main.d.ts",
+      "source_path": "lib/main.js",
+      "test_path": "tests/test-config-import.js",
+      "build_path": ".github/workflows/ci.yml",
+      "dependency_manifest": "package.json",
+      "files": 34,
+      "loc": 3727,
+      "languages": {
+        "JavaScript": 13,
+        "TypeScript": 2
+      },
+      "build_commands_detected": [
+        "npm run build"
+      ],
+      "test_commands_detected": [
+        "npm test"
+      ],
+      "dependency_manifests": [
+        "package.json"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "javascript",
+      "selection_provenance": "JavaScript configuration library",
+      "tree_sha256": "32892e3bda81d21c5f3d4c02c1618ae2ca2142a424c905436cf1b3e359d41a7c"
+    },
+    {
+      "id": "axios",
+      "url": "https://github.com/axios/axios.git",
+      "local_directory": "axios",
+      "commit_sha": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "branch": "v1.x",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "MIT",
+      "readme_path": "README.md",
+      "entry_path": "lib/defaults/index.js",
+      "source_path": "lib/platform/index.js",
+      "test_path": "tests/module/esm/tests/helpers/esm-index.ts",
+      "build_path": ".github/workflows/bundle-size.yml",
+      "dependency_manifest": "docs/package.json",
+      "files": 458,
+      "loc": 71471,
+      "languages": {
+        "TypeScript": 25,
+        "JavaScript": 212
+      },
+      "build_commands_detected": [],
+      "test_commands_detected": [],
+      "dependency_manifests": [
+        "docs/package.json",
+        "package.json",
+        "tests/module/cjs/package.json",
+        "tests/module/esm/package.json",
+        "tests/smoke/bun/package.json",
+        "tests/smoke/cjs/package.json",
+        "tests/smoke/esm/package.json"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "javascript",
+      "selection_provenance": "JavaScript HTTP client",
+      "tree_sha256": "4be8ec394e9e904de6af328739fdfa05ec5b5e99c41331b8fc89d630ccf94a14"
+    },
+    {
+      "id": "lipgloss",
+      "url": "https://github.com/charmbracelet/lipgloss.git",
+      "local_directory": "lipgloss",
+      "commit_sha": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "branch": "main",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "MIT",
+      "readme_path": "README.md",
+      "entry_path": "align.go",
+      "source_path": "ansi_unix.go",
+      "test_path": "align_test.go",
+      "build_path": ".github/workflows/build.yml",
+      "dependency_manifest": "examples/go.mod",
+      "files": 300,
+      "loc": 17455,
+      "languages": {
+        "Go": 83
+      },
+      "build_commands_detected": [
+        "go build ./..."
+      ],
+      "test_commands_detected": [
+        "go test ./..."
+      ],
+      "dependency_manifests": [
+        "examples/go.mod",
+        "go.mod"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "go",
+      "selection_provenance": "Go terminal styling library",
+      "tree_sha256": "a604745710b54487565f78d5b52a97e1004e9e9bdffb0b84f94e3f2db98463f2"
+    },
+    {
+      "id": "testify",
+      "url": "https://github.com/stretchr/testify.git",
+      "local_directory": "testify",
+      "commit_sha": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "MIT",
+      "readme_path": "README.md",
+      "entry_path": "_codegen/main.go",
+      "source_path": "_readme-gofmt/main.go",
+      "test_path": "assert/assertion_compare_test.go",
+      "build_path": ".github/workflows/main.yml",
+      "dependency_manifest": "_codegen/go.mod",
+      "files": 91,
+      "loc": 30427,
+      "languages": {
+        "Go": 62
+      },
+      "build_commands_detected": [
+        "go build ./..."
+      ],
+      "test_commands_detected": [
+        "go test ./..."
+      ],
+      "dependency_manifests": [
+        "_codegen/go.mod",
+        "go.mod"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "go",
+      "selection_provenance": "Go test toolkit",
+      "tree_sha256": "08227dd97afb024882f5134eecd2572b9b8b7f2aa68c2837311865b053e78e4d"
+    },
+    {
+      "id": "bytes",
+      "url": "https://github.com/tokio-rs/bytes.git",
+      "local_directory": "bytes",
+      "commit_sha": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "MIT",
+      "readme_path": "README.md",
+      "entry_path": "src/lib.rs",
+      "source_path": "src/buf/mod.rs",
+      "test_path": "tests/test_buf.rs",
+      "build_path": ".github/workflows/ci.yml",
+      "dependency_manifest": "Cargo.toml",
+      "files": 46,
+      "loc": 14663,
+      "languages": {
+        "Rust": 34
+      },
+      "build_commands_detected": [
+        "cargo build --locked"
+      ],
+      "test_commands_detected": [
+        "cargo test --locked"
+      ],
+      "dependency_manifests": [
+        "Cargo.toml"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "rust",
+      "selection_provenance": "Rust byte-buffer library",
+      "tree_sha256": "f01de9c26315fc4be1fa0c654ebdf36aace3f80c2c2f79a1eb1b9be974af8b08"
+    },
+    {
+      "id": "serde-json",
+      "url": "https://github.com/serde-rs/json.git",
+      "local_directory": "serde-json",
+      "commit_sha": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "branch": "master",
+      "dirty": false,
+      "license_path": "LICENSE-APACHE",
+      "license_local": "MIT OR Apache-2.0",
+      "readme_path": "README.md",
+      "entry_path": "src/lib.rs",
+      "source_path": "src/io/mod.rs",
+      "test_path": "tests/macros/mod.rs",
+      "build_path": ".github/workflows/ci.yml",
+      "dependency_manifest": "Cargo.toml",
+      "files": 92,
+      "loc": 24018,
+      "languages": {
+        "Rust": 71
+      },
+      "build_commands_detected": [
+        "cargo build --locked"
+      ],
+      "test_commands_detected": [
+        "cargo test --locked"
+      ],
+      "dependency_manifests": [
+        "Cargo.toml",
+        "fuzz/Cargo.toml",
+        "tests/crate/Cargo.toml"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "rust",
+      "selection_provenance": "Rust JSON implementation",
+      "tree_sha256": "f7869cabad2322df064759a3613e323fa416f84b84409a495aace7d7c4bb472d"
+    },
+    {
+      "id": "fmt",
+      "url": "https://github.com/fmtlib/fmt.git",
+      "local_directory": "fmt",
+      "commit_sha": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "branch": "main",
+      "dirty": false,
+      "license_path": "LICENSE",
+      "license_local": "MIT",
+      "readme_path": "README.md",
+      "entry_path": "src/fmt-c.cc",
+      "source_path": "src/fmt.cc",
+      "test_path": "test/add-subdirectory-test/main.cc",
+      "build_path": ".github/workflows/codeql.yml",
+      "dependency_manifest": "support/build.gradle",
+      "files": 142,
+      "loc": 82728,
+      "languages": {
+        "JavaScript": 1,
+        "C/C++ Header": 25,
+        "C++": 46,
+        "Python": 4,
+        "C": 1
+      },
+      "build_commands_detected": [
+        "cmake --build <configured-build>"
+      ],
+      "test_commands_detected": [
+        "ctest --test-dir <configured-build>"
+      ],
+      "dependency_manifests": [
+        "CMakeLists.txt",
+        "support/build.gradle",
+        "test/CMakeLists.txt",
+        "test/add-subdirectory-test/CMakeLists.txt",
+        "test/compile-error-test/CMakeLists.txt",
+        "test/cuda-test/CMakeLists.txt",
+        "test/find-package-test/CMakeLists.txt",
+        "test/fuzzing/CMakeLists.txt",
+        "test/gtest/CMakeLists.txt",
+        "test/static-export-test/CMakeLists.txt"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "c-cpp",
+      "selection_provenance": "C++ formatting library",
+      "tree_sha256": "9bbe5a3b9c9c2b1bdbc490df2255663206e609e073b7b4aa94d643a409cb4c08"
+    },
+    {
+      "id": "nlohmann-json",
+      "url": "https://github.com/nlohmann/json.git",
+      "local_directory": "json",
+      "commit_sha": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "branch": "develop",
+      "dirty": false,
+      "license_path": "LICENSE.MIT",
+      "license_local": "MIT",
+      "readme_path": "README.md",
+      "entry_path": "tools/macro_builder/main.cpp",
+      "source_path": "cmake/detect_libcpp_version.cpp",
+      "test_path": "tests/abi/config/config.hpp",
+      "build_path": ".github/workflows/check_amalgamation.yml",
+      "dependency_manifest": "CMakeLists.txt",
+      "files": 1229,
+      "loc": 160292,
+      "languages": {
+        "C++": 423,
+        "Python": 7,
+        "C++ Header": 57,
+        "C/C++ Header": 17,
+        "C": 1
+      },
+      "build_commands_detected": [
+        "cmake --build <configured-build>"
+      ],
+      "test_commands_detected": [
+        "ctest --test-dir <configured-build>"
+      ],
+      "dependency_manifests": [
+        "CMakeLists.txt",
+        "Makefile",
+        "docs/Makefile",
+        "docs/docset/Makefile",
+        "docs/mkdocs/Makefile",
+        "docs/mkdocs/docs/integration/cget/CMakeLists.txt",
+        "docs/mkdocs/docs/integration/conan/CMakeLists.txt",
+        "docs/mkdocs/docs/integration/cpm/CMakeLists.txt",
+        "docs/mkdocs/docs/integration/homebrew/CMakeLists.txt",
+        "docs/mkdocs/docs/integration/hunter/CMakeLists.txt",
+        "docs/mkdocs/docs/integration/macports/CMakeLists.txt",
+        "docs/mkdocs/docs/integration/spack/CMakeLists.txt",
+        "docs/mkdocs/docs/integration/vcpkg/CMakeLists.txt",
+        "src/modules/CMakeLists.txt",
+        "tests/CMakeLists.txt",
+        "tests/Makefile",
+        "tests/abi/CMakeLists.txt",
+        "tests/abi/config/CMakeLists.txt",
+        "tests/abi/diag/CMakeLists.txt",
+        "tests/abi/inline_ns/CMakeLists.txt",
+        "tests/benchmarks/CMakeLists.txt",
+        "tests/cmake_add_subdirectory/CMakeLists.txt",
+        "tests/cmake_add_subdirectory/project/CMakeLists.txt",
+        "tests/cmake_fetch_content/CMakeLists.txt",
+        "tests/cmake_fetch_content/project/CMakeLists.txt",
+        "tests/cmake_fetch_content2/CMakeLists.txt",
+        "tests/cmake_fetch_content2/project/CMakeLists.txt",
+        "tests/cmake_import/CMakeLists.txt",
+        "tests/cmake_import/project/CMakeLists.txt",
+        "tests/cmake_import_minver/CMakeLists.txt",
+        "tests/cmake_import_minver/project/CMakeLists.txt",
+        "tests/cmake_target_include_directories/CMakeLists.txt",
+        "tests/cmake_target_include_directories/project/CMakeLists.txt",
+        "tests/cuda_example/CMakeLists.txt",
+        "tests/fmt_formatter/CMakeLists.txt",
+        "tests/fmt_formatter/project/CMakeLists.txt",
+        "tests/module_cpp20/CMakeLists.txt",
+        "tests/thirdparty/Fuzzer/CMakeLists.txt",
+        "tests/thirdparty/Fuzzer/test/CMakeLists.txt",
+        "tests/thirdparty/Fuzzer/test/no-coverage/CMakeLists.txt",
+        "tests/thirdparty/Fuzzer/test/ubsan/CMakeLists.txt",
+        "tests/thirdparty/Fuzzer/test/uninstrumented/CMakeLists.txt"
+      ],
+      "split_role": "holdout",
+      "ecosystem": "c-cpp",
+      "selection_provenance": "C++ JSON library",
+      "tree_sha256": "36dff40b01c79e9ee8f35ca925c7ae43299b0807ebfab430573b023fad534fad"
+    }
+  ],
+  "integrity": {
+    "status": "PASS",
+    "repository_count": 24,
+    "split_counts": {
+      "development": 6,
+      "validation": 6,
+      "holdout": 12
+    },
+    "errors": []
+  }
+}

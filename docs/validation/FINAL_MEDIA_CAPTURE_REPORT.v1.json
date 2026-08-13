@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "reportId": "dca-w2-final-media-capture-v1",
+  "phase": "FINAL_MEDIA_CAPTURE",
+  "status": "PASS",
+  "authorization": {
+    "w1ScopeAmendment": { "path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_SCOPE_AMENDMENT.v1.json", "sha256": "a6c643ef43ff9dc88f667be3266a68e3a460c46a48474c9a77801848a266d987" },
+    "w1Report": { "path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.v6.json", "sha256": "59416a7e2dfaf48aee7601f762e73bd06f7a18243f0561fd6a98b42882e56161" },
+    "integrity": "PASS"
+  },
+  "captureEnvironment": {
+    "host": "WINDOWS_11_REFERENCE_HOST",
+    "osDisplayScalePercent": 150,
+    "browser": "Microsoft Edge 150.0.4078.48",
+    "viewport": "1440_X_900",
+    "deviceScaleFactor": 1,
+    "gifEncoder": "PILLOW_12.0.0_EXISTING_LOCAL_TOOL",
+    "dependenciesInstalled": 0,
+    "network": "LOOPBACK_ONLY"
+  },
+  "screenshots": [
+    { "filename": "docs/media/screenshots/01-hero-workspace.png", "route": "/?capture=hero-workspace", "role": "README_HERO", "sha256": "cdb6700cd3b8688f91cb5780299a416597ab9f10ebfaa7cd0d3089806e729d3b", "result": "PASS_1440_X_900" },
+    { "filename": "docs/media/screenshots/02-research-dashboard.png", "route": "/?capture=research-dashboard", "role": "RESEARCH_EVIDENCE", "sha256": "fc3a71a952db98602b97e498227bbb96e9051c7023985c5b15686073d638f0ad", "result": "PASS_1440_X_900" },
+    { "filename": "docs/media/screenshots/03-task-workflow.png", "route": "/?capture=task-workflow", "role": "BOUNDED_WORKFLOW", "sha256": "e76f096e912fb436ed2d2ee274d299eed48b0db0d7ab728da547a648402a6726", "result": "PASS_1440_X_900" },
+    { "filename": "docs/media/screenshots/04-safety-verification.png", "route": "/?capture=safety-verification", "role": "VERIFICATION_SAFETY", "sha256": "5526a9fc20613aa7c4dfe77679e4c197f048291e23b14bf84776809fd5708519", "result": "PASS_1440_X_900" },
+    { "filename": "docs/media/screenshots/05-architecture-evidence.png", "route": "/?capture=architecture-evidence", "role": "ARCHITECTURE_EVIDENCE", "sha256": "e6e5e34773990fa5e7c61be72ee916bf6c15d433dd59f060c9a29d09de79e646", "result": "PASS_1440_X_900" }
+  ],
+  "gifs": [
+    { "filename": "docs/media/gifs/01-repository-evidence.gif", "flow": "Repository -> task -> evidence reveal", "durationMs": 7000, "sha256": "a18768930416cc567b7b6edc3d22b51a8686a6adee6031c013f15b441d32a6c8", "result": "PASS" },
+    { "filename": "docs/media/gifs/02-research-visualization.gif", "flow": "Research dashboard -> experiment navigation -> evidence transition", "durationMs": 6000, "sha256": "71d14471988f2f72fd40e913065f11c23a696b483779d5ae2fdd3b68c220f151", "result": "PASS" },
+    { "filename": "docs/media/gifs/03-verification-rollback.gif", "flow": "Suggested action -> review -> denial -> diff -> safe rollback", "durationMs": 9000, "sha256": "252c6fa4cb66ab63d58923c18c141b1097031d40dfedc3826978f995c030d4f2", "result": "PASS" }
+  ],
+  "reducedMotion": {
+    "routesVerified": 5,
+    "result": "PASS_NO_MISSING_CONTENT_NO_LAYOUT_REGRESSION_NO_ANIMATION_DEPENDENCY",
+    "persistentSecondPortfolioSet": false
+  },
+  "manifest": {
+    "path": "docs/media/CAPTURE_MANIFEST.json",
+    "sha256": "d2dc0be4ddf8fed334f7114b8f6aa854817281fee2a950cab0cf91134eca690e",
+    "integrity": "PASS"
+  },
+  "readmeIntegration": {
+    "hero": "PASS",
+    "architecture": "PASS",
+    "workflow": "PASS",
+    "research": "PASS",
+    "safety": "PASS",
+    "gifUsage": "PASS_SPARING",
+    "relativeLinks": "PASS"
+  },
+  "consistency": {
+    "benchmarkValues": "PASS_CANONICAL_SEALED_PROJECTION",
+    "capabilityStatus": "PASS_KEEP_MUTATION_DISABLED",
+    "researchStatus": "PASS_RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "accessibilityClaims": "PASS_NARRATOR_DEFERRED_NO_CERTIFICATION_CLAIM",
+    "storyboard": "PASS_7_SCENES_210_SECONDS"
+  },
+  "privacy": {
+    "secrets": 0,
+    "privatePaths": 0,
+    "personalIdentifiers": 0,
+    "debugOverlays": 0,
+    "externalUrls": 0,
+    "result": "PASS"
+  },
+  "defects": {
+    "found": [
+      { "scope": "GIF_A_DETERMINISTIC_FIXTURE", "symptom": "Frozen instructions selected router.test.ts but the repository tree exposed runtime.test.ts." }
+    ],
+    "fixed": [
+      { "change": "Aligned the deterministic tree filename with the existing router.test.ts evidence fixture and frozen GIF flow.", "regression": "tests/media-capture-mode.test.tsx" }
+    ]
+  },
+  "validation": {
+    "mediaManifest": "PASS",
+    "pngDecodeDimensions": "PASS_5_OF_5",
+    "gifDecodeDurations": "PASS_3_OF_3",
+    "reducedMotion": "PASS_5_OF_5",
+    "targetedTests": "PASS_3_FILES_11_TESTS",
+    "strictTypeScript": "PASS",
+    "canonicalCompletion": "PASS_DESIGN_TYPECHECK_44_FILES_219_TESTS_PRODUCTION_BUILD",
+    "documentationLinks": "PASS",
+    "designValidation": "PASS_2248_FILES_ZERO_WARNINGS_ZERO_ERRORS",
+    "secretScan": "PASS_ZERO_FINDINGS",
+    "checksums": "PASS"
+  },
+  "invariants": {
+    "modelCalls": 0,
+    "benchmarkCalls": 0,
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "w3Entered": false,
+    "packagingPerformed": false,
+    "protectedExternalActions": 0
+  },
+  "decision": {
+    "w2": "PASS",
+    "nextAuthorizedPhase": "WINDOWS_PACKAGING_RELEASE_QA",
+    "w3Status": "READY_NOT_STARTED"
+  }
+}

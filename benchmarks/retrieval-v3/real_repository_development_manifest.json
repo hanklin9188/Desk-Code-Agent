@@ -1,0 +1,1255 @@
+{
+  "schemaVersion": 1,
+  "corpusId": "dca-real-repositories-retrieval-v3-development-g1",
+  "classification": "PINNED_PUBLIC_READ_ONLY_DEVELOPMENT_CORPUS_NOT_HOLDOUT",
+  "acquiredAt": "2026-08-09T07:50:27.942Z",
+  "networkAction": "read-only shallow filtered clone; no external or project-remote write",
+  "priorFourRepositoriesExcluded": [
+    "p-limit",
+    "click",
+    "full-stack-fastapi-template",
+    "sampleproject"
+  ],
+  "repositories": [
+    {
+      "id": "cobra",
+      "source": "https://github.com/spf13/cobra",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "language": "Go",
+      "kind": "CLI library",
+      "buildSystem": "Go modules + Make",
+      "testFramework": "go test",
+      "readme": "README.md",
+      "build": "go.mod",
+      "entry": "cobra.go",
+      "test": "cobra_test.go",
+      "commit": "adbc8813901bba65827259daa8e22ff94ec1f30e",
+      "tree": "5a3b2c8e9af4c74e607a0a55e7910c1edb5d266f",
+      "commitDate": "2026-07-10T20:43:07-04:00",
+      "fileCount": 66,
+      "bytes": 705271,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-cobra-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "LICENSE.txt"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "LICENSE.txt",
+            "B": "README.md",
+            "C": "cobra.go"
+          }
+        },
+        {
+          "id": "real-v3-cobra-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "README.md",
+            "go.mod"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "LICENSE.txt + cobra.go",
+            "B": "README.md + go.mod",
+            "C": "cobra.go + README.md"
+          }
+        },
+        {
+          "id": "real-v3-cobra-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "cobra.go"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "README.md",
+            "B": "go.mod",
+            "C": "cobra.go"
+          }
+        },
+        {
+          "id": "real-v3-cobra-verification",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "TEST",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which representative test file and build manifest provide source-test verification evidence?",
+          "requiredEvidenceSet": [
+            "cobra_test.go",
+            "go.mod"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "cobra_test.go + go.mod",
+            "B": "cobra.go + README.md",
+            "C": "LICENSE.txt + cobra_test.go"
+          }
+        }
+      ]
+    },
+    {
+      "id": "express-cors",
+      "source": "https://github.com/expressjs/cors",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "language": "JavaScript",
+      "kind": "web middleware library",
+      "buildSystem": "npm",
+      "testFramework": "Mocha",
+      "readme": "README.md",
+      "build": "package.json",
+      "entry": "lib/index.js",
+      "test": "test/test.js",
+      "commit": "5317ebe670db2aaebc1d496eb5d33493deefb3ed",
+      "tree": "bf36a6571389f13d282038a84d3c8de3097514cd",
+      "commitDate": "2026-04-06T17:03:03-04:00",
+      "fileCount": 17,
+      "bytes": 59639,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-express-cors-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "LICENSE"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "README.md",
+            "B": "LICENSE",
+            "C": "lib/index.js"
+          }
+        },
+        {
+          "id": "real-v3-express-cors-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "README.md",
+            "package.json"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "LICENSE + lib/index.js",
+            "B": "lib/index.js + README.md",
+            "C": "README.md + package.json"
+          }
+        },
+        {
+          "id": "real-v3-express-cors-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "lib/index.js"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "lib/index.js",
+            "B": "README.md",
+            "C": "package.json"
+          }
+        },
+        {
+          "id": "real-v3-express-cors-verification",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "TEST",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which representative test file and build manifest provide source-test verification evidence?",
+          "requiredEvidenceSet": [
+            "test/test.js",
+            "package.json"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "lib/index.js + README.md",
+            "B": "test/test.js + package.json",
+            "C": "LICENSE + test/test.js"
+          }
+        }
+      ]
+    },
+    {
+      "id": "httpx",
+      "source": "https://github.com/encode/httpx",
+      "license": "BSD-3-Clause",
+      "licensePath": "LICENSE.md",
+      "language": "Python",
+      "kind": "HTTP client library",
+      "buildSystem": "Hatch/pyproject",
+      "testFramework": "pytest",
+      "readme": "README.md",
+      "build": "pyproject.toml",
+      "entry": "httpx/__init__.py",
+      "test": "tests/client/test_client.py",
+      "commit": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+      "tree": "31ba94512339180efacceacc0646b56ee15eba63",
+      "commitDate": "2026-02-23T10:40:42+00:00",
+      "fileCount": 125,
+      "bytes": 3321071,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-httpx-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "LICENSE.md"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "README.md",
+            "B": "httpx/__init__.py",
+            "C": "LICENSE.md"
+          }
+        },
+        {
+          "id": "real-v3-httpx-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "README.md",
+            "pyproject.toml"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "README.md + pyproject.toml",
+            "B": "LICENSE.md + httpx/__init__.py",
+            "C": "httpx/__init__.py + README.md"
+          }
+        },
+        {
+          "id": "real-v3-httpx-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "httpx/__init__.py"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "README.md",
+            "B": "httpx/__init__.py",
+            "C": "pyproject.toml"
+          }
+        },
+        {
+          "id": "real-v3-httpx-verification",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "TEST",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which representative test file and build manifest provide source-test verification evidence?",
+          "requiredEvidenceSet": [
+            "tests/client/test_client.py",
+            "pyproject.toml"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "httpx/__init__.py + README.md",
+            "B": "LICENSE.md + tests/client/test_client.py",
+            "C": "tests/client/test_client.py + pyproject.toml"
+          }
+        }
+      ]
+    },
+    {
+      "id": "itsdangerous",
+      "source": "https://github.com/pallets/itsdangerous",
+      "license": "BSD-3-Clause",
+      "licensePath": "LICENSE.txt",
+      "language": "Python",
+      "kind": "security utility library",
+      "buildSystem": "flit/pyproject",
+      "testFramework": "pytest",
+      "readme": "README.md",
+      "build": "pyproject.toml",
+      "entry": "src/itsdangerous/__init__.py",
+      "test": "tests/test_itsdangerous/test_serializer.py",
+      "commit": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "tree": "ef4287f82d8234404b58c7b29d38197e1f38e207",
+      "commitDate": "2025-06-14T13:35:42-07:00",
+      "fileCount": 50,
+      "bytes": 282547,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-itsdangerous-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "LICENSE.txt"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "LICENSE.txt",
+            "B": "README.md",
+            "C": "src/itsdangerous/__init__.py"
+          }
+        },
+        {
+          "id": "real-v3-itsdangerous-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "README.md",
+            "pyproject.toml"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "LICENSE.txt + src/itsdangerous/__init__.py",
+            "B": "README.md + pyproject.toml",
+            "C": "src/itsdangerous/__init__.py + README.md"
+          }
+        },
+        {
+          "id": "real-v3-itsdangerous-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "src/itsdangerous/__init__.py"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "README.md",
+            "B": "pyproject.toml",
+            "C": "src/itsdangerous/__init__.py"
+          }
+        },
+        {
+          "id": "real-v3-itsdangerous-verification",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "TEST",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which representative test file and build manifest provide source-test verification evidence?",
+          "requiredEvidenceSet": [
+            "tests/test_itsdangerous/test_serializer.py",
+            "pyproject.toml"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "tests/test_itsdangerous/test_serializer.py + pyproject.toml",
+            "B": "src/itsdangerous/__init__.py + README.md",
+            "C": "LICENSE.txt + tests/test_itsdangerous/test_serializer.py"
+          }
+        }
+      ]
+    },
+    {
+      "id": "markupsafe",
+      "source": "https://github.com/pallets/markupsafe",
+      "license": "BSD-3-Clause",
+      "licensePath": "LICENSE.txt",
+      "language": "Python/C",
+      "kind": "text safety library",
+      "buildSystem": "setuptools/pyproject",
+      "testFramework": "pytest",
+      "readme": "README.md",
+      "build": "pyproject.toml",
+      "entry": "src/markupsafe/__init__.py",
+      "test": "tests/test_markupsafe.py",
+      "commit": "b2e4d9c7687be25695fffbe93a37622302b24fb1",
+      "tree": "df410ce10bcaed949e0090476273e0e70f3ff3b9",
+      "commitDate": "2025-09-27T11:45:34-07:00",
+      "fileCount": 46,
+      "bytes": 242263,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-markupsafe-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "LICENSE.txt"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "README.md",
+            "B": "LICENSE.txt",
+            "C": "src/markupsafe/__init__.py"
+          }
+        },
+        {
+          "id": "real-v3-markupsafe-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "README.md",
+            "pyproject.toml"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "LICENSE.txt + src/markupsafe/__init__.py",
+            "B": "src/markupsafe/__init__.py + README.md",
+            "C": "README.md + pyproject.toml"
+          }
+        },
+        {
+          "id": "real-v3-markupsafe-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "src/markupsafe/__init__.py"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "src/markupsafe/__init__.py",
+            "B": "README.md",
+            "C": "pyproject.toml"
+          }
+        },
+        {
+          "id": "real-v3-markupsafe-verification",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "TEST",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which representative test file and build manifest provide source-test verification evidence?",
+          "requiredEvidenceSet": [
+            "tests/test_markupsafe.py",
+            "pyproject.toml"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "src/markupsafe/__init__.py + README.md",
+            "B": "tests/test_markupsafe.py + pyproject.toml",
+            "C": "LICENSE.txt + tests/test_markupsafe.py"
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-map",
+      "source": "https://github.com/sindresorhus/p-map",
+      "license": "MIT",
+      "licensePath": "license",
+      "language": "JavaScript",
+      "kind": "async library",
+      "buildSystem": "npm",
+      "testFramework": "AVA + tsd",
+      "readme": "readme.md",
+      "build": "package.json",
+      "entry": "index.js",
+      "test": "test.js",
+      "commit": "bc26cf03f81292325236a1188063dac8e7a4de0f",
+      "tree": "10297443b80a2322fe5711512aaf47af409c33f3",
+      "commitDate": "2026-07-20T23:20:30+02:00",
+      "fileCount": 15,
+      "bytes": 45926,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-p-map-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "license"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "readme.md",
+            "B": "index.js",
+            "C": "license"
+          }
+        },
+        {
+          "id": "real-v3-p-map-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "readme.md",
+            "package.json"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "readme.md + package.json",
+            "B": "license + index.js",
+            "C": "index.js + readme.md"
+          }
+        },
+        {
+          "id": "real-v3-p-map-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "index.js"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "readme.md",
+            "B": "index.js",
+            "C": "package.json"
+          }
+        },
+        {
+          "id": "real-v3-p-map-verification",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "TEST",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which representative test file and build manifest provide source-test verification evidence?",
+          "requiredEvidenceSet": [
+            "test.js",
+            "package.json"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "index.js + readme.md",
+            "B": "license + test.js",
+            "C": "test.js + package.json"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pocketbase",
+      "source": "https://github.com/pocketbase/pocketbase",
+      "license": "MIT",
+      "licensePath": "LICENSE.md",
+      "language": "Go + JavaScript",
+      "kind": "web backend application",
+      "buildSystem": "Go modules + Make + npm UI",
+      "testFramework": "go test",
+      "readme": "README.md",
+      "build": "go.mod",
+      "entry": "pocketbase.go",
+      "test": "apis/base_test.go",
+      "commit": "0a74d2f25d6decfc9bd0fc64656ec431f23bf610",
+      "tree": "3a7375741b30946fdf03556a30ca03aca50ebbdb",
+      "commitDate": "2026-07-29T22:34:20+03:00",
+      "fileCount": 919,
+      "bytes": 15919246,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-pocketbase-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "LICENSE.md"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "LICENSE.md",
+            "B": "README.md",
+            "C": "pocketbase.go"
+          }
+        },
+        {
+          "id": "real-v3-pocketbase-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "README.md",
+            "go.mod"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "LICENSE.md + pocketbase.go",
+            "B": "README.md + go.mod",
+            "C": "pocketbase.go + README.md"
+          }
+        },
+        {
+          "id": "real-v3-pocketbase-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "pocketbase.go"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "README.md",
+            "B": "go.mod",
+            "C": "pocketbase.go"
+          }
+        },
+        {
+          "id": "real-v3-pocketbase-verification",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "TEST",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which representative test file and build manifest provide source-test verification evidence?",
+          "requiredEvidenceSet": [
+            "apis/base_test.go",
+            "go.mod"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "apis/base_test.go + go.mod",
+            "B": "pocketbase.go + README.md",
+            "C": "LICENSE.md + apis/base_test.go"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pypa-build",
+      "source": "https://github.com/pypa/build",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "language": "Python",
+      "kind": "packaging CLI",
+      "buildSystem": "Flit/pyproject",
+      "testFramework": "pytest",
+      "readme": "README.md",
+      "build": "pyproject.toml",
+      "entry": "src/build/__main__.py",
+      "test": "tests/test_projectbuilder.py",
+      "commit": "1b8f3fa736badce75895bc19f4a8650b679bbffa",
+      "tree": "6dbfd8f891d149d1e885aa51310aa1f576bb8990",
+      "commitDate": "2026-08-03T12:22:19-07:00",
+      "fileCount": 130,
+      "bytes": 453575,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-pypa-build-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "LICENSE"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "README.md",
+            "B": "LICENSE",
+            "C": "src/build/__main__.py"
+          }
+        },
+        {
+          "id": "real-v3-pypa-build-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "README.md",
+            "pyproject.toml"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "LICENSE + src/build/__main__.py",
+            "B": "src/build/__main__.py + README.md",
+            "C": "README.md + pyproject.toml"
+          }
+        },
+        {
+          "id": "real-v3-pypa-build-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "src/build/__main__.py"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "src/build/__main__.py",
+            "B": "README.md",
+            "C": "pyproject.toml"
+          }
+        },
+        {
+          "id": "real-v3-pypa-build-verification",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "TEST",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which representative test file and build manifest provide source-test verification evidence?",
+          "requiredEvidenceSet": [
+            "tests/test_projectbuilder.py",
+            "pyproject.toml"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "src/build/__main__.py + README.md",
+            "B": "tests/test_projectbuilder.py + pyproject.toml",
+            "C": "LICENSE + tests/test_projectbuilder.py"
+          }
+        }
+      ]
+    },
+    {
+      "id": "react-redux-realworld",
+      "source": "https://github.com/gothinkster/react-redux-realworld-example-app",
+      "license": "MIT",
+      "licensePath": "LICENSE.md",
+      "language": "JavaScript/React",
+      "kind": "web application",
+      "buildSystem": "npm/react-scripts",
+      "testFramework": "react-scripts (no repository test files)",
+      "readme": "README.md",
+      "build": "package.json",
+      "entry": "src/index.js",
+      "test": null,
+      "commit": "ee72eba4056392c95a27bc48d385d3f54ba38a18",
+      "tree": "57c74761c04b05a1334ea1e814ffa5e930a461c1",
+      "commitDate": "2021-09-07T16:55:07+02:00",
+      "fileCount": 45,
+      "bytes": 168632,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-react-redux-realworld-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "LICENSE.md"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "README.md",
+            "B": "src/index.js",
+            "C": "LICENSE.md"
+          }
+        },
+        {
+          "id": "real-v3-react-redux-realworld-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "README.md",
+            "package.json"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "README.md + package.json",
+            "B": "LICENSE.md + src/index.js",
+            "C": "src/index.js + README.md"
+          }
+        },
+        {
+          "id": "real-v3-react-redux-realworld-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "src/index.js"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "README.md",
+            "B": "src/index.js",
+            "C": "package.json"
+          }
+        },
+        {
+          "id": "real-v3-react-redux-realworld-verification",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which entry point and build manifest define the executable verification surface when no repository test file is present?",
+          "requiredEvidenceSet": [
+            "src/index.js",
+            "package.json"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "README.md + LICENSE.md",
+            "B": "package.json + README.md",
+            "C": "src/index.js + package.json"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ripgrep",
+      "source": "https://github.com/BurntSushi/ripgrep",
+      "license": "MIT OR Unlicense",
+      "licensePath": "COPYING",
+      "language": "Rust",
+      "kind": "CLI application",
+      "buildSystem": "Cargo",
+      "testFramework": "cargo test",
+      "readme": "README.md",
+      "build": "Cargo.toml",
+      "entry": "crates/core/main.rs",
+      "test": "tests/binary.rs",
+      "commit": "3fce3b5bb0236da2df6d99672afb8a719642eca7",
+      "tree": "856ed9162d23416ee7dc5f4389975b54ca062f60",
+      "commitDate": "2026-08-04T10:00:08-04:00",
+      "fileCount": 237,
+      "bytes": 3255973,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-ripgrep-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "COPYING"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "COPYING",
+            "B": "README.md",
+            "C": "crates/core/main.rs"
+          }
+        },
+        {
+          "id": "real-v3-ripgrep-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "README.md",
+            "Cargo.toml"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "COPYING + crates/core/main.rs",
+            "B": "README.md + Cargo.toml",
+            "C": "crates/core/main.rs + README.md"
+          }
+        },
+        {
+          "id": "real-v3-ripgrep-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "crates/core/main.rs"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "README.md",
+            "B": "Cargo.toml",
+            "C": "crates/core/main.rs"
+          }
+        },
+        {
+          "id": "real-v3-ripgrep-verification",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "TEST",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which representative test file and build manifest provide source-test verification evidence?",
+          "requiredEvidenceSet": [
+            "tests/binary.rs",
+            "Cargo.toml"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "tests/binary.rs + Cargo.toml",
+            "B": "crates/core/main.rs + README.md",
+            "C": "COPYING + tests/binary.rs"
+          }
+        }
+      ]
+    },
+    {
+      "id": "typer",
+      "source": "https://github.com/fastapi/typer",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "language": "Python",
+      "kind": "CLI library",
+      "buildSystem": "Hatch/uv/pyproject",
+      "testFramework": "pytest",
+      "readme": "README.md",
+      "build": "pyproject.toml",
+      "entry": "typer/main.py",
+      "test": "tests/test_cli/test_help.py",
+      "commit": "361bdd822dd5eafc9c2e3e55ed3a94b746a39aa6",
+      "tree": "04771c17209733ff6497391b81a07e0024c819c3",
+      "commitDate": "2026-08-08T22:47:48+00:00",
+      "fileCount": 774,
+      "bytes": 2077695,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-typer-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "LICENSE"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "README.md",
+            "B": "LICENSE",
+            "C": "typer/main.py"
+          }
+        },
+        {
+          "id": "real-v3-typer-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "README.md",
+            "pyproject.toml"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "LICENSE + typer/main.py",
+            "B": "typer/main.py + README.md",
+            "C": "README.md + pyproject.toml"
+          }
+        },
+        {
+          "id": "real-v3-typer-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "typer/main.py"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "typer/main.py",
+            "B": "README.md",
+            "C": "pyproject.toml"
+          }
+        },
+        {
+          "id": "real-v3-typer-verification",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "TEST",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which representative test file and build manifest provide source-test verification evidence?",
+          "requiredEvidenceSet": [
+            "tests/test_cli/test_help.py",
+            "pyproject.toml"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "typer/main.py + README.md",
+            "B": "tests/test_cli/test_help.py + pyproject.toml",
+            "C": "LICENSE + tests/test_cli/test_help.py"
+          }
+        }
+      ]
+    },
+    {
+      "id": "yocto-queue",
+      "source": "https://github.com/sindresorhus/yocto-queue",
+      "license": "MIT",
+      "licensePath": "license",
+      "language": "JavaScript",
+      "kind": "data structure library",
+      "buildSystem": "npm",
+      "testFramework": "AVA",
+      "readme": "readme.md",
+      "build": "package.json",
+      "entry": "index.js",
+      "test": "test.js",
+      "commit": "b07eac099753833b29d06c614149904445739776",
+      "tree": "5a5f01d44bd03ec879cda4bf9591fe7f77598729",
+      "commitDate": "2025-11-11T13:30:03+07:00",
+      "fileCount": 13,
+      "bytes": 10855,
+      "mutationAllowed": false,
+      "tasks": [
+        {
+          "id": "real-v3-yocto-queue-license",
+          "evidenceRequirement": "METADATA",
+          "requestedEvidenceClasses": [
+            "METADATA"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L2",
+          "question": "Which canonical license metadata file is authoritative for this pinned repository?",
+          "requiredEvidenceSet": [
+            "license"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "readme.md",
+            "B": "index.js",
+            "C": "license"
+          }
+        },
+        {
+          "id": "real-v3-yocto-queue-onboarding",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "DOCUMENTATION",
+            "BUILD"
+          ],
+          "taskCategory": "Analysis",
+          "difficulty": "L3",
+          "question": "How do I install and run this repository? Combine the current README documentation with the canonical build manifest.",
+          "requiredEvidenceSet": [
+            "readme.md",
+            "package.json"
+          ],
+          "expected": "A",
+          "options": {
+            "A": "readme.md + package.json",
+            "B": "license + index.js",
+            "C": "index.js + readme.md"
+          }
+        },
+        {
+          "id": "real-v3-yocto-queue-architecture",
+          "evidenceRequirement": "ARCHITECTURE",
+          "requestedEvidenceClasses": [
+            "ARCHITECTURE"
+          ],
+          "taskCategory": "Navigation",
+          "difficulty": "L2",
+          "question": "Which high-centrality entry point provides the primary implementation surface for this repository?",
+          "requiredEvidenceSet": [
+            "index.js"
+          ],
+          "expected": "B",
+          "options": {
+            "A": "readme.md",
+            "B": "index.js",
+            "C": "package.json"
+          }
+        },
+        {
+          "id": "real-v3-yocto-queue-verification",
+          "evidenceRequirement": "MIXED",
+          "requestedEvidenceClasses": [
+            "TEST",
+            "BUILD"
+          ],
+          "taskCategory": "Coding",
+          "difficulty": "L3",
+          "question": "Which representative test file and build manifest provide source-test verification evidence?",
+          "requiredEvidenceSet": [
+            "test.js",
+            "package.json"
+          ],
+          "expected": "C",
+          "options": {
+            "A": "index.js + readme.md",
+            "B": "license + test.js",
+            "C": "test.js + package.json"
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "repositories": 12,
+    "tasks": 48,
+    "floatingHeadUsed": false,
+    "publicRepositoryMutation": false,
+    "ecosystems": [
+      "Python",
+      "JavaScript/TypeScript",
+      "Go",
+      "Rust",
+      "React web",
+      "web backend",
+      "CLI",
+      "library"
+    ]
+  }
+}

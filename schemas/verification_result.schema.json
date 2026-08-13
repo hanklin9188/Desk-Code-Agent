@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verification Result",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "verification_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "PARTIAL",
+        "NOT_RUN",
+        "CANCELLED"
+      ]
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "PASS",
+              "FAIL",
+              "NOT_APPLICABLE",
+              "NOT_RUN",
+              "TIMEOUT",
+              "CANCELLED"
+            ]
+          },
+          "command": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "exit_code": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "duration_ms": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "artifact_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "status",
+          "command",
+          "exit_code",
+          "duration_ms",
+          "artifact_id"
+        ]
+      }
+    },
+    "mandatory_stages_passed": {
+      "type": "boolean"
+    },
+    "environment_fingerprint": {
+      "type": "string",
+      "minLength": 1
+    },
+    "failure_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "verification_id",
+    "task_id",
+    "status",
+    "stages",
+    "mandatory_stages_passed",
+    "environment_fingerprint",
+    "failure_evidence_ids"
+  ]
+}

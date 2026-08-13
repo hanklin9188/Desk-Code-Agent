@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "feasibilityId": "dca-practical-local-model-tournament-feasibility-v1",
+  "status": "PASS_PROFILE_DEFINED_REQUIRES_SESSION_B_SMOKE",
+  "classification": "MATCHED_PRECISION",
+  "preparedAt": "2026-08-11T04:50:29.633Z",
+  "hardware": {
+    "gpuName": "NVIDIA GeForce RTX 4080 SUPER",
+    "memoryMiB": 16376,
+    "driverVersion": "591.86",
+    "computeCapability": "8.9",
+    "os": "Linux 5.15.167.4-microsoft-standard-WSL2 x86_64 GNU/Linux",
+    "node": "v24.15.0",
+    "git": "git version 2.43.0"
+  },
+  "observations": {
+    "candidateBF16WeightMiB": 14525.67,
+    "priorFourBBF16WeightMiB": 8888.08,
+    "priorFourBMeasuredPeakMiB": 12290,
+    "observedNonWeightMarginMiB": 3401.92
+  },
+  "bf16": {
+    "status": "REJECTED_AS_NOT_SAFELY_FEASIBLE",
+    "projectedPeakMiB": 17927.59,
+    "projectedHeadroomMiB": -1551.59,
+    "reason": "BF16 weights plus the observed vLLM/runtime margin exceed physical GPU memory; runtime safety/context may not be weakened to force fit."
+  },
+  "selectedProfile": {
+    "id": "VLLM_ONLINE_FP8_PER_TENSOR_W8A8",
+    "category": "MATCHED_PRECISION",
+    "sourceSnapshotTensorType": "BF16",
+    "runtimeWeightPrecision": "FP8_E4M3_PER_TENSOR",
+    "activationPrecision": "DYNAMIC_FP8_W8A8",
+    "vllmArgument": "--quantization fp8_per_tensor",
+    "dtype": "bfloat16",
+    "projectedSteadyPeakMiB": 10664.76,
+    "projectedSteadyHeadroomMiB": 5711.24,
+    "candidates": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "exactProfileSmokeRequired": true,
+    "transientLoadPeakNotClaimed": true
+  },
+  "contingency": {
+    "automaticFallback": false,
+    "fourBitProfile": "NOT_PREREGISTERED",
+    "rule": "Any FP8 load incompatibility or OOM becomes INFRASTRUCTURE_BLOCKED. AWQ/GPTQ/BitsAndBytes requires a new append-only preregistration and explicit acquisition/dependency approval."
+  },
+  "interpretation": {
+    "candidateToCandidate": "matched practical FP8 comparison",
+    "referenceToCandidate": "practical system comparison against historical Qwen3.5-4B BF16; not a pure scale or model-only causal claim"
+  },
+  "modelCalls": 0,
+  "weightsDownloaded": false
+}

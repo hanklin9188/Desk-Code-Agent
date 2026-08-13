@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "corpus_id": "dca-real-repositories-g1",
+  "classification": "PINNED_PUBLIC_READ_ONLY_SUPPLEMENTAL_CORPUS",
+  "acquired_at": "2026-08-09T14:27:35+08:00",
+  "network_action": "read-only shallow clone; no project remote changed and no external write performed",
+  "repositories": [
+    {
+      "id": "p-limit",
+      "source": "https://github.com/sindresorhus/p-limit",
+      "commit": "df476048d023ff868cd45b35ee47f5fb0ca2b25a",
+      "tree": "21d1b1115ab955f499ca0de32b8819b936775dd9",
+      "commit_date": "2026-07-20T22:18:38+02:00",
+      "license": "MIT",
+      "license_evidence": "license",
+      "language": "JavaScript with TypeScript declarations",
+      "loc": 1653,
+      "file_count": 16,
+      "build_system": "npm",
+      "test_framework": "AVA + tsd + xo",
+      "size": "small",
+      "mutation_allowed": false,
+      "tasks": [
+        { "id": "real-p-limit-entry", "type": "repository_navigation", "source": "independently authored from pinned source", "question": "Which file defines the default pLimit runtime function?", "ground_truth": "index.js:3", "oracle": "index.js" },
+        { "id": "real-p-limit-tests", "type": "testing_analysis", "source": "package metadata and test import", "question": "Which declared test stack validates runtime, style, and declarations?", "ground_truth": "package.json scripts test=xo && ava && tsd", "oracle": "AVA + xo + tsd" },
+        { "id": "real-p-limit-overview", "type": "onboarding", "source": "manifest/README/source", "question": "Identify source, declaration, and primary test reading order.", "ground_truth": "index.js -> index.d.ts -> test.js", "oracle": "index.js,index.d.ts,test.js" }
+      ]
+    },
+    {
+      "id": "click",
+      "source": "https://github.com/pallets/click",
+      "commit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+      "tree": "c6aa87f15f2e44a6fcab33714e1eb91e2552d816",
+      "commit_date": "2026-07-24T13:26:39-07:00",
+      "license": "BSD-3-Clause",
+      "license_evidence": "LICENSE.txt and pyproject.toml",
+      "language": "Python",
+      "loc": 39166,
+      "file_count": 165,
+      "build_system": "flit/uv/tox",
+      "test_framework": "pytest",
+      "size": "medium",
+      "mutation_allowed": false,
+      "tasks": [
+        { "id": "real-click-command", "type": "symbol_navigation", "source": "pinned symbol definition", "question": "Where is the Command class defined?", "ground_truth": "src/click/core.py:959", "oracle": "src/click/core.py" },
+        { "id": "real-click-decorator", "type": "dependency_navigation", "source": "pinned symbol search", "question": "Where is the public command decorator implementation located?", "ground_truth": "src/click/decorators.py", "oracle": "src/click/decorators.py" },
+        { "id": "real-click-tests", "type": "testing_analysis", "source": "pyproject.toml", "question": "Which test runner and root are declared?", "ground_truth": "pytest; testpaths=tests", "oracle": "pytest,tests" }
+      ]
+    },
+    {
+      "id": "full-stack-fastapi-template",
+      "source": "https://github.com/fastapi/full-stack-fastapi-template",
+      "commit": "75c388ba1cd60f39b43dd63a73978bae8c69cb87",
+      "tree": "08e68da51191ca8fc522717e6d7c24c85f2dd741",
+      "commit_date": "2026-08-08T22:47:42+00:00",
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "language": "TypeScript/React and Python/FastAPI",
+      "loc": 21232,
+      "file_count": 245,
+      "build_system": "Vite/TypeScript, uv/hatch, Docker Compose",
+      "test_framework": "Playwright and pytest",
+      "size": "medium",
+      "mutation_allowed": false,
+      "tasks": [
+        { "id": "real-fullstack-backend-entry", "type": "repository_navigation", "source": "pinned backend source", "question": "Where is the FastAPI application constructed?", "ground_truth": "backend/app/main.py:21", "oracle": "backend/app/main.py" },
+        { "id": "real-fullstack-frontend-entry", "type": "repository_navigation", "source": "pinned frontend source", "question": "Where are the router and React root initialized?", "ground_truth": "frontend/src/main.tsx", "oracle": "frontend/src/main.tsx" },
+        { "id": "real-fullstack-architecture", "type": "architecture_analysis", "source": "pinned manifests/source", "question": "Report the frontend/backend split and testing frameworks with citations.", "ground_truth": "React/Vite/Playwright frontend; FastAPI/pytest backend", "oracle": "frontend/package.json,backend/pyproject.toml" }
+      ]
+    },
+    {
+      "id": "sampleproject",
+      "source": "https://github.com/pypa/sampleproject",
+      "commit": "621e4974ca25ce531773def586ba3ed8e736b3fc",
+      "tree": "c7d439931f56fa21023a7a0e615b91f5699c1827",
+      "commit_date": "2024-11-06T17:36:40-05:00",
+      "license": "MIT",
+      "license_evidence": "LICENSE.txt and pyproject.toml classifier",
+      "language": "Python",
+      "loc": 381,
+      "file_count": 12,
+      "build_system": "setuptools/pyproject.toml",
+      "test_framework": "coverage/unittest-style sample tests",
+      "size": "small",
+      "mutation_allowed": false,
+      "tasks": [
+        { "id": "real-sample-symbol", "type": "symbol_navigation", "source": "pinned source", "question": "Where is add_one implemented?", "ground_truth": "src/sample/simple.py:1", "oracle": "src/sample/simple.py" },
+        { "id": "real-sample-build", "type": "onboarding", "source": "pinned pyproject", "question": "Which build backend and package layout are used?", "ground_truth": "setuptools.build_meta and src/sample", "oracle": "pyproject.toml,src/sample" },
+        { "id": "real-sample-license", "type": "provenance_analysis", "source": "pinned license metadata", "question": "Which license evidence is present?", "ground_truth": "MIT in LICENSE.txt and classifier", "oracle": "MIT" }
+      ]
+    }
+  ],
+  "summary": {
+    "repositories": 4,
+    "tasks": 12,
+    "languages": ["TypeScript", "JavaScript", "Python", "mixed frontend/backend"],
+    "total_files": 438,
+    "total_loc": 62432,
+    "floating_head_used": false,
+    "public_repository_mutation": false
+  }
+}

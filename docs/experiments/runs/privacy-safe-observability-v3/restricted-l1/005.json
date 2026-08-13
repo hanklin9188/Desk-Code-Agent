@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 3,
+  "packetLevel": "L1",
+  "identity": {
+    "taskId": "observability-024-bd3dc0ee3098",
+    "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+    "physicalCallId": "privacy-observability-v3-006-bdc8e495-0082-4022-ac51-674fa1d39aa5",
+    "requestSha256": "1ff92f00e60d36044a50e398a52d4edc37e2d0ded4552653cf5d94ec06746736",
+    "actionIdentitySha256": "9934c8f16d7733a07a14738059d8370dc20ddf12cc74ebb468eb79073050ce08"
+  },
+  "evidence": {
+    "schemaVersion": 2,
+    "level": "L1_STRUCTURED_DERIVED_EDIT_FEATURES",
+    "taskId": "observability-024-bd3dc0ee3098",
+    "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+    "physicalCallId": "privacy-observability-v3-006-bdc8e495-0082-4022-ac51-674fa1d39aa5",
+    "requestSha256": "1ff92f00e60d36044a50e398a52d4edc37e2d0ded4552653cf5d94ec06746736",
+    "actionIdentitySha256": "9934c8f16d7733a07a14738059d8370dc20ddf12cc74ebb468eb79073050ce08",
+    "modelResponseStatus": "COMPLETED",
+    "actionParseStatus": "JSON_OBJECT",
+    "actionValidationStatus": "PASS",
+    "replacementPresent": true,
+    "afterSourceParseStatus": "FAIL",
+    "astFeaturesAvailable": false,
+    "parserFailureCategory": "TREE_SITTER_SYNTAX_ERROR",
+    "selectedFile": "src/case-4.mjs",
+    "range": {
+      "startLine": 2,
+      "endLine": 2
+    },
+    "targetSymbol": {
+      "digest": "dfdbec0f03bc97e5fee34a01bddc3cf94ce22199446669627f3427fdafdd5c61",
+      "kind": "function"
+    },
+    "replacementShape": {
+      "bytes": 61,
+      "characters": 61,
+      "lines": 2,
+      "newlines": 1,
+      "whitespaceOnly": false,
+      "indentation": [
+        {
+          "kind": "0",
+          "count": 2
+        }
+      ],
+      "lexicalTokenKinds": [
+        {
+          "kind": "IDENTIFIER",
+          "count": 7
+        }
+      ],
+      "operatorCategories": [
+        {
+          "kind": "?",
+          "count": 1
+        },
+        {
+          "kind": "/",
+          "count": 2
+        }
+      ],
+      "commentTokens": 0,
+      "delimiterBalance": {
+        "parentheses": 0,
+        "brackets": 0,
+        "braces": 0
+      },
+      "identifierDigests": [
+        {
+          "digest": "1c6164a7e9e8f96c8f0e0d5c0166a0be3b2f4d7e1b1ef8000284899a0da3f394",
+          "count": 1
+        },
+        {
+          "digest": "243a228f311d1662490a5ccf623c1c24d79602068edf6941b47ef1e1b27b1fb6",
+          "count": 1
+        },
+        {
+          "digest": "40706bade42e49551bdc598d1ec7c9422e3ec25bb18ca813d203fa50cc1a1c20",
+          "count": 2
+        },
+        {
+          "digest": "433d3e5995cde2c3a16247d5249d2380c75cc55ba0f7a4a89c457bed9ccc2763",
+          "count": 1
+        },
+        {
+          "digest": "53be6d5dd9410aabc82f3f2f148f3f0123384ec58500dfd98d3f4811fbc8beb8",
+          "count": 1
+        },
+        {
+          "digest": "ccd017f6014ef76efa7aea95d67b2c55c40c8c7a934d32028f27cf6f9ded6819",
+          "count": 1
+        }
+      ],
+      "literalDigests": []
+    },
+    "astFeatures": null,
+    "canonicalEditSha256": "bf80c9c5eb49f573a24ef0413ffdde3d653affd90b428efdc593651c67d25273",
+    "hashKeyId": "10b76595429d293bbf0364e08dfbd6a62e71f9a5bc6fcc9d01e51213717c2c92",
+    "verification": {
+      "stage": "SYNTAX_TYPE",
+      "status": "FAIL",
+      "code": "SYNTAX_TYPE_FAILED",
+      "diagnosticSha256": null
+    },
+    "visibleBehavioralEffect": {
+      "status": "NOT_RUN",
+      "category": "NOT_RUN",
+      "diagnosticSha256": null
+    },
+    "privacy": {
+      "rawPromptStored": false,
+      "rawModelOutputStored": false,
+      "rawEditBodyStored": false,
+      "rawIdentifiersStored": false,
+      "rawLiteralsStored": false,
+      "commentsStored": false,
+      "sourceStored": false,
+      "rawParserMessageStored": false,
+      "hashKeyStored": false
+    }
+  }
+}

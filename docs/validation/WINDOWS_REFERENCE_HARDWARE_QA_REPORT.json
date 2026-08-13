@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "reportId": "dca-windows-reference-hardware-qa-w1-v1",
+  "phase": "WINDOWS_REFERENCE_HARDWARE_QA",
+  "completedAt": "2026-08-12T13:42:32+08:00",
+  "status": "BLOCKED_EXTERNAL",
+  "decision": {
+    "windowsReferenceHardwareQa": "NOT_RUN",
+    "reason": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "finalMediaCaptureAuthorized": false,
+    "nextAuthorizedPhase": "WINDOWS_REFERENCE_HARDWARE_QA",
+    "resumeCondition": "Provide either a runnable native Windows Desk Code Agent package or Windows-native Node/npm and Rust/cargo toolchains, plus an interactive Windows accessibility session."
+  },
+  "invariants": {
+    "capabilityResearch": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "autonomousMutation": "KEEP_MUTATION_DISABLED",
+    "targetModelCalls": 0,
+    "benchmarkCalls": 0,
+    "dependencyInstalls": 0,
+    "protectedExternalActions": 0
+  },
+  "environment": {
+    "hostMode": "Windows 11 host inspected from WSL2 Ubuntu 24.04.2",
+    "windows": {
+      "edition": "Microsoft Windows 11 Home",
+      "version": "10.0.26200",
+      "build": "26200",
+      "architecture": "64-bit",
+      "systemType": "x64-based PC",
+      "ramBytes": 66191269888,
+      "display": "2560x1440",
+      "appliedDpi": 144,
+      "displayScalingPercent": 150,
+      "monitorTopology": "one active 60x34 cm display reported by WMI"
+    },
+    "gpu": [
+      {
+        "name": "NVIDIA GeForce RTX 4080 SUPER",
+        "windowsDriverVersion": "32.0.15.9186",
+        "nvidiaDriverVersion": "591.86",
+        "memoryMiB": 16376
+      },
+      {
+        "name": "AMD Radeon(TM) Graphics",
+        "windowsDriverVersion": "32.0.21043.5001",
+        "activeDisplay": "2560x1440"
+      }
+    ],
+    "runtime": {
+      "windowsNode": "NOT_INSTALLED_OR_NOT_ON_PATH",
+      "windowsNpm": "NOT_INSTALLED_OR_NOT_ON_PATH",
+      "windowsRustc": "NOT_INSTALLED_OR_NOT_ON_PATH",
+      "windowsCargo": "NOT_INSTALLED_OR_NOT_ON_PATH",
+      "wslNode": "24.15.0",
+      "wslNpm": "11.12.1",
+      "tauriCli": "2.11.4",
+      "edge": "150.0.4078.48",
+      "webView2": "150.0.4078.48",
+      "prebuiltWindowsExecutable": false,
+      "prebuiltWindowsInstaller": false
+    },
+    "accessibilityTools": {
+      "windowsNarratorPresent": true,
+      "windowsMagnifierPresent": true,
+      "interactiveAssistiveTechnologySessionAvailable": false
+    }
+  },
+  "nativeStartup": {
+    "result": "NOT_RUN",
+    "reason": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "attempt": "powershell.exe -File scripts/windows_qa.ps1",
+    "observedFailure": "PowerShell stopped at line 6 because node was not recognized.",
+    "notEstablished": [
+      "native Tauri application launch",
+      "native WebView2 window and bundled asset loading",
+      "native chart, fixture, navigation, and artifact-viewer behavior",
+      "absence of WSL-only path leakage in the packaged application"
+    ]
+  },
+  "windowsEdgeRendering": {
+    "scope": "Real Windows Microsoft Edge headless rendering of the Vite-served deterministic UI; this is not native Tauri/WebView2 startup evidence.",
+    "matrix": [
+      { "scalePercent": 100, "deviceScaleFactor": 1, "result": "PASS", "pngPixels": "1440x900", "sha256": "2a70e9115d4e06625741074d8d905cd8cd55eb887d4222cad1d164eeaf0f5a14" },
+      { "scalePercent": 125, "deviceScaleFactor": 1.25, "result": "PASS", "pngPixels": "1800x1125", "sha256": "8472f4f5e720f67b8e290f8f4fd07973584ca26dc33f18da9813fa3c57a7219c" },
+      { "scalePercent": 150, "deviceScaleFactor": 1.5, "result": "PASS", "pngPixels": "2160x1350", "sha256": "7d680a9a724da461904f88c573740a87784e88f5288e272169ee3d43af4788ae", "actualHostScale": true },
+      { "scalePercent": 200, "deviceScaleFactor": 2, "result": "PASS", "pngPixels": "2880x1800", "sha256": "b664a54c5484b22429a651418e8035ec6b82fae515e8aef5e8ab2a850ed4a8b8" }
+    ],
+    "surfacesAt150Percent": [
+      { "id": "hero-workspace", "result": "PASS", "sha256": "7170733b9abe00fbe5dff57812de5e97bb6c2629bcf3c1bae77b4f9f2e4afc04" },
+      { "id": "research-dashboard", "result": "PASS", "sha256": "7d680a9a724da461904f88c573740a87784e88f5288e272169ee3d43af4788ae" },
+      { "id": "task-workflow", "result": "PASS", "sha256": "4896cbfb462281d5c40744ff05562dd2c8f78404c3091f6426bf413b8fbe68b7" },
+      { "id": "safety-verification", "result": "PASS", "sha256": "3a45b5e2fcd4b64301e0fe4105b639363775fed3de801498661666eef064fe94" },
+      { "id": "architecture-evidence", "result": "PASS", "sha256": "27484a952270074d33df0e60a1696a306d716d533b5a4d4526aa7dc33c23bfd7" }
+    ],
+    "visualInspection": {
+      "clipping": "PASS",
+      "overlap": "PASS",
+      "overflow": "PASS",
+      "textReadability": "PASS",
+      "chartTruncation": "PASS",
+      "unexpectedScrollbars": "PASS",
+      "layoutShiftInStaticCapture": "PASS",
+      "scaledDialogsAndTooltips": "NOT_RUN"
+    },
+    "nativeOsScalingMatrix": {
+      "result": "NOT_RUN",
+      "reason": "Only 150 percent was the host OS setting; 100, 125, and 200 percent were Edge device-scale emulations and no native Tauri executable was available."
+    }
+  },
+  "keyboard": {
+    "automatedDomRegression": "PASS",
+    "verified": [
+      "artifact source button activation",
+      "dialog initial focus",
+      "Tab and Shift+Tab focus trap",
+      "Escape dismissal",
+      "focus restoration"
+    ],
+    "nativeKeyboardOnlyWorkflow": "NOT_RUN",
+    "nativeReason": "NOT_RUN_ENVIRONMENT_LIMITATION"
+  },
+  "accessibility": {
+    "axeDomAudit": "PASS",
+    "semanticAndLabelRegression": "PASS",
+    "screenReader": "NOT_RUN",
+    "screenReaderReason": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "claimBoundary": "Narrator is installed, but no interactive native application and assistive-technology session was available; no screen-reader PASS is claimed."
+  },
+  "fontRendering": {
+    "windowsEdge": "PASS",
+    "observed": "No missing glyphs, fallback-font layout breaks, number/chart corruption, or visible text clipping on the inspected Windows Edge surfaces.",
+    "nativeWebView2": "NOT_RUN"
+  },
+  "motion": {
+    "configuredBands": "PASS",
+    "bandsMs": { "micro": 160, "normal": 220, "panelChart": 300 },
+    "reducedMotionDomContract": "PASS",
+    "nativeSmoothnessAndJank": "NOT_RUN",
+    "reason": "No native Tauri executable or interactive Windows capture session."
+  },
+  "pathAndArtifactViewer": {
+    "result": "PASS",
+    "repositoryRelativeCanonicalArtifact": "PASS",
+    "windowsSeparators": "PASS",
+    "filenamesWithSpacesOutsideAllowlist": "PASS_FAIL_CLOSED",
+    "longPathOutsideAllowlist": "PASS_FAIL_CLOSED",
+    "driveAbsolutePath": "PASS_REJECTED",
+    "parentTraversal": "PASS_REJECTED",
+    "unixAbsolutePath": "PASS_REJECTED",
+    "arbitraryFileAccessIntroduced": false
+  },
+  "runtimeSafety": {
+    "deterministicRegressionSuite": "PASS",
+    "boundedPathAndWrongFileProtection": "PASS",
+    "readOnlyArtifactViewing": "PASS",
+    "commandBoundaries": "PASS",
+    "rollbackBehavior": "PASS",
+    "mutationDisabledStatus": "PASS",
+    "nativeWindowsRuntimeRegression": "NOT_RUN"
+  },
+  "fixedBugs": [
+    {
+      "id": "W1-A11Y-001",
+      "description": "The canonical artifact modal did not move or contain focus, close with Escape, or restore the invoking control.",
+      "fix": "Added initial focus, a document-level Escape handler, bounded Tab/Shift+Tab trapping, and focus restoration with regression coverage.",
+      "result": "PASS"
+    },
+    {
+      "id": "W1-PATH-001",
+      "description": "Artifact lookup did not explicitly normalize Windows separators or reject non-relative traversal and absolute path forms.",
+      "fix": "Added a closed-world canonical resolver that normalizes separators and fails closed for drive-absolute, Unix-absolute, traversal, NUL, spaced non-allowlisted, and long non-allowlisted paths.",
+      "result": "PASS"
+    }
+  ],
+  "validation": {
+    "designValidation": "PASS_2190_FILES_39_SKILLS_24_SCHEMAS_5_AGENTS_ZERO_WARNINGS_ZERO_ERRORS",
+    "strictTypeScript": "PASS",
+    "completeTests": "PASS_43_FILES_205_TESTS",
+    "productionBuild": "PASS_32_MODULES_321.63_KB_JS_47.23_KB_CSS",
+    "windowsSpecificRegression": "PASS_5_TESTS",
+    "windowsQaPowerShell": "FAIL_MISSING_WINDOWS_NODE",
+    "documentationLinks": "PASS_4_CANONICAL_DOCUMENTS",
+    "canonicalArtifactChecksums": "PASS_7_OF_7",
+    "secretScan": "PASS_ZERO_FINDINGS_BOUNDED_W1_SCOPE",
+    "artifactChecksumValidation": "PASS",
+    "targetModelCalls": 0,
+    "benchmarkCalls": 0,
+    "port8000": "CLEAR",
+    "modelComputeProcesses": 0
+  },
+  "unresolvedBlockers": [
+    "Windows-native Node/npm and Rust/cargo are absent and no prebuilt Desk Code Agent executable or installer exists, so native startup cannot run.",
+    "Only the host's actual 150 percent OS scaling was available; the remaining scale factors were browser device-scale emulations.",
+    "Interactive native keyboard, Narrator/screen-reader, scaled dialog/tooltip, native font, and native motion/jank checks remain NOT_RUN_ENVIRONMENT_LIMITATION."
+  ],
+  "review": {
+    "specReview": {
+      "result": "PASS",
+      "finding": "W1 alone was executed; required unavailable native and assistive-technology gates are NOT_RUN, W2 is not authorized, and the blocker is reproducible."
+    },
+    "standardsReview": {
+      "result": "PASS",
+      "finding": "The two fixes are bounded, fail closed, regression-tested, preserve canonical research and mutation state, and introduce no arbitrary file access or external action."
+    }
+  },
+  "cleanup": {
+    "vitePort5173": "CLEAR",
+    "modelPort8000": "CLEAR",
+    "windowsQaTemporaryDirectories": 0,
+    "modelComputeProcesses": 0
+  },
+  "w2Entered": false,
+  "w3Entered": false,
+  "w4Entered": false
+}

@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "sealId": "dca-controlled-model-specialization-corrected-final-v4",
+  "sealedAt": "2026-08-09T22:25:00+08:00",
+  "status": "PASS_COMPLETE_DEVELOPMENT_GATE_FAILED",
+  "decision": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "canonicalResult": {
+    "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_RESULTS_INDEX.v4.json",
+    "sha256": "58cd13ab7f92147f625271199854755f96c05832bbd20def7d52bb7fcb332c85"
+  },
+  "finalReports": {
+    "json": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FINAL_REPORT.v4.json",
+      "sha256": "fb9f4216baff33bba033dcda4aa0cc0b2245b92c91de5b93ec527d7769cc1555"
+    },
+    "markdown": {
+      "path": "docs/experiments/model-specialization/2026-08-09-controlled-model-specialization.v4.md",
+      "sha256": "674c38b8f7484631c71a59352df24ee53dd091b3f38304c1f395f0c45c10d0fe"
+    },
+    "validation": {
+      "path": "docs/validation/2026-08-09-controlled-model-specialization-v3.md",
+      "sha256": "67eab1d4157539afa73421bd57c45c6ed8922e95d28396ed743cec3f6cde076f"
+    }
+  },
+  "correctedRawEvidence": {
+    "candidateDevelopment": {
+      "path": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.v3.json",
+      "sha256": "20f8943120f302d025062c674e7bd6a7409db67067e0f5cb71eff1214fb4babc"
+    },
+    "candidateSmoke": {
+      "path": "docs/experiments/model-specialization/CODER_MODEL_SMOKE_VALIDATION.v3.json",
+      "sha256": "152e246899b0ae1e3e2b5fb1be352bcfbc6f6eb1962dcddb392954c7c01a40c5"
+    },
+    "candidateCleanup": {
+      "path": "docs/experiments/model-specialization/CODER_MODEL_SHUTDOWN_CLEANUP.v3.json",
+      "sha256": "836a53d36ddc3e0c6f5b251df55b97d2814a192dae0b8234bac971f01745d047"
+    },
+    "fairnessGate": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v3.json",
+      "sha256": "a86f9c0db0e489e0dd3974aa52fbcc53fb556f674491bd313dd9eba06a525045"
+    },
+    "postCorrectionSafety": {
+      "path": "docs/experiments/runs/m9-g3-security-fuzz-2026-08-09T14-20-41-492Z/result.json",
+      "sha256": "d790ce186770aff5f0a26e0907a06f583b69fffd4762b8c7e281774c4c98e927",
+      "cases": 1000,
+      "failures": 0
+    }
+  },
+  "appendOnlyCorrections": {
+    "decodingConfoundInvalidation": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_V2_INVALIDATION.v3.json",
+      "sha256": "30f07a5cd2183fe5b8f90431c85cba44e48e3bd8a9a4d19f9919abb35886884c"
+    },
+    "staleNarrativeSupersession": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_V3_REPORTING_SUPERSESSION.v4.json",
+      "sha256": "6afba692ae4de1ff58f5448146b6e75991044a05448fe5b6e6808b37c244dfd9"
+    },
+    "invalidCandidateCapabilityCallsPreserved": 203,
+    "correctedCandidateCapabilityCalls": 203,
+    "taskPromptOracleScoringChanges": false
+  },
+  "authorizationAndProvenance": {
+    "taskContract": {
+      "path": "implementation/CURRENT_TASK_CONTRACT.json",
+      "sha256": "d13aa8d3da32df09f3d343fc490949d38f02013f54a37a62f584a711b786041d"
+    },
+    "authorization": {
+      "path": "benchmarks/model-specialization/MODEL_ACQUISITION_AUTHORIZATION.v2.json",
+      "sha256": "060baa55091b404ed30a5bc4b0d59464851831fbc31662ed6a83d92ad6a55be1"
+    },
+    "acquisition": {
+      "path": "benchmarks/model-specialization/MODEL_ACQUISITION_STATUS.v2.json",
+      "sha256": "6a4ac304b00b927013206aa88d4c92d83674be76d1f373623f293ed4c99a1542"
+    },
+    "license": {
+      "path": "docs/experiments/model-specialization/CANDIDATE_LICENSE_PROVENANCE.v2.json",
+      "sha256": "491ac9e34410562ef293e975d3e66462d234a7f90fabca6cd7ab6fa5a9cb6582"
+    },
+    "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "commercialUseAuthorized": false,
+    "snapshotCriticalHashVerification": "PASS",
+    "retainedInIgnoredRuntimeCache": true
+  },
+  "sourceClosure": {
+    "profileRegistry": "2b099955217f7e6f81876135ead852f4938a544c1b413d28cca811f705549e4a",
+    "shellLauncher": "7a3310a891298d589cd7c1e3d99d14459ec679a4b94a011b7a4360ff129a712e",
+    "pythonLauncher": "081d8992155851bedb6fd82d6402d181342d9ba647dafcab55e2a39be8f98101",
+    "smokeRunner": "f40cf915d5c21245324438ec2cfa3ada451b205c484187fe833011b3ce8f245b",
+    "fairnessVerifier": "9b33df2bccc09d7cc8482f78c494c50fbab252a8910c7c8dc8dd7c1ab2b3ba2e",
+    "developmentRunner": "00223a74df873020d697c6f1b2ac573260a6c2afc1fb1b7c0f1bda7b3f7a69d2",
+    "pairedReporter": "207a6737b3f8f4801061c4fd411f0b206ed8c42c3bb1ecd414fff7049e9b8e4f",
+    "cleanupRecorder": "57cc92fd8a900fab20493ee5d7283e67c0cf3a50a5884f391c9aab4b0a6ecdd7",
+    "modelSpecializationRuntime": "d4040e698d4985e50c014e1fdfa138f32ee10de866854de26ff561fc6f3b054e",
+    "runtimeTests": "5b6c2472ec6ce6651136ae95c38b57b2333908e4b4ebe80b7ff1beb85acb744b",
+    "packageJson": "986a6cd0cef94c4aa414caca9e9b2973efc035be869de5dd1e07494c66c844d3"
+  },
+  "frozenEvidence": {
+    "eminV2": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+    "agentRuntime": "1111f03e4e6f9c6a71b4066bc0c8b4e1a00f11075ea12ea566d3b0835d363948",
+    "toolRuntime": "bd3e6dd7c43d5d1ec3d7397d9c0ddc7c7b253c1beaf4c3ccb8f2935a40309e00",
+    "repoIntelligence": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d",
+    "preregistration": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75",
+    "selection": "844bf4e3a16a0895a3d289e0b5eaec231a376ef23d77356cbf862c3344cdb556"
+  },
+  "finalRegression": {
+    "command": "npm run check",
+    "status": "PASS",
+    "designFiles": 971,
+    "skills": 39,
+    "schemas": 24,
+    "agents": 5,
+    "warnings": 0,
+    "errors": 0,
+    "testFiles": 23,
+    "tests": 94,
+    "typecheck": "PASS",
+    "build": "PASS"
+  },
+  "finalLifecycle": {
+    "modelProcessAbsent": true,
+    "port8000Clear": true,
+    "ephemeralApiKeyAbsent": true,
+    "temporaryCandidateWorktreesAbsent": true,
+    "gpuMemoryMiB": 0
+  },
+  "decisions": {
+    "developmentPromotionGate": "FAIL_PATCH_GAIN_ZERO",
+    "freshHoldoutCreatedOrInspected": false,
+    "productRoutingChanged": false,
+    "modelSwitchBenchmarkRun": false,
+    "coder7bQuantizedOrOtherModelDownloaded": false,
+    "releaseGateChanged": false
+  },
+  "protectedActions": {
+    "authorizedCoder3bDownload": true,
+    "dependencyInstall": false,
+    "sudoAdmin": false,
+    "commit": false,
+    "remoteConfigured": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false
+  }
+}

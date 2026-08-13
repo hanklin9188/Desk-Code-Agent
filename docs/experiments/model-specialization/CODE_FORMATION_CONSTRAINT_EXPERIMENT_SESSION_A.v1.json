@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "session": "A",
+  "status": "PASS",
+  "completedAt": "2026-08-11T22:50:54.223Z",
+  "protocol": {
+    "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_PROTOCOL.v1.json",
+    "sha256": "f60d723aa9d2a8e6cc9b9aa05f39ba26acf0c74f7f97a4aa59670e0712ac9cc0"
+  },
+  "upstream": {
+    "p2": {
+      "path": "docs/experiments/patch-interface/E_EDIT_CANDIDATE.v1.json",
+      "sha256": "7abdcd7cfe84b3e3e6844ecc81c8a4c783a9af53e45dcbb0489fa0e157a32fbc"
+    },
+    "fim": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_CANDIDATE_MANIFEST.v1.json",
+      "sha256": "0ff04ada4842631ca3973b380667daa9b58f592c1b090e18b6903beb553066e1"
+    },
+    "observability": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_PAIRED_OBSERVABILITY_REPORT.v3.json",
+      "sha256": "4598bb72fcdd7e03007e27efe32ec368f10220c3f097b860c2c9a1f821e34d0c"
+    }
+  },
+  "intervention": {
+    "constraintId": "P2_FORMATION_CONSTRAINT_V1",
+    "frozen": true,
+    "semanticInformationAdded": false,
+    "candidateRewriting": false
+  },
+  "population": {
+    "taskCount": 40,
+    "repositoryCount": 40,
+    "targetModelUnseen": true,
+    "repositoryDisjoint": true,
+    "referenceSyntaxVisibleHidden": "PASS",
+    "manifest": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_TASK_MANIFEST.v1.json",
+      "sha256": "33d8f1be7395caa50c0f2938785a8e01cde12d6ff1218ed15c9a11a7ccb98093",
+      "bytes": 25144
+    },
+    "repositoryArtifact": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_REPOSITORIES.v1.json",
+      "sha256": "e9ea68767941aa35ba0df54f539e9df4a6381305c3c274e2ff9193dce2f19ea8",
+      "bytes": 30050
+    },
+    "oracle": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_ORACLE.v1.sealed.json",
+      "sha256": "c4184b66413ce6df403b52db6b42edb0f6d8e9c20b8291160f88872d6f27bb0c",
+      "bytes": 33034
+    }
+  },
+  "pairing": {
+    "physicalCallsPlanned": 80,
+    "seed": 20260812,
+    "counterbalanced": true,
+    "preregistration": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_PREREGISTRATION.v1.json",
+      "sha256": "41c24a0c8eacdbc57636e942ef0c4c78047dbc899bdaed83e83a2d421466a926",
+      "bytes": 9274
+    }
+  },
+  "gates": {
+    "syntaxFailureReductionAbsoluteMinimum": 0.15,
+    "strictSuccessNonInferiorityMargin": 0.03,
+    "wrongFileEditsMaximum": 0,
+    "safetyViolationsMaximum": 0
+  },
+  "runner": {
+    "path": "scripts/run_code_formation_constraint_experiment.ts",
+    "sha256": "f2b6a46705a11f1e07439c6a20fd7c0ae6779e2d4f9d759819d86e7088fa1570",
+    "validateOnly": "PASS",
+    "executeNow": false
+  },
+  "robustness": {
+    "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_ROBUSTNESS.v1.json",
+    "sha256": "0312450cd51defaf1326cf4cdf7db7eb76f2fd4c964c85defe11c194c1a54ed7",
+    "bytes": 2257
+  },
+  "privacy": {
+    "status": "PASS",
+    "rawOutputs": 0,
+    "rawEditBodies": 0,
+    "L2": false
+  },
+  "safety": {
+    "status": "PASS",
+    "wrongFileExpansion": 0,
+    "semanticRewrite": 0
+  },
+  "ledgers": {
+    "callEventsBytes": 0,
+    "pairedObservationsBytes": 0
+  },
+  "runtime": {
+    "targetModelCalls": 0,
+    "vllmProcesses": 0,
+    "port8000Listeners": 0,
+    "gpuAllocatedBytes": 0,
+    "checkedAt": "2026-08-11T22:50:53.942Z"
+  },
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "scripts/run_code_formation_constraint_experiment.ts",
+        "sha256": "f2b6a46705a11f1e07439c6a20fd7c0ae6779e2d4f9d759819d86e7088fa1570"
+      },
+      {
+        "path": "services/code-formation-constraint/src/index.ts",
+        "sha256": "fb3e89e452c92b7b5e3f620cc92bc708c5bacd8b5e196e3d81d9e2c175bb5bf7"
+      },
+      {
+        "path": "services/patch-interface-runtime/src/index.ts",
+        "sha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508"
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21"
+      },
+      {
+        "path": "services/model-specialization-runtime/src/index.ts",
+        "sha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee"
+      }
+    ]
+  },
+  "nextAuthorizedSession": "B",
+  "sessionBStarted": false
+}

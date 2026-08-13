@@ -1,0 +1,15 @@
+task_id: task_fix_001
+repo_ref: ./fixtures/python-config-app
+goal: Diagnose and fix the failing empty YAML configuration test with the smallest safe patch.
+modes: [DEBUG, CODE, TEST, REVIEW]
+success_criteria:
+  - Targeted failing test passes.
+  - Full regression suite passes.
+  - No public API change.
+  - Patch modifies no more than three files.
+constraints:
+  - Worktree-only mutation.
+  - Maximum three patch attempts.
+non_goals:
+  - No unrelated cleanup.
+approval_required: []

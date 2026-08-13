@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 2,
+  "caveatId": "dca-patch-interface-oracle-preflight-v1-network-claim-caveat",
+  "createdAt": "2026-08-09T15:14:32.265Z",
+  "status": "V1_NETWORK_CLAIM_SUPERSEDED_ONLY",
+  "legacyArtifact": {
+    "path": "benchmarks/patch-interface/PATCH_INTERFACE_ORACLE_PREFLIGHT.v1.json",
+    "sha256": "1a2a3baf89c4e59194fc6dc9118484f3fb01ff5de3f6893fa45398768bceece6"
+  },
+  "supersedingArtifact": {
+    "path": "benchmarks/patch-interface/PATCH_INTERFACE_ORACLE_PREFLIGHT.v2.json",
+    "sha256": "08815f750e8f4cbc4e350d29b8a057cab75b12125511a7e6579ecdd2877f89e0"
+  },
+  "correction": "V1 used a sanitized proxy environment but no kernel-enforced network namespace, so its noNetwork=true field was not supported. Its task/oracle/hash/behavioral results remain historical evidence; only the network-isolation claim is superseded by hardened V2.",
+  "immutablePriorArtifactModified": false
+}

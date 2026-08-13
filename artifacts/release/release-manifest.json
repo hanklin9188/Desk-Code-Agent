@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "product": "Desk Code Agent",
+  "intendedVersion": "1.0.0",
+  "sourceRevision": "BLOCKED_APPROVAL_NO_COMMIT",
+  "productionConfiguration": {
+    "id": "E-MIN-V2",
+    "frozenSha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+    "decision": "RETAIN_RELATIVE_DEFAULT_AFTER_G3_PRIMARY_AND_COST_GATES",
+    "adr": "adrs/0012-retain-emin-v2-after-naturalistic-g3.md",
+    "developmentCandidate": {
+      "id": "E-MIN-V3",
+      "frozenSha256": "7b8829aded41cc996785ce5197627a4b712991d526b7e9e3045b3bf3f9d91be0",
+      "state": "FROZEN_NOT_PROMOTED"
+    }
+  },
+  "model": {
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "license": "Apache-2.0"
+  },
+  "runtime": {
+    "vllm": "0.26.0",
+    "rust": "1.97.1",
+    "tauriCli": "2.11.4",
+    "node": "v24.15.0"
+  },
+  "locks": {
+    "npmSha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+    "cargoSha256": "d12b3ce4329728f91d2ba043dc877035dda869e3993a92c2219a0b492e6639cc",
+    "pythonSha256": "f386010a819614b6df3af4b5a1581988f290cb7a14dcbdc18f78f75450d30aeb"
+  },
+  "benchmarks": {
+    "m3": "m3-incremental-2026-08-09T00-33-03-613Z",
+    "m4": "live-complete-report-2026-08-09T00-56-00-998Z",
+    "m5": "m5-hidden-oracle-2026-08-09T01-07-30-366Z",
+    "m6": "m6-l1-l2-2026-08-09T01-13-06-538Z",
+    "m7": "m7-offline-delivery-2026-08-09T01-22-09-316Z",
+    "m8": "m8-ui-performance-2026-08-09T08-19-29-033Z",
+    "m8Extended": "m8-extended-ui-qa-2026-08-09T08-19-43-665Z",
+    "m9G1": "m9-fresh-holdout-g1-2026-08-09T06-37-31-981Z",
+    "m9G2": "m9-fresh-holdout-g2-2026-08-09T08-14-16-853Z",
+    "m9G3Results": "benchmarks/g3/G3_RESULTS_INDEX.json#fa9a4680cd409af1f9eb774fb2282d41147bcf6f165f23d8b8c719df5c43a063",
+    "m9G3Primary": "m9-g3-primary-2026-08-09T09-20-10-123Z",
+    "m9G3LongHorizon": "m9-g3-long-horizon-2026-08-09T09-47-25-429Z",
+    "m9G3RealPatch": "m9-g3-real-patch-2026-08-09T09-59-19-019Z",
+    "m9RetrievalDevelopment": "m9-retrieval-v3-retrieval_development-end-to-end-2026-08-09T08-01-30-159Z",
+    "m9HardDevelopment": "m9-retrieval-v3-hard_development-end-to-end-2026-08-09T08-02-30-933Z",
+    "m9Patch": "m9-expanded-patch-v3-development-2026-08-09T07-59-49-744Z",
+    "m9Safety": "m9-fresh-safety-g1-2026-08-09T06-46-52-884Z",
+    "m9Specialists": "m9-fresh-specialists-g1-evaluator-correction-2026-08-09T06-49-53-336Z",
+    "m9Repositories": "m9-real-repositories-v3-development-2026-08-09T08-03-05-832Z"
+  },
+  "skills": {
+    "l0": "39/39",
+    "l1": "9/9 candidates; 17 fixtures each",
+    "l2": "1 integrated workflow PASS",
+    "l3": "fresh admission evidence complete",
+    "production": [
+      "R09 task-conditional C1 packaging"
+    ],
+    "experimental": [
+      "R01",
+      "R04",
+      "R08",
+      "R17",
+      "R18",
+      "R21",
+      "R22",
+      "R26",
+      "E-MIN-V3 task-aware retrieval capability"
+    ],
+    "productionEnabled": 1
+  },
+  "securityClaims": {
+    "deterministicAdversarialExecution": "20/20 PASS",
+    "g2ActualSafetyViolations": 0,
+    "g3PrimaryActualSafetyViolations": 0,
+    "g3SecurityFuzz": "1000/1000 PASS",
+    "networkIsolation": "PROCESS_CONSTRAINED; hard isolation is not claimed",
+    "publicRepositoryMutation": false
+  },
+  "vram": {
+    "primaryMethod": "nvidia-smi device memory",
+    "independentMethod": "NVML device memory",
+    "modelLoadedIdleMiB": 12020,
+    "hardStressPrimaryPeakMiB": 12046,
+    "g2PrimaryPeakMiB": 12282,
+    "g3PrimaryPeakMiB": 12220,
+    "g3StreamingPeakMiB": 12290,
+    "oldProcessLevelZeroInvalid": true
+  },
+  "cleanInstall": {
+    "dependencyResolutionDryRun": "PASS",
+    "actualFreshInstall": "NOT_RUN_EXISTING_LOCKED_INSTALL",
+    "reason": "Current lock/install is verified; destructive clean-environment replacement was not necessary for this run"
+  },
+  "nativeArtifacts": {
+    "linux": "BLOCKED_EXTERNAL_MISSING_SYSTEM_PACKAGES",
+    "windows": "NOT_RUN_NO_WINDOWS_HOST",
+    "signedInstaller": "BLOCKED_EXTERNAL_NO_CERTIFICATE_OR_WINDOWS_HOST"
+  },
+  "knownLimitations": [
+    "No source commit or remote checkpoint",
+    "G2 remains a 210/210 ceiling and is regression-only",
+    "G3 naturalistic holdout success was E1/V2/V3 = 6/96, 3/96, 2/96",
+    "Exact executable historical-patch success was 0/60 for all candidates; autonomous-patch readiness is not claimed",
+    "E-MIN-V3 and conditional routing are not promoted because they failed primary quality-cost gates",
+    "No Windows installer/keyboard/screen-reader/upgrade/uninstall run",
+    "Linux native packages unavailable without administrator action",
+    "Reduced-precision model comparison NOT_RUN; acquisition not approved",
+    "Root project license is undeclared; 137 dependency entries need authoritative external metadata and 2 need manual/legal review"
+  ]
+}

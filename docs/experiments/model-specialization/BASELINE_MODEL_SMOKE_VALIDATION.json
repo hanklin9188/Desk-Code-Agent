@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "runId": "model-specialization-smoke-baseline-2026-08-09T13-10-46-569Z",
+  "status": "PASS_RUNTIME_PENDING_SHUTDOWN_CLEANUP",
+  "profileId": "baseline",
+  "timestamp": "2026-08-09T13:10:46.569Z",
+  "exactProfile": {
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "backend": "vllm-0.26.0",
+    "contextLimit": 8192,
+    "host": "127.0.0.1",
+    "sequentialResidency": true
+  },
+  "checks": {
+    "load": {
+      "status": "PASS",
+      "loadTimeMs": 92402.85961914062
+    },
+    "models": {
+      "status": "PASS",
+      "latencyMs": 2.406614999999988,
+      "modelId": "Qwen/Qwen3.5-4B"
+    },
+    "ordinaryCompletion": {
+      "status": "PASS",
+      "latencyMs": 460.465288,
+      "promptTokens": 21,
+      "completionTokens": 10,
+      "outputSha256": "72db6575567e56e936f980779f6d3cfb5a61a269978bd966597dc8fb69bf5cca"
+    },
+    "streaming": {
+      "status": "PASS",
+      "latencyMs": 929.0786070000001,
+      "ttftMs": 73.81919100000005,
+      "promptTokens": 21,
+      "completionTokens": 64,
+      "throughputTokensPerSecond": 74.8310966271782,
+      "outputSha256": "4ad7519e69f56d6c7ca3ad1f9066654e7522640f73889a8b20317a80c0a1e780"
+    },
+    "structuredJson": {
+      "status": "PASS",
+      "latencyMs": 353.01762400000007,
+      "schemaValid": true,
+      "outputSha256": "309415a1e82c227e0919f352c1e661c94fa6cf86d559c5d8e2c1afccf666ce4e"
+    },
+    "malformedJsonHandling": {
+      "status": "PASS"
+    },
+    "timeout": {
+      "status": "PASS"
+    },
+    "cancellation": {
+      "status": "PASS"
+    },
+    "sequential": {
+      "status": "PASS",
+      "requests": [
+        {
+          "index": 1,
+          "latencyMs": 130.73865399999977,
+          "outputSha256": "e1d70a18cc129fcc812ebbe309bc5197df6ffa2228c77a4a7b98653ec5605354"
+        },
+        {
+          "index": 2,
+          "latencyMs": 128.48728699999992,
+          "outputSha256": "d2a6919189609bb4a2b924e35f740e5ee98b1f06c3c340d27df75ef48bd45816"
+        },
+        {
+          "index": 3,
+          "latencyMs": 124.57461000000012,
+          "outputSha256": "f4e3fd0f3e5089925a3be5ca4ca6bda5ae7458159b32b1615c22ccaba8b005d9"
+        }
+      ]
+    },
+    "queue": {
+      "status": "PASS",
+      "requests": 2,
+      "maxNumSequences": 1,
+      "totalLatencyMs": 373.3113250000001
+    },
+    "contextCap": {
+      "status": "PASS",
+      "configuredTokens": 8192,
+      "rejectedHttpStatus": 400
+    },
+    "utf8CodeDiff": {
+      "status": "PASS",
+      "latencyMs": 873.897176,
+      "outputSha256": "8e6ccb30b0ed1a096acae6240c666a35d6f43f1831beaa3871a3ae6bba616f19"
+    },
+    "shutdownCleanup": {
+      "status": "PENDING_SEPARATE_LIFECYCLE_ATTESTATION"
+    }
+  },
+  "telemetry": {
+    "idleVramMiB": 12020,
+    "peakVramMiB": 12022,
+    "vramSamples": 35
+  },
+  "privacy": {
+    "rawPromptStored": false,
+    "rawOutputStored": false,
+    "apiKeyStoredInArtifact": false
+  }
+}

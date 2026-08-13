@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-g3-crash-recovery-2026-08-09T11-17-19-267Z",
+  "status": "PASS",
+  "restart": {
+    "ready": true,
+    "exactPinnedModel": true,
+    "ephemeralApiKeyRotated": true,
+    "apiKeyStored": false,
+    "retryPolicy": "bounded manual service restart; no quality result replayed as PASS"
+  },
+  "truthGuarantees": {
+    "noFakePass": true,
+    "interruptedModelObservationCountsAsFailure": true,
+    "failedPatchPreservedWorkspace": true,
+    "sqliteUncommittedWriteRolledBack": true,
+    "reconnectReplayedTypedEvents": true
+  }
+}

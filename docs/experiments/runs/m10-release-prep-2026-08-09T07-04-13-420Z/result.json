@@ -1,0 +1,30 @@
+{
+  "experimentId": "m10-release-prep-2026-08-09T07-04-13-420Z",
+  "status": "PASS",
+  "scope": "OFFLINE_RELEASE_PREPARATION",
+  "artifacts": {
+    "sbom.spdx.json": "5aa22359fb3392ff2b5b2109f92ed5396881069beb6e0ad0f480fbd8d6a303c8",
+    "license-inventory.json": "17dfc7db116c6da5ccff257291b46461c399c60b08844149d237282ff3c76110",
+    "source-manifest.json": "cdcd897cbfcfb030371557f17ebb26deb381e502b61ac371b3f41e3aafe0b29d",
+    "release-manifest.json": "7056735ac31d8f8dbd2e99ea7cca3db4736ad98675547ee68ba2f426150a954b",
+    "release-gate.json": "7e29b3caa2cf42487accaac1ae80250d5012da6db2ac18f5a9642559ff83f9c0"
+  },
+  "counts": {
+    "sourceFiles": 371,
+    "npmComponents": 215,
+    "cargoComponents": 419,
+    "pythonComponents": 202,
+    "totalSbomComponents": 840,
+    "unresolvedLicenses": 148
+  },
+  "cleanInstallDryRun": "PASS",
+  "releaseGate": "BLOCKED_EXTERNAL_AND_APPROVAL",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "pr": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

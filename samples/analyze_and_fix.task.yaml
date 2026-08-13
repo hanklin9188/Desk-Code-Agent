@@ -1,0 +1,18 @@
+task_id: task_mixed_001
+repo_ref: https://github.com/example/project
+goal: Analyze the repository, rank the five highest-priority maintainability or correctness issues, and safely fix only issues that pass the feasibility gate.
+modes: [MIXED]
+success_criteria:
+  - Produce an evidence-backed report for all five findings.
+  - Every auto-fix has an approved patch plan and deterministic verification.
+  - Architecture-level or untestable changes remain recommendation-only.
+constraints:
+  - Maximum five modified files per accepted fix.
+  - Never push or commit without explicit approval.
+  - Local inference only.
+non_goals:
+  - No broad framework migration.
+approval_required:
+  - dependency additions
+  - public API changes
+  - GitHub publishing

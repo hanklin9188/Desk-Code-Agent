@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 3,
+  "sealId": "dca-privacy-safe-semantic-observability-v3-session-b-runner-seal",
+  "state": "SEALED_BEFORE_FIRST_V3_TARGET_MODEL_CALL",
+  "sealedAt": "2026-08-11T21:14:06.931Z",
+  "targetModelCallsAtSeal": 0,
+  "runner": {
+    "path": "scripts/run_privacy_safe_observability_v3_session_b.ts",
+    "sha256": "20397699f1eb0dbf97df6349a265013d6a603a8c6a40dfddca6e4f3a9a9d75ab",
+    "bytes": 26048
+  },
+  "storageGuard": {
+    "path": "services/observability-storage-guard/src/index.ts",
+    "sha256": "d4398f2b4dd6cb0d95caa6aa054114b8e9988916ff23e12b63b2e2c526bc8f73",
+    "bytes": 4477
+  },
+  "totalExtractor": {
+    "path": "services/semantic-observability-v2/src/index.ts",
+    "sha256": "9410b9f48d8cc11bae1f09c00cc6ba5754e60ba84047e168e1eec30fdada8e0e",
+    "bytes": 14628
+  },
+  "inputs": {
+    "manifest": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_TASK_MANIFEST.v3.json",
+      "sha256": "51d6b6759c9b39cb8e4e1024039b32dca4e1c6be749936aab586460beecb8286"
+    },
+    "repositories": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_REPOSITORIES.v3.json",
+      "sha256": "9c2e077fee1a4c25784923cc73fa3bef71626980bf85a2cb2adb4f289acb9b9b"
+    },
+    "oracle": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_ORACLE.v3.sealed.json",
+      "sha256": "da4522fe1143049f56b0b40862f1532aced9e63c4af0e4bbca5b448a2fef9606"
+    },
+    "L1Schema": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_L1_SCHEMA.v2.json",
+      "sha256": "b40cf1819135d2cc64fd0573a67880c259e2d4c717aab414e26f583e31359bad"
+    },
+    "supersession": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SUPERSESSION.v3.json",
+      "sha256": "d52eca890ce9257de1de7171e057a44fd5b7f8446146cbc48868a2daa4cc9106"
+    },
+    "causalReport": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_INFRASTRUCTURE_CAUSAL_REPORT.v3.json",
+      "sha256": "9fce8fe672b7fb5acc42d99051603e9dbb3de6d2b08b42d29f9e54b1121dcb96"
+    },
+    "storageAudit": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_STORAGE_FOOTPRINT_AUDIT.v3.json",
+      "sha256": "c2b71b123801c148264eb8edc67334f419b4da18258f3651573de5bdc50209e5"
+    },
+    "totality": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_OBSERVABILITY_V3_TOTALITY_VALIDATION.v3.json",
+      "sha256": "e7d9e247783571ff5a52d1b2da19d2849f67decb995a9416e61e9b727234159b"
+    }
+  },
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "scripts/freeze_privacy_safe_semantic_observability_v3_session_a.ts",
+        "sha256": "4d8be09133a18d238568cab61332eb830fdd4c65ede28f36fed4f86ec1ac0ac6",
+        "bytes": 49724
+      },
+      {
+        "path": "scripts/run_privacy_safe_observability_v3_session_b.ts",
+        "sha256": "20397699f1eb0dbf97df6349a265013d6a603a8c6a40dfddca6e4f3a9a9d75ab",
+        "bytes": 26048
+      },
+      {
+        "path": "services/observability-storage-guard/src/index.ts",
+        "sha256": "d4398f2b4dd6cb0d95caa6aa054114b8e9988916ff23e12b63b2e2c526bc8f73",
+        "bytes": 4477
+      },
+      {
+        "path": "tests/observability-storage-guard.test.ts",
+        "sha256": "79b661ad4849ea4a84688414a0657988a3648c93ffef8cc7ad11c2a34205f108",
+        "bytes": 3247
+      },
+      {
+        "path": "services/semantic-observability-v2/src/index.ts",
+        "sha256": "9410b9f48d8cc11bae1f09c00cc6ba5754e60ba84047e168e1eec30fdada8e0e",
+        "bytes": 14628
+      },
+      {
+        "path": "tests/semantic-observability-v2.test.ts",
+        "sha256": "a7d9192a8519d94cca5e4b1fbb83d5bad9a867ac51116e2eea13ecf99ee0e452",
+        "bytes": 7975
+      },
+      {
+        "path": "services/semantic-observability/src/index.ts",
+        "sha256": "96b92bed402662ad1c3d008fe29a8573bd037bacdffa3a94c6686c14d153e028",
+        "bytes": 12544
+      },
+      {
+        "path": "services/g3-evaluation-runtime/src/index.ts",
+        "sha256": "02ebfd6a7914cbe35c49048c182236d578cf56a1ddeb40ff8a4b9ac141affad2",
+        "bytes": 10087
+      },
+      {
+        "path": "services/g3-benchmark-runtime/src/index.ts",
+        "sha256": "edcbc59ac3164da338289f9ae6499074a51a8e92625e189d722a9162a34b6478",
+        "bytes": 37293
+      },
+      {
+        "path": "services/model-specialization-runtime/src/index.ts",
+        "sha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee",
+        "bytes": 14994
+      },
+      {
+        "path": "services/patch-interface-runtime/src/index.ts",
+        "sha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+        "bytes": 59703
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21",
+        "bytes": 13021
+      },
+      {
+        "path": "services/repo-intelligence/src/index.ts",
+        "sha256": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d",
+        "bytes": 37025
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      }
+    ],
+    "sha256": "5dad59f2657e5dca0b78fbb3c9fa80bf0cb667a9aae8e795d8e62fa54c32ec20"
+  },
+  "lifecycle": [
+    "storage capacity gate before CALL_STARTED",
+    "one disposable workspace",
+    "call lifecycle",
+    "transient model output",
+    "L0 derivation",
+    "total L1 derivation",
+    "malformed fallback including INVALID_JSON completed response",
+    "invalid-action fallback",
+    "patch/verification",
+    "rollback",
+    "workspace cleanup and reclamation",
+    "privacy destruction",
+    "serialization",
+    "ledger"
+  ],
+  "protectedActions": {
+    "targetModelCall": false,
+    "vllmStart": false,
+    "modelDownload": false
+  }
+}

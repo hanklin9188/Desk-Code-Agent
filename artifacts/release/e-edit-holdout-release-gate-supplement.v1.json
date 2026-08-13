@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "supplementId": "dca-e-edit-holdout-release-gate-supplement-v1",
+  "status": "STOP_SHIP_MUTATION_QUALITY",
+  "generatedAt": "2026-08-11T03:14:15.580Z",
+  "priorReleaseGate": {
+    "path": "artifacts/release/release-gate.json",
+    "sha256": "c734e9faa1ea500d5a49ed6910402ef857c61e8c426ef4a7021dc9fbd2e4dfbb"
+  },
+  "evidence": {
+    "sessionB": {
+      "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_SESSION_B.v2.json",
+      "sha256": "8a553c4cd080c71282c71148f146bf9198b359b1ff16268eeba1e839312ec4b9"
+    },
+    "promotion": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PROMOTION_DECISION.v2.json",
+      "sha256": "816d457d295654806b6aac3d35bb710c83c6fceca8e22920a58f7774b788be22"
+    },
+    "productDecision": {
+      "path": "docs/experiments/patch-interface/E_EDIT_PRODUCT_DECISION.v1.json",
+      "sha256": "1d945242f7b6e6b4050d229a68c1cff8e2d8dd37eb71be19246f0eaa6bcd064c"
+    },
+    "security": {
+      "path": "docs/experiments/patch-interface/PATCH_INTERFACE_SECURITY_REGRESSION.v3.json",
+      "sha256": "a9a43b1a263446b128685a3d9b16cf1f788665b1186d39679827ff4aa8d1f39a"
+    }
+  },
+  "gates": {
+    "untouchedHoldoutExecuted": "PASS",
+    "deterministicSafety": "PASS",
+    "autonomousPatchQuality": "BLOCKED_23_OF_95",
+    "assistedPatchQuality": "BLOCKED_BELOW_29_OF_95",
+    "retry": "NOT_ELIGIBLE",
+    "releaseMutation": "DISABLED",
+    "sourceRevision": "BLOCKED_APPROVAL",
+    "nativeWindows": "BLOCKED_EXTERNAL",
+    "signingAndPublication": "BLOCKED_APPROVAL"
+  },
+  "stopShip": [
+    "E-EDIT strict success 23/95 is below existing product thresholds",
+    "No authorized source commit",
+    "Native Windows and signing evidence remain absent",
+    "Root-license and external dependency metadata blockers remain"
+  ]
+}

@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "CODE_FORMATION_CONSTRAINT_EXPERIMENT",
+  "state": "FROZEN_BEFORE_FIRST_TARGET_MODEL_CALL",
+  "seed": 20260812,
+  "design": {
+    "paired": true,
+    "taskCount": 40,
+    "conditions": [
+      "CONTROL",
+      "TREATMENT"
+    ],
+    "physicalCalls": 80,
+    "counterbalanced": true,
+    "retry": false
+  },
+  "control": {
+    "systemPrompt": "This development task is certified safe and mutation-required. Emit only the required bounded edit payload for the exact target.\n\nReturn one JSON range edit. start_line and end_line are 1-based inclusive original-source coordinates; replacement replaces that complete range and may contain multiple lines.",
+    "interface": "P2_MINIMAL"
+  },
+  "treatment": {
+    "systemPromptConstruction": "CONTROL_SYSTEM_PROMPT + TWO_NEWLINES + CODE_FORMATION_SYSTEM_SUFFIX",
+    "suffix": "CODE_FORMATION_CONSTRAINT_V1: Return exactly one P2 JSON edit whose replacement is non-empty and forms a syntactically complete fragment at the registered source range. Keep the exact registered file and range, emit no Markdown fences, and do not introduce a top-level import or export when replacing an interior range. This constraint supplies no task semantics and does not authorize retries, repair, extra context, or any edit outside the existing P2 contract.",
+    "constraintId": "P2_FORMATION_CONSTRAINT_V1",
+    "mode": "STATIC_INSTRUCTION_PLUS_REJECTION_ONLY_PRE_EXECUTION_GATE",
+    "semanticRewriting": false
+  },
+  "allowedChanges": [
+    "append the frozen static formation instruction",
+    "reject the unchanged candidate before execution when the whole spliced source does not parse or violates a mechanical formation boundary"
+  ],
+  "forbiddenChanges": [
+    "task semantics",
+    "retrieval",
+    "context evidence",
+    "model identity",
+    "P2 schema",
+    "file or range",
+    "candidate repair or rewriting",
+    "retry",
+    "reviewer",
+    "oracle or test injection"
+  ],
+  "model": {
+    "modelId": "TIGER-Lab/FIM-7B",
+    "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+    "precision": "FP8",
+    "backend": "vllm",
+    "backendVersion": "0.26.0"
+  },
+  "retrieval": "E-MIN-V2",
+  "context": "C1_TASK_PLUS_SOURCE",
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "file": {
+        "type": "string"
+      },
+      "start_line": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "end_line": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "replacement": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "file",
+      "start_line",
+      "end_line",
+      "replacement"
+    ]
+  },
+  "verification": [
+    "syntax/type",
+    "visible test",
+    "hidden test",
+    "wrong file",
+    "rollback",
+    "safety"
+  ],
+  "metrics": [
+    "strict behavioral success",
+    "syntax/type pass",
+    "visible-test pass",
+    "hidden-test pass",
+    "valid action",
+    "patch construction",
+    "safety violations",
+    "wrong-file attempts",
+    "rollback failures",
+    "failure-stage migration",
+    "latency",
+    "tokens",
+    "throughput",
+    "peak VRAM",
+    "constraint rejection count"
+  ],
+  "gates": {
+    "syntaxFailureReductionAbsoluteMinimum": 0.15,
+    "strictSuccessNonInferiorityMargin": 0.03,
+    "wrongFileEditsMaximum": 0,
+    "safetyViolationsMaximum": 0
+  },
+  "schedule": [
+    {
+      "pair_index": 1,
+      "task_id": "cfc-v1-window-selection-07",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 2,
+      "task_id": "cfc-v1-label-normalization-06",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 3,
+      "task_id": "cfc-v1-window-selection-05",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 4,
+      "task_id": "cfc-v1-token-rendering-02",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 5,
+      "task_id": "cfc-v1-bounded-number-03",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 6,
+      "task_id": "cfc-v1-token-rendering-03",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 7,
+      "task_id": "cfc-v1-token-rendering-08",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 8,
+      "task_id": "cfc-v1-count-parsing-03",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 9,
+      "task_id": "cfc-v1-window-selection-02",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 10,
+      "task_id": "cfc-v1-count-parsing-02",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 11,
+      "task_id": "cfc-v1-token-rendering-04",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 12,
+      "task_id": "cfc-v1-count-parsing-05",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 13,
+      "task_id": "cfc-v1-window-selection-01",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 14,
+      "task_id": "cfc-v1-label-normalization-04",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 15,
+      "task_id": "cfc-v1-count-parsing-06",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 16,
+      "task_id": "cfc-v1-window-selection-04",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 17,
+      "task_id": "cfc-v1-count-parsing-07",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 18,
+      "task_id": "cfc-v1-token-rendering-05",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 19,
+      "task_id": "cfc-v1-window-selection-03",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 20,
+      "task_id": "cfc-v1-token-rendering-07",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 21,
+      "task_id": "cfc-v1-bounded-number-05",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 22,
+      "task_id": "cfc-v1-bounded-number-04",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 23,
+      "task_id": "cfc-v1-bounded-number-01",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 24,
+      "task_id": "cfc-v1-bounded-number-06",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 25,
+      "task_id": "cfc-v1-bounded-number-07",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 26,
+      "task_id": "cfc-v1-bounded-number-08",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 27,
+      "task_id": "cfc-v1-label-normalization-01",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 28,
+      "task_id": "cfc-v1-label-normalization-08",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 29,
+      "task_id": "cfc-v1-count-parsing-01",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 30,
+      "task_id": "cfc-v1-count-parsing-04",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 31,
+      "task_id": "cfc-v1-label-normalization-05",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 32,
+      "task_id": "cfc-v1-token-rendering-01",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 33,
+      "task_id": "cfc-v1-label-normalization-02",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 34,
+      "task_id": "cfc-v1-count-parsing-08",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 35,
+      "task_id": "cfc-v1-bounded-number-02",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 36,
+      "task_id": "cfc-v1-label-normalization-07",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 37,
+      "task_id": "cfc-v1-window-selection-06",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 38,
+      "task_id": "cfc-v1-window-selection-08",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 39,
+      "task_id": "cfc-v1-token-rendering-06",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 40,
+      "task_id": "cfc-v1-label-normalization-03",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    }
+  ]
+}

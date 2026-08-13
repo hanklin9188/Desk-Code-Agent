@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "status": "PASS_FINAL_MEDIA_CAPTURE",
+  "generatedMediaStatus": "COMPLETE_5_PNG_3_GIF",
+  "sourceMode": "DETERMINISTIC_FIXTURES_AND_SEALED_ARTIFACTS",
+  "targetModelCalls": 0,
+  "benchmarkCalls": 0,
+  "defaultViewport": { "width": 1440, "height": 900, "scalePercent": 100 },
+  "captureEnvironment": {
+    "host": "WINDOWS_11_REFERENCE_HOST",
+    "osDisplayScalePercent": 150,
+    "browser": "Microsoft Edge 150.0.4078.48",
+    "browserMode": "HEADLESS_CURRENT_SOURCE_LOCALHOST",
+    "captureDeviceScaleFactor": 1,
+    "pngEncoder": "EDGE_PNG",
+    "gifEncoder": "PILLOW_12.0.0_EXISTING_LOCAL_TOOL",
+    "staticFrameMotion": "FORCED_REDUCED_PREFERENCE_FOR_STABLE_END_STATE",
+    "network": "LOOPBACK_ONLY"
+  },
+  "authorization": {
+    "path": "../validation/WINDOWS_REFERENCE_HARDWARE_QA_SCOPE_AMENDMENT.v1.json",
+    "sha256": "a6c643ef43ff9dc88f667be3266a68e3a460c46a48474c9a77801848a266d987"
+  },
+  "productSourceIdentity": {
+    "algorithm": "SHA256_OVER_SORTED_SHA256_RELATIVE_PATH_NUL_RECORDS",
+    "sha256": "8dd0c17cb61a754636e9ad2ead471895c2830ab914a33ac76c892bf75b952734",
+    "files": [
+      "apps/desktop/src/app/App.tsx",
+      "apps/desktop/src/app/ProductizationViews.tsx",
+      "apps/desktop/src/app/Views.tsx",
+      "apps/desktop/src/app/captureMode.ts",
+      "apps/desktop/src/app/demo.ts",
+      "apps/desktop/src/styles.css",
+      "services/experiment-visualization/src/canonicalArtifacts.ts",
+      "services/experiment-visualization/src/index.ts"
+    ]
+  },
+  "capabilityStatusInvariant": {
+    "research": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "narrator": "DEFERRED_NONBLOCKING_PUBLIC_RELEASE_ACCESSIBILITY_QA"
+  },
+  "screenshots": [
+    { "id": "hero-workspace", "route": "/?capture=hero-workspace", "filename": "screenshots/01-hero-workspace.png", "role": "README_HERO", "eventPrefixCount": 19, "width": 1440, "height": 900, "bytes": 140906, "sha256": "cdb6700cd3b8688f91cb5780299a416597ab9f10ebfaa7cd0d3089806e729d3b", "validation": "PASS" },
+    { "id": "research-dashboard", "route": "/?capture=research-dashboard", "filename": "screenshots/02-research-dashboard.png", "role": "RESEARCH_EVIDENCE", "eventPrefixCount": 0, "width": 1440, "height": 900, "bytes": 183565, "sha256": "fc3a71a952db98602b97e498227bbb96e9051c7023985c5b15686073d638f0ad", "validation": "PASS" },
+    { "id": "task-workflow", "route": "/?capture=task-workflow", "filename": "screenshots/03-task-workflow.png", "role": "BOUNDED_WORKFLOW", "eventPrefixCount": 10, "width": 1440, "height": 900, "bytes": 181422, "sha256": "e76f096e912fb436ed2d2ee274d299eed48b0db0d7ab728da547a648402a6726", "validation": "PASS" },
+    { "id": "safety-verification", "route": "/?capture=safety-verification", "filename": "screenshots/04-safety-verification.png", "role": "VERIFICATION_SAFETY", "eventPrefixCount": 20, "width": 1440, "height": 900, "bytes": 195710, "sha256": "5526a9fc20613aa7c4dfe77679e4c197f048291e23b14bf84776809fd5708519", "validation": "PASS" },
+    { "id": "architecture-evidence", "route": "/?capture=architecture-evidence", "filename": "screenshots/05-architecture-evidence.png", "role": "ARCHITECTURE_EVIDENCE", "eventPrefixCount": 0, "width": 1440, "height": 900, "bytes": 128589, "sha256": "e6e5e34773990fa5e7c61be72ee916bf6c15d433dd59f060c9a29d09de79e646", "validation": "PASS" }
+  ],
+  "gifs": [
+    { "id": "repository-evidence", "flow": "Repository -> task -> evidence reveal", "filename": "gifs/01-repository-evidence.gif", "role": "REPOSITORY_EVIDENCE_FLOW", "width": 1440, "height": 900, "durationMs": 7000, "decodedFrames": 4, "bytes": 333790, "sha256": "a18768930416cc567b7b6edc3d22b51a8686a6adee6031c013f15b441d32a6c8", "validation": "PASS" },
+    { "id": "research-visualization", "flow": "Research dashboard -> experiment navigation -> evidence transition", "filename": "gifs/02-research-visualization.gif", "role": "RESEARCH_VISUALIZATION_FLOW", "width": 1440, "height": 900, "durationMs": 6000, "decodedFrames": 7, "bytes": 682265, "sha256": "71d14471988f2f72fd40e913065f11c23a696b483779d5ae2fdd3b68c220f151", "validation": "PASS" },
+    { "id": "verification-rollback", "flow": "Suggested action -> review -> denial -> diff -> safe rollback", "filename": "gifs/03-verification-rollback.gif", "role": "VERIFICATION_ROLLBACK_FLOW", "width": 1440, "height": 900, "durationMs": 9000, "decodedFrames": 7, "bytes": 546576, "sha256": "252c6fa4cb66ab63d58923c18c141b1097031d40dfedc3826978f995c030d4f2", "validation": "PASS" }
+  ],
+  "reducedMotionVerification": {
+    "routeSuffix": "&motion=reduced",
+    "routes": 5,
+    "dimensions": "PASS_1440_X_900",
+    "decode": "PASS_5_OF_5",
+    "layout": "PASS_NO_MISSING_OR_BLANK_CONTENT",
+    "animationDependentContent": 0
+  },
+  "video": { "storyboard": "video/PORTFOLIO_VIDEO_STORYBOARD.md", "targetDurationSeconds": 210, "validation": "PASS_7_SCENES_REFERENCE_FINAL_CAPTURE_STATES" }
+}

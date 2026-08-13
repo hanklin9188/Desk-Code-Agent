@@ -1,0 +1,15 @@
+{
+  "repro_id": "repro_example",
+  "task_id": "task_fix_001",
+  "command_id": "test.targeted.parser_empty",
+  "exact_symptom": "empty YAML throws TypeError before defaulting",
+  "status": "RED",
+  "red_evidence_id": "E17",
+  "median_seconds": 1.2,
+  "reproduction_rate": 1.0,
+  "agent_runnable": true,
+  "fixture_paths": [
+    "tests/fixtures/empty.yaml"
+  ],
+  "attempts": 3
+}

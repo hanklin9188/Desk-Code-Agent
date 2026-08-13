@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-g3-index-mutation-2026-08-09T09-43-02-648Z",
+  "status": "FAIL",
+  "cycles": 100,
+  "operations": [
+    "edit",
+    "rename",
+    "delete/recreate",
+    "branch switch",
+    "rollback to main",
+    "incremental index"
+  ],
+  "summary": {
+    "failures": 50,
+    "staleEvidenceInvalidated": 33,
+    "finalIndex": {
+      "repoSha": "cycle-final",
+      "files": 3,
+      "symbols": 3,
+      "references": 8,
+      "imports": 2,
+      "dependencies": 2,
+      "parserLanguages": [
+        "typescript"
+      ],
+      "reparsedFiles": 0,
+      "reusedFiles": 3,
+      "deletedFiles": 0,
+      "renamedFiles": 0,
+      "cacheHitRatio": 1,
+      "cacheIntegrity": "PASS",
+      "generatedAt": "2026-08-09T09:43:03.838Z"
+    },
+    "peakRssMiB": 101.55,
+    "rssGrowthMiB": 6.23,
+    "finalDatabaseBytes": 53248,
+    "orphanDefinitionRecords": 0,
+    "sourceTestAffinityFailures": 50
+  },
+  "samples": [
+    {
+      "cycle": 1,
+      "manifest": {
+        "repoSha": "cycle-1",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:02.741Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 95.32,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 10,
+      "manifest": {
+        "repoSha": "cycle-10",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:02.831Z"
+      },
+      "definitionPath": "src/renamed.ts",
+      "tests": 0,
+      "rssMiB": 97.32,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 20,
+      "manifest": {
+        "repoSha": "cycle-20",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:02.944Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 99.41,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 30,
+      "manifest": {
+        "repoSha": "cycle-30",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:03.061Z"
+      },
+      "definitionPath": "src/renamed.ts",
+      "tests": 0,
+      "rssMiB": 100.34,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 40,
+      "manifest": {
+        "repoSha": "cycle-40",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:03.157Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 100.39,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 50,
+      "manifest": {
+        "repoSha": "cycle-50",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 0,
+        "renamedFiles": 1,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:03.276Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 0,
+      "rssMiB": 100.72,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 60,
+      "manifest": {
+        "repoSha": "cycle-60",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:03.382Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 101.46,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 70,
+      "manifest": {
+        "repoSha": "cycle-70",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:03.478Z"
+      },
+      "definitionPath": "src/renamed.ts",
+      "tests": 0,
+      "rssMiB": 101.47,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 80,
+      "manifest": {
+        "repoSha": "cycle-80",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:03.612Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 101.51,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 90,
+      "manifest": {
+        "repoSha": "cycle-90",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:03.721Z"
+      },
+      "definitionPath": "src/renamed.ts",
+      "tests": 0,
+      "rssMiB": 101.54,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 100,
+      "manifest": {
+        "repoSha": "cycle-100",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 0,
+        "reusedFiles": 3,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 1,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:03.832Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 101.55,
+      "databaseBytes": 53248
+    }
+  ],
+  "failures": [
+    "cycle 10: source-test affinity lost",
+    "cycle 11: source-test affinity lost",
+    "cycle 12: source-test affinity lost",
+    "cycle 13: source-test affinity lost",
+    "cycle 14: source-test affinity lost",
+    "cycle 15: source-test affinity lost",
+    "cycle 16: source-test affinity lost",
+    "cycle 17: source-test affinity lost",
+    "cycle 18: source-test affinity lost",
+    "cycle 19: source-test affinity lost",
+    "cycle 30: source-test affinity lost",
+    "cycle 31: source-test affinity lost",
+    "cycle 32: source-test affinity lost",
+    "cycle 33: source-test affinity lost",
+    "cycle 34: source-test affinity lost",
+    "cycle 35: source-test affinity lost",
+    "cycle 36: source-test affinity lost",
+    "cycle 37: source-test affinity lost",
+    "cycle 38: source-test affinity lost",
+    "cycle 39: source-test affinity lost",
+    "cycle 50: source-test affinity lost",
+    "cycle 51: source-test affinity lost",
+    "cycle 52: source-test affinity lost",
+    "cycle 53: source-test affinity lost",
+    "cycle 54: source-test affinity lost",
+    "cycle 55: source-test affinity lost",
+    "cycle 56: source-test affinity lost",
+    "cycle 57: source-test affinity lost",
+    "cycle 58: source-test affinity lost",
+    "cycle 59: source-test affinity lost",
+    "cycle 70: source-test affinity lost",
+    "cycle 71: source-test affinity lost",
+    "cycle 72: source-test affinity lost",
+    "cycle 73: source-test affinity lost",
+    "cycle 74: source-test affinity lost",
+    "cycle 75: source-test affinity lost",
+    "cycle 76: source-test affinity lost",
+    "cycle 77: source-test affinity lost",
+    "cycle 78: source-test affinity lost",
+    "cycle 79: source-test affinity lost",
+    "cycle 90: source-test affinity lost",
+    "cycle 91: source-test affinity lost",
+    "cycle 92: source-test affinity lost",
+    "cycle 93: source-test affinity lost",
+    "cycle 94: source-test affinity lost",
+    "cycle 95: source-test affinity lost",
+    "cycle 96: source-test affinity lost",
+    "cycle 97: source-test affinity lost",
+    "cycle 98: source-test affinity lost",
+    "cycle 99: source-test affinity lost"
+  ]
+}

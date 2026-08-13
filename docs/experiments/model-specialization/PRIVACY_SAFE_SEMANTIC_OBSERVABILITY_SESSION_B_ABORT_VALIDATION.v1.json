@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "validationId": "dca-privacy-safe-semantic-observability-session-b-abort-validation-v1",
+  "status": "PASS_ABORT_EVIDENCE_AND_CLEANUP",
+  "validatedAt": "2026-08-11T20:06:20.553Z",
+  "inputs": {
+    "seal": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_B_SEAL.v1.json",
+      "sha256": "296f7bf5825113858107955702556910c8b08d918079305b6ee77bc95e07f159"
+    },
+    "dryRun": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_B_DRY_RUN.v1.json",
+      "sha256": "451cd4746f8e63116b0c7147694ac7164bd83eaac1907b3aed71703aaa953db5"
+    },
+    "partialAbort": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_B_PARTIAL_ABORT.v1.json",
+      "sha256": "67d3b9a086cca0d55ff1f057ef93786b1f2f76a427e47586118dea914b062f70"
+    }
+  },
+  "checks": {
+    "sourceSeal": "PASS_HISTORICAL",
+    "dryRun": "PASS_ZERO_CALL",
+    "callAccounting": "PASS_4_CONSUMED_3_COMPLETE_1_UNMATCHED",
+    "pairing": "PASS_3",
+    "noRetry": "PASS",
+    "noContinuation": "PASS",
+    "runtimeCleanup": "PASS",
+    "typecheck": "PASS",
+    "privacySecurityTests": "PASS",
+    "SessionBPass": "FALSE",
+    "SessionCReady": "FALSE"
+  },
+  "commands": [
+    {
+      "command": "npx tsc --ignoreConfig --noEmit --strict --skipLibCheck --target ES2022 --module ESNext --moduleResolution Bundler --allowSyntheticDefaultImports --types node scripts/run_privacy_safe_observability_session_b.ts services/semantic-observability/src/index.ts scripts/record_privacy_observability_session_b_abort.ts scripts/finalize_privacy_observability_session_b_abort.ts",
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "stdoutSha256": "1fcfe57781045a818698db7cbe3c9428c10ea084583a12bb0925411079a7a5df",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npx vitest run tests/semantic-observability.test.ts tests/patch-interface-runtime.test.ts tests/tool-runtime.test.ts",
+      "exitCode": 0,
+      "stdoutSha256": "1d5a922d0b6ebf7c899c01d29b00c1751ef846d6cde4ae71aa2d79676be02b7b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

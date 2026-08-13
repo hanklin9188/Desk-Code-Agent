@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "indexId": "dca-privacy-safe-semantic-observability-results-index-v1",
+  "status": "PASS_SESSION_A_COMPLETE",
+  "generatedAt": "2026-08-11T19:51:54.832Z",
+  "sessions": {
+    "A": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_A.v1.json",
+      "sha256": "f6027c2de31d623acd2d24d57e19c5e3c91adc62af7eef5d0a0dee6b7d07a761"
+    },
+    "B": null,
+    "C": null,
+    "D": null
+  },
+  "artifacts": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PREREGISTRATION.v1.json",
+      "sha256": "1a6de2094142da008222aa65dea0bbb16c28425f1d29c1eb98be807f0eaf96c5"
+    },
+    "manifest": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_TASK_MANIFEST.v1.json",
+      "sha256": "bfefa8f89ee2221f1e8dc45de9fe4bae549b2d0919fd2ce0fc3e5c44087aec38"
+    },
+    "repositories": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_REPOSITORIES.v1.json",
+      "sha256": "f29e0eb0c829cdfc6f1b7087ab30ee06268d1d44c58b1e179016dc0903fd701e"
+    },
+    "oracle": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_ORACLE.v1.sealed.json",
+      "sha256": "cace6716684f9d7f262733b1ff87c2ddebc411ddd06339060d15a4205e35c6a3"
+    },
+    "L0Schema": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_L0_SCHEMA.v1.json",
+      "sha256": "b751473841b418d16e17abacd4ac42aca08c6efe72b48f8b2056506c6bc80176"
+    },
+    "L1Schema": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_L1_SCHEMA.v1.json",
+      "sha256": "ac0cefa91562a2ccc9b8d1cb8617b88ae035cba8d1891171e05a07bbfa0d5a61"
+    },
+    "privacyPreflight": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_OBSERVABILITY_PRIVACY_PREFLIGHT.v1.json",
+      "sha256": "d7fabb8237347f90f337eea6778ad08ff90c85dfe75c9c6ded611463cc959250"
+    },
+    "validation": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_A_VALIDATION.v1.json",
+      "sha256": "c908f76aed9bb8d07a303e66197f00b2300c0f2c1615abdb8b53d404e8f60c54"
+    },
+    "review": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_A_REVIEW.v1.json",
+      "sha256": "4caf3f9974ae47064013ebab89c2c761ffaee893d5494a894cb2f18118af92e1"
+    }
+  },
+  "calls": {
+    "targetModelCalls": 0,
+    "plannedSessionBPhysicalCalls": 80,
+    "plannedL0Calls": 80,
+    "plannedL1AdditionalCalls": 0
+  },
+  "next": "SESSION_B_SEPARATE_INVOCATION_REQUIRED"
+}

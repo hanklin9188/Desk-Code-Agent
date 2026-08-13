@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 2,
+  "indexId": "dca-best-7b-bounded-retry-results-index-v2",
+  "status": "PASS_COMPLETE",
+  "generatedAt": "2026-08-11T17:50:58.250Z",
+  "sessions": {
+    "A": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_A.v1.json",
+      "sha256": "fd81c875019ba4ef903185bb6b96faf94d99b202dea5b33fb626405947ec9c08"
+    },
+    "B": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_B.v1.json",
+      "sha256": "631769a8d1b2dae6c27970a9898c18e4db028d225e484fa4d1ac05212b32b4e5"
+    },
+    "C": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_C.v1.json",
+      "sha256": "09b95513e063377646f8cba52e34c181a53182f47380061e59af66707407f25a"
+    }
+  },
+  "artifacts": {
+    "analysis": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ANALYSIS.v1.json",
+      "sha256": "607cc2fbe41f4e9fd6172d3c848d4f8a2f5c2a9457b746ffd96c8a7b564c6549"
+    },
+    "retryAdmission": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_ADMISSION.v1.json",
+      "sha256": "ece52ae58b7328e73929f2325d07571f6a36931954661ab1bd18421dca671d73"
+    },
+    "productDecision": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_PRODUCT_DECISION.v1.json",
+      "sha256": "921b55529ce28cca8d975bc9144bc473523750aa1f9eea9fe4b88d2b8ea9abf8"
+    },
+    "capabilityMatrix": {
+      "path": "docs/experiments/model-specialization/MODEL_CAPABILITY_MATRIX.v6.json",
+      "sha256": "33c416bfc61fa18746c60801a19fcc9cf8351cfef70a9e52f0efbb345fd7fd36"
+    },
+    "capabilityCeiling": {
+      "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v6.json",
+      "sha256": "920700a606ccbaa6fe15476c808f11a4a0275d3870ef74f9c6a838c428aad59f"
+    },
+    "finalReport": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_FINAL_REPORT.v1.json",
+      "sha256": "1e2d21aaad5e05aa33026e477e3b3b9683b234ad776dfbba552c9128decb1eae"
+    },
+    "nextScientificProtocol": {
+      "path": "benchmarks/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_PROTOCOL.v1.json",
+      "sha256": "0c0806e564a3fe5da3fa6fa77de694c38ff635396b1afa91b3065f1511833823"
+    },
+    "validation": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_C_VALIDATION.v1.json",
+      "sha256": "80b8bf3b089facadf47a3150c2c03e5d7274e6aa43df4dc8d90b94a6418b30d7"
+    },
+    "dualAxisReview": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_C_REVIEW.v1.json",
+      "sha256": "342c66261712f5a4d7caf3b2dad87e589ea3168fb3f02081c1969833be6be1df"
+    }
+  },
+  "decisions": {
+    "retry": "RETRY_NO_MATERIAL_GAIN",
+    "productMutation": "KEEP_MUTATION_DISABLED",
+    "fimStatus": "BEST_RESEARCH_MODEL__STRONGEST_SCORED_RESEARCH_CANDIDATE_ASSISTED_FLOOR_ONLY",
+    "nextScientificExperiment": "SEMANTIC_FAILURE_DECOMPOSITION"
+  },
+  "accounting": {
+    "originalCalls": 95,
+    "retryCalls": 66,
+    "maximumTwoCallCalls": 161,
+    "thirdCalls": 0,
+    "SessionCModelCalls": 0
+  },
+  "historicalArtifactsImmutable": true,
+  "supersedes": {
+    "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_RESULTS_INDEX.v1.json",
+    "sha256": "d8f22c99a06fad23124fee561ae6bedf558d965a6aca10e9b0034adc3c2b402a",
+    "reason": "Append-only binding of the finalized Session-C record and independent dual-axis review; scientific results unchanged",
+    "modelCallsAdded": 0
+  },
+  "completion": {
+    "sessionC": "PASS",
+    "validation": "PASS",
+    "dualAxisReview": "PASS",
+    "nextExperimentExecuted": false
+  }
+}

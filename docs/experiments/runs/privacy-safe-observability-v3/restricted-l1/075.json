@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 3,
+  "packetLevel": "L1",
+  "identity": {
+    "taskId": "observability-v3-replacement-010-d0519a7259f8",
+    "repositoryRevision": "sha256:7e365ce98467f96ea883b3c6cdb31c26820f227ab83c17c17a4576cdbb47bb64",
+    "physicalCallId": "privacy-observability-v3-076-c9a4da14-e3f2-4d66-b838-6ffc766cf2eb",
+    "requestSha256": "70d87c12c952b8da9752952e3a83753555e6a1a8c04067b44852ee34679ddc52",
+    "actionIdentitySha256": "205df5ede11cc9345ce0e133b929ce310164ae22bed686a42df4df29391b5377"
+  },
+  "evidence": {
+    "schemaVersion": 2,
+    "level": "L1_STRUCTURED_DERIVED_EDIT_FEATURES",
+    "taskId": "observability-v3-replacement-010-d0519a7259f8",
+    "repositoryRevision": "sha256:7e365ce98467f96ea883b3c6cdb31c26820f227ab83c17c17a4576cdbb47bb64",
+    "physicalCallId": "privacy-observability-v3-076-c9a4da14-e3f2-4d66-b838-6ffc766cf2eb",
+    "requestSha256": "70d87c12c952b8da9752952e3a83753555e6a1a8c04067b44852ee34679ddc52",
+    "actionIdentitySha256": "205df5ede11cc9345ce0e133b929ce310164ae22bed686a42df4df29391b5377",
+    "modelResponseStatus": "COMPLETED",
+    "actionParseStatus": "JSON_OBJECT",
+    "actionValidationStatus": "PASS",
+    "replacementPresent": true,
+    "afterSourceParseStatus": "PASS",
+    "astFeaturesAvailable": true,
+    "parserFailureCategory": "NONE",
+    "selectedFile": "src/case.mjs",
+    "range": {
+      "startLine": 2,
+      "endLine": 2
+    },
+    "targetSymbol": {
+      "digest": "0a3784be1cbc314fd2b693be4020a4df599cf631102993df969ec41adb4b844a",
+      "kind": "function"
+    },
+    "replacementShape": {
+      "bytes": 139,
+      "characters": 139,
+      "lines": 1,
+      "newlines": 0,
+      "whitespaceOnly": false,
+      "indentation": [
+        {
+          "kind": "0",
+          "count": 1
+        }
+      ],
+      "lexicalTokenKinds": [
+        {
+          "kind": "IDENTIFIER",
+          "count": 16
+        },
+        {
+          "kind": "NUMBER",
+          "count": 1
+        },
+        {
+          "kind": "STRING",
+          "count": 1
+        }
+      ],
+      "operatorCategories": [
+        {
+          "kind": "&&",
+          "count": 1
+        },
+        {
+          "kind": "==",
+          "count": 1
+        },
+        {
+          "kind": "===",
+          "count": 1
+        },
+        {
+          "kind": ">",
+          "count": 1
+        },
+        {
+          "kind": "||",
+          "count": 1
+        }
+      ],
+      "commentTokens": 0,
+      "delimiterBalance": {
+        "parentheses": 0,
+        "brackets": 0,
+        "braces": 0
+      },
+      "identifierDigests": [
+        {
+          "digest": "1c6164a7e9e8f96c8f0e0d5c0166a0be3b2f4d7e1b1ef8000284899a0da3f394",
+          "count": 1
+        },
+        {
+          "digest": "53be6d5dd9410aabc82f3f2f148f3f0123384ec58500dfd98d3f4811fbc8beb8",
+          "count": 1
+        },
+        {
+          "digest": "93f5177d8f7a86e5b299a90988bce9e37bf78b3310fa151560a1f6647028303a",
+          "count": 1
+        },
+        {
+          "digest": "b610c144e6d3ddc2b5ef3d45b4b48256cbc48a846a5da1b19097b6c609b4d44f",
+          "count": 1
+        },
+        {
+          "digest": "c508058ecfc26de54c2cb4fa301b7ec1cffb0192e27c1eaf95c10aa871ce9bd4",
+          "count": 1
+        },
+        {
+          "digest": "ccd017f6014ef76efa7aea95d67b2c55c40c8c7a934d32028f27cf6f9ded6819",
+          "count": 2
+        },
+        {
+          "digest": "dbb0065edd5f9f6f6c6b01371eb9162f9753c9dd617f98419b1f882ac31f7910",
+          "count": 2
+        },
+        {
+          "digest": "dd717364a30085a64c243b73bb2d72c24642e13df00c7ddee66a43752532c1f3",
+          "count": 2
+        },
+        {
+          "digest": "dfafb74591ac61af77488d2883924c3f38732650aca07d316f626f74cc415092",
+          "count": 1
+        },
+        {
+          "digest": "f0843d3443a25216d02b0c73bceb165a1195f128c74990aafc5204ed645d196a",
+          "count": 1
+        },
+        {
+          "digest": "fc10d56842f4c7620a9f8730b2b04ab2f95a108aeaddf1b9962cbf76cc185509",
+          "count": 3
+        }
+      ],
+      "literalDigests": [
+        {
+          "digest": "43c4200af3cc22f420cf62d5066b6a41a1ce4c7adc0da8b9d80d6faed849ac38",
+          "count": 1
+        },
+        {
+          "digest": "da34ae2fc20bace15abc8f3f3eba9bfd7a0cdb4b043acc40c4f9203601d6d4b3",
+          "count": 1
+        }
+      ]
+    },
+    "astFeatures": {
+      "astNodeChanges": [
+        {
+          "kind": "binary_expression",
+          "before": 1,
+          "after": 4,
+          "delta": 3
+        },
+        {
+          "kind": "identifier",
+          "before": 6,
+          "after": 9,
+          "delta": 3
+        },
+        {
+          "kind": "if_statement",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "number",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "parenthesized_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "return_statement",
+          "before": 1,
+          "after": 2,
+          "delta": 1
+        },
+        {
+          "kind": "statement_block",
+          "before": 1,
+          "after": 2,
+          "delta": 1
+        },
+        {
+          "kind": "string",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "string_fragment",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "unary_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "expressionChanges": [
+        {
+          "kind": "binary_expression",
+          "before": 1,
+          "after": 4,
+          "delta": 3
+        },
+        {
+          "kind": "unary_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "controlFlowChanges": [
+        {
+          "kind": "if_statement",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "return_statement",
+          "before": 1,
+          "after": 2,
+          "delta": 1
+        }
+      ],
+      "operatorChanges": [
+        {
+          "kind": "&&",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "==",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "===",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": ">",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "identifierChanges": [
+        {
+          "digest": "dbb0065edd5f9f6f6c6b01371eb9162f9753c9dd617f98419b1f882ac31f7910",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "digest": "fc10d56842f4c7620a9f8730b2b04ab2f95a108aeaddf1b9962cbf76cc185509",
+          "before": 2,
+          "after": 3,
+          "delta": 1
+        }
+      ],
+      "literalChanges": [
+        {
+          "digest": "43c4200af3cc22f420cf62d5066b6a41a1ce4c7adc0da8b9d80d6faed849ac38",
+          "literalType": "number",
+          "length": 1,
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "digest": "da34ae2fc20bace15abc8f3f3eba9bfd7a0cdb4b043acc40c4f9203601d6d4b3",
+          "literalType": "string",
+          "length": 8,
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "apiCallChanges": [],
+      "importChanges": []
+    },
+    "canonicalEditSha256": "c96b8782c07add066de43ea005a5030f17156e7d11c46f7ab98b0415c07e313e",
+    "hashKeyId": "10b76595429d293bbf0364e08dfbd6a62e71f9a5bc6fcc9d01e51213717c2c92",
+    "verification": {
+      "stage": "VISIBLE_TEST",
+      "status": "FAIL",
+      "code": "VISIBLE_TEST_FAILED",
+      "diagnosticSha256": null
+    },
+    "visibleBehavioralEffect": {
+      "status": "FAIL",
+      "category": "BEHAVIOR_MISMATCH",
+      "diagnosticSha256": null
+    },
+    "privacy": {
+      "rawPromptStored": false,
+      "rawModelOutputStored": false,
+      "rawEditBodyStored": false,
+      "rawIdentifiersStored": false,
+      "rawLiteralsStored": false,
+      "commentsStored": false,
+      "sourceStored": false,
+      "rawParserMessageStored": false,
+      "hashKeyStored": false
+    }
+  }
+}

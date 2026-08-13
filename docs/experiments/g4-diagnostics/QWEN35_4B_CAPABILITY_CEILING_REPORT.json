@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "reportId": "qwen35-4b-g4-development-capability-ceiling-v1",
+  "status": "COMPLETE_STOP_SHIP_AUTONOMOUS_MUTATION",
+  "classification": "EMPIRICAL_G4_DEVELOPMENT_CEILING_NOT_UNSEEN_GENERALIZATION",
+  "model": {
+    "repository": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "temperature": 0,
+    "seed": 20260809,
+    "thinking": false
+  },
+  "capabilities": {
+    "taskUnderstanding": {
+      "observed": "0/12 selected PATCH_PROPOSAL with exact root cause and target behavior",
+      "rate": 0,
+      "route": "REPORT_ONLY",
+      "interpretation": "The model selected REPORT_ONLY on all isolated patch tasks."
+    },
+    "navigation": {
+      "taskOnly": "0/12",
+      "exactFile": "3/12",
+      "oracleSourceAndTest": "6/12",
+      "exactFileLocationCorrect": "11/12",
+      "route": "ASSISTED",
+      "interpretation": "Location disclosure helps, and complete source/test context reaches 50%, but errors remain."
+    },
+    "retrieval": {
+      "normalStrict": "0/42",
+      "oracleStrict": "1/42",
+      "absoluteOracleGainPp": 2.38,
+      "route": "REPORT_ONLY_OUTSIDE_STRUCTURED_PLANNING",
+      "interpretation": "Perfect evidence selection did not remove the dominant failure boundary."
+    },
+    "diagnosis": {
+      "strict": "2/12",
+      "rate": 0.16666666666666666,
+      "schemaValidity": 0.4166666666666667,
+      "route": "REPORT_ONLY"
+    },
+    "patchGeneration": {
+      "strictBehavior": "0/12",
+      "responseOutcomes": {
+        "REPORT_ONLY": 12
+      },
+      "referenceOracleValidation": {
+        "tasks": 25,
+        "passes": 25,
+        "rows": [
+          {
+            "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-13-normalize-path-3ba2860b51",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-14-parse-bool-8881da94ff",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-15-format-bytes-5a0b763ebc",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-16-intersection-multiplicity-985d47dab3",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-17-decode-query-4535736542",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-18-title-case-a3b15a1136",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-19-safe-divide-8f8f4db38c",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-20-rotate-array-beb86287eb",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-21-binary-search-ffb6f8735f",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-22-merge-headers-e4433a12bf",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-23-min-max-72396b9df5",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-24-count-words-bfaa1bef8c",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          },
+          {
+            "taskId": "g4-dev-patch-25-has-own-de49412ce2",
+            "syntax": "PASS",
+            "visible": "PASS",
+            "hidden": "PASS",
+            "fixedSourceHashCorrect": true,
+            "success": true
+          }
+        ]
+      },
+      "route": "REPORT_ONLY"
+    },
+    "crossFilePlanning": {
+      "strictStructured": "12/12",
+      "rate": 1,
+      "route": "SUPPORTED_BOUNDED_READ_ONLY",
+      "limitation": "Scoring validates affected paths, order, dependency/test fields, not implemented behavior."
+    },
+    "hiddenTestGeneralization": {
+      "strictBehaviorPatch": "0/12",
+      "oracleContextHiddenTestStrategy": "0/6",
+      "route": "REPORT_ONLY"
+    },
+    "onboardingSynthesis": {
+      "exactAllComponents": "0/24",
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.23750000000000002,
+      "missingComponentRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    }
+  },
+  "conclusion": "Qwen3.5-4B remains viable for bounded structured planning and assisted navigation. It does not demonstrate viable diagnosis, onboarding synthesis, hidden-test generalization, or patch generation even with oracle evidence. Model/output-contract capability, not retrieval alone, is the principal product boundary.",
+  "inputs": [
+    {
+      "path": "docs/experiments/g4-capability/ORACLE_CONTEXT_EXPERIMENT.json",
+      "sha256": "1bd88e30fc4a7d2a75a07026f73d04b2fbdbf23240954f1b40a54ceade5779f7"
+    },
+    {
+      "path": "docs/experiments/g4-capability/NAVIGATION_ISOLATION_EXPERIMENT.json",
+      "sha256": "1361a9de3fb2088518dcc82d2a90e66035ea213c8d90766dc5540a18175877f6"
+    },
+    {
+      "path": "docs/experiments/g4-capability/DIAGNOSIS_ISOLATION_EXPERIMENT.json",
+      "sha256": "660b67fd67b1388fce10e65590b930cc7b13cddb5612c9d992cccd672678804e"
+    },
+    {
+      "path": "docs/experiments/g4-capability/PATCH_GENERATION_ISOLATION_EXPERIMENT.json",
+      "sha256": "c28381df7c91f7274764407da757f53f541be79e44cea1a4b6f701ebdd6b945a"
+    },
+    {
+      "path": "docs/experiments/g4-capability/PLANNING_ISOLATION_EXPERIMENT.json",
+      "sha256": "786f4d5922e4a2b36e7e57d6d0ab5a58db973a1dcef0ee5693af635793c33658"
+    },
+    {
+      "path": "docs/experiments/g4-capability/G4_ONBOARDING_COMPONENT_EXPERIMENT.json",
+      "sha256": "27da3d6491d873166ef2f67957fc9287d9c0235861171273c69a0b1bacc98190"
+    }
+  ]
+}

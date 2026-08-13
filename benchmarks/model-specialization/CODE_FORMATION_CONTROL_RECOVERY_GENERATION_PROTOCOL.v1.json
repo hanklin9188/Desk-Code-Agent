@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "protocolId": "dca-code-formation-control-recovery-generation-v1",
+  "state": "PREPARED_NOT_EXECUTED",
+  "selectedNextStep": "CODE_FORMATION_CONTROL_RECOVERY_GENERATION",
+  "purpose": "One final fresh generation may test the formation intervention only after restoring a known-good FIM/P2 control path.",
+  "historicalEvidencePolicy": {
+    "preserveSessionBAppendOnly": true,
+    "current40TasksDiagnosticOnly": true,
+    "current40TasksForbiddenAsFreshPrimaryEvidence": true
+  },
+  "requiredFreshPopulation": "NEW_TARGET_MODEL_UNSEEN_REPOSITORY_AND_TASK_DISJOINT_FIXTURES",
+  "frozenControlRecovery": {
+    "retrievalImplementation": "retrieveG3(task, E-MIN-V2, 2048)",
+    "contextPackaging": "C1 from retrieveG3 output",
+    "requestGenerationSeed": 20260809,
+    "scheduleSeed": "SEPARATE_PREREGISTERED_RANDOMIZATION_SEED_NOT_USED_FOR_MODEL_DECODING",
+    "systemPromptSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+    "p2SchemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+    "modelRuntimeSha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee",
+    "p2NormalizerSha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+    "modelId": "TIGER-Lab/FIM-7B",
+    "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+    "precision": "FP8_PER_TENSOR_W8A8",
+    "vllm": "0.26.0",
+    "temperature": 0,
+    "maxTokens": 2048,
+    "timeoutMs": 120000
+  },
+  "requiredZeroCallGates": [
+    "CONTROL normalized configuration hash equals known-good historical FIM/P2 configuration",
+    "retrieveG3 invocation and C1 context lineage present",
+    "request seed is distinct from schedule seed",
+    "all fresh request intents materialize",
+    "source closure and empty ledgers pass"
+  ],
+  "requiredStageTelemetryNoRawContent": [
+    "schemaValid",
+    "bounded model error enum",
+    "finish-reason category",
+    "output-empty flag",
+    "output-length bucket",
+    "normalization classification",
+    "jsonParsed",
+    "schemaValidated",
+    "action-validation code",
+    "patch-construction code"
+  ],
+  "optionalFutureNonPrimarySmoke": {
+    "allowedOnlyIfSeparatelyPreregistered": true,
+    "scoredTasksForbidden": true,
+    "fixture": "non-primary deterministic fixture",
+    "requiredOutcome": "at least one valid P2 action before primary calls"
+  },
+  "conditions": [
+    "KNOWN_GOOD_CONTROL",
+    "KNOWN_GOOD_CONTROL_PLUS_SAME_FORMATION_CONSTRAINT"
+  ],
+  "retry": false,
+  "reviewer": false,
+  "L2": false,
+  "executionNow": false,
+  "stopRule": "This is the final capability-research recovery branch; if its control sanity gate cannot be established or the fresh generation is invalid, retire code-formation research without opening an unrelated branch."
+}

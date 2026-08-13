@@ -1,0 +1,115 @@
+version: 2
+target:
+  owner: hanklin91888
+  repository: Desk-Code-Agent
+  remote_url: https://github.com/hanklin91888/Desk-Code-Agent
+  visibility: user_must_choose_before_creation
+  default_branch: main
+publishing:
+  require_explicit_human_approval: true
+  approval_per_action: true
+  forbid_direct_push_main: true
+  require_secret_scan: true
+  require_license_scan: true
+  require_clean_acceptance_checklist: true
+  generated_agent_branches_prefix: milestone/
+  milestone_sync_required: true
+  draft_pr_before_merge: true
+milestones:
+  M0:
+    tag: v0.2.0-design
+    required:
+    - v2_master_design
+    - 39_skills
+    - schemas
+    - ui_motion
+    - roadmap
+    - validator
+  M1:
+    tag: v0.3.0-shell
+    required:
+    - tauri_shell
+    - event_simulator
+    - ui_tokens
+    - a11y_baseline
+  M2:
+    tag: v0.4.0-local-model
+    required:
+    - vllm_launcher
+    - qwen_client
+    - streaming
+    - model_lock
+    - telemetry
+  M3:
+    tag: v0.5.0-repo-intel
+    required:
+    - acquisition
+    - fingerprint
+    - codebase_map
+    - retrieval
+    - metrics
+  M4:
+    tag: v0.6.0-analysis
+    required:
+    - overview
+    - architecture
+    - onboarding
+    - evidence_ui
+    - report_eval
+  M5:
+    tag: v0.7.0-bounded-code
+    required:
+    - worktree
+    - reproduction
+    - diagnosis
+    - patch
+    - verification
+    - review
+    - rollback
+  M6:
+    tag: v0.8.0-skill-runtime
+    required:
+    - skill_registry
+    - paired_validation
+    - ablation
+  M7:
+    tag: v0.9.0-github
+    required:
+    - issue_pr_ingest
+    - approved_delivery
+    - ci_checkpoint
+  M8:
+    tag: v0.10.0-ux-beta
+    required:
+    - animate_ui_adaptation
+    - motion
+    - a11y
+    - performance
+    - installer
+  M9:
+    tag: v0.11.0-evaluation
+    required:
+    - single_multi_ablation
+    - quantization
+    - systems_report
+  M10:
+    tag: v1.0.0
+    required:
+    - release_gate
+    - sbom
+    - checksums
+    - signed_installer
+    - final_report
+never_upload:
+- model_weights
+- model_cache
+- private_repositories
+- user_source_snapshots
+- raw_private_prompts
+- raw_private_source_logs
+- .env
+- access_tokens
+- ssh_keys
+- unredacted_secrets
+- build_cache
+- node_modules

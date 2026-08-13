@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "decisionId": "dca-best-7b-bounded-retry-product-decision-v1",
+  "status": "PASS_DECISION",
+  "generatedAt": "2026-08-11T17:48:10.497Z",
+  "inputs": {
+    "analysis": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ANALYSIS.v1.json",
+      "sha256": "607cc2fbe41f4e9fd6172d3c848d4f8a2f5c2a9457b746ffd96c8a7b564c6549"
+    },
+    "admission": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_ADMISSION.v1.json",
+      "sha256": "ece52ae58b7328e73929f2325d07571f6a36931954661ab1bd18421dca671d73"
+    },
+    "tournamentResults": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_RESULTS_INDEX.v2.json",
+      "sha256": "f06915ed321d63a687e2942e58bb37692b242efbeccf446cb2f2234aabd9a2b2"
+    }
+  },
+  "decision": "KEEP_MUTATION_DISABLED",
+  "retryDefault": "DISABLED",
+  "mutationInterface": "E_EDIT_P2_RESEARCH_ONLY",
+  "autonomousMutation": false,
+  "assistedPatchSuggestionAdmitted": false,
+  "governingAdrs": [
+    "ADR-0015",
+    "ADR-0016"
+  ],
+  "newAdrRequired": false,
+  "reason": "Maximum-two-call FIM reaches only 30/95, below research, strong and product thresholds; the sealed retry promotion gate fails.",
+  "modelCalls": 0
+}

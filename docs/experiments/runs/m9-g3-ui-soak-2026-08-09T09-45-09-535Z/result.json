@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-g3-ui-soak-2026-08-09T09-45-09-535Z",
+  "status": "PASS",
+  "metrics": {
+    "renderSamples": 900,
+    "renderP50Ms": 2.0883810000000267,
+    "renderP95Ms": 5.97824700000001,
+    "renderMaxMs": 15.729135999999926,
+    "repositorySwitchP95Ms": 6.633104000000003,
+    "rssStartMiB": 94.44140625,
+    "rssPeakMiB": 320.74609375,
+    "rssGrowthMiB": 226.3046875,
+    "peakGrowthMiB": 226.3046875,
+    "droppedTruthEvents": 0,
+    "reconnectFailures": 0,
+    "staleStates": 0,
+    "duplicateNotifications": 0
+  },
+  "targets": {
+    "renderP95Under50Ms": true,
+    "repositorySwitchP95Under100Ms": true,
+    "peakRssGrowthUnder256MiB": true,
+    "zeroDroppedTruthEvents": true,
+    "zeroReconnectFailures": true,
+    "zeroStaleStates": true,
+    "zeroDuplicateNotifications": true
+  }
+}

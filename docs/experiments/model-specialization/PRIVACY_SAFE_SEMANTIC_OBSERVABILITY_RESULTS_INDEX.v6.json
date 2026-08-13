@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 6,
+  "indexId": "dca-privacy-safe-semantic-observability-results-index-v6",
+  "status": "PASS_V3_SESSION_B_COMPLETE",
+  "generatedAt": "2026-08-11T21:28:37.699Z",
+  "v2": {
+    "status": "PERMANENTLY_CLOSED_ABORTED_INFRASTRUCTURE_GENERATION",
+    "primaryEligiblePairs": 0
+  },
+  "v3": {
+    "sessions": {
+      "A": {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_A.v3.json",
+        "sha256": "5e6a60de68bd36602f4f0e8e328ee149e6e1cbcc78483dfc867850b37647bfaf"
+      },
+      "B": {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_B.v3.json",
+        "sha256": "a421a905381365ede996821ece11e5272ee4e5e0ec11d8c510970bfb9b8541a7"
+      },
+      "C": null,
+      "D": null
+    },
+    "result": {
+      "path": "docs/experiments/runs/privacy-safe-observability-v3/result.json",
+      "sha256": "8bf7e2255fbdbf2002516a0b5e26f14cb3ed57a5e1389a45394df3796918a331"
+    },
+    "validation": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_B_VALIDATION.v3.json",
+      "sha256": "dff37409127c119a9c547357bab2f1e2747ef73f2a638766f1e5e12b49d145a8"
+    },
+    "calls": {
+      "planned": 80,
+      "consumed": 80,
+      "completedResponses": 80,
+      "retries": 0,
+      "reviewerCalls": 0
+    },
+    "evidence": {
+      "L0": 80,
+      "L1": 80,
+      "pairs": 80,
+      "privacyLeaks": 0
+    }
+  },
+  "next": "V3_SESSION_C_SEPARATE_INVOCATION_REQUIRED"
+}

@@ -1,0 +1,797 @@
+{
+  "schema_version": 1,
+  "corpus_id": "dca-g3-real-patch",
+  "classification": "PINNED_HISTORICAL_OPEN_ENDED_EXECUTABLE_PATCH_CORPUS",
+  "preregistration_sha256": "17380638021a09b24ac64b53ebb2090bef6b313943e0e7c90f1101eab99a6200",
+  "task_payload_sha256": "1242046ca09e562a2a09da5336b1203ec6002b8173e16f48566c906fd89d6bea",
+  "oracle_payload_sha256": "e9b30fab4b9a342019cc7cee182871f2ddbd487b93cb1758a64a9f9c14474ffb",
+  "tasks": [
+    {
+      "task_id": "g3-patch-werkzeug-2481648714d4",
+      "repository_id": "werkzeug",
+      "repository_head": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "base_commit": "0caf67da4fbecce88cadeaa68490c47910100dfc",
+      "prompt": "add client.query method. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "src/werkzeug/formparser.py"
+      ],
+      "changed_lines": 5,
+      "provenance": "historical public commit subject and diff at 4ce92208da851b30ac1a8fe0b2448ddfb962f308"
+    },
+    {
+      "task_id": "g3-patch-ky-f77af9f78506",
+      "repository_id": "ky",
+      "repository_head": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "base_commit": "6edddd986f2f6a9c7d91e851d9b9a48df439d328",
+      "prompt": "Fix `extend()` dropping numeric `retry` limit when merging with an object (#867). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/utils/merge.ts"
+      ],
+      "changed_lines": 16,
+      "provenance": "historical public commit subject and diff at 06375efbacfc1bdc96f7a4de7560684b765e1274"
+    },
+    {
+      "task_id": "g3-patch-pluggy-fcf12862c082",
+      "repository_id": "pluggy",
+      "repository_head": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "base_commit": "dd20a85e38af556e1c818b03391eab1480438e0c",
+      "prompt": "Address review: DeprecationWarning, add self to test, suppress pytest-timeout. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "src/pluggy/_hooks.py"
+      ],
+      "changed_lines": 30,
+      "provenance": "historical public commit subject and diff at 0258484dc180a0c28705de83783b269f4fed4873"
+    },
+    {
+      "task_id": "g3-patch-p-queue-84a9ec80c32f",
+      "repository_id": "p-queue",
+      "repository_head": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "base_commit": "a06fbc928725f074c72716e1ba21106df6822dae",
+      "prompt": "Fix per-task timeout validation. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "changed_lines": 6,
+      "provenance": "historical public commit subject and diff at 9efde425e233ab59ff3e6842430d40fd2208c103"
+    },
+    {
+      "task_id": "g3-patch-cachecontrol-b70e71a0e6c7",
+      "repository_id": "cachecontrol",
+      "repository_head": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "base_commit": "9b85ea1bbb197fd126b675b0e9bf88a50e3ab76e",
+      "prompt": "fix(controller): Recover from invalid dates (#449). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "cachecontrol/controller.py"
+      ],
+      "changed_lines": 10,
+      "provenance": "historical public commit subject and diff at e46a97fedcdd4ab4dcb41b40837768f58e71f602"
+    },
+    {
+      "task_id": "g3-patch-pyjwt-7896e921b589",
+      "repository_id": "pyjwt",
+      "repository_head": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "base_commit": "22f478cebddd8294259c30f037ecb92b0b348774",
+      "prompt": "Restore `cast()` calls with cross-version `type: ignore` for `prepare_key`. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "jwt/algorithms.py"
+      ],
+      "changed_lines": 11,
+      "provenance": "historical public commit subject and diff at d2f4bec4963897c0ef96ef64a875894f2c8542ab"
+    },
+    {
+      "task_id": "g3-patch-multidict-9b9cd28ac785",
+      "repository_id": "multidict",
+      "repository_head": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "base_commit": "8d0edb4dba3f1d9f1a512ac6be42812055f32843",
+      "prompt": "Fix kwargs double-count in pure-Python extend/update size estimate (#1338). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "multidict/_multidict_py.py"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at 656c4de8f7dbeb6ecfb281ce857bdda931b5c909"
+    },
+    {
+      "task_id": "g3-patch-zod-4da14f497654",
+      "repository_id": "zod",
+      "repository_head": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "base_commit": "ee7376ad3ac04ede2567a7074762d20b0de1de6d",
+      "prompt": "fix(v4): cidrv6 JSON schema pattern matches runtime (#5945). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "packages/zod/src/v4/core/regexes.ts"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at f29f2a6db443284eff44db181dbe146df98f92c2"
+    },
+    {
+      "task_id": "g3-patch-dotenv-f21f9cad3d1e",
+      "repository_id": "dotenv",
+      "repository_head": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "base_commit": "98c6030882b9f8dbf204426771e41e7ee86b0916",
+      "prompt": "fix: treat \\\\ as an escape pair in the fast parser. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "changed_lines": 19,
+      "provenance": "historical public commit subject and diff at 5b70de00150a3f74625de456b2386078b38eee4c"
+    },
+    {
+      "task_id": "g3-patch-axios-7d34905d4cb0",
+      "repository_id": "axios",
+      "repository_head": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "base_commit": "a092bae50d1884782151b2fcea12974d6da6e376",
+      "prompt": "fix(sandbox): resolve TypeError on constant variable path assignment (#11073). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "sandbox/server.js"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at 878bb29de570765b0d4c0970e30400d9ea9399f7"
+    },
+    {
+      "task_id": "g3-patch-werkzeug-67f0694b7c36",
+      "repository_id": "werkzeug",
+      "repository_head": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "base_commit": "b2b281beec14dad63882bcee863d8c2fc5be34c0",
+      "prompt": "preserve empty username, password, port 0. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "src/werkzeug/urls.py"
+      ],
+      "changed_lines": 18,
+      "provenance": "historical public commit subject and diff at 4da3786f1443cbd6efd3f4107bcd5b4ab121f122"
+    },
+    {
+      "task_id": "g3-patch-ky-943680c06acc",
+      "repository_id": "ky",
+      "repository_head": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "base_commit": "e0fcf780de2bd69af2528e4b7b87ccae6bb727b1",
+      "prompt": "Fix handling of Safari errors with domains. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/utils/is-network-error.ts"
+      ],
+      "changed_lines": 4,
+      "provenance": "historical public commit subject and diff at 61d6d66d27911001b9b4d57ab93139f9ad61384b"
+    },
+    {
+      "task_id": "g3-patch-pluggy-da7d136e03f6",
+      "repository_id": "pluggy",
+      "repository_head": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "base_commit": "c1dfc0b9ca32355c214883471d15ecc5133cd2b8",
+      "prompt": "Fix varnames to strip self for bound methods without dotted qualname. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "src/pluggy/_hooks.py"
+      ],
+      "changed_lines": 9,
+      "provenance": "historical public commit subject and diff at 0b7790eb2adf436c6df39c9a2256aa8a31ba3893"
+    },
+    {
+      "task_id": "g3-patch-p-queue-6ba45037be0c",
+      "repository_id": "p-queue",
+      "repository_head": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "base_commit": "9eec7efb433c33f66799d9dec41aa56d43f3435a",
+      "prompt": "Export `PriorityQueue` type (#242). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "changed_lines": 1,
+      "provenance": "historical public commit subject and diff at a20e1f34b5c82e4e91e5d2e0c8b663e831dc16ab"
+    },
+    {
+      "task_id": "g3-patch-cachecontrol-8bac6d0430a0",
+      "repository_id": "cachecontrol",
+      "repository_head": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "base_commit": "385618ef9e04277b2d219e8f13c86cfb22c4fee1",
+      "prompt": "Downgrade misleading cache deserialization warning to debug (#411). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "cachecontrol/controller.py"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at 2d4710cb2bd622cc96b47a593dea9c9afe96fbe0"
+    },
+    {
+      "task_id": "g3-patch-pyjwt-00216e6a316f",
+      "repository_id": "pyjwt",
+      "repository_head": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "base_commit": "95791b1759b8aa4f2203575d344d5c78564cdc81",
+      "prompt": "Remove redundant casts in `RSAAlgorithm.prepare_key` and `ECAlgorithm.prepare_key`. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "jwt/algorithms.py"
+      ],
+      "changed_lines": 7,
+      "provenance": "historical public commit subject and diff at 22f478cebddd8294259c30f037ecb92b0b348774"
+    },
+    {
+      "task_id": "g3-patch-multidict-f40c4f834a46",
+      "repository_id": "multidict",
+      "repository_head": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "base_commit": "eebdb187601ee6110982b8614c5705bb0bed3493",
+      "prompt": "Fix missing space in ValueError message. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "multidict/_multidict_py.py"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at 02d49bc12535d0ac1610d039cbe6af01bc73f45e"
+    },
+    {
+      "task_id": "g3-patch-zod-a7153658e7cf",
+      "repository_id": "zod",
+      "repository_head": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "base_commit": "1fb56a5c18c27102dbc92260a4007c7732a0ccca",
+      "prompt": "fix(v4): allow dynamic `.catch()` under `unrepresentable: \"any\"` (#5273) (#5925). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "packages/zod/src/v4/core/json-schema-processors.ts"
+      ],
+      "changed_lines": 5,
+      "provenance": "historical public commit subject and diff at fbe8ad1b709460fc45d88fdcb5eca591198de60d"
+    },
+    {
+      "task_id": "g3-patch-dotenv-48aa85c1d093",
+      "repository_id": "dotenv",
+      "repository_head": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "base_commit": "c0e32b8267b69a438bc0cc31345f73b5e2f037db",
+      "prompt": "fix: skip a UTF-8 BOM in the fast parser. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "changed_lines": 4,
+      "provenance": "historical public commit subject and diff at bfb434360ffaf6cf53c7ca1f696165b0fbdf0d6c"
+    },
+    {
+      "task_id": "g3-patch-axios-34d8fa97f19b",
+      "repository_id": "axios",
+      "repository_head": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "base_commit": "ff60b43277c32a5b2f7589c917db16d8e043c0d4",
+      "prompt": "fix(core): synthesize AxiosError message from AggregateError.errors (#11059). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "lib/core/AxiosError.js"
+      ],
+      "changed_lines": 33,
+      "provenance": "historical public commit subject and diff at a93b1c90d919542987cc38591d10eed949a345d0"
+    },
+    {
+      "task_id": "g3-patch-werkzeug-1f6977fc12f6",
+      "repository_id": "werkzeug",
+      "repository_head": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "base_commit": "48dde21febc3db2bd75cbad3bf3aa74dedf32e4a",
+      "prompt": "use profiling.tracing on Python 3.15. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "src/werkzeug/middleware/profiler.py"
+      ],
+      "changed_lines": 11,
+      "provenance": "historical public commit subject and diff at eff2d027012a6a858f6d40ca91de303016d95513"
+    },
+    {
+      "task_id": "g3-patch-ky-226a7be37e73",
+      "repository_id": "ky",
+      "repository_head": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "base_commit": "e9eeb35770bdf6d894998c6c9f9a3fb090c8b5d2",
+      "prompt": "Fix tuple `searchParams` mutations leaking across init-hook requests (#861). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/core/Ky.ts"
+      ],
+      "changed_lines": 10,
+      "provenance": "historical public commit subject and diff at 346f8986f98b3b6769034e28d5095922670a7ed6"
+    },
+    {
+      "task_id": "g3-patch-pluggy-cba86e442251",
+      "repository_id": "pluggy",
+      "repository_head": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "base_commit": "74876c40efa3137aee8ebf5d53d9542d65a13381",
+      "prompt": "Simplify varnames to use code object directly. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "src/pluggy/_hooks.py"
+      ],
+      "changed_lines": 73,
+      "provenance": "historical public commit subject and diff at c4e254ca53d02f969c81586dc50c83cc8bb3dea9"
+    },
+    {
+      "task_id": "g3-patch-p-queue-cbe8eae2e48e",
+      "repository_id": "p-queue",
+      "repository_head": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "base_commit": "5e400174a89395a44399713191b76544cf743fe5",
+      "prompt": "Fix: Remove abort listener when operation completes (#235). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "changed_lines": 23,
+      "provenance": "historical public commit subject and diff at e9074f06fff500a13e0ef7c910ff4fc2fe65b01c"
+    },
+    {
+      "task_id": "g3-patch-cachecontrol-bbb8dc60f77d",
+      "repository_id": "cachecontrol",
+      "repository_head": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "base_commit": "184ed034c2d2cc743ca4a29031ed390630e7d2f2",
+      "prompt": "fix spelling error from codespell (#406). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "cachecontrol/controller.py"
+      ],
+      "changed_lines": 4,
+      "provenance": "historical public commit subject and diff at b4f1ab5a78bec0ab97b9d45f77b792b22e0d22e4"
+    },
+    {
+      "task_id": "g3-patch-pyjwt-c0e398c9fe1d",
+      "repository_id": "pyjwt",
+      "repository_head": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "base_commit": "bd9700cca7f9258fadcc429c1034e508025931f2",
+      "prompt": "Add typing_extensions dependency for Python < 3.11 (#1151). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "jwt/__init__.py"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at a4e1a3d1218b01c5806420b8f16d9308ac4adc30"
+    },
+    {
+      "task_id": "g3-patch-multidict-4a530a53c8a5",
+      "repository_id": "multidict",
+      "repository_head": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "base_commit": "39d3c322f6a9e824beee9b6f178e3166205f0f59",
+      "prompt": "Increment version to 6.7.2.dev0 (#1290). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "multidict/__init__.py"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at 80c910bd1badf4b5c2ecfbe5571c5c2367e6e707"
+    },
+    {
+      "task_id": "g3-patch-zod-2c19718ccd86",
+      "repository_id": "zod",
+      "repository_head": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "base_commit": "b8dffe9e62f17e6571e6249d05cc5102b54d94e4",
+      "prompt": "fix(v4): restore catch handling for absent object keys (#5937) (#5939). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "packages/zod/src/v4/core/schemas.ts"
+      ],
+      "changed_lines": 13,
+      "provenance": "historical public commit subject and diff at 1cab69383fcdeae2a366d5e2a2fc4d8fc765d168"
+    },
+    {
+      "task_id": "g3-patch-dotenv-03b4d37aa976",
+      "repository_id": "dotenv",
+      "repository_head": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "base_commit": "a61f616a3160bb6e6f22ff55f08b7eba3a3fab68",
+      "prompt": "add agent skills. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "changed_lines": 1,
+      "provenance": "historical public commit subject and diff at 217861c31a52abc76b5c05dd80bb8b725a9a0c8d"
+    },
+    {
+      "task_id": "g3-patch-axios-565fb806aeba",
+      "repository_id": "axios",
+      "repository_head": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "base_commit": "3ebc76240c835a07fc6af23cb10d41579371a08f",
+      "prompt": "fix: honor wildcard entries in NO_PROXY lists (#11053). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "lib/helpers/shouldBypassProxy.js"
+      ],
+      "changed_lines": 4,
+      "provenance": "historical public commit subject and diff at ff60b43277c32a5b2f7589c917db16d8e043c0d4"
+    },
+    {
+      "task_id": "g3-patch-werkzeug-b019c2c682da",
+      "repository_id": "werkzeug",
+      "repository_head": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "base_commit": "1b00618e787f40dfb21eba29caf8f8be7c8e1d93",
+      "prompt": "fix boolean logic for external url. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "src/werkzeug/routing/map.py"
+      ],
+      "changed_lines": 11,
+      "provenance": "historical public commit subject and diff at 884437aef93e543ebaff3b9cdbe857ee47e7e00c"
+    },
+    {
+      "task_id": "g3-patch-ky-91caaa753b6c",
+      "repository_id": "ky",
+      "repository_head": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "base_commit": "2df9b7e71963b8d0bb7edd172a5d3518c2778330",
+      "prompt": "Fix flaky test. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/core/Ky.ts"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at 4ba8c15feaca524b4a716413db21a481c494721b"
+    },
+    {
+      "task_id": "g3-patch-pluggy-779c8701ae0f",
+      "repository_id": "pluggy",
+      "repository_head": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "base_commit": "59e66fdb231bf47ce5e0b8ed75b788820b135c34",
+      "prompt": "Fix varnames to handle Python 3.14 deferred annotations. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "src/pluggy/_hooks.py"
+      ],
+      "changed_lines": 25,
+      "provenance": "historical public commit subject and diff at 74876c40efa3137aee8ebf5d53d9542d65a13381"
+    },
+    {
+      "task_id": "g3-patch-p-queue-c7a77f5e2b9c",
+      "repository_id": "p-queue",
+      "repository_head": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "base_commit": "27839dc04ae221441e2534ce378ed0e58b498473",
+      "prompt": "Fix stack overflow with many aborted tasks. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "changed_lines": 5,
+      "provenance": "historical public commit subject and diff at 81cbae2128a1a0cef5029042fe4076ddbafdfd15"
+    },
+    {
+      "task_id": "g3-patch-pyjwt-68dfff00e2ac",
+      "repository_id": "pyjwt",
+      "repository_head": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "base_commit": "f3ba74c106df9ce10e272dfaad96acb4ab3ef5a5",
+      "prompt": "fix: do not store reference to algorithms dict on PyJWK (#1143). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "jwt/api_jwk.py"
+      ],
+      "changed_lines": 11,
+      "provenance": "historical public commit subject and diff at 1451d70eca2059bc472703692f0bb0777bc0fe93"
+    },
+    {
+      "task_id": "g3-patch-zod-97e7209aaa3e",
+      "repository_id": "zod",
+      "repository_head": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "base_commit": "76e8f706bb554de82234106de8299d0139cb3b8e",
+      "prompt": "ecosystem: `eslint-plugin-zod-x` is `eslint-plugin-zod` now (#5637). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "packages/docs/components/ecosystem.tsx"
+      ],
+      "changed_lines": 6,
+      "provenance": "historical public commit subject and diff at f0b0608ee300e609772405501ab4b219f0e19680"
+    },
+    {
+      "task_id": "g3-patch-dotenv-d064be827e3a",
+      "repository_id": "dotenv",
+      "repository_head": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "base_commit": "ccc50d50d9e398a0b20355748e710852e1db5d07",
+      "prompt": "`injecting` to `injected`. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at 3f01a8b61addc4e6978f2c40b0147f6812e2f64b"
+    },
+    {
+      "task_id": "g3-patch-axios-83a72e800288",
+      "repository_id": "axios",
+      "repository_head": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "base_commit": "02c2c4f891d76b15712a9edd149a2d9f7978774f",
+      "prompt": "fix: clamp negative progress values (#11039). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "lib/helpers/progressEventReducer.js"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at 3d253b4f17a5107e6f274ee5b2e96e03508dceb2"
+    },
+    {
+      "task_id": "g3-patch-werkzeug-b75bcb795224",
+      "repository_id": "werkzeug",
+      "repository_head": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "base_commit": "801ea65e8bcfb215fad4a6184a7d80fa4115c95d",
+      "prompt": "note difference between mdn and spec. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "src/werkzeug/datastructures/cache_control.py"
+      ],
+      "changed_lines": 4,
+      "provenance": "historical public commit subject and diff at e6892a69e3321791779cbe7c16b3db7d862d2b32"
+    },
+    {
+      "task_id": "g3-patch-ky-638b6b6d14e0",
+      "repository_id": "ky",
+      "repository_head": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "base_commit": "c168a7ccd44d11bfc44390faca1e01cfc8895658",
+      "prompt": "Ignore non-Errors returned by beforeError hooks (#833). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/core/Ky.ts"
+      ],
+      "changed_lines": 7,
+      "provenance": "historical public commit subject and diff at a541fc08b8c078a835b4ffc146226107aba375fe"
+    },
+    {
+      "task_id": "g3-patch-pluggy-8b5baee5d473",
+      "repository_id": "pluggy",
+      "repository_head": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "base_commit": "40f3ab1293c48d2a149a5328be893dc3fa08b395",
+      "prompt": "Apply suggestions from code review. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "downstream/run_downstream.py"
+      ],
+      "changed_lines": 12,
+      "provenance": "historical public commit subject and diff at 5b9a37cbf43fee0f3bbf8ed03586e5dd0695bf56"
+    },
+    {
+      "task_id": "g3-patch-p-queue-ecd7758b3aa6",
+      "repository_id": "p-queue",
+      "repository_head": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "base_commit": "7b3f53e5da211449e8c42ad7ef656a8f4333a6b7",
+      "prompt": "Fix interval cap race condition with high concurrency. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "changed_lines": 19,
+      "provenance": "historical public commit subject and diff at 7fea65877a12f1d74ba75c0e5a5d96f2be117149"
+    },
+    {
+      "task_id": "g3-patch-pyjwt-1ef69b3ead48",
+      "repository_id": "pyjwt",
+      "repository_head": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "base_commit": "53e9381ef9e529ea196bf862e445e90b264ef940",
+      "prompt": "fix: close HTTPError to prevent ResourceWarning on Python 3.14 (#1133). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "jwt/jwks_client.py"
+      ],
+      "changed_lines": 4,
+      "provenance": "historical public commit subject and diff at 412cb67a93363812ae4029d6a95f5d4d40ab2609"
+    },
+    {
+      "task_id": "g3-patch-zod-ce6f73faa157",
+      "repository_id": "zod",
+      "repository_head": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "base_commit": "8fcb71a5ffa5b32a508ac8bb38b7e1e13c387bf5",
+      "prompt": "fix(v4): skip __proto__ key in object catchall (#5898). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "packages/zod/src/v4/core/schemas.ts"
+      ],
+      "changed_lines": 4,
+      "provenance": "historical public commit subject and diff at 76e8f706bb554de82234106de8299d0139cb3b8e"
+    },
+    {
+      "task_id": "g3-patch-dotenv-31fb3845ee6e",
+      "repository_id": "dotenv",
+      "repository_head": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "base_commit": "d35b6a9f019944ef014387f362bd5fe23433d84a",
+      "prompt": "add banner. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "changed_lines": 3,
+      "provenance": "historical public commit subject and diff at 9a3f955cc8809f64c61d0de7266ea380cdc3ac31"
+    },
+    {
+      "task_id": "g3-patch-axios-3fc86cd7335e",
+      "repository_id": "axios",
+      "repository_head": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "base_commit": "bdba132964d91d2e74341cf0af0a54e4d2346870",
+      "prompt": "fix: normalize repeated base URL slashes (#11038). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "lib/helpers/combineURLs.js"
+      ],
+      "changed_lines": 14,
+      "provenance": "historical public commit subject and diff at 02c2c4f891d76b15712a9edd149a2d9f7978774f"
+    },
+    {
+      "task_id": "g3-patch-werkzeug-218d06e61f7a",
+      "repository_id": "werkzeug",
+      "repository_head": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "base_commit": "cd8be56a8a3cd70ed359cfaeeee6905933b1e07a",
+      "prompt": "use base64 instead of hex. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "src/werkzeug/http.py"
+      ],
+      "changed_lines": 9,
+      "provenance": "historical public commit subject and diff at ff1b12a6629b37f5d8372b9e53f02de9d1322e19"
+    },
+    {
+      "task_id": "g3-patch-ky-8f51cf7c2b85",
+      "repository_id": "ky",
+      "repository_head": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "base_commit": "aac83fa9403355d628e8c1bdc505311b6a8683e7",
+      "prompt": "Strip Ky-specific properties from normalized options passed to hooks (#826). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/core/Ky.ts"
+      ],
+      "changed_lines": 14,
+      "provenance": "historical public commit subject and diff at 433febd55cc19c98c7a643be934693927ac38503"
+    },
+    {
+      "task_id": "g3-patch-pluggy-f7ac61a9103b",
+      "repository_id": "pluggy",
+      "repository_head": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "base_commit": "fa2af2b84a3c164b7a16ac340119d42668a7da40",
+      "prompt": "fix(downstream): fix RuntimeError from mutating dict during iteration. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "downstream/run_downstream.py"
+      ],
+      "changed_lines": 4,
+      "provenance": "historical public commit subject and diff at 40f3ab1293c48d2a149a5328be893dc3fa08b395"
+    },
+    {
+      "task_id": "g3-patch-p-queue-4e03f7199ff7",
+      "repository_id": "p-queue",
+      "repository_head": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "base_commit": "5ecfda8d64a24f7baf7bab9dfaba2e9c73bb04be",
+      "prompt": "Fix priority default handling for undefined values. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/priority-queue.ts"
+      ],
+      "changed_lines": 14,
+      "provenance": "historical public commit subject and diff at 439d512cd901adc5c7053745ade15c9048982c53"
+    },
+    {
+      "task_id": "g3-patch-pyjwt-930a15446693",
+      "repository_id": "pyjwt",
+      "repository_head": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "base_commit": "0f4de5a48c0d5567b62f979cf055597cbf73415e",
+      "prompt": "Annotate PyJWKSet.keys for pyright (#1134). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "jwt/api_jwk.py"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at 53e9381ef9e529ea196bf862e445e90b264ef940"
+    },
+    {
+      "task_id": "g3-patch-zod-8d260b6e58c9",
+      "repository_id": "zod",
+      "repository_head": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "base_commit": "fa4a37404966d7ada0f5bb02ceeb592f1d4d9c52",
+      "prompt": "fix(v4): emit falsy prefault values in toJSONSchema (#5893). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "packages/zod/src/v4/core/to-json-schema.ts"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at ebc8287ca206402cf3a9aceb745b204493cbadfb"
+    },
+    {
+      "task_id": "g3-patch-dotenv-9048c8185be0",
+      "repository_id": "dotenv",
+      "repository_head": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "base_commit": "185e641b8f1d69a6586ef75dd97d980a83b989e5",
+      "prompt": "remove version. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "changed_lines": 6,
+      "provenance": "historical public commit subject and diff at a115e3ab874b31c6f9460a2a8c9336bff30fb62c"
+    },
+    {
+      "task_id": "g3-patch-axios-59743d4e186d",
+      "repository_id": "axios",
+      "repository_head": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "base_commit": "7737fae3c54937105d3ab27ae814d857856fe058",
+      "prompt": "build: generate sourcemaps only for published bundles (#11054). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "rollup.config.js"
+      ],
+      "changed_lines": 1,
+      "provenance": "historical public commit subject and diff at 7b1825ff0832981f02a7aa6f3995522b0be297ee"
+    },
+    {
+      "task_id": "g3-patch-werkzeug-fcf52ef0664f",
+      "repository_id": "werkzeug",
+      "repository_head": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "base_commit": "811b9e511e336fd122933690a50451f99ab6b0de",
+      "prompt": "use match to remove port. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "src/werkzeug/sansio/utils.py"
+      ],
+      "changed_lines": 17,
+      "provenance": "historical public commit subject and diff at 9ffdc2d38581119fa82829bdbde4b75e2519866f"
+    },
+    {
+      "task_id": "g3-patch-ky-71a240924c0e",
+      "repository_id": "ky",
+      "repository_head": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "base_commit": "5791b664a07ab9533c1261984a623d2d5bb60ee2",
+      "prompt": "Avoid awaiting response cancel on forced retry (#806). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/core/Ky.ts"
+      ],
+      "changed_lines": 14,
+      "provenance": "historical public commit subject and diff at e673eaa6e42e5d96399db7996c9fd940a1cf02c8"
+    },
+    {
+      "task_id": "g3-patch-pluggy-65a32d44cd32",
+      "repository_id": "pluggy",
+      "repository_head": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "base_commit": "b6be9d907422621d878b09234146db9598ee3a59",
+      "prompt": "cleanup(downstream): remove redundant type conversions in driver. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "downstream/run_downstream.py"
+      ],
+      "changed_lines": 8,
+      "provenance": "historical public commit subject and diff at fa2af2b84a3c164b7a16ac340119d42668a7da40"
+    },
+    {
+      "task_id": "g3-patch-p-queue-a1d2371e2a22",
+      "repository_id": "p-queue",
+      "repository_head": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "base_commit": "b846a358ffb1d4160e4a56467d156ffbc949bd21",
+      "prompt": "Remove unreachable check. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "changed_lines": 5,
+      "provenance": "historical public commit subject and diff at e5dc53c11ab44ac622fa13fff86c8f77b59a35c3"
+    },
+    {
+      "task_id": "g3-patch-pyjwt-882156dfedd3",
+      "repository_id": "pyjwt",
+      "repository_head": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "base_commit": "96ae3563b9db8f5e18621c4d612f622cf476c92b",
+      "prompt": "fix: failing mypy. Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "python",
+      "allowed_files": [
+        "jwt/types.py"
+      ],
+      "changed_lines": 2,
+      "provenance": "historical public commit subject and diff at 635c8d89dd8b8bea1813fe8830a26d0274a4e724"
+    },
+    {
+      "task_id": "g3-patch-zod-2034772eb316",
+      "repository_id": "zod",
+      "repository_head": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "base_commit": "6217527e4880054dda5e4d33aa12192a36a35062",
+      "prompt": "fix(v4): apply util.Writeable<T> in strictObject/looseObject for shape display parity (#5882). Recreate the smallest behavior-preserving fix against the pinned parent revision, return a unified diff, and do not change unrelated files or claim tests that were not run.",
+      "language": "javascript-typescript",
+      "allowed_files": [
+        "packages/zod/src/v4/classic/schemas.ts"
+      ],
+      "changed_lines": 4,
+      "provenance": "historical public commit subject and diff at 757f0b0f5217e0e7125478cd91af1e2c0cd21aa9"
+    }
+  ],
+  "integrity": {
+    "status": "PASS",
+    "tasks": 60,
+    "repositories": 10,
+    "unique_semantics": true,
+    "model_visible_options": 0
+  }
+}

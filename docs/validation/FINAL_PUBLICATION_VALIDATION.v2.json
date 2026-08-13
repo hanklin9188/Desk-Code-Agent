@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "validationId": "dca-final-publication-validation-v2",
+  "status": "PASS_PUBLICATION_AND_UNSIGNED_BINARY_RELEASE_GATE",
+  "canonicalSuite": {
+    "command": "npm run check",
+    "designValidation": "PASS_ZERO_WARNINGS_ZERO_ERRORS_2419_FILES",
+    "typecheck": "PASS",
+    "testFiles": 45,
+    "tests": 225,
+    "productionBuild": "PASS"
+  },
+  "releaseValidation": {
+    "rootLicense": "PASS_APACHE_2_0_OFFICIAL_UNMODIFIED_TEXT",
+    "rootLicenseSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "rootNotice": "ROOT_NOTICE_NOT_REQUIRED_BY_CURRENT_AUDIT",
+    "totalDependencyComponents": 840,
+    "distributedRuntimeDependencies": 197,
+    "priorLicenseTextGaps": 10,
+    "authoritativelyClosedLicenseTextGaps": 10,
+    "unresolvedDistributedLicenseBlockers": 0,
+    "binaryDistributionGate": "PASS",
+    "trustedWindowsSigningCredential": "NOT_AVAILABLE",
+    "signedWindowsRelease": "DEFERRED_SIGNING_CREDENTIALS",
+    "ownerAuthorizedUnsignedWindowsRelease": "PASS"
+  },
+  "canonicalInstallers": {
+    "msi": {
+      "filename": "Desk Code Agent_0.1.0_x64_en-US.msi",
+      "bytes": 1912832,
+      "sha256": "d91f4a516cea760114b380758a5c9a9e48ecd88db86fde262b2aac4e1975bfcf"
+    },
+    "nsis": {
+      "filename": "Desk Code Agent_0.1.0_x64-setup.exe",
+      "bytes": 1162951,
+      "sha256": "ee6877d02e20c346aa7446430ea3366eeaf15d85473c0f8f15dc196e3b9a89f0"
+    },
+    "rebuilds": 0,
+    "signingOperations": 0
+  },
+  "sealedWindowsEvidence": {
+    "w1ReportSha256": "59416a7e2dfaf48aee7601f762e73bd06f7a18243f0561fd6a98b42882e56161",
+    "w2ReportSha256": "97040ab170bada161bc6f6b161a84734d431c471f58f549ebeb7a4aa4fa6a650",
+    "w3ReportSha256": "8b70da95b217848bd5ab028469828e2925c45583000c3b3f16a36600e5b64463"
+  },
+  "invariants": {
+    "project": "PROJECT_IMPLEMENTATION_COMPLETE",
+    "engineering": "ENGINEERING_COMPLETE",
+    "portfolio": "PORTFOLIO_COMPLETE",
+    "windowsQa": "WINDOWS_LOCAL_RELEASE_QA_COMPLETE",
+    "research": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "modelCalls": 0,
+    "benchmarkCalls": 0
+  }
+}

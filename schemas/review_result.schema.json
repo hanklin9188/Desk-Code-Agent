@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Review Result",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "review_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "CHANGES_REQUESTED",
+        "NEED_CONTEXT",
+        "BLOCKED"
+      ]
+    },
+    "contract_coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "criterion": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "SATISFIED",
+              "UNSATISFIED",
+              "NOT_VERIFIED"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "criterion",
+          "status",
+          "evidence_ids"
+        ]
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "level": {
+            "type": "string",
+            "enum": [
+              "BLOCKER",
+              "MAJOR",
+              "MINOR",
+              "SUGGESTION"
+            ]
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "line": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "level",
+          "message",
+          "path",
+          "line",
+          "evidence_ids"
+        ]
+      }
+    },
+    "mandatory_verification_passed": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "review_id",
+    "task_id",
+    "decision",
+    "contract_coverage",
+    "issues",
+    "mandatory_verification_passed"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 5,
+  "reportId": "dca-windows-reference-hardware-qa-w1-v5-native-runtime-partial",
+  "phase": "WINDOWS_REFERENCE_HARDWARE_QA",
+  "status": "BLOCKED_EXTERNAL",
+  "blockingStatus": "BLOCKED_REQUIRED_INTERACTIVE_OS_MATRIX",
+  "lineage": [
+    {"path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.json", "sha256": "2d5ae681480eb7a1df736d0178d9dc877b5eae86799a5c9a4474d43601fea88a", "integrity": "PASS"},
+    {"path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.v2.json", "sha256": "a4443e7a2231015610323f9a7a818aa45d0d423286a03e66bc01785f4fb9da06", "integrity": "PASS"},
+    {"path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.v3.json", "sha256": "1dbcf89f81dc88d37f2cd936d47b4d001679016177dc3b70d9ebe30eaf2f7e2f", "integrity": "PASS"},
+    {"path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.v4.json", "sha256": "6984b83eb116c544a021cb9e7fc71db78c6abaffba7476a2f044e32571e9fd9d", "integrity": "PASS"}
+  ],
+  "sourceIdentityCorrection": {
+    "artifact": "docs/validation/WINDOWS_NATIVE_SOURCE_IDENTITY.v3.json",
+    "sha256": "cbb004b1f201fff5e0c791549e25da7f503a4ba87d942a2d829d95738a972921",
+    "normalizedClosureSha256": "8f68749cd7338b1d3563d2e0889af85ccc3801a8bb503488b7e2214e9b2255ff",
+    "result": "PASS",
+    "identityRegressionTests": "PASS_12_OF_12",
+    "authoritativeNativeFixes": ["apps/desktop/src-tauri/icons/icon.ico", "scripts/generate_tauri_icon.mjs"]
+  },
+  "visualStudioProvisioning": {
+    "artifact": "docs/validation/WINDOWS_VISUAL_STUDIO_COMPONENT_PROVISIONING.v1.json",
+    "sha256": "fa590b661b229ba80dd2d45d79233ae06e352adcb09fd2e4c8e619852575c78c",
+    "requestedComponent": "Microsoft.VisualStudio.Component.VC.Tools.x86.x64",
+    "result": "PASS_EXACTLY_ONE_SELECTED_COMPONENT_ADDED",
+    "desktopMsvcrt": "PASS",
+    "manualLinkerPathInjection": false
+  },
+  "nativeBuild": {
+    "artifact": "docs/validation/WINDOWS_NATIVE_QA_BUILD_MANIFEST.v2.json",
+    "sha256": "288f77747c7691bbc520b1ec6626c801999923e5a800cc579ebed3ac30dc504c",
+    "lockedCargoBuild": "PASS",
+    "tauriNoBundleBuild": "PASS_NO_PACKAGING",
+    "executablePath": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508\\apps\\desktop\\src-tauri\\target\\release\\desk-code-agent.exe",
+    "executableSha256": "b8bd28c7a14f5544a5f7df78bfec6f16c1621dc38be26033d6b95e6851ecdc90",
+    "executableBytes": 3630080,
+    "architecture": "x86_64"
+  },
+  "nativeRuntime": {
+    "artifact": "docs/validation/WINDOWS_NATIVE_RUNTIME_QA.v1.json",
+    "sha256": "0b21a227f4cd6018aec54db914c0f9162317af7a34467a5bf3607bfc2f87f8c1",
+    "startup": "PASS",
+    "applicationWindow": "PASS",
+    "webView2": "PASS_150.0.4078.48",
+    "frontend": "PASS_BUNDLED_TAURI_LOCALHOST",
+    "canonicalSurfaces": "PASS_18_OF_18_AT_ACTUAL_150_PERCENT",
+    "artifactViewer": "PASS_READ_ONLY",
+    "cleanShutdown": "PASS_ZERO_CHILD_PROCESSES"
+  },
+  "dpiScaling": {
+    "100": "NOT_RUN_SINGLE_DISPLAY_FIXED_AT_150",
+    "125": "NOT_RUN_SINGLE_DISPLAY_FIXED_AT_150",
+    "150": "PASS",
+    "200": "NOT_RUN_SINGLE_DISPLAY_FIXED_AT_150",
+    "requiredMatrixComplete": false
+  },
+  "keyboard": "PASS_NATIVE_TAB_SHIFT_TAB_ENTER_SPACE_ESCAPE_FOCUS_MODAL",
+  "narrator": "PARTIAL_ACTUAL_PROCESS_AND_UIA_FOCUS_PASS_SPOKEN_OUTPUT_NOT_OBSERVABLE",
+  "fonts": "PASS_AT_150_NOT_RUN_AT_100_125_200",
+  "motion": "PASS_NORMAL_AND_WEBVIEW_EMULATED_REDUCED_ACTUAL_WINDOWS_SETTING_NOT_RUN",
+  "artifactPathSecurity": "PASS_6_OF_6_READ_ONLY",
+  "defects": {
+    "productDefectsFound": ["Tauri Windows resource generation failed because icons/icon.ico was absent."],
+    "productDefectsFixed": ["Added a deterministic Windows icon derived from the existing Desk cube mark and a dependency-free generator."],
+    "processDefectsFixed": ["Normalized exact TypeScript cache outputs.", "Normalized four exact Tauri-generated schema outputs after build-time proof; adjacent files remain authoritative."]
+  },
+  "validation": {
+    "canonicalFullCheck": "PASS_DESIGN_TYPECHECK_44_FILES_217_TESTS_PRODUCTION_BUILD",
+    "nativeStrictTypeScript": "PASS",
+    "nativeWindowsTargetedTests": "PASS_4_FILES_12_TESTS",
+    "nativeFrontendBuild": "PASS_32_MODULES",
+    "nativeLockedCargoBuild": "PASS",
+    "identityPolicyTests": "PASS_12_OF_12",
+    "nativeCompleteTestSuite": "FAIL_16_OF_205_PLATFORM_ASSUMPTIONS_GIT_UNSHARE_WSL_AND_POSIX_VENV",
+    "nativeNpmCheck": "BLOCKED_PYYAML_NOT_INSTALLED_IN_WINDOWS_PYTHON",
+    "dependencyInstallationForValidation": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "designValidation": "PASS_2228_FILES_39_SKILLS_24_SCHEMAS_5_AGENTS_ZERO_WARNINGS_ZERO_ERRORS",
+    "documentationLinks": "PASS",
+    "canonicalChecksums": "PASS",
+    "secretScan": "PASS_ZERO_FINDINGS"
+  },
+  "invariants": {
+    "research": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "modelCalls": 0,
+    "benchmarkCalls": 0,
+    "dependencyUpgrades": 0,
+    "packagingPerformed": false,
+    "gitActions": 0,
+    "w2Entered": false
+  },
+  "cleanup": {
+    "nativeApplicationProcesses": 0,
+    "deskCodeAgentWebViewProcesses": 0,
+    "narratorProcesses": 0,
+    "modelProcesses": 0,
+    "nativeCopy": "RETAINED_WITH_APPEND_ONLY_QA_LOGS"
+  },
+  "decision": {
+    "windowsReferenceHardwareQa": "BLOCKED_EXTERNAL",
+    "finalMediaCaptureAuthorized": false,
+    "nextAuthorizedPhase": "WINDOWS_REFERENCE_HARDWARE_QA",
+    "resumeCondition": "Use an interactive Windows session that can exercise actual 100%, 125%, 150%, and 200% OS scaling, audibly observe Narrator, and verify the actual Windows reduced-motion preference. Resolve or explicitly scope the native full-suite platform assumptions without installing unapproved dependencies."
+  }
+}

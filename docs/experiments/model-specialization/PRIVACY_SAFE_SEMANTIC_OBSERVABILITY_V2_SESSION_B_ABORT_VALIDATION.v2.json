@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "validationId": "dca-privacy-safe-semantic-observability-v2-session-b-abort-validation",
+  "status": "PASS_PARTIAL_ABORT_INTEGRITY_AND_CLEANUP",
+  "validatedAt": "2026-08-11T20:48:11.222Z",
+  "input": {
+    "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B_PARTIAL_ABORT.v2.json",
+    "sha256": "74bf5552ed0f1465dd35fd392f2fe9f0c2bf867da93dfc926bbe3af86efbb68e"
+  },
+  "checks": {
+    "frozenInputs": "PASS",
+    "sourceClosure": "PASS",
+    "physicalCallAccounting": "PASS_14",
+    "completedResponses": "PASS_13",
+    "sameCallPairs": "PASS_13",
+    "duplicateCalls": 0,
+    "retries": 0,
+    "extractorCrashesOnCompletedResponses": 0,
+    "packetSchemaFailures": 0,
+    "privacyLeaks": 0,
+    "safetyViolations": 0,
+    "rollbackFailures": 0,
+    "failClosedBoundary": "PASS_INDEX_13",
+    "remainingTasksNotCalled": 66,
+    "SessionBPassClaimed": false,
+    "SessionCNotEntered": true,
+    "cleanup": "PASS"
+  },
+  "commands": [
+    {
+      "command": "npx tsc --ignoreConfig --noEmit --strict --skipLibCheck --target ES2022 --module ESNext --moduleResolution Bundler --allowSyntheticDefaultImports --types node scripts/finalize_privacy_safe_observability_v2_session_b_abort.ts",
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "stdoutSha256": "1fcfe57781045a818698db7cbe3c9428c10ea084583a12bb0925411079a7a5df",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run test -- --testTimeout=15000",
+      "exitCode": 0,
+      "stdoutSha256": "38d55f248726925ed66402c18c27d0ca716296107a1c01ef88332dc2ca2ebea4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "stdoutSha256": "784892a41ba9923e45d143d25c19ee85839b91977a88b5caedcf51f4b9653292",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run validate:design",
+      "exitCode": 0,
+      "stdoutSha256": "26d17c77c0dae00fb3334bf99ed7b57e2b268bc29002facabcf19e8f41aa6d89",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

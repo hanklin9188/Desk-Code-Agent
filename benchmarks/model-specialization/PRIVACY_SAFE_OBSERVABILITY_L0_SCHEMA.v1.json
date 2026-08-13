@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dca://privacy-safe-observability/l0-evidence-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "level",
+    "taskId",
+    "repositoryRevision",
+    "physicalCallId",
+    "actionIdentitySha256",
+    "retrieval",
+    "verification",
+    "safety",
+    "rollback",
+    "rawPromptStored",
+    "rawModelOutputStored",
+    "rawEditBodyStored"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "level": {
+      "const": "L0_HASH_ONLY"
+    },
+    "taskId": {
+      "type": "string"
+    },
+    "repositoryRevision": {
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "physicalCallId": {
+      "type": "string"
+    },
+    "actionIdentitySha256": {
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "retrieval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selectedPathSha256",
+        "includedPathSha256",
+        "contextSha256"
+      ],
+      "properties": {
+        "selectedPathSha256": {
+          "type": "array",
+          "items": {
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "includedPathSha256": {
+          "type": "array",
+          "items": {
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "contextSha256": {
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "verification": {
+      "$ref": "#/$defs/verification"
+    },
+    "safety": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "rollback": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "rawPromptStored": {
+      "const": false
+    },
+    "rawModelOutputStored": {
+      "const": false
+    },
+    "rawEditBodyStored": {
+      "const": false
+    }
+  },
+  "$defs": {
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stage",
+        "status",
+        "code",
+        "diagnosticSha256"
+      ],
+      "properties": {
+        "stage": {
+          "enum": [
+            "RETRIEVAL",
+            "ACTION_VALIDATION",
+            "PATCH_CONSTRUCTION",
+            "SYNTAX_TYPE",
+            "VISIBLE_TEST",
+            "HIDDEN_TEST",
+            "SUCCESS",
+            "TOOL_INFRASTRUCTURE"
+          ]
+        },
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN"
+          ]
+        },
+        "code": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "diagnosticSha256": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

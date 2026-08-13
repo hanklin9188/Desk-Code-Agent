@@ -1,0 +1,2750 @@
+{
+  "schemaVersion": 2,
+  "validationId": "dca-patch-interface-development-oracle-preflight-hardened-v2",
+  "generatedAt": "2026-08-09T15:14:32.263Z",
+  "classification": "DEVELOPMENT_ONLY_PRE_MODEL_CALL",
+  "status": "PASS",
+  "inputs": {
+    "manifest": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_DEVELOPMENT_MANIFEST.v1.json",
+      "sha256": "40fc5b018467fc4615084701cc5c2dba357ee3e5d498cbb84811d264a9f22b91"
+    },
+    "oracle": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_DEVELOPMENT_ORACLE.v1.sealed.json",
+      "sha256": "443c6549eea907de0e7180d42f0549732278edef667e392359ff2c556b13f6e2"
+    }
+  },
+  "contract": {
+    "taskCount": 50,
+    "realBehavioralOracleRequired": true,
+    "buggySourceMustFailAtLeastOneBehavioralOracle": true,
+    "referenceFixMustPassSyntaxVisibleHidden": true,
+    "noNetwork": "HARD_USER_NETWORK_NAMESPACE",
+    "nodePermissionModel": {
+      "allowFsRead": "EXACT_EPHEMERAL_FIXTURE_ONLY",
+      "allowFsWrite": false,
+      "allowChildProcess": false,
+      "allowWorker": false,
+      "testIsolation": "none"
+    },
+    "hardIsolationProbe": {
+      "status": "PASS",
+      "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "shell": false,
+    "rawCommandOutputPersisted": false,
+    "outputHashesPersisted": true
+  },
+  "summary": {
+    "tasks": 50,
+    "valid": 50,
+    "failures": 0,
+    "buggyVisibleFailures": 46,
+    "buggyHiddenFailures": 36,
+    "referenceSyntaxPasses": 50,
+    "referenceVisiblePasses": 50,
+    "referenceHiddenPasses": 50
+  },
+  "rows": [
+    {
+      "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "d9cad4cf28d02a41dfc52ca071f095b7f166308864559f2156b71e6983ae9513",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "f55120db441bd557470749c278e68eeafb4984daf8868d0222edd144a1476574",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "fd86b1e3fcd22e90879c4761952ab9db728c9049d2f61e3c2edc26960739a69f",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "a17e5c39f1c2f29e5526e3542937d5d74bea72b18ff0532d08476391d499d32a",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/clamp-upper.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "c4af9da53dcfc99d1fbcba9e435ec6bf1559ab5225795be1bdfa6f6c0b080c9d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e1f2545ae30bbe9503529688497e5544de2d41d85108ea3ab71fc8166761ed21",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "2f797915f1dcd6e97e3252ac57944dbd92141773ae505bc426d82d748ba7ecb1",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "6dff76d423c74092f5db1d899345cc8563ea033a6de9392cf028ba6cd4e07a20",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/median-even.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "ce9d20a60e6da7140bcd329172972f4aabda61f5e59fcb5a9fb6ab3f167088ae",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "bf038a270e02c59e4094e4910731bd6be8be40370301affbe481c1e117b085f1",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "91302459114b8059aed3ab375f12e7f6e29eddf841080a3593c7c487221caccb",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e7ef5e678a8462b1ce622bbc7deb471eb88a5f3d8fd41f21070861b07f12b817",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/stable-unique.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "4ea1798bc236102b629445e46d0d4021effe30f9d610dbd3363da469b89bb0ef",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "TIMED_OUT",
+          "exitCode": null,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "b0620f1b92f33eeb2503a3d93225c4d314a2e1ad1cd3b76aeece5ed1382fffb9",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "efa1812ae1e824da99463a5e00648cf2072aef931126f81a8b4231fabde3a15e",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/chunk-tail.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "7b912ad535a343edab0ea369e26c9b61c76ffd6b2d41289690ba8c0761d0cf81",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "73840363661f1766ee8d5f3373f48b6ef627b1553320238ced61215b8f962c63",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "14902e913bd0f651b016e2ff65bca2406df3e4af1dd70eebe5e1471923f2f100",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "1cc147082c55345bfdb45bda03156a9d07c2343d42f67932fa303e8eed5dabf4",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/palindrome-normalize.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "bc425a0d016ebd4f1707198982a1cc347088b0fa67e40f1ad7eb408bd73a0719",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "05bebfcef342b65da712c7e3946f9cfc23280a58e459e4b7d5af12d5afda2922",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "64663ecd3a75f070cd3478a08ecaef707ca78dddeeb26471726eaa9a0c7b2627",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "0e1052addbedf27657fd3ee371a8f58cec8e4b51581a90abdc9703599c52d0ed",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-port.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "5b559302f3b78a5d037a4dfd03d3948b709f899d1c7cfaa13762babbd98da0e9",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "bc0da9aaa844fd13d7b6ebdba171f13fd64203cc796ae3f420017c29aa896a56",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "224c99f9069bea554edb5a6932dfabbdae7b498944bb83f67f49c87c49a0baa9",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "fc23562c3e1ea691dec111e4d061088b6c6ee84e33377080d7fdf18512d954e2",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/retry-delay.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "a57822d7b6689cad60871367a206c35c139300f19b839f7de813fc6d0ffaf8c2",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "0d8d1c276adf05f6ba78cde9f3093104cabb4a01c9bb51c9dfc3132431417e38",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e81266669c2f4bb83fe1b02635ad705da75de1f80795cb2c0163cb7c7d9eaeb5",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "916ae22e95e79998941ee668b085ae33333be7d8adc99448a7a2b060fc48167c",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/join-url.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "4331e46134dd30126039663cfb555910506ac52868f17e17a16aa525baa610df",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "a8aeb253cdf9e9f15011fea88bc26ec99deaebd104a39dfb25b1b8c3fe687deb",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e2b4cfff5f0ff2397af475a23fb9f4277824d26cd2181bf7bd1836248a44fed5",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "0ee86421463b533f1f691932e1fff84a0eb753f3e3121073527b84ed21ed2bcd",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/escape-regexp.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "557763bffede8bebfc037f67c7e7fa784dca5483db54755ff3bdf3f8f75a7733",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5a3080b905152a19bb12ba340d97d6b39b88fc82179653684fbde61151439205",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "1f61096f4700d0554c44a90baab093addececc4ce7e4385906eab41f85d28f6d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "a34e84e80168f29d83944e74bc561f0c79103f04b27e1206a99d8bc5e6faa440",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/group-by.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "b8e5aa61544f78c803ff9282c12acd2f02bc7343efe230a6cc69d1a808508e9c",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "1775fe698de1cba6d96eef95780af6778563f7aae3674ba958a1346fc41d402d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "bf2f4d4f0c7234cf01019c81d4aa00290db6e21236e5bb146ea29aa15d4a8dc9",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5d9874837b02b17ae85df9e0711a6a5d672d7ca445b8a33ab25f0ac40bd088f2",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/inclusive-range.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e59c0f12644e89c3e9c07d44d50230b6ccbc5cdfab81b24c11b00cc5bdcf254a",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "96e4b23ae1cc1df016cc0f1d83c48cdc8d70d472fb3cb2cfcef4c724ff90ea0a",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "aac685ed42ba7f9db32afa4a2352565307c50fb17966204f1e62546cfb020eff",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "2492df52ce19fd54d443c913d13b0492a8bca627df4bb7b196167776f3448ba5",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/truncate-ellipsis.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-13-normalize-path-3ba2860b51",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "892c48d813e37fc0b7961db404aa49f232393094160c6e5f69885534aab5c53d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "7dbe1ba6dd0cf299e461ccb5fd13d7e93630695af96b87f6a2a81a4cfd10a8aa",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "bc299504fe7fe10d3ce4a9c70dcbff127cf7cc1566c13ca0c859a41de7c22722",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "84bc6a77b7200ca2f7186aaea8759260402bb3559f495edf0512cc7512be5539",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/normalize-path.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-14-parse-bool-8881da94ff",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e5d53c33c2cc0cced583ff164d465181fafd6987463852f1a66073fd24ca4c9c",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "9897bd3a2542c63420b0a2b84c5ec0e104fbc70448fcd95ab523908c808848bd",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "44613c5b7a55978457343b26cbc3b5fed77de433d270c205c6570a7e2622897e",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5b457043734235f43b8516d6222d421491ad10d518f177eb18d750ce8bf922ad",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-bool.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-15-format-bytes-5a0b763ebc",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "0af5006b20265148300a740240a24822b1750090f4948466df32fe901b2597b0",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "5681f67614babf0b8d616e6a11a9da56827cd165002b026911943d09d1e0ff0c",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "2d86f1fc8d6f4b9aba85f6a290c55150b83cb166703e42641184eea060655f9d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "f552c7d4523a88196859e14418658b9565f6c17a5acc11497627061f18b8a539",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/format-bytes.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-16-intersection-multiplicity-985d47dab3",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f081e988e23ccb1b643f60dfaf5fb17eaebca7253a66b068fde80ce6385a442f",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "831f9c8723e16491f134a5a1a7a1739a381e4a3d80497eb723c41a1e9cca5c01",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "17dac2bcdcd0e3f02599e11fc817d211708cec75fc71487747c71bd0f915030f",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "38d8552e4c0560195a74a126022fe81d8a82a274ac44a13b19b70dcf29a048a4",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/intersection-multiplicity.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-17-decode-query-4535736542",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "72b1187dfce62a1c254c384532a2dfb114140a3311089395f271e4f5168900d8",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "c5bf0529834aac4dda127fd5da8c56871eb96e74506f7c38ab89ef21944c3267",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "9c3b6a8cbb5337729dc4a4bf43f417ff2acfd2b20951084281d3cbc1707dd7fa",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "b8d1ca8c0c644d56e570fd87140590ca5b28389e74e4e949b9f9b80851b9fd74",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/decode-query.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-18-title-case-a3b15a1136",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "9201578f58b63dca1839fed5c2b2639cf313bac8c98790b74a062b2de3359ed5",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "54ea5236127674f972458980905e1cc41c1c4edf75284a1ae8c00f955bf7c9db",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "6fc9944008db90b43654c469866e07e0ff195c729c2ecdf2ebc6ce9f800c3fcf",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "90f3b61cd8405e177f86a3af9c1e7ec8d06ddf2b38e4aa67ea66d94e6d0e4975",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/title-case.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-19-safe-divide-8f8f4db38c",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "c4356452a88f325868ae0379453b9cfc99e88ad06c9fa4b129fa106bb63fbc72",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "f4bee54c7b8135c02d752c555136a389498573d760b84ea8fccb1dac702f64db",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "00aa5ae5bec42aede58a43f4fdcc20f354351d9257644629f74ea5b05a8b163f",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "17ff0faff32969488f770a5142752ac74bf2dc857b2cf80fb1443b559c7bbf33",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/safe-divide.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-20-rotate-array-beb86287eb",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f44b977436e06c67b15e422c8575172fc62b2c1c5abc800845be705a92b79f69",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "3119f17b83e7c3afc055c522686f7780c1dd55e170db877821edfa786b61a44e",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "c031c869a6fe6e98ef5701e54a310b3e674cba18c331952a62ece5b217be842d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "b4a87d9f00bce60f7d1a56044dd505bbedbaea81463e7a07eefbc270957e8943",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/rotate-array.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-21-binary-search-ffb6f8735f",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "c63507e025427a40e78860a63956179d2fc1bc3a25415181ad9333cc4b8836d7",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "18de4368d2480fb93fe6982abefbb764c3b68dcfc96397ffb7c6975b1d8a74e1",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5bd6ecc635559c0259ab44c31d26faa10a494dff4e9b3b63a144ecbff190dc9c",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "d3ab3a9fe2c5ba9421b709b30a796126ebe95198e90a27bab27c26d0312dd141",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/binary-search.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-22-merge-headers-e4433a12bf",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f2643bc0bc059cfc12c775f164a67634c94eec8d8e9b17861f623ba1640992f2",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "87ecd2d540978e383f79d231bbce1634668f00dc329b25140780e97e0709cfb5",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5711908c9e505895b5fbc874a31d314d833b2daa2504427f2ae3ea9ffbaa7afd",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "4b3ddf7ac48236f6595016f7d33698f7f97d57eec557559ff9b1ca665b8cf2c7",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/merge-headers.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-23-min-max-72396b9df5",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f04c688bf6b826e9799154956bcd696cf4657ee28c989c5483fbcacacc8dfb7f",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "0707f66c6844d4560ca23f0052f971ff1ef262ac5c73a6217fda91c747598762",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "aa65907713a922226d757ba3a38339d42ef6cd92748a08028f476cedc75b757c",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "4715ca1f4ba72859a69ccd31015edf4f2f2449b978454cb1d8fe46adf8ae7948",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/min-max.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-24-count-words-bfaa1bef8c",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "870cf22c4aac8363fdbe107ea97ee2d970f9f5254721e19cdc57146d48ef3c1d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "002d98ff89c8f0d531466dfefe3b7cccd466be0503bcf92df9c5d0ea1735a797",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "4a6431375efd1f229649ae5efd4915a10c4032ca22395397d97c00df91ea3c74",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "9814eb34775430d4ade44ea6ee23b6713c8a7564b48aca272792e4bf82b198ec",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/count-words.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-25-has-own-de49412ce2",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "608bad54f0dd419924c8eace906a92adef1574d64c0f6ef4ec27553febee215b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "321b0f3f9f207d680aa8135a9c6af04070fda0e29c9f1d96547637bff1b10e94",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "d82668d9128f056e89aa0dda037afe787ab0354847dfa11bc2400ee97ce78700",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "d1e7f8fdf27afac53f0d65d0edacb3400b29ff97059f4f9ab7cda4d940001847",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/has-own.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-01-parse-content-length-25e1045380",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "8f29c16d60867e36aa85e4bb591777a533f8fd2cc18125c0162b96e4e02f52ff",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "495ea0018330de07a60ac48871f103e8ecc3fce781e0828d89199b8be58cc8cc",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "ea15874a779718edf2731a0a793aac3d6a3113a15649f4aacd8dbb5e3f42faec",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "720aedae3c7ac2e70c4831788f196fa80b6809c77ca1e19ba819cb07963dc044",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-content-length.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-02-normalize-locale-tag-db0bd6e9be",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "af6a24cb1080f56d2ce59bef356f5d14d492388e3a270d943ad1e1be91ea546d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "b2b369fa343e18d826986d0896ae72601d07469fd10e169df762515e6a0096c7",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "6739975fd795f8ba1735b5de3eadbcb6ec076907eb349b36affd844daa3c4616",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "14a4d87d145546a8ddf3191a5a69bd0b2ed0b390dc9377a960f8ad7d0faf7ea2",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/normalize-locale-tag.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-03-merge-intervals-a4f184632f",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "0532fedfdfd0d04965969eb8fc10a78b42ccf14ec32d1d2148ee9f6d28bba4c2",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "7dc5b3aa92dc78900659a04e6821c80a20fc43832940098ee596cd86b18d5f92",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "baa8c47f30c8d5db148c6beae34c014f3df5413ad000fde8290690bdaa0d17fa",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "55c705ddc58679c5b86593c4c9a6e542f6c93cc084fd2dec9b94306692a360ac",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/merge-intervals.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-04-split-universal-lines-5d98dcc91a",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "4ba0bfadaf2242f8e868fee0a7091de200352b5c43069cb73613e9cf0cbfc690",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "d678ff906a91c197dc9c55c7f157dd8bcd1e74562ee9cdc3a061502b68847ef7",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "359cc9f9f4416117ace399e167f993189cdc2ca6a539303fc39f4c2cff216447",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "864ad054f1bf830abf3e9d89b48d61edbe2ab1454088c6bc67b028638a57a8cb",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/split-universal-lines.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-05-redact-token-af9834ca39",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "a168c3586e1c7fee660d9e34e37e0d8041c6b549b4295305dd6330dacee57954",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "d739809284825314c065e13d2aa63c65b55e60f671443e0e19f3eac11eb5041e",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "92be9ef346e640a284582e1369896713bd9dd354fa7bae3a934ce6d9792e1319",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "ba71853b78b16ead0eb0f4af9c7cae5e8ad0f03a11804099dfd663f861de80c2",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/redact-token.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-06-zip-longest-54b2859ccd",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "13d5eb130b0d3169dae2cdb67b4815001bd3446863be69354323af27d16524bd",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "7009320a1a03a9f1d2d702eb0e0d27aa539c07d81765c537731e48495c1b5453",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "3d5c9ab10e0c20a3af427b2cd2bbb7f2d5750784d1c052a197791dac119e75d9",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "16f26d852594207f672db73bb5c01c1be2f469d274fdeb79c7c125546d34b4ab",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/zip-longest.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-07-partition-values-2d49780853",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "505d75e71a658328dba7fc70793f7ccfbf0a1601b53d1ee17f6776215650abc3",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "652c3526d802e4f571ebd92d21898af1ac0f065ff347c493a47f7058cc8531d3",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e029e643c621eca82c7e8a16c6a84dd00dca3ba13eda7dcbe5dbb1d77e5c304d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "b5931658d4c46c6c90aec781b1c9001c8f2ee58b4bfbb9fad9094c96d4e11a17",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/partition-values.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-08-parse-duration-ms-b8f471c5b7",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "afcb15bb57488ec0964b4e22d5b635f62cb663c11a49eca632fd5778a21c33a3",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "d3376c17e3bb24725d5f2e0515ccbd2e0604641e530a77cc63fbad8ca7ed9ef6",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e8c13dfcbeefeeeb01844b3dc01f614e1428ad86add0e7bfe3a8b793ebef74c4",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "81318a8655e33eab0834c250c758539653969a9b13567f1f7fc8432d0073d1f6",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-duration-ms.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-09-encode-html-bbbf198eeb",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "a620b20f48df8ec440b019d3af7a3d8524d54ff0411364738873deea7d25540b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "0b548b8c15dad5994b589e2416a686a052b9782d074e8ca7af0372fcdcbcce90",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "38482455f6b33e9ce7ef2bdde76774f0ccffc1606228cd6617dd9823acc63a9b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "2784f1d6b2f24bc21c6c293f646b0449e56efc7174bebe00f613a306c308f06d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/encode-html.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-10-parse-ipv4-17f15db3ae",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "7ad4bdd457c249f5ffbecd8e2a832ada5df406d30deef6693b0e9fc363d6bd67",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "6e4efb596b5553f8e0a8d7e9f2400c8966c9e9c8cf504a3e4784f6e7516e45e2",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "9fddeda91c2e6b14fed022d5e12aa2a6216f8f6c981260730dfbc5e9f3254c94",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "c62a266b21a672efdddd219d92f32d48b9bbb1b0b822e19fe1fe0ad3c3239b1d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-ipv4.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-11-compare-semver-800b4bd494",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "ad968a8d9f74998a6a1f8135853f5333eb7358eeee6313e7e3aecbeef9e2cabd",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "93231d6c9d396f3b091c785ae781809b2c0f1c17db678462bf1fefff48560cdb",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "48b3300e305d26c3625b6e2c47dc27f6b6e6921463d750b39c1c4c5051326a12",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "637802bf2fcd17aa2cb0ed9e08b3cc97d78d57335680a40b3b4055a012ec5238",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/compare-semver.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-12-parse-json-object-789a69d942",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "a903422c238c98fae82e3f4cc96a9af9c2b067cdacd00a2f50e2e635e15c704b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "638a1ed16d9e8620613bd874bf8495e937fae3e2f557a189f5193745ae930cac",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "00f108125e8a0cbba2decbed7b113298386e71cdd4f077af776d821f221c89e0",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "0c1c109aef5fcdfabbf7421fa7f783619aed009d20d84076951d662b3115cefb",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-json-object.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-13-take-last-items-8d922260f9",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "717deb15d65cdc90e8ae02258ce42216c940728565a442ad75369d274db08b29",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "21b374adde78ce111523454860d4755fba00032dca7bccd6c95888b607e8a244",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e177fd23b2fe71ebcb7f6cedb4f7ac18c6c3ae58635b81e409acfdb16d92191e",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "394dc1f379ffedcce77f3278fd18f73c1c60f36a156842d41ffde173ccb94a68",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/take-last-items.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-14-move-list-item-c5fff25837",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "b00cb1c92cba247aa86830e1788c75390026e9e0041a71c2e40d5dcecd6186b6",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "d8e05f1b3041d897a73d415e6b772ea7c794b42bea3849a68237133ef29c702b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "6df75812fe4304265002de4e39f0b1856e0bef2b1beae3ff46bb069090923096",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "ec7843605490edf498f94b481f499f5de475f091a712e71eda944e9e7b3cbbb0",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/move-list-item.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-15-weighted-average-126e8c7044",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "fc2201e1b65c61fcb88f122f87d5f58e1f21ed9d322ffb17599fc389939c1f9a",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e4cb9c780b152217b93d8979f43dff8ed30d1571fd3c97d33d0929798199f411",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "fa915c9e6df8e4d22cbd53d92ae8b2b38217db9f8d55cd880503d864e5b66431",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "18e93254e187308755a3d21b5d223afadd76adadab91ed94926243115821ea54",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/weighted-average.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-16-rolling-average-cae4a611da",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "01d021074d5c3193a577b0f81e9dd9c248538cd67fe83b1fa75de6a6a7253815",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "8842efbc15791fd0be36fdb24148172a2f1152ab39d2db1dbb48672107ee9587",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "62a4afc86b97daf61928acf985e6bc5b36ddbb011ca2b0e876bf9e686467d8e4",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "c5e11137f5a0afc2e15a809615e1cf22ecec188732c1159cc914bc81df1cae2a",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/rolling-average.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-17-parse-env-assignment-af2c1c4afe",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "4e595f8e50d770cd3704dc502d111e1e2e4dbb0cb31189a4c69b8d5ee4e39ec1",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "56e9a1b5b6dabf768b16dd18abba1b79609eafdab9b226e1154eb57c0c87f1e6",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "24490cfb9bbd729a36de1676eedc6adfbbe1c03622ec17ed6f46317454ad4a5d",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5001fe7691824df15b7d772b04082aa7bc43d7de6f183200c314f33f3951f111",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-env-assignment.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-18-get-path-value-280b061326",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "2a07d6659170b4fd3afd84ed986b5ce0c1701cfd013256e2c507f3c0c149e1e5",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "1ebcb19957a9921113292a14ab244d29d2d086b935cb477ffe453579a6278954",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "ec2622ea6e9766320832ae04c7840b0bd1d68d5b68dc51e06150576f3bbd392c",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "ac818e878600d7fbafcc0135135c4b7e0eb141cbfd37f52f2e87dba21c371574",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/get-path-value.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-19-apply-defaults-305d454174",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "649b121059c61a795729471c6a97446ed6036ce2f1e8c290bdba199f06d2ee51",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "b2248ca63297ab96d1302fdc66fc815c5064a160657a1e10bea0418b76be0a8e",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "663b9f469405bdd3e3bbb7d23942c0545c68db47b19538c037a5ebd8a4b4bc70",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "30c6a767722dbd6bb601e01616f517316ffd3af283280278d0c2e55bf0e08054",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/apply-defaults.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-20-serialize-query-c0867650c6",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "3564580bd85705ea460b7f86109ffd3e87e36a163f141d6aa6a7aa9791939069",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "bd62fdececa35b1b1af5e15cc555d9eaa677532e66c27cf832182c1df93c5643",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "49b1b9a77155957b61a6b9e8f2736f949f4be5b36f311cd8b112538c37b9cda6",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "33317558bce709ce51bde824826e40567f471dc2f6bbc2b7dd3af490bc1ab305",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/serialize-query.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-21-match-etag-list-593647080b",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f1c2b0011aab5a6edf657f1dd51a380b61f126ff2d8264ea9dfac758590a7a43",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "3a9fa6a999f2aa73d24928274393a65908764f74d8b59ca9a3276758d1189c0a",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "f471c2af436d554e9eedbf3c37bbb1f8a128141fc2bf3fb4464b067d8c0527c7",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "8eb8bbe6c037a5450abc4e1448c26043cf46ebda2e5aaf8d0f049ef245ea8ef6",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/match-etag-list.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-22-choose-language-f6b919bf2c",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "ea04e3d88379205b80e6d342beba5cf268b3a18860271882a0a1391bf46344a5",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "d147d7b0213b0e16d6237d5dc26519642263c46cd033cf01b82a60a2d894b9b7",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "928d690567fef2bf872057494dfe8b1b0e132da6527dd35ff3e3a3483e38d450",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "7cc20002b15114fa34cc78f8c79ac801bd1000e7e061149782f4f00713c2676e",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/choose-language.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-23-seconds-to-clock-8fde531045",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "1c23a88f2fc57e396de83692db0dc3a3c1104c9c6d1d83a413fc5891cdf0cbdc",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "31d3e3b36a337ce688e8fb1cd358e4ddb2bfb799444ac67641a499da0b5a856a",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "26104b6e0387246d03c58299b441913995716f50bb1b28dbb8ce7ef0242ef53e",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "7ea0296cc428ce9e64e94fb93f795cdf3e964ee4ae5d16d84ebd5c32488a3999",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/seconds-to-clock.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-24-intersect-ranges-b6f8538698",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "a2d4a6a25c244f0abc83a7d189ca1ef146787a85698e56bff3f15ee461f63e7e",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "4b4769ca068bc23059318ca13c98b9f7fd81a2314c580e9e33b7e2e0b6672298",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5a8402e1d9d452b86225586f2f660b2d8d3c19cff667b78cf876f1bcc1817fb2",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "8f46d73944ea25e1e46cdd59ec7a71573d1a0bcef85ad5460befccf70b66bb64",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/intersect-ranges.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-25-parse-byte-range-2f2f3376de",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "0a5736f4aa9f177e4e1757816612332196aadc82fab6c098b18e67ed2095e8e1",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "d85d4009d649992510f53e54c4275b3bf1e3df8cd4e70824f6024b12a5ec0154",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "fb401e4844c8473acacac2ed0b78bdbd793382b0fe32c82a172d68f90dcfa957",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "a1dfc8c411c4a74bb4e071cd9d7a8566aae076909865256b364937162e0605f2",
+          "isolation": "HARD_USER_NETWORK_NAMESPACE_AND_NODE_PERMISSION_MODEL"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-byte-range.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    }
+  ]
+}

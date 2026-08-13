@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 3,
+  "sessionId": "dca-privacy-safe-semantic-observability-v3-session-b",
+  "session": "V3_SESSION_B",
+  "status": "PASS",
+  "classification": "ONE_SHOT_EVIDENCE_COLLECTION_WITH_TOTAL_PRIVACY_SAFE_L0_L1_PAIRING",
+  "completedAt": "2026-08-11T21:28:37.699Z",
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_A.v3.json",
+      "sha256": "5e6a60de68bd36602f4f0e8e328ee149e6e1cbcc78483dfc867850b37647bfaf"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PREREGISTRATION.v3.json",
+      "sha256": "edf0ea732bbb235d10e6d898b15089bc4d1f053f54510e99e58bc63b76a42cb9"
+    },
+    "result": {
+      "path": "docs/experiments/runs/privacy-safe-observability-v3/result.json",
+      "sha256": "8bf7e2255fbdbf2002516a0b5e26f14cb3ed57a5e1389a45394df3796918a331"
+    }
+  },
+  "artifacts": {
+    "validation": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_B_VALIDATION.v3.json",
+      "sha256": "dff37409127c119a9c547357bab2f1e2747ef73f2a638766f1e5e12b49d145a8"
+    }
+  },
+  "summary": {
+    "plannedCalls": 80,
+    "consumedCalls": 80,
+    "completedResponses": 80,
+    "L0Packets": 80,
+    "L1Packets": 80,
+    "sameCallPairs": 80,
+    "retries": 0,
+    "reviewerCalls": 0,
+    "invalidJson": 0,
+    "invalidActions": 0,
+    "malformedOutputs": 4,
+    "actionParseStatus": {
+      "JSON_OBJECT": 80
+    },
+    "actionValidationStatus": {
+      "PASS": 80
+    },
+    "parserFailureCategory": {
+      "NONE": 76,
+      "TREE_SITTER_SYNTAX_ERROR": 4
+    },
+    "execution": {
+      "patchApplied": 72,
+      "syntaxPass": 67,
+      "visiblePass": 38,
+      "hiddenPass": 39,
+      "behavioralSuccess": 36,
+      "safetyViolations": 0,
+      "rollbackFailures": 0,
+      "cleanupFailures": 0
+    }
+  },
+  "storage": {
+    "maximumLiveDisposableIsolations": 1,
+    "capacityFailures": 0,
+    "cleanupFailures": 0
+  },
+  "privacy": {
+    "leaks": 0,
+    "rawPersistence": 0,
+    "L2": false
+  },
+  "semanticAnalysisPerformed": false,
+  "productDecisionChanged": false,
+  "cleanup": {
+    "modelProcesses": 0,
+    "port8000Clear": true,
+    "modelGpuAllocationMiB": 0,
+    "ephemeralStateAbsent": true,
+    "disposableIsolations": 0
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "retry": false,
+    "reviewer": false,
+    "L2": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  },
+  "next": "V3_SESSION_C_SEPARATE_INVOCATION_REQUIRED",
+  "stop": "V3_SESSION_B_BOUNDARY_REACHED"
+}

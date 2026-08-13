@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T14:03:55.688Z",
+  "classification": "CONTROLLED_MODEL_SPECIALIZATION_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "decision": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "baseline": {
+    "loadTimeMs": 58588.422119140625,
+    "ordinaryLatencyMs": 403.77480300000025,
+    "ttftMs": 69.77953500000149,
+    "throughputTokensPerSecond": 75.28072759688921,
+    "idleVramMiB": 12020,
+    "peakVramMiB": 12022,
+    "snapshotPayloadBytes": 9332829106,
+    "phaseMeanLatencyMs": {
+      "oracleContext": 3766.439826714285,
+      "taskUnderstanding": 3636.3464088333326,
+      "navigation": 1162.9056157200027,
+      "diagnosis": 3471.314023839994,
+      "patchOnly": 3419.2515078800034,
+      "planning": 4015.9274840833436,
+      "oneShotEndToEnd": 3646.036207959999,
+      "boundedRetry": 7131.631795360004
+    }
+  },
+  "coder": {
+    "loadTimeMs": 36463.45849609375,
+    "ordinaryLatencyMs": 480.8329200000044,
+    "ttftMs": 46.65948400000343,
+    "throughputTokensPerSecond": 98.7460722303293,
+    "idleVramMiB": 13316,
+    "peakVramMiB": 13316,
+    "deviceHeadroomMiB": 3060,
+    "snapshotPayloadBytes": 6183465285,
+    "phaseMeanLatencyMs": {
+      "oracleContext": 3010.941507428571,
+      "taskUnderstanding": 2882.8932422916714,
+      "navigation": 547.9038076799992,
+      "diagnosis": 2182.7237923600037,
+      "patchOnly": 1573.037786160009,
+      "planning": 1531.8690400833293,
+      "oneShotEndToEnd": 1571.8606870799954,
+      "boundedRetry": 3189.6798044399966
+    }
+  },
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "coder": {
+      "path": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "7d41c6316b508756d0c95dd688440cde334062cf9d8b94f7ed14d3cc3b32c959"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "fairness": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v2.json",
+      "sha256": "de1b2f2901d58c35c7a2a674cf6bd474a47fc87f711c07376cc3da49e147cbaa"
+    }
+  },
+  "shutdown": {
+    "baseline": "PASS",
+    "coder": "PASS",
+    "finalGpuMemoryMiB": 0
+  },
+  "switchCost": "NOT_RUN_MULTI_MODEL_ROUTING_NOT_JUSTIFIED"
+}

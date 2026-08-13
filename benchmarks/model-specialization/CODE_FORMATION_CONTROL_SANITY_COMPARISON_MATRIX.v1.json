@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "status": "FAIL_CONTROL_NOT_EQUIVALENT_TO_KNOWN_GOOD",
+  "current": {
+    "sessionB": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_SESSION_B.v1.json",
+      "sha256": "0cd2c2d8f94b152e5179698ccbb31b0a9088db94ae1274155e2a9b011f6e5581"
+    },
+    "config": {
+      "systemPromptSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "responseRuntimeSha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee",
+      "p2NormalizerSha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+      "modelId": "TIGER-Lab/FIM-7B",
+      "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+      "vllm": "0.26.0",
+      "precision": "FP8",
+      "temperature": 0,
+      "requestSeed": 20260812,
+      "maxTokens": 2048,
+      "timeoutMs": 120000,
+      "retrievalDeclared": "E-MIN-V2",
+      "contextDeclared": "C1_TASK_PLUS_SOURCE",
+      "requestConstruction": "DIRECT_TASK_PLUS_SOURCE_NO_RETRIEVE_G3_CALL"
+    },
+    "normalizedConfigSha256": "de96f276dda0ff875e98e72d926f2e31f9f11efd5568b5acc16dda332309c25b"
+  },
+  "historical": {
+    "v3SessionB": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_B.v3.json",
+      "sha256": "a421a905381365ede996821ece11e5272ee4e5e0ec11d8c510970bfb9b8541a7"
+    },
+    "config": {
+      "systemPromptSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "responseRuntimeSha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee",
+      "p2NormalizerSha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+      "modelId": "TIGER-Lab/FIM-7B",
+      "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+      "vllm": "0.26.0",
+      "precision": "FP8_PER_TENSOR_W8A8",
+      "temperature": 0,
+      "requestSeed": 20260809,
+      "maxTokens": 2048,
+      "timeoutMs": 120000,
+      "retrievalDeclared": "E-MIN-V2",
+      "contextDeclared": "C1",
+      "requestConstruction": "retrieveG3(task,E-MIN-V2,2048).context_PLUS_FROZEN_P2_CONTRACT"
+    },
+    "normalizedConfigSha256": "3dcfb8430b4389d775f2ba2664abfdf6d4a93e3c7428eb55303b2f371c3582b5"
+  },
+  "rows": [
+    {
+      "dimension": "model identity/revision",
+      "equivalent": true,
+      "current": "TIGER-Lab/FIM-7B",
+      "historical": "TIGER-Lab/FIM-7B"
+    },
+    {
+      "dimension": "serving backend",
+      "equivalent": true,
+      "current": "0.26.0",
+      "historical": "0.26.0"
+    },
+    {
+      "dimension": "precision profile",
+      "equivalent": true,
+      "current": "FP8",
+      "historical": "FP8_PER_TENSOR_W8A8"
+    },
+    {
+      "dimension": "system prompt digest",
+      "equivalent": true,
+      "current": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "historical": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55"
+    },
+    {
+      "dimension": "P2 action schema digest",
+      "equivalent": true,
+      "current": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "historical": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724"
+    },
+    {
+      "dimension": "response extraction/structured-output runtime",
+      "equivalent": true,
+      "current": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee",
+      "historical": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee"
+    },
+    {
+      "dimension": "P2 parser/action validator",
+      "equivalent": true,
+      "current": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+      "historical": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508"
+    },
+    {
+      "dimension": "temperature",
+      "equivalent": true,
+      "current": 0,
+      "historical": 0
+    },
+    {
+      "dimension": "max output and timeout",
+      "equivalent": true,
+      "current": "2048/120000",
+      "historical": "2048/120000"
+    },
+    {
+      "dimension": "per-request generation seed",
+      "equivalent": false,
+      "current": 20260812,
+      "historical": 20260809
+    },
+    {
+      "dimension": "E-MIN-V2 retrieval implementation",
+      "equivalent": false,
+      "current": "DIRECT_TASK_PLUS_SOURCE_NO_RETRIEVE_G3_CALL",
+      "historical": "retrieveG3(task,E-MIN-V2,2048).context_PLUS_FROZEN_P2_CONTRACT"
+    },
+    {
+      "dimension": "C1 context packaging implementation",
+      "equivalent": false,
+      "current": "C1_TASK_PLUS_SOURCE",
+      "historical": "C1 via retrieveG3"
+    },
+    {
+      "dimension": "P2 file/range/replacement contract presence",
+      "equivalent": true,
+      "current": "PASS",
+      "historical": "PASS"
+    },
+    {
+      "dimension": "strict JSON-schema response_format",
+      "equivalent": true,
+      "current": "same sealed runtime",
+      "historical": "same sealed runtime"
+    },
+    {
+      "dimension": "stop conditions",
+      "equivalent": true,
+      "current": "same API defaults",
+      "historical": "same API defaults"
+    }
+  ],
+  "mismatches": [
+    "per-request generation seed",
+    "E-MIN-V2 retrieval implementation",
+    "C1 context packaging implementation"
+  ],
+  "requestIntentSemanticAudit": {
+    "structuredOutputContract": "PASS_API_JSON_SCHEMA_STRICT",
+    "p2ActionFormat": "PASS_SYSTEM_AND_SCHEMA",
+    "requiredFields": [
+      "file",
+      "start_line",
+      "end_line",
+      "replacement"
+    ],
+    "boundedFileRangeInstruction": "PASS",
+    "taskPromptAndSourcePresent": "PASS",
+    "frozenRetrievalAndContextRealization": "FAIL_BYPASSED_RETRIEVE_G3"
+  },
+  "conclusion": "Current CONTROL is not operationally equivalent to the nearest immutable working FIM/P2 path."
+}

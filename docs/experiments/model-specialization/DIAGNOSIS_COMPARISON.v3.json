@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T14:20:52.373Z",
+  "classification": "CONTROLLED_MODEL_SPECIALIZATION_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "decision": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "baseline": {
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "status": "RUN_COMPLETE"
+  },
+  "coder": {
+    "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "status": "RUN_COMPLETE",
+    "licenseUse": "NON_COMMERCIAL_RESEARCH_EVALUATION_EXPERIMENTAL_DEVELOPMENT_ONLY"
+  },
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "coder": {
+      "path": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.v3.json",
+      "sha256": "20f8943120f302d025062c674e7bd6a7409db67067e0f5cb71eff1214fb4babc"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "fairness": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v3.json",
+      "sha256": "a86f9c0db0e489e0dd3974aa52fbcc53fb556f674491bd313dd9eba06a525045"
+    }
+  },
+  "report": "Diagnosis only",
+  "comparison": {
+    "phase": "diagnosis",
+    "title": "Diagnosis only",
+    "baseline": {
+      "tasks": 25,
+      "successes": 2,
+      "successRate": 0.08,
+      "wilson95": [
+        0.022220401284847563,
+        0.24966108950395313
+      ],
+      "schemaValid": 5,
+      "schemaValidity": 0.2,
+      "totalTokens": 10733,
+      "meanLatencyMs": 3471.314023839994
+    },
+    "coder": {
+      "tasks": 25,
+      "successes": 5,
+      "successRate": 0.2,
+      "wilson95": [
+        0.08860584686802572,
+        0.3913095036954033
+      ],
+      "schemaValid": 18,
+      "schemaValidity": 0.72,
+      "totalTokens": 9255,
+      "meanLatencyMs": 2117.961918839996
+    },
+    "absoluteDifference": 0.12000000000000001,
+    "absolutePercentagePointDifference": 12.000000000000002,
+    "relativeDifference": 1.5,
+    "pairedOutcomes": {
+      "BOTH_PASS": 0,
+      "BASELINE_ONLY": 2,
+      "CODER_ONLY": 5,
+      "BOTH_FAIL": 18
+    },
+    "netCoderWins": 3,
+    "pairedBootstrap95": {
+      "iterations": 10000,
+      "seed": 20260812,
+      "lower": -0.08,
+      "upper": 0.32
+    },
+    "pairedTaskIdsSha256": "0b6ee437be32cc0a95eaf058906e5a3dbf02724df1485692004ebd4dfd3e819d"
+  }
+}

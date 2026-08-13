@@ -1,0 +1,2414 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "g4-onboarding-components-2026-08-09T12-25-54-483Z",
+  "status": "PASS",
+  "classification": "G4_DEVELOPMENT_COMPONENT_DIAGNOSTIC_NOT_G3_RESCORING",
+  "startedAt": "2026-08-09T12:25:54.483Z",
+  "completedAt": "2026-08-09T12:30:14.253Z",
+  "inputs": {
+    "manifestSha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+    "preregistrationSha256": "2dbcea905970ca51f1c9101ff1c870e8d9403546038814a629cb4f3c8d2aa23f"
+  },
+  "fixedModel": {
+    "repository": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "temperature": 0,
+    "seed": 20260809,
+    "thinking": false
+  },
+  "strictInterpretation": "Partial components are diagnostic only; only every-component PASS is end-to-end PASS.",
+  "aggregate": {
+    "tasks": 24,
+    "exactAllComponentsPass": 0,
+    "exactAllComponentsRate": 0,
+    "componentAccuracy": 0,
+    "evidenceCitationAccuracy": 0.23750000000000002,
+    "unsupportedClaimRate": 0,
+    "missingComponentRate": 0.16666666666666666,
+    "schemaValidity": 0.8333333333333334,
+    "totalTokens": 91681,
+    "totalLatencyMs": 259764.26490399998
+  },
+  "observations": [
+    {
+      "taskId": "g4-dev-repo-werkzeug-onboarding_synthesis-ae2727893f",
+      "repositoryId": "werkzeug",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.5,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "8a2041b28d2f386da260a45903c3a1f7327df34fc4746398d45a5f112426b69d"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "9dc56cac2ef741085f3acfa7e33dfe66ed5a882ba1bc3f0f486178ac686f4454"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "bbd95cc71592d02770b147d3fe5c461e28ae9c6d1fad0f9c77592909319025cb"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "b2862c01609e6cf867338d0acc75368a5241d45fb091ff60432ff38cfa3ffaff"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "4a945af6ae38cbf3aea71afbbfbc7b2b351bf560b55ebd5776fd3ad1cefbb73f"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "c194af6bd786ac470995f17f379314e8f310f25a5fed0d46a494e4ef9b791377"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "05447481a2ad0360724f24c3e4ff115e44758e7e2798d274ad946afe390bbbc0"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "b51b636c408625e60a0c60144837863607cecf083a23f36824dd7bb914a0e682"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "3afdf77d0fb8ff8701548fad6af6654e9b67638a73cef19e3e8650fc0b09499c"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "de27ce9ca4a39864f807f1c8e299dcb0f5996e0dc17ab238ee13fd23c2d23f9b"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "04849c72a8005554bcf5bc81ed528ac0f12bb9b5847542c14693ac7cff15384e",
+      "rawOutputStored": false,
+      "promptTokens": 2156,
+      "completionTokens": 891,
+      "latencyMs": 13698.949677,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-werkzeug-contributor_start-f8eda244ae",
+      "repositoryId": "werkzeug",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.9,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "782095706bf52e3cb8a75571ec368e19e84059471da5e2f32b8b33a3a018d93a"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "828227ba4bfed26f88422409a3231e685264b83566e0976ad75e37568e181ce4"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "53b7e274e58a8bd541d75479add8dc4fba86d0e5cb761eea47ff92ebbc8ef1ef"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 2,
+          "summaryHash": "fd7875400e52fa325357ee6bb56c23c2ae58e8a9e80f9a2b2a4e40436ed22ba6"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "7e2e566ae7e4b2caa68863f4ca970b9185602c3b0ba80ab3e8a153109353896a"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "f251cf6e48af260c5e0c2276f3c05f74ecc6810bbc9f60aafed6ce691a66d8f1"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "6580630bc78575c48bb802ad1e49c9a2675c63b04de62cc1ccc3b1f9f6848b8d"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "10d35b4b532a19b6b693aa28a1d199561c6f842e0bb05a44a95045875d0420fe"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "0e5f459ad14c3d873ee1bbc23dd7d5fdfdfb583d3d3991d29e2fc1b5ed5831fc"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "174a251554cf3f39455692d3077abb7ce7ae6f6a9ed340b08b6e587c0593eb45"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "48d2919ea1b02a57a44c8c84e6ce0272b9fc54c0054ac43f0c6e47d78c3c04f6",
+      "rawOutputStored": false,
+      "promptTokens": 2151,
+      "completionTokens": 730,
+      "latencyMs": 10966.190376,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-ky-onboarding_synthesis-1f163bd54c",
+      "repositoryId": "ky",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 1,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        }
+      },
+      "schemaValid": false,
+      "outputHash": "b23684e35cc4997cc3369ffd453606f7a97948e72ced4d3dbf5e6d74ceb41753",
+      "rawOutputStored": false,
+      "promptTokens": 3407,
+      "completionTokens": 900,
+      "latencyMs": 13566.190110000003,
+      "error": "INVALID_JSON"
+    },
+    {
+      "taskId": "g4-dev-repo-ky-contributor_start-ed21a2b50f",
+      "repositoryId": "ky",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "bcc375fe7fd0bf23e883513e0e460485002d254d1129cdd2ca21a472ba6d0d67"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "0b79f1b9d8f731d89d0fa26208d896db62f6f19d229a4bd5f7b034c515fded2c"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "5ffe373e3eb27b29b52c43db67c017c382268843cd7880270081f1516c1781ae"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "0e27df1764ffbf54f53a820b44d6360fb1f703fa212eec28e0bd73beac4d6710"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "dca02062daa226c5117dc5cb852e34b4f669c8118356496474cf36a6869435ba"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "80829fc4eccb898e590b18bc86ffc415cbd51daca18b031913b19173993f0dcb"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "102dee8bfc8c206aeccfed139c3c1914393ab7d0d68dc1fce49615945902cbeb"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "a4e3e41af82ab37ea1034d62ac07898d243881524b12d84658aa9868a9c52a25"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "2102320a71a9d29368d93ab6b1b965b27b3d8d9ff50be1f94ab6d63ae81451bb"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "d5a61b335da69df8db89ebdbf815c0b65eaa19480e3645a1e7437f5765aba97c"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "bf6b692d9eabdae3f417f168ad152ae4994e08235a517a2d67c5a2f448419424",
+      "rawOutputStored": false,
+      "promptTokens": 3402,
+      "completionTokens": 604,
+      "latencyMs": 9200.956502999994,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-echo-onboarding_synthesis-dffcfd1b8d",
+      "repositoryId": "echo",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "5efafad05acbaeb0f5adf49c1b2498bd55e29425ba53a441749bb0594008f8c8"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "b6f1f5fb91ea33bdb151a14a6baefde3bfd03a7e0a5a78bc47837e6de1166420"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "d79dadab4cadd903e442d1716384222e6e78173f3fbdc0ca7c448559a63fd1c4"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "2871bf457b0e5906035a23c0d550ec5346c08dd37124d4b29a98defd1de996f5"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "eef06ed343d71f6ed81bab6b99ec046aa93bf01c8d14421370b14dc270948f70"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "64fa9b4e880b7032c2702cb31c8810a1a9d60a6f69e0e1488d59991c0495d8c6"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "3dc6627aa157b6cf2bf14203f0ddb1cdf52698de502fc69959bdf8b83533a726"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "81b0049231ed1a75548b44c269b1aafde7c3d97e9d613bd692ad123f0c56cdd6"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "9caf6f2ff0dabafbc2f03bf842514c64653cd6e256bb6ff490034f5253111a62"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "bae4f8358d1801c280acc01eba383567833f5af52e98261412c56718093154db"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "392edd09449c4676467bc99ead5365fe9539ef7361850ebec33c465ef1bc97f6",
+      "rawOutputStored": false,
+      "promptTokens": 2715,
+      "completionTokens": 650,
+      "latencyMs": 9825.650037,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-echo-contributor_start-1f5be28e50",
+      "repositoryId": "echo",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.1,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "8e1b757f703815a342be275279077309c1e8a1121fbb6f180fecdabea328b365"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "f7e5a8c69da812d303867990a4e13b6e5b02fb01e703cf169d55f605a0e3ba39"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "07f1fb4ed0ec628fbd912f7f699880e07eacf2f279df3402adfc4062f4d14fc1"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "a1a3d74259c691a1ff6f72892271e5fda2a481a95dd418a506efac5d1f893036"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "32d260bd0e130683f594c6b8ca1bcc4f839116cfc639f46ad4e488d0edec81a8"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "0af7e7f6a6fc0b687b89795454c046ce7491ef3d919886e79ea15482dc5a1211"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "7ae5ec579a3090a022cd9de616c0955587cabfc65d4e6d84e0f63372e3cbdffe"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "7ccc81c84a39ee6e867df6e1c5f004669d44efdae15b4cd7443ad05bdfefd924"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "f8d8f79a5dec990982cdf90b6eb2dcc104e4404ba44f85a3e499f317876b60da"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "8a7de66d80004dcf8ef2952f8db17fbb989c09cb939b8069d72c1d7d4d521774"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "51f99a1269577f89042b4b1230e4f98f01814462dcf0edcfad3c6a1cc8ea1ca0",
+      "rawOutputStored": false,
+      "promptTokens": 2710,
+      "completionTokens": 585,
+      "latencyMs": 8885.502089999994,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-anyhow-onboarding_synthesis-94db5afd82",
+      "repositoryId": "anyhow",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.1,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "9315040c651d6a23cbc1d0329a0cedf237f11b1a67ab001b188b892e207c6fed"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "b2c5f35d61de9f0f2a37af4f4d10d75ea5a89ec51c404b8452550023d6e22435"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "b7c9d32a4f3c77a8237e88af78916719f6de748b59717159b9d0888ba557b0cb"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "9409a6c80ecc2a15c39570b95b94094d43b0ddfcca9df43263aca2e720da2e54"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 2,
+          "summaryHash": "4c435fa3fe4d892bb3a954018d5d9833cb20aaff563207bc220b9f45648ce2db"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "7c77ace750ad5232e93c3521829de448460df8505019d187924da850848a547c"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "2ac8e98642fd79fa6e45771f6fb2ebd866cf14e9671a0ae974fe2bfc5dc55796"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "ca3800ca4f766fb486b3cd4c9f88aa1b5afd1b4f084b1e704c9a3b347fa8d246"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "70eacb007be4391eae464062cbc388a00d8aab3ab3bdf41b3be34582ce7cb7d4"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "d86bcc86f7025d45e80b16206ce03d8bc3223bd7fddbb368b2021d56475489b3"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "fffba66ce57d45f55a31aa08867c4bf005335c4543f80664c2a752b4158b0ef6",
+      "rawOutputStored": false,
+      "promptTokens": 3018,
+      "completionTokens": 832,
+      "latencyMs": 12558.994158000001,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-anyhow-contributor_start-2d02a39d40",
+      "repositoryId": "anyhow",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "b1a8277e85f36bed39db50d5e7ff4f7dbdf774b8c9639b1f013f78b3a624a9bc"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "c6057d647a1ca8ae02db44670ca3cef455d392e3c9f5d99c279e9864b7f3a9cf"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "751ca0b68f8254e6285cafbf74665a550af217468f9fa09716016543031d28cd"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "45582087e5f90331c8ef99881bba19e5629c31430b342e90291ddfa4622ecc97"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "ebac1c2dd01a932da0572d2511a5feb77593c47d454bc688a600548068e30703"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "2530cf9d57ad228eb1335a56fa8f93b8a694da1821f43be79dda19a820cbc499"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "22ad949fa45d0ca2d8c15be71bb84aa5c377323ddefd9f89e3c7bda285526e86"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "4252217391a5fbde94e43e3eb4f1d2cb2686ac52bda8be95463915b1bb9f32e0"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "a5413006879d4827972ea445463c6897c0368a6eff2568c1dbbea6e9efbb74a1"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "a725e7901833d4178118ee52e508215165afd89836474815c46453dcd1e5f8ab"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "dfc711a8e643d71d2afd7bf17074d32468ce003f34c59ba67e2eb4cbd6c68cb2",
+      "rawOutputStored": false,
+      "promptTokens": 3013,
+      "completionTokens": 724,
+      "latencyMs": 10980.530734,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-zlib-onboarding_synthesis-3c2ddc2a06",
+      "repositoryId": "zlib",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.3,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "33235722832c5ef8ad8f9a1edec5a0401a1943e731c80a0071d1bf45a1b024ab"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "272f858e63aa79f4d616e71124e5c90a971f7bf3337b5e61821b2714a5a10c14"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "e2d5f2b168adb6fcc3046ac08934f866d2d16e80ef7ac1debb69042f89648b71"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "6be9ed10758e9018488c9e299169c99233e7856759c69852d64bcda4d7993909"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "347df03c57ba145ae9a53caf2201c712dcf0066a199262dc353b4392b49750da"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "6d3c232492fab7fadf1b6fc5def8334ae957bb17999bd704717b613380268a91"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "3db176fc55c1187205cc98027c1aadf37a99caff399993dc74a869e6fa98f485"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "40aad5951d5b40d8ac606f096540e75f480fe1bcb347e59d27fe33a7b6cde0fe"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "bf146c21d0baffb16a97e3ee2e989940980913a0520143f5545401fa58405904"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "0744fc695628b69cc634b40f23b5f1715f553c5103706883401839b4a8d26e9b"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "b0241417f23d049364e82631dd62ee004b941492fe2536614698a1f039032d7c",
+      "rawOutputStored": false,
+      "promptTokens": 3340,
+      "completionTokens": 715,
+      "latencyMs": 10884.969692999992,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-zlib-contributor_start-d01181c2eb",
+      "repositoryId": "zlib",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.5,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "cfed046f240eb8936640ab8926109815ad248a3faa7a88fb1622171421577727"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "1a9a85fbaacfc1b4335ff14d9d675127c76321f83b75f5e796c57b07a3cd664d"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "5854bc5969179fff8ffd38fcac08513f503362217c5b6ff100ad5e099baead7a"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "7f9c424de5154aba2f55b26733961202297cadc2c1f5467796b88b0b4d7ae2da"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "306144ee5d79d396ba142408065d4aa117ff2d763a83581628e306e2ad542178"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "e26328a844fc54eea126c005b631530b4131a7cd45ed54ca0687ee69c3839353"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "bcb79fbcc41cd1cc38e7a134579d92c5a26d5faa7dc36d186fd865f3dd71463c"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "ac571f764db349d2247ab8130b9b850ed2886025aa4c1007c5a30fe14c24f7f3"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "d136d906cb5803722502f778b61b97ac93b32299d4a69214c73db184c8a598d0"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "8fe614c7be3d127256c5de46459311a93a68580da392e812e93a1e723214e53b"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "cdde9400e20d335929793170cbbafc9f73ea7868dab0ab0d5b1d5a6e0b77c443",
+      "rawOutputStored": false,
+      "promptTokens": 3335,
+      "completionTokens": 782,
+      "latencyMs": 11857.335045,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-gson-onboarding_synthesis-5ae4d62e00",
+      "repositoryId": "gson",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 1,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        }
+      },
+      "schemaValid": false,
+      "outputHash": "a8d385ff8bbc677cbde60ee781016c1d880dac0bf7abbed56f9755f403ec33cb",
+      "rawOutputStored": false,
+      "promptTokens": 3205,
+      "completionTokens": 900,
+      "latencyMs": 12944.589403000005,
+      "error": "INVALID_JSON"
+    },
+    {
+      "taskId": "g4-dev-repo-gson-contributor_start-5ad62be848",
+      "repositoryId": "gson",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "96fe6a9ae5c905163decde4e056f83861637d67aae54403a85915395c8c17d08"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "1552c580e73612bd11d43b3e3417c971da072033ee857bb6f0dbe7a74a579983"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "14e47b077a1d162322fbdccfbeb72c134f03b80d88e8af1a6ddf1b9d5d1e49ee"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "828e3040a99f56ea406d33bd20600ebf6d06e28465b3a69dd081084caea40469"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "e8cf361b7fd3f33be818c99b759d80a77659077af14ebe10e209ae761b795906"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "8def9999bc96e4a23e7ec40fe34070f7cf2f5476eb46ff3e0ac43227c55ad074"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "df66685de786c019a72d8b5047fed9ea3dff3c1ba7bfc6669856221d8c93fbeb"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "595ba7703010c5cd486b7360d70dd58c5bc14273004d9fae2cf267a463453dc1"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "8a17d21298defae9763a9b2c132ac3a0dfb36bb169e7e374b40c9234f54376fa"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "8bffd224520bba3832ed21f27a53b4a47b1fa3639a2a77fb0c2a393ab228d665"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "6668f318d7aa40906ba637ffef08239413714b1723c6425c1b129dbb30993160",
+      "rawOutputStored": false,
+      "promptTokens": 3200,
+      "completionTokens": 629,
+      "latencyMs": 8983.539720999994,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-pluggy-onboarding_synthesis-22aa186e38",
+      "repositoryId": "pluggy",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 1,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        }
+      },
+      "schemaValid": false,
+      "outputHash": "b80a3568efe6f569e232e2c2abd3f7d75de62b2083b0fae09a95d91bc679954a",
+      "rawOutputStored": false,
+      "promptTokens": 2819,
+      "completionTokens": 900,
+      "latencyMs": 12699.702554999996,
+      "error": "INVALID_JSON"
+    },
+    {
+      "taskId": "g4-dev-repo-pluggy-contributor_start-727ba56d66",
+      "repositoryId": "pluggy",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.4,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "fced6ff686e79fa191600a1623c3138407e3b4b2126c49105c373b8bb2c245c9"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "b68deb4d35c09626355b05ef4b0fa0be066a08a22f06eca5e23450f52a87066e"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "e62b95172c25288281467c5e5e87fb2c32799f33151cd7cde37c1664dca9f74d"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "67988ee4d729c2f8cd70c72fbe19ea2cfb6c889b6b8a78d0d5b8c5c8ffe4a73d"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "bd881d97d319d105995cf3d555e029c6f25f7e5eef2cd3042dc04bf8cb0fda03"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "5a6ea13a30245f814b8eaec5cd6af1c9b34b76110da984d2741f7b5906f9d7cd"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "da28c1bae8a531942d9eeacd98217749151aa326e8fdd0323b05483693894218"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "42e9cd0f53e8511d028bb962390bb74712201bada87b9d20f90c1a915ea78d8c"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "728e445e24f8598e94267f2336e8d21c8372e3c478c2920557923096e90487af"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "34b67316491680fa1b20daf0ec6e658feeb8f341864d581972083ce3b8818d41"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "388a022208c76bb4ea96827bed558b584eb0d3b479b65e61406e2b751a3b6f0f",
+      "rawOutputStored": false,
+      "promptTokens": 2814,
+      "completionTokens": 587,
+      "latencyMs": 8383.483085000014,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-p-queue-onboarding_synthesis-0d54913a8e",
+      "repositoryId": "p-queue",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.1,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "469c369b9e2dfeef0e94f7f3dd6cb9efdba23389a0aa8aced75a48daff2cb184"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "b94dd1210ac849525b047e94b730bce668bde09dae55640d3abc00c7f680bc52"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "c0a4d5577ef1bc269df786b90932bc3fb586da11bdccd736e63e41b76e86cd88"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "27298a11028555c677c12c0ce9d7304b6c6e3d4f80984bb1aa1be56cecef37ae"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "960bb437a36ab0c998524353bf5a846c8991b189788446a05229a8cebfa6142f"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "9a01d4c7080ffff00f92203794a08d6ba342868fe0d7d906c7393a1da6aff569"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "3e5cb4e5402c6cf7bffd539d45e9c2c26b2b6ad0c43e4fa61ef56b8fbe0fafa4"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "e1cb5577c3a234de24f030e37490d2fcf459f255196293ca51dbaae502ebd441"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "5b560b3b918ff591d1a538ae4bc28986fdd9ce620f33700d110fcb6151154d1b"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "a42e7d9cfdcd1731e0220505c11d5a71653e882734cd068446f55a3ea30b3c16"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "db7efd0b1b63f433c60f4f8bc020055ee261032da4e68e72989e334cdfc79c9a",
+      "rawOutputStored": false,
+      "promptTokens": 3046,
+      "completionTokens": 888,
+      "latencyMs": 12564.076514000015,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-p-queue-contributor_start-4a1250aa3d",
+      "repositoryId": "p-queue",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.8,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "fc3882dc84eef5fc16f641652fdd11dadf0882abf4b0541861630d89cdbcb791"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "93250d7eaaf4bf385df8c1e1be03c2b4eaaf237355ad7bcbfbff155af093aeac"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "61ba2e0b93096680f227503a710dcc96929b5a637554e5db7cb3ce3e77b13407"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "e9c01c5739bf6fa43f558c78535a7cc2aab898e370a10b53de688969b64a6c65"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "17cfa8676222de7c13c7cf40f5967f106459f22efebb9b5ce38126ab4d1bf64b"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "f7b8d645d5c3213e10d0d2f68892ba425fc3ef369e1c26072002165bbfcb45b8"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "1d5c0bc2c87746a2d58d64823a060adf23d6acc4efc50850491d6f2eb334c995"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "f4abde1859b393878a28d148912203271cd619871be206106a1839b3e33641bf"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "6aab85c8cdc9ff32421471b8dcbe675dda37c35ba6cd7dc3821b39aae1693288"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "c54f40dbf4bdbf3469bf9f7c204508789ac50c76a80b606a6cfca891b10fc116"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "ad3345b7b0205d15d36e5fd1f06a7a1637aadea0acf4b0e0d716d2f810accc60",
+      "rawOutputStored": false,
+      "promptTokens": 3041,
+      "completionTokens": 796,
+      "latencyMs": 11291.823535999982,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-viper-onboarding_synthesis-4044ab24aa",
+      "repositoryId": "viper",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "85dba854d343e0babb84d3587a9793f4ce6af7610df4a50de21696640cc17ea5"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "7633755f4eea3d5d822cd07a1ad0194b35e2d88ac428d9ffb76d40312d57ce8a"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "34560d339e7e207cfcce86df614c11b3adb32cfc6cf814697a1b9449885459f5"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "0ddef51668dfd33fbd95770b9f292966654555621a4cac45e5d17d2fe17f8708"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "fd13c6e7afb5a8a50bb15086da937adc7ee7bd269d62d79c58062869eac0c62a"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "7e12219d00fdab93064ae698f0d889689f21436251349d0b68a7cc73f2f29a39"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "260ea0bc1f080b5336ecce8608c2a3dc6b0a57e7061c7fc45defe44a764142af"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "bd0cebbc22602aee31188f58c319da5c63c29e2656a31cf46450b6e54363161d"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "9ff631bafaf91a9d94c197d910fb914faf50332142e9ed2ba27b4cc97d28115f"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "7f9ca4614f1f4110ce36de770a5bab942da9d7f2261d864c209da2fd78fcd6cc"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "16b5dd43894ea91378e4c94660e47fe109d7e92e371b151624898a8e0ba82294",
+      "rawOutputStored": false,
+      "promptTokens": 3054,
+      "completionTokens": 657,
+      "latencyMs": 9370.402138000005,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-viper-contributor_start-3214a8971f",
+      "repositoryId": "viper",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "ee09661ae658e5944676889fab3036c215785b832d461afa67efd405417b9c43"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "ee42caf74739675790954301d1530646dd64617e2916aee8d048aa432b41fc11"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "393b2cb1c6020a59752f4b324b5cb4d4d203f41efb9157d250ded1d0da9655cc"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "b3c58267bdd10cb6a890b7d129ca325a4b69fea4da5cf253a0d255691412409e"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "5d9cb1fcc83838367c9b19d0ca51ed0fa703584f07836219b0eb827c2cf8392f"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "b80423b8cc5a247b6cdcc2050d031290a792e04075b3e52ad1cc8b3ea1187305"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "ed4b0f54451cf203a1d9691a681beee3ce4eaf08b893592d9b1054273d61cc3d"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "e445556417fd0e6ac8cd6c303e183f4a66f42c22445fbc5acbca1e7218cafe6c"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "40d5e93f7de7d79d81abdd114e427670e36673be5ec3f7cd061ee1237e333b0b"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "3bec09a9ad03f0f2ca6df1481f96080e3416203411dca0acdd38e2ac22748351"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "b594a08c80af61f3554da07906a932f72213bae3a6f8913bafcd129084a37da9",
+      "rawOutputStored": false,
+      "promptTokens": 3049,
+      "completionTokens": 604,
+      "latencyMs": 8639.836581999989,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-fd-onboarding_synthesis-7a29b8a00f",
+      "repositoryId": "fd",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.8,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "7d457af610ba13a98a4be66a956c3d7a45d0bdc31d92d39a9c8d89b40e6b740c"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "6c21d9150f84f8c88d8305e9047760a54d574c1a65b2e0732a23b49f3d161482"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "43c1ffd8db7e0253945ed2b7a7106b07919f850102db508ae94c7907e74e7bd3"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "7db869229796f45588579d8de72888ea71ec22a881e62e72adb9e3c12e93238a"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "32962bbbf0d6b316a28c38febaabf383d9a3bfe9518de2157619982f06e0991e"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "15631bb00721bff5fa98354611dd86a35440bc50199bba0714b5af1fdaacf568"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "08013f0c90b8293a60275bda0d7f6e2eed27605c10ca2e14dfe3dd0826f66006"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "7833013ddd6130c3f26844fa2d7955fdc9fee3c339acbbe5aa026990c51f8fee"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "6cb2c3291762435fdbfd2fc2628d8c0d3a545baa99bc8a702a4f33ebec66dcfc"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "da9da680a36e00d4573f03087c35ab15315132b3b8b08dfb68b4d49f18683ba0"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "33936686406a3e0c7bc9293978d548635b4dbc6ec9aab9ec590ac1c7aef2719c",
+      "rawOutputStored": false,
+      "promptTokens": 3921,
+      "completionTokens": 810,
+      "latencyMs": 11614.768302000011,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-fd-contributor_start-cd958654af",
+      "repositoryId": "fd",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.4,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "009b29f86494785c0d04f5d1e01ab3b1731eae1a41a2264086799561dd013a75"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "1e17fc17b7357dd04aded4fb7759366fdd57ac0221a0d19d47e6c0e180076645"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "debde8bebce69239455f9467d69e4cd92533a688f5e820215872db010a0ac87b"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "2d5a84cd3d700268dd78261c0532bc575be76cefe635201fa81304edd50d5b5c"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "e6bedcd3a838e0083669bbfbab5b93de3548b9bafceffa53eecade0e0b26429f"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "59dcbb5bbc0edc470474822ce52cb78cf4bae95195ab9bc1e3945d133c70b1da"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "6c6af2ec4fe556be22d397d6aa8df2d782564a735753bd360838436505dc7def"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "930506db60982b1b5a81005e3728f53ad67a1a5728a4c360d5c30014d6ddb02e"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 1,
+          "summaryHash": "ff2919e5528f2b5c6fe4f04469cef9995a8a71f1da359bade3a1c079ff3e5e62"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "10e60a6230ecc4e7569744a780966eefa114e2b0f85d43c53a5e0c1efb194f32"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "82bb82e6b4592d9c45f584b832768cc32367faa40479727029daa0aac1f17c9b",
+      "rawOutputStored": false,
+      "promptTokens": 3916,
+      "completionTokens": 704,
+      "latencyMs": 10136.323367000005,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-libexpat-onboarding_synthesis-95996c6422",
+      "repositoryId": "libexpat",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "cf287884e09b8f751a8589a98f17fcb655ef87c991c22b59eae7665287aa1046"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "568edfbdc06b5bebf526346a5530b9482651f6e25d8939f36df25fd373c383f8"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "77df8740572f8eb1fcb11dd58f78f96024a22c29da86a8ec48fd056ab9e90b49"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "0e6284b939a24431e062e7fcf64593ed733de78273fb170e698184fccc184520"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "b0c83f846a5b86fa51e7dc2d535010559ed1d8026c08f73a79f4c37d1563fa72"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "d9aa63866603b7a543855c8cd12c2a8c9be3083106e32b9f75003f7a244fddd8"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "6dbd98cf05cf495b7543b3a6d6d6337688e1f7e3642283ab9adc17eff677b1ff"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "3d075c35121cca1bb17337a8d949362f3ae1c7d52939b4eebbdc6613bc49dba1"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "3412ffe1201ad8566100db402c71745026c52a52db622242b4090343c2a572e5"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "c529776ed617cf298d5082a52e4bc4513dfd2815a05ffcb98528b69443845742"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "b273b9f2f04c2cb90d6ca15c3dc3bcc7dca68a86ada27104fb25e2ffdb8a6402",
+      "rawOutputStored": false,
+      "promptTokens": 3736,
+      "completionTokens": 587,
+      "latencyMs": 8503.232516000018,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-libexpat-contributor_start-5d143d8b81",
+      "repositoryId": "libexpat",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "d90d284c789e2566da2f527a3bfdff11e8041a846c58bc59ddedf44ce1464424"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "4f7136f7551a763fd6accdc5706af1a1183532803f6e79a466000b8c42ad7df3"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "8dca4f6e062355aa94a55357461623394d532cefa55419fc40be47dd160d54f5"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "f428f1ce6e898e194a30f76c4a19da547596d459f385efdbd4801493e0908c9a"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "d4e7f5b03e12a6baefae1b79ce414ea852b1b37928c6102b55f1f9e39e312f8e"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "261378c13da642ef292ec6ba01ac19b92e26a20e8d2d8db938d90f55f4485388"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "ab8830e01b4d43f36d519e5573da7103387f6f0f710f1d7f4b23ab9ef4d30b06"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "58d34aa0282f809aaa2a681cf496a9abfa69323100b0a1fe8d4c926b4ec69dae"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "b91135404fe8c8b123b286800b2abc10db408b6f0764fd83381e7739d18fd585"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": "99a0dea2804795812adb88bda4bcca0089da93ea21684084c556fd813caab96f"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "5becf92748e305166826ef8722074f191d0048710e8fb9a6de750c9745ed0e32",
+      "rawOutputStored": false,
+      "promptTokens": 3731,
+      "completionTokens": 591,
+      "latencyMs": 8547.897981999995,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-repo-jsoup-onboarding_synthesis-50bbd33e44",
+      "repositoryId": "jsoup",
+      "taskFamily": "onboarding_synthesis",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 1,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": false,
+          "evidenceCitationAccurate": false,
+          "citationCount": 0,
+          "summaryHash": null
+        }
+      },
+      "schemaValid": false,
+      "outputHash": "ace95aa58747d21cdd32b5066030c740f7e27b248a473dfb2ac537514e82294a",
+      "rawOutputStored": false,
+      "promptTokens": 2583,
+      "completionTokens": 900,
+      "latencyMs": 12699.783575999987,
+      "error": "INVALID_JSON"
+    },
+    {
+      "taskId": "g4-dev-repo-jsoup-contributor_start-477f464a16",
+      "repositoryId": "jsoup",
+      "taskFamily": "contributor_start",
+      "success": false,
+      "componentAccuracy": 0,
+      "evidenceCitationAccuracy": 0.8,
+      "unsupportedClaimRate": 0,
+      "missingComponentRate": 0,
+      "componentScores": {
+        "project_purpose": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "7377176e6a4fdb5029506d664e6d3b9eda55fb41f703b008e077202acd9bc89e"
+        },
+        "install_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "65efb8ea5046c4f70dbcbe8357d569af0bbeaa297be3fce53c4ffe0cb2adaf41"
+        },
+        "run_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 2,
+          "summaryHash": "e2137869d2e8d5a4223a686814dc007d8fda4a1ad7a4825ec6c0ef8415a45b1c"
+        },
+        "test_procedure": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "027845a4d45683e0bb7d657a2182306abad7d809b0236f721d2bff571c7b5351"
+        },
+        "entry_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": false,
+          "citationCount": 2,
+          "summaryHash": "6a884130f06428905ca9e14f3236986b7af07209b8f3c163ecfb653737638038"
+        },
+        "major_modules": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 1,
+          "summaryHash": "8e3893f8c93cb701ed448356489f4021362385e4969855d4cba4cecf2ff4befa"
+        },
+        "architecture_flow": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "188e133e441452c6ded2a028df3a4f1f43a41c85f6a73651bf2b681d2533cc5b"
+        },
+        "license": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "b94c3e45bdf56b13cee0321e1a0fef4e6f1d0a98981d6aa7286ea6fe268c8889"
+        },
+        "dependency_summary": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "d8c0c34a39d8b247b7793abc94c7d2d952c9c0a77ea7ca513b86fce7cf0a4bd3"
+        },
+        "contributor_starting_point": {
+          "pass": false,
+          "supported": false,
+          "summaryPresent": true,
+          "evidenceCitationAccurate": true,
+          "citationCount": 2,
+          "summaryHash": "a5388809b359309079fb7f67aa75f8cea68cb4ebba2ece0edacaf624304a4907"
+        }
+      },
+      "schemaValid": true,
+      "outputHash": "eac26528397ebf5489d49a2b198e9c22e69dfeeb939f1435bc083fee84d2553a",
+      "rawOutputStored": false,
+      "promptTokens": 2578,
+      "completionTokens": 775,
+      "latencyMs": 10959.537203999993,
+      "error": null
+    }
+  ],
+  "limitations": [
+    "Component truth is evaluated as evidence alignment plus a non-empty bounded synthesis, not full human semantic equivalence.",
+    "This fresh G4 development evidence does not retroactively rescore the immutable G3 onboarding outputs."
+  ]
+}

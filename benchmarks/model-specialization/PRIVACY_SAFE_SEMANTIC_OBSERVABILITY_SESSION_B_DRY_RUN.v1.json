@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "dryRunId": "dca-privacy-safe-semantic-observability-session-b-dry-run-v1",
+  "status": "PASS",
+  "createdAt": "2026-08-11T20:02:43.089Z",
+  "inputs": {
+    "seal": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_B_SEAL.v1.json",
+      "sha256": "296f7bf5825113858107955702556910c8b08d918079305b6ee77bc95e07f159"
+    }
+  },
+  "pipeline": {
+    "modelCalls": 0,
+    "networkInference": false,
+    "L0Schema": "PASS",
+    "L1Schema": "PASS",
+    "patchConstruction": "PASS",
+    "syntax": "PASS",
+    "visible": "PASS",
+    "hidden": "PASS",
+    "rollback": "PASS",
+    "pairing": "PASS",
+    "sidecars": "PASS"
+  },
+  "privacy": {
+    "rawCanaryLeaks": 0,
+    "rawEditPersisted": false,
+    "rawOutputPersisted": false,
+    "keyMaterialPersisted": false
+  },
+  "artifactHashes": {
+    "L0": "ac4abee8e8238b68be5df53894fd3c539a8e7ec884a6313752b089cf6fe244ba",
+    "L1": "0ec2ec5ffd1598ca7fc78a0d5fef4191d78f10e2e26c314db8f3d2fe26c1022e"
+  }
+}

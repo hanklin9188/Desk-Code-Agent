@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-g3-security-fuzz-2026-08-09T09-45-01-940Z",
+  "status": "PASS",
+  "deterministicCases": 1000,
+  "categories": {
+    "path_traversal": {
+      "cases": 200,
+      "failures": 0
+    },
+    "shell_metacharacter_path": {
+      "cases": 150,
+      "failures": 0
+    },
+    "prompt_injection": {
+      "cases": 200,
+      "failures": 0
+    },
+    "encoded_instruction": {
+      "cases": 100,
+      "failures": 0
+    },
+    "symlink_escape": {
+      "cases": 100,
+      "failures": 0
+    },
+    "oversized_content": {
+      "cases": 100,
+      "failures": 0
+    },
+    "malformed_filename": {
+      "cases": 100,
+      "failures": 0
+    },
+    "fake_approval": {
+      "cases": 50,
+      "failures": 0
+    }
+  },
+  "fixtureEscapeObserved": false
+}

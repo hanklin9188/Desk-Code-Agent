@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "preregistrationId": "dca-g4-development-capability-and-retry-v1",
+  "state": "SEALED_BEFORE_FIRST_G4_MODEL_CALL",
+  "manifest": {
+    "path": "benchmarks/g4-development/G4_DEVELOPMENT_MANIFEST.json",
+    "sha256": "5290f4382f28d0c50f07c16690d2592a82fda726bb60fa8778165870abcb9887"
+  },
+  "oracle": {
+    "path": "benchmarks/g4-development/G4_DEVELOPMENT_ORACLE.sealed.json",
+    "sha256": "5910593b30289741b9dea47adf04fc49168178f93e731d71f6dfd2602622dd42"
+  },
+  "fixedModel": {
+    "repository": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "temperature": 0,
+    "seed": 20260809,
+    "thinking": false,
+    "endpoint": "loopback-only",
+    "newModelAcquisition": false
+  },
+  "experimentTasks": {
+    "oracleContext": [
+      "g4-dev-repo-werkzeug-ambiguous_action_location-0e6057fed3",
+      "g4-dev-repo-ky-ambiguous_action_location-0d73b5bf55",
+      "g4-dev-repo-echo-ambiguous_action_location-a31f6e1fd5",
+      "g4-dev-repo-anyhow-ambiguous_action_location-f76d63f2cc",
+      "g4-dev-repo-zlib-ambiguous_action_location-5d9f43f8ad",
+      "g4-dev-repo-gson-ambiguous_action_location-25562f7483",
+      "g4-dev-repo-werkzeug-cross_file_plan-8ffcc2c369",
+      "g4-dev-repo-ky-cross_file_plan-e3650fb7b1",
+      "g4-dev-repo-echo-cross_file_plan-b1a0a8cbbe",
+      "g4-dev-repo-anyhow-cross_file_plan-4930fe50bd",
+      "g4-dev-repo-zlib-cross_file_plan-7fc4ca82d6",
+      "g4-dev-repo-gson-cross_file_plan-41675107ca",
+      "g4-dev-repo-werkzeug-diagnosis_workflow-d3844d0ccc",
+      "g4-dev-repo-ky-diagnosis_workflow-ca3293deb2",
+      "g4-dev-repo-echo-diagnosis_workflow-f72af9ee86",
+      "g4-dev-repo-anyhow-diagnosis_workflow-be8c497425",
+      "g4-dev-repo-zlib-diagnosis_workflow-7a6517a528",
+      "g4-dev-repo-gson-diagnosis_workflow-a473179c24",
+      "g4-dev-repo-werkzeug-hidden_test_strategy-8bd83ad65a",
+      "g4-dev-repo-ky-hidden_test_strategy-9c4eafab29",
+      "g4-dev-repo-echo-hidden_test_strategy-10f4b3c2e0",
+      "g4-dev-repo-anyhow-hidden_test_strategy-8685cc3c22",
+      "g4-dev-repo-zlib-hidden_test_strategy-1edd753077",
+      "g4-dev-repo-gson-hidden_test_strategy-3e5323c85f",
+      "g4-dev-repo-werkzeug-onboarding_synthesis-e2353b4095",
+      "g4-dev-repo-werkzeug-contributor_start-7ab0b3f836",
+      "g4-dev-repo-ky-onboarding_synthesis-9f545842c1",
+      "g4-dev-repo-ky-contributor_start-bd12230a4c",
+      "g4-dev-repo-echo-onboarding_synthesis-bed5fb84c2",
+      "g4-dev-repo-echo-contributor_start-8a66b343be",
+      "g4-dev-repo-werkzeug-dependency_boundary-464cf5799e",
+      "g4-dev-repo-ky-dependency_boundary-20c458b959",
+      "g4-dev-repo-echo-dependency_boundary-ee6ecd92ae",
+      "g4-dev-repo-anyhow-dependency_boundary-205f25d211",
+      "g4-dev-repo-zlib-dependency_boundary-e9fb382cd2",
+      "g4-dev-repo-gson-dependency_boundary-149d0f0a11",
+      "g4-dev-repo-werkzeug-implementation_contract-46cf5a3546",
+      "g4-dev-repo-ky-implementation_contract-2d794c63a5",
+      "g4-dev-repo-echo-implementation_contract-7fb4369d2a",
+      "g4-dev-repo-anyhow-implementation_contract-cdf304e426",
+      "g4-dev-repo-zlib-implementation_contract-fd2fd8bf8d",
+      "g4-dev-repo-gson-implementation_contract-532f7a8945"
+    ],
+    "navigationIsolation": [
+      "g4-dev-patch-01-clamp-upper-22a960150c",
+      "g4-dev-patch-02-median-even-c9e43e600c",
+      "g4-dev-patch-03-stable-unique-7f2ba69a32",
+      "g4-dev-patch-04-chunk-tail-f788b68398",
+      "g4-dev-patch-05-palindrome-normalize-88242a5ad0",
+      "g4-dev-patch-06-parse-port-ad5ac0888e",
+      "g4-dev-patch-07-retry-delay-f28cd7bb82",
+      "g4-dev-patch-08-join-url-3f1e897502",
+      "g4-dev-patch-09-escape-regexp-28050a5150",
+      "g4-dev-patch-10-group-by-08119c6a3c",
+      "g4-dev-patch-11-inclusive-range-17077d5120",
+      "g4-dev-patch-12-truncate-ellipsis-cc04bce5cc"
+    ],
+    "diagnosisIsolation": [
+      "g4-dev-patch-01-clamp-upper-22a960150c",
+      "g4-dev-patch-02-median-even-c9e43e600c",
+      "g4-dev-patch-03-stable-unique-7f2ba69a32",
+      "g4-dev-patch-04-chunk-tail-f788b68398",
+      "g4-dev-patch-05-palindrome-normalize-88242a5ad0",
+      "g4-dev-patch-06-parse-port-ad5ac0888e",
+      "g4-dev-patch-07-retry-delay-f28cd7bb82",
+      "g4-dev-patch-08-join-url-3f1e897502",
+      "g4-dev-patch-09-escape-regexp-28050a5150",
+      "g4-dev-patch-10-group-by-08119c6a3c",
+      "g4-dev-patch-11-inclusive-range-17077d5120",
+      "g4-dev-patch-12-truncate-ellipsis-cc04bce5cc"
+    ],
+    "patchGenerationIsolation": [
+      "g4-dev-patch-01-clamp-upper-22a960150c",
+      "g4-dev-patch-02-median-even-c9e43e600c",
+      "g4-dev-patch-03-stable-unique-7f2ba69a32",
+      "g4-dev-patch-04-chunk-tail-f788b68398",
+      "g4-dev-patch-05-palindrome-normalize-88242a5ad0",
+      "g4-dev-patch-06-parse-port-ad5ac0888e",
+      "g4-dev-patch-07-retry-delay-f28cd7bb82",
+      "g4-dev-patch-08-join-url-3f1e897502",
+      "g4-dev-patch-09-escape-regexp-28050a5150",
+      "g4-dev-patch-10-group-by-08119c6a3c",
+      "g4-dev-patch-11-inclusive-range-17077d5120",
+      "g4-dev-patch-12-truncate-ellipsis-cc04bce5cc"
+    ],
+    "planningIsolation": [
+      "g4-dev-repo-werkzeug-cross_file_plan-8ffcc2c369",
+      "g4-dev-repo-ky-cross_file_plan-e3650fb7b1",
+      "g4-dev-repo-echo-cross_file_plan-b1a0a8cbbe",
+      "g4-dev-repo-anyhow-cross_file_plan-4930fe50bd",
+      "g4-dev-repo-zlib-cross_file_plan-7fc4ca82d6",
+      "g4-dev-repo-gson-cross_file_plan-41675107ca",
+      "g4-dev-repo-pluggy-cross_file_plan-1a56763ace",
+      "g4-dev-repo-p-queue-cross_file_plan-4090aaf13a",
+      "g4-dev-repo-viper-cross_file_plan-4bdef088d5",
+      "g4-dev-repo-fd-cross_file_plan-3b3efc94cd",
+      "g4-dev-repo-libexpat-cross_file_plan-064ed9ef18",
+      "g4-dev-repo-jsoup-cross_file_plan-80557643b0"
+    ],
+    "retryDepth": [
+      "g4-dev-patch-01-clamp-upper-22a960150c",
+      "g4-dev-patch-02-median-even-c9e43e600c",
+      "g4-dev-patch-03-stable-unique-7f2ba69a32",
+      "g4-dev-patch-04-chunk-tail-f788b68398",
+      "g4-dev-patch-05-palindrome-normalize-88242a5ad0",
+      "g4-dev-patch-06-parse-port-ad5ac0888e",
+      "g4-dev-patch-07-retry-delay-f28cd7bb82",
+      "g4-dev-patch-08-join-url-3f1e897502",
+      "g4-dev-patch-09-escape-regexp-28050a5150",
+      "g4-dev-patch-10-group-by-08119c6a3c",
+      "g4-dev-patch-11-inclusive-range-17077d5120",
+      "g4-dev-patch-12-truncate-ellipsis-cc04bce5cc"
+    ],
+    "onboardingComponents": [
+      "g4-dev-repo-werkzeug-onboarding_synthesis-e2353b4095",
+      "g4-dev-repo-werkzeug-contributor_start-7ab0b3f836",
+      "g4-dev-repo-ky-onboarding_synthesis-9f545842c1",
+      "g4-dev-repo-ky-contributor_start-bd12230a4c",
+      "g4-dev-repo-echo-onboarding_synthesis-bed5fb84c2",
+      "g4-dev-repo-echo-contributor_start-8a66b343be",
+      "g4-dev-repo-anyhow-onboarding_synthesis-dfe62379da",
+      "g4-dev-repo-anyhow-contributor_start-8d032d6ca6",
+      "g4-dev-repo-zlib-onboarding_synthesis-43d9e5e746",
+      "g4-dev-repo-zlib-contributor_start-a8512dad22",
+      "g4-dev-repo-gson-onboarding_synthesis-2ae1e2ad21",
+      "g4-dev-repo-gson-contributor_start-72310bd23a",
+      "g4-dev-repo-pluggy-onboarding_synthesis-75c87ea7a1",
+      "g4-dev-repo-pluggy-contributor_start-961904d5c5",
+      "g4-dev-repo-p-queue-onboarding_synthesis-183d430daf",
+      "g4-dev-repo-p-queue-contributor_start-324b5662f0",
+      "g4-dev-repo-viper-onboarding_synthesis-2f72138e5d",
+      "g4-dev-repo-viper-contributor_start-c781d392e3",
+      "g4-dev-repo-fd-onboarding_synthesis-86b67d4a87",
+      "g4-dev-repo-fd-contributor_start-6912b4f369",
+      "g4-dev-repo-libexpat-onboarding_synthesis-769503a9dd",
+      "g4-dev-repo-libexpat-contributor_start-fbf004af3c",
+      "g4-dev-repo-jsoup-onboarding_synthesis-13fc7df324",
+      "g4-dev-repo-jsoup-contributor_start-2e7f6e776e"
+    ]
+  },
+  "conditions": {
+    "oracleContext": [
+      "NORMAL_RETRIEVAL",
+      "ORACLE_EVIDENCE"
+    ],
+    "navigationIsolation": [
+      "TASK_ONLY",
+      "EXACT_FILE",
+      "EXACT_SYMBOL",
+      "ORACLE_SOURCE_AND_TEST_CONTEXT"
+    ],
+    "retryDepth": [
+      1,
+      2,
+      3
+    ]
+  },
+  "primaryMetrics": {
+    "analysis": "strict structured component pass",
+    "patch": "visible and hidden behavior tests both PASS after constrained worktree patch"
+  },
+  "partialMetricsNeverProductPass": [
+    "evidence completeness",
+    "diagnosis only",
+    "syntax only",
+    "visible tests without hidden tests",
+    "more attempts"
+  ],
+  "eIterDevelopmentGate": {
+    "requiredAll": [
+      "2-call final behavioral success improves by at least 10 percentage points over 1-call",
+      "at least 15 percent of first failures recover on call 2",
+      "repeated-patch rate <= 10 percent",
+      "contradiction rate <= 5 percent",
+      "zero safety violations and zero wrong-file edits",
+      "mean 2-call tokens <= 2.2 times 1-call tokens"
+    ],
+    "thirdCallRule": "Enable only if call 3 adds at least 5 percentage points over call 2 with new verifier evidence and no safety regression.",
+    "otherwise": "Do not create E-ITER candidate; retain protocol as rejected development hypothesis."
+  },
+  "futureHoldout": {
+    "state": "NOT_CREATED",
+    "creationAllowedOnlyAfterCandidateFreeze": true,
+    "repoDisjointFrom": [
+      "G1",
+      "G2",
+      "G3",
+      "G4 development",
+      "historical patch development"
+    ]
+  },
+  "protectedActions": {
+    "commit": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false,
+    "modelDownload": false
+  }
+}

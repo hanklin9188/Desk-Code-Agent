@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 2,
+  "packetLevel": "L1",
+  "identity": {
+    "taskId": "observability-010-89a6b5e32c93",
+    "repositoryRevision": "sha256:6f1ef98cda52259b29d2af6245eab3f665892981f240830da5c5f16469e55ee7",
+    "physicalCallId": "privacy-observability-v2-006-ff4e09a5-2300-431d-a03f-5995a3e2d002",
+    "requestSha256": "a125aa44cd734837de2c69999b4e69ef6e15101564519328afbb8e815610472b",
+    "actionIdentitySha256": "fc97510fc7489897c009b3aff4324cdd0ada05a66efe14c6b5be14ef2a2ee45b"
+  },
+  "evidence": {
+    "schemaVersion": 2,
+    "level": "L1_STRUCTURED_DERIVED_EDIT_FEATURES",
+    "taskId": "observability-010-89a6b5e32c93",
+    "repositoryRevision": "sha256:6f1ef98cda52259b29d2af6245eab3f665892981f240830da5c5f16469e55ee7",
+    "physicalCallId": "privacy-observability-v2-006-ff4e09a5-2300-431d-a03f-5995a3e2d002",
+    "requestSha256": "a125aa44cd734837de2c69999b4e69ef6e15101564519328afbb8e815610472b",
+    "actionIdentitySha256": "fc97510fc7489897c009b3aff4324cdd0ada05a66efe14c6b5be14ef2a2ee45b",
+    "modelResponseStatus": "COMPLETED",
+    "actionParseStatus": "JSON_OBJECT",
+    "actionValidationStatus": "PASS",
+    "replacementPresent": true,
+    "afterSourceParseStatus": "PASS",
+    "astFeaturesAvailable": true,
+    "parserFailureCategory": "NONE",
+    "selectedFile": "src/case-10.mjs",
+    "range": {
+      "startLine": 2,
+      "endLine": 2
+    },
+    "targetSymbol": {
+      "digest": "e8628bf056f5c92e51844e2118c94f8b83a9e09d1d39b4d293d86be6d02b4a4f",
+      "kind": "function"
+    },
+    "replacementShape": {
+      "bytes": 107,
+      "characters": 107,
+      "lines": 1,
+      "newlines": 0,
+      "whitespaceOnly": false,
+      "indentation": [
+        {
+          "kind": "0",
+          "count": 1
+        }
+      ],
+      "lexicalTokenKinds": [
+        {
+          "kind": "IDENTIFIER",
+          "count": 15
+        },
+        {
+          "kind": "NUMBER",
+          "count": 1
+        }
+      ],
+      "operatorCategories": [
+        {
+          "kind": "-",
+          "count": 1
+        },
+        {
+          "kind": "=>",
+          "count": 1
+        },
+        {
+          "kind": ">",
+          "count": 1
+        }
+      ],
+      "commentTokens": 0,
+      "delimiterBalance": {
+        "parentheses": 0,
+        "brackets": 0,
+        "braces": 0
+      },
+      "identifierDigests": [
+        {
+          "digest": "0f46621811afe5f4f3ff77fc6ab6e093cc17da4b0979bf99404c564bc1ba9635",
+          "count": 1
+        },
+        {
+          "digest": "2c76ae14b6a29bedaab4f61cc2447ddbc4093415889c16c81aafc994cb845c79",
+          "count": 1
+        },
+        {
+          "digest": "4a4dcbfff9de429677d5de17e23466661811b11f3b5e4d648d4e6ac86d14dc60",
+          "count": 1
+        },
+        {
+          "digest": "4ea5463ae7cfb38adb4f80e3c58b422652e2e1db8da2b5cf90a2a0c06cd477bc",
+          "count": 1
+        },
+        {
+          "digest": "542982640c2409d4680970f3c4480e95aaf7446284c6bb0ce896e41efe454306",
+          "count": 1
+        },
+        {
+          "digest": "7ada83f39588328dff963e53b21d010741eb01a3e99047355d6e726de8aac9c5",
+          "count": 1
+        },
+        {
+          "digest": "98fdca2eb368cc60a3e79ce792321bc2155fc8f57269e3b61e1dbff6abba7300",
+          "count": 2
+        },
+        {
+          "digest": "9eddda9997737d5dab3211e30295f8a5acc967c37aed6b9efbf936e9162a23b7",
+          "count": 4
+        },
+        {
+          "digest": "c29d221537328d99c0292e5b235cb773a56888b8ee0eccf62933cae33e81345d",
+          "count": 1
+        },
+        {
+          "digest": "c41d3d9d199023f9cf45488e1b0f84206a9edd444119ed84d82b10c1f8a89b2b",
+          "count": 1
+        },
+        {
+          "digest": "e957b6b1b4547e2c55ebf8b70f0ce65e89946a64569624a34caef590daa0a0ca",
+          "count": 1
+        }
+      ],
+      "literalDigests": [
+        {
+          "digest": "b509e949d67439514da0bf1fdd3a3ac1ce616967e98ebe5c6fe22ef4471cd1b2",
+          "count": 1
+        }
+      ]
+    },
+    "astFeatures": {
+      "astNodeChanges": [
+        {
+          "kind": "binary_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "identifier",
+          "before": 7,
+          "after": 8,
+          "delta": 1
+        },
+        {
+          "kind": "member_expression",
+          "before": 3,
+          "after": 4,
+          "delta": 1
+        },
+        {
+          "kind": "property_identifier",
+          "before": 3,
+          "after": 4,
+          "delta": 1
+        }
+      ],
+      "expressionChanges": [
+        {
+          "kind": "binary_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "member_expression",
+          "before": 3,
+          "after": 4,
+          "delta": 1
+        }
+      ],
+      "controlFlowChanges": [],
+      "operatorChanges": [
+        {
+          "kind": "-",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "identifierChanges": [
+        {
+          "digest": "9eddda9997737d5dab3211e30295f8a5acc967c37aed6b9efbf936e9162a23b7",
+          "before": 3,
+          "after": 4,
+          "delta": 1
+        },
+        {
+          "digest": "542982640c2409d4680970f3c4480e95aaf7446284c6bb0ce896e41efe454306",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "literalChanges": [
+        {
+          "digest": "b509e949d67439514da0bf1fdd3a3ac1ce616967e98ebe5c6fe22ef4471cd1b2",
+          "literalType": "number",
+          "length": 1,
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "digest": "ef477d2a440dcdc323eeea93670c09571741447e80945b1dad1a253ccb4f8102",
+          "literalType": "number",
+          "length": 1,
+          "before": 1,
+          "after": 0,
+          "delta": -1
+        }
+      ],
+      "apiCallChanges": [],
+      "importChanges": []
+    },
+    "canonicalEditSha256": "be9a844179e415a535b0607bced5309fb19b019d85601d21e4efba8595bd50fc",
+    "hashKeyId": "5ea6b6be9c397b5d2aa2dc47035bb3069bfa89126fbcd0de78c636e4b9614e02",
+    "verification": {
+      "stage": "SUCCESS",
+      "status": "PASS",
+      "code": "ALL_VERIFICATION_PASS",
+      "diagnosticSha256": null
+    },
+    "visibleBehavioralEffect": {
+      "status": "PASS",
+      "category": "PASS",
+      "diagnosticSha256": null
+    },
+    "privacy": {
+      "rawPromptStored": false,
+      "rawModelOutputStored": false,
+      "rawEditBodyStored": false,
+      "rawIdentifiersStored": false,
+      "rawLiteralsStored": false,
+      "commentsStored": false,
+      "sourceStored": false,
+      "rawParserMessageStored": false,
+      "hashKeyStored": false
+    }
+  }
+}

@@ -1,0 +1,1158 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-fresh-specialists-g1-evaluator-correction-2026-08-09T06-49-53-336Z",
+  "classification": "FRESH_SPECIALIST_ABLATIONS_GENERATION_1",
+  "status": "PASS",
+  "candidateSha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+  "holdoutSealSha256": "40edbccaffdbb22022633cbb97d5a8c1eda45012596ecac0b77df14f3ab3616e",
+  "evaluatorCorrection": {
+    "sourceInvalidRun": "docs/experiments/runs/m9-fresh-specialists-g1-2026-08-09T06-48-55-240Z/specialist-ablation-result.json",
+    "sourceInvalidRunSha256": "c8ae86a0a32cc987e392d926c3e0cdf3d0584eb7f934c58ec1c0981cf7b02a4e",
+    "invalidRunClassification": "INVALID_EVALUATOR_SCHEMA_ZERO_ACCEPTED_MODEL_CALLS",
+    "cause": "vLLM JSON grammar does not implement uniqueItems",
+    "correctedField": "removed unsupported uniqueItems keyword only",
+    "promptsChanged": false,
+    "tasksChanged": false,
+    "seedChanged": false,
+    "candidateChanged": false
+  },
+  "environment": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "vllm": "0.26.0",
+    "precision": "bfloat16",
+    "temperature": 0,
+    "seed": 20260809,
+    "thinking": false,
+    "sharedModelInstance": true,
+    "logicalRolesSequential": true
+  },
+  "hypothesis": "Specialists should remain disabled globally and activate only if a preregistered task class shows enough recovery to justify its additional inference cost.",
+  "summaries": {
+    "architecture": {
+      "tasks": 12,
+      "singleCorrect": 12,
+      "specialistCorrect": 12,
+      "meanSingleEvidenceCoverage": 0.8888888888888887,
+      "meanSpecialistEvidenceCoverage": 0.9166666666666666,
+      "singleUnsupportedClaims": 9,
+      "specialistUnsupportedClaims": 10,
+      "medianTokens": {
+        "single": 636.5,
+        "specialist": 1326
+      },
+      "medianLatencyMs": {
+        "single": 800.7415000000001,
+        "specialist": 1514.5405
+      }
+    },
+    "diagnosis": {
+      "tasks": 15,
+      "triggersSatisfied": 15,
+      "noEscalationCorrect": 15,
+      "conditionalEscalationCorrect": 14,
+      "recoveredFailures": 0,
+      "introducedRegressions": 1,
+      "medianTokens": {
+        "noEscalation": 637,
+        "conditional": 1306
+      },
+      "medianLatencyMs": {
+        "noEscalation": 772.467,
+        "conditional": 1494.073
+      }
+    },
+    "review": {
+      "tasks": 16,
+      "machineCorrect": 16,
+      "semanticCorrect": 16,
+      "regressionDetections": 0,
+      "falseRejections": 0,
+      "falseApprovals": 0,
+      "medianTokens": {
+        "machine": 646.5,
+        "semantic": 1332.5
+      },
+      "medianLatencyMs": {
+        "machine": 789.9865,
+        "semantic": 1521.0729999999999
+      }
+    }
+  },
+  "decisions": {
+    "architectureSpecialist": "REMAIN_EXPERIMENTAL",
+    "diagnosisCritic": "REMAIN_EXPERIMENTAL",
+    "semanticReviewer": "REMAIN_EXPERIMENTAL",
+    "globalMultiAgent": "DISABLED"
+  },
+  "observations": {
+    "architecture": [
+      {
+        "taskId": "holdout-g1-analysis-112-lotus-registry",
+        "difficulty": "L1",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 1,
+        "specialistEvidenceCoverage": 1,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 1,
+        "singleTokens": 641,
+        "specialistTokens": 1337,
+        "singleLatencyMs": 1115.225,
+        "specialistLatencyMs": 1581.723,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "172c2f2d932ceef7f41febdfe9a09c321e27e6b132d960b973dea8a07c4fda0f",
+          "mapper": "08458d627615ee7a3d1e84d6e7a2a85d8600db0764b63ef89f2219394943f650",
+          "specialist": "08458d627615ee7a3d1e84d6e7a2a85d8600db0764b63ef89f2219394943f650"
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-121-river-claims",
+        "difficulty": "L3",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 1,
+        "specialistEvidenceCoverage": 1,
+        "singleUnsupportedClaims": 1,
+        "specialistUnsupportedClaims": 1,
+        "singleTokens": 656,
+        "specialistTokens": 1361,
+        "singleLatencyMs": 857.433,
+        "specialistLatencyMs": 1560.486,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "81482feebf45699d15c121c1f5075f8910176ec3edc079d6760dd9d3b361e7fc",
+          "mapper": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686",
+          "specialist": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686"
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-118-harbor-auth",
+        "difficulty": "L3",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 0.6666666666666666,
+        "specialistEvidenceCoverage": 1,
+        "singleUnsupportedClaims": 1,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 642,
+        "specialistTokens": 1335,
+        "singleLatencyMs": 782.231,
+        "specialistLatencyMs": 1497.12,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "08458d627615ee7a3d1e84d6e7a2a85d8600db0764b63ef89f2219394943f650",
+          "mapper": "1695b0bb81563d1a3f17e00828ac4140a07502af188adcc6f32765fe18d84ce4",
+          "specialist": "1695b0bb81563d1a3f17e00828ac4140a07502af188adcc6f32765fe18d84ce4"
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-126-river-claims",
+        "difficulty": "L4",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 1,
+        "specialistEvidenceCoverage": 1,
+        "singleUnsupportedClaims": 1,
+        "specialistUnsupportedClaims": 1,
+        "singleTokens": 637,
+        "specialistTokens": 1325,
+        "singleLatencyMs": 780.639,
+        "specialistLatencyMs": 1543.761,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc",
+          "mapper": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc",
+          "specialist": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc"
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-119-birch-payments",
+        "difficulty": "L4",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 0.6666666666666666,
+        "specialistEvidenceCoverage": 0.6666666666666666,
+        "singleUnsupportedClaims": 1,
+        "specialistUnsupportedClaims": 1,
+        "singleTokens": 623,
+        "specialistTokens": 1297,
+        "singleLatencyMs": 779,
+        "specialistLatencyMs": 1488.168,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c",
+          "mapper": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c",
+          "specialist": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c"
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-113-harbor-auth",
+        "difficulty": "L3",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 1,
+        "specialistEvidenceCoverage": 1,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 639,
+        "specialistTokens": 1327,
+        "singleLatencyMs": 831.871,
+        "specialistLatencyMs": 1508.057,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "96873981ecf08c63bc402683f72f1049a389f21076f9202be5a072e1ffa5fce3",
+          "mapper": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c",
+          "specialist": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c"
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-117-lotus-registry",
+        "difficulty": "L3",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 1,
+        "specialistEvidenceCoverage": 1,
+        "singleUnsupportedClaims": 1,
+        "specialistUnsupportedClaims": 1,
+        "singleTokens": 646,
+        "specialistTokens": 1337,
+        "singleLatencyMs": 817.129,
+        "specialistLatencyMs": 1543.61,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "838a064966a4c06d3f5c35f74453e80a17bc098bf5e9223e6339ed4d80299770",
+          "mapper": "838a064966a4c06d3f5c35f74453e80a17bc098bf5e9223e6339ed4d80299770",
+          "specialist": "838a064966a4c06d3f5c35f74453e80a17bc098bf5e9223e6339ed4d80299770"
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-116-river-claims",
+        "difficulty": "L2",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 1,
+        "specialistEvidenceCoverage": 1,
+        "singleUnsupportedClaims": 1,
+        "specialistUnsupportedClaims": 1,
+        "singleTokens": 625,
+        "specialistTokens": 1301,
+        "singleLatencyMs": 774.925,
+        "specialistLatencyMs": 1501.796,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c",
+          "mapper": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c",
+          "specialist": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c"
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-125-violet-tasks",
+        "difficulty": "L3",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 1,
+        "specialistEvidenceCoverage": 1,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 1,
+        "singleTokens": 636,
+        "specialistTokens": 1335,
+        "singleLatencyMs": 703.582,
+        "specialistLatencyMs": 1521.024,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "b180bc5c059050a193bd20f50616382969bc950fa4c8f0c1ef633b38a51b9f95",
+          "mapper": "1255e8dad0c8a024001a4fba013c5b6100463d7ac492228c2039e579d300d90f",
+          "specialist": "1255e8dad0c8a024001a4fba013c5b6100463d7ac492228c2039e579d300d90f"
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-124-birch-payments",
+        "difficulty": "L3",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 0.6666666666666666,
+        "specialistEvidenceCoverage": 0.6666666666666666,
+        "singleUnsupportedClaims": 1,
+        "specialistUnsupportedClaims": 1,
+        "singleTokens": 624,
+        "specialistTokens": 1298,
+        "singleLatencyMs": 784.354,
+        "specialistLatencyMs": 1500.518,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "81482feebf45699d15c121c1f5075f8910176ec3edc079d6760dd9d3b361e7fc",
+          "mapper": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686",
+          "specialist": "81482feebf45699d15c121c1f5075f8910176ec3edc079d6760dd9d3b361e7fc"
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-114-birch-payments",
+        "difficulty": "L2",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 0.6666666666666666,
+        "specialistEvidenceCoverage": 0.6666666666666666,
+        "singleUnsupportedClaims": 1,
+        "specialistUnsupportedClaims": 1,
+        "singleTokens": 629,
+        "specialistTokens": 1307,
+        "singleLatencyMs": 827.073,
+        "specialistLatencyMs": 1541.127,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "93124b409f6723564910c4a0b4a82df60b551df631def13ce6c07eea7e7a6657",
+          "mapper": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc",
+          "specialist": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc"
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-122-lotus-registry",
+        "difficulty": "L3",
+        "singleCorrect": true,
+        "specialistCorrect": true,
+        "singleSchemaValid": true,
+        "specialistSchemaValid": true,
+        "singleEvidenceCoverage": 1,
+        "specialistEvidenceCoverage": 1,
+        "singleUnsupportedClaims": 1,
+        "specialistUnsupportedClaims": 1,
+        "singleTokens": 634,
+        "specialistTokens": 1311,
+        "singleLatencyMs": 841.473,
+        "specialistLatencyMs": 1479.274,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": "91396304453b35e9f5b32a5b7538e80614267b6205b73f8bcb23be301a1ff438",
+          "mapper": "91396304453b35e9f5b32a5b7538e80614267b6205b73f8bcb23be301a1ff438",
+          "specialist": "91396304453b35e9f5b32a5b7538e80614267b6205b73f8bcb23be301a1ff438"
+        }
+      }
+    ],
+    "diagnosis": [
+      {
+        "taskId": "holdout-g1-diagnosis-069-zephyr-profile",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 661,
+        "conditionalTokens": 1356,
+        "noEscalationLatencyMs": 775.743,
+        "conditionalLatencyMs": 1514.999,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc",
+          "critic": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-049-zephyr-profile",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 665,
+        "conditionalTokens": 1364,
+        "noEscalationLatencyMs": 777.494,
+        "conditionalLatencyMs": 1501.91,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686",
+          "critic": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-060-thistle-proxy",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 637,
+        "conditionalTokens": 1306,
+        "noEscalationLatencyMs": 692.981,
+        "conditionalLatencyMs": 1353.91,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "bee8ce06413d337d0c4f037d841bb3e60e37fe007fdff897ad3f6c4e5a3fec30",
+          "critic": "bee8ce06413d337d0c4f037d841bb3e60e37fe007fdff897ad3f6c4e5a3fec30"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-061-prairie-cache",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 642,
+        "conditionalTokens": 1316,
+        "noEscalationLatencyMs": 691.751,
+        "conditionalLatencyMs": 1346.865,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "511b189461af1a62bf824ab3be7030c99f057f551fe7ce3adb39c4516b19e128",
+          "critic": "511b189461af1a62bf824ab3be7030c99f057f551fe7ce3adb39c4516b19e128"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-051-prairie-cache",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 626,
+        "conditionalTokens": 1286,
+        "noEscalationLatencyMs": 793.239,
+        "conditionalLatencyMs": 1514.58,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc",
+          "critic": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-068-fjord-billing",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 648,
+        "conditionalTokens": 1330,
+        "noEscalationLatencyMs": 816.458,
+        "conditionalLatencyMs": 1553.694,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c",
+          "critic": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-052-jigsaw-rules",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": true,
+        "noEscalationTokens": 635,
+        "conditionalTokens": 1305,
+        "noEscalationLatencyMs": 735.186,
+        "conditionalLatencyMs": 1484.881,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "17d5335373453071cdf70c0ab7886e912143d574651fdf5e3b6558c4c5248b5f",
+          "critic": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-047-jigsaw-rules",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 637,
+        "conditionalTokens": 1303,
+        "noEscalationLatencyMs": 744.438,
+        "conditionalLatencyMs": 1387.063,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "be987eb0d27bf6b115b74c1e325480a2edad542f715e25369d85c934479c9cd5",
+          "critic": "b180bc5c059050a193bd20f50616382969bc950fa4c8f0c1ef633b38a51b9f95"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-048-fjord-billing",
+        "difficulty": "L4",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 644,
+        "conditionalTokens": 1322,
+        "noEscalationLatencyMs": 772.98,
+        "conditionalLatencyMs": 1511.78,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc",
+          "critic": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-064-zephyr-profile",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 670,
+        "conditionalTokens": 1374,
+        "noEscalationLatencyMs": 772.467,
+        "conditionalLatencyMs": 1494.073,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686",
+          "critic": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-054-zephyr-profile",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 657,
+        "conditionalTokens": 1348,
+        "noEscalationLatencyMs": 783.157,
+        "conditionalLatencyMs": 1570.176,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc",
+          "critic": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-046-prairie-cache",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 611,
+        "conditionalTokens": 1254,
+        "noEscalationLatencyMs": 690.257,
+        "conditionalLatencyMs": 1328.706,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "511b189461af1a62bf824ab3be7030c99f057f551fe7ce3adb39c4516b19e128",
+          "critic": "511b189461af1a62bf824ab3be7030c99f057f551fe7ce3adb39c4516b19e128"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-050-thistle-proxy",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 632,
+        "conditionalTokens": 1296,
+        "noEscalationLatencyMs": 690.635,
+        "conditionalLatencyMs": 1337.768,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "b180bc5c059050a193bd20f50616382969bc950fa4c8f0c1ef633b38a51b9f95",
+          "critic": "b180bc5c059050a193bd20f50616382969bc950fa4c8f0c1ef633b38a51b9f95"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-056-prairie-cache",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 624,
+        "conditionalTokens": 1280,
+        "noEscalationLatencyMs": 704.808,
+        "conditionalLatencyMs": 1386.723,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "b180bc5c059050a193bd20f50616382969bc950fa4c8f0c1ef633b38a51b9f95",
+          "critic": "b180bc5c059050a193bd20f50616382969bc950fa4c8f0c1ef633b38a51b9f95"
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-070-thistle-proxy",
+        "difficulty": "L4",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": true,
+        "conditionalEscalationCorrect": true,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 630,
+        "conditionalTokens": 1294,
+        "noEscalationLatencyMs": 789.079,
+        "conditionalLatencyMs": 1541.005,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "initial": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686",
+          "critic": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686"
+        }
+      }
+    ],
+    "review": [
+      {
+        "taskId": "holdout-g1-review-101-prairie-cache",
+        "subcategory": "standards_failure_correct_behavior",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 655,
+        "semanticTokens": 1353,
+        "machineLatencyMs": 775.788,
+        "semanticLatencyMs": 1510.247,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c",
+          "reviewer": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-098-fjord-billing",
+        "subcategory": "scope_creep",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 653,
+        "semanticTokens": 1346,
+        "machineLatencyMs": 817.168,
+        "semanticLatencyMs": 1577.271,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "050bf78438c80556e295c5a6bc7d567786931e2aa2c23f966dfabd30e1f3f486",
+          "reviewer": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-104-zephyr-profile",
+        "subcategory": "spec_failure_clean_code",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 628,
+        "semanticTokens": 1297,
+        "machineLatencyMs": 691.428,
+        "semanticLatencyMs": 1330.761,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "b180bc5c059050a193bd20f50616382969bc950fa4c8f0c1ef633b38a51b9f95",
+          "reviewer": "b180bc5c059050a193bd20f50616382969bc950fa4c8f0c1ef633b38a51b9f95"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-100-thistle-proxy",
+        "subcategory": "spec_failure_clean_code",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 641,
+        "semanticTokens": 1320,
+        "machineLatencyMs": 733.303,
+        "semanticLatencyMs": 1378.396,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "17d5335373453071cdf70c0ab7886e912143d574651fdf5e3b6558c4c5248b5f",
+          "reviewer": "511b189461af1a62bf824ab3be7030c99f057f551fe7ce3adb39c4516b19e128"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-102-jigsaw-rules",
+        "subcategory": "scope_creep",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 649,
+        "semanticTokens": 1338,
+        "machineLatencyMs": 814.999,
+        "semanticLatencyMs": 1546.255,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "4f3ee376bb2a33f51fae9f177890a3fbf085d1e09fa165da879ec53f9d835c6f",
+          "reviewer": "838a064966a4c06d3f5c35f74453e80a17bc098bf5e9223e6339ed4d80299770"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-108-fjord-billing",
+        "subcategory": "spec_failure_clean_code",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 645,
+        "semanticTokens": 1328,
+        "machineLatencyMs": 763.876,
+        "semanticLatencyMs": 1447.375,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "714cd57d1037f0920b1d4cafc18e96d677365882ead7e42fbacf486abc573799",
+          "reviewer": "bee8ce06413d337d0c4f037d841bb3e60e37fe007fdff897ad3f6c4e5a3fec30"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-103-fjord-billing",
+        "subcategory": "hidden_regression",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 645,
+        "semanticTokens": 1331,
+        "machineLatencyMs": 731.859,
+        "semanticLatencyMs": 1414.021,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "511b189461af1a62bf824ab3be7030c99f057f551fe7ce3adb39c4516b19e128",
+          "reviewer": "511b189461af1a62bf824ab3be7030c99f057f551fe7ce3adb39c4516b19e128"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-106-prairie-cache",
+        "subcategory": "scope_creep",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 635,
+        "semanticTokens": 1308,
+        "machineLatencyMs": 777.012,
+        "semanticLatencyMs": 1474.261,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "15762b8bdc09a8229c65dd8447414fa7e7ca5a15b0950436484a61847b51db65",
+          "reviewer": "172c2f2d932ceef7f41febdfe9a09c321e27e6b132d960b973dea8a07c4fda0f"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-107-jigsaw-rules",
+        "subcategory": "hidden_regression",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 659,
+        "semanticTokens": 1358,
+        "machineLatencyMs": 705.73,
+        "semanticLatencyMs": 1483.989,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "ae0021f8986b7f022e43a9803a6920f90b86f6d951179a79e0030f84a451f036",
+          "reviewer": "b180bc5c059050a193bd20f50616382969bc950fa4c8f0c1ef633b38a51b9f95"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-096-prairie-cache",
+        "subcategory": "spec_failure_clean_code",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 625,
+        "semanticTokens": 1288,
+        "machineLatencyMs": 1339.377,
+        "semanticLatencyMs": 2618.259,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "714cd57d1037f0920b1d4cafc18e96d677365882ead7e42fbacf486abc573799",
+          "reviewer": "bee8ce06413d337d0c4f037d841bb3e60e37fe007fdff897ad3f6c4e5a3fec30"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-111-prairie-cache",
+        "subcategory": "hidden_regression",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 664,
+        "semanticTokens": 1368,
+        "machineLatencyMs": 1335.188,
+        "semanticLatencyMs": 2515.536,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "be077cf157a9cf1c8cfe3f41a284bc2c90011694f3e4e3c1d77a7581bd298474",
+          "reviewer": "a4966a89f0baf295e0b68f730b759e1be5f9f31f50309d2a82cc31382936e350"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-099-zephyr-profile",
+        "subcategory": "hidden_regression",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 648,
+        "semanticTokens": 1334,
+        "machineLatencyMs": 1201.042,
+        "semanticLatencyMs": 2244.954,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "714cd57d1037f0920b1d4cafc18e96d677365882ead7e42fbacf486abc573799",
+          "reviewer": "bee8ce06413d337d0c4f037d841bb3e60e37fe007fdff897ad3f6c4e5a3fec30"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-105-thistle-proxy",
+        "subcategory": "standards_failure_correct_behavior",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 640,
+        "semanticTokens": 1323,
+        "machineLatencyMs": 1271.682,
+        "semanticLatencyMs": 2241.94,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc",
+          "reviewer": "4a80bed95a6d7cbf9e3d6a4a1baa376f10545d492bdfbea325c3fef1e23fd6dc"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-097-jigsaw-rules",
+        "subcategory": "standards_failure_correct_behavior",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 664,
+        "semanticTokens": 1371,
+        "machineLatencyMs": 771.452,
+        "semanticLatencyMs": 1497.665,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686",
+          "reviewer": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-109-zephyr-profile",
+        "subcategory": "standards_failure_correct_behavior",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 663,
+        "semanticTokens": 1368,
+        "machineLatencyMs": 813.613,
+        "semanticLatencyMs": 1555.356,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "81482feebf45699d15c121c1f5075f8910176ec3edc079d6760dd9d3b361e7fc",
+          "reviewer": "85c89a14389e2497977719d012f8f328c823184a8ad74c5d03d7446ce6cd0686"
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-110-thistle-proxy",
+        "subcategory": "scope_creep",
+        "machineCorrect": true,
+        "semanticCorrect": true,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": false,
+        "machineTokens": 637,
+        "semanticTokens": 1316,
+        "machineLatencyMs": 802.961,
+        "semanticLatencyMs": 1531.899,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": true,
+        "outputHashes": {
+          "machine": "96873981ecf08c63bc402683f72f1049a389f21076f9202be5a072e1ffa5fce3",
+          "reviewer": "4ec77901ec566294dd2748209afbcd80e66fb1df726e4354fcbf8668aa76a73c"
+        }
+      }
+    ]
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawModelOutputsStored": false,
+    "apiKeyStored": false
+  }
+}

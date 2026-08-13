@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-g3-crash-recovery-2026-08-09T11-17-19-267Z",
+  "status": "PASS",
+  "classification": "INTENTIONAL_LOCAL_CRASH_AND_RECOVERY",
+  "phase": {
+    "status": "PASS_AWAITING_SERVER_RESTART",
+    "terminatedAt": "2026-08-09T11:14:52.742Z",
+    "checks": {
+      "toolTimeout": "TIMED_OUT",
+      "cancelAcknowledged": true,
+      "toolCancellation": "CANCELLED",
+      "verificationCrash": "FAIL",
+      "malformedStructuredResponseRejected": true,
+      "sqliteInterruptedTransactionRows": 0,
+      "sqliteIntegrity": "ok",
+      "failedPatchRejected": true,
+      "failedPatchPreservedBytes": true,
+      "agentCancel": {
+        "acknowledged": true,
+        "state": "CANCELLED",
+        "projectedState": "CANCELLED"
+      },
+      "uiReconnect": {
+        "deliveredBeforeDisconnect": 2,
+        "catchupEvents": 3,
+        "finalState": "DONE"
+      },
+      "modelServerTermination": {
+        "targetedPid": 3116525,
+        "inFlightResult": {
+          "resolved": true,
+          "ok": false,
+          "status": 500
+        },
+        "endpointOfflineAfterTermination": true,
+        "fakePassEmitted": false
+      }
+    }
+  },
+  "restart": {
+    "ready": true,
+    "exactPinnedModel": true,
+    "ephemeralApiKeyRotated": true,
+    "apiKeyStored": false,
+    "retryPolicy": "bounded manual service restart; no quality result replayed as PASS"
+  },
+  "truthGuarantees": {
+    "noFakePass": true,
+    "interruptedModelObservationCountsAsFailure": true,
+    "failedPatchPreservedWorkspace": true,
+    "sqliteUncommittedWriteRolledBack": true,
+    "reconnectReplayedTypedEvents": true
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_POST_HOC_DIAGNOSTIC_NO_PROMOTION",
+  "classification": "G3_IMMUTABLE_LONG_HORIZON_SECONDARY_ANALYSIS",
+  "source": {
+    "path": "docs/experiments/runs/m9-g3-long-horizon-2026-08-09T09-47-25-429Z/long-horizon-result.json",
+    "sha256": "17f076cea3e05a374c9c0ba7efdbb3c8b67eb5846eb3ab3836707ada771b879c"
+  },
+  "headline": {
+    "v2": 3,
+    "v3": 10,
+    "netDifference": 7,
+    "transitions": {
+      "bothPass": 3,
+      "v2Only": 0,
+      "v3Only": 7,
+      "bothFail": 26
+    }
+  },
+  "v2FailV3Pass": {
+    "tasks": 7,
+    "byCause": {
+      "RETRY_PLUS_EVIDENCE_SCHEDULING": 5,
+      "RETRIEVAL_INITIAL_EVIDENCE_COMPLETENESS": 2
+    },
+    "rows": [
+      {
+        "taskId": "g3-long-v2-cachecontrol-3-0ae199ae",
+        "repositoryId": "cachecontrol",
+        "category": "release_safety",
+        "difficulty": "L4",
+        "primaryCause": "RETRY_PLUS_EVIDENCE_SCHEDULING",
+        "v2": {
+          "success": false,
+          "initialIncludedPaths": [],
+          "evidenceAdded": [
+            "LICENSE.txt",
+            "pyproject.toml"
+          ],
+          "iterations": 3,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": false,
+          "finalCitations": [
+            "LICENSE.txt",
+            "pyproject.toml"
+          ],
+          "tokens": 2006
+        },
+        "v3": {
+          "success": true,
+          "initialIncludedPaths": [
+            "pyproject.toml",
+            ".github/workflows/release.yml"
+          ],
+          "initialCitationComplete": false,
+          "evidenceAdded": [
+            "pyproject.toml",
+            ".github/workflows/release.yml",
+            "LICENSE.txt"
+          ],
+          "evidenceAdditions": 1,
+          "iterations": 2,
+          "recovered": true,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": true,
+          "finalCitations": [
+            "pyproject.toml",
+            ".github/workflows/release.yml",
+            "LICENSE.txt"
+          ],
+          "tokens": 2924
+        },
+        "interpretation": "V3 began with a larger task-aware evidence set, leaving enough bounded retries to add missing required paths and satisfy the exact citation oracle."
+      },
+      {
+        "taskId": "g3-long-v2-zod-2-7bc681af",
+        "repositoryId": "zod",
+        "category": "diagnosis_recovery",
+        "difficulty": "L4",
+        "primaryCause": "RETRIEVAL_INITIAL_EVIDENCE_COMPLETENESS",
+        "v2": {
+          "success": false,
+          "initialIncludedPaths": [],
+          "evidenceAdded": [
+            "packages/zod/src/index.ts",
+            "packages/zod/src/v4/classic/tests/index.test.ts"
+          ],
+          "iterations": 3,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": false,
+          "finalCitations": [
+            "packages/zod/src/index.ts",
+            "packages/zod/src/v4/classic/tests/index.test.ts"
+          ],
+          "tokens": 3296
+        },
+        "v3": {
+          "success": true,
+          "initialIncludedPaths": [
+            "packages/zod/src/index.ts",
+            ".github/workflows/claude-code-review.yml",
+            "packages/zod/src/v4/classic/tests/index.test.ts"
+          ],
+          "initialCitationComplete": true,
+          "evidenceAdded": [
+            "packages/zod/src/index.ts",
+            ".github/workflows/claude-code-review.yml",
+            "packages/zod/src/v4/classic/tests/index.test.ts"
+          ],
+          "evidenceAdditions": 0,
+          "iterations": 1,
+          "recovered": false,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": true,
+          "finalCitations": [
+            "packages/zod/src/index.ts",
+            "packages/zod/src/v4/classic/tests/index.test.ts",
+            ".github/workflows/claude-code-review.yml"
+          ],
+          "tokens": 1743
+        },
+        "interpretation": "V3 placed the required evidence set in the first-call budget, while V2 could not acquire enough items before its three-call ceiling."
+      },
+      {
+        "taskId": "g3-long-v2-dotenv-3-b771bcfd",
+        "repositoryId": "dotenv",
+        "category": "release_safety",
+        "difficulty": "L4",
+        "primaryCause": "RETRY_PLUS_EVIDENCE_SCHEDULING",
+        "v2": {
+          "success": false,
+          "initialIncludedPaths": [],
+          "evidenceAdded": [
+            "LICENSE",
+            "package.json"
+          ],
+          "iterations": 3,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": false,
+          "finalCitations": [
+            "LICENSE",
+            "package.json"
+          ],
+          "tokens": 2363
+        },
+        "v3": {
+          "success": true,
+          "initialIncludedPaths": [
+            "package.json",
+            ".github/workflows/ci.yml"
+          ],
+          "initialCitationComplete": false,
+          "evidenceAdded": [
+            "package.json",
+            ".github/workflows/ci.yml",
+            "LICENSE"
+          ],
+          "evidenceAdditions": 1,
+          "iterations": 2,
+          "recovered": true,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": true,
+          "finalCitations": [
+            "package.json",
+            "LICENSE",
+            ".github/workflows/ci.yml"
+          ],
+          "tokens": 2365
+        },
+        "interpretation": "V3 began with a larger task-aware evidence set, leaving enough bounded retries to add missing required paths and satisfy the exact citation oracle."
+      },
+      {
+        "taskId": "g3-long-v2-testify-3-757e1b23",
+        "repositoryId": "testify",
+        "category": "release_safety",
+        "difficulty": "L4",
+        "primaryCause": "RETRY_PLUS_EVIDENCE_SCHEDULING",
+        "v2": {
+          "success": false,
+          "initialIncludedPaths": [],
+          "evidenceAdded": [
+            "LICENSE",
+            "_codegen/go.mod"
+          ],
+          "iterations": 3,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": false,
+          "finalCitations": [
+            "LICENSE:1-22",
+            "_codegen/go.mod:1-4"
+          ],
+          "tokens": 1480
+        },
+        "v3": {
+          "success": true,
+          "initialIncludedPaths": [
+            ".github/workflows/main.yml",
+            "assert/assertion_compare_test.go"
+          ],
+          "initialCitationComplete": false,
+          "evidenceAdded": [
+            ".github/workflows/main.yml",
+            "assert/assertion_compare_test.go",
+            "LICENSE",
+            "_codegen/go.mod"
+          ],
+          "evidenceAdditions": 2,
+          "iterations": 3,
+          "recovered": true,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": true,
+          "finalCitations": [
+            ".github/workflows/main.yml",
+            "assert/assertion_compare_test.go",
+            "LICENSE",
+            "_codegen/go.mod"
+          ],
+          "tokens": 7825
+        },
+        "interpretation": "V3 began with a larger task-aware evidence set, leaving enough bounded retries to add missing required paths and satisfy the exact citation oracle."
+      },
+      {
+        "taskId": "g3-long-v2-bytes-2-5d6a0dd2",
+        "repositoryId": "bytes",
+        "category": "diagnosis_recovery",
+        "difficulty": "L4",
+        "primaryCause": "RETRY_PLUS_EVIDENCE_SCHEDULING",
+        "v2": {
+          "success": false,
+          "initialIncludedPaths": [
+            "src/buf/mod.rs"
+          ],
+          "evidenceAdded": [
+            "src/buf/mod.rs",
+            "tests/test_buf.rs",
+            ".github/workflows/ci.yml"
+          ],
+          "iterations": 3,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": false,
+          "finalCitations": [
+            ".github/workflows/ci.yml"
+          ],
+          "tokens": 7012
+        },
+        "v3": {
+          "success": true,
+          "initialIncludedPaths": [
+            ".github/workflows/ci.yml",
+            "tests/test_bytes.rs"
+          ],
+          "initialCitationComplete": false,
+          "evidenceAdded": [
+            ".github/workflows/ci.yml",
+            "tests/test_bytes.rs",
+            "src/buf/mod.rs",
+            "tests/test_buf.rs"
+          ],
+          "evidenceAdditions": 2,
+          "iterations": 3,
+          "recovered": true,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": true,
+          "finalCitations": [
+            ".github/workflows/ci.yml",
+            "tests/test_bytes.rs",
+            "tests/test_buf.rs",
+            "src/buf/mod.rs"
+          ],
+          "tokens": 11067
+        },
+        "interpretation": "V3 began with a larger task-aware evidence set, leaving enough bounded retries to add missing required paths and satisfy the exact citation oracle."
+      },
+      {
+        "taskId": "g3-long-v2-serde-json-2-bb0b1175",
+        "repositoryId": "serde-json",
+        "category": "diagnosis_recovery",
+        "difficulty": "L4",
+        "primaryCause": "RETRIEVAL_INITIAL_EVIDENCE_COMPLETENESS",
+        "v2": {
+          "success": false,
+          "initialIncludedPaths": [
+            "src/io/mod.rs"
+          ],
+          "evidenceAdded": [
+            "src/io/mod.rs",
+            "tests/macros/mod.rs",
+            ".github/workflows/ci.yml"
+          ],
+          "iterations": 3,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": false,
+          "finalCitations": [
+            "[src/io/mod.rs:1-21]",
+            "[tests/macros/mod.rs:1-62]",
+            "[.github/workflows/ci.yml:1-158]"
+          ],
+          "tokens": 4307
+        },
+        "v3": {
+          "success": true,
+          "initialIncludedPaths": [
+            "src/io/mod.rs",
+            ".github/workflows/ci.yml",
+            "tests/macros/mod.rs"
+          ],
+          "initialCitationComplete": true,
+          "evidenceAdded": [
+            "src/io/mod.rs",
+            ".github/workflows/ci.yml",
+            "tests/macros/mod.rs"
+          ],
+          "evidenceAdditions": 0,
+          "iterations": 1,
+          "recovered": false,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": true,
+          "finalCitations": [
+            "src/io/mod.rs",
+            ".github/workflows/ci.yml",
+            "tests/macros/mod.rs"
+          ],
+          "tokens": 1715
+        },
+        "interpretation": "V3 placed the required evidence set in the first-call budget, while V2 could not acquire enough items before its three-call ceiling."
+      },
+      {
+        "taskId": "g3-long-v2-fmt-2-9b199b17",
+        "repositoryId": "fmt",
+        "category": "diagnosis_recovery",
+        "difficulty": "L4",
+        "primaryCause": "RETRY_PLUS_EVIDENCE_SCHEDULING",
+        "v2": {
+          "success": false,
+          "initialIncludedPaths": [
+            "src/fmt.cc"
+          ],
+          "evidenceAdded": [
+            "src/fmt.cc",
+            "test/add-subdirectory-test/main.cc",
+            ".github/workflows/codeql.yml"
+          ],
+          "iterations": 3,
+          "finalStatusCorrect": false,
+          "finalEvidenceCorrect": false,
+          "finalCitations": [
+            "[test/add-subdirectory-test/main.cc:1-6]",
+            "[.github/workflows/codeql.yml:1-34]"
+          ],
+          "tokens": 4785
+        },
+        "v3": {
+          "success": true,
+          "initialIncludedPaths": [
+            "README.md",
+            ".github/workflows/codeql.yml"
+          ],
+          "initialCitationComplete": false,
+          "evidenceAdded": [
+            "README.md",
+            ".github/workflows/codeql.yml",
+            "src/fmt.cc",
+            "test/add-subdirectory-test/main.cc"
+          ],
+          "evidenceAdditions": 2,
+          "iterations": 3,
+          "recovered": true,
+          "finalStatusCorrect": true,
+          "finalEvidenceCorrect": true,
+          "finalCitations": [
+            "README.md",
+            ".github/workflows/codeql.yml",
+            "src/fmt.cc",
+            "test/add-subdirectory-test/main.cc"
+          ],
+          "tokens": 7560
+        },
+        "interpretation": "V3 began with a larger task-aware evidence set, leaving enough bounded retries to add missing required paths and satisfy the exact citation oracle."
+      }
+    ]
+  },
+  "conclusions": [
+    "All seven V3-only passes are explained by evidence scheduling under the fixed three-call budget: two succeeded on V3's first complete context and five used V3's initial evidence head start plus bounded additions.",
+    "The long-horizon oracle checks outcome status and exact evidence citation completeness; it does not establish patch behavior or deeper semantic correctness.",
+    "One seed and one observation per condition cannot exclude model variance, but there is no observed V2-only regression and the telemetry provides a deterministic evidence-path mechanism for every V3-only pass.",
+    "V3 is not promoted: its primary G3 holdout quality/cost gates still failed and these secondary wins do not outweigh them."
+  ],
+  "randomVariance": {
+    "excluded": false,
+    "evidence": "single deterministic-seed observation per configuration",
+    "attributableWinsWithObservedMechanism": 7
+  },
+  "protectedActions": {
+    "candidatePromotion": false,
+    "v2Modified": false,
+    "v3Modified": false
+  }
+}

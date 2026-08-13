@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "cleanupId": "dca-practical-local-model-tournament-m1-cleanup-v1",
+  "status": "PASS_FULLY_CLEANED",
+  "classification": "SESSION_B_SEQUENTIAL_RESIDENCY_BOUNDARY",
+  "completedAt": "2026-08-11T05:16:10.786Z",
+  "candidateId": "M1",
+  "inputs": {
+    "acquisition": {
+      "path": "docs/experiments/model-specialization/tournament-session-b/M1_ACQUISITION.v1.json",
+      "sha256": "69ed9e00b59f030c5fd829145a0ae09e4124437fd67c42c973fa9e70f66c9cf1"
+    },
+    "smoke": {
+      "path": "docs/experiments/model-specialization/tournament-session-b/M1_SMOKE.v1.json",
+      "sha256": "17ed5e3377cf478ab9097955456acfb526eb2362446e955dfbf4a969c94dfd34"
+    },
+    "supplement": {
+      "path": "docs/experiments/model-specialization/tournament-session-b/M1_IDLE_VRAM_SUPPLEMENT.v1.json",
+      "sha256": "34c4f8f15473ae173ad11bbbcfffdce9028f54df7796fa7036f14ab35b3b0cc1"
+    }
+  },
+  "stateEvidence": {
+    "tournament-start.json": {
+      "bytes": 91,
+      "sha256": "e461a3bf95d4d77276fbc16df61518fbe57b6c4fbd517f435f387b337aebc255"
+    },
+    "tournament-launch.json": {
+      "bytes": 2133,
+      "sha256": "d9d2e03359a9ba00bc040262008d03517513e08174eb7aab2ee40eef3094a7fb"
+    },
+    "tournament-ready.json": {
+      "bytes": 98,
+      "sha256": "b1dcf5ec31867fea91c468279c4b5eb3e21d60a3d87d95352496841d41eb5717"
+    }
+  },
+  "checks": {
+    "modelProcessCount": 0,
+    "port8000Clear": true,
+    "gpuMemoryMiB": 0,
+    "ephemeralApiKeyAbsent": true,
+    "stateFilesRemoved": true
+  },
+  "protectedActions": {
+    "primaryHoldoutCalls": false,
+    "otherModelDownload": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

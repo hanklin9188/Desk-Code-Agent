@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "resultId": "dca-best-7b-bounded-retry-session-b-result-v1",
+  "status": "COMPLETE_PENDING_CLEANUP",
+  "classification": "BOUNDED_SECOND_CALL_EXECUTION_NO_DECISION",
+  "completedAt": "2026-08-11T16:19:24.560Z",
+  "candidate": {
+    "candidateId": "M2",
+    "modelId": "TIGER-Lab/FIM-7B",
+    "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+    "sourcePrecision": "BF16_EXISTING_SNAPSHOT",
+    "runtimePrecision": "FP8_PER_TENSOR_W8A8"
+  },
+  "inputs": {
+    "preflight": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_B_PREFLIGHT.v1.json",
+      "sha256": "85fc839cc0e22f80839470de7dbe23dec5e2d1e29fd38ae8b428d478c19ede90"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PREREGISTRATION.v1.json",
+      "sha256": "aaede424d4ae204a098d5fb2610ce7117d0e5fa4159441a56e646059cfd07cf1"
+    },
+    "eligibility": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ELIGIBILITY_MANIFEST.v1.json",
+      "sha256": "0eb3a573d5e2401d14c4793f730521f91f2e5ff93bf1dc0e102aa2bad66df6a0"
+    }
+  },
+  "summary": {
+    "eligible": 66,
+    "physicalRetryCalls": 66,
+    "reviewerCalls": 0,
+    "thirdCalls": 0,
+    "duplicateCalls": 0,
+    "silentRetries": 0,
+    "outcomes": {
+      "RECOVERED": 1,
+      "FAILED_DIFFERENT": 12,
+      "REPEATED_EDIT": 42,
+      "CONTRADICTION": 4,
+      "MALFORMED": 3,
+      "SAFETY_REJECTED": 4,
+      "INFRASTRUCTURE_FAILURE": 0
+    },
+    "transitions": {
+      "VISIBLE_TEST → VISIBLE_TEST": 44,
+      "HIDDEN_TEST → HIDDEN_TEST": 6,
+      "ACTION_VALIDATION → ACTION_VALIDATION": 1,
+      "SYNTAX_TYPE → SYNTAX_TYPE": 4,
+      "SYNTAX_TYPE → VISIBLE_TEST": 1,
+      "ACTION_VALIDATION → HIDDEN_TEST": 1,
+      "VISIBLE_TEST → SYNTAX_TYPE": 1,
+      "RETRIEVAL → ACTION_VALIDATION": 4,
+      "VISIBLE_TEST → SUCCESS": 1,
+      "VISIBLE_TEST → ACTION_VALIDATION": 1,
+      "RETRIEVAL → VISIBLE_TEST": 1,
+      "SYNTAX_TYPE → ACTION_VALIDATION": 1
+    },
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0,
+    "totalPromptTokens": 35877,
+    "totalCompletionTokens": 4485,
+    "totalLatencyMs": 63193.953714
+  },
+  "telemetry": {
+    "loadTimeMs": 80182.21264648438,
+    "loadedIdleVramMiB": null,
+    "loadedIdleSamples": 5,
+    "inferencePeakVramMiB": null,
+    "inferenceSamples": 924,
+    "ttftMs": "NOT_MEASURED_WITHOUT_EXTRA_CALL",
+    "throughputSemantics": "per-call completion tokens divided by end-to-end latency"
+  },
+  "serving": {
+    "launchSha256": "bea2c0fdcdc9e2015fe92e66dca9d36347ef768af3978b2686f790ab1907d07e",
+    "readySha256": "53b47f90045bc89eddb6abb5536727a6585df4afa22ef30da41ae25fe6f9f881",
+    "finalIdentity": "PASS"
+  },
+  "artifacts": {
+    "checkpoint": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+      "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd",
+      "rows": 66
+    },
+    "callEvents": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-call-events.jsonl",
+      "sha256": "8a663de81d969a49b7713c0b8c8f9d5647c239c43ea7fe431bb7f30c34ee5518",
+      "rows": 198
+    },
+    "observationsFinal": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/observations.final.json",
+      "sha256": "f7f5625c5c04a4286c6776a792a2f9a7451c976f26946bac699af75e0cbc1762"
+    }
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "rawPatchesStored": false,
+    "hiddenOracleStored": false,
+    "referenceFixStored": false
+  },
+  "protectedActions": {
+    "additionalModelDownload": false,
+    "otherModel": false,
+    "thirdCall": false,
+    "reviewerCall": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "cleanupId": "dca-practical-local-model-tournament-session-c-m3-cleanup-v1",
+  "status": "PASS_FULLY_CLEANED",
+  "completedAt": "2026-08-11T13:56:15.895Z",
+  "candidateId": "M3",
+  "input": {
+    "path": "docs/experiments/runs/model-tournament-session-c-m3-v1/result.json",
+    "sha256": "5919b303d17ab56c4e0d9816349164466a30abcdf51949970467e0a1e7720865"
+  },
+  "states": {
+    "tournament-start.json": {
+      "sha256": "58da5a9851f19a4a0ad2b1cb95f06d4584504346efe6b1ef64800d97f8c003c3",
+      "bytes": 93
+    },
+    "tournament-launch.json": {
+      "sha256": "80986842c0068fffc11582eb1dbcd90cf727f284a73575acd4183f466b1ed36b",
+      "bytes": 2107
+    },
+    "tournament-ready.json": {
+      "sha256": "d24a81e2a8c143a6c008c3f3fddb6e93306f5530f2716abaf4f0e1c472ca2456",
+      "bytes": 351
+    }
+  },
+  "checks": {
+    "modelProcessCount": 0,
+    "port8000Clear": true,
+    "gpuMemoryMiB": 0,
+    "ephemeralApiKeyAbsent": true,
+    "servingStateRemoved": true,
+    "orphanWorktrees": 0
+  },
+  "protectedActions": {
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

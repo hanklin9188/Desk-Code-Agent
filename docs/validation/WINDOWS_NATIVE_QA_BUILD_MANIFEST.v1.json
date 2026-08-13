@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "dca-w1-windows-native-qa-build-manifest-v1",
+  "status": "BLOCKED_ADDITIONAL_MSVC_COMPONENT_APPROVAL_REQUIRED",
+  "sourceIdentity": {
+    "path": "docs/validation/WINDOWS_NATIVE_SOURCE_IDENTITY.v1.json",
+    "sha256": "61ece48ca3a5257c5add5b27db0d97c08f486dfe4053c9ca2969a48eddb4ec93",
+    "closureSha256": "07208e31be8ed0170952cfe71bfa0fadbe8306adc431f745769e0cedb14b90fc",
+    "nativePath": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508"
+  },
+  "toolchain": {
+    "node": "24.15.0",
+    "npm": "11.12.1",
+    "rustup": "1.29.0",
+    "rustc": "1.97.1-x86_64-pc-windows-msvc",
+    "cargo": "1.97.1",
+    "tauriCli": "2.11.4",
+    "tauriRustCrateLocked": "2.11.5",
+    "msvcLinker": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe",
+    "windowsSdk": "10.0.26100.0",
+    "webView2": "150.0.4078.48"
+  },
+  "preBuildValidation": {
+    "strictTypeScript": "PASS",
+    "targetedTests": "PASS_4_FILES_12_TESTS",
+    "frontendProductionBuild": "PASS_32_MODULES_321.63_KB_JS_47.23_KB_CSS",
+    "tauriConfigInfo": "PASS_WITH_VISUAL_STUDIO_2026_DETECTOR_WARNING",
+    "typecheckLogSha256": "feaf0339a9e0ab902893882c3ce7203ca36990646258fe2b014a5ccb2bc0137b",
+    "targetedTestLogSha256": "66ed151b46d1fc3677fc6d488ae827079cbe80aba9c7496eb335bdc6997daa16",
+    "frontendBuildLogSha256": "95a6efe09f284fd26bbcf7af715908b8b7bb67571b77ba128c96905b56342528",
+    "tauriInfoLogSha256": "e9b2b3bccea74fa3d63b7a0cfe1dd031f84410e3e47c6148c6c9396559211a15"
+  },
+  "buildAttempt": {
+    "command": "cargo build --locked",
+    "durationSeconds": 2.033,
+    "exitCode": 101,
+    "executableProduced": false,
+    "buildLogSha256": "bf95c242d678c025bfd3df0904dd082d8fba2ab70eeedd2c629b2779d19cfc43",
+    "firstDeterministicFailure": "LINK : fatal error LNK1104: cannot open file 'msvcrt.lib'"
+  },
+  "diagnosis": {
+    "linkerReached": true,
+    "compilerPresent": true,
+    "windowsSdkHeadersPresent": true,
+    "windowsSdkUmLibrariesPresent": true,
+    "windowsSdkUcrtHeadersPresent": true,
+    "desktopMsvcrtLibraryPresent": false,
+    "oneCoreMsvcrtLibraryPresent": true,
+    "installedMsvcLibraryShape": "ONECORE_ONLY",
+    "missingVisualStudioComponentId": "Microsoft.VisualStudio.Component.VC.Tools.x86.x64",
+    "missingVisualStudioComponentName": "MSVC x64/x86 desktop build tools",
+    "reason": "The current UWP/OneCore-oriented installation supplies link.exe and OneCore CRT libraries but not the desktop x64 msvcrt.lib required by the Rust MSVC desktop target."
+  },
+  "binary": {
+    "path": null,
+    "size": null,
+    "sha256": null,
+    "architecture": null
+  },
+  "stopBoundary": {
+    "additionalComponentInstalled": false,
+    "nativeStartupAttempted": false,
+    "dpiQaStarted": false,
+    "w2Entered": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m8-extended-ui-qa-2026-08-11T03-21-36-001Z",
+  "status": "PASS",
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "scenarios": {
+    "longRepositoryList": {
+      "status": "PASS",
+      "inputRows": 50000,
+      "retainedRows": 200,
+      "filterMs": 2.434,
+      "virtualizationContract": "first 200 filtered rows"
+    },
+    "largeFindings": {
+      "status": "PASS",
+      "inputEvents": 2501,
+      "retainedUiEvents": 2000,
+      "renderedFindingCards": 2000,
+      "renderMs": 58.19
+    },
+    "boundedLogWindow": {
+      "status": "PASS",
+      "retainedEvents": 2000,
+      "visibleTraceRows": 5,
+      "renderMs": 11.719
+    },
+    "largeEvidenceReport": {
+      "status": "PASS",
+      "evidenceRows": 1000,
+      "renderMs": 14.915,
+      "truthSemantics": "CANCELLED never rendered as verified"
+    },
+    "largeVerificationDiff": {
+      "status": "PASS",
+      "inputStages": 500,
+      "footerStages": 4,
+      "renderMs": 0.599
+    },
+    "modelRestartAndError": {
+      "status": "PASS",
+      "observedEvents": 4,
+      "fabricatedVram": false
+    },
+    "onboarding": {
+      "status": "PASS",
+      "localFirstBoundaryVisible": true
+    },
+    "evidenceNavigation": {
+      "status": "PASS",
+      "automatedInteractionTest": "tests/app.test.tsx"
+    },
+    "accessibility": {
+      "status": "PASS",
+      "automatedSource": "tests/accessibility.test.tsx",
+      "reducedMotion": true,
+      "windowsScreenReader": "NOT_RUN_NO_WINDOWS_HOST",
+      "colorContrast": "MANUAL_REQUIRED"
+    }
+  },
+  "failures": [],
+  "nativeLimitations": {
+    "windowsInstaller": "NOT_RUN_NO_WINDOWS_HOST",
+    "screenReader": "NOT_RUN_NO_WINDOWS_HOST",
+    "linuxNativePackage": "BLOCKED_EXTERNAL_MISSING_SYSTEM_PACKAGES"
+  }
+}

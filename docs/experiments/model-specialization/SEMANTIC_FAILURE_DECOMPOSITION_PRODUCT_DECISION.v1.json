@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "decisionId": "dca-semantic-failure-decomposition-product-decision-v1",
+  "status": "PRESERVE_EXISTING_PRODUCT_STATE",
+  "decidedAt": "2026-08-11T19:30:44.295Z",
+  "inputs": {
+    "gateDecision": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_GATE_DECISION.v1.json",
+      "sha256": "a2466306cb619858d23078abf905c40b214730001165384591db4f8759b01a74"
+    },
+    "observabilityCeiling": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_OBSERVABILITY_CEILING.v1.json",
+      "sha256": "a8ecb303739a426ed93bbdebe71f48d15db59648c7cd3f821dd366a826071c6b"
+    },
+    "nextProtocol": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PROTOCOL.v1.json",
+      "sha256": "8a8c5d9852eaeb05577c990b195921e44fdc4dddb235a83b816ba468eecfd643"
+    }
+  },
+  "decisions": {
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "FIM": "BEST_RESEARCH_MODEL__STRONGEST_SCORED_RESEARCH_CANDIDATE_ASSISTED_FLOOR_ONLY",
+    "EEDITP2": "RESEARCH_ONLY",
+    "semanticPostHocAnalysisIsPromotionEvidence": false,
+    "retentionArchitectureChanged": false,
+    "adrRequired": false
+  },
+  "rationale": "Session C diagnoses an evidence-retention limitation and prepares an experiment; it does not validate a product mutation path or adopt a durable raw-edit retention policy.",
+  "targetModelCalls": 0
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-fresh-holdout-g1-2026-08-09T06-37-31-981Z",
+  "classification": "FRESH_UNTOUCHED_HOLDOUT_GENERATION_1",
+  "status": "PASS",
+  "startedAt": "2026-08-09T06:37:31.982Z",
+  "completedAt": "2026-08-09T06:40:00.886Z",
+  "candidateSha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+  "preregistrationSha256": "b0945095c1de4eec00355e05654defa7ff038463b7144d5103c92b404f31ba6d",
+  "holdoutSealSha256": "40edbccaffdbb22022633cbb97d5a8c1eda45012596ecac0b77df14f3ab3616e",
+  "manifestHash": "6cea1d1cb7f7078a5a70d222dc110916070c986fa0006d0bff4451f14dec19fa",
+  "oracleHash": "678648255aa848f7192e64da22f1ed3f32556ba7ec1a2519033e1fc54b3f20bd",
+  "environment": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "backend": "vllm-0.26.0",
+    "temperature": 0,
+    "thinking": false,
+    "primarySeed": 20260809,
+    "stabilitySeeds": [
+      17,
+      29
+    ],
+    "hardware": "NVIDIA RTX 4080 SUPER 16376 MiB",
+    "peakVramMiB": 0,
+    "localModelOnly": true
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawModelOutputStored": false,
+    "apiKeyStored": false
+  },
+  "files": {
+    "fresh-e1-result.json": "3c6610c5cb6f985b49661cbe09941332dff3320c2d9990fd1586b6bd5fd01948",
+    "fresh-emin-v2-result.json": "9e7ecaf57ead17238770fe878ed2190b14911ae2a9d31cd089788435144c802a",
+    "paired-transition-matrix.json": "63bb3a21401ee9f04d4f02fab52534dc5157be0bdad9ff130914d87b6941bce0"
+  },
+  "productionDecision": "B_RETAIN_NONINFERIOR_SAFER",
+  "primary": {
+    "e1": {
+      "successes": 150,
+      "total": 150
+    },
+    "emin": {
+      "successes": 150,
+      "total": 150
+    },
+    "e1Only": 0,
+    "eminOnly": 0,
+    "bothPass": 150,
+    "bothFail": 0,
+    "difference": 0,
+    "pairedBootstrap95": [
+      0,
+      0
+    ]
+  }
+}

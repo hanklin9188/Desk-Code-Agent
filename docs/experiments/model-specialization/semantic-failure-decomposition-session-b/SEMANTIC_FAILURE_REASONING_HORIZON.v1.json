@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "matrixId": "dca-semantic-failure-reasoning-horizon-v1",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T19:11:06.048Z",
+  "deterministicMapping": {
+    "CROSS_FILE": "file_scope=MULTI_FILE_EVIDENCE_SINGLE_TARGET",
+    "STATEFUL_OR_API_LEVEL": [
+      "api_misuse",
+      "runtime_configuration",
+      "exception_handling",
+      "natural_failure_recovery"
+    ],
+    "LOCAL": "remaining SINGLE_FILE categories",
+    "INTRA_FILE": "none in frozen metadata mapping"
+  },
+  "failures": {
+    "total": 66,
+    "counts": {
+      "CROSS_FILE": 13,
+      "LOCAL": 32,
+      "STATEFUL_OR_API_LEVEL": 21
+    },
+    "ratesPercent": {
+      "CROSS_FILE": 19.696969696969695,
+      "LOCAL": 48.484848484848484,
+      "STATEFUL_OR_API_LEVEL": 31.818181818181817
+    }
+  },
+  "controls": {
+    "total": 29,
+    "counts": {
+      "CROSS_FILE": 7,
+      "LOCAL": 11,
+      "STATEFUL_OR_API_LEVEL": 11
+    },
+    "ratesPercent": {
+      "CROSS_FILE": 24.137931034482758,
+      "LOCAL": 37.93103448275862,
+      "STATEFUL_OR_API_LEVEL": 37.93103448275862
+    }
+  },
+  "targetModelCalls": 0
+}

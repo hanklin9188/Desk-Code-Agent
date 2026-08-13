@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 2,
+  "inventoryId": "dca-final-third-party-license-inventory-v2",
+  "status": "PASS_ALL_DISTRIBUTED_LICENSE_TEXT_GAPS_CLOSED",
+  "baseline": {
+    "path": "artifacts/release/third-party-license-inventory.v1.json",
+    "sha256": "f8c34520028727b4db333a95d0ad518bed95043ab2d8fcf33791f37c6ee59edc"
+  },
+  "sourceTarget": "x86_64-pc-windows-msvc",
+  "sourcePolicy": "LOCKED_PACKAGE_METADATA_PLUS_EXACT_UPSTREAM_COMMIT_OR_OFFICIAL_LICENSE_CUSTODIAN_TEXT",
+  "counts": {
+    "totalDependencyComponents": 840,
+    "distributedRuntimeDependencies": 197,
+    "priorPackageTextGaps": 10,
+    "textPinnedAuthoritative": 10,
+    "licenseObligationSatisfiedWithoutFullText": 0,
+    "notDistributedAfterFinalAudit": 0,
+    "legalReviewRequired": 0,
+    "unresolvedDistributedLicenseBlockers": 0,
+    "packagesWithAuthoritativeText": 197,
+    "uniquePinnedTexts": 122,
+    "rawNoAssertionRemaining": 0
+  },
+  "closure": [
+    {
+      "ecosystem": "cargo",
+      "package": "alloc-stdlib",
+      "version": "0.2.4",
+      "distribution": "STATICALLY_LINKED_WINDOWS_RUNTIME_CLOSURE",
+      "license": "BSD-3-Clause",
+      "metadataEvidence": "cargo-registry:alloc-stdlib@0.2.4/Cargo.toml",
+      "upstreamEvidence": "https://github.com/dropbox/rust-alloc-no-stdlib/blob/ae42d22078b98549e987d2f03d12df7b984fde47/LICENSE",
+      "text": { "path": "third_party/licenses/c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae.txt", "sha256": "c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae" },
+      "finalClassification": "TEXT_PINNED_AUTHORITATIVE"
+    },
+    {
+      "ecosystem": "cargo",
+      "package": "plist",
+      "version": "1.10.0",
+      "distribution": "STATICALLY_LINKED_WINDOWS_RUNTIME_CLOSURE",
+      "license": "MIT",
+      "metadataEvidence": "cargo-registry:plist@1.10.0/Cargo.toml",
+      "upstreamEvidence": "cargo-registry:plist@1.10.0/LICENCE; vcs commit 2881e175b61f159a8a958765168733c0d5abe641",
+      "text": { "path": "third_party/licenses/b61cf1a75b378860940eb420fd0fd1d8e747fd5dae5f5a2f2c9cd4454e1db78a.txt", "sha256": "b61cf1a75b378860940eb420fd0fd1d8e747fd5dae5f5a2f2c9cd4454e1db78a" },
+      "finalClassification": "TEXT_PINNED_AUTHORITATIVE"
+    },
+    {
+      "ecosystem": "cargo",
+      "package": "selectors",
+      "version": "0.36.1",
+      "distribution": "STATICALLY_LINKED_WINDOWS_RUNTIME_CLOSURE",
+      "license": "MPL-2.0",
+      "metadataEvidence": "cargo-registry:selectors@0.36.1/Cargo.toml and MPL headers in package source",
+      "upstreamEvidence": "https://www.mozilla.org/MPL/2.0/ official plain text",
+      "text": { "path": "third_party/licenses/fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85.txt", "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85" },
+      "finalClassification": "TEXT_PINNED_AUTHORITATIVE"
+    },
+    {
+      "ecosystem": "cargo",
+      "packages": ["unic-char-property", "unic-char-range", "unic-common", "unic-ucd-ident", "unic-ucd-version"],
+      "version": "0.9.0",
+      "distribution": "STATICALLY_LINKED_WINDOWS_RUNTIME_CLOSURE",
+      "license": "MIT OR Apache-2.0",
+      "metadataEvidence": "exact cargo-registry Cargo.toml metadata for each listed package",
+      "upstreamEvidence": "https://github.com/open-i18n/rust-unic/tree/5878605364af97a3358368a6eaef02104af2e016 (unic-ucd-ident package VCS metadata additionally records 8a6ce83063d90b91ae2ce59eddb803edd393fca9)",
+      "texts": [
+        { "path": "third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt", "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2", "license": "Apache-2.0" },
+        { "path": "third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt", "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3", "license": "MIT" }
+      ],
+      "finalClassification": "TEXT_PINNED_AUTHORITATIVE"
+    },
+    {
+      "ecosystem": "cargo",
+      "packages": ["webview2-com", "webview2-com-sys"],
+      "version": "0.38.2",
+      "distribution": "STATICALLY_LINKED_WINDOWS_RUNTIME_CLOSURE",
+      "license": "MIT",
+      "metadataEvidence": "exact cargo-registry Cargo.toml metadata for each listed package",
+      "upstreamEvidence": "https://github.com/wravery/webview2-rs/blob/b74dc5e2b394044bea5191052868ce7a106c202c/LICENSE",
+      "text": { "path": "third_party/licenses/0dcf41516e608bbcb6cdc5229feb7b86fe4a643b85e7df251133c93408fdac73.txt", "sha256": "0dcf41516e608bbcb6cdc5229feb7b86fe4a643b85e7df251133c93408fdac73" },
+      "finalClassification": "TEXT_PINNED_AUTHORITATIVE"
+    }
+  ],
+  "rootNotice": {
+    "status": "ROOT_NOTICE_NOT_REQUIRED_BY_CURRENT_AUDIT",
+    "reason": "The root project has no owner-supplied attribution notice, and the distributed dependency inventory contains no package-provided NOTICE file requiring propagation. THIRD_PARTY_NOTICES.md preserves dependency attribution and license provenance."
+  },
+  "binaryDistributionGate": "PASS_UNRESOLVED_DISTRIBUTED_LICENSE_BLOCKERS_ZERO"
+}

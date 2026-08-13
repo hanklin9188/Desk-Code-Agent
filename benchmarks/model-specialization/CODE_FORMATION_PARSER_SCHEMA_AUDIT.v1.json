@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_WITH_ATTRIBUTION_LIMIT",
+  "pipeline": [
+    "model response",
+    "response extraction",
+    "JSON.parse",
+    "P2 schema validation",
+    "P2 action validation",
+    "patch construction"
+  ],
+  "storedEvidence": [
+    "outputSha256",
+    "actionValid",
+    "patchConstructed",
+    "constraint code for treatment",
+    "verification statuses"
+  ],
+  "notStored": [
+    "raw response",
+    "schemaValid",
+    "model error enum",
+    "finish reason",
+    "normalization classification",
+    "JSON parsed flag",
+    "schema validated flag",
+    "action-validation code",
+    "normalizer error"
+  ],
+  "control": {
+    "observations": 40,
+    "observableEarliestBoundary": "NOT_VALID_EDIT_BEFORE_PATCH_CONSTRUCTION",
+    "exactReasonCounts": {
+      "INVALID_JSON": 0,
+      "JSON_WRONG_SHAPE": 0,
+      "MISSING_ACTION": 0,
+      "WRONG_ACTION_TYPE": 0,
+      "MISSING_FILE": 0,
+      "INVALID_RANGE": 0,
+      "MISSING_REPLACEMENT": 0,
+      "SCHEMA_MISMATCH": 0,
+      "PARSER_MISMATCH": 0,
+      "EXPLICIT_REFUSAL_OR_REPORT_ONLY": 0,
+      "OUTPUT_TRUNCATION": 0,
+      "OTHER_DETERMINISTIC_VALIDATION_CAUSE": 0,
+      "UNOBSERVABLE_INSUFFICIENT_EVIDENCE": 40
+    }
+  },
+  "treatment": {
+    "observations": 40,
+    "observableEarliestBoundary": "BASE_P2_REJECTED_BEFORE_FORMATION_CHECKS",
+    "exactReasonCounts": {
+      "INVALID_JSON": 0,
+      "JSON_WRONG_SHAPE": 0,
+      "MISSING_ACTION": 0,
+      "WRONG_ACTION_TYPE": 0,
+      "MISSING_FILE": 0,
+      "INVALID_RANGE": 0,
+      "MISSING_REPLACEMENT": 0,
+      "SCHEMA_MISMATCH": 0,
+      "PARSER_MISMATCH": 0,
+      "EXPLICIT_REFUSAL_OR_REPORT_ONLY": 0,
+      "OUTPUT_TRUNCATION": 0,
+      "OTHER_DETERMINISTIC_VALIDATION_CAUSE": 0,
+      "UNOBSERVABLE_INSUFFICIENT_EVIDENCE": 40
+    },
+    "constraintCodes": {
+      "BASE_P2_REJECTED": 40
+    }
+  },
+  "conclusion": "Exact JSON/schema/action rejection causes are not identifiable from retained Session-B evidence; model semantics must not be inferred from hashes."
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 4,
+  "reportId": "dca-windows-reference-hardware-qa-w1-v4-source-identity-drift",
+  "phase": "WINDOWS_REFERENCE_HARDWARE_QA",
+  "status": "BLOCKED_EXTERNAL",
+  "blockingStatus": "BLOCKED_NATIVE_SOURCE_IDENTITY_DRIFT",
+  "lineage": [
+    { "path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.json", "sha256": "2d5ae681480eb7a1df736d0178d9dc877b5eae86799a5c9a4474d43601fea88a", "integrity": "PASS" },
+    { "path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.v2.json", "sha256": "a4443e7a2231015610323f9a7a818aa45d0d423286a03e66bc01785f4fb9da06", "integrity": "PASS" },
+    { "path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.v3.json", "sha256": "1dbcf89f81dc88d37f2cd936d47b4d001679016177dc3b70d9ebe30eaf2f7e2f", "integrity": "PASS" }
+  ],
+  "sourceIdentityGate": {
+    "driftReport": "docs/validation/WINDOWS_NATIVE_SOURCE_IDENTITY_DRIFT.v1.json",
+    "expectedClosureSha256": "07208e31be8ed0170952cfe71bfa0fadbe8306adc431f745769e0cedb14b90fc",
+    "observedClosureSha256": "a3bfae6d9c2e15cd6be9c92e1763c876889781043e456e5baa4c07af761b3e29",
+    "result": "FAIL",
+    "changedFiles": ["tsconfig.node.tsbuildinfo", "tsconfig.app.tsbuildinfo"],
+    "silentRefreshPerformed": false
+  },
+  "visualStudioProvisioning": {
+    "approvedComponentId": "Microsoft.VisualStudio.Component.VC.Tools.x86.x64",
+    "result": "NOT_RUN_SOURCE_IDENTITY_GATE_FAILED",
+    "installerInvoked": false,
+    "componentsAdded": []
+  },
+  "nativeBuild": "NOT_RUN_SOURCE_IDENTITY_GATE_FAILED",
+  "nativeStartup": "NOT_RUN_ENVIRONMENT_LIMITATION",
+  "webView2": "NOT_RUN_ENVIRONMENT_LIMITATION",
+  "dpiScaling": { "100": "NOT_RUN_ENVIRONMENT_LIMITATION", "125": "NOT_RUN_ENVIRONMENT_LIMITATION", "150": "NOT_RUN_ENVIRONMENT_LIMITATION", "200": "NOT_RUN_ENVIRONMENT_LIMITATION" },
+  "keyboard": "NOT_RUN_ENVIRONMENT_LIMITATION",
+  "narrator": "NOT_RUN_ENVIRONMENT_LIMITATION",
+  "fonts": "NOT_RUN_ENVIRONMENT_LIMITATION",
+  "motion": "NOT_RUN_ENVIRONMENT_LIMITATION",
+  "artifactPathSecurity": "NOT_RUN_ENVIRONMENT_LIMITATION",
+  "defects": {
+    "productDefectsFound": [],
+    "productDefectsFixed": [],
+    "processDefect": "Generated TypeScript incremental caches were included in the prior frozen source closure."
+  },
+  "invariants": {
+    "research": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "modelCalls": 0,
+    "benchmarkCalls": 0,
+    "w2Entered": false
+  },
+  "validation": {
+    "fullW1Suite": "NOT_RUN_SOURCE_IDENTITY_GATE_FAILED",
+    "jsonValidation": "PASS_3_OF_3",
+    "lineageAndCurrentChecksums": "PASS",
+    "documentationLinks": "PASS_3_OF_3",
+    "secretScan": "PASS_ZERO_FINDINGS",
+    "designValidation": "PASS_2211_FILES_39_SKILLS_24_SCHEMAS_5_AGENTS_ZERO_WARNINGS_ZERO_ERRORS"
+  },
+  "cleanup": {
+    "nativeCopy": "RETAINED_UNCHANGED_AFTER_DRIFT_DETECTION",
+    "visualStudioInstallerProcesses": 0,
+    "nativeApplicationProcesses": 0,
+    "ports4173_5173_8000": "CLEAR",
+    "modelProcesses": 0
+  },
+  "decision": {
+    "windowsReferenceHardwareQa": "BLOCKED_EXTERNAL",
+    "finalMediaCaptureAuthorized": false,
+    "nextAuthorizedPhase": "WINDOWS_REFERENCE_HARDWARE_QA",
+    "resumeCondition": "Explicit source-identity reseal/remedy authorization is required before the already approved MSVC component installation may proceed."
+  }
+}

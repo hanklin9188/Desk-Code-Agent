@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "indexId": "dca-practical-local-model-tournament-results-index-v1",
+  "status": "PASS_COMPLETE",
+  "generatedAt": "2026-08-11T14:21:50.112Z",
+  "sessions": {
+    "A": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_A.v1.json",
+      "sha256": "9d6a610829405f146ee36651961273bd25c9d6264a1c54c1e20917e186af7200"
+    },
+    "B": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_B.v1.json",
+      "sha256": "e2d05ad3f5b6b7ff97e37bfd256d94995c1dd5be830a6246454059786f5da833"
+    },
+    "C": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_C.v1.json",
+      "sha256": "32ff39c05b5ce6c64b57ac77085df2b5666750a8a5689d3ac801a683bd3ec683"
+    },
+    "D": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_D.v1.json",
+      "sha256": "d8b9515a6ee3d09e8397eb3bf4bc711d962aec6f013a6019778e32c11ebebbd2"
+    }
+  },
+  "artifacts": {
+    "pairedAnalysis": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_PAIRED_ANALYSIS.v1.json",
+      "sha256": "1c7a6746196ce94d4a06408532c2b050d27de7ad8b08fc428c1d0f160f7118a9"
+    },
+    "capabilityMatrix": {
+      "path": "docs/experiments/model-specialization/MODEL_CAPABILITY_MATRIX.v5.json",
+      "sha256": "9a75a8dea90d4f3f71902fa962864c4978139a2c7da2ac41ee56da78cacbe26a"
+    },
+    "modelSelection": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_MODEL_SELECTION.v1.json",
+      "sha256": "03fcb625a219bcbc37eec1421583371ca76b3a745f1e938f59ceeff16bdc544c"
+    },
+    "productDecision": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_PRODUCT_DECISION.v1.json",
+      "sha256": "28dd461cae05e001b712e1c3198fecd0702ef3eb0bb6b916b880785eae80ef13"
+    },
+    "capabilityCeiling": {
+      "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v5.json",
+      "sha256": "9d725bead6117aeef29393a19b9e07060cf1a04053f0c35aea78b62a694a06e7"
+    },
+    "m3Infrastructure": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_M3_INFRASTRUCTURE.v1.json",
+      "sha256": "029e1aa6b69c7eed3eeaa4e5e1559ea7d084c64a889afd1b67f7bd6e9dffba98"
+    },
+    "retryEligibility": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_RETRY_ELIGIBILITY.v1.json",
+      "sha256": "c88e39e24f0b08b95cdab8bded29c2b9e19e6a9490f891617e177aedd325f728"
+    },
+    "nextExperimentProtocol": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PROTOCOL.v1.json",
+      "sha256": "228ca9e5d8a836c40f345db2f7d39a415d6e4a1cc1d9bfa7af62b9fcfdfe51b3"
+    },
+    "finalReport": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_FINAL_REPORT.v1.json",
+      "sha256": "831b64711f996ca0b186231a473309f19b9dc5e6c930d3c1573e7cf90ddd65bf"
+    }
+  },
+  "decisions": {
+    "model": "NO_MODEL_PROMOTED",
+    "productMutation": "KEEP_MUTATION_DISABLED",
+    "M3": "INFRASTRUCTURE_BLOCKED_NOT_SCORED",
+    "retry": "BEST_7B_BOUNDED_RETRY_PROTOCOL_JUSTIFIED_NOT_EXECUTED",
+    "nextExperiment": "dca-best-7b-bounded-retry-protocol-v1"
+  },
+  "physicalLineage": {
+    "tournamentPrimaryCalls": 285,
+    "tournamentTelemetryCalls": 3,
+    "sessionDModelCalls": 0
+  }
+}

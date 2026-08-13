@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "seal_id": "dca-fresh-holdout-g1-seal",
+  "sealed_at": "2026-08-09T14:25:16+08:00",
+  "state": "SEALED_BEFORE_FIRST_MODEL_CALL",
+  "candidate_artifact_sha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+  "preregistration_artifact_sha256": "b0945095c1de4eec00355e05654defa7ff038463b7144d5103c92b404f31ba6d",
+  "task_catalog_sha256": "31fb461d1125e0b8971ca355fe84c474cf12dca527f33104eb14c8485d5f2998",
+  "integrity_runtime_sha256": "4ec96f615a4ddc933d158274edb42c170d4bafce8bbc74a05726a233d478cbc6",
+  "integrity_runtime_correction_before_first_model_call": {
+    "at": "2026-08-09T14:30:54+08:00",
+    "change": "Use the existing development task field instead of a nonexistent requirement field in near-duplicate validation.",
+    "task_catalog_changed": false,
+    "manifest_changed": false,
+    "oracle_changed": false,
+    "candidate_changed": false
+  },
+  "manifest_file_sha256": "73b8e03b7c2d8cf79c7e7462957bdd8eb04aae770ef9682ce9fff59d46cd1942",
+  "manifest_payload_sha256": "6cea1d1cb7f7078a5a70d222dc110916070c986fa0006d0bff4451f14dec19fa",
+  "oracle_file_sha256": "df87e550cefac244b7c706c66067c83aa2aff3254d28a77f530c37560a27793b",
+  "oracle_payload_sha256": "678648255aa848f7192e64da22f1ed3f32556ba7ec1a2519033e1fc54b3f20bd",
+  "task_count": 150,
+  "rules": [
+    "Do not modify any sealed artifact after this point.",
+    "Do not exclude tasks after the first model call.",
+    "Do not use outcomes to change frozen E-MIN-V2.",
+    "A changed candidate requires a new generation and untouched holdout."
+  ]
+}

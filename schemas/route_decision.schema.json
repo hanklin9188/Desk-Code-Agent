@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Route Decision",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "route_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "primary_mode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "order": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "actor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "skill_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "required_artifacts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "exit_condition": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "order",
+          "actor",
+          "skill_id",
+          "required_artifacts",
+          "exit_condition"
+        ]
+      }
+    },
+    "estimated_llm_calls": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "requires_mutation": {
+      "type": "boolean"
+    },
+    "required_approvals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "task_id",
+    "route_id",
+    "primary_mode",
+    "steps",
+    "estimated_llm_calls",
+    "requires_mutation",
+    "required_approvals"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T14:20:52.373Z",
+  "classification": "CONTROLLED_MODEL_SPECIALIZATION_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "decision": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "baseline": {
+    "nonRetry": {
+      "observations": 178,
+      "schemaValid": 122,
+      "schemaValidity": 0.6853932584269663
+    },
+    "retryAttemptLevel": {
+      "attempts": 50,
+      "schemaValidAttempts": 49,
+      "schemaValidity": 0.98
+    },
+    "smokeJsonSchema": "PASS",
+    "malformedParserRejection": "PASS"
+  },
+  "coder": {
+    "nonRetry": {
+      "observations": 178,
+      "schemaValid": 136,
+      "schemaValidity": 0.7640449438202247
+    },
+    "retryAttemptLevel": {
+      "attempts": 50,
+      "schemaValidAttempts": 50,
+      "schemaValidity": 1
+    },
+    "smokeJsonSchema": "PASS",
+    "malformedParserRejection": "PASS"
+  },
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "coder": {
+      "path": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.v3.json",
+      "sha256": "20f8943120f302d025062c674e7bd6a7409db67067e0f5cb71eff1214fb4babc"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "fairness": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v3.json",
+      "sha256": "a86f9c0db0e489e0dd3974aa52fbcc53fb556f674491bd313dd9eba06a525045"
+    }
+  },
+  "repairPermitted": false,
+  "malformedToolCalls": 0
+}

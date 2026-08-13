@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "reportId": "m9-fresh-retrieval-generalization-g1",
+  "status": "HYPOTHESIS_FAILED",
+  "fixedPolicy": {
+    "primary": "SYMBOL_TOP_2",
+    "fallback": "HYBRID_TOP_2_ONLY_WHEN_PREDECLARED",
+    "kChangedAfterEvaluation": false
+  },
+  "controlledHoldout": {
+    "precisionAt2": 0.67,
+    "recallAt2": 0.76,
+    "mrr": 0.9833333333333333,
+    "firstRelevantRank": {
+      "median": 1,
+      "missing": 0
+    },
+    "fallbackRate": 0.03333333333333333,
+    "fallbackSuccess": 1,
+    "irrelevantTokenRatio": 0.23992633133164418,
+    "retrievalFailureRate": 0.47333333333333333
+  },
+  "pinnedPublicRepositories": {
+    "precisionAt2": 0.3333333333333333,
+    "recallAt2": 0.5138888888888888,
+    "fallbackRate": 0.6666666666666666
+  },
+  "thresholds": {
+    "mrrMinimum": 0.9,
+    "retrievalFailureRateMaximum": 0.1
+  },
+  "conclusion": "MRR and first-hit rank generalized on the controlled holdout, but full required-evidence recall did not. The preregistered retrieval-failure hypothesis failed, and two of twelve pinned public-repository tasks failed after missing evidence.",
+  "realRepositoryFailures": [
+    {
+      "taskId": "real-p-limit-overview",
+      "repositoryId": "p-limit",
+      "expectedEvidencePaths": [
+        "index.js",
+        "index.d.ts",
+        "test.js"
+      ],
+      "selectedEvidencePaths": [
+        "index.d.ts",
+        "test.js"
+      ],
+      "retrieval": {
+        "fallbackUsed": true,
+        "precisionAt2": 1,
+        "recallAt2": 0.6666666666666666,
+        "firstRelevantRank": 1
+      }
+    },
+    {
+      "taskId": "real-sample-license",
+      "repositoryId": "sampleproject",
+      "expectedEvidencePaths": [
+        "LICENSE.txt"
+      ],
+      "selectedEvidencePaths": [
+        "noxfile.py",
+        "tests/test_simple.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": true,
+        "precisionAt2": 0,
+        "recallAt2": 0,
+        "firstRelevantRank": null
+      }
+    }
+  ],
+  "nextGenerationOnly": [
+    "Investigate evidence-role-aware retrieval and metadata/license intent",
+    "Evaluate any K or fallback change as a new candidate on a new untouched holdout",
+    "Do not relabel this holdout after tuning"
+  ],
+  "evidence": {
+    "primary": {
+      "path": "docs/experiments/runs/m9-fresh-holdout-g1-2026-08-09T06-37-31-981Z/paired-transition-matrix.json",
+      "sha256": "63bb3a21401ee9f04d4f02fab52534dc5157be0bdad9ff130914d87b6941bce0"
+    },
+    "patchInvalid": {
+      "path": "docs/experiments/runs/m9-fresh-real-patch-g1-2026-08-09T06-43-35-547Z/real-patch-corpus-result.json",
+      "sha256": "116eef22f9e34bc7dc8d873ab0019ad8826e2dfcbfbb08d9d92c7897e7b74355"
+    },
+    "patch": {
+      "path": "docs/experiments/runs/m9-fresh-real-patch-g1-evaluator-correction-2026-08-09T06-45-01-506Z/real-patch-corpus-result.json",
+      "sha256": "d3754d60ebe4b7caa8cc37665d8ed96e8f2454be52959f2cf7d752a10421d9d4"
+    },
+    "safety": {
+      "path": "docs/experiments/runs/m9-fresh-safety-g1-2026-08-09T06-46-52-884Z/fresh-safety-result.json",
+      "sha256": "0b4d51903d5aef479900188584e4fa9b3558a1760c75703973bca0d2ffc63cf5"
+    },
+    "specialistInvalid": {
+      "path": "docs/experiments/runs/m9-fresh-specialists-g1-2026-08-09T06-48-55-240Z/specialist-ablation-result.json",
+      "sha256": "c8ae86a0a32cc987e392d926c3e0cdf3d0584eb7f934c58ec1c0981cf7b02a4e"
+    },
+    "specialists": {
+      "path": "docs/experiments/runs/m9-fresh-specialists-g1-evaluator-correction-2026-08-09T06-49-53-336Z/specialist-ablation-result.json",
+      "sha256": "2b78eb30ed6e48760528fbc994da06a8e7c7587943c45ecdc3d4e1790ac451f2"
+    },
+    "repositories": {
+      "path": "docs/experiments/runs/m9-real-repositories-g1-2026-08-09T06-53-15-910Z/real-repository-result.json",
+      "sha256": "5559b39c38e3e4585353bc8ad29ddc528abefddb06cea7b4c726d3557c67381e"
+    },
+    "m8": {
+      "path": "docs/experiments/runs/m8-ui-performance-2026-08-09T06-54-15-004Z/result.json",
+      "sha256": "7d02427a2168fc3e20fe5e24e792146a5e1313230ff89fd6d9214d9c3d141eb8"
+    }
+  }
+}

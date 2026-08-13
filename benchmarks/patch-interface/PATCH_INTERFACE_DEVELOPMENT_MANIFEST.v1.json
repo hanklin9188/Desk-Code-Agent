@@ -1,0 +1,2505 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "dca-patch-interface-development-v1",
+  "authoringRevision": 1,
+  "classification": "DEVELOPMENT_ONLY_NEVER_FUTURE_HOLDOUT",
+  "state": "IMMUTABLE_GENERATOR_OUTPUT",
+  "sourceProvenance": {
+    "legacySelection": {
+      "path": "benchmarks/model-specialization/MODEL_COMPARISON_DEVELOPMENT_MANIFEST.json",
+      "sha256": "844bf4e3a16a0895a3d289e0b5eaec231a376ef23d77356cbf862c3344cdb556",
+      "taskIdsSha256": "73ef3b602583bc4fd3f374a110d42ccadffb4025d8ff5eba6237c5a279d31c4f"
+    },
+    "legacyManifest": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_MANIFEST.v2.json",
+      "sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7"
+    },
+    "legacyOracle": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_ORACLE.v2.sealed.json",
+      "sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6"
+    },
+    "legacyReuse": {
+      "tasks": 25,
+      "policy": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+      "unchanged": "IDs, prompts, sources, visible tests, hidden tests, commands, budgets, diagnoses, requirements, and reference fixes",
+      "addedMetadata": [
+        "mutation certification",
+        "exact 1-based symbol range",
+        "original source hash",
+        "relevant-range hash",
+        "provenance"
+      ]
+    },
+    "newTaskAuthoring": {
+      "tasks": 25,
+      "policy": "INDEPENDENT_PATCH_INTERFACE_DEVELOPMENT_AUTHORING",
+      "dependencyPolicy": "NODE_ESM_STANDARD_LIBRARY_ONLY",
+      "derivedFromG3": false,
+      "derivedFromHoldout": false,
+      "derivedFromHistoricalPatch": false
+    }
+  },
+  "contaminationPolicy": {
+    "developmentOnly": true,
+    "mayTunePatchInterfaces": true,
+    "mayClaimUnseenGeneralization": false,
+    "mayEnterFutureHoldout": false,
+    "reusesG3Tasks": false,
+    "reusesHoldoutTasks": false,
+    "futureHoldoutMustBeCreatedOnlyAfterCandidateFreeze": true
+  },
+  "corpus": {
+    "tasks": 50,
+    "reusedG4PatchTasks": 25,
+    "newBehavioralMutationTasks": 25,
+    "ecosystems": {
+      "node-esm-no-dependencies": 50
+    },
+    "allowedFilesPerTask": 1,
+    "visibleBehaviorOraclePerTask": 1,
+    "hiddenBehaviorOraclePerTask": 1,
+    "uniqueTaskIds": 50,
+    "uniqueNewSymbols": 25
+  },
+  "safeMutationCertification": {
+    "classification": "SAFE_MUTATION_REQUIRED",
+    "taskIds": [
+      "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "g4-dev-patch-02-median-even-eb13216fac",
+      "g4-dev-patch-03-stable-unique-bfbb248484",
+      "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "g4-dev-patch-08-join-url-73cba0b515",
+      "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "g4-dev-patch-10-group-by-9ba2cf9492",
+      "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "g4-dev-patch-13-normalize-path-3ba2860b51",
+      "g4-dev-patch-14-parse-bool-8881da94ff",
+      "g4-dev-patch-15-format-bytes-5a0b763ebc",
+      "g4-dev-patch-16-intersection-multiplicity-985d47dab3",
+      "g4-dev-patch-17-decode-query-4535736542",
+      "g4-dev-patch-18-title-case-a3b15a1136",
+      "g4-dev-patch-19-safe-divide-8f8f4db38c",
+      "g4-dev-patch-20-rotate-array-beb86287eb",
+      "g4-dev-patch-21-binary-search-ffb6f8735f",
+      "g4-dev-patch-22-merge-headers-e4433a12bf",
+      "g4-dev-patch-23-min-max-72396b9df5",
+      "g4-dev-patch-24-count-words-bfaa1bef8c",
+      "g4-dev-patch-25-has-own-de49412ce2",
+      "patch-interface-dev-new-01-parse-content-length-25e1045380",
+      "patch-interface-dev-new-02-normalize-locale-tag-db0bd6e9be",
+      "patch-interface-dev-new-03-merge-intervals-a4f184632f",
+      "patch-interface-dev-new-04-split-universal-lines-5d98dcc91a",
+      "patch-interface-dev-new-05-redact-token-af9834ca39",
+      "patch-interface-dev-new-06-zip-longest-54b2859ccd",
+      "patch-interface-dev-new-07-partition-values-2d49780853",
+      "patch-interface-dev-new-08-parse-duration-ms-b8f471c5b7",
+      "patch-interface-dev-new-09-encode-html-bbbf198eeb",
+      "patch-interface-dev-new-10-parse-ipv4-17f15db3ae",
+      "patch-interface-dev-new-11-compare-semver-800b4bd494",
+      "patch-interface-dev-new-12-parse-json-object-789a69d942",
+      "patch-interface-dev-new-13-take-last-items-8d922260f9",
+      "patch-interface-dev-new-14-move-list-item-c5fff25837",
+      "patch-interface-dev-new-15-weighted-average-126e8c7044",
+      "patch-interface-dev-new-16-rolling-average-cae4a611da",
+      "patch-interface-dev-new-17-parse-env-assignment-af2c1c4afe",
+      "patch-interface-dev-new-18-get-path-value-280b061326",
+      "patch-interface-dev-new-19-apply-defaults-305d454174",
+      "patch-interface-dev-new-20-serialize-query-c0867650c6",
+      "patch-interface-dev-new-21-match-etag-list-593647080b",
+      "patch-interface-dev-new-22-choose-language-f6b919bf2c",
+      "patch-interface-dev-new-23-seconds-to-clock-8fde531045",
+      "patch-interface-dev-new-24-intersect-ranges-b6f8538698",
+      "patch-interface-dev-new-25-parse-byte-range-2f2f3376de"
+    ],
+    "taskIdsSha256": "122a9710e67ba5c97ca233c43753627537761b880d9d9bb8705f33e0c74d6898",
+    "basis": [
+      "all tasks are development-only dependency-free local fixtures",
+      "all tasks require one allowlisted source mutation",
+      "all tasks have an exact source symbol and bounded line range",
+      "all tasks have trusted visible and hidden behavioral commands",
+      "deterministic runtime protections remain mandatory"
+    ]
+  },
+  "tasks": [
+    {
+      "task_id": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-clamp-upper",
+      "repository_commit": "835b7f1cea40f1442aa7d1213daebdd904d9b2e8c289ccf66e0fea979fa041eb",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "clamp-upper",
+      "difficulty": "L3",
+      "prompt": "Make clamp honor the inclusive upper bound without changing its signature.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/clamp-upper.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/clamp-upper.mjs",
+          "content": "export function clamp(value, min, max) { return Math.max(min, value); }\n"
+        },
+        {
+          "path": "test/clamp-upper.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { clamp } from '../src/clamp-upper.mjs';\ntest('visible behavior',()=>{ assert.equal(clamp(3, 0, 5), 3); assert.equal(clamp(8, 0, 5), 5); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/clamp-upper.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "6beb772707d0ab61f3c87caf5d38a31a6ba79244c24f48ceefeee0e7d3d6ece5",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-02-median-even-eb13216fac",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-median-even",
+      "repository_commit": "2dc091dcbecd49f1babbf5683a752ef419d9343d4b207dc069bf2e6a49179151",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "median-even",
+      "difficulty": "L2",
+      "prompt": "Correct median for even-length numeric inputs while preserving odd-length behavior and input immutability.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/median-even.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/median-even.mjs",
+          "content": "export function median(values) { const v=[...values].sort((a,b)=>a-b); return v[Math.floor(v.length/2)]; }\n"
+        },
+        {
+          "path": "test/median-even.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { median } from '../src/median-even.mjs';\ntest('visible behavior',()=>{ assert.equal(median([3,1,2]), 2); assert.equal(median([1,4,2,3]), 2.5); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/median-even.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "052818922fe2ff3d5ea70e005a2364db0b254bf307124dd4abf1444af8697625",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-stable-unique",
+      "repository_commit": "646596505c4cab98eb2a2b63738d3bf1771089c05034aec1e570b2e86b54b3c6",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "stable-unique",
+      "difficulty": "L2",
+      "prompt": "Return the first occurrence of each value and keep original order.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/stable-unique.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/stable-unique.mjs",
+          "content": "export function unique(values) { return [...new Set(values)].sort(); }\n"
+        },
+        {
+          "path": "test/stable-unique.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { unique } from '../src/stable-unique.mjs';\ntest('visible behavior',()=>{ assert.deepEqual(unique(['b','a','b']), ['b','a']); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/stable-unique.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "ee0a00b51d5d3b8667abab18a3d4c7db04ab1037f0c7b14116d99b19192a5fef",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-chunk-tail",
+      "repository_commit": "59c0132499cfd71bc5046ede470ac75555ef4359c8dbaf8b0b7cf801d0cb4bb8",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "chunk-tail",
+      "difficulty": "L3",
+      "prompt": "Make chunk retain the final partial group and reject non-positive sizes.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/chunk-tail.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/chunk-tail.mjs",
+          "content": "export function chunk(values,size){ const out=[]; for(let i=0;i+size<=values.length;i+=size) out.push(values.slice(i,i+size)); return out; }\n"
+        },
+        {
+          "path": "test/chunk-tail.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { chunk } from '../src/chunk-tail.mjs';\ntest('visible behavior',()=>{ assert.deepEqual(chunk([1,2,3],2), [[1,2],[3]]); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/chunk-tail.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "9bda9a4458a5852b5483e302a2b389bcf946fd21e3e626bb30e243f6bdeacc51",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-palindrome-normalize",
+      "repository_commit": "93bddd380073b58263f8fa5652986e9ab0654e91229ba94c175282f415c92504",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "palindrome-normalize",
+      "difficulty": "L2",
+      "prompt": "Treat punctuation and case as insignificant when checking palindromes.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/palindrome-normalize.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/palindrome-normalize.mjs",
+          "content": "export function isPalindrome(text){ return text === [...text].reverse().join(''); }\n"
+        },
+        {
+          "path": "test/palindrome-normalize.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { isPalindrome } from '../src/palindrome-normalize.mjs';\ntest('visible behavior',()=>{ assert.equal(isPalindrome('Race car'), true); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/palindrome-normalize.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "94aeb2544720c2c5f7444d3af789acc5d588c44a91fc32ec7dcdd2d6df9916f2",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-parse-port",
+      "repository_commit": "a7822b9f6e3f1a26d2c3dd5c50e575aa26dd1990c2750b04e77d5b4dce7e117a",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "parse-port",
+      "difficulty": "L2",
+      "prompt": "Accept canonical decimal TCP ports only and reject partial, zero, and out-of-range values.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/parse-port.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/parse-port.mjs",
+          "content": "export function parsePort(value){ const n=parseInt(value,10); return n || null; }\n"
+        },
+        {
+          "path": "test/parse-port.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parsePort } from '../src/parse-port.mjs';\ntest('visible behavior',()=>{ assert.equal(parsePort('8080'),8080); assert.equal(parsePort('80x'),null); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-port.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "fd595339f0cc8cb8b6c1ae9f3dfe76327245a600dc44dbe1f15982b14a115d1c",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-retry-delay",
+      "repository_commit": "03a904e720d7847e71688ef980ddf6062f8910b7fe3a1dfac93983b3abf69c8a",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "retry-delay",
+      "difficulty": "L3",
+      "prompt": "Implement capped exponential retry delay from a zero-based attempt number.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/retry-delay.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/retry-delay.mjs",
+          "content": "export function retryDelay(attempt,base,cap){ return Math.min(cap, base*attempt); }\n"
+        },
+        {
+          "path": "test/retry-delay.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { retryDelay } from '../src/retry-delay.mjs';\ntest('visible behavior',()=>{ assert.equal(retryDelay(0,100,1000),100); assert.equal(retryDelay(2,100,1000),400); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/retry-delay.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "10d2531a16f0b35faf76f5a790f56267b7c56f6934a1cc01371787ca8f5c0265",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-08-join-url-73cba0b515",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-join-url",
+      "repository_commit": "c8e05262662215ff8f109f1a8cf6e6d083046c09c3f5d1c49909ab980de3d033",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "join-url",
+      "difficulty": "L2",
+      "prompt": "Join a base URL and path with exactly one boundary slash without changing the scheme.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/join-url.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/join-url.mjs",
+          "content": "export function joinUrl(base,part){ return `${base}/${part}`.replace(/\\/+/g,'/'); }\n"
+        },
+        {
+          "path": "test/join-url.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { joinUrl } from '../src/join-url.mjs';\ntest('visible behavior',()=>{ assert.equal(joinUrl('https://x.test/','/a'),'https://x.test/a'); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/join-url.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "1f3cc00a2bad4594ddf949aff9cdb299b11979d91bd183a4882ea429e2d0b760",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-escape-regexp",
+      "repository_commit": "fe093ccf69cb5e931a3da90902170a5c79ff3815defd024287c9a1257572688b",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "escape-regexp",
+      "difficulty": "L2",
+      "prompt": "Escape every JavaScript regular-expression metacharacter in a literal string.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/escape-regexp.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/escape-regexp.mjs",
+          "content": "export function escapeRegExp(value){ return value.replace(/[.*+?]/g,'\\\\$&'); }\n"
+        },
+        {
+          "path": "test/escape-regexp.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { escapeRegExp } from '../src/escape-regexp.mjs';\ntest('visible behavior',()=>{ assert.equal(new RegExp(`^${escapeRegExp('a.b')}$`).test('a.b'),true); assert.equal(new RegExp(`^${escapeRegExp('a.b')}$`).test('axb'),false); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/escape-regexp.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "2010b9a6257070092aed6780439dd2b5bebe6d8901111477484c4ac5caf5a056",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-group-by",
+      "repository_commit": "f2b9beaa6b737adc52afdef18cfb320e7e6cb41932721b4b5ed485241e0d8348",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "group-by",
+      "difficulty": "L3",
+      "prompt": "Group all values by the supplied key without losing earlier group members.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/group-by.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/group-by.mjs",
+          "content": "export function groupBy(values,key){ const out={}; for(const value of values) out[key(value)]=[value]; return out; }\n"
+        },
+        {
+          "path": "test/group-by.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { groupBy } from '../src/group-by.mjs';\ntest('visible behavior',()=>{ assert.deepEqual(groupBy([1,3,2],x=>x%2), {'0':[2],'1':[1,3]}); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/group-by.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "dc617bd6e55b39dde6621356bdbad39a6cbc1cb5e6578b09e9d0c10a31a35a0f",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-inclusive-range",
+      "repository_commit": "2423a2b2cc1c9b3be44686d1d51a12dc9f03a65a81e67ea7115d3b53bc5d46b7",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "inclusive-range",
+      "difficulty": "L2",
+      "prompt": "Sum every integer in an inclusive ascending range and return zero for an empty reversed range.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/inclusive-range.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/inclusive-range.mjs",
+          "content": "export function sumRange(start,end){ let sum=0; for(let i=start;i<end;i++) sum+=i; return sum; }\n"
+        },
+        {
+          "path": "test/inclusive-range.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { sumRange } from '../src/inclusive-range.mjs';\ntest('visible behavior',()=>{ assert.equal(sumRange(1,3),6); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/inclusive-range.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "520903a26fa0c4e0e705732e857df099ae5797a4c2e8643574ea34a0d4b40d4d",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-truncate-ellipsis",
+      "repository_commit": "ef3511ec074376eeccf741e60366182f81dfa82415053359f1418221989952bc",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "truncate-ellipsis",
+      "difficulty": "L2",
+      "prompt": "Truncate to the requested total width, including the ellipsis, and leave short text unchanged.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/truncate-ellipsis.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/truncate-ellipsis.mjs",
+          "content": "export function truncate(text,width){ return text.length>width ? text.slice(0,width)+'…' : text; }\n"
+        },
+        {
+          "path": "test/truncate-ellipsis.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { truncate } from '../src/truncate-ellipsis.mjs';\ntest('visible behavior',()=>{ assert.equal(truncate('abcdef',4),'abc…'); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/truncate-ellipsis.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "da298a65463a58ad530d7e7c7a777ee45790c7d60bb97feffc6a5513dbcc2a50",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-13-normalize-path-3ba2860b51",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-normalize-path",
+      "repository_commit": "b4e8d7864715fb3bd97e2aba3b56196fc538d7f244921bdcb59a0f480ab7d974",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "normalize-path",
+      "difficulty": "L3",
+      "prompt": "Normalize repeated POSIX separators while preserving a leading root slash.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/normalize-path.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/normalize-path.mjs",
+          "content": "export function normalizePath(value){ return value.split('/').filter(Boolean).join('/'); }\n"
+        },
+        {
+          "path": "test/normalize-path.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizePath } from '../src/normalize-path.mjs';\ntest('visible behavior',()=>{ assert.equal(normalizePath('/a//b'),'/a/b'); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/normalize-path.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "0fdaf63ca0def463bb4ec4c95ba6e6c85bb69b02f56d5b4867c6d6f33553e7cf",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-14-parse-bool-8881da94ff",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-parse-bool",
+      "repository_commit": "3d60ab1fad695e1aa03f4247164c4e2ec3281ec39c22e658ab1036f4bdaf1285",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "parse-bool",
+      "difficulty": "L2",
+      "prompt": "Parse only explicit case-insensitive true/false strings and return null otherwise.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/parse-bool.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/parse-bool.mjs",
+          "content": "export function parseBool(value){ return Boolean(value); }\n"
+        },
+        {
+          "path": "test/parse-bool.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseBool } from '../src/parse-bool.mjs';\ntest('visible behavior',()=>{ assert.equal(parseBool('false'),false); assert.equal(parseBool('TRUE'),true); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-bool.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "b5844fcfdb83a790d161265f2ff5aef545cba2465adf2596f42e786104832e75",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-15-format-bytes-5a0b763ebc",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-format-bytes",
+      "repository_commit": "32d8f0a6ec93777f51412179723e38567ad6c5438580e74176c863b8c35199a9",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "format-bytes",
+      "difficulty": "L2",
+      "prompt": "Format non-negative byte counts using a 1024 base and one decimal only when needed.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/format-bytes.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/format-bytes.mjs",
+          "content": "export function formatBytes(n){ return `${(n/1000).toFixed(1)} KB`; }\n"
+        },
+        {
+          "path": "test/format-bytes.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { formatBytes } from '../src/format-bytes.mjs';\ntest('visible behavior',()=>{ assert.equal(formatBytes(1024),'1 KiB'); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/format-bytes.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "f96d2ab0749dcd56c3fafc6b69109516478ef4ebb6431fd902ebb89a8083bc6f",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-16-intersection-multiplicity-985d47dab3",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-intersection-multiplicity",
+      "repository_commit": "e211bf30b35ebdf76d2c3a38fb0cca7bf45d886a286b5691dc497efd85fc3e9f",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "intersection-multiplicity",
+      "difficulty": "L3",
+      "prompt": "Return a stable set intersection without duplicate output values.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/intersection-multiplicity.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/intersection-multiplicity.mjs",
+          "content": "export function intersection(left,right){ return left.filter(x=>right.includes(x)); }\n"
+        },
+        {
+          "path": "test/intersection-multiplicity.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { intersection } from '../src/intersection-multiplicity.mjs';\ntest('visible behavior',()=>{ assert.deepEqual(intersection([1,1,2],[1,2]),[1,2]); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/intersection-multiplicity.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "47bdfaee785fe52f0646dadc718996ccdf55c0d6de2dc90ee0a9f0e75be87c24",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-17-decode-query-4535736542",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-decode-query",
+      "repository_commit": "8db4c94c65d6c3e8ab24f75ca1e3f78402e3a3574233df60dc00cda96ff0bd10",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "decode-query",
+      "difficulty": "L2",
+      "prompt": "Decode plus signs as spaces before percent-decoding a query component.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/decode-query.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/decode-query.mjs",
+          "content": "export function decodeQuery(value){ return decodeURIComponent(value); }\n"
+        },
+        {
+          "path": "test/decode-query.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { decodeQuery } from '../src/decode-query.mjs';\ntest('visible behavior',()=>{ assert.equal(decodeQuery('hello+world'),'hello world'); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/decode-query.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "e5a04e1e076e0e9f405470873153840caca3d2dbc3f01e3164f4b2bbe1073afd",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-18-title-case-a3b15a1136",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-title-case",
+      "repository_commit": "d6ec450acd8c3b1ca41a43fdcd1e1716a348e91f693397e878eab87d7dd669bc",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "title-case",
+      "difficulty": "L2",
+      "prompt": "Title-case words separated by arbitrary whitespace and emit single spaces.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/title-case.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/title-case.mjs",
+          "content": "export function titleCase(value){ return value.split(' ').map(x=>x[0].toUpperCase()+x.slice(1)).join(' '); }\n"
+        },
+        {
+          "path": "test/title-case.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { titleCase } from '../src/title-case.mjs';\ntest('visible behavior',()=>{ assert.equal(titleCase('hello   WORLD'),'Hello World'); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/title-case.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "d2a3e687036193ad6e263e209cb121252b1196e5279e926e95dc43b351e02f9c",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-19-safe-divide-8f8f4db38c",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-safe-divide",
+      "repository_commit": "53cf74a2647e1839ae0d39f10ab1a50d779b042248e665e77f73685b1e516e0d",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "safe-divide",
+      "difficulty": "L3",
+      "prompt": "Return null for division by zero while preserving valid zero numerators.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/safe-divide.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/safe-divide.mjs",
+          "content": "export function safeDivide(a,b){ return a && b ? a/b : null; }\n"
+        },
+        {
+          "path": "test/safe-divide.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { safeDivide } from '../src/safe-divide.mjs';\ntest('visible behavior',()=>{ assert.equal(safeDivide(0,2),0); assert.equal(safeDivide(4,0),null); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/safe-divide.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "c9e2026fa26d6742c45cd3845ed42582e8086192a428c055dcbc3cad254b05fd",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-20-rotate-array-beb86287eb",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-rotate-array",
+      "repository_commit": "9028500909e081aa6bbe7f5597a29143f797a8e1f91d783e407cbe566539c7f1",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "rotate-array",
+      "difficulty": "L2",
+      "prompt": "Rotate an array right by any integer distance without mutating the input.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/rotate-array.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/rotate-array.mjs",
+          "content": "export function rotate(values,n){ return values.slice(-n).concat(values.slice(0,-n)); }\n"
+        },
+        {
+          "path": "test/rotate-array.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rotate } from '../src/rotate-array.mjs';\ntest('visible behavior',()=>{ assert.deepEqual(rotate([1,2,3],4),[3,1,2]); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/rotate-array.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "ac2e29bd3fe4cffb17e728cb5d86e0d909b80fdf358b45b351db1cde4d592a95",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-21-binary-search-ffb6f8735f",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-binary-search",
+      "repository_commit": "72fc3e0ff77a1a4f8331ca7b5c051c7f8490b4e22f5c7f849a894be5a633dbc3",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "binary-search",
+      "difficulty": "L2",
+      "prompt": "Return the index of an exact target in a sorted array, including the final element, or -1.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/binary-search.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/binary-search.mjs",
+          "content": "export function binarySearch(values,target){ let lo=0,hi=values.length-2; while(lo<=hi){ const m=(lo+hi)>>1; if(values[m]===target)return m; if(values[m]<target)lo=m+1;else hi=m-1; } return -1; }\n"
+        },
+        {
+          "path": "test/binary-search.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { binarySearch } from '../src/binary-search.mjs';\ntest('visible behavior',()=>{ assert.equal(binarySearch([1,3,5],1),0); assert.equal(binarySearch([1,3,5],4),-1); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/binary-search.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "6d5fb24b9f85ce184eac61cf8fad01f270a0989c0ab12918f9ca45b1e309749d",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-22-merge-headers-e4433a12bf",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-merge-headers",
+      "repository_commit": "2306360935f0a2fc806ec0a443937af6a7d9f85667b5369977e00526587eaa2a",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "merge-headers",
+      "difficulty": "L3",
+      "prompt": "Merge headers case-insensitively so later values replace earlier casing variants.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/merge-headers.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/merge-headers.mjs",
+          "content": "export function mergeHeaders(left,right){ return {...left,...right}; }\n"
+        },
+        {
+          "path": "test/merge-headers.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { mergeHeaders } from '../src/merge-headers.mjs';\ntest('visible behavior',()=>{ assert.deepEqual(mergeHeaders({'Content-Type':'a'},{'content-type':'b'}),{'content-type':'b'}); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/merge-headers.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "da658c204a2b84e76862260b66b231f6107822482c0fb17149370cdef0ad6d0d",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-23-min-max-72396b9df5",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-min-max",
+      "repository_commit": "c6ed942d2e940b8457d195ae1a6003308eb93059607168b56582a0392f556c41",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "min-max",
+      "difficulty": "L2",
+      "prompt": "Return both numeric extrema correctly for all-negative inputs and null for empty input.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/min-max.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/min-max.mjs",
+          "content": "export function minMax(values){ if(!values.length)return null; return {min:Math.min(...values),max:Math.max(0,...values)}; }\n"
+        },
+        {
+          "path": "test/min-max.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { minMax } from '../src/min-max.mjs';\ntest('visible behavior',()=>{ assert.deepEqual(minMax([-5,-2]),{min:-5,max:-2}); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/min-max.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "eebd5e4e731090afc9acc46ccfa5176df211eafad19b764985e83547b0ca1b41",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-24-count-words-bfaa1bef8c",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-count-words",
+      "repository_commit": "6fb6eab81b29dd1231af359c0f7b3ce3e4a87158895cd46522dc738767fad3cf",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "count-words",
+      "difficulty": "L2",
+      "prompt": "Count non-empty whitespace-delimited words, including newlines, and return zero for blank text.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/count-words.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/count-words.mjs",
+          "content": "export function countWords(text){ return text.split(' ').length; }\n"
+        },
+        {
+          "path": "test/count-words.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { countWords } from '../src/count-words.mjs';\ntest('visible behavior',()=>{ assert.equal(countWords('one  two\\nthree'),3); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/count-words.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "98b4b6899ba6a08075381319bf9e723aba286b1065652bd9b678fae202e66cb0",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-25-has-own-de49412ce2",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "g4-fixture-has-own",
+      "repository_commit": "7856e41d84ffb15dfdd6cdc699df8d37509de3fe37211368505b28f1aa66d3cc",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "has-own",
+      "difficulty": "L3",
+      "prompt": "Check own properties safely even for objects that shadow hasOwnProperty.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/has-own.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/has-own.mjs",
+          "content": "export function hasOwn(value,key){ return value.hasOwnProperty(key); }\n"
+        },
+        {
+          "path": "test/has-own.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { hasOwn } from '../src/has-own.mjs';\ntest('visible behavior',()=>{ assert.equal(hasOwn({a:1},'a'),true); });\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/has-own.visible.test.mjs"
+      ],
+      "changed_line_budget": 12,
+      "provenance": "independently authored executable G4 development microrepository with a machine behavior oracle",
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_manifest_sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+        "source_task_payload_sha256": "26e88692e16442249c32e63da5cb2a953d99563e7a7f332502b6faa9757214b5",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "prompt",
+          "allowed_files",
+          "visible_files",
+          "trusted_visible_command",
+          "changed_line_budget"
+        ]
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-01-parse-content-length-25e1045380",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-parse-content-length",
+      "repository_commit": "461e85c728d75a3db041bbf5bd4b73de444f4d412cad35efbfca8cfac9810e42",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "parse-content-length",
+      "difficulty": "L3",
+      "prompt": "Parse only canonical non-negative decimal Content-Length values without accepting partial or unsafe integers.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/parse-content-length.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/parse-content-length.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-parse-content-length\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseContentLengthContract() {\n  return \"canonical-decimal-safe-integer-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET parseContentLength START\nexport function parseContentLength(value) {\n  const parsed = Number.parseInt(value, 10);\n  return Number.isFinite(parsed) ? parsed : null;\n}\n// PATCH_INTERFACE_TARGET parseContentLength END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseContentLengthFixtureLabel() {\n  return \"parse-content-length\";\n}\n"
+        },
+        {
+          "path": "test/parse-content-length.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseContentLength, parseContentLengthContract, parseContentLengthFixtureLabel } from '../src/parse-content-length.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(parseContentLength(\"42\"), 42);\n  assert.equal(parseContentLength(\"12px\"), null);\n  assert.equal(parseContentLengthContract(), \"canonical-decimal-safe-integer-or-null\");\n  assert.equal(parseContentLengthFixtureLabel(), \"parse-content-length\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-content-length.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-02-normalize-locale-tag-db0bd6e9be",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-normalize-locale-tag",
+      "repository_commit": "496ef03da0d93265f68786cf62b0d6570b078714a2639ae44f51f4fb2d6f0733",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "normalize-locale-tag",
+      "difficulty": "L2",
+      "prompt": "Normalize a simple language-region locale tag while rejecting unsupported shapes.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/normalize-locale-tag.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/normalize-locale-tag.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-normalize-locale-tag\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function normalizeLocaleTagContract() {\n  return \"language-lower-region-upper-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET normalizeLocaleTag START\nexport function normalizeLocaleTag(value) {\n  return value.replace(\"_\", \"-\").toLowerCase();\n}\n// PATCH_INTERFACE_TARGET normalizeLocaleTag END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function normalizeLocaleTagFixtureLabel() {\n  return \"normalize-locale-tag\";\n}\n"
+        },
+        {
+          "path": "test/normalize-locale-tag.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLocaleTag, normalizeLocaleTagContract, normalizeLocaleTagFixtureLabel } from '../src/normalize-locale-tag.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(normalizeLocaleTag(\"en_us\"), \"en-US\");\n  assert.equal(normalizeLocaleTag(\"FR\"), \"fr\");\n  assert.equal(normalizeLocaleTagContract(), \"language-lower-region-upper-or-null\");\n  assert.equal(normalizeLocaleTagFixtureLabel(), \"normalize-locale-tag\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/normalize-locale-tag.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-03-merge-intervals-a4f184632f",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-merge-intervals",
+      "repository_commit": "55a8b928cc8d43456abcbd2caf2390aaed91bec2df8683d3c04ea60f52916262",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "merge-intervals",
+      "difficulty": "L2",
+      "prompt": "Merge overlapping or adjacent inclusive numeric intervals without mutating the input.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/merge-intervals.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/merge-intervals.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-merge-intervals\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function mergeIntervalsContract() {\n  return \"sorted-inclusive-merged-copy\";\n}\n\n// PATCH_INTERFACE_TARGET mergeIntervals START\nexport function mergeIntervals(intervals) {\n  return intervals.sort((left, right) => left[0] - right[0]);\n}\n// PATCH_INTERFACE_TARGET mergeIntervals END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function mergeIntervalsFixtureLabel() {\n  return \"merge-intervals\";\n}\n"
+        },
+        {
+          "path": "test/merge-intervals.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { mergeIntervals, mergeIntervalsContract, mergeIntervalsFixtureLabel } from '../src/merge-intervals.mjs';\n\ntest(\"visible behavior\", () => {\n  const input = [[5, 7], [1, 2], [2, 4]];\n  assert.deepEqual(mergeIntervals(input), [[1, 7]]);\n  assert.deepEqual(input, [[5, 7], [1, 2], [2, 4]]);\n  assert.equal(mergeIntervalsContract(), \"sorted-inclusive-merged-copy\");\n  assert.equal(mergeIntervalsFixtureLabel(), \"merge-intervals\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/merge-intervals.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-04-split-universal-lines-5d98dcc91a",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-split-universal-lines",
+      "repository_commit": "dc4dfe9b4d2ebbcb0ea8d542c13c16a7c1d24efdeb5bcce255a06a97f4c72399",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "split-universal-lines",
+      "difficulty": "L2",
+      "prompt": "Split text across LF, CRLF, or CR line endings without returning a phantom final line.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/split-universal-lines.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/split-universal-lines.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-split-universal-lines\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function splitUniversalLinesContract() {\n  return \"universal-newlines-no-terminal-phantom\";\n}\n\n// PATCH_INTERFACE_TARGET splitUniversalLines START\nexport function splitUniversalLines(text) {\n  return text.split(\"\\n\");\n}\n// PATCH_INTERFACE_TARGET splitUniversalLines END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function splitUniversalLinesFixtureLabel() {\n  return \"split-universal-lines\";\n}\n"
+        },
+        {
+          "path": "test/split-universal-lines.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { splitUniversalLines, splitUniversalLinesContract, splitUniversalLinesFixtureLabel } from '../src/split-universal-lines.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.deepEqual(splitUniversalLines(\"a\\r\\nb\"), [\"a\", \"b\"]);\n  assert.deepEqual(splitUniversalLines(\"a\\nb\\n\"), [\"a\", \"b\"]);\n  assert.equal(splitUniversalLinesContract(), \"universal-newlines-no-terminal-phantom\");\n  assert.equal(splitUniversalLinesFixtureLabel(), \"split-universal-lines\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/split-universal-lines.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-05-redact-token-af9834ca39",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-redact-token",
+      "repository_commit": "71692e7fa3351a8e8ac311aa1bcbc56536bf2b6dba4f6a13aa94a2178b4162b6",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "redact-token",
+      "difficulty": "L3",
+      "prompt": "Redact a token while retaining only its final four characters when it is long enough.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/redact-token.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/redact-token.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-redact-token\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function redactTokenContract() {\n  return \"same-length-last-four-visible\";\n}\n\n// PATCH_INTERFACE_TARGET redactToken START\nexport function redactToken(token) {\n  return token.slice(0, 4) + \"*\".repeat(Math.max(0, token.length - 4));\n}\n// PATCH_INTERFACE_TARGET redactToken END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function redactTokenFixtureLabel() {\n  return \"redact-token\";\n}\n"
+        },
+        {
+          "path": "test/redact-token.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { redactToken, redactTokenContract, redactTokenFixtureLabel } from '../src/redact-token.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(redactToken(\"abcdefgh\"), \"****efgh\");\n  assert.equal(redactTokenContract(), \"same-length-last-four-visible\");\n  assert.equal(redactTokenFixtureLabel(), \"redact-token\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/redact-token.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-06-zip-longest-54b2859ccd",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-zip-longest",
+      "repository_commit": "cc79faad84f48fe3a06ca77e4c161e38796ef1306ba510ff38a6d22cfa435a41",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "zip-longest",
+      "difficulty": "L2",
+      "prompt": "Zip two arrays through the longer input, filling a missing side with undefined.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/zip-longest.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/zip-longest.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-zip-longest\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function zipLongestContract() {\n  return \"max-length-pairs-with-undefined\";\n}\n\n// PATCH_INTERFACE_TARGET zipLongest START\nexport function zipLongest(left, right) {\n  return left.map((value, index) => [value, right[index]]);\n}\n// PATCH_INTERFACE_TARGET zipLongest END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function zipLongestFixtureLabel() {\n  return \"zip-longest\";\n}\n"
+        },
+        {
+          "path": "test/zip-longest.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { zipLongest, zipLongestContract, zipLongestFixtureLabel } from '../src/zip-longest.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.deepEqual(zipLongest([1], [\"a\", \"b\"]), [[1, \"a\"], [undefined, \"b\"]]);\n  assert.equal(zipLongestContract(), \"max-length-pairs-with-undefined\");\n  assert.equal(zipLongestFixtureLabel(), \"zip-longest\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/zip-longest.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-07-partition-values-2d49780853",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-partition-values",
+      "repository_commit": "998731407819969c1285f62f6ee7790e123d3fdde7624301713c1b0170876405",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "partition-values",
+      "difficulty": "L2",
+      "prompt": "Partition values stably into matching and non-matching groups while evaluating the predicate once per item.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/partition-values.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/partition-values.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-partition-values\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function partitionValuesContract() {\n  return \"stable-two-way-single-evaluation\";\n}\n\n// PATCH_INTERFACE_TARGET partitionValues START\nexport function partitionValues(values, predicate) {\n  return [values.filter(predicate), values.filter(predicate)];\n}\n// PATCH_INTERFACE_TARGET partitionValues END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function partitionValuesFixtureLabel() {\n  return \"partition-values\";\n}\n"
+        },
+        {
+          "path": "test/partition-values.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { partitionValues, partitionValuesContract, partitionValuesFixtureLabel } from '../src/partition-values.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.deepEqual(partitionValues([1, 2, 3, 4], (value) => value % 2 === 0), [[2, 4], [1, 3]]);\n  assert.equal(partitionValuesContract(), \"stable-two-way-single-evaluation\");\n  assert.equal(partitionValuesFixtureLabel(), \"partition-values\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/partition-values.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-08-parse-duration-ms-b8f471c5b7",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-parse-duration-ms",
+      "repository_commit": "85962a3f902a4119a2fedb391a5c3f5cd13d4dee3636d96d5ec53675a8db2ae8",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "parse-duration-ms",
+      "difficulty": "L2",
+      "prompt": "Parse an unsigned integer duration carrying an explicit ms, s, or m suffix.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/parse-duration-ms.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/parse-duration-ms.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-parse-duration-ms\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseDurationMsContract() {\n  return \"integer-duration-to-milliseconds-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET parseDurationMs START\nexport function parseDurationMs(value) {\n  return Number.parseInt(value, 10) * 1000;\n}\n// PATCH_INTERFACE_TARGET parseDurationMs END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseDurationMsFixtureLabel() {\n  return \"parse-duration-ms\";\n}\n"
+        },
+        {
+          "path": "test/parse-duration-ms.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseDurationMs, parseDurationMsContract, parseDurationMsFixtureLabel } from '../src/parse-duration-ms.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(parseDurationMs(\"1500ms\"), 1500);\n  assert.equal(parseDurationMs(\"2s\"), 2000);\n  assert.equal(parseDurationMsContract(), \"integer-duration-to-milliseconds-or-null\");\n  assert.equal(parseDurationMsFixtureLabel(), \"parse-duration-ms\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-duration-ms.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-09-encode-html-bbbf198eeb",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-encode-html",
+      "repository_commit": "19f92430f863e4c441c4a66a6537edb56e62e76b4fea139924f222aacb972ffa",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "encode-html",
+      "difficulty": "L3",
+      "prompt": "Escape the five HTML-sensitive text characters without double-escaping newly introduced entities.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/encode-html.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/encode-html.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-encode-html\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function encodeHtmlContract() {\n  return \"escape-amp-angle-and-quotes\";\n}\n\n// PATCH_INTERFACE_TARGET encodeHtml START\nexport function encodeHtml(value) {\n  return value.replace(/</g, \"&lt;\").replace(/>/g, \"&gt;\");\n}\n// PATCH_INTERFACE_TARGET encodeHtml END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function encodeHtmlFixtureLabel() {\n  return \"encode-html\";\n}\n"
+        },
+        {
+          "path": "test/encode-html.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { encodeHtml, encodeHtmlContract, encodeHtmlFixtureLabel } from '../src/encode-html.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(encodeHtml('<a title=\"x\">&'), '&lt;a title=&quot;x&quot;&gt;&amp;');\n  assert.equal(encodeHtmlContract(), \"escape-amp-angle-and-quotes\");\n  assert.equal(encodeHtmlFixtureLabel(), \"encode-html\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/encode-html.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-10-parse-ipv4-17f15db3ae",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-parse-ipv4",
+      "repository_commit": "e0521745b2926789f13736c5b8de6464192846d6d3cee63bdd2b770768e1c33b",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "parse-ipv4",
+      "difficulty": "L2",
+      "prompt": "Parse only canonical dotted-decimal IPv4 addresses into four numeric octets.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/parse-ipv4.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/parse-ipv4.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-parse-ipv4\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseIpv4Contract() {\n  return \"four-canonical-octets-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET parseIpv4 START\nexport function parseIpv4(value) {\n  return value.split(\".\").map(Number);\n}\n// PATCH_INTERFACE_TARGET parseIpv4 END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseIpv4FixtureLabel() {\n  return \"parse-ipv4\";\n}\n"
+        },
+        {
+          "path": "test/parse-ipv4.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseIpv4, parseIpv4Contract, parseIpv4FixtureLabel } from '../src/parse-ipv4.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.deepEqual(parseIpv4(\"192.168.0.1\"), [192, 168, 0, 1]);\n  assert.equal(parseIpv4(\"256.1.1.1\"), null);\n  assert.equal(parseIpv4Contract(), \"four-canonical-octets-or-null\");\n  assert.equal(parseIpv4FixtureLabel(), \"parse-ipv4\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-ipv4.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-11-compare-semver-800b4bd494",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-compare-semver",
+      "repository_commit": "8fe092013ab79fa45c663cc82f3c5963054c7434e45ebfea635217590d9d455c",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "compare-semver",
+      "difficulty": "L2",
+      "prompt": "Compare canonical three-component semantic versions numerically rather than lexically.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/compare-semver.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/compare-semver.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-compare-semver\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function compareSemverContract() {\n  return \"numeric-major-minor-patch-comparison\";\n}\n\n// PATCH_INTERFACE_TARGET compareSemver START\nexport function compareSemver(left, right) {\n  return left.localeCompare(right);\n}\n// PATCH_INTERFACE_TARGET compareSemver END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function compareSemverFixtureLabel() {\n  return \"compare-semver\";\n}\n"
+        },
+        {
+          "path": "test/compare-semver.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { compareSemver, compareSemverContract, compareSemverFixtureLabel } from '../src/compare-semver.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(compareSemver(\"1.10.0\", \"1.2.0\"), 1);\n  assert.equal(compareSemver(\"1.2.0\", \"1.2.0\"), 0);\n  assert.equal(compareSemverContract(), \"numeric-major-minor-patch-comparison\");\n  assert.equal(compareSemverFixtureLabel(), \"compare-semver\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/compare-semver.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-12-parse-json-object-789a69d942",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-parse-json-object",
+      "repository_commit": "1406c4dc9ae163d283a1bc4db333a62fc7ee3f03603749e96ccb52517ac7217c",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "parse-json-object",
+      "difficulty": "L2",
+      "prompt": "Parse JSON defensively and accept only non-null object records, not arrays or primitives.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/parse-json-object.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/parse-json-object.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-parse-json-object\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseJsonObjectContract() {\n  return \"json-record-or-null-no-throw\";\n}\n\n// PATCH_INTERFACE_TARGET parseJsonObject START\nexport function parseJsonObject(value) {\n  return JSON.parse(value);\n}\n// PATCH_INTERFACE_TARGET parseJsonObject END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseJsonObjectFixtureLabel() {\n  return \"parse-json-object\";\n}\n"
+        },
+        {
+          "path": "test/parse-json-object.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseJsonObject, parseJsonObjectContract, parseJsonObjectFixtureLabel } from '../src/parse-json-object.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.deepEqual(parseJsonObject('{\"a\":1}'), { a: 1 });\n  assert.equal(parseJsonObject('[1,2]'), null);\n  assert.equal(parseJsonObjectContract(), \"json-record-or-null-no-throw\");\n  assert.equal(parseJsonObjectFixtureLabel(), \"parse-json-object\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-json-object.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-13-take-last-items-8d922260f9",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-take-last-items",
+      "repository_commit": "2262ab6bd3590a858aa8e90dedc54f93bb0f68766225b271108b17c63f3d3ad0",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "take-last-items",
+      "difficulty": "L3",
+      "prompt": "Return a copied suffix of an array and treat non-positive or non-integer counts as empty.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/take-last-items.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/take-last-items.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-take-last-items\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function takeLastItemsContract() {\n  return \"bounded-suffix-copy\";\n}\n\n// PATCH_INTERFACE_TARGET takeLastItems START\nexport function takeLastItems(values, count) {\n  return values.slice(-count);\n}\n// PATCH_INTERFACE_TARGET takeLastItems END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function takeLastItemsFixtureLabel() {\n  return \"take-last-items\";\n}\n"
+        },
+        {
+          "path": "test/take-last-items.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { takeLastItems, takeLastItemsContract, takeLastItemsFixtureLabel } from '../src/take-last-items.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.deepEqual(takeLastItems([1, 2, 3], 2), [2, 3]);\n  assert.deepEqual(takeLastItems([1, 2, 3], 0), []);\n  assert.equal(takeLastItemsContract(), \"bounded-suffix-copy\");\n  assert.equal(takeLastItemsFixtureLabel(), \"take-last-items\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/take-last-items.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-14-move-list-item-c5fff25837",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-move-list-item",
+      "repository_commit": "64db81a8156e5430bf486b211f2736c5d5f11c5b7bcd1463ae683d661c4f00c8",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "move-list-item",
+      "difficulty": "L2",
+      "prompt": "Move one array item to a target index without mutating the caller's array.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/move-list-item.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/move-list-item.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-move-list-item\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function moveListItemContract() {\n  return \"immutable-indexed-move\";\n}\n\n// PATCH_INTERFACE_TARGET moveListItem START\nexport function moveListItem(values, from, to) {\n  const [item] = values.splice(from, 1);\n  values.splice(to, 0, item);\n  return values;\n}\n// PATCH_INTERFACE_TARGET moveListItem END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function moveListItemFixtureLabel() {\n  return \"move-list-item\";\n}\n"
+        },
+        {
+          "path": "test/move-list-item.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { moveListItem, moveListItemContract, moveListItemFixtureLabel } from '../src/move-list-item.mjs';\n\ntest(\"visible behavior\", () => {\n  const input = [\"a\", \"b\", \"c\"];\n  assert.deepEqual(moveListItem(input, 0, 2), [\"b\", \"c\", \"a\"]);\n  assert.deepEqual(input, [\"a\", \"b\", \"c\"]);\n  assert.equal(moveListItemContract(), \"immutable-indexed-move\");\n  assert.equal(moveListItemFixtureLabel(), \"move-list-item\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/move-list-item.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-15-weighted-average-126e8c7044",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-weighted-average",
+      "repository_commit": "ed7cc66e571ca9ac8df97a2dab69a671e0804a918877b84009cf9d81a2773f65",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "weighted-average",
+      "difficulty": "L2",
+      "prompt": "Compute a weighted average using the sum of weights and reject empty, mismatched, or zero-weight inputs.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/weighted-average.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/weighted-average.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-weighted-average\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function weightedAverageContract() {\n  return \"weighted-sum-over-weight-sum-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET weightedAverage START\nexport function weightedAverage(values, weights) {\n  return values.reduce((sum, value, index) => sum + value * weights[index], 0) / values.length;\n}\n// PATCH_INTERFACE_TARGET weightedAverage END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function weightedAverageFixtureLabel() {\n  return \"weighted-average\";\n}\n"
+        },
+        {
+          "path": "test/weighted-average.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { weightedAverage, weightedAverageContract, weightedAverageFixtureLabel } from '../src/weighted-average.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(weightedAverage([10, 20], [1, 3]), 17.5);\n  assert.equal(weightedAverageContract(), \"weighted-sum-over-weight-sum-or-null\");\n  assert.equal(weightedAverageFixtureLabel(), \"weighted-average\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/weighted-average.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-16-rolling-average-cae4a611da",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-rolling-average",
+      "repository_commit": "8753274652116af50b48a1ee2fe67b0215eb6b3c857695f341854e36af33e1dc",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "rolling-average",
+      "difficulty": "L2",
+      "prompt": "Return every complete rolling average window, including the final valid window.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/rolling-average.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/rolling-average.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-rolling-average\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function rollingAverageContract() {\n  return \"all-complete-windows-positive-size\";\n}\n\n// PATCH_INTERFACE_TARGET rollingAverage START\nexport function rollingAverage(values, size) {\n  const output = [];\n  for (let index = 0; index + size < values.length; index += 1) {\n    output.push(values.slice(index, index + size).reduce((sum, value) => sum + value, 0) / size);\n  }\n  return output;\n}\n// PATCH_INTERFACE_TARGET rollingAverage END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function rollingAverageFixtureLabel() {\n  return \"rolling-average\";\n}\n"
+        },
+        {
+          "path": "test/rolling-average.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rollingAverage, rollingAverageContract, rollingAverageFixtureLabel } from '../src/rolling-average.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.deepEqual(rollingAverage([1, 3, 5], 2), [2, 4]);\n  assert.equal(rollingAverageContract(), \"all-complete-windows-positive-size\");\n  assert.equal(rollingAverageFixtureLabel(), \"rolling-average\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/rolling-average.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-17-parse-env-assignment-af2c1c4afe",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-parse-env-assignment",
+      "repository_commit": "367315b9e019b71cc2822c5fa7593dbc67fb19661e0c24051cf6560fcc88a5c0",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "parse-env-assignment",
+      "difficulty": "L3",
+      "prompt": "Parse one environment assignment at its first equals sign while validating the key and preserving the remaining value.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/parse-env-assignment.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/parse-env-assignment.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-parse-env-assignment\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseEnvAssignmentContract() {\n  return \"validated-key-first-equals-split\";\n}\n\n// PATCH_INTERFACE_TARGET parseEnvAssignment START\nexport function parseEnvAssignment(line) {\n  const [key, value] = line.split(\"=\");\n  return { key, value };\n}\n// PATCH_INTERFACE_TARGET parseEnvAssignment END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseEnvAssignmentFixtureLabel() {\n  return \"parse-env-assignment\";\n}\n"
+        },
+        {
+          "path": "test/parse-env-assignment.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseEnvAssignment, parseEnvAssignmentContract, parseEnvAssignmentFixtureLabel } from '../src/parse-env-assignment.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.deepEqual(parseEnvAssignment(\"TOKEN=a=b\"), { key: \"TOKEN\", value: \"a=b\" });\n  assert.equal(parseEnvAssignment(\"BAD KEY=x\"), null);\n  assert.equal(parseEnvAssignmentContract(), \"validated-key-first-equals-split\");\n  assert.equal(parseEnvAssignmentFixtureLabel(), \"parse-env-assignment\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-env-assignment.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-18-get-path-value-280b061326",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-get-path-value",
+      "repository_commit": "264cdc542f45c566a9fac2abf8fd27690cc114ff30249caf734dc33ca2f1ccb9",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "get-path-value",
+      "difficulty": "L2",
+      "prompt": "Read a dotted own-property path safely without throwing or traversing prototype-sensitive keys.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/get-path-value.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/get-path-value.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-get-path-value\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function getPathValueContract() {\n  return \"own-properties-only-undefined-on-miss\";\n}\n\n// PATCH_INTERFACE_TARGET getPathValue START\nexport function getPathValue(value, dottedPath) {\n  return dottedPath.split(\".\").reduce((current, key) => current[key], value);\n}\n// PATCH_INTERFACE_TARGET getPathValue END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function getPathValueFixtureLabel() {\n  return \"get-path-value\";\n}\n"
+        },
+        {
+          "path": "test/get-path-value.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { getPathValue, getPathValueContract, getPathValueFixtureLabel } from '../src/get-path-value.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(getPathValue({ user: { name: \"Ada\" } }, \"user.name\"), \"Ada\");\n  assert.equal(getPathValue({ user: null }, \"user.name\"), undefined);\n  assert.equal(getPathValueContract(), \"own-properties-only-undefined-on-miss\");\n  assert.equal(getPathValueFixtureLabel(), \"get-path-value\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/get-path-value.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-19-apply-defaults-305d454174",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-apply-defaults",
+      "repository_commit": "fac63d8e3f35211a08af48d50688228d5a5d4ac4361fea9c4a4a1cf0387adeaf",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "apply-defaults",
+      "difficulty": "L2",
+      "prompt": "Apply defaults only when an incoming property is undefined while preserving null and other falsy values.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/apply-defaults.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/apply-defaults.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-apply-defaults\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function applyDefaultsContract() {\n  return \"undefined-does-not-overwrite-default\";\n}\n\n// PATCH_INTERFACE_TARGET applyDefaults START\nexport function applyDefaults(defaults, value) {\n  return { ...defaults, ...value };\n}\n// PATCH_INTERFACE_TARGET applyDefaults END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function applyDefaultsFixtureLabel() {\n  return \"apply-defaults\";\n}\n"
+        },
+        {
+          "path": "test/apply-defaults.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { applyDefaults, applyDefaultsContract, applyDefaultsFixtureLabel } from '../src/apply-defaults.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.deepEqual(applyDefaults({ retries: 3, enabled: true }, { retries: undefined, enabled: false }), { retries: 3, enabled: false });\n  assert.equal(applyDefaultsContract(), \"undefined-does-not-overwrite-default\");\n  assert.equal(applyDefaultsFixtureLabel(), \"apply-defaults\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/apply-defaults.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-20-serialize-query-c0867650c6",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-serialize-query",
+      "repository_commit": "1781cafbcd0b5c246035ca632c68c00b41e97853049bc3bcce9971b46fb17107",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "serialize-query",
+      "difficulty": "L2",
+      "prompt": "Serialize query fields deterministically with sorted keys, repeated array entries, and omitted nullish values.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/serialize-query.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/serialize-query.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-serialize-query\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function serializeQueryContract() {\n  return \"sorted-repeated-url-search-params\";\n}\n\n// PATCH_INTERFACE_TARGET serializeQuery START\nexport function serializeQuery(value) {\n  return new URLSearchParams(value).toString();\n}\n// PATCH_INTERFACE_TARGET serializeQuery END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function serializeQueryFixtureLabel() {\n  return \"serialize-query\";\n}\n"
+        },
+        {
+          "path": "test/serialize-query.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { serializeQuery, serializeQueryContract, serializeQueryFixtureLabel } from '../src/serialize-query.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(serializeQuery({ tag: [\"b\", \"a\"], q: \"hello world\" }), \"q=hello+world&tag=b&tag=a\");\n  assert.equal(serializeQueryContract(), \"sorted-repeated-url-search-params\");\n  assert.equal(serializeQueryFixtureLabel(), \"serialize-query\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/serialize-query.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-21-match-etag-list-593647080b",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-match-etag-list",
+      "repository_commit": "83287667b12958fe5e50c6808328f6432a68e3d828f5be6643d4cd508bb77c26",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "match-etag-list",
+      "difficulty": "L3",
+      "prompt": "Match an If-None-Match list using wildcard and weak ETag comparison semantics.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/match-etag-list.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/match-etag-list.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-match-etag-list\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function matchEtagListContract() {\n  return \"comma-list-wildcard-weak-comparison\";\n}\n\n// PATCH_INTERFACE_TARGET matchEtagList START\nexport function matchEtagList(header, current) {\n  return header === current;\n}\n// PATCH_INTERFACE_TARGET matchEtagList END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function matchEtagListFixtureLabel() {\n  return \"match-etag-list\";\n}\n"
+        },
+        {
+          "path": "test/match-etag-list.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { matchEtagList, matchEtagListContract, matchEtagListFixtureLabel } from '../src/match-etag-list.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(matchEtagList('\"old\", W/\"abc\"', '\"abc\"'), true);\n  assert.equal(matchEtagList('\"old\"', '\"abc\"'), false);\n  assert.equal(matchEtagListContract(), \"comma-list-wildcard-weak-comparison\");\n  assert.equal(matchEtagListFixtureLabel(), \"match-etag-list\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/match-etag-list.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-22-choose-language-f6b919bf2c",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-choose-language",
+      "repository_commit": "00b8ab2b7fbda0452e96c4c08feebf2a0fa125c6761cb489958242d4453f1681",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "choose-language",
+      "difficulty": "L2",
+      "prompt": "Select the highest-quality exactly supported language from an Accept-Language header.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/choose-language.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/choose-language.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-choose-language\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function chooseLanguageContract() {\n  return \"quality-ranked-case-insensitive-selection\";\n}\n\n// PATCH_INTERFACE_TARGET chooseLanguage START\nexport function chooseLanguage(header, supported) {\n  return header.split(\",\")[0].trim();\n}\n// PATCH_INTERFACE_TARGET chooseLanguage END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function chooseLanguageFixtureLabel() {\n  return \"choose-language\";\n}\n"
+        },
+        {
+          "path": "test/choose-language.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { chooseLanguage, chooseLanguageContract, chooseLanguageFixtureLabel } from '../src/choose-language.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(chooseLanguage(\"fr;q=0.4, en;q=0.9\", [\"fr\", \"en\"]), \"en\");\n  assert.equal(chooseLanguageContract(), \"quality-ranked-case-insensitive-selection\");\n  assert.equal(chooseLanguageFixtureLabel(), \"choose-language\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/choose-language.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-23-seconds-to-clock-8fde531045",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-seconds-to-clock",
+      "repository_commit": "ac9ac0cb3c6e3891f69bf5ef0f34dabf066b8ab47990aab65d10d010e67de4bb",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "seconds-to-clock",
+      "difficulty": "L2",
+      "prompt": "Format a non-negative integer duration as unbounded hours plus two-digit minutes and seconds.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/seconds-to-clock.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/seconds-to-clock.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-seconds-to-clock\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function secondsToClockContract() {\n  return \"hours-colon-two-digit-minute-second\";\n}\n\n// PATCH_INTERFACE_TARGET secondsToClock START\nexport function secondsToClock(totalSeconds) {\n  const minutes = Math.floor(totalSeconds / 60);\n  const seconds = totalSeconds % 60;\n  return \"0:\" + String(minutes).padStart(2, \"0\") + \":\" + String(seconds).padStart(2, \"0\");\n}\n// PATCH_INTERFACE_TARGET secondsToClock END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function secondsToClockFixtureLabel() {\n  return \"seconds-to-clock\";\n}\n"
+        },
+        {
+          "path": "test/seconds-to-clock.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { secondsToClock, secondsToClockContract, secondsToClockFixtureLabel } from '../src/seconds-to-clock.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.equal(secondsToClock(3661), \"1:01:01\");\n  assert.equal(secondsToClockContract(), \"hours-colon-two-digit-minute-second\");\n  assert.equal(secondsToClockFixtureLabel(), \"seconds-to-clock\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/seconds-to-clock.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-24-intersect-ranges-b6f8538698",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-intersect-ranges",
+      "repository_commit": "48b97249af6dfaacd6769b00a11ec6a426e5f3416ad4ff122d196f1ad8f55dc0",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "intersect-ranges",
+      "difficulty": "L2",
+      "prompt": "Return the inclusive intersection of two closed numeric ranges, including a single shared endpoint.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/intersect-ranges.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/intersect-ranges.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-intersect-ranges\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function intersectRangesContract() {\n  return \"closed-range-intersection-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET intersectRanges START\nexport function intersectRanges(left, right) {\n  const start = Math.max(left[0], right[0]);\n  const end = Math.min(left[1], right[1]);\n  return start < end ? [start, end] : null;\n}\n// PATCH_INTERFACE_TARGET intersectRanges END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function intersectRangesFixtureLabel() {\n  return \"intersect-ranges\";\n}\n"
+        },
+        {
+          "path": "test/intersect-ranges.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { intersectRanges, intersectRangesContract, intersectRangesFixtureLabel } from '../src/intersect-ranges.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.deepEqual(intersectRanges([1, 3], [3, 5]), [3, 3]);\n  assert.equal(intersectRangesContract(), \"closed-range-intersection-or-null\");\n  assert.equal(intersectRangesFixtureLabel(), \"intersect-ranges\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/intersect-ranges.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-25-parse-byte-range-2f2f3376de",
+      "dataset_role": "DEVELOPMENT_ONLY",
+      "repository_id": "patch-interface-fixture-parse-byte-range",
+      "repository_commit": "6401a0822a17c32b6280995ba82771bd13a3767a4b62e0d36542b3308833847d",
+      "ecosystem": "node-esm-no-dependencies",
+      "category": "behavioral_patch",
+      "task_family": "parse-byte-range",
+      "difficulty": "L3",
+      "prompt": "Parse one closed HTTP byte range, clamp its end to resource size, and reject malformed or unsatisfiable ranges.",
+      "expected_outcome": "PATCH_PROPOSAL",
+      "allowed_files": [
+        "src/parse-byte-range.mjs"
+      ],
+      "visible_files": [
+        {
+          "path": "src/parse-byte-range.mjs",
+          "content": "export const FIXTURE_ID = \"patch-interface-parse-byte-range\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseByteRangeContract() {\n  return \"single-closed-byte-range-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET parseByteRange START\nexport function parseByteRange(value, size) {\n  const [start, end] = value.replace(\"bytes=\", \"\").split(\"-\").map(Number);\n  return { start, end };\n}\n// PATCH_INTERFACE_TARGET parseByteRange END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseByteRangeFixtureLabel() {\n  return \"parse-byte-range\";\n}\n"
+        },
+        {
+          "path": "test/parse-byte-range.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseByteRange, parseByteRangeContract, parseByteRangeFixtureLabel } from '../src/parse-byte-range.mjs';\n\ntest(\"visible behavior\", () => {\n  assert.deepEqual(parseByteRange(\"bytes=2-5\", 10), { start: 2, end: 5 });\n  assert.deepEqual(parseByteRange(\"bytes=8-20\", 10), { start: 8, end: 9 });\n  assert.equal(parseByteRangeContract(), \"single-closed-byte-range-or-null\");\n  assert.equal(parseByteRangeFixtureLabel(), \"parse-byte-range\");\n});\n"
+        }
+      ],
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-byte-range.visible.test.mjs"
+      ],
+      "changed_line_budget": 32,
+      "mutation_certification": "SAFE_MUTATION_REQUIRED",
+      "relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "provenance": "independently authored executable patch-interface development microrepository with visible and hidden behavioral oracles",
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false,
+        "authoring_basis": "new dependency-free Node ESM behavior fixture; not transformed from G3, holdout, or historical patch content"
+      }
+    }
+  ],
+  "taskPayloadSha256": "441783aa583e9bca715e8601d2c522458f4f019bbc86d6870684e0c387f38fa0"
+}

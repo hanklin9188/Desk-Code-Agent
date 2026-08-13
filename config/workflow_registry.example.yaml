@@ -1,0 +1,223 @@
+version: 1
+runtime_policy:
+  default_agent_mode: SINGLE
+  specialist_routing: EXPERIMENTAL_DISABLED_BY_DEFAULT
+  semantic_review: EXPERIMENTAL_DISABLED_BY_DEFAULT
+  model_context:
+    retrieval_primary: SYMBOL_TOP_2
+    retrieval_fallback: HYBRID_TOP_2
+    package: C1_TASK_PLUS_SOURCE
+    progressive_disclosure: true
+  deterministic_always_on:
+  - R02
+  - R05
+  - R06
+  - R07
+  - R09
+  - R21
+  - R25
+  - R26
+  - R28
+workflows:
+  EXPLORE:
+    skills:
+    - R01
+    - R02
+    - R05
+    - R06
+    - R07
+    - R08
+    - R09
+    - R24
+    - R26
+    - R28
+    mutation: false
+  ANALYZE:
+    skills:
+    - R01
+    - R02
+    - R03
+    - R04
+    - R05
+    - R06
+    - R07
+    - R08
+    - R09
+    - R10
+    - R11
+    - R12
+    - R13
+    - R14
+    - R15
+    - R24
+    - R26
+    - R28
+    mutation: false
+  ONBOARD:
+    skills:
+    - R01
+    - R02
+    - R03
+    - R04
+    - R05
+    - R06
+    - R07
+    - R08
+    - R09
+    - R10
+    - R11
+    - R13
+    - R16
+    - R24
+    - R26
+    - R28
+    mutation: false
+  DEBUG:
+    skills:
+    - R01
+    - R02
+    - R03
+    - R04
+    - R05
+    - R06
+    - R07
+    - R08
+    - R09
+    - R17
+    - R18
+    - R19
+    - R20
+    - R21
+    - R22
+    - R24
+    - R25
+    - R26
+    - R28
+    mutation: true
+    conditional_skills:
+      after_failed_patch_with_new_evidence:
+      - R17
+      - R18
+      experimental_semantic_review:
+      - R22
+  CODE:
+    skills:
+    - R01
+    - R02
+    - R03
+    - R04
+    - R05
+    - R06
+    - R07
+    - R08
+    - R09
+    - R19
+    - R20
+    - R21
+    - R22
+    - R23
+    - R24
+    - R25
+    - R26
+    - R28
+    mutation: true
+    conditional_skills:
+      experimental_semantic_review:
+      - R22
+  REVIEW:
+    skills:
+    - R01
+    - R02
+    - R04
+    - R05
+    - R06
+    - R07
+    - R08
+    - R09
+    - R21
+    - R22
+    - R24
+    - R26
+    - R28
+    mutation: false
+    conditional_skills:
+      explicit_experiment_only:
+      - R22
+  MIXED:
+    skills:
+    - R01
+    - R02
+    - R03
+    - R04
+    - R05
+    - R06
+    - R07
+    - R08
+    - R09
+    - R10
+    - R11
+    - R12
+    - R13
+    - R14
+    - R15
+    - R17
+    - R18
+    - R19
+    - R20
+    - R21
+    - R22
+    - R23
+    - R24
+    - R25
+    - R26
+    - R28
+    mutation: conditional
+hard_edges:
+  R01:
+  - R02
+  R02:
+  - R03
+  - R04
+  - R05
+  R03:
+  - R04
+  R04:
+  - R05
+  - R24
+  R05:
+  - R06
+  R06:
+  - R07
+  R07:
+  - R08
+  R08:
+  - R09
+  R17:
+  - R18
+  R18:
+  - R19
+  R19:
+  - R20
+  R20:
+  - R21
+  R21:
+  - R18
+  - R22
+  R22:
+  - R19
+  - R23
+  - R24
+  R23:
+  - R21
+  R24:
+  - R27
+  R27: []
+forbidden_edges:
+- - R20
+  - R27
+- - R19
+  - R24
+- - R21
+  - R20
+- - R10
+  - R20

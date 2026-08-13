@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-fresh-real-patch-g1-evaluator-correction-2026-08-09T06-45-01-506Z",
+  "classification": "SEALED_REALISTIC_EXECUTABLE_PATCH_CORPUS_GENERATION_1",
+  "status": "PASS",
+  "candidateSha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+  "corpusSealSha256": "bd8aa4c8a26c8fe62af9a671cb74089ff20c786676bc5b824422729e1027260a",
+  "environment": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "vllm": "0.26.0",
+    "precision": "bfloat16",
+    "temperature": 0,
+    "seed": 20260809,
+    "thinking": false
+  },
+  "seal": {
+    "status": "PASS",
+    "artifactChecks": 3,
+    "taskCount": 24,
+    "repositoryCount": 6
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawModelOutputStored": false,
+    "apiKeyStored": false
+  },
+  "evaluatorCorrection": {
+    "reason": "Python unittest file-path invocation set the import root to tests/; corrected to module invocation from the isolated workspace root",
+    "modelCalls": 0,
+    "promptsChanged": false,
+    "selectionsChanged": false,
+    "sourceRun": "docs/experiments/runs/m9-fresh-real-patch-g1-2026-08-09T06-43-35-547Z/real-patch-corpus-result.json",
+    "sourceRunSha256": "116eef22f9e34bc7dc8d873ab0019ad8826e2dfcbfbb08d9d92c7897e7b74355"
+  },
+  "resultFile": "real-patch-corpus-result.json",
+  "resultSha256": "d3754d60ebe4b7caa8cc37665d8ed96e8f2454be52959f2cf7d752a10421d9d4",
+  "summary": {
+    "e1": {
+      "configuration": "E1",
+      "tasks": 24,
+      "selectionCorrect": 23,
+      "schemaValid": 24,
+      "patchApplied": 24,
+      "patchSuccess": 23,
+      "correctFileSelection": 24,
+      "compilePass": 24,
+      "targetedPass": 24,
+      "hiddenPass": 23,
+      "regressionPass": 24,
+      "wrongFileEdits": 0,
+      "deterministicPolicyBlocks": 0,
+      "rollbackCorrect": 24,
+      "actualSafetyViolations": 0,
+      "changedLines": {
+        "median": 3,
+        "p95": 6
+      },
+      "unnecessaryLines": {
+        "total": 0
+      },
+      "tokens": {
+        "median": 557.5,
+        "p95": 610
+      },
+      "latencyMs": {
+        "median": 375.243,
+        "p95": 444.152
+      }
+    },
+    "emin": {
+      "configuration": "E-MIN-V2",
+      "tasks": 24,
+      "selectionCorrect": 23,
+      "schemaValid": 24,
+      "patchApplied": 24,
+      "patchSuccess": 23,
+      "correctFileSelection": 24,
+      "compilePass": 24,
+      "targetedPass": 24,
+      "hiddenPass": 23,
+      "regressionPass": 24,
+      "wrongFileEdits": 0,
+      "deterministicPolicyBlocks": 0,
+      "rollbackCorrect": 24,
+      "actualSafetyViolations": 0,
+      "changedLines": {
+        "median": 3,
+        "p95": 6
+      },
+      "unnecessaryLines": {
+        "total": 0
+      },
+      "tokens": {
+        "median": 603,
+        "p95": 654
+      },
+      "latencyMs": {
+        "median": 415.213,
+        "p95": 435.744
+      }
+    },
+    "paired": {
+      "e1Only": 0,
+      "eminOnly": 0,
+      "bothPass": 23,
+      "bothFail": 1
+    }
+  }
+}

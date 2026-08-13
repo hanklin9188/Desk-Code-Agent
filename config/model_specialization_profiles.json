@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "comparisonId": "qwen35-4b-vs-qwen25-coder-3b-bf16-v1",
+  "sharedServing": {
+    "backend": "vllm",
+    "backendVersion": "0.26.0",
+    "generationConfig": "vllm",
+    "host": "127.0.0.1",
+    "port": 8000,
+    "precision": "bfloat16",
+    "comparisonContextLimit": 8192,
+    "gpuMemoryUtilization": 0.82,
+    "maxNumSequences": 1,
+    "prefixCaching": true,
+    "temperature": 0,
+    "seed": 20260809,
+    "reasoningMode": false,
+    "residency": "SEQUENTIAL_ONLY"
+  },
+  "profiles": {
+    "baseline": {
+      "modelId": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "nativeContextLimit": 262144,
+      "architecture": "Qwen3_5ForConditionalGeneration",
+      "chatTemplateSource": "snapshot/chat_template.jinja",
+      "toolSupport": "NOT_USED_IN_COMPARISON",
+      "structuredOutputSupport": "VLLM_JSON_SCHEMA",
+      "licenseId": "apache-2.0",
+      "licenseUse": "LOCAL_EVALUATION",
+      "snapshotDirectoryName": "models--Qwen--Qwen3.5-4B",
+      "availability": "REQUIRED_LOCAL_BASELINE"
+    },
+    "coder": {
+      "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+      "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+      "nativeContextLimit": 32768,
+      "architecture": "Qwen2ForCausalLM",
+      "chatTemplateSource": "snapshot/tokenizer_config.json#chat_template",
+      "toolSupport": "NOT_USED_IN_COMPARISON",
+      "structuredOutputSupport": "VLLM_JSON_SCHEMA_REQUIRES_SMOKE_VALIDATION",
+      "licenseId": "qwen-research-license-2024-09-19",
+      "licenseUse": "NON_COMMERCIAL_RESEARCH_EVALUATION_ONLY",
+      "snapshotDirectoryName": "models--Qwen--Qwen2.5-Coder-3B-Instruct",
+      "availability": "APPROVAL_GATED_CANDIDATE"
+    }
+  }
+}

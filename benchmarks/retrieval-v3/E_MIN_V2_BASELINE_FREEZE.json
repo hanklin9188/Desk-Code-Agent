@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "freeze_id": "emin-v2-pre-emin-v3-development-2026-08-09",
+  "state": "IMMUTABLE_BASELINE_REFERENCE",
+  "candidate_id": "E-MIN-V2",
+  "candidate_artifact": "config/production/emin-v2-frozen-2026-08-09.json",
+  "candidate_artifact_sha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+  "candidate_source_closure_sha256": "bb8c8b9abc4d863691446f3ff4523a68489a6139425acddd05ead5df6043cdf8",
+  "holdout_g1_preregistration_sha256": "b0945095c1de4eec00355e05654defa7ff038463b7144d5103c92b404f31ba6d",
+  "holdout_g1_seal_sha256": "40edbccaffdbb22022633cbb97d5a8c1eda45012596ecac0b77df14f3ab3616e",
+  "holdout_g1_manifest_sha256": "73b8e03b7c2d8cf79c7e7462957bdd8eb04aae770ef9682ce9fff59d46cd1942",
+  "holdout_g1_oracle_sha256": "df87e550cefac244b7c706c66067c83aa2aff3254d28a77f530c37560a27793b",
+  "holdout_g1_e1_result_sha256": "3c6610c5cb6f985b49661cbe09941332dff3320c2d9990fd1586b6bd5fd01948",
+  "holdout_g1_emin_v2_result_sha256": "9e7ecaf57ead17238770fe878ed2190b14911ae2a9d31cd089788435144c802a",
+  "real_repository_g1_result_sha256": "5559b39c38e3e4585353bc8ad29ddc528abefddb06cea7b4c726d3557c67381e",
+  "rules": [
+    "Do not modify E-MIN-V2 behavior, prompts, decoding, routing, thresholds, or source closure.",
+    "Do not use Holdout G1, the original 108 tasks, or the four G1 public-repository tasks to tune E-MIN-V3.",
+    "All retrieval changes belong to E-MIN-V3 and require a new post-freeze holdout generation."
+  ]
+}

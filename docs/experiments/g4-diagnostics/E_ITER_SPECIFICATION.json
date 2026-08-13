@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "hypothesisId": "E-ITER-HYPOTHESIS-V1",
+  "state": "REJECTED_G4_DEVELOPMENT_GATE_NOT_A_CANDIDATE",
+  "candidateConfigurationCreated": false,
+  "candidateHash": null,
+  "inputContract": [
+    "original task",
+    "current relevant source",
+    "concrete test/tool failure",
+    "previous patch summary",
+    "newly acquired evidence"
+  ],
+  "excluded": [
+    "full conversation replay",
+    "free-form agent handoff",
+    "semantic reviewer by default",
+    "same-evidence retry",
+    "unbounded reflection"
+  ],
+  "algorithm": [
+    "one minimal source/test context call",
+    "constrained worktree verification",
+    "retry once only for unseen concrete evidence",
+    "third call only for another distinct verifier signal and preregistered value gate",
+    "stop on success, repeated evidence, or budget"
+  ],
+  "preregisteredGate": {
+    "requiredAll": [
+      "2-call final behavioral success improves by at least 10 percentage points over 1-call",
+      "at least 15 percent of first failures recover on call 2",
+      "repeated-patch rate <= 10 percent",
+      "contradiction rate <= 5 percent",
+      "zero safety violations and zero wrong-file edits",
+      "mean 2-call tokens <= 2.2 times 1-call tokens"
+    ],
+    "thirdCallRule": "Enable only if call 3 adds at least 5 percentage points over call 2 with new verifier evidence and no safety regression.",
+    "otherwise": "Do not create E-ITER candidate; retain protocol as rejected development hypothesis."
+  },
+  "observed": {
+    "summaries": {
+      "1": {
+        "tasks": 12,
+        "successes": 0,
+        "successRate": 0,
+        "recoveries": 0,
+        "recoveryRateAmongFirstFailures": 0,
+        "repeatedPatchRate": 0,
+        "contradictionRate": 0,
+        "safetyViolations": 0,
+        "rollbackPassRate": 1,
+        "meanTokens": 428.9166666666667,
+        "meanLatencyMs": 3410.44320075,
+        "meanCalls": 1
+      },
+      "2": {
+        "tasks": 12,
+        "successes": 0,
+        "successRate": 0,
+        "recoveries": 0,
+        "recoveryRateAmongFirstFailures": 0,
+        "repeatedPatchRate": 0,
+        "contradictionRate": 1,
+        "safetyViolations": 0,
+        "rollbackPassRate": 1,
+        "meanTokens": 959.75,
+        "meanLatencyMs": 6976.6647779166915,
+        "meanCalls": 2
+      },
+      "3": {
+        "tasks": 12,
+        "successes": 0,
+        "successRate": 0,
+        "recoveries": 0,
+        "recoveryRateAmongFirstFailures": 0,
+        "repeatedPatchRate": 0,
+        "contradictionRate": 1,
+        "safetyViolations": 0,
+        "rollbackPassRate": 1,
+        "meanTokens": 959.75,
+        "meanLatencyMs": 6981.800341000005,
+        "meanCalls": 2
+      }
+    },
+    "gate": {
+      "improvement2Vs1Pp": 0,
+      "recovery2": 0,
+      "repeated2": 0,
+      "contradiction2": 1,
+      "safety2": 0,
+      "tokenRatio2Vs1": 2.2376141441616473,
+      "improvement3Vs2Pp": 0,
+      "passed": false,
+      "thirdCallJustified": false
+    }
+  },
+  "decisionReasons": [
+    "2-call improvement was 0 percentage points",
+    "recovery from first failure was 0%",
+    "2-call contradiction rate was 100%",
+    "2-call token ratio was 2.238, above the 2.2 cap",
+    "3-call condition produced no additional call or success because no distinct evidence remained",
+    "safety and rollback stayed valid but safety alone is insufficient for candidate creation"
+  ],
+  "futureReconsideration": "Requires a new development generation or approved stronger model to satisfy the same behavioral gate. G3 cannot be reused for tuning."
+}

@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dca://privacy-safe-observability/l1-evidence-v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "level",
+    "taskId",
+    "repositoryRevision",
+    "physicalCallId",
+    "requestSha256",
+    "actionIdentitySha256",
+    "modelResponseStatus",
+    "actionParseStatus",
+    "actionValidationStatus",
+    "replacementPresent",
+    "afterSourceParseStatus",
+    "astFeaturesAvailable",
+    "parserFailureCategory",
+    "selectedFile",
+    "range",
+    "targetSymbol",
+    "replacementShape",
+    "astFeatures",
+    "canonicalEditSha256",
+    "hashKeyId",
+    "verification",
+    "visibleBehavioralEffect",
+    "privacy"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 2
+    },
+    "level": {
+      "const": "L1_STRUCTURED_DERIVED_EDIT_FEATURES"
+    },
+    "taskId": {
+      "type": "string"
+    },
+    "repositoryRevision": {
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "physicalCallId": {
+      "type": "string"
+    },
+    "requestSha256": {
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "actionIdentitySha256": {
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "modelResponseStatus": {
+      "const": "COMPLETED"
+    },
+    "actionParseStatus": {
+      "enum": [
+        "JSON_OBJECT",
+        "JSON_INVALID",
+        "EMPTY_RESPONSE"
+      ]
+    },
+    "actionValidationStatus": {
+      "enum": [
+        "PASS",
+        "NOT_APPLICABLE",
+        "MISSING_FIELD",
+        "EXTRA_FIELD",
+        "INVALID_FIELD_TYPE",
+        "FILE_NOT_ALLOWED",
+        "RANGE_INVALID",
+        "RANGE_OUT_OF_BOUNDS"
+      ]
+    },
+    "replacementPresent": {
+      "type": "boolean"
+    },
+    "afterSourceParseStatus": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "astFeaturesAvailable": {
+      "type": "boolean"
+    },
+    "parserFailureCategory": {
+      "enum": [
+        "NONE",
+        "EMPTY_REPLACEMENT",
+        "WHITESPACE_ONLY_REPLACEMENT",
+        "TREE_SITTER_SYNTAX_ERROR",
+        "INVALID_ACTION_NO_AFTER_SOURCE"
+      ]
+    },
+    "selectedFile": {
+      "type": "string"
+    },
+    "range": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "targetSymbol": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "replacementShape": {
+      "type": "object"
+    },
+    "astFeatures": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "canonicalEditSha256": {
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "hashKeyId": {
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "verification": {
+      "type": "object"
+    },
+    "visibleBehavioralEffect": {
+      "type": "object"
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rawPromptStored",
+        "rawModelOutputStored",
+        "rawEditBodyStored",
+        "rawIdentifiersStored",
+        "rawLiteralsStored",
+        "commentsStored",
+        "sourceStored",
+        "rawParserMessageStored",
+        "hashKeyStored"
+      ],
+      "properties": {
+        "rawPromptStored": {
+          "const": false
+        },
+        "rawModelOutputStored": {
+          "const": false
+        },
+        "rawEditBodyStored": {
+          "const": false
+        },
+        "rawIdentifiersStored": {
+          "const": false
+        },
+        "rawLiteralsStored": {
+          "const": false
+        },
+        "commentsStored": {
+          "const": false
+        },
+        "sourceStored": {
+          "const": false
+        },
+        "rawParserMessageStored": {
+          "const": false
+        },
+        "hashKeyStored": {
+          "const": false
+        }
+      }
+    }
+  }
+}

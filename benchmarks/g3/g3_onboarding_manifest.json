@@ -1,0 +1,2677 @@
+{
+  "schema_version": 1,
+  "corpus_id": "dca-g3-real-repository-onboarding",
+  "classification": "POST_PRIMARY_SEAL_DEDICATED_SECONDARY_CORPUS_NOT_USED_FOR_PRIMARY_PROMOTION",
+  "repository_manifest_sha256": "58498365b68d90fe9759c9fbd3ae27c061796f4ca41de879e5cba7495ed4d806",
+  "created_before_first_onboarding_model_call": true,
+  "repositories": 24,
+  "tasks": [
+    {
+      "task_id": "g3-onboarding-werkzeug-purpose-c0b4eb39",
+      "repository_id": "werkzeug",
+      "repository_commit": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "split": "development",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt werkzeug. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-werkzeug-contributor_run-ac13ff70",
+      "repository_id": "werkzeug",
+      "repository_commit": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "split": "development",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for werkzeug. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/lock.yaml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-werkzeug-execution_entry-2a075634",
+      "repository_id": "werkzeug",
+      "repository_commit": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "split": "development",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in werkzeug. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "src/werkzeug/__init__.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-werkzeug-testing_workflow-89830d44",
+      "repository_id": "werkzeug",
+      "repository_commit": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "split": "development",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to werkzeug are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "tests/sansio/__init__.py",
+        ".github/workflows/lock.yaml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-werkzeug-license_constraints-b6726f8a",
+      "repository_id": "werkzeug",
+      "repository_commit": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "split": "development",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for werkzeug. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE.txt",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-werkzeug-reading_order-20c8827d",
+      "repository_id": "werkzeug",
+      "repository_commit": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "split": "development",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in werkzeug, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "src/werkzeug/__init__.py",
+        "src/werkzeug/datastructures/__init__.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-werkzeug-architecture-5323d84f",
+      "repository_id": "werkzeug",
+      "repository_commit": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "split": "development",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of werkzeug with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "src/werkzeug/__init__.py",
+        "src/werkzeug/datastructures/__init__.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-werkzeug-dependencies-0dee59f3",
+      "repository_id": "werkzeug",
+      "repository_commit": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "split": "development",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for werkzeug, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "pyproject.toml",
+        "src/werkzeug/datastructures/__init__.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-ky-purpose-7c1aaf74",
+      "repository_id": "ky",
+      "repository_commit": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "split": "development",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt ky. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "readme.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-ky-contributor_run-a960ca56",
+      "repository_id": "ky",
+      "repository_commit": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "split": "development",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for ky. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "readme.md",
+        ".github/workflows/main.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-ky-execution_entry-87c629ab",
+      "repository_id": "ky",
+      "repository_commit": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "split": "development",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in ky. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "source/index.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-ky-testing_workflow-3db145a1",
+      "repository_id": "ky",
+      "repository_commit": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "split": "development",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to ky are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "test/base-url.ts",
+        ".github/workflows/main.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-ky-license_constraints-7aa9fe45",
+      "repository_id": "ky",
+      "repository_commit": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "split": "development",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for ky. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "license",
+        "package.json"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-ky-reading_order-062a180b",
+      "repository_id": "ky",
+      "repository_commit": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "split": "development",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in ky, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "source/index.ts",
+        "source/core/constants.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-ky-architecture-ccbbd442",
+      "repository_id": "ky",
+      "repository_commit": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "split": "development",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of ky with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "readme.md",
+        "source/index.ts",
+        "source/core/constants.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-ky-dependencies-8b6c89a1",
+      "repository_id": "ky",
+      "repository_commit": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "split": "development",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for ky, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "package.json",
+        "source/core/constants.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-echo-purpose-154bb175",
+      "repository_id": "echo",
+      "repository_commit": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+      "split": "development",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt echo. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-echo-contributor_run-29461fa7",
+      "repository_id": "echo",
+      "repository_commit": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+      "split": "development",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for echo. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/checks.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-echo-execution_entry-41f04aab",
+      "repository_id": "echo",
+      "repository_commit": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+      "split": "development",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in echo. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "server.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-echo-testing_workflow-277afc7c",
+      "repository_id": "echo",
+      "repository_commit": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+      "split": "development",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to echo are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "bind_cache_test.go",
+        ".github/workflows/checks.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-echo-license_constraints-18144d21",
+      "repository_id": "echo",
+      "repository_commit": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+      "split": "development",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for echo. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "go.mod"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-echo-reading_order-728c6144",
+      "repository_id": "echo",
+      "repository_commit": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+      "split": "development",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in echo, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "server.go",
+        "bind.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-echo-architecture-6f102adf",
+      "repository_id": "echo",
+      "repository_commit": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+      "split": "development",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of echo with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "server.go",
+        "bind.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-echo-dependencies-ff7d364b",
+      "repository_id": "echo",
+      "repository_commit": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+      "split": "development",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for echo, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "go.mod",
+        "bind.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-anyhow-purpose-56e0605d",
+      "repository_id": "anyhow",
+      "repository_commit": "bf3ed9149f4334c984c1ad252b534107b307078c",
+      "split": "development",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt anyhow. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-anyhow-contributor_run-ac2e155e",
+      "repository_id": "anyhow",
+      "repository_commit": "bf3ed9149f4334c984c1ad252b534107b307078c",
+      "split": "development",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for anyhow. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-anyhow-execution_entry-81b8ace4",
+      "repository_id": "anyhow",
+      "repository_commit": "bf3ed9149f4334c984c1ad252b534107b307078c",
+      "split": "development",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in anyhow. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "src/lib.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-anyhow-testing_workflow-a1f0fe0b",
+      "repository_id": "anyhow",
+      "repository_commit": "bf3ed9149f4334c984c1ad252b534107b307078c",
+      "split": "development",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to anyhow are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "tests/test_backtrace.rs",
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-anyhow-license_constraints-34dce007",
+      "repository_id": "anyhow",
+      "repository_commit": "bf3ed9149f4334c984c1ad252b534107b307078c",
+      "split": "development",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for anyhow. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE-APACHE",
+        "Cargo.toml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-anyhow-reading_order-05164785",
+      "repository_id": "anyhow",
+      "repository_commit": "bf3ed9149f4334c984c1ad252b534107b307078c",
+      "split": "development",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in anyhow, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "src/lib.rs",
+        "src/backtrace.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-anyhow-architecture-3f16b122",
+      "repository_id": "anyhow",
+      "repository_commit": "bf3ed9149f4334c984c1ad252b534107b307078c",
+      "split": "development",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of anyhow with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "src/lib.rs",
+        "src/backtrace.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-anyhow-dependencies-5b38a4f8",
+      "repository_id": "anyhow",
+      "repository_commit": "bf3ed9149f4334c984c1ad252b534107b307078c",
+      "split": "development",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for anyhow, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "Cargo.toml",
+        "src/backtrace.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zlib-purpose-b82be8a2",
+      "repository_id": "zlib",
+      "repository_commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "split": "development",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt zlib. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zlib-contributor_run-252133a8",
+      "repository_id": "zlib",
+      "repository_commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "split": "development",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for zlib. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README",
+        ".github/workflows/c-std.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zlib-execution_entry-0770a489",
+      "repository_id": "zlib",
+      "repository_commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "split": "development",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in zlib. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "adler32.c"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zlib-testing_workflow-2eeeee9d",
+      "repository_id": "zlib",
+      "repository_commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "split": "development",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to zlib are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "contrib/blast/blast-test.c",
+        ".github/workflows/c-std.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zlib-license_constraints-350da2bc",
+      "repository_id": "zlib",
+      "repository_commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "split": "development",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for zlib. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "CMakeLists.txt"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zlib-reading_order-08291d51",
+      "repository_id": "zlib",
+      "repository_commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "split": "development",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in zlib, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "adler32.c",
+        "compress.c"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zlib-architecture-998a4b32",
+      "repository_id": "zlib",
+      "repository_commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "split": "development",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of zlib with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README",
+        "adler32.c",
+        "compress.c"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zlib-dependencies-fbc9a7ac",
+      "repository_id": "zlib",
+      "repository_commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "split": "development",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for zlib, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "CMakeLists.txt",
+        "compress.c"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-gson-purpose-b48e046a",
+      "repository_id": "gson",
+      "repository_commit": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+      "split": "development",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt gson. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-gson-contributor_run-32b80de0",
+      "repository_id": "gson",
+      "repository_commit": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+      "split": "development",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for gson. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/build.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-gson-execution_entry-926b9f65",
+      "repository_id": "gson",
+      "repository_commit": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+      "split": "development",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in gson. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "gson/src/main/java/module-info.java"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-gson-testing_workflow-5cef5e1f",
+      "repository_id": "gson",
+      "repository_commit": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+      "split": "development",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to gson are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "gson/src/test/java/com/google/gson/ExposeAnnotationExclusionStrategyTest.java",
+        ".github/workflows/build.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-gson-license_constraints-176e9fc5",
+      "repository_id": "gson",
+      "repository_commit": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+      "split": "development",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for gson. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "extras/pom.xml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-gson-reading_order-b9e721f9",
+      "repository_id": "gson",
+      "repository_commit": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+      "split": "development",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in gson, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "gson/src/main/java/module-info.java",
+        "gson/src/main/java/com/google/gson/ExclusionStrategy.java"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-gson-architecture-35aa1b29",
+      "repository_id": "gson",
+      "repository_commit": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+      "split": "development",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of gson with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "gson/src/main/java/module-info.java",
+        "gson/src/main/java/com/google/gson/ExclusionStrategy.java"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-gson-dependencies-8d5ce8fa",
+      "repository_id": "gson",
+      "repository_commit": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+      "split": "development",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for gson, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "extras/pom.xml",
+        "gson/src/main/java/com/google/gson/ExclusionStrategy.java"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pluggy-purpose-e2e5eb36",
+      "repository_id": "pluggy",
+      "repository_commit": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "split": "validation",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt pluggy. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.rst"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pluggy-contributor_run-ffd9bfe4",
+      "repository_id": "pluggy",
+      "repository_commit": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "split": "validation",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for pluggy. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.rst",
+        ".github/workflows/deploy.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pluggy-execution_entry-a4e046f3",
+      "repository_id": "pluggy",
+      "repository_commit": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "split": "validation",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in pluggy. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "src/pluggy/__init__.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pluggy-testing_workflow-ae41f7de",
+      "repository_id": "pluggy",
+      "repository_commit": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "split": "validation",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to pluggy are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "testing/conftest.py",
+        ".github/workflows/deploy.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pluggy-license_constraints-90ab9817",
+      "repository_id": "pluggy",
+      "repository_commit": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "split": "validation",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for pluggy. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pluggy-reading_order-7c78ae7e",
+      "repository_id": "pluggy",
+      "repository_commit": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "split": "validation",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in pluggy, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "src/pluggy/__init__.py",
+        "src/pluggy/_callers.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pluggy-architecture-33f01ad0",
+      "repository_id": "pluggy",
+      "repository_commit": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "split": "validation",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of pluggy with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.rst",
+        "src/pluggy/__init__.py",
+        "src/pluggy/_callers.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pluggy-dependencies-66ef6b93",
+      "repository_id": "pluggy",
+      "repository_commit": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "split": "validation",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for pluggy, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "pyproject.toml",
+        "src/pluggy/_callers.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-p-queue-purpose-1ef52373",
+      "repository_id": "p-queue",
+      "repository_commit": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "split": "validation",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt p-queue. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "readme.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-p-queue-contributor_run-c0e449b1",
+      "repository_id": "p-queue",
+      "repository_commit": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "split": "validation",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for p-queue. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "readme.md",
+        ".github/workflows/main.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-p-queue-execution_entry-8c1285b0",
+      "repository_id": "p-queue",
+      "repository_commit": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "split": "validation",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in p-queue. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "source/index.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-p-queue-testing_workflow-0530f93f",
+      "repository_id": "p-queue",
+      "repository_commit": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "split": "validation",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to p-queue are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "test/advanced.ts",
+        ".github/workflows/main.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-p-queue-license_constraints-c19b9c50",
+      "repository_id": "p-queue",
+      "repository_commit": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "split": "validation",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for p-queue. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "license",
+        "package.json"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-p-queue-reading_order-d5d8bd2a",
+      "repository_id": "p-queue",
+      "repository_commit": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "split": "validation",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in p-queue, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "source/index.ts",
+        "source/lower-bound.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-p-queue-architecture-50f7afbc",
+      "repository_id": "p-queue",
+      "repository_commit": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "split": "validation",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of p-queue with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "readme.md",
+        "source/index.ts",
+        "source/lower-bound.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-p-queue-dependencies-c41b0701",
+      "repository_id": "p-queue",
+      "repository_commit": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "split": "validation",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for p-queue, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "package.json",
+        "source/lower-bound.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-viper-purpose-57ae921f",
+      "repository_id": "viper",
+      "repository_commit": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+      "split": "validation",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt viper. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-viper-contributor_run-e5fcd041",
+      "repository_id": "viper",
+      "repository_commit": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+      "split": "validation",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for viper. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/checks.yaml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-viper-execution_entry-f47c3376",
+      "repository_id": "viper",
+      "repository_commit": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+      "split": "validation",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in viper. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "encoding.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-viper-testing_workflow-366bfa2f",
+      "repository_id": "viper",
+      "repository_commit": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+      "split": "validation",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to viper are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "encoding_test.go",
+        ".github/workflows/checks.yaml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-viper-license_constraints-c2c47f6c",
+      "repository_id": "viper",
+      "repository_commit": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+      "split": "validation",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for viper. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "go.mod"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-viper-reading_order-5b3c771d",
+      "repository_id": "viper",
+      "repository_commit": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+      "split": "validation",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in viper, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "encoding.go",
+        "errors.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-viper-architecture-55cfeb90",
+      "repository_id": "viper",
+      "repository_commit": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+      "split": "validation",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of viper with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "encoding.go",
+        "errors.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-viper-dependencies-6bfe8538",
+      "repository_id": "viper",
+      "repository_commit": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+      "split": "validation",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for viper, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "go.mod",
+        "errors.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fd-purpose-d38010a2",
+      "repository_id": "fd",
+      "repository_commit": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+      "split": "validation",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt fd. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fd-contributor_run-56428ac2",
+      "repository_id": "fd",
+      "repository_commit": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+      "split": "validation",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for fd. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/CICD.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fd-execution_entry-c474e1a2",
+      "repository_id": "fd",
+      "repository_commit": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+      "split": "validation",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in fd. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "src/main.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fd-testing_workflow-05c52c79",
+      "repository_id": "fd",
+      "repository_commit": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+      "split": "validation",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to fd are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "tests/testenv/mod.rs",
+        ".github/workflows/CICD.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fd-license_constraints-25e7af79",
+      "repository_id": "fd",
+      "repository_commit": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+      "split": "validation",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for fd. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE-APACHE",
+        "Cargo.toml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fd-reading_order-75770b01",
+      "repository_id": "fd",
+      "repository_commit": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+      "split": "validation",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in fd, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "src/main.rs",
+        "src/exec/mod.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fd-architecture-c4777ac0",
+      "repository_id": "fd",
+      "repository_commit": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+      "split": "validation",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of fd with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "src/main.rs",
+        "src/exec/mod.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fd-dependencies-42d8d706",
+      "repository_id": "fd",
+      "repository_commit": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+      "split": "validation",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for fd, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "Cargo.toml",
+        "src/exec/mod.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-libexpat-purpose-d9be06ce",
+      "repository_id": "libexpat",
+      "repository_commit": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+      "split": "validation",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt libexpat. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-libexpat-contributor_run-698bfa70",
+      "repository_id": "libexpat",
+      "repository_commit": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+      "split": "validation",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for libexpat. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/autotools-cmake.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-libexpat-execution_entry-66597b5e",
+      "repository_id": "libexpat",
+      "repository_commit": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+      "split": "validation",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in libexpat. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "expat/lib/ascii.h"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-libexpat-testing_workflow-dfc3faeb",
+      "repository_id": "libexpat",
+      "repository_commit": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+      "split": "validation",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to libexpat are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "expat/tests/acc_tests.c",
+        ".github/workflows/autotools-cmake.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-libexpat-license_constraints-81b97a0f",
+      "repository_id": "libexpat",
+      "repository_commit": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+      "split": "validation",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for libexpat. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "COPYING",
+        "expat/CMakeLists.txt"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-libexpat-reading_order-dc61bee3",
+      "repository_id": "libexpat",
+      "repository_commit": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+      "split": "validation",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in libexpat, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "expat/lib/ascii.h",
+        "expat/lib/asciitab.h"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-libexpat-architecture-3f18a391",
+      "repository_id": "libexpat",
+      "repository_commit": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+      "split": "validation",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of libexpat with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "expat/lib/ascii.h",
+        "expat/lib/asciitab.h"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-libexpat-dependencies-aed50cc1",
+      "repository_id": "libexpat",
+      "repository_commit": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+      "split": "validation",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for libexpat, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "expat/CMakeLists.txt",
+        "expat/lib/asciitab.h"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-jsoup-purpose-1cd08b07",
+      "repository_id": "jsoup",
+      "repository_commit": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+      "split": "validation",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt jsoup. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-jsoup-contributor_run-824d3eb5",
+      "repository_id": "jsoup",
+      "repository_commit": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+      "split": "validation",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for jsoup. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/build.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-jsoup-execution_entry-ff700616",
+      "repository_id": "jsoup",
+      "repository_commit": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+      "split": "validation",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in jsoup. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "src/main/java11/module-info.java"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-jsoup-testing_workflow-8cfb7a4f",
+      "repository_id": "jsoup",
+      "repository_commit": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+      "split": "validation",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to jsoup are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "src/test/java/org/jsoup/helper/HttpConnectionTest.java",
+        ".github/workflows/build.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-jsoup-license_constraints-c1327f2d",
+      "repository_id": "jsoup",
+      "repository_commit": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+      "split": "validation",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for jsoup. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "pom.xml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-jsoup-reading_order-a336ac9e",
+      "repository_id": "jsoup",
+      "repository_commit": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+      "split": "validation",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in jsoup, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "src/main/java11/module-info.java",
+        "src/main/java/org/jsoup/Connection.java"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-jsoup-architecture-2ba0b76b",
+      "repository_id": "jsoup",
+      "repository_commit": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+      "split": "validation",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of jsoup with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "src/main/java11/module-info.java",
+        "src/main/java/org/jsoup/Connection.java"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-jsoup-dependencies-fb66f68d",
+      "repository_id": "jsoup",
+      "repository_commit": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+      "split": "validation",
+      "ecosystem": "jvm",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for jsoup, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "pom.xml",
+        "src/main/java/org/jsoup/Connection.java"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-cachecontrol-purpose-f7330dbc",
+      "repository_id": "cachecontrol",
+      "repository_commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt cachecontrol. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.rst"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-cachecontrol-contributor_run-6042dc46",
+      "repository_id": "cachecontrol",
+      "repository_commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for cachecontrol. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.rst",
+        ".github/workflows/release.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-cachecontrol-execution_entry-ab9c6910",
+      "repository_id": "cachecontrol",
+      "repository_commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in cachecontrol. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "cachecontrol/__init__.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-cachecontrol-testing_workflow-e86e50d4",
+      "repository_id": "cachecontrol",
+      "repository_commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to cachecontrol are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "tests/__init__.py",
+        ".github/workflows/release.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-cachecontrol-license_constraints-aed4b7b6",
+      "repository_id": "cachecontrol",
+      "repository_commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for cachecontrol. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE.txt",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-cachecontrol-reading_order-778411a1",
+      "repository_id": "cachecontrol",
+      "repository_commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in cachecontrol, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "cachecontrol/__init__.py",
+        "cachecontrol/caches/__init__.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-cachecontrol-architecture-8f821b82",
+      "repository_id": "cachecontrol",
+      "repository_commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of cachecontrol with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.rst",
+        "cachecontrol/__init__.py",
+        "cachecontrol/caches/__init__.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-cachecontrol-dependencies-c2a84ef9",
+      "repository_id": "cachecontrol",
+      "repository_commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for cachecontrol, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "pyproject.toml",
+        "cachecontrol/caches/__init__.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pyjwt-purpose-9efeb901",
+      "repository_id": "pyjwt",
+      "repository_commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt pyjwt. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.rst"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pyjwt-contributor_run-f7366c77",
+      "repository_id": "pyjwt",
+      "repository_commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for pyjwt. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.rst",
+        ".github/workflows/enforce-changelog-entry.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pyjwt-execution_entry-f8276df7",
+      "repository_id": "pyjwt",
+      "repository_commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in pyjwt. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "jwt/__init__.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pyjwt-testing_workflow-d558936f",
+      "repository_id": "pyjwt",
+      "repository_commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to pyjwt are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "tests/__init__.py",
+        ".github/workflows/enforce-changelog-entry.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pyjwt-license_constraints-0ec6ae19",
+      "repository_id": "pyjwt",
+      "repository_commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for pyjwt. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pyjwt-reading_order-13588908",
+      "repository_id": "pyjwt",
+      "repository_commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in pyjwt, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "jwt/__init__.py",
+        "docs/conf.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pyjwt-architecture-b46de6b2",
+      "repository_id": "pyjwt",
+      "repository_commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of pyjwt with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.rst",
+        "jwt/__init__.py",
+        "docs/conf.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-pyjwt-dependencies-52b6af16",
+      "repository_id": "pyjwt",
+      "repository_commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for pyjwt, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "pyproject.toml",
+        "docs/conf.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-multidict-purpose-9804354b",
+      "repository_id": "multidict",
+      "repository_commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt multidict. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "CHANGES/README.rst"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-multidict-contributor_run-ea4ea0a2",
+      "repository_id": "multidict",
+      "repository_commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for multidict. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "CHANGES/README.rst",
+        ".github/workflows/auto-merge.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-multidict-execution_entry-23be07eb",
+      "repository_id": "multidict",
+      "repository_commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in multidict. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "multidict/__init__.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-multidict-testing_workflow-4f30fd6f",
+      "repository_id": "multidict",
+      "repository_commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to multidict are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "tests/conftest.py",
+        ".github/workflows/auto-merge.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-multidict-license_constraints-21f46a92",
+      "repository_id": "multidict",
+      "repository_commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for multidict. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-multidict-reading_order-34878afc",
+      "repository_id": "multidict",
+      "repository_commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in multidict, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "multidict/__init__.py",
+        "setup.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-multidict-architecture-e0902d7d",
+      "repository_id": "multidict",
+      "repository_commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of multidict with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "CHANGES/README.rst",
+        "multidict/__init__.py",
+        "setup.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-multidict-dependencies-7698b481",
+      "repository_id": "multidict",
+      "repository_commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "ecosystem": "python",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for multidict, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "pyproject.toml",
+        "setup.py"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zod-purpose-4861c53e",
+      "repository_id": "zod",
+      "repository_commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt zod. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zod-contributor_run-c05db2b2",
+      "repository_id": "zod",
+      "repository_commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for zod. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/claude-code-review.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zod-execution_entry-88c3f85e",
+      "repository_id": "zod",
+      "repository_commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in zod. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "packages/resolution/src/index.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zod-testing_workflow-0ec80965",
+      "repository_id": "zod",
+      "repository_commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to zod are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "packages/zod/src/v4/classic/tests/index.test.ts",
+        ".github/workflows/claude-code-review.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zod-license_constraints-36bd3cc5",
+      "repository_id": "zod",
+      "repository_commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for zod. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "package.json"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zod-reading_order-550c6d92",
+      "repository_id": "zod",
+      "repository_commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in zod, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "packages/resolution/src/index.ts",
+        "packages/zod/src/index.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zod-architecture-06c16bc2",
+      "repository_id": "zod",
+      "repository_commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of zod with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "packages/resolution/src/index.ts",
+        "packages/zod/src/index.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-zod-dependencies-fc8a1dfc",
+      "repository_id": "zod",
+      "repository_commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for zod, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "package.json",
+        "packages/zod/src/index.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-dotenv-purpose-46275f3a",
+      "repository_id": "dotenv",
+      "repository_commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt dotenv. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-dotenv-contributor_run-044d2cd4",
+      "repository_id": "dotenv",
+      "repository_commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for dotenv. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-dotenv-execution_entry-78d66ab9",
+      "repository_id": "dotenv",
+      "repository_commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in dotenv. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "lib/main.d.ts"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-dotenv-testing_workflow-a5e8c6d7",
+      "repository_id": "dotenv",
+      "repository_commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to dotenv are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "tests/test-config-import.js",
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-dotenv-license_constraints-4b434454",
+      "repository_id": "dotenv",
+      "repository_commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for dotenv. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "package.json"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-dotenv-reading_order-0434af14",
+      "repository_id": "dotenv",
+      "repository_commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in dotenv, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "lib/main.d.ts",
+        "lib/main.js"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-dotenv-architecture-f1330c2b",
+      "repository_id": "dotenv",
+      "repository_commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of dotenv with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "lib/main.d.ts",
+        "lib/main.js"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-dotenv-dependencies-61bc7c60",
+      "repository_id": "dotenv",
+      "repository_commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for dotenv, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "package.json",
+        "lib/main.js"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-axios-purpose-786b8fac",
+      "repository_id": "axios",
+      "repository_commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt axios. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-axios-contributor_run-8d4bc3e4",
+      "repository_id": "axios",
+      "repository_commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for axios. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/bundle-size.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-axios-execution_entry-47e469fd",
+      "repository_id": "axios",
+      "repository_commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in axios. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "lib/defaults/index.js"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-axios-testing_workflow-7c32a0a7",
+      "repository_id": "axios",
+      "repository_commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to axios are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "tests/module/esm/tests/helpers/esm-index.ts",
+        ".github/workflows/bundle-size.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-axios-license_constraints-e5d0a45d",
+      "repository_id": "axios",
+      "repository_commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for axios. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "docs/package.json"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-axios-reading_order-5dd378d5",
+      "repository_id": "axios",
+      "repository_commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in axios, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "lib/defaults/index.js",
+        "lib/platform/index.js"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-axios-architecture-abcc462f",
+      "repository_id": "axios",
+      "repository_commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of axios with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "lib/defaults/index.js",
+        "lib/platform/index.js"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-axios-dependencies-e7fddae5",
+      "repository_id": "axios",
+      "repository_commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "ecosystem": "javascript",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for axios, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "docs/package.json",
+        "lib/platform/index.js"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-lipgloss-purpose-12bed494",
+      "repository_id": "lipgloss",
+      "repository_commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt lipgloss. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-lipgloss-contributor_run-1d1d703d",
+      "repository_id": "lipgloss",
+      "repository_commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for lipgloss. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/build.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-lipgloss-execution_entry-33d1cd0d",
+      "repository_id": "lipgloss",
+      "repository_commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in lipgloss. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "align.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-lipgloss-testing_workflow-f53b347a",
+      "repository_id": "lipgloss",
+      "repository_commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to lipgloss are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "align_test.go",
+        ".github/workflows/build.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-lipgloss-license_constraints-ad6fe9d2",
+      "repository_id": "lipgloss",
+      "repository_commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for lipgloss. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "examples/go.mod"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-lipgloss-reading_order-68ddf01e",
+      "repository_id": "lipgloss",
+      "repository_commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in lipgloss, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "align.go",
+        "ansi_unix.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-lipgloss-architecture-9c006582",
+      "repository_id": "lipgloss",
+      "repository_commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of lipgloss with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "align.go",
+        "ansi_unix.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-lipgloss-dependencies-0c7881f0",
+      "repository_id": "lipgloss",
+      "repository_commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for lipgloss, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "examples/go.mod",
+        "ansi_unix.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-testify-purpose-e5ad4e77",
+      "repository_id": "testify",
+      "repository_commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt testify. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-testify-contributor_run-14a27a9a",
+      "repository_id": "testify",
+      "repository_commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for testify. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/main.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-testify-execution_entry-1ccf3a7e",
+      "repository_id": "testify",
+      "repository_commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in testify. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "_codegen/main.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-testify-testing_workflow-46695e63",
+      "repository_id": "testify",
+      "repository_commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to testify are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "assert/assertion_compare_test.go",
+        ".github/workflows/main.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-testify-license_constraints-fd06e08e",
+      "repository_id": "testify",
+      "repository_commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for testify. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "_codegen/go.mod"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-testify-reading_order-6681782c",
+      "repository_id": "testify",
+      "repository_commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in testify, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "_codegen/main.go",
+        "_readme-gofmt/main.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-testify-architecture-a6e4d0d1",
+      "repository_id": "testify",
+      "repository_commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of testify with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "_codegen/main.go",
+        "_readme-gofmt/main.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-testify-dependencies-6455db7e",
+      "repository_id": "testify",
+      "repository_commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "ecosystem": "go",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for testify, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "_codegen/go.mod",
+        "_readme-gofmt/main.go"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-bytes-purpose-e6e98932",
+      "repository_id": "bytes",
+      "repository_commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt bytes. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-bytes-contributor_run-631fbc6e",
+      "repository_id": "bytes",
+      "repository_commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for bytes. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-bytes-execution_entry-dbe2a71d",
+      "repository_id": "bytes",
+      "repository_commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in bytes. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "src/lib.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-bytes-testing_workflow-46234bff",
+      "repository_id": "bytes",
+      "repository_commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to bytes are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "tests/test_buf.rs",
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-bytes-license_constraints-1fcede3e",
+      "repository_id": "bytes",
+      "repository_commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for bytes. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "Cargo.toml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-bytes-reading_order-4d3ef214",
+      "repository_id": "bytes",
+      "repository_commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in bytes, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "src/lib.rs",
+        "src/buf/mod.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-bytes-architecture-40927721",
+      "repository_id": "bytes",
+      "repository_commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of bytes with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "src/lib.rs",
+        "src/buf/mod.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-bytes-dependencies-2ad11e28",
+      "repository_id": "bytes",
+      "repository_commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for bytes, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "Cargo.toml",
+        "src/buf/mod.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-serde-json-purpose-3de4681e",
+      "repository_id": "serde-json",
+      "repository_commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt serde-json. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-serde-json-contributor_run-5c672b77",
+      "repository_id": "serde-json",
+      "repository_commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for serde-json. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-serde-json-execution_entry-87313e96",
+      "repository_id": "serde-json",
+      "repository_commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in serde-json. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "src/lib.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-serde-json-testing_workflow-2a220c81",
+      "repository_id": "serde-json",
+      "repository_commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to serde-json are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "tests/macros/mod.rs",
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-serde-json-license_constraints-4436972b",
+      "repository_id": "serde-json",
+      "repository_commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for serde-json. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE-APACHE",
+        "Cargo.toml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-serde-json-reading_order-27b3f528",
+      "repository_id": "serde-json",
+      "repository_commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in serde-json, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "src/lib.rs",
+        "src/io/mod.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-serde-json-architecture-25e127e7",
+      "repository_id": "serde-json",
+      "repository_commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of serde-json with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "src/lib.rs",
+        "src/io/mod.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-serde-json-dependencies-252339d7",
+      "repository_id": "serde-json",
+      "repository_commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "ecosystem": "rust",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for serde-json, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "Cargo.toml",
+        "src/io/mod.rs"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fmt-purpose-57c49246",
+      "repository_id": "fmt",
+      "repository_commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt fmt. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fmt-contributor_run-f413ce85",
+      "repository_id": "fmt",
+      "repository_commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for fmt. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/codeql.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fmt-execution_entry-6d15ba80",
+      "repository_id": "fmt",
+      "repository_commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in fmt. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "src/fmt-c.cc"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fmt-testing_workflow-c9ee67ab",
+      "repository_id": "fmt",
+      "repository_commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to fmt are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "test/add-subdirectory-test/main.cc",
+        ".github/workflows/codeql.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fmt-license_constraints-cdebf0cd",
+      "repository_id": "fmt",
+      "repository_commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for fmt. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE",
+        "support/build.gradle"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fmt-reading_order-e4a26104",
+      "repository_id": "fmt",
+      "repository_commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in fmt, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "src/fmt-c.cc",
+        "src/fmt.cc"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fmt-architecture-ea0185db",
+      "repository_id": "fmt",
+      "repository_commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of fmt with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "src/fmt-c.cc",
+        "src/fmt.cc"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-fmt-dependencies-b321b30c",
+      "repository_id": "fmt",
+      "repository_commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for fmt, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "support/build.gradle",
+        "src/fmt.cc"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-nlohmann-json-purpose-50f34151",
+      "repository_id": "nlohmann-json",
+      "repository_commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "purpose",
+      "prompt": "A new engineer is deciding whether to adopt nlohmann-json. Explain what the project does, its intended boundary, and the strongest local evidence for that interpretation.",
+      "required_evidence_paths": [
+        "README.md"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-nlohmann-json-contributor_run-e47c888a",
+      "repository_id": "nlohmann-json",
+      "repository_commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "contributor_run",
+      "prompt": "Prepare a reproducible first-day setup note for nlohmann-json. Separate documented commands from assumptions and explain how a contributor should validate the setup.",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/check_amalgamation.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-nlohmann-json-execution_entry-1ec0cd6b",
+      "repository_id": "nlohmann-json",
+      "repository_commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "execution_entry",
+      "prompt": "Trace where execution or the public library boundary begins in nlohmann-json. Cite the repository artifact that establishes the boundary without guessing from file names alone.",
+      "required_evidence_paths": [
+        "tools/macro_builder/main.cpp"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-nlohmann-json-testing_workflow-e189753a",
+      "repository_id": "nlohmann-json",
+      "repository_commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "testing_workflow",
+      "prompt": "Describe how changes to nlohmann-json are validated locally and in automation. Distinguish a real test artifact from build or CI orchestration.",
+      "required_evidence_paths": [
+        "tests/abi/config/config.hpp",
+        ".github/workflows/check_amalgamation.yml"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-nlohmann-json-license_constraints-67839624",
+      "repository_id": "nlohmann-json",
+      "repository_commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "license_constraints",
+      "prompt": "An internal commercial-tool review needs the locally supported license and packaging constraints for nlohmann-json. Report only what repository metadata establishes and flag anything requiring legal review.",
+      "required_evidence_paths": [
+        "LICENSE.MIT",
+        "CMakeLists.txt"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-nlohmann-json-reading_order-a809b44a",
+      "repository_id": "nlohmann-json",
+      "repository_commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "reading_order",
+      "prompt": "Recommend the first implementation modules a new maintainer should read in nlohmann-json, and justify the order using execution-boundary and supporting-source evidence.",
+      "required_evidence_paths": [
+        "tools/macro_builder/main.cpp",
+        "cmake/detect_libcpp_version.cpp"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-nlohmann-json-architecture-6bb82c96",
+      "repository_id": "nlohmann-json",
+      "repository_commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "architecture",
+      "prompt": "Give a compact architecture map of nlohmann-json with repository citations. Explain how the public boundary relates to one supporting implementation area and avoid unsupported subsystem claims.",
+      "required_evidence_paths": [
+        "README.md",
+        "tools/macro_builder/main.cpp",
+        "cmake/detect_libcpp_version.cpp"
+      ]
+    },
+    {
+      "task_id": "g3-onboarding-nlohmann-json-dependencies-7646deba",
+      "repository_id": "nlohmann-json",
+      "repository_commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "ecosystem": "c-cpp",
+      "provenance": "independently authored open-ended real-repository onboarding question",
+      "question_type": "dependencies",
+      "prompt": "Identify the major externally declared dependencies or build inputs for nlohmann-json, then explain where their interaction with project code can be inspected.",
+      "required_evidence_paths": [
+        "CMakeLists.txt",
+        "cmake/detect_libcpp_version.cpp"
+      ]
+    }
+  ],
+  "question_types": 8,
+  "model_visible_options": 0,
+  "tasks_payload_sha256": "a11c020e4090b51466255680386a0146726e13ec5b5de0be8a3951b769e856a6"
+}

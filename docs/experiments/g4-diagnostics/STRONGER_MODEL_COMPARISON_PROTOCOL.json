@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "protocolId": "dca-controlled-model-capacity-comparison-v1",
+  "status": "READY_BLOCKED_EXPLICIT_MODEL_SELECTION_AND_ACQUISITION_APPROVAL",
+  "purpose": "Hold task data, harness, oracles, decoding, and machine verification fixed while changing only approved model capacity.",
+  "smallBaseline": {
+    "repository": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "currentEvidence": {
+      "path": "docs/experiments/g4-diagnostics/QWEN35_4B_CAPABILITY_CEILING_REPORT.json",
+      "sha256": "5d597c55c902016b253bf00bfb83ae2ca56d8b0fd88a8a486aa5508a368d5467"
+    }
+  },
+  "strongerCodingModel": {
+    "selection": "UNSELECTED",
+    "approvalRequiredBeforeSelectionOrDownload": true,
+    "requirements": [
+      "exact repository and immutable revision",
+      "license and redistribution evidence",
+      "tokenizer revision and chat template hash",
+      "declared precision and quantization provenance if any",
+      "fits approved hardware or has an approved execution environment",
+      "structured JSON-schema support or identical deterministic parser contract",
+      "no network/tool authority beyond the baseline"
+    ]
+  },
+  "fixedAcrossModels": {
+    "developmentManifest": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_MANIFEST.v2.json",
+      "sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7"
+    },
+    "developmentOracle": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_ORACLE.v2.sealed.json",
+      "sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6"
+    },
+    "tasksAndPrompts": "byte-identical",
+    "retrievalAndOracleConditions": "byte-identical",
+    "worktreeAndVerification": "identical",
+    "temperature": 0,
+    "thinking": false,
+    "seeds": [
+      20260809,
+      20260810,
+      20260811
+    ],
+    "retryPolicy": "same preregistered bounded evidence policy",
+    "rawOutputPrivacy": "hash-only plus scored fields"
+  },
+  "phases": [
+    {
+      "phase": "APPROVAL_AND_PIN",
+      "action": "Select one model only after explicit approval; record snapshot/tokenizer/config/license hashes. No silent acquisition."
+    },
+    {
+      "phase": "G4_DEVELOPMENT_CAPACITY_COMPARISON",
+      "action": "Run both models on the same G4 development task IDs without altering candidate logic; report paired outcomes and cost."
+    },
+    {
+      "phase": "CANDIDATE_FREEZE",
+      "action": "Only a behavior-qualified harness/model pair receives a new ID and closure hash."
+    },
+    {
+      "phase": "FUTURE_HOLDOUT",
+      "action": "Only after freeze, construct the preregistered repository-disjoint G4 holdout and run once."
+    }
+  ],
+  "dimensions": [
+    "behavioral coding success",
+    "diagnosis",
+    "navigation",
+    "long-horizon",
+    "onboarding",
+    "latency",
+    "tokens",
+    "VRAM",
+    "model size",
+    "quality/cost",
+    "safety",
+    "rollback"
+  ],
+  "primary": "paired strict behavioral end-to-end success",
+  "secondaryNeverSufficient": [
+    "evidence completeness",
+    "schema validity",
+    "partial components",
+    "longer reasoning",
+    "more attempts"
+  ],
+  "currentBlockers": [
+    "no stronger model selected",
+    "no acquisition approval",
+    "future holdout intentionally not created"
+  ]
+}

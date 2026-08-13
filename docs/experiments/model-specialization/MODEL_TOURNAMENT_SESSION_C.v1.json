@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "sessionId": "dca-practical-local-model-tournament-session-c-v1",
+  "session": "C",
+  "status": "PASS",
+  "classification": "PRIMARY_EXECUTION_COMPLETE_WITH_PREREGISTERED_INFRASTRUCTURE_EXCLUSION",
+  "completedAt": "2026-08-11T13:59:34.737Z",
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_A.v1.json",
+      "sha256": "9d6a610829405f146ee36651961273bd25c9d6264a1c54c1e20917e186af7200"
+    },
+    "sessionB": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_B.v1.json",
+      "sha256": "e2d05ad3f5b6b7ff97e37bfd256d94995c1dd5be830a6246454059786f5da833"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PREREGISTRATION.v1.json",
+      "sha256": "51f983f63719494e8877eb7b24fcbc7a47b0b9fb53d5c1e2bb838961b87246c1"
+    },
+    "sessionCSeal": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_SESSION_C_SEAL.v1.json",
+      "sha256": "e7d3d76a74342423f67b538f34e19276d1b0fbdecc6541269897919d585fa50c"
+    }
+  },
+  "contract": {
+    "candidateOrder": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "primaryTasksPerCandidate": 95,
+    "plannedPrimaryCalls": 285,
+    "physicalPrimaryCalls": 285,
+    "telemetryNonPrimaryCalls": 3,
+    "retries": 0,
+    "reviewerCalls": 0,
+    "duplicateObservationIds": 0,
+    "eventRows": 855,
+    "taskSet": "FROZEN_95_MUTATION_TASKS",
+    "interface": "E_EDIT_P2_FROZEN",
+    "servingProfile": "VLLM_0_26_0_ONLINE_FP8_PER_TENSOR_W8A8_CONTEXT_8192",
+    "fairnessRequestIntentSha256": "c314e57a5a1cd66c6e699c61988e3432f136f379a6b52071141947c21229e23c",
+    "semanticPrimaryIntentSha256": "5abe5b15a1efa9bbf425dd0933b8c2470d63ef9e628bb3f0674a90cec774b685",
+    "productMutationDecision": "KEEP_MUTATION_DISABLED"
+  },
+  "operationalNotes": [
+    {
+      "candidateId": "M3",
+      "event": "PRECALL_ENDPOINT_NOT_READY",
+      "durableCallEventsAtFailure": 0,
+      "durableCheckpointRowsAtFailure": 0,
+      "retryClassification": "ALLOWED_PRE_CALL_RECOVERY_NOT_A_SCORED_RETRY"
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "M1",
+      "modelId": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+      "scoringStatus": "VALID_FOR_SESSION_D_ANALYSIS",
+      "infrastructureExclusion": null,
+      "result": {
+        "path": "docs/experiments/runs/model-tournament-session-c-m1-v1/result.json",
+        "sha256": "9c096ddb90bb0c66a42e2f1092ccd0d5945bd6f29e7925a610d93eb9432e786e"
+      },
+      "cleanup": {
+        "path": "docs/experiments/runs/model-tournament-session-c-m1-v1/cleanup.json",
+        "sha256": "3f38dd570ca256e95dfd2763ee07179e41a5573084580fbf73961bbd895a1df6"
+      },
+      "evidence": {
+        "checkpoint": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m1-v1/observations.checkpoint.jsonl",
+          "sha256": "26aab6d856d6814b99e4c4fb3894df6987442f0315033b4f27d02b5942901976",
+          "rows": 95
+        },
+        "callEvents": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m1-v1/call-events.jsonl",
+          "sha256": "f3ba638d6370030c51658931ad579cadd966811371d3dc3ab705fe16d1de0ee1",
+          "rows": 285
+        },
+        "observationsFinal": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m1-v1/observations.final.json",
+          "sha256": "40383049d762eecbc91863e4ef077664cf66ab67fb3e96ea93c83eaee9d2b19c",
+          "rows": 95
+        }
+      },
+      "capability": {
+        "mutationTasks": 95,
+        "policyTasks": 25,
+        "primaryModelCalls": 95,
+        "telemetryNonPrimaryCalls": 1,
+        "exactSourceSelected": 90,
+        "exactSourceIncluded": 90,
+        "retrievalMisses": 5,
+        "validActions": 92,
+        "actionValidationFailures": 1,
+        "patchConstructionPasses": 92,
+        "patchApplyPasses": 92,
+        "syntaxPasses": 43,
+        "visibleTestPasses": 10,
+        "hiddenTestPasses": 17,
+        "behavioralSuccesses": 7,
+        "wrongFileAttempts": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "reportOnly": 0,
+        "malformedOutputs": 0,
+        "emptyOutputs": 0,
+        "timeouts": 0,
+        "cancelled": 0,
+        "transportFailures": 0,
+        "totalPromptTokens": 18140,
+        "totalCompletionTokens": 5443,
+        "medianLatencyMs": 733.5090409999975,
+        "p95LatencyMs": 1559.515241000001
+      },
+      "telemetry": {
+        "measurementSemantics": "five loaded-idle samples before standardized stream; 50ms polling from first CALL_INTENT through final CALL_COMPLETED; peak=max inference-phase samples; cleanup measured separately",
+        "loadTimeMs": 36330.81396484375,
+        "loadedIdleVramMiB": 13466,
+        "loadedIdleSamples": 5,
+        "inferencePeakVramMiB": 16019,
+        "inferenceSamples": 1379,
+        "invariantPass": true,
+        "ttftMs": 270.5903389999985,
+        "generationThroughputTokensPerSecond": 73.59096507169872,
+        "telemetryStreamLatencyMs": 1099.4964409999993,
+        "perTaskLatencyPersisted": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "candidateId": "M2",
+      "modelId": "TIGER-Lab/FIM-7B",
+      "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+      "scoringStatus": "VALID_FOR_SESSION_D_ANALYSIS",
+      "infrastructureExclusion": null,
+      "result": {
+        "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/result.json",
+        "sha256": "8cf1bdb5d6cb8e86200d4833ff41b5e89100582406da7239008e7c32fc03f940"
+      },
+      "cleanup": {
+        "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/cleanup.json",
+        "sha256": "da2f95b7a7c8b5c35713bccfbe64c779f82e95b640383f381b8d652047c499c7"
+      },
+      "evidence": {
+        "checkpoint": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+          "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a",
+          "rows": 95
+        },
+        "callEvents": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/call-events.jsonl",
+          "sha256": "2b73cfd9abdbeb1da9f2e56258a184d5321c012ad6781b3a56bf602ad70c6188",
+          "rows": 285
+        },
+        "observationsFinal": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.final.json",
+          "sha256": "ba4bc6481f3bb1d8907fc559bb34e5d768e6230ec0a0580ce88ae2d5e4814080",
+          "rows": 95
+        }
+      },
+      "capability": {
+        "mutationTasks": 95,
+        "policyTasks": 25,
+        "primaryModelCalls": 95,
+        "telemetryNonPrimaryCalls": 1,
+        "exactSourceSelected": 90,
+        "exactSourceIncluded": 90,
+        "retrievalMisses": 5,
+        "validActions": 89,
+        "actionValidationFailures": 2,
+        "patchConstructionPasses": 89,
+        "patchApplyPasses": 89,
+        "syntaxPasses": 83,
+        "visibleTestPasses": 35,
+        "hiddenTestPasses": 54,
+        "behavioralSuccesses": 29,
+        "wrongFileAttempts": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "reportOnly": 0,
+        "malformedOutputs": 0,
+        "emptyOutputs": 0,
+        "timeouts": 0,
+        "cancelled": 0,
+        "transportFailures": 0,
+        "totalPromptTokens": 18140,
+        "totalCompletionTokens": 6120,
+        "medianLatencyMs": 798.5549269999974,
+        "p95LatencyMs": 1495.5199550000034
+      },
+      "telemetry": {
+        "measurementSemantics": "five loaded-idle samples before standardized stream; 50ms polling from first CALL_INTENT through final CALL_COMPLETED; peak=max inference-phase samples; cleanup measured separately",
+        "loadTimeMs": 35797.28515625,
+        "loadedIdleVramMiB": 13466,
+        "loadedIdleSamples": 5,
+        "inferencePeakVramMiB": 13492,
+        "inferenceSamples": 1236,
+        "invariantPass": true,
+        "ttftMs": 257.97709499999837,
+        "generationThroughputTokensPerSecond": 76.51526820093567,
+        "telemetryStreamLatencyMs": 1094.4114629999967,
+        "perTaskLatencyPersisted": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "candidateId": "M3",
+      "modelId": "SWE-bench/SWE-agent-LM-7B",
+      "revision": "a44fce0216647696a7437126e82fc1eaa34008d7",
+      "scoringStatus": "INFRASTRUCTURE_BLOCKED_NOT_SCORED",
+      "infrastructureExclusion": {
+        "transportFailures": 2,
+        "consumedCalls": 2,
+        "retryCalls": 0,
+        "classification": "POST_CALL_TRANSPORT_FAILURE_EXPLICITLY_EXCLUDED"
+      },
+      "result": {
+        "path": "docs/experiments/runs/model-tournament-session-c-m3-v1/result.json",
+        "sha256": "5919b303d17ab56c4e0d9816349164466a30abcdf51949970467e0a1e7720865"
+      },
+      "cleanup": {
+        "path": "docs/experiments/runs/model-tournament-session-c-m3-v1/cleanup.json",
+        "sha256": "bea5b18b723c6372505709448224c73d086119d3dff8114478694b6f05cb9270"
+      },
+      "evidence": {
+        "checkpoint": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m3-v1/observations.checkpoint.jsonl",
+          "sha256": "f0a5d6846be382ce41c6c0b316984a42becf8d9462f913333e8c0b1ff97a73bc",
+          "rows": 95
+        },
+        "callEvents": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m3-v1/call-events.jsonl",
+          "sha256": "3ea8c214db11158d217411edfc4240dbfb73324130feef2df9250b299b30597d",
+          "rows": 285
+        },
+        "observationsFinal": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m3-v1/observations.final.json",
+          "sha256": "7251957746e9926d1186ce78ee8ffda6e8873617a4cc6b1634d78b1d25f28a8b",
+          "rows": 95
+        }
+      },
+      "capability": {
+        "mutationTasks": 95,
+        "policyTasks": 25,
+        "primaryModelCalls": 95,
+        "telemetryNonPrimaryCalls": 1,
+        "exactSourceSelected": 90,
+        "exactSourceIncluded": 90,
+        "retrievalMisses": 5,
+        "validActions": 22,
+        "actionValidationFailures": 71,
+        "patchConstructionPasses": 22,
+        "patchApplyPasses": 22,
+        "syntaxPasses": 18,
+        "visibleTestPasses": 7,
+        "hiddenTestPasses": 2,
+        "behavioralSuccesses": 2,
+        "wrongFileAttempts": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "reportOnly": 0,
+        "malformedOutputs": 2,
+        "emptyOutputs": 0,
+        "timeouts": 0,
+        "cancelled": 0,
+        "transportFailures": 2,
+        "totalPromptTokens": 18140,
+        "totalCompletionTokens": 5895,
+        "medianLatencyMs": 706.5979029999871,
+        "p95LatencyMs": 4914.310933999994
+      },
+      "telemetry": {
+        "measurementSemantics": "five loaded-idle samples before standardized stream; 50ms polling from first CALL_INTENT through final CALL_COMPLETED; peak=max inference-phase samples; cleanup measured separately",
+        "loadTimeMs": 161800.4814453125,
+        "loadedIdleVramMiB": 13466,
+        "loadedIdleSamples": 5,
+        "inferencePeakVramMiB": 16009,
+        "inferenceSamples": 1386,
+        "invariantPass": true,
+        "ttftMs": 246.12860499999806,
+        "generationThroughputTokensPerSecond": 76.15126064830527,
+        "telemetryStreamLatencyMs": 1086.5611789999966,
+        "perTaskLatencyPersisted": true,
+        "status": "PASS"
+      }
+    }
+  ],
+  "interpretationBoundary": {
+    "pairedAnalysisPerformed": false,
+    "thresholdClassificationPerformed": false,
+    "modelWinnerSelected": false,
+    "productDecisionChanged": false,
+    "m3CapabilityResultEligible": false,
+    "reason": "M3 has two consumed post-call transport/truncation failures and is INFRASTRUCTURE_BLOCKED_NOT_SCORED; Session D must preserve the exclusion."
+  },
+  "sourceClosure": {
+    "sha256": "7dbfd7d51da709ce904bf4d99b7e22141302b3992146a1b57862723629cd505a",
+    "entries": [
+      {
+        "path": "scripts/run_model_tournament_session_c.ts",
+        "sha256": "5288c049824f63d8a31f602ca0f572785e934170028653c06baca881351e8db6",
+        "bytes": 37894
+      },
+      {
+        "path": "scripts/finalize_model_tournament_session_c.ts",
+        "sha256": "521bc78213920912a7d0f8b4e21588570fd69e03ebef661e834b776907f8e2fa",
+        "bytes": 16861
+      },
+      {
+        "path": "scripts/start_model_tournament_candidate.sh",
+        "sha256": "afe879bbc0dd831f673b05a9d96f3cd299f44b606a15f0e7605765c5fc553c45",
+        "bytes": 2901
+      },
+      {
+        "path": "scripts/launch_model_tournament_candidate.py",
+        "sha256": "07ee838e78c19ee2df839c6943300d9b49c7153d8a67149524ed5c13dc3a47f3",
+        "bytes": 4609
+      },
+      {
+        "path": "services/patch-interface-runtime/src/index.ts",
+        "sha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+        "bytes": 59703
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21",
+        "bytes": 13021
+      },
+      {
+        "path": "services/repo-intelligence/src/index.ts",
+        "sha256": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d",
+        "bytes": 37025
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      }
+    ]
+  },
+  "cleanup": {
+    "modelProcessCount": 0,
+    "port8000Clear": true,
+    "gpuMemoryMiB": 0,
+    "ephemeralApiKeyAndStateAbsent": true,
+    "candidateCleanups": 3
+  },
+  "validation": {
+    "ledgerCounts": "PASS",
+    "eventOrdering": "PASS",
+    "oneShotAccounting": "PASS",
+    "artifactSidecars": "PASS",
+    "resultRecomputation": "PASS",
+    "sourceClosure": "PASS",
+    "privacy": "PASS",
+    "cleanup": "PASS"
+  },
+  "nextSession": {
+    "session": "D",
+    "status": "READY_SEPARATE_INVOCATION_REQUIRED",
+    "executedInThisInvocation": false
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawModelOutputsStored": false,
+    "rawActionsStored": false,
+    "hiddenOracleStored": false,
+    "apiKeysStored": false
+  },
+  "protectedActions": {
+    "sessionD": false,
+    "retry": false,
+    "reviewer": false,
+    "additionalModelDownload": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

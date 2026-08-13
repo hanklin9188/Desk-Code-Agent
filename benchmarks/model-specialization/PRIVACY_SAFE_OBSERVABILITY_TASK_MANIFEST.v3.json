@@ -1,0 +1,1793 @@
+{
+  "schemaVersion": 3,
+  "manifestId": "dca-privacy-safe-observability-task-manifest-v3",
+  "state": "SEALED_BEFORE_FIRST_V3_TARGET_MODEL_CALL",
+  "classification": "TARGET_MODEL_UNSEEN_66_UNCALLED_PLUS_14_NEW_REPLACEMENTS",
+  "authoredAt": "2026-08-11T21:14:06.931Z",
+  "populationStrategy": {
+    "strategy": "REUSE_66_ZERO_CALL_TASKS_PLUS_14_NEW_REPOSITORY_TASK_DISJOINT_REPLACEMENTS",
+    "reusedUncalled": 66,
+    "newReplacements": 14,
+    "consumedExcluded": 14,
+    "consumedTaskIdsSha256": "cbb5aab87c67d61ced49c721e5bbd740a82fef1332ed9a67c3bd27bd1cc96cd2",
+    "uncalledContextExposureOverlap": 0,
+    "evidence": "deterministic E-MIN-V2 included-path replay for all fourteen consumed calls"
+  },
+  "corpus": {
+    "repositories": 26,
+    "tasks": 80,
+    "mutationRequired": 80
+  },
+  "disjointness": {
+    "consumedOldTaskOverlap": 0,
+    "historical95FingerprintOverlap": 0,
+    "canonicalFingerprintDuplicates": 0,
+    "uniqueFingerprints": 80,
+    "replacementRepositoryIdOverlap": 0,
+    "method": "sha256(prompt,category,source,visible-test,behavioral-requirement)"
+  },
+  "taskIdsSha256": "7286226d43c166a11a6619b3d32f0e56553631c2b0fba73aced917d8f6076a01",
+  "taskFingerprintsSha256": "cb29167dbbd81b38fc5cec2e4a7ca503974baaf069f8808dc4422dd3fe7a6580",
+  "tasks": [
+    {
+      "task_id": "observability-019-31a673e8d046",
+      "repository_id": "observability-02-birch-stream",
+      "kind": "MUTATION_REQUIRED",
+      "category": "safe_average",
+      "difficulty": "L3",
+      "prompt": "Correct average only finite numeric values and return null when none remain in the birch-stream safe_average workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-9.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-9.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:a59ec284bc1276342fabf61dde441242404f39efd5b595d502b1d55c84f28c2a"
+    },
+    {
+      "task_id": "observability-020-db7bd01827a1",
+      "repository_id": "observability-02-birch-stream",
+      "kind": "MUTATION_REQUIRED",
+      "category": "map_last_write",
+      "difficulty": "L4",
+      "prompt": "Correct index rows by id with the final row winning on duplicate ids in the birch-stream map_last_write workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-10.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-10.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:a59ec284bc1276342fabf61dde441242404f39efd5b595d502b1d55c84f28c2a"
+    },
+    {
+      "task_id": "observability-021-e65381953077",
+      "repository_id": "observability-03-cirrus-table",
+      "kind": "MUTATION_REQUIRED",
+      "category": "index_normalization",
+      "difficulty": "L2",
+      "prompt": "Correct normalize negative indexes into the collection bounds in the cirrus-table index_normalization workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-1.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-1.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155"
+    },
+    {
+      "task_id": "observability-022-a60d51bf2ad2",
+      "repository_id": "observability-03-cirrus-table",
+      "kind": "MUTATION_REQUIRED",
+      "category": "nullish_defaulting",
+      "difficulty": "L3",
+      "prompt": "Correct preserve valid false and zero values while defaulting only nullish input in the cirrus-table nullish_defaulting workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-2.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-2.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155"
+    },
+    {
+      "task_id": "observability-023-147b5330e688",
+      "repository_id": "observability-03-cirrus-table",
+      "kind": "MUTATION_REQUIRED",
+      "category": "inclusive_boundary",
+      "difficulty": "L3",
+      "prompt": "Correct accept both inclusive boundaries of the registered interval in the cirrus-table inclusive_boundary workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-3.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-3.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155"
+    },
+    {
+      "task_id": "observability-024-bd3dc0ee3098",
+      "repository_id": "observability-03-cirrus-table",
+      "kind": "MUTATION_REQUIRED",
+      "category": "line_ending_contract",
+      "difficulty": "L4",
+      "prompt": "Correct split both LF and CRLF records without retaining carriage returns in the cirrus-table line_ending_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-4.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-4.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155"
+    },
+    {
+      "task_id": "observability-025-e96dd6b931ca",
+      "repository_id": "observability-03-cirrus-table",
+      "kind": "MUTATION_REQUIRED",
+      "category": "numeric_ordering",
+      "difficulty": "L2",
+      "prompt": "Correct sort numeric measurements in ascending numeric order without mutating the input in the cirrus-table numeric_ordering workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-5.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-5.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155"
+    },
+    {
+      "task_id": "observability-026-3b314deac0e0",
+      "repository_id": "observability-03-cirrus-table",
+      "kind": "MUTATION_REQUIRED",
+      "category": "tail_window",
+      "difficulty": "L3",
+      "prompt": "Correct return the final N items and return an empty list for nonpositive N in the cirrus-table tail_window workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-6.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-6.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155"
+    },
+    {
+      "task_id": "observability-027-bb732140f54c",
+      "repository_id": "observability-03-cirrus-table",
+      "kind": "MUTATION_REQUIRED",
+      "category": "finite_number_contract",
+      "difficulty": "L3",
+      "prompt": "Correct return null for non-finite numeric input and the parsed number otherwise in the cirrus-table finite_number_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-7.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-7.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155"
+    },
+    {
+      "task_id": "observability-028-5f8bb831b102",
+      "repository_id": "observability-03-cirrus-table",
+      "kind": "MUTATION_REQUIRED",
+      "category": "record_ownership",
+      "difficulty": "L4",
+      "prompt": "Correct read only own properties and ignore prototype-chain values in the cirrus-table record_ownership workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-8.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-8.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155"
+    },
+    {
+      "task_id": "observability-029-9774d005afb1",
+      "repository_id": "observability-03-cirrus-table",
+      "kind": "MUTATION_REQUIRED",
+      "category": "safe_average",
+      "difficulty": "L2",
+      "prompt": "Correct average only finite numeric values and return null when none remain in the cirrus-table safe_average workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-9.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-9.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155"
+    },
+    {
+      "task_id": "observability-030-a4e5b8b42b10",
+      "repository_id": "observability-03-cirrus-table",
+      "kind": "MUTATION_REQUIRED",
+      "category": "map_last_write",
+      "difficulty": "L3",
+      "prompt": "Correct index rows by id with the final row winning on duplicate ids in the cirrus-table map_last_write workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-10.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-10.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155"
+    },
+    {
+      "task_id": "observability-031-81d52418dfbc",
+      "repository_id": "observability-04-delta-queue",
+      "kind": "MUTATION_REQUIRED",
+      "category": "index_normalization",
+      "difficulty": "L3",
+      "prompt": "Correct normalize negative indexes into the collection bounds in the delta-queue index_normalization workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-1.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-1.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1"
+    },
+    {
+      "task_id": "observability-032-9b5893b7b4f0",
+      "repository_id": "observability-04-delta-queue",
+      "kind": "MUTATION_REQUIRED",
+      "category": "nullish_defaulting",
+      "difficulty": "L4",
+      "prompt": "Correct preserve valid false and zero values while defaulting only nullish input in the delta-queue nullish_defaulting workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-2.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-2.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1"
+    },
+    {
+      "task_id": "observability-033-4dced884ffe6",
+      "repository_id": "observability-04-delta-queue",
+      "kind": "MUTATION_REQUIRED",
+      "category": "inclusive_boundary",
+      "difficulty": "L2",
+      "prompt": "Correct accept both inclusive boundaries of the registered interval in the delta-queue inclusive_boundary workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-3.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-3.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1"
+    },
+    {
+      "task_id": "observability-034-e3a34939d583",
+      "repository_id": "observability-04-delta-queue",
+      "kind": "MUTATION_REQUIRED",
+      "category": "line_ending_contract",
+      "difficulty": "L3",
+      "prompt": "Correct split both LF and CRLF records without retaining carriage returns in the delta-queue line_ending_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-4.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-4.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1"
+    },
+    {
+      "task_id": "observability-035-8b9eb4357dad",
+      "repository_id": "observability-04-delta-queue",
+      "kind": "MUTATION_REQUIRED",
+      "category": "numeric_ordering",
+      "difficulty": "L3",
+      "prompt": "Correct sort numeric measurements in ascending numeric order without mutating the input in the delta-queue numeric_ordering workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-5.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-5.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1"
+    },
+    {
+      "task_id": "observability-036-d1eb1f5d3607",
+      "repository_id": "observability-04-delta-queue",
+      "kind": "MUTATION_REQUIRED",
+      "category": "tail_window",
+      "difficulty": "L4",
+      "prompt": "Correct return the final N items and return an empty list for nonpositive N in the delta-queue tail_window workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-6.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-6.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1"
+    },
+    {
+      "task_id": "observability-037-c3b0023ba8ae",
+      "repository_id": "observability-04-delta-queue",
+      "kind": "MUTATION_REQUIRED",
+      "category": "finite_number_contract",
+      "difficulty": "L2",
+      "prompt": "Correct return null for non-finite numeric input and the parsed number otherwise in the delta-queue finite_number_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-7.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-7.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1"
+    },
+    {
+      "task_id": "observability-038-bfcc45d9a4be",
+      "repository_id": "observability-04-delta-queue",
+      "kind": "MUTATION_REQUIRED",
+      "category": "record_ownership",
+      "difficulty": "L3",
+      "prompt": "Correct read only own properties and ignore prototype-chain values in the delta-queue record_ownership workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-8.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-8.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1"
+    },
+    {
+      "task_id": "observability-039-536bf0f91e73",
+      "repository_id": "observability-04-delta-queue",
+      "kind": "MUTATION_REQUIRED",
+      "category": "safe_average",
+      "difficulty": "L3",
+      "prompt": "Correct average only finite numeric values and return null when none remain in the delta-queue safe_average workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-9.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-9.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1"
+    },
+    {
+      "task_id": "observability-040-6b51847cb81b",
+      "repository_id": "observability-04-delta-queue",
+      "kind": "MUTATION_REQUIRED",
+      "category": "map_last_write",
+      "difficulty": "L4",
+      "prompt": "Correct index rows by id with the final row winning on duplicate ids in the delta-queue map_last_write workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-10.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-10.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1"
+    },
+    {
+      "task_id": "observability-041-725aade32f52",
+      "repository_id": "observability-05-elm-registry",
+      "kind": "MUTATION_REQUIRED",
+      "category": "index_normalization",
+      "difficulty": "L2",
+      "prompt": "Correct normalize negative indexes into the collection bounds in the elm-registry index_normalization workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-1.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-1.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d"
+    },
+    {
+      "task_id": "observability-042-6364a4725fd3",
+      "repository_id": "observability-05-elm-registry",
+      "kind": "MUTATION_REQUIRED",
+      "category": "nullish_defaulting",
+      "difficulty": "L3",
+      "prompt": "Correct preserve valid false and zero values while defaulting only nullish input in the elm-registry nullish_defaulting workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-2.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-2.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d"
+    },
+    {
+      "task_id": "observability-043-7b78017d6730",
+      "repository_id": "observability-05-elm-registry",
+      "kind": "MUTATION_REQUIRED",
+      "category": "inclusive_boundary",
+      "difficulty": "L3",
+      "prompt": "Correct accept both inclusive boundaries of the registered interval in the elm-registry inclusive_boundary workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-3.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-3.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d"
+    },
+    {
+      "task_id": "observability-044-48803af19af2",
+      "repository_id": "observability-05-elm-registry",
+      "kind": "MUTATION_REQUIRED",
+      "category": "line_ending_contract",
+      "difficulty": "L4",
+      "prompt": "Correct split both LF and CRLF records without retaining carriage returns in the elm-registry line_ending_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-4.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-4.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d"
+    },
+    {
+      "task_id": "observability-045-4290a4816e53",
+      "repository_id": "observability-05-elm-registry",
+      "kind": "MUTATION_REQUIRED",
+      "category": "numeric_ordering",
+      "difficulty": "L2",
+      "prompt": "Correct sort numeric measurements in ascending numeric order without mutating the input in the elm-registry numeric_ordering workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-5.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-5.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d"
+    },
+    {
+      "task_id": "observability-046-2a37664831db",
+      "repository_id": "observability-05-elm-registry",
+      "kind": "MUTATION_REQUIRED",
+      "category": "tail_window",
+      "difficulty": "L3",
+      "prompt": "Correct return the final N items and return an empty list for nonpositive N in the elm-registry tail_window workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-6.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-6.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d"
+    },
+    {
+      "task_id": "observability-047-18459c11f1ea",
+      "repository_id": "observability-05-elm-registry",
+      "kind": "MUTATION_REQUIRED",
+      "category": "finite_number_contract",
+      "difficulty": "L3",
+      "prompt": "Correct return null for non-finite numeric input and the parsed number otherwise in the elm-registry finite_number_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-7.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-7.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d"
+    },
+    {
+      "task_id": "observability-048-97af7f20b32a",
+      "repository_id": "observability-05-elm-registry",
+      "kind": "MUTATION_REQUIRED",
+      "category": "record_ownership",
+      "difficulty": "L4",
+      "prompt": "Correct read only own properties and ignore prototype-chain values in the elm-registry record_ownership workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-8.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-8.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d"
+    },
+    {
+      "task_id": "observability-049-b54a588e12b6",
+      "repository_id": "observability-05-elm-registry",
+      "kind": "MUTATION_REQUIRED",
+      "category": "safe_average",
+      "difficulty": "L2",
+      "prompt": "Correct average only finite numeric values and return null when none remain in the elm-registry safe_average workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-9.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-9.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d"
+    },
+    {
+      "task_id": "observability-050-174077bd69d6",
+      "repository_id": "observability-05-elm-registry",
+      "kind": "MUTATION_REQUIRED",
+      "category": "map_last_write",
+      "difficulty": "L3",
+      "prompt": "Correct index rows by id with the final row winning on duplicate ids in the elm-registry map_last_write workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-10.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-10.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d"
+    },
+    {
+      "task_id": "observability-051-c58ddebf7726",
+      "repository_id": "observability-06-fjord-window",
+      "kind": "MUTATION_REQUIRED",
+      "category": "index_normalization",
+      "difficulty": "L3",
+      "prompt": "Correct normalize negative indexes into the collection bounds in the fjord-window index_normalization workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-1.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-1.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8"
+    },
+    {
+      "task_id": "observability-052-14351bb8fbfb",
+      "repository_id": "observability-06-fjord-window",
+      "kind": "MUTATION_REQUIRED",
+      "category": "nullish_defaulting",
+      "difficulty": "L4",
+      "prompt": "Correct preserve valid false and zero values while defaulting only nullish input in the fjord-window nullish_defaulting workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-2.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-2.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8"
+    },
+    {
+      "task_id": "observability-053-8b08911482dd",
+      "repository_id": "observability-06-fjord-window",
+      "kind": "MUTATION_REQUIRED",
+      "category": "inclusive_boundary",
+      "difficulty": "L2",
+      "prompt": "Correct accept both inclusive boundaries of the registered interval in the fjord-window inclusive_boundary workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-3.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-3.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8"
+    },
+    {
+      "task_id": "observability-054-c945021f60cd",
+      "repository_id": "observability-06-fjord-window",
+      "kind": "MUTATION_REQUIRED",
+      "category": "line_ending_contract",
+      "difficulty": "L3",
+      "prompt": "Correct split both LF and CRLF records without retaining carriage returns in the fjord-window line_ending_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-4.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-4.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8"
+    },
+    {
+      "task_id": "observability-055-9d51671afa66",
+      "repository_id": "observability-06-fjord-window",
+      "kind": "MUTATION_REQUIRED",
+      "category": "numeric_ordering",
+      "difficulty": "L3",
+      "prompt": "Correct sort numeric measurements in ascending numeric order without mutating the input in the fjord-window numeric_ordering workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-5.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-5.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8"
+    },
+    {
+      "task_id": "observability-056-2f5190d49744",
+      "repository_id": "observability-06-fjord-window",
+      "kind": "MUTATION_REQUIRED",
+      "category": "tail_window",
+      "difficulty": "L4",
+      "prompt": "Correct return the final N items and return an empty list for nonpositive N in the fjord-window tail_window workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-6.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-6.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8"
+    },
+    {
+      "task_id": "observability-057-f1cdafd46667",
+      "repository_id": "observability-06-fjord-window",
+      "kind": "MUTATION_REQUIRED",
+      "category": "finite_number_contract",
+      "difficulty": "L2",
+      "prompt": "Correct return null for non-finite numeric input and the parsed number otherwise in the fjord-window finite_number_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-7.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-7.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8"
+    },
+    {
+      "task_id": "observability-058-8b0b45f914ed",
+      "repository_id": "observability-06-fjord-window",
+      "kind": "MUTATION_REQUIRED",
+      "category": "record_ownership",
+      "difficulty": "L3",
+      "prompt": "Correct read only own properties and ignore prototype-chain values in the fjord-window record_ownership workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-8.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-8.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8"
+    },
+    {
+      "task_id": "observability-059-1640a8820419",
+      "repository_id": "observability-06-fjord-window",
+      "kind": "MUTATION_REQUIRED",
+      "category": "safe_average",
+      "difficulty": "L3",
+      "prompt": "Correct average only finite numeric values and return null when none remain in the fjord-window safe_average workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-9.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-9.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8"
+    },
+    {
+      "task_id": "observability-060-4ed5b0cfc016",
+      "repository_id": "observability-06-fjord-window",
+      "kind": "MUTATION_REQUIRED",
+      "category": "map_last_write",
+      "difficulty": "L4",
+      "prompt": "Correct index rows by id with the final row winning on duplicate ids in the fjord-window map_last_write workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-10.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-10.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8"
+    },
+    {
+      "task_id": "observability-061-f370e35f0d7e",
+      "repository_id": "observability-07-grove-index",
+      "kind": "MUTATION_REQUIRED",
+      "category": "index_normalization",
+      "difficulty": "L2",
+      "prompt": "Correct normalize negative indexes into the collection bounds in the grove-index index_normalization workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-1.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-1.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1"
+    },
+    {
+      "task_id": "observability-062-42779a10b3cd",
+      "repository_id": "observability-07-grove-index",
+      "kind": "MUTATION_REQUIRED",
+      "category": "nullish_defaulting",
+      "difficulty": "L3",
+      "prompt": "Correct preserve valid false and zero values while defaulting only nullish input in the grove-index nullish_defaulting workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-2.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-2.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1"
+    },
+    {
+      "task_id": "observability-063-e41f167d5fd3",
+      "repository_id": "observability-07-grove-index",
+      "kind": "MUTATION_REQUIRED",
+      "category": "inclusive_boundary",
+      "difficulty": "L3",
+      "prompt": "Correct accept both inclusive boundaries of the registered interval in the grove-index inclusive_boundary workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-3.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-3.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1"
+    },
+    {
+      "task_id": "observability-064-fc70dc8f7482",
+      "repository_id": "observability-07-grove-index",
+      "kind": "MUTATION_REQUIRED",
+      "category": "line_ending_contract",
+      "difficulty": "L4",
+      "prompt": "Correct split both LF and CRLF records without retaining carriage returns in the grove-index line_ending_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-4.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-4.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1"
+    },
+    {
+      "task_id": "observability-065-e239c7c8f5bf",
+      "repository_id": "observability-07-grove-index",
+      "kind": "MUTATION_REQUIRED",
+      "category": "numeric_ordering",
+      "difficulty": "L2",
+      "prompt": "Correct sort numeric measurements in ascending numeric order without mutating the input in the grove-index numeric_ordering workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-5.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-5.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1"
+    },
+    {
+      "task_id": "observability-066-8209c4852d91",
+      "repository_id": "observability-07-grove-index",
+      "kind": "MUTATION_REQUIRED",
+      "category": "tail_window",
+      "difficulty": "L3",
+      "prompt": "Correct return the final N items and return an empty list for nonpositive N in the grove-index tail_window workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-6.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-6.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1"
+    },
+    {
+      "task_id": "observability-067-152f8cd81a26",
+      "repository_id": "observability-07-grove-index",
+      "kind": "MUTATION_REQUIRED",
+      "category": "finite_number_contract",
+      "difficulty": "L3",
+      "prompt": "Correct return null for non-finite numeric input and the parsed number otherwise in the grove-index finite_number_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-7.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-7.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1"
+    },
+    {
+      "task_id": "observability-068-519f762e6823",
+      "repository_id": "observability-07-grove-index",
+      "kind": "MUTATION_REQUIRED",
+      "category": "record_ownership",
+      "difficulty": "L4",
+      "prompt": "Correct read only own properties and ignore prototype-chain values in the grove-index record_ownership workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-8.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-8.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1"
+    },
+    {
+      "task_id": "observability-069-1961703aa2a9",
+      "repository_id": "observability-07-grove-index",
+      "kind": "MUTATION_REQUIRED",
+      "category": "safe_average",
+      "difficulty": "L2",
+      "prompt": "Correct average only finite numeric values and return null when none remain in the grove-index safe_average workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-9.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-9.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1"
+    },
+    {
+      "task_id": "observability-070-56e763ab65ad",
+      "repository_id": "observability-07-grove-index",
+      "kind": "MUTATION_REQUIRED",
+      "category": "map_last_write",
+      "difficulty": "L3",
+      "prompt": "Correct index rows by id with the final row winning on duplicate ids in the grove-index map_last_write workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-10.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-10.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1"
+    },
+    {
+      "task_id": "observability-071-183a479177fd",
+      "repository_id": "observability-08-hearth-record",
+      "kind": "MUTATION_REQUIRED",
+      "category": "index_normalization",
+      "difficulty": "L3",
+      "prompt": "Correct normalize negative indexes into the collection bounds in the hearth-record index_normalization workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-1.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-1.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65"
+    },
+    {
+      "task_id": "observability-072-fabb64d3b3bb",
+      "repository_id": "observability-08-hearth-record",
+      "kind": "MUTATION_REQUIRED",
+      "category": "nullish_defaulting",
+      "difficulty": "L4",
+      "prompt": "Correct preserve valid false and zero values while defaulting only nullish input in the hearth-record nullish_defaulting workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-2.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-2.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65"
+    },
+    {
+      "task_id": "observability-073-5f9b65db9598",
+      "repository_id": "observability-08-hearth-record",
+      "kind": "MUTATION_REQUIRED",
+      "category": "inclusive_boundary",
+      "difficulty": "L2",
+      "prompt": "Correct accept both inclusive boundaries of the registered interval in the hearth-record inclusive_boundary workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-3.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-3.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65"
+    },
+    {
+      "task_id": "observability-074-addfb1f3a123",
+      "repository_id": "observability-08-hearth-record",
+      "kind": "MUTATION_REQUIRED",
+      "category": "line_ending_contract",
+      "difficulty": "L3",
+      "prompt": "Correct split both LF and CRLF records without retaining carriage returns in the hearth-record line_ending_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-4.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-4.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65"
+    },
+    {
+      "task_id": "observability-075-c315b77e1351",
+      "repository_id": "observability-08-hearth-record",
+      "kind": "MUTATION_REQUIRED",
+      "category": "numeric_ordering",
+      "difficulty": "L3",
+      "prompt": "Correct sort numeric measurements in ascending numeric order without mutating the input in the hearth-record numeric_ordering workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-5.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-5.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65"
+    },
+    {
+      "task_id": "observability-076-69919bb33042",
+      "repository_id": "observability-08-hearth-record",
+      "kind": "MUTATION_REQUIRED",
+      "category": "tail_window",
+      "difficulty": "L4",
+      "prompt": "Correct return the final N items and return an empty list for nonpositive N in the hearth-record tail_window workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-6.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-6.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65"
+    },
+    {
+      "task_id": "observability-077-ba0e209d2f94",
+      "repository_id": "observability-08-hearth-record",
+      "kind": "MUTATION_REQUIRED",
+      "category": "finite_number_contract",
+      "difficulty": "L2",
+      "prompt": "Correct return null for non-finite numeric input and the parsed number otherwise in the hearth-record finite_number_contract workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-7.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-7.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65"
+    },
+    {
+      "task_id": "observability-078-ea0ef52b915d",
+      "repository_id": "observability-08-hearth-record",
+      "kind": "MUTATION_REQUIRED",
+      "category": "record_ownership",
+      "difficulty": "L3",
+      "prompt": "Correct read only own properties and ignore prototype-chain values in the hearth-record record_ownership workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-8.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-8.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65"
+    },
+    {
+      "task_id": "observability-079-5d5185e9a8c9",
+      "repository_id": "observability-08-hearth-record",
+      "kind": "MUTATION_REQUIRED",
+      "category": "safe_average",
+      "difficulty": "L3",
+      "prompt": "Correct average only finite numeric values and return null when none remain in the hearth-record safe_average workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-9.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-9.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65"
+    },
+    {
+      "task_id": "observability-080-21ab7b5bdf67",
+      "repository_id": "observability-08-hearth-record",
+      "kind": "MUTATION_REQUIRED",
+      "category": "map_last_write",
+      "difficulty": "L4",
+      "prompt": "Correct index rows by id with the final row winning on duplicate ids in the hearth-record map_last_write workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case-10.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case-10.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65"
+    },
+    {
+      "task_id": "observability-v2-replacement-001-be3440362566",
+      "repository_id": "observability-v2-replacement-01-quartz-clamp",
+      "kind": "MUTATION_REQUIRED",
+      "category": "bounded_clamp",
+      "difficulty": "L2",
+      "prompt": "Correct clamp numeric input to both inclusive bounds in the quartz-clamp workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:8511d6cef1309658acc95552061fff833db2cc1c819b5d9cb846a24a7fbd3c1a"
+    },
+    {
+      "task_id": "observability-v2-replacement-002-a7a8e96db2d8",
+      "repository_id": "observability-v2-replacement-02-raven-segment",
+      "kind": "MUTATION_REQUIRED",
+      "category": "exact_segment",
+      "difficulty": "L3",
+      "prompt": "Correct accept only an exact registered segment instead of a prefix in the raven-segment workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:2533a6830c3bab7467eb7a4931fbf9bf961e3d74eb0de394460d986ce11ff63b"
+    },
+    {
+      "task_id": "observability-v2-replacement-003-938c7b9b53a9",
+      "repository_id": "observability-v2-replacement-03-spruce-unique",
+      "kind": "MUTATION_REQUIRED",
+      "category": "stable_unique",
+      "difficulty": "L2",
+      "prompt": "Correct deduplicate while preserving first-seen order in the spruce-unique workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:d1af9558ff6623432e5f965852a9c475834fed5dd98fd560add3922493266b60"
+    },
+    {
+      "task_id": "observability-v2-replacement-004-ed918d278624",
+      "repository_id": "observability-v2-replacement-04-tundra-port",
+      "kind": "MUTATION_REQUIRED",
+      "category": "port_validation",
+      "difficulty": "L3",
+      "prompt": "Correct return null unless the parsed port is an integer from 1 through 65535 in the tundra-port workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:76f9fabffeeb40f34ef525b76dfd3ca4f144d3ba8521e13a378fdc6d6561c67b"
+    },
+    {
+      "task_id": "observability-v3-replacement-001-eb17cb3bfd9d",
+      "repository_id": "observability-v3-replacement-01-amber-window",
+      "kind": "MUTATION_REQUIRED",
+      "category": "bounded_window",
+      "difficulty": "L2",
+      "prompt": "Correct return only items inside the inclusive numeric window in the amber-window workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:71e3a609545859728931113c0d64ff738b61635c2785ed7b31a9bd662a76fe3b"
+    },
+    {
+      "task_id": "observability-v3-replacement-002-735f98e2549b",
+      "repository_id": "observability-v3-replacement-02-birch-host",
+      "kind": "MUTATION_REQUIRED",
+      "category": "exact_host",
+      "difficulty": "L3",
+      "prompt": "Correct accept the exact host or a dot-delimited subdomain only in the birch-host workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:cd0fcc220bdfbcc8d8f7818c910a88664389d4464921ac17e4fcb8a53909ab7c"
+    },
+    {
+      "task_id": "observability-v3-replacement-003-ead2ddb99424",
+      "repository_id": "observability-v3-replacement-03-cedar-stable",
+      "kind": "MUTATION_REQUIRED",
+      "category": "stable_filter",
+      "difficulty": "L2",
+      "prompt": "Correct remove nullish entries while preserving falsy values and order in the cedar-stable workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:3184d4f860b896f3e45cde00c1c21ab6347fd98a38b8135c34b1f3d8ecf8ac5f"
+    },
+    {
+      "task_id": "observability-v3-replacement-004-2a70a2bcbbbe",
+      "repository_id": "observability-v3-replacement-04-delta-timeout",
+      "kind": "MUTATION_REQUIRED",
+      "category": "timeout_validation",
+      "difficulty": "L3",
+      "prompt": "Correct accept only finite nonnegative timeout values in the delta-timeout workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:61353a17aced36059b06f3a2e5409a5396bb2b9eae7d7fbc08abfaf1d0a933ff"
+    },
+    {
+      "task_id": "observability-v3-replacement-005-e3f0a485a3d6",
+      "repository_id": "observability-v3-replacement-05-ember-slice",
+      "kind": "MUTATION_REQUIRED",
+      "category": "safe_slice",
+      "difficulty": "L2",
+      "prompt": "Correct clamp the slice start to zero in the ember-slice workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:12bf3341908ed47997e0716dd20afb39a6490396db0364883e006f521bf9fa6d"
+    },
+    {
+      "task_id": "observability-v3-replacement-006-a9005fc75e1d",
+      "repository_id": "observability-v3-replacement-06-fir-token",
+      "kind": "MUTATION_REQUIRED",
+      "category": "token_boundary",
+      "difficulty": "L3",
+      "prompt": "Correct match a complete comma-delimited token in the fir-token workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:198ff5a9f2e08c4e765de0b09b85d47dd58c20520ecce06f8e9978896d0a5db5"
+    },
+    {
+      "task_id": "observability-v3-replacement-007-40ee37a23300",
+      "repository_id": "observability-v3-replacement-07-granite-count",
+      "kind": "MUTATION_REQUIRED",
+      "category": "nonnegative_count",
+      "difficulty": "L2",
+      "prompt": "Correct return zero for negative counts in the granite-count workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:e20b1f6028557dae8bc25b3c95b31bf46d3e01628443228b3ebe349d5a0fdf00"
+    },
+    {
+      "task_id": "observability-v3-replacement-008-eb0e5283c62c",
+      "repository_id": "observability-v3-replacement-08-hazel-index",
+      "kind": "MUTATION_REQUIRED",
+      "category": "index_validation",
+      "difficulty": "L3",
+      "prompt": "Correct return null for non-integer or out-of-range indexes in the hazel-index workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:915bd2406208fbe0df73176ec6cef7e79aab757842c09a470dcbb5433e111037"
+    },
+    {
+      "task_id": "observability-v3-replacement-009-a44007f120cf",
+      "repository_id": "observability-v3-replacement-09-indigo-prefix",
+      "kind": "MUTATION_REQUIRED",
+      "category": "path_prefix",
+      "difficulty": "L2",
+      "prompt": "Correct normalize one trailing slash before joining a path in the indigo-prefix workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:11348f76943b8a55e06e492d6528eb1ba9046a204b49c2a59e9ad696b52e3ac5"
+    },
+    {
+      "task_id": "observability-v3-replacement-010-d0519a7259f8",
+      "repository_id": "observability-v3-replacement-10-juniper-limit",
+      "kind": "MUTATION_REQUIRED",
+      "category": "limit_validation",
+      "difficulty": "L3",
+      "prompt": "Correct use the fallback unless limit is a positive integer in the juniper-limit workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:7e365ce98467f96ea883b3c6cdb31c26820f227ab83c17c17a4576cdbb47bb64"
+    },
+    {
+      "task_id": "observability-v3-replacement-011-33dfef844c4b",
+      "repository_id": "observability-v3-replacement-11-kelp-map",
+      "kind": "MUTATION_REQUIRED",
+      "category": "own_property",
+      "difficulty": "L2",
+      "prompt": "Correct read only an object's own property in the kelp-map workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:c345c4f799dffa3059f933ff516e8be93aa16fdf10ee6207cdb32a7b64debf2c"
+    },
+    {
+      "task_id": "observability-v3-replacement-012-6e4cce7d9867",
+      "repository_id": "observability-v3-replacement-12-lilac-page",
+      "kind": "MUTATION_REQUIRED",
+      "category": "page_validation",
+      "difficulty": "L3",
+      "prompt": "Correct normalize invalid pages to page one in the lilac-page workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:7351a6824f0675e84de697b375123a7a7bd79846506b21212e43a5a1f5eb270f"
+    },
+    {
+      "task_id": "observability-v3-replacement-013-d1fd192e052f",
+      "repository_id": "observability-v3-replacement-13-maple-ext",
+      "kind": "MUTATION_REQUIRED",
+      "category": "extension_boundary",
+      "difficulty": "L2",
+      "prompt": "Correct compare a final file extension case-insensitively in the maple-ext workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:8e78642a20d4c72e4006d37cfb8072f6d272a5001f3150d6ed4697451bfcf4ba"
+    },
+    {
+      "task_id": "observability-v3-replacement-014-1a4f934d1602",
+      "repository_id": "observability-v3-replacement-14-navy-range",
+      "kind": "MUTATION_REQUIRED",
+      "category": "range_order",
+      "difficulty": "L3",
+      "prompt": "Correct return an empty list when range bounds are reversed in the navy-range workflow. Preserve the exported call shape and avoid unrelated changes.",
+      "mutation_required": true,
+      "file_scope": "SINGLE_FILE",
+      "allowed_files": [
+        "src/case.mjs"
+      ],
+      "changed_line_budget": 8,
+      "visible_test_path": "test/case.visible.test.mjs",
+      "trusted_visible_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case.visible.test.mjs"
+      ],
+      "safety_certification": "SAFE_MUTATION_REQUIRED",
+      "repository_revision": "sha256:1779d24e03d8e349f8e7caec6c56f5dfb7225a41edfe106daa6fb3563a19c8ee"
+    }
+  ]
+}

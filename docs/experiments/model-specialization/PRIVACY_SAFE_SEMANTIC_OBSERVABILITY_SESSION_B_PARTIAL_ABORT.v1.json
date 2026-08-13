@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "abortId": "dca-privacy-safe-semantic-observability-session-b-partial-abort-v1",
+  "status": "ABORTED_FAIL_CLOSED_AFTER_CONSUMED_CALL",
+  "classification": "INFRASTRUCTURE_EXTRACTOR_REJECTED_MODEL_EDIT_NO_RETRY",
+  "recordedAt": "2026-08-11T20:05:17.373Z",
+  "inputs": {
+    "seal": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_B_SEAL.v1.json",
+      "sha256": "296f7bf5825113858107955702556910c8b08d918079305b6ee77bc95e07f159"
+    },
+    "dryRun": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_B_DRY_RUN.v1.json",
+      "sha256": "451cd4746f8e63116b0c7147694ac7164bd83eaac1907b3aed71703aaa953db5"
+    }
+  },
+  "reason": {
+    "code": "L1_AFTER_SOURCE_PARSE_FAILED",
+    "messageSha256": "b8b9d241675fc98e5beebb1bd948159495369af59ea28fcea530d9df7c20ca33",
+    "behaviorChangingSourceEditAfterCallAllowed": false,
+    "hotPatchPerformed": false
+  },
+  "accounting": {
+    "plannedPhysicalCalls": 80,
+    "consumedPhysicalCalls": 4,
+    "completedObservations": 3,
+    "pairedL0L1": 3,
+    "unmatchedStartedCalls": 1,
+    "unstartedTasks": 76,
+    "retries": 0,
+    "reviewerCalls": 0,
+    "sessionBComplete": false,
+    "sessionBPass": false
+  },
+  "lineage": {
+    "callEvents": {
+      "path": "docs/experiments/runs/privacy-safe-observability-v1/call-events.jsonl",
+      "sha256": "4168f1ff38ab05658cf4c6de754edbf28fbdfdadc7e25fc3d5803ae9f8a5392f",
+      "rows": 7,
+      "started": 4,
+      "completed": 3
+    },
+    "checkpoint": {
+      "path": "docs/experiments/runs/privacy-safe-observability-v1/observations.checkpoint.jsonl",
+      "sha256": "dbc3b92e0a6e9065d289894a449472ec159ab88296d05238ddf95b9684c784ec",
+      "rows": 3
+    },
+    "lastEvent": {
+      "index": 3,
+      "taskIdSha256": "59dbf1b09859e79e7c6d29831e8b212b7084a93ff0d44b5f5ed60c890dc7342e",
+      "event": "CALL_STARTED"
+    },
+    "L0Packets": 3,
+    "L1Packets": 3,
+    "packetPairsValidated": 3
+  },
+  "privacy": {
+    "rawModelOutputsPersisted": 0,
+    "rawEditBodiesPersisted": 0,
+    "HMACKeyMaterialPersisted": false,
+    "L2": false,
+    "semanticClassificationPerformed": false
+  },
+  "cleanup": {
+    "modelProcesses": 0,
+    "port8000Clear": true,
+    "modelGpuAllocationMiB": 0,
+    "ephemeralApiKeyAbsent": true,
+    "HMACKeyAbsent": true,
+    "servingStateRemoved": true,
+    "stateEvidence": {
+      "tournament-start.json": {
+        "sha256": "f3aa3a25a04373c566fc41d11d543292355d24d3ecf7cb186edb6578f18d098d",
+        "bytes": 93
+      },
+      "tournament-launch.json": {
+        "sha256": "484be762fe5477abb6b05a5549afe18fe88447d55df05f6fadbfc80de47b08ab",
+        "bytes": 2063
+      }
+    }
+  },
+  "decision": {
+    "generationPermanentlyClosed": true,
+    "resumeSameSeal": false,
+    "rerunConsumedCalls": false,
+    "nextAction": "NEW_APPEND_ONLY_PROTOCOL_REQUIRED_BEFORE_ANY_FUTURE_EXECUTION"
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "retry": false,
+    "reviewer": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

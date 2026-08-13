@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bug Reproduction Loop",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "repro_id",
+    "task_id",
+    "command_id",
+    "exact_symptom",
+    "status",
+    "red_evidence_id",
+    "median_seconds",
+    "reproduction_rate",
+    "agent_runnable"
+  ],
+  "properties": {
+    "repro_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "command_id": {
+      "type": "string"
+    },
+    "exact_symptom": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "RED",
+        "GREEN",
+        "BLOCKED"
+      ]
+    },
+    "red_evidence_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "median_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "reproduction_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "agent_runnable": {
+      "type": "boolean"
+    },
+    "fixture_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "attempts": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-real-repositories-g1-2026-08-09T06-53-15-910Z",
+  "status": "PASS",
+  "resultFile": "real-repository-result.json",
+  "resultSha256": "5559b39c38e3e4585353bc8ad29ddc528abefddb06cea7b4c726d3557c67381e",
+  "summary": {
+    "e1": {
+      "configuration": "E1",
+      "successes": 12,
+      "total": 12,
+      "repositories": 4,
+      "schemaValidity": 1,
+      "medianTokens": 529,
+      "medianLatencyMs": 412.087,
+      "retrieval": null
+    },
+    "emin": {
+      "configuration": "E-MIN-V2",
+      "successes": 10,
+      "total": 12,
+      "repositories": 4,
+      "schemaValidity": 1,
+      "medianTokens": 151,
+      "medianLatencyMs": 405.057,
+      "retrieval": {
+        "precisionAt2": 0.3333333333333333,
+        "recallAt2": 0.5138888888888888,
+        "fallbackRate": 0.6666666666666666
+      }
+    },
+    "paired": {
+      "e1Only": 2,
+      "eminOnly": 0,
+      "bothPass": 10,
+      "bothFail": 0
+    }
+  }
+}

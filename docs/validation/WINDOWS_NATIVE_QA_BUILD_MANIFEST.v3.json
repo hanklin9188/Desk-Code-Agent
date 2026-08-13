@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 3,
+  "buildId": "dca-w1-native-200-percent-fix-build-20260812",
+  "status": "PASS_CURRENT_SOURCE_NATIVE_EXECUTABLE",
+  "supersedes": {
+    "path": "docs/validation/WINDOWS_NATIVE_QA_BUILD_MANIFEST.v2.json",
+    "sha256": "288f77747c7691bbc520b1ec6626c801999923e5a800cc579ebed3ac30dc504c"
+  },
+  "sourceIdentity": {
+    "path": "docs/validation/WINDOWS_NATIVE_SOURCE_IDENTITY.v4.json",
+    "normalizedClosureSha256": "81b9ca9e879db24afc02e98539611b05a6f9d4bf98e1c74a6ad541574717ee08"
+  },
+  "targetedValidation": {
+    "command": "npx.cmd vitest run tests/productization-ui.test.tsx tests/accessibility.test.tsx tests/media-capture-mode.test.tsx",
+    "result": "PASS_3_FILES_10_TESTS",
+    "logSha256": "3e2312df24b5af11571480b77a086ffd1866f5e0ac9de75fb1d5017baa89bdc5"
+  },
+  "nativeBuild": {
+    "command": "npm.cmd run tauri:build -- --no-bundle",
+    "result": "PASS_NO_PACKAGING",
+    "logSha256": "05a365692683e8d95b8d481a8669da700aaa57b4e95fc9d64b4236af44eaadb5",
+    "executablePath": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508\\apps\\desktop\\src-tauri\\target\\release\\desk-code-agent.exe",
+    "executableSha256": "3d33ba36601266ef4f96c4d2db177052a1f89476ec103f77d2882e5ba773a117",
+    "executableBytes": 3630080,
+    "architecture": "x86_64",
+    "dependencyGraph": "UNCHANGED_LOCKED",
+    "packagingPerformed": false
+  },
+  "modelCalls": 0,
+  "benchmarkCalls": 0
+}

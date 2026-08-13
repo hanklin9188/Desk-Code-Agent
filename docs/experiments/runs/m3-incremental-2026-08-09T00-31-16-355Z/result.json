@@ -1,0 +1,237 @@
+{
+  "experimentId": "m3-incremental-2026-08-09T00-31-16-355Z",
+  "status": "FAIL",
+  "hypothesis": "Incremental indexing reparses only changed files while preserving graph/retrieval correctness across repository mutations.",
+  "fixedVariables": {
+    "fixture": "dca-m3-typescript-v1",
+    "parser": "tree-sitter",
+    "index": "sqlite",
+    "network": "off"
+  },
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpuCount": 16
+  },
+  "taskManifestHash": "6eb4c199603e13511e3eb9af89ce2e07980e551d31d845d9112773874c26d9d6",
+  "stages": [
+    {
+      "name": "cold",
+      "durationMs": 13.257,
+      "manifest": {
+        "repoSha": "fixture-cold",
+        "files": 5,
+        "symbols": 2,
+        "references": 18,
+        "imports": 4,
+        "dependencies": 4,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 5,
+        "reusedFiles": 0,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T00:31:16.410Z"
+      }
+    },
+    {
+      "name": "unchanged",
+      "durationMs": 9.685,
+      "manifest": {
+        "repoSha": "fixture-unchanged",
+        "files": 5,
+        "symbols": 2,
+        "references": 18,
+        "imports": 4,
+        "dependencies": 4,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 0,
+        "reusedFiles": 5,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 1,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T00:31:16.419Z"
+      }
+    },
+    {
+      "name": "single-file-edit",
+      "durationMs": 8.91,
+      "manifest": {
+        "repoSha": "fixture-single-file-edit",
+        "files": 5,
+        "symbols": 2,
+        "references": 20,
+        "imports": 4,
+        "dependencies": 4,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 4,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.8,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T00:31:16.438Z"
+      }
+    },
+    {
+      "name": "multi-file-edit",
+      "durationMs": 8.128,
+      "manifest": {
+        "repoSha": "fixture-multi-file-edit",
+        "files": 5,
+        "symbols": 2,
+        "references": 20,
+        "imports": 4,
+        "dependencies": 4,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 2,
+        "reusedFiles": 3,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T00:31:16.449Z"
+      }
+    },
+    {
+      "name": "rename",
+      "durationMs": 8.537,
+      "manifest": {
+        "repoSha": "fixture-rename",
+        "files": 5,
+        "symbols": 2,
+        "references": 20,
+        "imports": 4,
+        "dependencies": 4,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 0,
+        "reusedFiles": 5,
+        "deletedFiles": 0,
+        "renamedFiles": 1,
+        "cacheHitRatio": 1,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T00:31:16.458Z"
+      }
+    },
+    {
+      "name": "deletion",
+      "durationMs": 9.444,
+      "manifest": {
+        "repoSha": "fixture-deletion",
+        "files": 4,
+        "symbols": 1,
+        "references": 14,
+        "imports": 4,
+        "dependencies": 4,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 0,
+        "reusedFiles": 4,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 1,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T00:31:16.468Z"
+      }
+    },
+    {
+      "name": "generated-ignored-file",
+      "durationMs": 8.636,
+      "manifest": {
+        "repoSha": "fixture-generated-ignored-file",
+        "files": 4,
+        "symbols": 1,
+        "references": 14,
+        "imports": 4,
+        "dependencies": 4,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 0,
+        "reusedFiles": 4,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 1,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T00:31:16.477Z"
+      }
+    },
+    {
+      "name": "dependency-change",
+      "durationMs": 7.047,
+      "manifest": {
+        "repoSha": "fixture-dependency-change",
+        "files": 4,
+        "symbols": 1,
+        "references": 11,
+        "imports": 3,
+        "dependencies": 3,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 3,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.75,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T00:31:16.484Z"
+      }
+    },
+    {
+      "name": "test-mapping-change",
+      "durationMs": 9.049,
+      "manifest": {
+        "repoSha": "fixture-test-mapping-change",
+        "files": 4,
+        "symbols": 1,
+        "references": 11,
+        "imports": 3,
+        "dependencies": 3,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 3,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.75,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T00:31:16.494Z"
+      }
+    }
+  ],
+  "summary": {
+    "coldIndexLatencyMs": 13.257,
+    "unchangedIndexLatencyMs": 9.685,
+    "finalIndexLatencyMs": 9.049,
+    "coldFiles": 5,
+    "ignoredStageFiles": 4,
+    "finalSymbols": 1,
+    "finalReferences": 11,
+    "finalDependencyEdges": 3,
+    "staleEvidenceInvalidated": 1,
+    "staleEvidenceRate": 1,
+    "retrievalQueries": 4,
+    "retrievalHits": 3,
+    "retrievalRecallAtK": 0.75,
+    "unresolvedDependenciesAfterDeletion": 1,
+    "peakProcessRssMiB": 97.54
+  },
+  "failures": [],
+  "conclusion": "One or more incremental correctness gates failed."
+}

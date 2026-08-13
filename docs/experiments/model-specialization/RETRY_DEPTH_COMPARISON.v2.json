@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T14:03:55.688Z",
+  "classification": "CONTROLLED_MODEL_SPECIALIZATION_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "decision": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "baseline": {
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "status": "RUN_COMPLETE"
+  },
+  "coder": {
+    "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "status": "RUN_COMPLETE",
+    "licenseUse": "NON_COMMERCIAL_RESEARCH_EVALUATION_EXPERIMENTAL_DEVELOPMENT_ONLY"
+  },
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "coder": {
+      "path": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "7d41c6316b508756d0c95dd688440cde334062cf9d8b94f7ed14d3cc3b32c959"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "fairness": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v2.json",
+      "sha256": "de1b2f2901d58c35c7a2a674cf6bd474a47fc87f711c07376cc3da49e147cbaa"
+    }
+  },
+  "report": "Maximum-two-call evidence retry",
+  "comparison": {
+    "phase": "boundedRetry",
+    "title": "Maximum-two-call evidence retry",
+    "baseline": {
+      "tasks": 25,
+      "successes": 0,
+      "successRate": 0,
+      "wilson95": [
+        1.3877787807814457e-17,
+        0.13319225093904846
+      ],
+      "schemaValid": 0,
+      "schemaValidity": 0,
+      "totalTokens": 23403,
+      "meanLatencyMs": 7131.631795360004
+    },
+    "coder": {
+      "tasks": 25,
+      "successes": 1,
+      "successRate": 0.04,
+      "wilson95": [
+        0.007096233501987265,
+        0.19544063736193734
+      ],
+      "schemaValid": 0,
+      "schemaValidity": 0,
+      "totalTokens": 17396,
+      "meanLatencyMs": 3189.6798044399966
+    },
+    "absoluteDifference": 0.04,
+    "absolutePercentagePointDifference": 4,
+    "relativeDifference": null,
+    "pairedOutcomes": {
+      "BOTH_PASS": 0,
+      "BASELINE_ONLY": 0,
+      "CODER_ONLY": 1,
+      "BOTH_FAIL": 24
+    },
+    "netCoderWins": 1,
+    "pairedBootstrap95": {
+      "iterations": 10000,
+      "seed": 20260816,
+      "lower": 0,
+      "upper": 0.12
+    },
+    "pairedTaskIdsSha256": "0b6ee437be32cc0a95eaf058906e5a3dbf02724df1485692004ebd4dfd3e819d"
+  },
+  "attemptLevelSchema": {
+    "baseline": {
+      "attempts": 50,
+      "schemaValidAttempts": 49,
+      "schemaValidity": 0.98
+    },
+    "coder": {
+      "attempts": 50,
+      "schemaValidAttempts": 50,
+      "schemaValidity": 1
+    }
+  },
+  "recovery": {
+    "baseline": 0,
+    "coder": 1
+  },
+  "correctionNote": "Retry schema validity is recomputed identically from immutable attempt rows for both profiles."
+}

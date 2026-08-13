@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "modelCallsBeforeRevision2Seal": 0,
+  "revision1": {
+    "manifest": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_MANIFEST.json",
+      "sha256": "5290f4382f28d0c50f07c16690d2592a82fda726bb60fa8778165870abcb9887"
+    },
+    "oracle": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_ORACLE.sealed.json",
+      "sha256": "5910593b30289741b9dea47adf04fc49168178f93e731d71f6dfd2602622dd42"
+    },
+    "preregistration": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_EXPERIMENT_PREREGISTRATION.json",
+      "sha256": "24f246d9c6a611b964e067c27ebe9556729eaafc613f4c5e6ac392b13cef1a40"
+    },
+    "status": "REJECTED_BEFORE_MODEL_CALLS",
+    "reasons": [
+      "escape-regexp reference fix failed its hidden behavior oracle",
+      "binary-search buggy source passed its original hidden oracle"
+    ]
+  },
+  "revision2": {
+    "manifest": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_MANIFEST.v2.json",
+      "sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7"
+    },
+    "oracle": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_ORACLE.v2.sealed.json",
+      "sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6"
+    },
+    "preregistration": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_EXPERIMENT_PREREGISTRATION.v2.json",
+      "sha256": "2dbcea905970ca51f1c9101ff1c870e8d9403546038814a629cb4f3c8d2aa23f"
+    },
+    "status": "ACCEPTED_PENDING_FULL_ORACLE_PREFLIGHT"
+  },
+  "outcomesSeen": false,
+  "tuningFromModelResults": false
+}

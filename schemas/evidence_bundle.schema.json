@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subgoal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "CODE",
+              "TEST",
+              "CONFIG",
+              "DOC",
+              "LOG",
+              "DIFF",
+              "METRIC",
+              "GRAPH"
+            ]
+          },
+          "path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "start_line": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "end_line": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "symbol": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "content_hash": {
+            "type": "string",
+            "minLength": 1
+          },
+          "why_selected": {
+            "type": "string",
+            "minLength": 1
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0
+          },
+          "trust": {
+            "type": "string",
+            "enum": [
+              "SOURCE",
+              "TOOL_OUTPUT",
+              "USER",
+              "GENERATED",
+              "UNTRUSTED_REPO_TEXT"
+            ]
+          }
+        },
+        "required": [
+          "evidence_id",
+          "kind",
+          "path",
+          "start_line",
+          "end_line",
+          "symbol",
+          "content_hash",
+          "why_selected",
+          "score",
+          "trust"
+        ]
+      }
+    },
+    "unresolved_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "token_estimate": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "bundle_id",
+    "task_id",
+    "subgoal",
+    "items",
+    "unresolved_gaps",
+    "token_estimate"
+  ]
+}

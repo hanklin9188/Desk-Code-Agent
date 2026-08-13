@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-g3-streaming-telemetry-2026-08-09T11-14-34-218Z",
+  "status": "PASS",
+  "summaries": {
+    "E1": {
+      "observations": 30,
+      "validTtft": 30,
+      "ttftP50Ms": 152.6037379999998,
+      "ttftP95Ms": 207.47922100000142,
+      "latencyP50Ms": 1891.365372000002,
+      "latencyP95Ms": 1950.7076090000046,
+      "outputTokensPerSecondP50": 73.72009942284224,
+      "outputTokensPerSecondP95": 75.75268246849159,
+      "errors": 0
+    },
+    "E-MIN-V2": {
+      "observations": 30,
+      "validTtft": 30,
+      "ttftP50Ms": 77.85691100000076,
+      "ttftP95Ms": 174.0415609999909,
+      "latencyP50Ms": 1469.4665070000046,
+      "latencyP95Ms": 1911.3266749999893,
+      "outputTokensPerSecondP50": 75.15096363738078,
+      "outputTokensPerSecondP95": 77.23652459527608,
+      "errors": 0
+    },
+    "E-MIN-V3": {
+      "observations": 30,
+      "validTtft": 30,
+      "ttftP50Ms": 172.55103500000405,
+      "ttftP95Ms": 256.0238939999981,
+      "latencyP50Ms": 1899.5739609999982,
+      "latencyP95Ms": 2000.1230329999962,
+      "outputTokensPerSecondP50": 73.67232363018681,
+      "outputTokensPerSecondP95": 74.67003119248966,
+      "errors": 0
+    }
+  },
+  "vram": {
+    "started": {
+      "schemaVersion": 1,
+      "primary": {
+        "source": "NVIDIA_SMI_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12290,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T11:12:06.243Z",
+        "valid": true,
+        "note": null
+      },
+      "independent": {
+        "source": "NVML_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12620.32,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T11:12:06.267Z",
+        "valid": true,
+        "note": "NVML may include WSL/driver-reserved memory that nvidia-smi presentation excludes; compare loaded/workload deltas as well as absolute values."
+      },
+      "absoluteDifferenceMiB": 330.32,
+      "totalDifferenceMiB": 0,
+      "valid": true
+    },
+    "ended": {
+      "schemaVersion": 1,
+      "primary": {
+        "source": "NVIDIA_SMI_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12290,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T11:14:34.159Z",
+        "valid": true,
+        "note": null
+      },
+      "independent": {
+        "source": "NVML_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12620.32,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T11:14:34.218Z",
+        "valid": true,
+        "note": "NVML may include WSL/driver-reserved memory that nvidia-smi presentation excludes; compare loaded/workload deltas as well as absolute values."
+      },
+      "absoluteDifferenceMiB": 330.32,
+      "totalDifferenceMiB": 0,
+      "valid": true
+    },
+    "primaryPeakMiB": 12290
+  }
+}

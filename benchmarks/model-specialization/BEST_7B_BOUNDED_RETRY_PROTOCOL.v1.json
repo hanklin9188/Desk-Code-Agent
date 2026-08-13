@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "protocolId": "dca-best-7b-bounded-retry-protocol-v1",
+  "state": "PROTOCOL_ONLY_NOT_STARTED",
+  "preparedAt": "2026-08-11T14:21:50.112Z",
+  "inputs": {
+    "eligibility": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_RETRY_ELIGIBILITY.v1.json",
+      "sha256": "c88e39e24f0b08b95cdab8bded29c2b9e19e6a9490f891617e177aedd325f728"
+    },
+    "M2Result": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/result.json",
+      "sha256": "8cf1bdb5d6cb8e86200d4833ff41b5e89100582406da7239008e7c32fc03f940"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PREREGISTRATION.v1.json",
+      "sha256": "51f983f63719494e8877eb7b24fcbc7a47b0b9fb53d5c1e2bb838961b87246c1"
+    }
+  },
+  "scientificQuestion": "Can one evidence-driven second call recover deterministic M2 failures without increasing wrong-file, safety, rollback, contradiction, repetition, token, or latency risk?",
+  "candidate": {
+    "candidateId": "M2",
+    "modelId": "TIGER-Lab/FIM-7B",
+    "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a"
+  },
+  "eligiblePopulation": {
+    "source": "M2 strict failures",
+    "count": 66,
+    "ordering": "taskId ascending",
+    "currentTournamentRowsRemainImmutable": true
+  },
+  "fixed": {
+    "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+    "runtimePrecision": "FP8_PER_TENSOR_W8A8",
+    "vllm": "0.26.0",
+    "contextLength": 8192,
+    "eMinV2": "UNCHANGED",
+    "c1": "UNCHANGED",
+    "eEditP2": "UNCHANGED",
+    "decoding": "UNCHANGED",
+    "maximumSecondCallsPerTask": 1
+  },
+  "secondCallMayReceiveOnly": [
+    "original task",
+    "current relevant source",
+    "first bounded edit hash and bounded action summary",
+    "exact deterministic failure",
+    "genuinely new deterministic evidence"
+  ],
+  "forbidden": [
+    "hidden expected patch",
+    "hidden oracle answer",
+    "semantic reviewer",
+    "human patch",
+    "conversation history",
+    "candidate-specific tuning",
+    "automatic fallback"
+  ],
+  "preregisterBeforeCalls": [
+    "exact task IDs",
+    "request intent hashes",
+    "failure evidence hashes",
+    "call ledger",
+    "retention thresholds",
+    "source closure",
+    "cleanup policy"
+  ],
+  "inheritedRetentionGate": {
+    "absoluteRecoveriesMinimum": 10,
+    "recoveryRateMinimum": "20% of eligible",
+    "wrongFile": 0,
+    "actualSafety": 0,
+    "rollbackFailures": 0,
+    "repeatedPatchMaximum": "25%",
+    "contradictionMaximum": "20%",
+    "tokenMultiplierMaximum": 2,
+    "latencyMultiplierMaximum": 2.5
+  },
+  "authorization": {
+    "modelCallsAuthorized": false,
+    "experimentStarted": false
+  }
+}

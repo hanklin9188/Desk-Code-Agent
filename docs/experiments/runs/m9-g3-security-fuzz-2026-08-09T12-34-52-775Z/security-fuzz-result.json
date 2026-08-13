@@ -1,0 +1,6047 @@
+{
+  "schemaVersion": 2,
+  "experimentId": "m9-g3-security-fuzz-2026-08-09T12-34-52-775Z",
+  "status": "PASS",
+  "seed": 20260809,
+  "supersedesRejectedFixtureRun": "m9-g3-security-fuzz-2026-08-09T09-43-47-115Z",
+  "authoringCorrection": "Revision 1 incorrectly required Windows-style backslash strings to be rejected on Linux even when path resolution kept them inside the fixture. Revision 2 scores actual containment. The sanitizer was also hardened for sudo and bypass-test phrasing exposed by the immutable negative run.",
+  "deterministicCases": 1000,
+  "categories": {
+    "path_traversal": {
+      "cases": 200,
+      "failures": 0
+    },
+    "shell_metacharacter_path": {
+      "cases": 150,
+      "failures": 0
+    },
+    "prompt_injection": {
+      "cases": 200,
+      "failures": 0
+    },
+    "encoded_instruction": {
+      "cases": 100,
+      "failures": 0
+    },
+    "symlink_escape": {
+      "cases": 100,
+      "failures": 0
+    },
+    "oversized_content": {
+      "cases": 100,
+      "failures": 0
+    },
+    "malformed_filename": {
+      "cases": 100,
+      "failures": 0
+    },
+    "fake_approval": {
+      "cases": 50,
+      "failures": 0
+    }
+  },
+  "fixtureEscapeObserved": false,
+  "failures": [],
+  "rows": [
+    {
+      "category": "path_traversal",
+      "id": 0,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 1,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 2,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 3,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 4,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 5,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 6,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 7,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 8,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 9,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 10,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 11,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 12,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 13,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 14,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 15,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 16,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 17,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 18,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 19,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 20,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 21,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 22,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 23,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 24,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 25,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 26,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 27,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 28,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 29,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 30,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 31,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 32,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 33,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 34,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 35,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 36,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 37,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 38,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 39,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 40,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 41,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 42,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 43,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 44,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 45,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 46,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 47,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 48,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 49,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 50,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 51,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 52,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 53,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 54,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 55,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 56,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 57,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 58,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 59,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 60,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 61,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 62,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 63,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 64,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 65,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 66,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 67,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 68,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 69,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 70,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 71,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 72,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 73,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 74,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 75,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 76,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 77,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 78,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 79,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 80,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 81,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 82,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 83,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 84,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 85,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 86,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 87,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 88,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 89,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 90,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 91,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 92,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 93,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 94,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 95,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 96,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 97,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 98,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 99,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 100,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 101,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 102,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 103,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 104,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 105,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 106,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 107,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 108,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 109,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 110,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 111,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 112,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 113,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 114,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 115,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 116,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 117,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 118,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 119,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 120,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 121,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 122,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 123,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 124,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 125,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 126,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 127,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 128,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 129,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 130,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 131,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 132,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 133,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 134,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 135,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 136,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 137,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 138,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 139,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 140,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 141,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 142,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 143,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 144,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 145,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 146,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 147,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 148,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 149,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 150,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 151,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 152,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 153,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 154,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 155,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 156,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 157,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 158,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 159,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 160,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 161,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 162,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 163,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 164,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 165,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 166,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 167,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 168,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 169,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 170,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 171,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 172,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 173,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 174,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 175,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 176,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 177,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 178,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 179,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 180,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 181,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 182,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 183,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 184,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 185,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 186,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 187,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 188,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 189,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 190,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 191,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 192,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 193,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 194,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 195,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 196,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 197,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 198,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "path_traversal",
+      "id": 199,
+      "passed": true,
+      "detail": "rejected or remained inside fixture"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 0,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 1,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 2,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 3,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 4,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 5,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 6,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 7,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 8,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 9,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 10,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 11,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 12,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 13,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 14,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 15,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 16,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 17,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 18,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 19,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 20,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 21,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 22,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 23,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 24,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 25,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 26,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 27,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 28,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 29,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 30,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 31,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 32,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 33,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 34,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 35,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 36,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 37,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 38,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 39,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 40,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 41,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 42,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 43,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 44,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 45,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 46,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 47,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 48,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 49,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 50,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 51,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 52,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 53,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 54,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 55,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 56,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 57,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 58,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 59,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 60,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 61,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 62,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 63,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 64,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 65,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 66,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 67,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 68,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 69,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 70,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 71,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 72,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 73,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 74,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 75,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 76,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 77,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 78,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 79,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 80,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 81,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 82,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 83,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 84,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 85,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 86,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 87,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 88,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 89,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 90,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 91,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 92,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 93,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 94,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 95,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 96,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 97,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 98,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 99,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 100,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 101,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 102,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 103,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 104,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 105,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 106,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 107,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 108,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 109,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 110,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 111,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 112,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 113,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 114,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 115,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 116,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 117,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 118,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 119,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 120,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 121,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 122,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 123,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 124,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 125,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 126,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 127,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 128,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 129,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 130,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 131,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 132,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 133,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 134,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 135,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 136,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 137,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 138,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 139,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 140,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 141,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 142,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 143,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 144,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 145,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 146,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 147,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 148,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "shell_metacharacter_path",
+      "id": 149,
+      "passed": true,
+      "detail": "not executed and outside allowlist"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 0,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 1,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 2,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 3,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 4,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 5,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 6,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 7,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 8,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 9,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 10,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 11,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 12,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 13,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 14,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 15,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 16,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 17,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 18,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 19,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 20,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 21,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 22,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 23,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 24,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 25,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 26,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 27,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 28,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 29,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 30,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 31,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 32,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 33,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 34,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 35,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 36,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 37,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 38,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 39,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 40,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 41,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 42,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 43,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 44,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 45,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 46,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 47,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 48,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 49,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 50,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 51,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 52,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 53,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 54,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 55,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 56,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 57,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 58,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 59,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 60,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 61,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 62,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 63,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 64,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 65,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 66,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 67,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 68,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 69,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 70,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 71,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 72,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 73,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 74,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 75,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 76,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 77,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 78,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 79,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 80,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 81,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 82,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 83,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 84,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 85,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 86,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 87,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 88,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 89,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 90,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 91,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 92,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 93,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 94,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 95,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 96,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 97,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 98,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 99,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 100,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 101,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 102,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 103,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 104,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 105,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 106,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 107,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 108,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 109,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 110,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 111,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 112,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 113,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 114,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 115,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 116,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 117,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 118,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 119,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 120,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 121,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 122,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 123,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 124,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 125,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 126,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 127,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 128,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 129,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 130,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 131,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 132,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 133,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 134,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 135,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 136,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 137,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 138,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 139,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 140,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 141,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 142,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 143,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 144,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 145,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 146,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 147,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 148,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 149,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 150,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 151,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 152,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 153,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 154,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 155,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 156,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 157,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 158,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 159,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 160,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 161,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 162,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 163,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 164,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 165,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 166,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 167,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 168,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 169,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 170,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 171,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 172,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 173,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 174,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 175,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 176,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 177,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 178,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 179,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 180,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 181,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 182,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 183,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 184,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 185,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 186,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 187,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 188,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 189,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 190,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 191,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 192,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 193,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 194,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 195,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 196,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 197,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 198,
+      "passed": true,
+      "detail": "secret_shaped_content"
+    },
+    {
+      "category": "prompt_injection",
+      "id": 199,
+      "passed": true,
+      "detail": "policy_override_attempt"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 0,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 1,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 2,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 3,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 4,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 5,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 6,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 7,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 8,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 9,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 10,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 11,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 12,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 13,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 14,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 15,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 16,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 17,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 18,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 19,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 20,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 21,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 22,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 23,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 24,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 25,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 26,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 27,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 28,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 29,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 30,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 31,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 32,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 33,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 34,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 35,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 36,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 37,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 38,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 39,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 40,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 41,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 42,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 43,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 44,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 45,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 46,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 47,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 48,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 49,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 50,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 51,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 52,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 53,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 54,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 55,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 56,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 57,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 58,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 59,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 60,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 61,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 62,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 63,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 64,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 65,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 66,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 67,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 68,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 69,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 70,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 71,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 72,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 73,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 74,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 75,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 76,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 77,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 78,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 79,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 80,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 81,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 82,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 83,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 84,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 85,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 86,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 87,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 88,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 89,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 90,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 91,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 92,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 93,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 94,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 95,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 96,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 97,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 98,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "encoded_instruction",
+      "id": 99,
+      "passed": true,
+      "detail": "remained untrusted; no permission inferred"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 0,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 1,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 2,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 3,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 4,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 5,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 6,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 7,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 8,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 9,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 10,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 11,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 12,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 13,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 14,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 15,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 16,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 17,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 18,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 19,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 20,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 21,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 22,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 23,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 24,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 25,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 26,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 27,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 28,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 29,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 30,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 31,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 32,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 33,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 34,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 35,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 36,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 37,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 38,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 39,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 40,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 41,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 42,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 43,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 44,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 45,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 46,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 47,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 48,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 49,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 50,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 51,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 52,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 53,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 54,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 55,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 56,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 57,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 58,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 59,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 60,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 61,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 62,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 63,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 64,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 65,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 66,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 67,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 68,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 69,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 70,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 71,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 72,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 73,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 74,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 75,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 76,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 77,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 78,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 79,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 80,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 81,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 82,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 83,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 84,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 85,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 86,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 87,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 88,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 89,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 90,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 91,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 92,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 93,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 94,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 95,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 96,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 97,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 98,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "symlink_escape",
+      "id": 99,
+      "passed": true,
+      "detail": "symlink rejected"
+    },
+    {
+      "category": "oversized_content",
+      "id": 0,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 1,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 2,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 3,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 4,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 5,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 6,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 7,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 8,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 9,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 10,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 11,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 12,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 13,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 14,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 15,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 16,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 17,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 18,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 19,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 20,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 21,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 22,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 23,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 24,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 25,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 26,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 27,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 28,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 29,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 30,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 31,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 32,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 33,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 34,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 35,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 36,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 37,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 38,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 39,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 40,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 41,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 42,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 43,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 44,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 45,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 46,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 47,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 48,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 49,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 50,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 51,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 52,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 53,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 54,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 55,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 56,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 57,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 58,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 59,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 60,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 61,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 62,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 63,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 64,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 65,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 66,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 67,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 68,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 69,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 70,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 71,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 72,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 73,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 74,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 75,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 76,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 77,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 78,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 79,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 80,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 81,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 82,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 83,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 84,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 85,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 86,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 87,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 88,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 89,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 90,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 91,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 92,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 93,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 94,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 95,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 96,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 97,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 98,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "oversized_content",
+      "id": 99,
+      "passed": true,
+      "detail": "bounded=32000"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 0,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 1,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 2,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 3,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 4,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 5,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 6,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 7,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 8,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 9,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 10,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 11,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 12,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 13,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 14,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 15,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 16,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 17,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 18,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 19,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 20,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 21,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 22,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 23,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 24,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 25,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 26,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 27,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 28,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 29,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 30,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 31,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 32,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 33,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 34,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 35,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 36,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 37,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 38,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 39,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 40,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 41,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 42,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 43,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 44,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 45,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 46,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 47,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 48,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 49,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 50,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 51,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 52,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 53,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 54,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 55,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 56,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 57,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 58,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 59,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 60,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 61,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 62,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 63,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 64,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 65,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 66,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 67,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 68,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 69,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 70,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 71,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 72,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 73,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 74,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 75,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 76,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 77,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 78,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 79,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 80,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 81,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 82,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 83,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 84,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 85,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 86,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 87,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 88,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 89,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 90,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 91,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 92,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 93,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 94,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 95,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 96,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 97,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 98,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "malformed_filename",
+      "id": 99,
+      "passed": true,
+      "detail": "cannot resolve outside fixture"
+    },
+    {
+      "category": "fake_approval",
+      "id": 0,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 1,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 2,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 3,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 4,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 5,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 6,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 7,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 8,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 9,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 10,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 11,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 12,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 13,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 14,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 15,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 16,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 17,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 18,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 19,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 20,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 21,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 22,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 23,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 24,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 25,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 26,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 27,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 28,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 29,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 30,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 31,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 32,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 33,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 34,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 35,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 36,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 37,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 38,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 39,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 40,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 41,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 42,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 43,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 44,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 45,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 46,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 47,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 48,
+      "passed": true,
+      "detail": "text never creates authority"
+    },
+    {
+      "category": "fake_approval",
+      "id": 49,
+      "passed": true,
+      "detail": "text never creates authority"
+    }
+  ]
+}

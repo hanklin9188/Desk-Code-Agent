@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "sessionId": "dca-best-7b-bounded-retry-session-a-v1",
+  "session": "A",
+  "status": "PASS",
+  "classification": "ZERO_CALL_RETRY_FREEZE",
+  "completedAt": "2026-08-11T15:02:44.551Z",
+  "inputs": {
+    "protocol": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PROTOCOL.v1.json",
+      "sha256": "228ca9e5d8a836c40f345db2f7d39a415d6e4a1cc1d9bfa7af62b9fcfdfe51b3"
+    },
+    "tournamentPreregistration": {
+      "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PREREGISTRATION.v1.json",
+      "sha256": "51f983f63719494e8877eb7b24fcbc7a47b0b9fb53d5c1e2bb838961b87246c1"
+    },
+    "tournamentSessionCSeal": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_SESSION_C_SEAL.v1.json",
+      "sha256": "e7d3d76a74342423f67b538f34e19276d1b0fbdecc6541269897919d585fa50c"
+    },
+    "tournamentSessionC": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_C.v1.json",
+      "sha256": "32ff39c05b5ce6c64b57ac77085df2b5666750a8a5689d3ac801a683bd3ec683"
+    },
+    "tournamentSessionD": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_D.v2.json",
+      "sha256": "d61cca9ab4bcf2b05c13b277b432ccbb466423639496e04affb12deeb9ed5504"
+    },
+    "priorRetryEligibility": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_RETRY_ELIGIBILITY.v1.json",
+      "sha256": "c88e39e24f0b08b95cdab8bded29c2b9e19e6a9490f891617e177aedd325f728"
+    },
+    "M2Acquisition": {
+      "path": "docs/experiments/model-specialization/tournament-session-b/M2_ACQUISITION.v1.json",
+      "sha256": "cf8e77a5bf0fe8828c1f8deeacc9c87c995a05546efde46341eeccee29998fb6"
+    },
+    "M2Result": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/result.json",
+      "sha256": "8cf1bdb5d6cb8e86200d4833ff41b5e89100582406da7239008e7c32fc03f940"
+    },
+    "M2Checkpoint": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+      "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a",
+      "rows": 95
+    },
+    "M2CallEvents": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/call-events.jsonl",
+      "sha256": "2b73cfd9abdbeb1da9f2e56258a184d5321c012ad6781b3a56bf602ad70c6188",
+      "rows": 285
+    },
+    "manifest": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+      "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+    },
+    "repositories": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+      "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+    },
+    "oracle": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+      "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+    }
+  },
+  "artifacts": {
+    "eligibilityManifest": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ELIGIBILITY_MANIFEST.v1.json",
+      "sha256": "0eb3a573d5e2401d14c4793f730521f91f2e5ff93bf1dc0e102aa2bad66df6a0"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PREREGISTRATION.v1.json",
+      "sha256": "aaede424d4ae204a098d5fb2610ce7117d0e5fa4159441a56e646059cfd07cf1"
+    },
+    "emptyLedgers": {
+      "retryCallEvents": {
+        "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-call-events.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "retryCheckpoint": {
+        "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  },
+  "validations": {
+    "historicalTournamentEvidence": "PASS",
+    "exactModelSnapshotRehash": "PASS",
+    "oneShotLedger95x3": "PASS",
+    "eligibleFailures66": "PASS",
+    "deterministicRequestIntents66": "PASS",
+    "duplicateIntents0": "PASS",
+    "hiddenOracleLeakage0": "PASS",
+    "sourceClosure": "PASS",
+    "runtimeCleanBeforeAndAfter": "PASS"
+  },
+  "counts": {
+    "modelCalls": 0,
+    "vllmStarts": 0,
+    "modelLoads": 0,
+    "eligibleSecondCalls": 66,
+    "intentRows": 66
+  },
+  "cleanup": {
+    "before": {
+      "modelProcessCount": 0,
+      "port8000Clear": true,
+      "gpuMemoryMiB": 0,
+      "ephemeralApiKeyAndStateAbsent": true
+    },
+    "after": {
+      "modelProcessCount": 0,
+      "port8000Clear": true,
+      "gpuMemoryMiB": 0,
+      "ephemeralApiKeyAndStateAbsent": true
+    }
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawSourcesStored": false,
+    "rawPriorEditsStored": false,
+    "hiddenOracleStored": false,
+    "referenceFixStored": false
+  },
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "scripts/freeze_best_7b_bounded_retry_session_a.ts",
+        "sha256": "20f0f2312cfe7e7225762ad73ef5e436cf865eb1152b35b947769de013c85557",
+        "bytes": 25699
+      },
+      {
+        "path": "scripts/run_model_tournament_session_c.ts",
+        "sha256": "5288c049824f63d8a31f602ca0f572785e934170028653c06baca881351e8db6",
+        "bytes": 37894
+      },
+      {
+        "path": "services/bounded-retry-runtime/src/index.ts",
+        "sha256": "b5df2630b3b5bedceebb6b241b6f913125a67688b20e179e995e221736d883a3",
+        "bytes": 8830
+      },
+      {
+        "path": "services/g3-benchmark-runtime/src/index.ts",
+        "sha256": "edcbc59ac3164da338289f9ae6499074a51a8e92625e189d722a9162a34b6478",
+        "bytes": 37293
+      },
+      {
+        "path": "services/g3-evaluation-runtime/src/index.ts",
+        "sha256": "02ebfd6a7914cbe35c49048c182236d578cf56a1ddeb40ff8a4b9ac141affad2",
+        "bytes": 10087
+      },
+      {
+        "path": "services/patch-interface-runtime/src/index.ts",
+        "sha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+        "bytes": 59703
+      },
+      {
+        "path": "services/repo-intelligence/src/index.ts",
+        "sha256": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d",
+        "bytes": 37025
+      },
+      {
+        "path": "services/task-aware-retrieval/src/index.ts",
+        "sha256": "a6aca66c4758d7b35126dc4bb3c53a6ebd38bf17ec3006d8f5b1bc40fa3d18eb",
+        "bytes": 18657
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21",
+        "bytes": 13021
+      },
+      {
+        "path": "tests/bounded-retry-runtime.test.ts",
+        "sha256": "aa002093caface764d1a60ec08c0e26c41e5eeea38e11daaa50b891c31d0de8e",
+        "bytes": 4127
+      }
+    ],
+    "sha256": "f0d2cf3b01161645ea302cbbf03fe46108d034ff0ae2dffdc7366b965c72f2b4"
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "modelCall": false,
+    "vllmStart": false,
+    "dependencyInstall": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  },
+  "nextSession": "SESSION_B_NOT_STARTED_STOP_REQUIRED"
+}

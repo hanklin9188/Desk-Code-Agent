@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "CODE_FORMATION_CONSTRAINT_EXPERIMENT",
+  "session": "B",
+  "status": "PASS",
+  "classification": "PRIMARY_PAIRED_EVIDENCE_COLLECTION_NO_INTERPRETATION",
+  "completedAt": "2026-08-11T23:26:09.385Z",
+  "inputs": {
+    "readiness": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_SESSION_B_CORRECTED_READINESS.v1.json",
+      "sha256": "32094a664dda27b4b8cc8d7530fc5b38e8f4a5a5e0c66cd3d9df6743c38f4b39"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_PREREGISTRATION.v1.json",
+      "sha256": "41c24a0c8eacdbc57636e942ef0c4c78047dbc899bdaed83e83a2d421466a926"
+    },
+    "requestIntents": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_REQUEST_INTENTS_PREFLIGHT.v1.json",
+      "sha256": "097252ecd106741925de46057eb987f05387b64ab437921d7dce0e88636ee798"
+    }
+  },
+  "artifacts": {
+    "pairedResults": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_SESSION_B_PAIRED_RESULTS.v1.json",
+      "sha256": "14bc2618e8f045f75d8823a4038e74a3409956edf30c801cca7cff88e65398b3",
+      "bytes": 3140
+    },
+    "transitions": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_SESSION_B_TRANSITIONS.v1.json",
+      "sha256": "f415bfbf00fe8ed8caef37ff36b3a3a4517d73322fbc48a2a285189da7c6e031",
+      "bytes": 8744
+    }
+  },
+  "accounting": {
+    "plannedCalls": 80,
+    "actualCalls": 80,
+    "controlCalls": 40,
+    "treatmentCalls": 40,
+    "pairs": 40,
+    "retries": 0,
+    "duplicateCalls": 0,
+    "silentRetries": 0,
+    "reviewers": 0
+  },
+  "outcomes": {
+    "control": {
+      "observations": 40,
+      "validAction": 0,
+      "patchConstruction": 0,
+      "syntaxPass": 0,
+      "visiblePass": 0,
+      "hiddenPass": 0,
+      "strictBehavioralPass": 0,
+      "wrongFileAttempts": 0,
+      "actualSafetyViolations": 0,
+      "rollbackFailures": 0,
+      "constraintRejections": 0,
+      "failureStages": {
+        "MODEL_FAILURE": 40
+      },
+      "tokens": {
+        "prompt": 7592,
+        "completion": 3731,
+        "total": 11323
+      },
+      "latency": {
+        "totalMs": 50919.711898000016,
+        "meanMs": 1272.9927974500004,
+        "p50Ms": 1291.397834000003,
+        "p95Ms": 1314.4559230000013
+      },
+      "completionThroughputTokensPerSecond": 73.27221346958451
+    },
+    "treatment": {
+      "observations": 40,
+      "validAction": 0,
+      "patchConstruction": 0,
+      "syntaxPass": 0,
+      "visiblePass": 0,
+      "hiddenPass": 0,
+      "strictBehavioralPass": 0,
+      "wrongFileAttempts": 0,
+      "actualSafetyViolations": 0,
+      "rollbackFailures": 0,
+      "constraintRejections": 40,
+      "failureStages": {
+        "MODEL_FAILURE": 40
+      },
+      "tokens": {
+        "prompt": 11192,
+        "completion": 3465,
+        "total": 14657
+      },
+      "latency": {
+        "totalMs": 47047.63303699999,
+        "meanMs": 1176.190825925,
+        "p50Ms": 1274.6006919999927,
+        "p95Ms": 1315.9607680000045
+      },
+      "completionThroughputTokensPerSecond": 73.6487635259992
+    }
+  },
+  "transitions": {
+    "MODEL_FAILURE -> MODEL_FAILURE": 40
+  },
+  "safety": {
+    "status": "PASS",
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0
+  },
+  "privacy": {
+    "status": "PASS",
+    "rawOutputsStored": 0,
+    "rawEditBodiesStored": 0,
+    "L2Records": 0
+  },
+  "validation": {
+    "status": "PASS",
+    "commands": [
+      {
+        "command": "npm run typecheck",
+        "stdoutSha256": "1fcfe57781045a818698db7cbe3c9428c10ea084583a12bb0925411079a7a5df",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": "npm run test",
+        "stdoutSha256": "0b776840e4552f1df75ce1a1c6ab4e8ef69b60c91c8908eb1119b79753ff536c",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": "npm run build",
+        "stdoutSha256": "784892a41ba9923e45d143d25c19ee85839b91977a88b5caedcf51f4b9653292",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": "npm run validate:design",
+        "stdoutSha256": "7f34f1d03e1a9cdf4b7f6563b338b54d50a140c10d143287249a8231ed5d2ad4",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "cleanup": {
+    "modelProcesses": 0,
+    "port8000Clear": true,
+    "gpuAllocationMiB": 0,
+    "ephemeralStateAbsent": true,
+    "disposableWorkspaces": 0
+  },
+  "interpretationPerformed": false,
+  "sessionCReady": true,
+  "next": "SESSION_C_SEPARATE_INVOCATION_REQUIRED",
+  "stop": "SESSION_B_BOUNDARY_REACHED"
+}

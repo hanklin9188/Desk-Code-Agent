@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "CODE_FORMATION_CONSTRAINT_EXPERIMENT",
+  "status": "INVALID_UPSTREAM_CONTROL_COLLAPSE",
+  "formationEffectIdentifiability": "NOT_IDENTIFIABLE_UPSTREAM_ACTION_COLLAPSE",
+  "primaryFacts": {
+    "controlValidActions": 0,
+    "treatmentValidActions": 0,
+    "formationCandidatesEvaluated": 0,
+    "pairedTransitions": {
+      "MODEL_FAILURE -> MODEL_FAILURE": 40
+    }
+  },
+  "controlSanity": {
+    "result": "FAIL",
+    "matrix": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_SANITY_COMPARISON_MATRIX.v1.json",
+      "sha256": "3a11d6ba589847a2067b5c3e8470208e95bb4c2e59ce1e3b632d5eaacc2bc729",
+      "bytes": 5914
+    },
+    "provenConfigurationDefects": [
+      "E-MIN-V2/C1 implementation bypassed retrieveG3 and directly concatenated task plus source",
+      "counterbalancing seed 20260812 was reused as per-request generation seed instead of frozen FIM request seed 20260809"
+    ],
+    "exactCollapseMechanism": "INCONCLUSIVE_BECAUSE_STAGE_TELEMETRY_WAS_NOT_RETAINED"
+  },
+  "rootCauseClass": "MULTIPLE_UPSTREAM_CONFIGURATION_DEFECTS",
+  "parserSchemaAttribution": {
+    "path": "benchmarks/model-specialization/CODE_FORMATION_PARSER_SCHEMA_AUDIT.v1.json",
+    "sha256": "8a72d4b925645b54f68d1270d33573b45ddd55e3e87d9a13aa522dffd2b5efbe",
+    "bytes": 2019
+  },
+  "treatmentReachability": {
+    "path": "benchmarks/model-specialization/CODE_FORMATION_TREATMENT_CONSTRAINT_REACHABILITY_REPORT.v1.json",
+    "sha256": "d73ec7daf1148a8a55b0be55bacb299e4834dd7078896b7aac4a3eec205e8d2e",
+    "bytes": 1285
+  },
+  "historicalActionValiditySanity": {
+    "conclusion": "0/40 is qualitatively inconsistent with previously demonstrated FIM/P2 action validity, but populations differ and no cross-population statistical equivalence is claimed.",
+    "evidence": [
+      {
+        "source": {
+          "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_B.v3.json",
+          "sha256": "a421a905381365ede996821ece11e5272ee4e5e0ec11d8c510970bfb9b8541a7"
+        },
+        "population": "different 80-task privacy-safe observability V3 population",
+        "validActions": 80,
+        "tasks": 80,
+        "rate": 1,
+        "strictSuccess": 36
+      },
+      {
+        "source": {
+          "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_C.v1.json",
+          "sha256": "32ff39c05b5ce6c64b57ac77085df2b5666750a8a5689d3ac801a683bd3ec683"
+        },
+        "population": "different 95-task practical local model tournament M2 population",
+        "validActions": 89,
+        "tasks": 95,
+        "rate": 0.9368421052631579,
+        "strictSuccess": 29
+      }
+    ]
+  },
+  "treatmentEffectMetrics": {
+    "syntaxDifference": "NOT_INTERPRETABLE_FOR_FORMATION_EFFECT",
+    "visibleDifference": "NOT_INTERPRETABLE_FOR_FORMATION_EFFECT",
+    "hiddenDifference": "NOT_INTERPRETABLE_FOR_FORMATION_EFFECT",
+    "strictBehavioralDifference": "NOT_INTERPRETABLE_FOR_FORMATION_EFFECT",
+    "pairedFormationGain": "NOT_INTERPRETABLE_FOR_FORMATION_EFFECT"
+  },
+  "productStatus": "KEEP_MUTATION_DISABLED",
+  "modelPromotionChanged": false,
+  "tasksExposed": 40,
+  "exposedTasksMayBeReusedAsFreshEvidence": false
+}

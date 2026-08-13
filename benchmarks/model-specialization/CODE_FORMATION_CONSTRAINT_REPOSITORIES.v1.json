@@ -1,0 +1,646 @@
+{
+  "schemaVersion": 1,
+  "repositoryCount": 40,
+  "repositories": [
+    {
+      "repository_id": "cfc-v1-repo-bounded-number-01",
+      "immutable_revision": "c5f4fb5d08ab423cf788487580738a19258547c5a7390672c76db0bdefaac55c",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function boundValue1(value, min, max) {\n  return Math.min(max, value);\n}\nexport const fixtureTag = 1;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue1 } from '../src/subject.mjs';\ntest('boundValue1', () => { assert.equal(boundValue1(-3, 0, 8), 0); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-label-normalization-01",
+      "immutable_revision": "bb6dc2e5aefb01dbf2b3e4b89c2be9ecf5707990cbacbc933aa546b6af36c59b",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function normalizeLabel1(value) {\n  return String(value).replace(/\\s+/g, '-');\n}\nexport const fixtureTag = 1;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel1 } from '../src/subject.mjs';\ntest('normalizeLabel1', () => { assert.equal(normalizeLabel1(' Hello World '), 'hello-world'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-window-selection-01",
+      "immutable_revision": "0d7e18c41a0fe87e40beedab8ea3c52361bfbdbd6534293b7b4ae82a0103e84d",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function selectWindow1(items, start, end) {\n  return items.slice(start, end + 1);\n}\nexport const fixtureTag = 1;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow1 } from '../src/subject.mjs';\ntest('selectWindow1', () => { assert.deepEqual(selectWindow1([1,2,3,4], 1, 3), [2,3]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-token-rendering-01",
+      "immutable_revision": "2a79d375929734cfc81beabe40203701d5f924753771fbe492eda1f4bdeb91d7",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function renderToken1(key, value) {\n  return key + '=' + value;\n}\nexport const fixtureTag = 1;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken1 } from '../src/subject.mjs';\ntest('renderToken1', () => { assert.equal(renderToken1('x', 'a\"b'), 'x=\"a\\\\\"b\"'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-count-parsing-01",
+      "immutable_revision": "a64c800f575d29bc65d953bb294c501e09a560cc8cd3db4ab467a6b469ee7396",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseCount1(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const fixtureTag = 1;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount1 } from '../src/subject.mjs';\ntest('parseCount1', () => { assert.equal(parseCount1('12', 7), 12); assert.equal(parseCount1('12x', 7), 7); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-bounded-number-02",
+      "immutable_revision": "3c8ffee0467b33515c9772dd6b748186d519d59f8e961c6f680b68260ebeeed4",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function boundValue2(value, min, max) {\n  return Math.min(max, value);\n}\nexport const fixtureTag = 2;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue2 } from '../src/subject.mjs';\ntest('boundValue2', () => { assert.equal(boundValue2(-3, 0, 8), 0); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-label-normalization-02",
+      "immutable_revision": "8599e45e9c5ae93f4db8928f64349aacb02815208e58b199c3a9e856926c8b09",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function normalizeLabel2(value) {\n  return String(value).replace(/\\s+/g, '-');\n}\nexport const fixtureTag = 2;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel2 } from '../src/subject.mjs';\ntest('normalizeLabel2', () => { assert.equal(normalizeLabel2(' Hello World '), 'hello-world'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-window-selection-02",
+      "immutable_revision": "465a9288fdd5f6bc1befcfdb229f3694a22732c4851dc7c01f71cb66f1986005",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function selectWindow2(items, start, end) {\n  return items.slice(start, end + 1);\n}\nexport const fixtureTag = 2;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow2 } from '../src/subject.mjs';\ntest('selectWindow2', () => { assert.deepEqual(selectWindow2([1,2,3,4], 1, 3), [2,3]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-token-rendering-02",
+      "immutable_revision": "2ed6aa7f610c19401be0b27bd690647a5959645ee9e627e66872ab63a177fb47",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function renderToken2(key, value) {\n  return key + '=' + value;\n}\nexport const fixtureTag = 2;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken2 } from '../src/subject.mjs';\ntest('renderToken2', () => { assert.equal(renderToken2('x', 'a\"b'), 'x=\"a\\\\\"b\"'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-count-parsing-02",
+      "immutable_revision": "0536f7b48b68c4d125a249a877df497fb1949608ab95b13d4ad7e6eb9b2f8320",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseCount2(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const fixtureTag = 2;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount2 } from '../src/subject.mjs';\ntest('parseCount2', () => { assert.equal(parseCount2('12', 7), 12); assert.equal(parseCount2('12x', 7), 7); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-bounded-number-03",
+      "immutable_revision": "4171073e6df48eb4fec51e596ee5bdb4b48d605ab3b6de3ea2a7f6298fb2401e",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function boundValue3(value, min, max) {\n  return Math.min(max, value);\n}\nexport const fixtureTag = 3;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue3 } from '../src/subject.mjs';\ntest('boundValue3', () => { assert.equal(boundValue3(-3, 0, 8), 0); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-label-normalization-03",
+      "immutable_revision": "13dd5bb75b5aac113efa7a8eb06ce937bc47d29ef5c5c975fedf436fb56ae949",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function normalizeLabel3(value) {\n  return String(value).replace(/\\s+/g, '-');\n}\nexport const fixtureTag = 3;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel3 } from '../src/subject.mjs';\ntest('normalizeLabel3', () => { assert.equal(normalizeLabel3(' Hello World '), 'hello-world'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-window-selection-03",
+      "immutable_revision": "978993c490ca83aed4ad64b6773ec8e9a7feac4b95737185aeba3f2bbb53830b",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function selectWindow3(items, start, end) {\n  return items.slice(start, end + 1);\n}\nexport const fixtureTag = 3;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow3 } from '../src/subject.mjs';\ntest('selectWindow3', () => { assert.deepEqual(selectWindow3([1,2,3,4], 1, 3), [2,3]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-token-rendering-03",
+      "immutable_revision": "118e9b00c33924d9f1b624167cfb3dc1039b5819021386d52786d9b872780342",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function renderToken3(key, value) {\n  return key + '=' + value;\n}\nexport const fixtureTag = 3;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken3 } from '../src/subject.mjs';\ntest('renderToken3', () => { assert.equal(renderToken3('x', 'a\"b'), 'x=\"a\\\\\"b\"'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-count-parsing-03",
+      "immutable_revision": "2e795adb7577082c1bb20b0124d2eee4c196a01f45ee88d255130c84b9120552",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseCount3(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const fixtureTag = 3;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount3 } from '../src/subject.mjs';\ntest('parseCount3', () => { assert.equal(parseCount3('12', 7), 12); assert.equal(parseCount3('12x', 7), 7); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-bounded-number-04",
+      "immutable_revision": "1a8405c2ee8c0b6c102f1c6b18a87dca2bc3aa10a26eb7dcb92774f759c182dd",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function boundValue4(value, min, max) {\n  return Math.min(max, value);\n}\nexport const fixtureTag = 4;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue4 } from '../src/subject.mjs';\ntest('boundValue4', () => { assert.equal(boundValue4(-3, 0, 8), 0); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-label-normalization-04",
+      "immutable_revision": "10d3309e5e74c388f6492973efe7a9dbb21daa004db41b6ee1f2ff192e5da609",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function normalizeLabel4(value) {\n  return String(value).replace(/\\s+/g, '-');\n}\nexport const fixtureTag = 4;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel4 } from '../src/subject.mjs';\ntest('normalizeLabel4', () => { assert.equal(normalizeLabel4(' Hello World '), 'hello-world'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-window-selection-04",
+      "immutable_revision": "b12aa2e352f219a3d95b5781945de886eb98bd03ace53c1cfd1df9cb07150c65",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function selectWindow4(items, start, end) {\n  return items.slice(start, end + 1);\n}\nexport const fixtureTag = 4;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow4 } from '../src/subject.mjs';\ntest('selectWindow4', () => { assert.deepEqual(selectWindow4([1,2,3,4], 1, 3), [2,3]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-token-rendering-04",
+      "immutable_revision": "53d750016ba10047861cd893b8e2ec5b36dd2f6e1d6d4c94aebc3fdce24f2bfc",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function renderToken4(key, value) {\n  return key + '=' + value;\n}\nexport const fixtureTag = 4;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken4 } from '../src/subject.mjs';\ntest('renderToken4', () => { assert.equal(renderToken4('x', 'a\"b'), 'x=\"a\\\\\"b\"'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-count-parsing-04",
+      "immutable_revision": "1625ad8eb41a33b8607423d011b1256528598b4cac4cb50a9875f037612f921a",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseCount4(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const fixtureTag = 4;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount4 } from '../src/subject.mjs';\ntest('parseCount4', () => { assert.equal(parseCount4('12', 7), 12); assert.equal(parseCount4('12x', 7), 7); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-bounded-number-05",
+      "immutable_revision": "fce2961a98c362410672c731946a9d4766faba93f51198a34fe9dbd52f1b4abd",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function boundValue5(value, min, max) {\n  return Math.min(max, value);\n}\nexport const fixtureTag = 5;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue5 } from '../src/subject.mjs';\ntest('boundValue5', () => { assert.equal(boundValue5(-3, 0, 8), 0); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-label-normalization-05",
+      "immutable_revision": "208fb932dd3ee6eb4382f68a98062f55a7b99c93c38620640f9d25389f5cb8b5",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function normalizeLabel5(value) {\n  return String(value).replace(/\\s+/g, '-');\n}\nexport const fixtureTag = 5;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel5 } from '../src/subject.mjs';\ntest('normalizeLabel5', () => { assert.equal(normalizeLabel5(' Hello World '), 'hello-world'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-window-selection-05",
+      "immutable_revision": "669e596ecffc1c7a5ef81cd3a17fb6ecaaf25a000594a1909fce7118628f227e",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function selectWindow5(items, start, end) {\n  return items.slice(start, end + 1);\n}\nexport const fixtureTag = 5;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow5 } from '../src/subject.mjs';\ntest('selectWindow5', () => { assert.deepEqual(selectWindow5([1,2,3,4], 1, 3), [2,3]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-token-rendering-05",
+      "immutable_revision": "a30696aa7ea3414b65bf9be2cb156aa2738a4af0d04a678fef90e83ef2dd03a7",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function renderToken5(key, value) {\n  return key + '=' + value;\n}\nexport const fixtureTag = 5;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken5 } from '../src/subject.mjs';\ntest('renderToken5', () => { assert.equal(renderToken5('x', 'a\"b'), 'x=\"a\\\\\"b\"'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-count-parsing-05",
+      "immutable_revision": "c0739ab1bf135a8554564f0f4cd15c52bd06b6ff123bb8b14a6c39a8300b1460",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseCount5(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const fixtureTag = 5;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount5 } from '../src/subject.mjs';\ntest('parseCount5', () => { assert.equal(parseCount5('12', 7), 12); assert.equal(parseCount5('12x', 7), 7); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-bounded-number-06",
+      "immutable_revision": "1661fcfdcf394effeeceac016c38224d114ce5470901b147e6068428c9493533",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function boundValue6(value, min, max) {\n  return Math.min(max, value);\n}\nexport const fixtureTag = 6;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue6 } from '../src/subject.mjs';\ntest('boundValue6', () => { assert.equal(boundValue6(-3, 0, 8), 0); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-label-normalization-06",
+      "immutable_revision": "3a0e042f3812dc40613e5c69fd5b989645ce68e04a738b91671482610a7a0cb3",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function normalizeLabel6(value) {\n  return String(value).replace(/\\s+/g, '-');\n}\nexport const fixtureTag = 6;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel6 } from '../src/subject.mjs';\ntest('normalizeLabel6', () => { assert.equal(normalizeLabel6(' Hello World '), 'hello-world'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-window-selection-06",
+      "immutable_revision": "b7429a4bdc50539aab3b794aa646d37cb40a64edddb26f8127fb305bb9b213fd",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function selectWindow6(items, start, end) {\n  return items.slice(start, end + 1);\n}\nexport const fixtureTag = 6;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow6 } from '../src/subject.mjs';\ntest('selectWindow6', () => { assert.deepEqual(selectWindow6([1,2,3,4], 1, 3), [2,3]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-token-rendering-06",
+      "immutable_revision": "52268bce81914bc625a4638266f254f0dbda5da9de93bff17e1b7b326cdc12d9",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function renderToken6(key, value) {\n  return key + '=' + value;\n}\nexport const fixtureTag = 6;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken6 } from '../src/subject.mjs';\ntest('renderToken6', () => { assert.equal(renderToken6('x', 'a\"b'), 'x=\"a\\\\\"b\"'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-count-parsing-06",
+      "immutable_revision": "e69dd68366ade36e7ece6f82b49d115d8a4bf9fab917e8687b55fc19f41d2d9c",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseCount6(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const fixtureTag = 6;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount6 } from '../src/subject.mjs';\ntest('parseCount6', () => { assert.equal(parseCount6('12', 7), 12); assert.equal(parseCount6('12x', 7), 7); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-bounded-number-07",
+      "immutable_revision": "bd35323dc3a1cf235a4c549c2f49eb86be87deb63c12d4d3df52ef3a4df27410",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function boundValue7(value, min, max) {\n  return Math.min(max, value);\n}\nexport const fixtureTag = 7;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue7 } from '../src/subject.mjs';\ntest('boundValue7', () => { assert.equal(boundValue7(-3, 0, 8), 0); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-label-normalization-07",
+      "immutable_revision": "c67717849c87bf41581fed38d7f61dae1af7e1931d4dcfbe7a7b611e27ce8758",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function normalizeLabel7(value) {\n  return String(value).replace(/\\s+/g, '-');\n}\nexport const fixtureTag = 7;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel7 } from '../src/subject.mjs';\ntest('normalizeLabel7', () => { assert.equal(normalizeLabel7(' Hello World '), 'hello-world'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-window-selection-07",
+      "immutable_revision": "053c91b6f81f66b59184651cfd06deadb96e070b1983a97ef8fb5a32afedd984",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function selectWindow7(items, start, end) {\n  return items.slice(start, end + 1);\n}\nexport const fixtureTag = 7;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow7 } from '../src/subject.mjs';\ntest('selectWindow7', () => { assert.deepEqual(selectWindow7([1,2,3,4], 1, 3), [2,3]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-token-rendering-07",
+      "immutable_revision": "2cb0e4734398abf48640e68ec835b315f2298a41d73ce8af6fc6561dd4c450f4",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function renderToken7(key, value) {\n  return key + '=' + value;\n}\nexport const fixtureTag = 7;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken7 } from '../src/subject.mjs';\ntest('renderToken7', () => { assert.equal(renderToken7('x', 'a\"b'), 'x=\"a\\\\\"b\"'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-count-parsing-07",
+      "immutable_revision": "9d0d6224b825950abd05648ba3a3c9e0c0326e4a029315687ac7086cd6452450",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseCount7(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const fixtureTag = 7;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount7 } from '../src/subject.mjs';\ntest('parseCount7', () => { assert.equal(parseCount7('12', 7), 12); assert.equal(parseCount7('12x', 7), 7); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-bounded-number-08",
+      "immutable_revision": "f91f7bff4dad6525b53e394e533f9a01a5fc33ef62279440dcc3214eec13499b",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function boundValue8(value, min, max) {\n  return Math.min(max, value);\n}\nexport const fixtureTag = 8;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue8 } from '../src/subject.mjs';\ntest('boundValue8', () => { assert.equal(boundValue8(-3, 0, 8), 0); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-label-normalization-08",
+      "immutable_revision": "4daa35bfe77b7a6ccb5726911b5a5ff447cc5479594c27f3403bf4ce9220e24d",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function normalizeLabel8(value) {\n  return String(value).replace(/\\s+/g, '-');\n}\nexport const fixtureTag = 8;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel8 } from '../src/subject.mjs';\ntest('normalizeLabel8', () => { assert.equal(normalizeLabel8(' Hello World '), 'hello-world'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-window-selection-08",
+      "immutable_revision": "7bea9d3a36ae04deef0294fcb9758de31c9fca2f24869d2312193935268f3ab2",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function selectWindow8(items, start, end) {\n  return items.slice(start, end + 1);\n}\nexport const fixtureTag = 8;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow8 } from '../src/subject.mjs';\ntest('selectWindow8', () => { assert.deepEqual(selectWindow8([1,2,3,4], 1, 3), [2,3]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-token-rendering-08",
+      "immutable_revision": "56a388db1bc3876fd7da76106b038df90fe833153c7dfc6309d97eedb4f8fe7f",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function renderToken8(key, value) {\n  return key + '=' + value;\n}\nexport const fixtureTag = 8;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken8 } from '../src/subject.mjs';\ntest('renderToken8', () => { assert.equal(renderToken8('x', 'a\"b'), 'x=\"a\\\\\"b\"'); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfc-v1-repo-count-parsing-08",
+      "immutable_revision": "f24b05f44f6c9da559b39ab0e87d88d2951ee7e9b8f3faa13778cafd5b9a7dee",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseCount8(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const fixtureTag = 8;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount8 } from '../src/subject.mjs';\ntest('parseCount8', () => { assert.equal(parseCount8('12', 7), 12); assert.equal(parseCount8('12x', 7), 7); });\n",
+          "role": "test"
+        }
+      ]
+    }
+  ]
+}

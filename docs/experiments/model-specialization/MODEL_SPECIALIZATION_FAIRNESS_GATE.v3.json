@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "gateId": "dca-model-specialization-automatic-fairness-gate-v2",
+  "evaluatedAt": "2026-08-09T14:13:23.552Z",
+  "status": "PASS_BEFORE_CORRECTED_CANDIDATE_CAPABILITY_CALLS",
+  "candidateCapabilityCallsBeforeGate": 203,
+  "correctedCandidateCapabilityCallsBeforeGate": 0,
+  "intendedIndependentVariable": "MODEL_PROFILE_ONLY",
+  "observationBudget": 203,
+  "phaseCounts": {
+    "oracleContext": 42,
+    "taskUnderstanding": 24,
+    "navigation": 25,
+    "diagnosis": 25,
+    "patchOnly": 25,
+    "planning": 12,
+    "oneShotEndToEnd": 25,
+    "boundedRetry": 25
+  },
+  "immutableInputs": {
+    "config/production/emin-v2-frozen-2026-08-09.json": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+    "services/agent-runtime/src/index.ts": "1111f03e4e6f9c6a71b4066bc0c8b4e1a00f11075ea12ea566d3b0835d363948",
+    "services/tool-runtime/src/index.ts": "bd3e6dd7c43d5d1ec3d7397d9c0ddc7c7b253c1beaf4c3ccb8f2935a40309e00",
+    "services/repo-intelligence/src/index.ts": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d",
+    "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75",
+    "benchmarks/model-specialization/MODEL_COMPARISON_DEVELOPMENT_MANIFEST.json": "844bf4e3a16a0895a3d289e0b5eaec231a376ef23d77356cbf862c3344cdb556",
+    "benchmarks/model-specialization/EXACT_MODEL_MANIFESTS.json": "f16fa1c3d2a8c266b4c9675f3cc771362ed83b4c66ef76a9c68f18f9a449825b",
+    "benchmarks/g4-development/G4_DEVELOPMENT_MANIFEST.v2.json": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7",
+    "benchmarks/g4-development/G4_DEVELOPMENT_ORACLE.v2.sealed.json": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+    "benchmarks/g4-development/G4_DEVELOPMENT_SEAL.json": "0d5e4e5c473f06b847a60843a0ac60287fe2dad08bf14dad569063fed73ef590",
+    "benchmarks/g4-development/G4_DEVELOPMENT_RESULTS_INDEX.json": "79d70211fded745d760c50f6bfe95ac5463cd41b119433156d4ba3d9f7ee253f"
+  },
+  "executionClosure": {
+    "developmentRunner": {
+      "path": "scripts/run_model_specialization_development.ts",
+      "sha256": "00223a74df873020d697c6f1b2ac573260a6c2afc1fb1b7c0f1bda7b3f7a69d2",
+      "modelSpecificBehaviorBranches": 0
+    },
+    "profileRegistry": {
+      "path": "config/model_specialization_profiles.json",
+      "sha256": "2b099955217f7e6f81876135ead852f4938a544c1b413d28cca811f705549e4a"
+    },
+    "modelAccessRuntime": {
+      "path": "services/model-specialization-runtime/src/index.ts",
+      "sha256": "d4040e698d4985e50c014e1fdfa138f32ee10de866854de26ff561fc6f3b054e"
+    },
+    "launcher": {
+      "path": "scripts/start_model_profile.sh",
+      "sha256": "7a3310a891298d589cd7c1e3d99d14459ec679a4b94a011b7a4360ff129a712e",
+      "explicitSharedModelRunner": "V1"
+    }
+  },
+  "baselineEvidence": {
+    "result": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43",
+      "observationCounts": {
+        "oracleContext": 42,
+        "taskUnderstanding": 24,
+        "navigation": 25,
+        "diagnosis": 25,
+        "patchOnly": 25,
+        "planning": 12,
+        "oneShotEndToEnd": 25,
+        "boundedRetry": 25
+      }
+    },
+    "smoke": {
+      "path": "docs/experiments/model-specialization/BASELINE_MODEL_SMOKE_VALIDATION.v2.json",
+      "sha256": "fb90ef42bf46137dc3c4edd04ecea73101b8108c124fbbc1534ad6716375d98d"
+    },
+    "effectiveModelRunner": "V1",
+    "effectiveRunnerReason": "Pinned Qwen3.5 config is hybrid; installed vLLM 0.26.0 returns V1 for hybrid architectures.",
+    "vllmSelectionSourceSha256": "d4c31282c664c91bee81267a2134a9609d16c33e88cc40e0f020256346510a87"
+  },
+  "candidateEvidence": {
+    "acquisition": {
+      "path": "benchmarks/model-specialization/MODEL_ACQUISITION_STATUS.v2.json",
+      "sha256": "6a4ac304b00b927013206aa88d4c92d83674be76d1f373623f293ed4c99a1542"
+    },
+    "smoke": {
+      "path": "docs/experiments/model-specialization/CODER_MODEL_SMOKE_VALIDATION.v3.json",
+      "sha256": "152e246899b0ae1e3e2b5fb1be352bcfbc6f6eb1962dcddb392954c7c01a40c5"
+    },
+    "effectiveModelRunner": "V1",
+    "initialPreCallCompatibilityFailure": "V2_REQUIRES_UNAVAILABLE_CUDA_UVA",
+    "initialFailedStartCandidateCalls": 0,
+    "resolution": "Pin the shared V1 runner already used effectively by baseline; model, weights, BF16, context, prompts, tasks, scoring, safety and verification are unchanged."
+  },
+  "decodingParity": {
+    "baselineSnapshotGenerationConfig": "ABSENT_EFFECTIVE_VLLM_DEFAULTS",
+    "candidateSnapshotGenerationConfig": "PRESENT_BUT_DISABLED_BY_SERVER",
+    "sharedServerGenerationConfig": "vllm",
+    "status": "PASS_IDENTICAL_EFFECTIVE_DEFAULTS",
+    "priorV2CandidateRun": "INVALIDATED_MODEL_GENERATION_CONFIG_AUTO_WAS_A_CONFOUND"
+  },
+  "fixedVariables": {
+    "backend": "vllm",
+    "backendVersion": "0.26.0",
+    "generationConfig": "vllm",
+    "host": "127.0.0.1",
+    "port": 8000,
+    "precision": "bfloat16",
+    "comparisonContextLimit": 8192,
+    "gpuMemoryUtilization": 0.82,
+    "maxNumSequences": 1,
+    "prefixCaching": true,
+    "temperature": 0,
+    "seed": 20260809,
+    "reasoningMode": false,
+    "residency": "SEQUENTIAL_ONLY"
+  },
+  "frozenSemantics": {
+    "harness": "E-MIN-V2",
+    "retrieval": "SYMBOL_TOP_2_THEN_HYBRID_TOP_2",
+    "context": "C1_TASK_PLUS_SOURCE_MAX_8192_MODEL_CONTEXT",
+    "toolRuntime": "IDENTICAL_CONSTRAINED_PATCH_AND_DETERMINISTIC_VERIFICATION",
+    "retry": "MAXIMUM_TWO_CALLS_WITH_EXACT_FAILURE_EVIDENCE",
+    "reviewer": "OFF",
+    "multiAgent": "OFF",
+    "rawPromptPersistence": false,
+    "rawOutputPersistence": false
+  },
+  "permittedDifferences": [
+    "model ID and exact weight revision",
+    "model-native architecture/config",
+    "tokenizer and chat template",
+    "intrinsic model output, tokenization, latency, throughput and VRAM"
+  ],
+  "aggregateCompatibilityNote": "The post-baseline retry structured-output aggregate correction changes only report aggregation. Paired v2 analysis recomputes both profiles from immutable attempt rows; prompts, calls, row scoring and task semantics are unchanged.",
+  "failures": []
+}

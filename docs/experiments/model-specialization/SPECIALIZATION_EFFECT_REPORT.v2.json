@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T14:03:55.688Z",
+  "classification": "CONTROLLED_MODEL_SPECIALIZATION_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "decision": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "baseline": {
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "status": "RUN_COMPLETE"
+  },
+  "coder": {
+    "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "status": "RUN_COMPLETE",
+    "licenseUse": "NON_COMMERCIAL_RESEARCH_EVALUATION_EXPERIMENTAL_DEVELOPMENT_ONLY"
+  },
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "coder": {
+      "path": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "7d41c6316b508756d0c95dd688440cde334062cf9d8b94f7ed14d3cc3b32c959"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "fairness": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v2.json",
+      "sha256": "de1b2f2901d58c35c7a2a674cf6bd474a47fc87f711c07376cc3da49e147cbaa"
+    }
+  },
+  "status": "COMPLETE_DEVELOPMENT_GATE_FAILED",
+  "conclusion": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "phaseEffects": {
+    "oracleContext": {
+      "phase": "oracleContext",
+      "title": "Oracle-context reasoning",
+      "baseline": {
+        "tasks": 42,
+        "successes": 0,
+        "successRate": 0,
+        "wilson95": [
+          -6.938893903907228e-18,
+          0.08379879086570391
+        ],
+        "schemaValid": 26,
+        "schemaValidity": 0.6190476190476191,
+        "totalTokens": 78550,
+        "meanLatencyMs": 3766.439826714285
+      },
+      "coder": {
+        "tasks": 42,
+        "successes": 0,
+        "successRate": 0,
+        "wilson95": [
+          -6.938893903907228e-18,
+          0.08379879086570391
+        ],
+        "schemaValid": 19,
+        "schemaValidity": 0.4523809523809524,
+        "totalTokens": 74551,
+        "meanLatencyMs": 3010.941507428571
+      },
+      "absoluteDifference": 0,
+      "absolutePercentagePointDifference": 0,
+      "relativeDifference": null,
+      "pairedOutcomes": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 0,
+        "CODER_ONLY": 0,
+        "BOTH_FAIL": 42
+      },
+      "netCoderWins": 0,
+      "pairedBootstrap95": {
+        "iterations": 10000,
+        "seed": 20260809,
+        "lower": 0,
+        "upper": 0
+      },
+      "pairedTaskIdsSha256": "c76c028d18eef4ce48fba992e03792d1f8801bb55827a6a6a0b7001ec917fe65"
+    },
+    "taskUnderstanding": {
+      "phase": "taskUnderstanding",
+      "title": "Task understanding only",
+      "baseline": {
+        "tasks": 24,
+        "successes": 0,
+        "successRate": 0,
+        "wilson95": [
+          1.3877787807814457e-17,
+          0.13797620467498017
+        ],
+        "schemaValid": 9,
+        "schemaValidity": 0.375,
+        "totalTokens": 9429,
+        "meanLatencyMs": 3636.3464088333326
+      },
+      "coder": {
+        "tasks": 24,
+        "successes": 0,
+        "successRate": 0,
+        "wilson95": [
+          1.3877787807814457e-17,
+          0.13797620467498017
+        ],
+        "schemaValid": 3,
+        "schemaValidity": 0.125,
+        "totalTokens": 9571,
+        "meanLatencyMs": 2882.8932422916714
+      },
+      "absoluteDifference": 0,
+      "absolutePercentagePointDifference": 0,
+      "relativeDifference": null,
+      "pairedOutcomes": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 0,
+        "CODER_ONLY": 0,
+        "BOTH_FAIL": 24
+      },
+      "netCoderWins": 0,
+      "pairedBootstrap95": {
+        "iterations": 10000,
+        "seed": 20260810,
+        "lower": 0,
+        "upper": 0
+      },
+      "pairedTaskIdsSha256": "a31e4dbc41e17c3d8ff9050451e4f80ceaf857dfa5c3ce1603e082172317440e"
+    },
+    "navigation": {
+      "phase": "navigation",
+      "title": "Frozen retrieval navigation",
+      "baseline": {
+        "tasks": 25,
+        "successes": 17,
+        "successRate": 0.68,
+        "wilson95": [
+          0.48410269273102247,
+          0.8279480969309202
+        ],
+        "schemaValid": 25,
+        "schemaValidity": 1,
+        "totalTokens": 5040,
+        "meanLatencyMs": 1162.9056157200027
+      },
+      "coder": {
+        "tasks": 25,
+        "successes": 23,
+        "successRate": 0.92,
+        "wilson95": [
+          0.7503389104960468,
+          0.9777795987151524
+        ],
+        "schemaValid": 25,
+        "schemaValidity": 1,
+        "totalTokens": 4052,
+        "meanLatencyMs": 547.9038076799992
+      },
+      "absoluteDifference": 0.24,
+      "absolutePercentagePointDifference": 24,
+      "relativeDifference": 0.3529411764705882,
+      "pairedOutcomes": {
+        "BOTH_PASS": 16,
+        "BASELINE_ONLY": 1,
+        "CODER_ONLY": 7,
+        "BOTH_FAIL": 1
+      },
+      "netCoderWins": 6,
+      "pairedBootstrap95": {
+        "iterations": 10000,
+        "seed": 20260811,
+        "lower": 0.04,
+        "upper": 0.44
+      },
+      "pairedTaskIdsSha256": "0b6ee437be32cc0a95eaf058906e5a3dbf02724df1485692004ebd4dfd3e819d"
+    },
+    "diagnosis": {
+      "phase": "diagnosis",
+      "title": "Diagnosis only",
+      "baseline": {
+        "tasks": 25,
+        "successes": 2,
+        "successRate": 0.08,
+        "wilson95": [
+          0.022220401284847563,
+          0.24966108950395313
+        ],
+        "schemaValid": 5,
+        "schemaValidity": 0.2,
+        "totalTokens": 10733,
+        "meanLatencyMs": 3471.314023839994
+      },
+      "coder": {
+        "tasks": 25,
+        "successes": 1,
+        "successRate": 0.04,
+        "wilson95": [
+          0.007096233501987265,
+          0.19544063736193734
+        ],
+        "schemaValid": 20,
+        "schemaValidity": 0.8,
+        "totalTokens": 9363,
+        "meanLatencyMs": 2182.7237923600037
+      },
+      "absoluteDifference": -0.04,
+      "absolutePercentagePointDifference": -4,
+      "relativeDifference": -0.5,
+      "pairedOutcomes": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 2,
+        "CODER_ONLY": 1,
+        "BOTH_FAIL": 22
+      },
+      "netCoderWins": -1,
+      "pairedBootstrap95": {
+        "iterations": 10000,
+        "seed": 20260812,
+        "lower": -0.2,
+        "upper": 0.08
+      },
+      "pairedTaskIdsSha256": "0b6ee437be32cc0a95eaf058906e5a3dbf02724df1485692004ebd4dfd3e819d"
+    },
+    "patchOnly": {
+      "phase": "patchOnly",
+      "title": "Patch-only behavioral execution",
+      "baseline": {
+        "tasks": 25,
+        "successes": 0,
+        "successRate": 0,
+        "wilson95": [
+          1.3877787807814457e-17,
+          0.13319225093904846
+        ],
+        "schemaValid": 25,
+        "schemaValidity": 1,
+        "totalTokens": 11454,
+        "meanLatencyMs": 3419.2515078800034
+      },
+      "coder": {
+        "tasks": 25,
+        "successes": 0,
+        "successRate": 0,
+        "wilson95": [
+          1.3877787807814457e-17,
+          0.13319225093904846
+        ],
+        "schemaValid": 25,
+        "schemaValidity": 1,
+        "totalTokens": 8677,
+        "meanLatencyMs": 1573.037786160009
+      },
+      "absoluteDifference": 0,
+      "absolutePercentagePointDifference": 0,
+      "relativeDifference": null,
+      "pairedOutcomes": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 0,
+        "CODER_ONLY": 0,
+        "BOTH_FAIL": 25
+      },
+      "netCoderWins": 0,
+      "pairedBootstrap95": {
+        "iterations": 10000,
+        "seed": 20260813,
+        "lower": 0,
+        "upper": 0
+      },
+      "pairedTaskIdsSha256": "0b6ee437be32cc0a95eaf058906e5a3dbf02724df1485692004ebd4dfd3e819d"
+    },
+    "planning": {
+      "phase": "planning",
+      "title": "Structured planning",
+      "baseline": {
+        "tasks": 12,
+        "successes": 7,
+        "successRate": 0.5833333333333334,
+        "wilson95": [
+          0.31951131254954973,
+          0.8067396863412435
+        ],
+        "schemaValid": 8,
+        "schemaValidity": 0.6666666666666666,
+        "totalTokens": 29571,
+        "meanLatencyMs": 4015.9274840833436
+      },
+      "coder": {
+        "tasks": 12,
+        "successes": 7,
+        "successRate": 0.5833333333333334,
+        "wilson95": [
+          0.31951131254954973,
+          0.8067396863412435
+        ],
+        "schemaValid": 12,
+        "schemaValidity": 1,
+        "totalTokens": 26107,
+        "meanLatencyMs": 1531.8690400833293
+      },
+      "absoluteDifference": 0,
+      "absolutePercentagePointDifference": 0,
+      "relativeDifference": 0,
+      "pairedOutcomes": {
+        "BOTH_PASS": 5,
+        "BASELINE_ONLY": 2,
+        "CODER_ONLY": 2,
+        "BOTH_FAIL": 3
+      },
+      "netCoderWins": 0,
+      "pairedBootstrap95": {
+        "iterations": 10000,
+        "seed": 20260814,
+        "lower": -0.3333333333333333,
+        "upper": 0.3333333333333333
+      },
+      "pairedTaskIdsSha256": "8338b007945cf57c4d7c8946e6de49421e5ca989781cc257d06071a241cad196"
+    },
+    "oneShotEndToEnd": {
+      "phase": "oneShotEndToEnd",
+      "title": "One-shot frozen E-MIN-V2 end to end",
+      "baseline": {
+        "tasks": 25,
+        "successes": 0,
+        "successRate": 0,
+        "wilson95": [
+          1.3877787807814457e-17,
+          0.13319225093904846
+        ],
+        "schemaValid": 24,
+        "schemaValidity": 0.96,
+        "totalTokens": 9623,
+        "meanLatencyMs": 3646.036207959999
+      },
+      "coder": {
+        "tasks": 25,
+        "successes": 0,
+        "successRate": 0,
+        "wilson95": [
+          1.3877787807814457e-17,
+          0.13319225093904846
+        ],
+        "schemaValid": 25,
+        "schemaValidity": 1,
+        "totalTokens": 6503,
+        "meanLatencyMs": 1571.8606870799954
+      },
+      "absoluteDifference": 0,
+      "absolutePercentagePointDifference": 0,
+      "relativeDifference": null,
+      "pairedOutcomes": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 0,
+        "CODER_ONLY": 0,
+        "BOTH_FAIL": 25
+      },
+      "netCoderWins": 0,
+      "pairedBootstrap95": {
+        "iterations": 10000,
+        "seed": 20260815,
+        "lower": 0,
+        "upper": 0
+      },
+      "pairedTaskIdsSha256": "0b6ee437be32cc0a95eaf058906e5a3dbf02724df1485692004ebd4dfd3e819d"
+    },
+    "boundedRetry": {
+      "phase": "boundedRetry",
+      "title": "Maximum-two-call evidence retry",
+      "baseline": {
+        "tasks": 25,
+        "successes": 0,
+        "successRate": 0,
+        "wilson95": [
+          1.3877787807814457e-17,
+          0.13319225093904846
+        ],
+        "schemaValid": 0,
+        "schemaValidity": 0,
+        "totalTokens": 23403,
+        "meanLatencyMs": 7131.631795360004
+      },
+      "coder": {
+        "tasks": 25,
+        "successes": 1,
+        "successRate": 0.04,
+        "wilson95": [
+          0.007096233501987265,
+          0.19544063736193734
+        ],
+        "schemaValid": 0,
+        "schemaValidity": 0,
+        "totalTokens": 17396,
+        "meanLatencyMs": 3189.6798044399966
+      },
+      "absoluteDifference": 0.04,
+      "absolutePercentagePointDifference": 4,
+      "relativeDifference": null,
+      "pairedOutcomes": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 0,
+        "CODER_ONLY": 1,
+        "BOTH_FAIL": 24
+      },
+      "netCoderWins": 1,
+      "pairedBootstrap95": {
+        "iterations": 10000,
+        "seed": 20260816,
+        "lower": 0,
+        "upper": 0.12
+      },
+      "pairedTaskIdsSha256": "0b6ee437be32cc0a95eaf058906e5a3dbf02724df1485692004ebd4dfd3e819d"
+    }
+  },
+  "primaryCodeEffects": {
+    "patchOnlyPercentagePoints": 0,
+    "diagnosisPercentagePoints": -4,
+    "oneShotPercentagePoints": 0,
+    "retryPercentagePoints": 4
+  },
+  "secondaryEffects": {
+    "navigationPercentagePoints": 24,
+    "planningPercentagePoints": 0,
+    "nonRetrySchemaPercentagePoints": 3.93258426966292
+  },
+  "interpretation": "Coder-3B improved navigation and recovered one retry task, but showed no patch-only or one-shot gain and lower diagnosis accuracy. The preregistered coding-specialization claim is not supported."
+}

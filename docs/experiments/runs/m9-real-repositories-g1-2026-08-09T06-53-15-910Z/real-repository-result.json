@@ -1,0 +1,885 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-real-repositories-g1-2026-08-09T06-53-15-910Z",
+  "classification": "PINNED_PUBLIC_READ_ONLY_REAL_REPOSITORY_EVALUATION",
+  "status": "PASS",
+  "manifestSha256": "783cf1522d6c327304d5649c290e1c02c5e35adfedbaadf4dfb6dc9a403f13c1",
+  "candidateSha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+  "environment": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "vllm": "0.26.0",
+    "precision": "bfloat16",
+    "temperature": 0,
+    "seed": 20260809,
+    "thinking": false
+  },
+  "corpus": {
+    "repositories": [
+      {
+        "id": "p-limit",
+        "commit": "df476048d023ff868cd45b35ee47f5fb0ca2b25a",
+        "tree": "21d1b1115ab955f499ca0de32b8819b936775dd9",
+        "license": "MIT",
+        "language": "JavaScript with TypeScript declarations",
+        "size": "small"
+      },
+      {
+        "id": "click",
+        "commit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+        "tree": "c6aa87f15f2e44a6fcab33714e1eb91e2552d816",
+        "license": "BSD-3-Clause",
+        "language": "Python",
+        "size": "medium"
+      },
+      {
+        "id": "full-stack-fastapi-template",
+        "commit": "75c388ba1cd60f39b43dd63a73978bae8c69cb87",
+        "tree": "08e68da51191ca8fc522717e6d7c24c85f2dd741",
+        "license": "MIT",
+        "language": "TypeScript/React and Python/FastAPI",
+        "size": "medium"
+      },
+      {
+        "id": "sampleproject",
+        "commit": "621e4974ca25ce531773def586ba3ed8e736b3fc",
+        "tree": "c7d439931f56fa21023a7a0e615b91f5699c1827",
+        "license": "MIT",
+        "language": "Python",
+        "size": "small"
+      }
+    ],
+    "tasks": 12,
+    "publicRepositoryMutation": false
+  },
+  "summary": {
+    "e1": {
+      "configuration": "E1",
+      "successes": 12,
+      "total": 12,
+      "repositories": 4,
+      "schemaValidity": 1,
+      "medianTokens": 529,
+      "medianLatencyMs": 412.087,
+      "retrieval": null
+    },
+    "emin": {
+      "configuration": "E-MIN-V2",
+      "successes": 10,
+      "total": 12,
+      "repositories": 4,
+      "schemaValidity": 1,
+      "medianTokens": 151,
+      "medianLatencyMs": 405.057,
+      "retrieval": {
+        "precisionAt2": 0.3333333333333333,
+        "recallAt2": 0.5138888888888888,
+        "fallbackRate": 0.6666666666666666
+      }
+    },
+    "paired": {
+      "e1Only": 2,
+      "eminOnly": 0,
+      "bothPass": 10,
+      "bothFail": 0
+    }
+  },
+  "transitions": [
+    {
+      "taskId": "real-p-limit-entry",
+      "e1Success": true,
+      "eminSuccess": true,
+      "transition": "BOTH_PASS"
+    },
+    {
+      "taskId": "real-p-limit-tests",
+      "e1Success": true,
+      "eminSuccess": true,
+      "transition": "BOTH_PASS"
+    },
+    {
+      "taskId": "real-p-limit-overview",
+      "e1Success": true,
+      "eminSuccess": false,
+      "transition": "E1_ONLY"
+    },
+    {
+      "taskId": "real-click-command",
+      "e1Success": true,
+      "eminSuccess": true,
+      "transition": "BOTH_PASS"
+    },
+    {
+      "taskId": "real-click-decorator",
+      "e1Success": true,
+      "eminSuccess": true,
+      "transition": "BOTH_PASS"
+    },
+    {
+      "taskId": "real-click-tests",
+      "e1Success": true,
+      "eminSuccess": true,
+      "transition": "BOTH_PASS"
+    },
+    {
+      "taskId": "real-fullstack-backend-entry",
+      "e1Success": true,
+      "eminSuccess": true,
+      "transition": "BOTH_PASS"
+    },
+    {
+      "taskId": "real-fullstack-frontend-entry",
+      "e1Success": true,
+      "eminSuccess": true,
+      "transition": "BOTH_PASS"
+    },
+    {
+      "taskId": "real-fullstack-architecture",
+      "e1Success": true,
+      "eminSuccess": true,
+      "transition": "BOTH_PASS"
+    },
+    {
+      "taskId": "real-sample-symbol",
+      "e1Success": true,
+      "eminSuccess": true,
+      "transition": "BOTH_PASS"
+    },
+    {
+      "taskId": "real-sample-build",
+      "e1Success": true,
+      "eminSuccess": true,
+      "transition": "BOTH_PASS"
+    },
+    {
+      "taskId": "real-sample-license",
+      "e1Success": true,
+      "eminSuccess": false,
+      "transition": "E1_ONLY"
+    }
+  ],
+  "observations": [
+    {
+      "taskId": "real-p-limit-entry",
+      "repositoryId": "p-limit",
+      "repositoryCommit": "df476048d023ff868cd45b35ee47f5fb0ca2b25a",
+      "type": "repository_navigation",
+      "configuration": "E1",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "index.js"
+      ],
+      "selectedEvidencePaths": [
+        "index.js"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "0dda8822cdcfd50bd14253f2e03d77bbe2dd839970d4c5b12274fd539b9844f1",
+      "outputHash": "6b6abcbc988348e7ecc775dd1df4482af45953f873131ccba8d692848b43ab0e",
+      "promptTokens": 265,
+      "completionTokens": 26,
+      "totalTokens": 291,
+      "latencyMs": 726.938
+    },
+    {
+      "taskId": "real-p-limit-entry",
+      "repositoryId": "p-limit",
+      "repositoryCommit": "df476048d023ff868cd45b35ee47f5fb0ca2b25a",
+      "type": "repository_navigation",
+      "configuration": "E-MIN-V2",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "index.js"
+      ],
+      "selectedEvidencePaths": [
+        "index.js",
+        "test.js"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 0.5,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "9baa022df128bc1094bde6c2ba21ab9e0fc77ed5da85ed0a04dc73e61505099e",
+      "outputHash": "6b6abcbc988348e7ecc775dd1df4482af45953f873131ccba8d692848b43ab0e",
+      "promptTokens": 261,
+      "completionTokens": 26,
+      "totalTokens": 287,
+      "latencyMs": 414.568
+    },
+    {
+      "taskId": "real-p-limit-tests",
+      "repositoryId": "p-limit",
+      "repositoryCommit": "df476048d023ff868cd45b35ee47f5fb0ca2b25a",
+      "type": "testing_analysis",
+      "configuration": "E1",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "package.json"
+      ],
+      "selectedEvidencePaths": [
+        "package.json"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "e122301b8826406276516ae181a06d85c2cc2fd44d7318dca9e86b734e3b9526",
+      "outputHash": "58129ab61f841adffb94e444d65f4f643080e4a6fc1725518ebe78c1af9323cb",
+      "promptTokens": 483,
+      "completionTokens": 22,
+      "totalTokens": 505,
+      "latencyMs": 357.821
+    },
+    {
+      "taskId": "real-p-limit-tests",
+      "repositoryId": "p-limit",
+      "repositoryCommit": "df476048d023ff868cd45b35ee47f5fb0ca2b25a",
+      "type": "testing_analysis",
+      "configuration": "E-MIN-V2",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "package.json"
+      ],
+      "selectedEvidencePaths": [
+        "recipes.md",
+        "index.js"
+      ],
+      "retrieval": {
+        "fallbackUsed": true,
+        "precisionAt2": 0,
+        "recallAt2": 0,
+        "firstRelevantRank": null
+      },
+      "promptHash": "53aa2111fca7d6dd85e2593be279a4e7294ab1c0c3bc4ca020493553a02dc629",
+      "outputHash": "ca4505f3dadbd7ea6fecd78c9ee56fe4b490269589f74a9e6b24496e6c036d8d",
+      "promptTokens": 105,
+      "completionTokens": 26,
+      "totalTokens": 131,
+      "latencyMs": 392.108
+    },
+    {
+      "taskId": "real-p-limit-overview",
+      "repositoryId": "p-limit",
+      "repositoryCommit": "df476048d023ff868cd45b35ee47f5fb0ca2b25a",
+      "type": "onboarding",
+      "configuration": "E1",
+      "expected": "A",
+      "selected": "A",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "index.js",
+        "index.d.ts",
+        "test.js"
+      ],
+      "selectedEvidencePaths": [
+        "index.js",
+        "index.d.ts",
+        "test.js"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "376a00531e069a53df0b1e91f402404cf2b8319c3d9b9501ec2ea98c2d2f2e3f",
+      "outputHash": "7828e07a1072aba3ca983ddd3c3f023ae4264de4b38d38f047e2fcf806aa12ac",
+      "promptTokens": 1955,
+      "completionTokens": 22,
+      "totalTokens": 1977,
+      "latencyMs": 495.24
+    },
+    {
+      "taskId": "real-p-limit-overview",
+      "repositoryId": "p-limit",
+      "repositoryCommit": "df476048d023ff868cd45b35ee47f5fb0ca2b25a",
+      "type": "onboarding",
+      "configuration": "E-MIN-V2",
+      "expected": "A",
+      "selected": "C",
+      "success": false,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "index.js",
+        "index.d.ts",
+        "test.js"
+      ],
+      "selectedEvidencePaths": [
+        "index.d.ts",
+        "test.js"
+      ],
+      "retrieval": {
+        "fallbackUsed": true,
+        "precisionAt2": 1,
+        "recallAt2": 0.6666666666666666,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "a4051a025f85b4114363678f045a4580e57a361c7b351dbbbb358a2434252161",
+      "outputHash": "609269c814eb16841c56a42fd777a9e68b1f2db29d065016e1bc6b488d3f8ddc",
+      "promptTokens": 789,
+      "completionTokens": 25,
+      "totalTokens": 814,
+      "latencyMs": 444.142
+    },
+    {
+      "taskId": "real-click-command",
+      "repositoryId": "click",
+      "repositoryCommit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+      "type": "symbol_navigation",
+      "configuration": "E1",
+      "expected": "A",
+      "selected": "A",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "src/click/core.py"
+      ],
+      "selectedEvidencePaths": [
+        "src/click/core.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "04a9cbfa1c1314bf5605e899b76645be62603930645ed18652f6097056825adb",
+      "outputHash": "13d0b7dcafb60e1673ec4d2c5c7d1cc83f6b3d6251b7ad6bcba99a69e64491ee",
+      "promptTokens": 457,
+      "completionTokens": 24,
+      "totalTokens": 481,
+      "latencyMs": 400.506
+    },
+    {
+      "taskId": "real-click-command",
+      "repositoryId": "click",
+      "repositoryCommit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+      "type": "symbol_navigation",
+      "configuration": "E-MIN-V2",
+      "expected": "A",
+      "selected": "A",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "src/click/core.py"
+      ],
+      "selectedEvidencePaths": [
+        "src/click/core.py",
+        "src/click/_textwrap.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 0.5,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "c9e8e418e9b3f0f9c9e04946409622dbf95542bc4b522a03df5638b1b4ef5db2",
+      "outputHash": "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117",
+      "promptTokens": 453,
+      "completionTokens": 24,
+      "totalTokens": 477,
+      "latencyMs": 401.781
+    },
+    {
+      "taskId": "real-click-decorator",
+      "repositoryId": "click",
+      "repositoryCommit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+      "type": "dependency_navigation",
+      "configuration": "E1",
+      "expected": "B",
+      "selected": "B",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "src/click/decorators.py"
+      ],
+      "selectedEvidencePaths": [
+        "src/click/decorators.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "32a63a3ba2cf5efe00663653a546c7fe6f5cd0094005ad37bdaa7aa75c2f2bfa",
+      "outputHash": "5050bc0acbffbd011c280b2c85f991d2602f6232a881200e31bda82f5dcd8093",
+      "promptTokens": 776,
+      "completionTokens": 24,
+      "totalTokens": 800,
+      "latencyMs": 453.016
+    },
+    {
+      "taskId": "real-click-decorator",
+      "repositoryId": "click",
+      "repositoryCommit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+      "type": "dependency_navigation",
+      "configuration": "E-MIN-V2",
+      "expected": "B",
+      "selected": "B",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "src/click/decorators.py"
+      ],
+      "selectedEvidencePaths": [
+        "src/click/decorators.py",
+        "docs/index.md"
+      ],
+      "retrieval": {
+        "fallbackUsed": true,
+        "precisionAt2": 0.5,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "ab8aef4d9427d2bc8f69ab9ccebcf476ca703f990b3acf44e09fdf82515f944f",
+      "outputHash": "5050bc0acbffbd011c280b2c85f991d2602f6232a881200e31bda82f5dcd8093",
+      "promptTokens": 772,
+      "completionTokens": 24,
+      "totalTokens": 796,
+      "latencyMs": 419.027
+    },
+    {
+      "taskId": "real-click-tests",
+      "repositoryId": "click",
+      "repositoryCommit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+      "type": "testing_analysis",
+      "configuration": "E1",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "pyproject.toml"
+      ],
+      "selectedEvidencePaths": [
+        "pyproject.toml"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "20e3e8b311ded7bba7269f5fe0d4a3876dc2bae8b14d00882b5417d0812f1169",
+      "outputHash": "38906a6333ac24ab7795705ca360129a08d39eb9a9bd8baba04ac393a19db13c",
+      "promptTokens": 635,
+      "completionTokens": 22,
+      "totalTokens": 657,
+      "latencyMs": 404.543
+    },
+    {
+      "taskId": "real-click-tests",
+      "repositoryId": "click",
+      "repositoryCommit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+      "type": "testing_analysis",
+      "configuration": "E-MIN-V2",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "pyproject.toml"
+      ],
+      "selectedEvidencePaths": [
+        "tests/conftest.py",
+        "docs/commands-and-groups.md"
+      ],
+      "retrieval": {
+        "fallbackUsed": true,
+        "precisionAt2": 0,
+        "recallAt2": 0,
+        "firstRelevantRank": null
+      },
+      "promptHash": "6f22fcc835ef9a816c37c75f404bed5001f5517465e01f9204c9e23dd982852c",
+      "outputHash": "ca4505f3dadbd7ea6fecd78c9ee56fe4b490269589f74a9e6b24496e6c036d8d",
+      "promptTokens": 100,
+      "completionTokens": 26,
+      "totalTokens": 126,
+      "latencyMs": 406.777
+    },
+    {
+      "taskId": "real-fullstack-backend-entry",
+      "repositoryId": "full-stack-fastapi-template",
+      "repositoryCommit": "75c388ba1cd60f39b43dd63a73978bae8c69cb87",
+      "type": "repository_navigation",
+      "configuration": "E1",
+      "expected": "A",
+      "selected": "A",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "backend/app/main.py"
+      ],
+      "selectedEvidencePaths": [
+        "backend/app/main.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "6929a85f6984fe2f80997646b26349fec98c54e3d5be99d284b5516f556cc0be",
+      "outputHash": "3c83019c301ee69c6c3740fa6f19ef87a66e072e204d5871ba4b201abc3435e6",
+      "promptTokens": 355,
+      "completionTokens": 26,
+      "totalTokens": 381,
+      "latencyMs": 394.759
+    },
+    {
+      "taskId": "real-fullstack-backend-entry",
+      "repositoryId": "full-stack-fastapi-template",
+      "repositoryCommit": "75c388ba1cd60f39b43dd63a73978bae8c69cb87",
+      "type": "repository_navigation",
+      "configuration": "E-MIN-V2",
+      "expected": "A",
+      "selected": "A",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "backend/app/main.py"
+      ],
+      "selectedEvidencePaths": [
+        "backend/app/main.py",
+        "backend/app/alembic/versions/e2412789c190_initialize_models.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 0.5,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "ffd760aeeac2e49c197f7700ee9ea12cfe157beba65ebbc933ee9b1120a3b24e",
+      "outputHash": "dcee8779374207c7a04e60c27ff97dc31c2d5325a01514983a983ad213da6a5e",
+      "promptTokens": 351,
+      "completionTokens": 25,
+      "totalTokens": 376,
+      "latencyMs": 402.268
+    },
+    {
+      "taskId": "real-fullstack-frontend-entry",
+      "repositoryId": "full-stack-fastapi-template",
+      "repositoryCommit": "75c388ba1cd60f39b43dd63a73978bae8c69cb87",
+      "type": "repository_navigation",
+      "configuration": "E1",
+      "expected": "A",
+      "selected": "A",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "frontend/src/main.tsx"
+      ],
+      "selectedEvidencePaths": [
+        "frontend/src/main.tsx"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "03ff21dc44a6bcd8a166e6a9ca2ad850fe097db56de56f5d7873ee168d8f4748",
+      "outputHash": "13d0b7dcafb60e1673ec4d2c5c7d1cc83f6b3d6251b7ad6bcba99a69e64491ee",
+      "promptTokens": 529,
+      "completionTokens": 24,
+      "totalTokens": 553,
+      "latencyMs": 419.631
+    },
+    {
+      "taskId": "real-fullstack-frontend-entry",
+      "repositoryId": "full-stack-fastapi-template",
+      "repositoryCommit": "75c388ba1cd60f39b43dd63a73978bae8c69cb87",
+      "type": "repository_navigation",
+      "configuration": "E-MIN-V2",
+      "expected": "A",
+      "selected": "A",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "frontend/src/main.tsx"
+      ],
+      "selectedEvidencePaths": [
+        "frontend/src/components/ui/badge.tsx",
+        "frontend/src/components/ui/pagination.tsx"
+      ],
+      "retrieval": {
+        "fallbackUsed": true,
+        "precisionAt2": 0,
+        "recallAt2": 0,
+        "firstRelevantRank": null
+      },
+      "promptHash": "88c22218f5a2efc037c792a992ad61c902f4069fe88f7db1c4b931da439c87d2",
+      "outputHash": "3c83019c301ee69c6c3740fa6f19ef87a66e072e204d5871ba4b201abc3435e6",
+      "promptTokens": 102,
+      "completionTokens": 26,
+      "totalTokens": 128,
+      "latencyMs": 420.437
+    },
+    {
+      "taskId": "real-fullstack-architecture",
+      "repositoryId": "full-stack-fastapi-template",
+      "repositoryCommit": "75c388ba1cd60f39b43dd63a73978bae8c69cb87",
+      "type": "architecture_analysis",
+      "configuration": "E1",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "backend/pyproject.toml"
+      ],
+      "selectedEvidencePaths": [
+        "backend/pyproject.toml"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "83e8afe7e9b82ca3f9589de67052e74af06d099846205a7713b8c1c2e8d03ea1",
+      "outputHash": "38906a6333ac24ab7795705ca360129a08d39eb9a9bd8baba04ac393a19db13c",
+      "promptTokens": 954,
+      "completionTokens": 25,
+      "totalTokens": 979,
+      "latencyMs": 451.6
+    },
+    {
+      "taskId": "real-fullstack-architecture",
+      "repositoryId": "full-stack-fastapi-template",
+      "repositoryCommit": "75c388ba1cd60f39b43dd63a73978bae8c69cb87",
+      "type": "architecture_analysis",
+      "configuration": "E-MIN-V2",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "backend/pyproject.toml"
+      ],
+      "selectedEvidencePaths": [
+        "backend/app/alembic/versions/1a31ce608336_add_cascade_delete_relationships.py",
+        "backend/app/core/__init__.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": true,
+        "precisionAt2": 0,
+        "recallAt2": 0,
+        "firstRelevantRank": null
+      },
+      "promptHash": "cb8a7a4dcf4596ebad8defb313fc905dfa6a9667fed0bc545f821702691079c8",
+      "outputHash": "38906a6333ac24ab7795705ca360129a08d39eb9a9bd8baba04ac393a19db13c",
+      "promptTokens": 131,
+      "completionTokens": 25,
+      "totalTokens": 156,
+      "latencyMs": 387.308
+    },
+    {
+      "taskId": "real-sample-symbol",
+      "repositoryId": "sampleproject",
+      "repositoryCommit": "621e4974ca25ce531773def586ba3ed8e736b3fc",
+      "type": "symbol_navigation",
+      "configuration": "E1",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "src/sample/simple.py"
+      ],
+      "selectedEvidencePaths": [
+        "src/sample/simple.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "610429d14b4c82f036df4476aa04d8fbe498aef37d6ac9e9567bef26145b0ae1",
+      "outputHash": "58129ab61f841adffb94e444d65f4f643080e4a6fc1725518ebe78c1af9323cb",
+      "promptTokens": 124,
+      "completionTokens": 22,
+      "totalTokens": 146,
+      "latencyMs": 328.737
+    },
+    {
+      "taskId": "real-sample-symbol",
+      "repositoryId": "sampleproject",
+      "repositoryCommit": "621e4974ca25ce531773def586ba3ed8e736b3fc",
+      "type": "symbol_navigation",
+      "configuration": "E-MIN-V2",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "src/sample/simple.py"
+      ],
+      "selectedEvidencePaths": [
+        "src/sample/simple.py",
+        "tests/__init__.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 0.5,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "207781b97c4d19731440209644168a6749a6ec6b03c901ecc4a59eb6ba6cb855",
+      "outputHash": "6b6abcbc988348e7ecc775dd1df4482af45953f873131ccba8d692848b43ab0e",
+      "promptTokens": 119,
+      "completionTokens": 26,
+      "totalTokens": 145,
+      "latencyMs": 403.337
+    },
+    {
+      "taskId": "real-sample-build",
+      "repositoryId": "sampleproject",
+      "repositoryCommit": "621e4974ca25ce531773def586ba3ed8e736b3fc",
+      "type": "onboarding",
+      "configuration": "E1",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "pyproject.toml",
+        "src/sample/simple.py"
+      ],
+      "selectedEvidencePaths": [
+        "pyproject.toml",
+        "src/sample/simple.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "9b691bea6623b1fe70f47571dce76ca2ec8c92d5494ac662ba7e2ddc59cac67c",
+      "outputHash": "20295eb194086474726da37a71dfac5ecc87f2d3264c438a7d712b9b3cae248c",
+      "promptTokens": 952,
+      "completionTokens": 24,
+      "totalTokens": 976,
+      "latencyMs": 447.073
+    },
+    {
+      "taskId": "real-sample-build",
+      "repositoryId": "sampleproject",
+      "repositoryCommit": "621e4974ca25ce531773def586ba3ed8e736b3fc",
+      "type": "onboarding",
+      "configuration": "E-MIN-V2",
+      "expected": "C",
+      "selected": "C",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "pyproject.toml",
+        "src/sample/simple.py"
+      ],
+      "selectedEvidencePaths": [
+        "src/sample/simple.py",
+        "src/sample/__init__.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": true,
+        "precisionAt2": 0.5,
+        "recallAt2": 0.5,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "d7afe5c9ba5cf96b12f80c606b6cd3bd299205f29c86d16fc7d6d141f3e1dbd0",
+      "outputHash": "ca4505f3dadbd7ea6fecd78c9ee56fe4b490269589f74a9e6b24496e6c036d8d",
+      "promptTokens": 120,
+      "completionTokens": 26,
+      "totalTokens": 146,
+      "latencyMs": 401.898
+    },
+    {
+      "taskId": "real-sample-license",
+      "repositoryId": "sampleproject",
+      "repositoryCommit": "621e4974ca25ce531773def586ba3ed8e736b3fc",
+      "type": "provenance_analysis",
+      "configuration": "E1",
+      "expected": "B",
+      "selected": "B",
+      "success": true,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "LICENSE.txt"
+      ],
+      "selectedEvidencePaths": [
+        "LICENSE.txt"
+      ],
+      "retrieval": {
+        "fallbackUsed": false,
+        "precisionAt2": 1,
+        "recallAt2": 1,
+        "firstRelevantRank": 1
+      },
+      "promptHash": "00c71b873dfafd7d382bcb85391b590a4bfade4bd379b5b20ab8cd7a87da961e",
+      "outputHash": "4a37f9e8544da6e3296ef40085ed4a41ec56ad2cc8962258230ced498b809177",
+      "promptTokens": 338,
+      "completionTokens": 26,
+      "totalTokens": 364,
+      "latencyMs": 392.155
+    },
+    {
+      "taskId": "real-sample-license",
+      "repositoryId": "sampleproject",
+      "repositoryCommit": "621e4974ca25ce531773def586ba3ed8e736b3fc",
+      "type": "provenance_analysis",
+      "configuration": "E-MIN-V2",
+      "expected": "B",
+      "selected": "C",
+      "success": false,
+      "schemaValid": true,
+      "expectedEvidencePaths": [
+        "LICENSE.txt"
+      ],
+      "selectedEvidencePaths": [
+        "noxfile.py",
+        "tests/test_simple.py"
+      ],
+      "retrieval": {
+        "fallbackUsed": true,
+        "precisionAt2": 0,
+        "recallAt2": 0,
+        "firstRelevantRank": null
+      },
+      "promptHash": "0974478ce6218f1c07a88ba29cf7e01d6b4448ac7f7563906440f2c7b87c1baa",
+      "outputHash": "ca4505f3dadbd7ea6fecd78c9ee56fe4b490269589f74a9e6b24496e6c036d8d",
+      "promptTokens": 96,
+      "completionTokens": 26,
+      "totalTokens": 122,
+      "latencyMs": 410.677
+    }
+  ],
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "apiKeyStored": false
+  }
+}

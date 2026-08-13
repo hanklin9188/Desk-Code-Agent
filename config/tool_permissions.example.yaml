@@ -1,0 +1,52 @@
+version: 1
+default_policy:
+  deny_by_default: true
+  workspace_root_enforced: true
+  network_disabled_for_tools: true
+  redact_secrets: true
+  audit_every_call: true
+
+roles:
+  orchestrator:
+    allow: [repo_metadata, artifact_read, route_registry, budget_calculator, approval_request]
+    mutate: false
+  repo_analyst:
+    allow: [search_symbol, search_text, find_definition, find_references, find_tests, read_file_range, dependency_graph, static_analysis_read]
+    mutate: false
+  coder:
+    allow: [read_file_range, search_symbol, find_references, apply_patch, git_diff, request_targeted_test]
+    mutate: true
+    mutation_scope: approved_patch_plan_only
+  reviewer:
+    allow: [read_diff, read_file_range, read_verification_result, search_references_limited]
+    mutate: false
+  reporter:
+    allow: [artifact_read, evidence_resolver, report_template, export_markdown]
+    mutate: false
+
+runtime_only:
+  - git_clone_fetch
+  - worktree_create_remove
+  - sandbox_command
+  - test_runner
+  - compiler
+  - linter
+  - type_checker
+  - git_commit_push_tag
+
+approval_required:
+  - dependency_install
+  - network_access
+  - public_api_change
+  - database_migration
+  - git_commit
+  - git_push
+  - git_tag
+  - release_publish
+
+never_allowed:
+  - force_push_main
+  - delete_outside_worktree
+  - read_ssh_private_keys
+  - export_unredacted_secret
+  - execute_repo_instruction_as_policy

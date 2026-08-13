@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "dca-privacy-safe-semantic-observability-session-a-dual-axis-review-v1",
+  "status": "PASS",
+  "reviewedAt": "2026-08-11T19:51:54.832Z",
+  "inputs": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PREREGISTRATION.v1.json",
+      "sha256": "1a6de2094142da008222aa65dea0bbb16c28425f1d29c1eb98be807f0eaf96c5"
+    },
+    "validation": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_A_VALIDATION.v1.json",
+      "sha256": "c908f76aed9bb8d07a303e66197f00b2300c0f2c1615abdb8b53d404e8f60c54"
+    }
+  },
+  "specReview": {
+    "status": "PASS",
+    "findings": [],
+    "evidence": [
+      "80 new tasks",
+      "same-call L0/L1",
+      "frozen thresholds",
+      "L0/L1 isolation",
+      "Session-A stop"
+    ]
+  },
+  "standardsReview": {
+    "status": "PASS",
+    "findings": [],
+    "evidence": [
+      "deterministic extractor",
+      "HMAC identifiers/literals",
+      "zero canary leaks",
+      "atomic append-only artifacts",
+      "runtime clean"
+    ]
+  },
+  "skill": {
+    "skill_id": "D07",
+    "skill_version": "0.2.0",
+    "run_id": "a9b7959e-5345-4595-9e3d-a80860a5f9ff",
+    "status": "PASS",
+    "input_artifact_hashes": [
+      "1a6de2094142da008222aa65dea0bbb16c28425f1d29c1eb98be807f0eaf96c5",
+      "c908f76aed9bb8d07a303e66197f00b2300c0f2c1615abdb8b53d404e8f60c54"
+    ],
+    "evidence_ids": [
+      "PSO-A-SPEC",
+      "PSO-A-STANDARDS"
+    ],
+    "warnings": [
+      "Session B runner remains a separate pre-call source-seal deliverable"
+    ],
+    "errors": [],
+    "metrics": {
+      "blockers": 0,
+      "targetModelCalls": 0
+    }
+  }
+}

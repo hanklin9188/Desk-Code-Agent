@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "stateId": "dca-model-tournament-m3-infrastructure-v1",
+  "status": "INFRASTRUCTURE_BLOCKED_NOT_SCORED",
+  "recordedAt": "2026-08-11T14:21:50.112Z",
+  "inputs": {
+    "sessionC": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_C.v1.json",
+      "sha256": "32ff39c05b5ce6c64b57ac77085df2b5666750a8a5689d3ac801a683bd3ec683"
+    },
+    "result": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m3-v1/result.json",
+      "sha256": "5919b303d17ab56c4e0d9816349164466a30abcdf51949970467e0a1e7720865"
+    }
+  },
+  "observed": {
+    "affectedCalls": 2,
+    "taskIndexes": [
+      41,
+      42
+    ],
+    "taskIdSha256": [
+      "6044398cfe0d7dec5bc043722f337f1032ec2c3350c60746bab3811518e1b7d9",
+      "9eae8ef582f16266aaab9c280f5673bcc282788627cbc674e379bd3afec7d229"
+    ],
+    "finishReason": "length",
+    "completionTokensEach": 640,
+    "schemaClassification": "MALFORMED_SCHEMA",
+    "rawOutputsStored": false,
+    "replacementCalls": 0
+  },
+  "mechanism": {
+    "inferenceProducedTokens": true,
+    "validStructuredActionProduced": false,
+    "networkOrEndpointFailureObserved": false,
+    "serializerFailureObserved": false,
+    "outputCapReached": true,
+    "adapterClassification": "INVALID_JSON surfaced by the shared structured runtime and coarsened to TRANSPORT_FAILURE by the frozen Session-C runner",
+    "attribution": "OBSERVED_ONLY_ON_M3_BUT_GENERIC_RUNTIME_PATH; MODEL_SPECIFIC_CAUSALITY_NOT_ESTABLISHED"
+  },
+  "competition": {
+    "ranked": false,
+    "promoted": false,
+    "diagnosticOnly": true
+  },
+  "futureRequalification": {
+    "useful": true,
+    "selectedAsNextExperiment": false,
+    "requiresNewGeneration": true,
+    "requirements": [
+      "seal a fresh M3-only infrastructure protocol",
+      "preserve model/revision/profile/context/640-token cap",
+      "separate finish_reason=length from network transport without changing tournament results",
+      "zero reuse in this tournament",
+      "no silent retry"
+    ]
+  },
+  "modelCalls": 0
+}

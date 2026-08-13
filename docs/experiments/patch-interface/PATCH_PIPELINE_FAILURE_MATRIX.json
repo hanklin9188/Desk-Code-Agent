@@ -1,0 +1,3517 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "dca-patch-pipeline-failure-matrix-v1",
+  "generatedAt": "2026-08-09T14:47:59.328Z",
+  "classification": "HISTORICAL_APPEND_ONLY_AUDIT_NO_NEW_MODEL_CALLS",
+  "status": "PASS_WITH_HISTORICAL_RAW_OUTPUT_LIMITATION",
+  "question": "At which exact recorded stage did every canonical prior patch-only observation stop?",
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "coder": {
+      "path": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.v3.json",
+      "sha256": "20f8943120f302d025062c674e7bd6a7409db67067e0f5cb71eff1214fb4babc"
+    },
+    "canonicalIndex": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_RESULTS_INDEX.v4.json",
+      "sha256": "58cd13ab7f92147f625271199854755f96c05832bbd20def7d52bb7fcb332c85"
+    },
+    "baselineAttestation": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_BASELINE_ATTESTATION.json",
+      "sha256": "ba754c1ff14f8f67c92ae2656d3b222cd0b9ae9cfb33989a7ac1795cde03cd2f"
+    }
+  },
+  "privacyLimitation": {
+    "rawPromptTextAvailable": false,
+    "rawModelOutputTextAvailable": false,
+    "rawPatchTextAvailable": false,
+    "reason": "The historical run intentionally persisted hashes and scored fields only.",
+    "auditRule": "Mark unavailable stages as RAW_OUTPUT_NOT_PERSISTED; never reconstruct or infer raw text from hashes."
+  },
+  "schemaSemanticsCaveat": {
+    "historicalSchemaValidField": "JSON_PARSE_SUCCESS_AFTER_SERVER_SIDE_STRICT_SCHEMA_REQUEST",
+    "independentPostHocFullSchemaValidation": false,
+    "implication": "The audit does not relabel historical schemaValid as an independently revalidated JSON Schema pass."
+  },
+  "aggregate": {
+    "observations": 50,
+    "rawOutputHashes": 50,
+    "rawOutputsPersisted": 0,
+    "jsonParsePasses": 50,
+    "reportOnly": 46,
+    "patchProposals": 4,
+    "targetHeadersRecognized": 1,
+    "gitApplyCheckReached": 1,
+    "gitApplyCheckPassed": 0,
+    "patchApplied": 0,
+    "syntaxRun": 0,
+    "visibleRun": 0,
+    "hiddenRun": 0,
+    "wrongFileMutations": 0,
+    "behavioralSuccesses": 0,
+    "worktreesUnchangedAfterward": 50
+  },
+  "byProfile": {
+    "baseline": {
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "tasks": 25,
+      "failureStages": {
+        "ACTION_SELECTION_UNNECESSARY_REFUSAL": 25
+      },
+      "selectedOutcomes": {
+        "REPORT_ONLY": 25
+      },
+      "patchApplied": 0,
+      "behavioralSuccesses": 0
+    },
+    "coder": {
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "tasks": 25,
+      "failureStages": {
+        "ACTION_SELECTION_UNNECESSARY_REFUSAL": 21,
+        "GIT_APPLY_PREFLIGHT": 1,
+        "PATCH_CONSTRUCTION_TARGET_HEADERS": 3
+      },
+      "selectedOutcomes": {
+        "PATCH_PROPOSAL": 4,
+        "REPORT_ONLY": 21
+      },
+      "patchApplied": 0,
+      "behavioralSuccesses": 0
+    }
+  },
+  "refusalDecomposition": {
+    "validPatchEdit": 0,
+    "syntacticallyInvalidPatchEdit": 4,
+    "reportOnly": 46,
+    "textualExplanationWithoutAction": "NOT_DETERMINABLE_RAW_OUTPUT_NOT_PERSISTED",
+    "malformedSchema": 0,
+    "unsafeEdit": 0,
+    "emptyResponse": 0,
+    "other": 0
+  },
+  "conclusion": {
+    "supported": "The historical zero behavioral score was dominated by action refusal and diff construction/preflight rejection, not by executed code failing behavioral tests.",
+    "unsupported": "No claim about semantic quality of the four unpersisted patch texts beyond their recorded parser/preflight failures.",
+    "exactBreakdown": {
+      "actionSelectionUnnecessaryRefusal": 46,
+      "patchConstructionTargetHeaders": 3,
+      "gitApplyPreflight": 1,
+      "syntaxOrBehavior": 0
+    }
+  },
+  "rows": [
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "31a58a169a685a1e45bb4675430ae6b795466f5c16a898356f9a6d20056ddc80",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "909978da443fc31f88ace3b86a83b7b17649e5a70f47939465ac9e79752418ce",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 210,
+        "completionTokens": 225,
+        "latencyMs": 3053.1508580000373,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "22595fe908490faa64f3cd08ebabd7b4bed2aaf4920a565dbcf3589c851393fd",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "cb85016abedfa7a7b5a1755be18b3e9e755d67ca35b33674c7c7eaaae84f7129",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 238,
+        "completionTokens": 273,
+        "latencyMs": 3720.386279999977,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "b747a32e23e6f52458c68623ac403ec909d80281fa5417eb697fe969f0b3e81e",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "7a2f754f5146b7a2a47e7e66dcee6ba550a89e9970d55e82317f3687ab990fca",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 190,
+        "completionTokens": 221,
+        "latencyMs": 3000.6092499999795,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "69db5acb081fdbe83ca6706bf7afbdfcb0fa14adcd39c44092def476d63333da",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "5f7b7c8aded4ecb3065dfef7f9b99416638da3ddfcfaccc0dfdbe2f34c296a5a",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 224,
+        "completionTokens": 302,
+        "latencyMs": 4088.0904020000016,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "5b3c10a4897d592be2903a26aba4a6ffd8017cef98136d7def71b8d8c6fbccd6",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "1a90dfcdb6dea7886faaf416a61a5ad8c487179c1e5993f69b2acb79b6b86863",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 185,
+        "completionTokens": 266,
+        "latencyMs": 3611.89938800002,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "d835ec50d6de9e176ce5aed64244034bff745090327d7bf1dbfd8e3b6a1cea02",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "9ab24f634a6af939c40561f03e87fb864e82310b25c9e878d2016a4508658f43",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 218,
+        "completionTokens": 262,
+        "latencyMs": 3598.434578000044,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "b57d6c4ac7d4171f8733b3d4d7357087c4bbed0974a3e65beee93377f13d659a",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "b247f19902fdc02921414e012f73f3a5bc2b72144eebe220f8369e47ec2d0020",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 224,
+        "completionTokens": 242,
+        "latencyMs": 3304.508940999978,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "e478059061567985e1715397dcecdc41d5d2496a9372f092295ba3bea5dbf936",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "b8ff1b9f8f4ceb657d3d3eda1f16b23938f7ca3d9bb4f30214bda4c423dab4bf",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 212,
+        "completionTokens": 208,
+        "latencyMs": 2829.2269080000115,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "208e11c8b7ec3dcaa61f9348e4f316ec98b37ab4b40221f2ceacbc1102bb1b9b",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "aced376e1854b4f2e3e97fdd8f68898a5d5ce512b64c727ffd5c487d5bd3c26c",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 234,
+        "completionTokens": 248,
+        "latencyMs": 3358.6864010000136,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "7672c585f22418a0e86d4feea47300dc0b13b991ab1e20cbd146f9b854212075",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "784dc002817a5314cc38a2c902302ea7299e379ae26efb159f99b404f08e11ac",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 209,
+        "completionTokens": 218,
+        "latencyMs": 2956.6598569999915,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "ddc79a3dcee476fd2d9e15a6886138a0fcf4286b3d7471c28c4362fb8742f8c5",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "49395d70ea0e3fb6282ed911363124231930c1817dc8f4a8024360039700ab4f",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 199,
+        "completionTokens": 239,
+        "latencyMs": 3244.9821620000293,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "d7f68d36d3d11584b0b94799436b45feb0cd243c72aae7fcc2e64c614f93629f",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "71076ef9b715d677e18d8d37c38f52c6f22076637b90fa65d26277d10a6d8887",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 202,
+        "completionTokens": 253,
+        "latencyMs": 3459.618974000041,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-13-normalize-path-3ba2860b51",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "2ce8d3aeec04896f3fb0b6373f0c48c1702254056f54598426eeb3a049148334",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "ea242f6a9c9996bc8bcbca69338681f7f9cb7d23c639a93222d5d8d3dd5a4343",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 189,
+        "completionTokens": 241,
+        "latencyMs": 3289.320267000003,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-14-parse-bool-8881da94ff",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "18ba60ba282b90fcf46d45282f4fb535618e54efdc885ada00b89780859bcd8f",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "e2c7aaf6e2b426bd9bae4300c8ef1ef48fec6d9011cca51fa73be1cb37ea487e",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 192,
+        "completionTokens": 272,
+        "latencyMs": 3698.1510339999804,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-15-format-bytes-5a0b763ebc",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "180d94ea97b3eb48d001826e28dfb8a3d29aae056a682bd220e86ba5f2fc269f",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "a4e071b1e7e7b9a07e2a5a5dcc4570a885132b5a8a39911b869253c82aea17ae",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 214,
+        "completionTokens": 296,
+        "latencyMs": 4003.7910479999846,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-16-intersection-multiplicity-985d47dab3",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "476d5cacb4d02fc4ac8609755f1221ab7638c6b903e4c35b2460f978e91ba024",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "f5a704e8cc12c7638de93dda6a8cd17f933cfe4ec66ecf9f9e6f522010effc1d",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 193,
+        "completionTokens": 232,
+        "latencyMs": 3139.916605000035,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-17-decode-query-4535736542",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "64c11a2a6a67151c1ef6d0f598ceda8ef8a8ecad4dcaf3c8ec8e63133ba26ddd",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "342ac5ddefe9d5b251686264e896634a1d6f117f7cfdf6734210b806bab7af3d",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 184,
+        "completionTokens": 210,
+        "latencyMs": 2893.879222999967,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-18-title-case-a3b15a1136",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "8c703866be4a3390e8f13794301d34fa46cd6ff8e357a04a9ab20a2bd0c3fa83",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "480fb5d9928e7bfae1dc88128f54634e65de9ebe267f542fea27c993bb5bd943",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 199,
+        "completionTokens": 248,
+        "latencyMs": 3392.1200399999507,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-19-safe-divide-8f8f4db38c",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "b86db03d5cbee4608755f67fb2c3c7d8b8b5deeccb8fc7191e2d5724dcbee56d",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "397a9c4f0f0d4c9248f063deea0854ccd98cda75aa2fa93cbb9a2a7deddeef5a",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 201,
+        "completionTokens": 234,
+        "latencyMs": 3220.7985820000176,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-20-rotate-array-beb86287eb",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "7ce7c90b6e6db93c64b390fa10bd4bfa9c700ab172fb1fa3495df9567927355a",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "25122f78c025bf5d63c853a77307e1a72aacce30b77a849c1dc3b320618c46b1",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 206,
+        "completionTokens": 247,
+        "latencyMs": 3370.0537259999546,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-21-binary-search-ffb6f8735f",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "4edd75b43dac904acedd7a9362ce0801ec6b5770b1caf5aff8e9b8637a26c467",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "260809d063874ee6b355430e319f78f35bd1f45111d9db79fef40f701c4d1c79",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 264,
+        "completionTokens": 257,
+        "latencyMs": 3499.9826439999742,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-22-merge-headers-e4433a12bf",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "2be4eb73bb35162db744495b992c1ed94f895e7076760c6e1e4a15b2581aa112",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "853884c853ae219f79f6287cd71095fbbca916d411b1131b860bfaeb5f955656",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 201,
+        "completionTokens": 396,
+        "latencyMs": 5352.642287000024,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-23-min-max-72396b9df5",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "c3f482873b8c60c42bdf3014f6ed4f9b8d5259312ecbc4078cff24a0df04fb5d",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "b067d24d5fc7c0f9fd2b98c06fcf430da6806fb87ccbb5313ecb26e4c4318e31",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 206,
+        "completionTokens": 256,
+        "latencyMs": 3465.2389200000325,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-24-count-words-bfaa1bef8c",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "7688399216b7e7f3199c59561496f302e0113398c37c708e2eef2d7f5a5826c3",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "6386031fafc60d73c159fcdf237b022b982fc4a4a4bfc33970553bf0187f79b6",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 193,
+        "completionTokens": 207,
+        "latencyMs": 2807.4368060000124,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "baseline",
+      "model": {
+        "modelId": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-25-has-own-de49412ce2",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "f9429830d8413363ce97e74d35ba38cfed9380782f4f78ab3f934e80bb3d0faa",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "0bc485e43531666da864e273dbeb05b11584ad3ac1581bcd3d2ddbbcdbc98baa",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 185,
+        "completionTokens": 229,
+        "latencyMs": 3121.7025160000194,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "495bc9e8ee960055eca17e44aafa8ed38c44128134b908c9c25dd395464eca4d",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "7024e01810476f302e7f79280a281af66ddb2e066445b157783ff5ef20a3b941",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 200,
+        "completionTokens": 190,
+        "latencyMs": 1968.2590450000134,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "5c739f6720fd2bb30bc271a372f536efa8a17547a4aec6f8b49ec7cdb1070cc1",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "0f329d42b160391a963ba427a8b2f6e83956e735030229749cdd4903a2ca47bb",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 228,
+        "completionTokens": 219,
+        "latencyMs": 2255.8483790000028,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "9e150048aa41ade574ef13e3db61a512672eb517ea56f32fc3309cf194fd0b87",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "fde006e33e6a26545669a40559de447f3aa239ba9031e26e5b72cba4e56dc868",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 180,
+        "completionTokens": 125,
+        "latencyMs": 1292.0574979999801,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "36a928bc0f82b4e031075bcc4261c0fb2663047fb86d555be6e132924f4901e2",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "e1f229ecc780baf2ae9ee7751549215abddf15878ea53093235356e49b7e0371",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 214,
+        "completionTokens": 167,
+        "latencyMs": 1721.1182570000528,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "10c45c2bb3cde111bbb069a43db3bdf44914e1d9a8d5ececbfc1042fab6dd4d9",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "PATCH_PROPOSAL",
+        "mutationRequired": true,
+        "unnecessaryRefusal": false,
+        "status": "PATCH_PROPOSAL_SELECTED"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "11afb77a87ab4078e0dc9ce8d0aa9978f1f9341d1b77e6429cc72c2a35ddf14b",
+        "targetHeadersRecognized": true,
+        "result": "DIFF_REACHED_RUNTIME"
+      },
+      "gitApplyCheck": {
+        "reached": true,
+        "result": "FAIL",
+        "errorClass": "CORRUPT_PATCH"
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NO_WRONG_TARGET_RECORDED",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "GIT_APPLY_PREFLIGHT",
+      "refusalClass": "syntactically_invalid_patch_edit",
+      "failureEvidence": "Patch preflight failed: error: corrupt patch at line 7\n; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 175,
+        "completionTokens": 189,
+        "latencyMs": 1951.3129520000075,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "84f5d7644950be1a00288b83ad36ebb26205a08888e501e70349aa1e3e651f41",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "12e36f8a6fccf7a347751bf16f5bfb9bd66d92e1480a60992775ca02ec1fa03d",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 208,
+        "completionTokens": 183,
+        "latencyMs": 1896.240118000016,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "5182efb363cb4431327a4f604c56d06c9b33c0a867c3402f5e8c775a3daee76c",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "6b367b83f9e01e41ea339f43f38050908948edd4aa92bed732830b6b931ec9b6",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 213,
+        "completionTokens": 134,
+        "latencyMs": 1398.5014139999985,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "41726d0b77a6ee79de71a3558b66954cf7b93035da4a840e9ce4b40907cd1664",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "c1303fad8cfc78b5c2bd3b14808c3b19d0fab4bf074766d9d7f632de95bb5b0b",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 202,
+        "completionTokens": 199,
+        "latencyMs": 2057.782353000017,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "3c08306cf4499982feb5550a7aebf92d1b92e7aa119aee65ef86d7b58eaa6387",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "09a4a311c5c521c73fca57b9b8624fdcf47bd20e71d98e27fa0672ae886fd8f1",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 224,
+        "completionTokens": 160,
+        "latencyMs": 1653.0784969999804,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "95390274d53ed505a81aaa623ba28824a4733c8a95e76fabaf53077e7531c502",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "5120db51fb4b0baf46b992b55f4d3a1118504dbfb51ae5adea06740bdc2ac51f",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 199,
+        "completionTokens": 166,
+        "latencyMs": 1720.6284299999825,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "fbee1c443ddcf946ca9c13c13bf1382cec5fb272161fac95e3da9524321a133b",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "PATCH_PROPOSAL",
+        "mutationRequired": true,
+        "unnecessaryRefusal": false,
+        "status": "PATCH_PROPOSAL_SELECTED"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "5815e7343cfced80394877a6f46a064b51456eadf203d1cc1dbf9ce670e12bbb",
+        "targetHeadersRecognized": false,
+        "result": "FAIL_NO_TARGET_HEADERS"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "INDETERMINATE_NO_HEADERS",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "PATCH_CONSTRUCTION_TARGET_HEADERS",
+      "refusalClass": "syntactically_invalid_patch_edit",
+      "failureEvidence": "Patch has no target file headers; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 189,
+        "completionTokens": 157,
+        "latencyMs": 1620.179055000015,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "28b490d1cfd0e4a751dba5bb3a84b1257fa1f4c1706afa635d1da2e35066992a",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "PATCH_PROPOSAL",
+        "mutationRequired": true,
+        "unnecessaryRefusal": false,
+        "status": "PATCH_PROPOSAL_SELECTED"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "2944c287e2b702bdc5e2c7a1b9b3365de69b92c64bb4abb07c489a813217f019",
+        "targetHeadersRecognized": false,
+        "result": "FAIL_NO_TARGET_HEADERS"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "INDETERMINATE_NO_HEADERS",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "PATCH_CONSTRUCTION_TARGET_HEADERS",
+      "refusalClass": "syntactically_invalid_patch_edit",
+      "failureEvidence": "Patch has no target file headers; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 192,
+        "completionTokens": 151,
+        "latencyMs": 1559.173695000005,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-13-normalize-path-3ba2860b51",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "fb43643b43e48a020f3bc05310325767e4c94cba298c280b478fb5956e320814",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "f1f828480a62d55e9121908d88c39f4792460fff582df87366634c3bd6993a6e",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 179,
+        "completionTokens": 196,
+        "latencyMs": 2019.0686390000046,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-14-parse-bool-8881da94ff",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "03c505f840c65f862fef6acba377cda3d127eec9da50c988fa65cb0b3a149261",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "PATCH_PROPOSAL",
+        "mutationRequired": true,
+        "unnecessaryRefusal": false,
+        "status": "PATCH_PROPOSAL_SELECTED"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "4b97723d34a22e66f0955ed888fe661585c3b3389b4d2b1ebd04ecbbbdeaa362",
+        "targetHeadersRecognized": false,
+        "result": "FAIL_NO_TARGET_HEADERS"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "INDETERMINATE_NO_HEADERS",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "PATCH_CONSTRUCTION_TARGET_HEADERS",
+      "refusalClass": "syntactically_invalid_patch_edit",
+      "failureEvidence": "Patch has no target file headers; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 182,
+        "completionTokens": 168,
+        "latencyMs": 1730.891969999997,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-15-format-bytes-5a0b763ebc",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "02e9f40dc5ccfbdd7a6aaf2111d9e70b5adde84408d50a7602b361627e67d540",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "00f0204c86db129ac28458bc7902c1d6c31d644b47a6b87f4caa17d0295e9e2d",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 204,
+        "completionTokens": 174,
+        "latencyMs": 1792.9321149999741,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-16-intersection-multiplicity-985d47dab3",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "d0b76dfbb5fdf5db4f51b847973b2375f63070bea363a678ae0b6d9a9a042316",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "64950f90d4395836598770a4c7f2cba2650358535b973bd5376eb9ea6033f9fb",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 183,
+        "completionTokens": 200,
+        "latencyMs": 2059.4977959999815,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-17-decode-query-4535736542",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "0417495f1280a68f9a945dd9c043f27d68e6fe28034153bdb6d169ef92487159",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "f42c54376a9036331306bc5613d2fa1d5f02ca8cb51a97082c5560a200d12e15",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 174,
+        "completionTokens": 185,
+        "latencyMs": 1924.865104000026,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-18-title-case-a3b15a1136",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "d487675b444c688e407707e60d955d748a275dbac2a600528a20a3aa7fc87ba6",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "df9d68080b2406354c79d43cca3af86aedec59fb28829a4dca28e97d6fa6eec5",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 189,
+        "completionTokens": 160,
+        "latencyMs": 1647.9952620000113,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-19-safe-divide-8f8f4db38c",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "9cc2b4410726724ea80b0179be385d68d9fc1ab3814e5e2db26cbd8b9c70cb30",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 191,
+        "completionTokens": 57,
+        "latencyMs": 615.5969610000029,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-20-rotate-array-beb86287eb",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "4657257ac970d54eb8361378e1b50b9dc91665c501252b37d886b5aa8c6d042a",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "b8a3e80eb66a966dcebdbe85a34872742110cf306636623c182afdc628c79c99",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 196,
+        "completionTokens": 180,
+        "latencyMs": 1860.879935999983,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-21-binary-search-ffb6f8735f",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "b9bc6e652fca93e857fb4928587e50c6f701e6a6ba4dff7cd5c5ad97f32ca0a1",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "2e1c94b30faa29fa7d2a9b1cc3adfe421646144d2fca94f03e3528c091c6aff4",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 254,
+        "completionTokens": 197,
+        "latencyMs": 2032.6988209999981,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-22-merge-headers-e4433a12bf",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "23d7a3224a9966f26b99eb5dd4c3c218aa5d0c39ae9e856489979522ff5b6468",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "33000333527a31c210cb29b790157086a9efd5355d9ddd57194d1b4c9893fb35",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 191,
+        "completionTokens": 129,
+        "latencyMs": 1335.198992999969,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-23-min-max-72396b9df5",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "85a5cf758fa811bce97eea994080b580915f1509f288213d43b45718126816e9",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "95867af7875ed5df6dbb7d5a77d1f0445fa4f316f96e0b5cbd6a7fa3d8f97ee1",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 197,
+        "completionTokens": 181,
+        "latencyMs": 1865.2022119999747,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-24-count-words-bfaa1bef8c",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "ae4704300136eac34a1bb11363bbaad97e7e7f45a741cb2869cca789add6f13f",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "52054571a654b66d1677b5e26812f03a9ec6f2ceda51f9c5e3e21baf8cd8d3ff",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 183,
+        "completionTokens": 206,
+        "latencyMs": 2117.8915450000204,
+        "transportError": null
+      }
+    },
+    {
+      "profileId": "coder",
+      "model": {
+        "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "tokenizerRevision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+        "precision": "bfloat16"
+      },
+      "taskId": "g4-dev-patch-25-has-own-de49412ce2",
+      "behavioralSuccess": false,
+      "rawOutput": {
+        "availability": "RAW_OUTPUT_NOT_PERSISTED",
+        "outputHash": "9a2d5ee6348e1cf407815250dfbf9fff100b3690fdbeaeefaf234277a54bcb04",
+        "reconstructable": false
+      },
+      "schema": {
+        "jsonParse": "PASS",
+        "serverConstrainedSchemaRequested": true,
+        "postHocSchemaRevalidation": "NOT_IMPLEMENTED_IN_HISTORICAL_RUN",
+        "malformedRecorded": false
+      },
+      "actionValidation": {
+        "selectedOutcome": "REPORT_ONLY",
+        "mutationRequired": true,
+        "unnecessaryRefusal": true,
+        "status": "VALID_SCHEMA_NON_MUTATION_ACTION"
+      },
+      "patchConstruction": {
+        "patchTextPersisted": false,
+        "patchHash": "36ca76f8e5c3251a8f4b0be00ba557b5180fa90b836605b05df590cdf12ce1e5",
+        "targetHeadersRecognized": false,
+        "result": "NOT_REACHED_REPORT_ONLY"
+      },
+      "gitApplyCheck": {
+        "reached": false,
+        "result": "NOT_RUN",
+        "errorClass": null
+      },
+      "gitApply": {
+        "reached": false,
+        "result": "NOT_RUN"
+      },
+      "deterministicVerification": {
+        "syntax": "NOT_RUN",
+        "visible": "NOT_RUN",
+        "hidden": "NOT_RUN"
+      },
+      "safety": {
+        "wrongFileMutationObserved": false,
+        "targetCorrectnessEvidence": "NOT_APPLICABLE_NO_MUTATION",
+        "changedLinesRecorded": 0,
+        "changedLinesCaveat": "ZERO_IS_POST_APPLY_COUNTER_NOT_RAW_PATCH_SIZE"
+      },
+      "cleanup": {
+        "sourceHashRestoredOrUnchanged": true,
+        "rollbackRoutineInvoked": false,
+        "caveat": "NO_MUTATION_WAS_APPLIED"
+      },
+      "failureStage": "ACTION_SELECTION_UNNECESSARY_REFUSAL",
+      "refusalClass": "REPORT_ONLY",
+      "failureEvidence": "REPORT_ONLY; syntax=NOT_RUN; visible=NOT_RUN; hidden=NOT_RUN; wrongFile=false; rollback=true",
+      "telemetry": {
+        "promptTokens": 175,
+        "completionTokens": 133,
+        "latencyMs": 1373.5126100000343,
+        "transportError": null
+      }
+    }
+  ]
+}

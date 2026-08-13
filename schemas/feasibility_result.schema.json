@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Feasibility Result",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "AUTO_EXECUTE",
+        "APPROVAL_REQUIRED",
+        "REPORT_ONLY",
+        "BLOCKED"
+      ]
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CRITICAL"
+      ]
+    },
+    "estimated_relevant_files": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "estimated_modified_files": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "reliable_oracle": {
+      "type": "boolean"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required_approvals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "reduced_scope": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "task_id",
+    "decision",
+    "risk_level",
+    "estimated_relevant_files",
+    "estimated_modified_files",
+    "reliable_oracle",
+    "reasons",
+    "required_approvals",
+    "reduced_scope"
+  ]
+}

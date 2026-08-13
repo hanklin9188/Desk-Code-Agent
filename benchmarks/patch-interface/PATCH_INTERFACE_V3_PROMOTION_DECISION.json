@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "decisionId": "dca-patch-interface-v3-development-promotion",
+  "generatedAt": "2026-08-11T01:11:15.543Z",
+  "status": "PASS_GATE_APPLIED_WITHOUT_MODIFICATION",
+  "decision": "E_EDIT_JUSTIFIED",
+  "selectedInterface": "P2_MINIMAL",
+  "gateRows": [
+    {
+      "conditionId": "P1_MINIMAL",
+      "perProfile": {
+        "baseline": {
+          "behavioralSuccesses": 10,
+          "hiddenTestPasses": 14,
+          "behavioralGainExact": 3,
+          "behavioralGainMinimal": 1,
+          "hiddenGainExact": 7,
+          "hiddenGainMinimal": 5,
+          "modelGainGate": false
+        },
+        "coder": {
+          "behavioralSuccesses": 0,
+          "hiddenTestPasses": 0,
+          "behavioralGainExact": 0,
+          "behavioralGainMinimal": 0,
+          "hiddenGainExact": 0,
+          "hiddenGainMinimal": 0,
+          "modelGainGate": false
+        }
+      },
+      "pooled": {
+        "behavioralSuccesses": 10,
+        "hiddenTestPasses": 14,
+        "behavioralGainExact": 3,
+        "behavioralGainMinimal": 1
+      },
+      "wrongFileAttempts": 0,
+      "safetyViolations": 0,
+      "boundedRuntimeGate": true,
+      "qualifies": false
+    },
+    {
+      "conditionId": "P2_MINIMAL",
+      "perProfile": {
+        "baseline": {
+          "behavioralSuccesses": 21,
+          "hiddenTestPasses": 27,
+          "behavioralGainExact": 14,
+          "behavioralGainMinimal": 12,
+          "hiddenGainExact": 20,
+          "hiddenGainMinimal": 18,
+          "modelGainGate": true
+        },
+        "coder": {
+          "behavioralSuccesses": 12,
+          "hiddenTestPasses": 15,
+          "behavioralGainExact": 12,
+          "behavioralGainMinimal": 12,
+          "hiddenGainExact": 15,
+          "hiddenGainMinimal": 15,
+          "modelGainGate": true
+        }
+      },
+      "pooled": {
+        "behavioralSuccesses": 33,
+        "hiddenTestPasses": 42,
+        "behavioralGainExact": 26,
+        "behavioralGainMinimal": 24
+      },
+      "wrongFileAttempts": 0,
+      "safetyViolations": 0,
+      "boundedRuntimeGate": true,
+      "qualifies": true
+    },
+    {
+      "conditionId": "P3_MINIMAL",
+      "perProfile": {
+        "baseline": {
+          "behavioralSuccesses": 15,
+          "hiddenTestPasses": 17,
+          "behavioralGainExact": 8,
+          "behavioralGainMinimal": 6,
+          "hiddenGainExact": 10,
+          "hiddenGainMinimal": 8,
+          "modelGainGate": false
+        },
+        "coder": {
+          "behavioralSuccesses": 12,
+          "hiddenTestPasses": 18,
+          "behavioralGainExact": 12,
+          "behavioralGainMinimal": 12,
+          "hiddenGainExact": 18,
+          "hiddenGainMinimal": 18,
+          "modelGainGate": true
+        }
+      },
+      "pooled": {
+        "behavioralSuccesses": 27,
+        "hiddenTestPasses": 35,
+        "behavioralGainExact": 20,
+        "behavioralGainMinimal": 18
+      },
+      "wrongFileAttempts": 0,
+      "safetyViolations": 0,
+      "boundedRuntimeGate": true,
+      "qualifies": true
+    },
+    {
+      "conditionId": "P4_MINIMAL",
+      "perProfile": {
+        "baseline": {
+          "behavioralSuccesses": 20,
+          "hiddenTestPasses": 25,
+          "behavioralGainExact": 13,
+          "behavioralGainMinimal": 11,
+          "hiddenGainExact": 18,
+          "hiddenGainMinimal": 16,
+          "modelGainGate": true
+        },
+        "coder": {
+          "behavioralSuccesses": 3,
+          "hiddenTestPasses": 8,
+          "behavioralGainExact": 3,
+          "behavioralGainMinimal": 3,
+          "hiddenGainExact": 8,
+          "hiddenGainMinimal": 8,
+          "modelGainGate": false
+        }
+      },
+      "pooled": {
+        "behavioralSuccesses": 23,
+        "hiddenTestPasses": 33,
+        "behavioralGainExact": 16,
+        "behavioralGainMinimal": 14
+      },
+      "wrongFileAttempts": 1,
+      "safetyViolations": 0,
+      "boundedRuntimeGate": true,
+      "qualifies": false
+    }
+  ],
+  "winnerSelection": "Among P1_MINIMAL through P4_MINIMAL candidates satisfying every promotion gate, choose pooled behavioral success, then minimum per-model behavioral success, hidden success, fewer accepted-edit changed lines, fewer output tokens, then latency; no other result-dependent choice is allowed.",
+  "formattingSuccessAloneQualified": false,
+  "eEditMayBeFrozen": true,
+  "productionMutationEnabled": false,
+  "historicalConclusionsModified": false,
+  "scaleProtocolGateReached": false,
+  "protectedActions": {
+    "modelDownload": false,
+    "dependencyInstall": false,
+    "sudoAdmin": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "sealId": "dca-privacy-safe-semantic-observability-session-b-seal-v1",
+  "state": "SEALED_BEFORE_FIRST_SESSION_B_CALL",
+  "sealedAt": "2026-08-11T20:02:42.640Z",
+  "targetModelCallsAtSeal": 0,
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_A.v1.json",
+      "sha256": "f6027c2de31d623acd2d24d57e19c5e3c91adc62af7eef5d0a0dee6b7d07a761"
+    },
+    "prereg": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PREREGISTRATION.v1.json",
+      "sha256": "1a6de2094142da008222aa65dea0bbb16c28425f1d29c1eb98be807f0eaf96c5"
+    },
+    "manifest": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_TASK_MANIFEST.v1.json",
+      "sha256": "bfefa8f89ee2221f1e8dc45de9fe4bae549b2d0919fd2ce0fc3e5c44087aec38"
+    },
+    "repos": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_REPOSITORIES.v1.json",
+      "sha256": "f29e0eb0c829cdfc6f1b7087ab30ee06268d1d44c58b1e179016dc0903fd701e"
+    },
+    "oracle": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_ORACLE.v1.sealed.json",
+      "sha256": "cace6716684f9d7f262733b1ff87c2ddebc411ddd06339060d15a4205e35c6a3"
+    },
+    "l0": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_L0_SCHEMA.v1.json",
+      "sha256": "b751473841b418d16e17abacd4ac42aca08c6efe72b48f8b2056506c6bc80176"
+    },
+    "l1": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_L1_SCHEMA.v1.json",
+      "sha256": "ac0cefa91562a2ccc9b8d1cb8617b88ae035cba8d1891171e05a07bbfa0d5a61"
+    },
+    "privacy": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_OBSERVABILITY_PRIVACY_PREFLIGHT.v1.json",
+      "sha256": "d7fabb8237347f90f337eea6778ad08ff90c85dfe75c9c6ded611463cc959250"
+    },
+    "acquisition": {
+      "path": "docs/experiments/model-specialization/tournament-session-b/M2_ACQUISITION.v1.json",
+      "sha256": "cf8e77a5bf0fe8828c1f8deeacc9c87c995a05546efde46341eeccee29998fb6"
+    },
+    "candidate": {
+      "path": "docs/experiments/patch-interface/E_EDIT_CANDIDATE.v1.json",
+      "sha256": "7abdcd7cfe84b3e3e6844ecc81c8a4c783a9af53e45dcbb0489fa0e157a32fbc"
+    }
+  },
+  "execution": {
+    "tasks": 80,
+    "physicalCalls": 80,
+    "callsPerTask": 1,
+    "retry": false,
+    "reviewer": false,
+    "requestIntentsSha256": "ad887f1e01be5911522ac247bca02aa3a3c111f956f66ede7e2294c12cf2c92d",
+    "taskIdsSha256": "f090b8d04d9961901f670a064c02f795ccc0055ca232e5cfc9e98e878fa641c1"
+  },
+  "emptyState": {
+    "callEventsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checkpointSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "L0Packets": 0,
+    "L1Packets": 0
+  },
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_L0_SCHEMA.v1.json",
+        "sha256": "b751473841b418d16e17abacd4ac42aca08c6efe72b48f8b2056506c6bc80176"
+      },
+      {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_L1_SCHEMA.v1.json",
+        "sha256": "ac0cefa91562a2ccc9b8d1cb8617b88ae035cba8d1891171e05a07bbfa0d5a61"
+      },
+      {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_ORACLE.v1.sealed.json",
+        "sha256": "cace6716684f9d7f262733b1ff87c2ddebc411ddd06339060d15a4205e35c6a3"
+      },
+      {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_REPOSITORIES.v1.json",
+        "sha256": "f29e0eb0c829cdfc6f1b7087ab30ee06268d1d44c58b1e179016dc0903fd701e"
+      },
+      {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_TASK_MANIFEST.v1.json",
+        "sha256": "bfefa8f89ee2221f1e8dc45de9fe4bae549b2d0919fd2ce0fc3e5c44087aec38"
+      },
+      {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PREREGISTRATION.v1.json",
+        "sha256": "1a6de2094142da008222aa65dea0bbb16c28425f1d29c1eb98be807f0eaf96c5"
+      },
+      {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_OBSERVABILITY_PRIVACY_PREFLIGHT.v1.json",
+        "sha256": "d7fabb8237347f90f337eea6778ad08ff90c85dfe75c9c6ded611463cc959250"
+      },
+      {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_A.v1.json",
+        "sha256": "f6027c2de31d623acd2d24d57e19c5e3c91adc62af7eef5d0a0dee6b7d07a761"
+      },
+      {
+        "path": "docs/experiments/model-specialization/tournament-session-b/M2_ACQUISITION.v1.json",
+        "sha256": "cf8e77a5bf0fe8828c1f8deeacc9c87c995a05546efde46341eeccee29998fb6"
+      },
+      {
+        "path": "docs/experiments/patch-interface/E_EDIT_CANDIDATE.v1.json",
+        "sha256": "7abdcd7cfe84b3e3e6844ecc81c8a4c783a9af53e45dcbb0489fa0e157a32fbc"
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2"
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb"
+      },
+      {
+        "path": "scripts/launch_model_tournament_candidate.py",
+        "sha256": "07ee838e78c19ee2df839c6943300d9b49c7153d8a67149524ed5c13dc3a47f3"
+      },
+      {
+        "path": "scripts/run_privacy_safe_observability_session_b.ts",
+        "sha256": "b420a43178d43054d61a20e3a12be4edf59deb9d111b056a12cce9e2f6c2095a"
+      },
+      {
+        "path": "scripts/start_model_tournament_candidate.sh",
+        "sha256": "afe879bbc0dd831f673b05a9d96f3cd299f44b606a15f0e7605765c5fc553c45"
+      },
+      {
+        "path": "services/g3-benchmark-runtime/src/index.ts",
+        "sha256": "edcbc59ac3164da338289f9ae6499074a51a8e92625e189d722a9162a34b6478"
+      },
+      {
+        "path": "services/g3-evaluation-runtime/src/index.ts",
+        "sha256": "02ebfd6a7914cbe35c49048c182236d578cf56a1ddeb40ff8a4b9ac141affad2"
+      },
+      {
+        "path": "services/model-specialization-runtime/src/index.ts",
+        "sha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee"
+      },
+      {
+        "path": "services/patch-interface-runtime/src/index.ts",
+        "sha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508"
+      },
+      {
+        "path": "services/repo-intelligence/src/index.ts",
+        "sha256": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d"
+      },
+      {
+        "path": "services/semantic-observability/src/index.ts",
+        "sha256": "96b92bed402662ad1c3d008fe29a8573bd037bacdffa3a94c6686c14d153e028"
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21"
+      }
+    ],
+    "sha256": "622eb1f1c8fe15da3bb7075974dca51bdac47880c6d690c02a84542bc7c67336"
+  },
+  "privacy": {
+    "rawPromptPersisted": false,
+    "rawModelOutputPersisted": false,
+    "rawEditBodyPersisted": false,
+    "HMACKeyPersistedInArtifacts": false,
+    "L2": false
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "retry": false,
+    "reviewer": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

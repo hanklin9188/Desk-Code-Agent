@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "dca-best-7b-bounded-retry-session-c-dual-axis-review-v1",
+  "status": "PASS",
+  "reviewedAt": "2026-08-11T17:50:58.250Z",
+  "skill": {
+    "skill_id": "D07",
+    "skill_version": "0.2.0",
+    "run_id": "cf9c1349-04d7-4bc9-ac5c-d9463e9cc0e2",
+    "status": "PASS",
+    "input_artifact_hashes": [
+      "09b95513e063377646f8cba52e34c181a53182f47380061e59af66707407f25a",
+      "80b8bf3b089facadf47a3150c2c03e5d7274e6aa43df4dc8d90b94a6418b30d7",
+      "607cc2fbe41f4e9fd6172d3c848d4f8a2f5c2a9457b746ffd96c8a7b564c6549"
+    ],
+    "evidence_ids": [
+      "dca-best-7b-bounded-retry-analysis-v1",
+      "dca-best-7b-bounded-retry-session-c-v1"
+    ],
+    "warnings": [],
+    "errors": [],
+    "metrics": {
+      "specBlockers": 0,
+      "standardsBlockers": 0
+    }
+  },
+  "specReview": {
+    "status": "PASS",
+    "findings": [],
+    "evidence": {
+      "sealedSessionBHashVerified": true,
+      "oneShotAndRetryDerivedFromRows": true,
+      "completeTransitionMatrix": true,
+      "frozenThresholdsUnchanged": true,
+      "exactlyOneNextProtocol": true,
+      "nextProtocolExecuted": false,
+      "SessionCModelCalls": 0
+    },
+    "acceptanceCriteria": {
+      "maximumTwoCall": "PASS_30_OF_95",
+      "recovery": "PASS_1_OF_66",
+      "classRecovery": "PASS_COMPLETE",
+      "migration": "PASS_COMPLETE_66_OF_66",
+      "cost": "PASS_ALL_95_DENOMINATOR",
+      "retryDecision": "PASS_RETRY_NO_MATERIAL_GAIN",
+      "productDecision": "PASS_KEEP_MUTATION_DISABLED",
+      "finalQuestions": "PASS_10_OF_10"
+    }
+  },
+  "standardsReview": {
+    "status": "PASS",
+    "findings": [],
+    "evidence": {
+      "strictTypeScript": "PASS",
+      "projectTypecheck": "PASS",
+      "completeTests": "PASS",
+      "productionBuild": "PASS",
+      "designValidation": "PASS",
+      "securityRegression": "PASS_1540_OF_1540",
+      "immutableSidecars": "PASS",
+      "appendOnlySupersession": true,
+      "sourceClosure": "PASS",
+      "privacy": "PASS_HASH_AND_BOUNDED_METADATA",
+      "protectedActions": "PASS_ALL_FALSE",
+      "runtimeCleanup": "PASS_NO_MODEL_COMPUTE_PROCESS_PORT_CLEAR_STATE_ABSENT_ONE_WORKTREE"
+    }
+  },
+  "decision": "APPROVED",
+  "modelCalls": 0
+}

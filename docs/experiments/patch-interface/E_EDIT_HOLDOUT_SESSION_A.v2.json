@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "sessionId": "dca-e-edit-holdout-session-a-v2",
+  "completedAt": "2026-08-11T02:47:15.849Z",
+  "status": "PASS",
+  "session": "A",
+  "supersedes": {
+    "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_SESSION_A.v1.json",
+    "status": "SUPERSEDED_FOR_IDEMPOTENT_SINGLE_TIMESTAMP_PUBLICATION",
+    "modelCalls": 0
+  },
+  "phases": [
+    "frozen candidate audit",
+    "holdout preregistration v1 invalid arithmetic and append-only v2 supersession",
+    "repository-disjoint holdout construction",
+    "integrity and seal"
+  ],
+  "artifacts": {
+    "preregistration": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PREREGISTRATION.v2.json",
+      "sha256": "5e1d4ece269cd807f625ef7f0c41b1867dce5600f25e4080bfcf02746e4833c5"
+    },
+    "repositories": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+      "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+    },
+    "manifest": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+      "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+    },
+    "oracle": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+      "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+    },
+    "integrity": {
+      "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_INTEGRITY.v2.json",
+      "sha256": "76f0d407886e41a8f21e04d7061d37f97fd095bcbfabc5cfbe7353f78c5ff274"
+    },
+    "seal": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_SEAL.v2.json",
+      "sha256": "51b7c6d79d7f07eab84017488aeae6aa8a061430af36eda3df34348b76f9f823"
+    }
+  },
+  "gate": {
+    "candidateClosure": true,
+    "preregistrationSealed": true,
+    "repositoryDisjointness": true,
+    "taskDisjointness": true,
+    "holdoutIntegrity": true,
+    "taskCount": true,
+    "repositoryCount": true,
+    "hiddenOracleIntegrity": true,
+    "manifestsSealed": true,
+    "zeroModelCalls": true,
+    "holdoutExecutionStarted": false
+  },
+  "nextSession": "B",
+  "mustStop": true
+}

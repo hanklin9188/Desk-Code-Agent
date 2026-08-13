@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "matrixId": "dca-semantic-failure-retry-by-category-v1",
+  "status": "PASS_SECONDARY_ANALYSIS",
+  "generatedAt": "2026-08-11T19:11:06.048Z",
+  "rows": {
+    "T11_RETRIEVAL_FAILURE": {
+      "eligible": 5,
+      "RECOVERED": 0,
+      "REPEATED_EDIT": 0,
+      "FAILED_DIFFERENT": 1,
+      "CONTRADICTION": 0,
+      "MALFORMED": 0,
+      "SAFETY_REJECTED": 4
+    },
+    "T12_ACTION_OR_PATCH_REPRESENTATION": {
+      "eligible": 2,
+      "RECOVERED": 0,
+      "REPEATED_EDIT": 0,
+      "FAILED_DIFFERENT": 1,
+      "CONTRADICTION": 0,
+      "MALFORMED": 1,
+      "SAFETY_REJECTED": 0
+    },
+    "T13_SYNTAX_CODE_FORMATION": {
+      "eligible": 6,
+      "RECOVERED": 0,
+      "REPEATED_EDIT": 3,
+      "FAILED_DIFFERENT": 2,
+      "CONTRADICTION": 0,
+      "MALFORMED": 1,
+      "SAFETY_REJECTED": 0
+    },
+    "T14_AMBIGUOUS_OR_INCONCLUSIVE": {
+      "eligible": 53,
+      "RECOVERED": 1,
+      "REPEATED_EDIT": 39,
+      "FAILED_DIFFERENT": 8,
+      "CONTRADICTION": 4,
+      "MALFORMED": 1,
+      "SAFETY_REJECTED": 0
+    }
+  },
+  "historicalRetryDecision": "RETRY_NO_MATERIAL_GAIN",
+  "decisionChanged": false,
+  "targetModelCalls": 0
+}

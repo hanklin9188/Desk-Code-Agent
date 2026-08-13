@@ -1,0 +1,2439 @@
+{
+  "schemaVersion": 1,
+  "validationId": "dca-patch-interface-development-oracle-preflight-v1",
+  "generatedAt": "2026-08-09T14:59:49.172Z",
+  "classification": "DEVELOPMENT_ONLY_PRE_MODEL_CALL",
+  "status": "PASS",
+  "inputs": {
+    "manifest": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_DEVELOPMENT_MANIFEST.v1.json",
+      "sha256": "40fc5b018467fc4615084701cc5c2dba357ee3e5d498cbb84811d264a9f22b91"
+    },
+    "oracle": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_DEVELOPMENT_ORACLE.v1.sealed.json",
+      "sha256": "443c6549eea907de0e7180d42f0549732278edef667e392359ff2c556b13f6e2"
+    }
+  },
+  "contract": {
+    "taskCount": 50,
+    "realBehavioralOracleRequired": true,
+    "buggySourceMustFailAtLeastOneBehavioralOracle": true,
+    "referenceFixMustPassSyntaxVisibleHidden": true,
+    "noNetwork": true,
+    "shell": false,
+    "rawCommandOutputPersisted": false,
+    "outputHashesPersisted": true
+  },
+  "summary": {
+    "tasks": 50,
+    "valid": 50,
+    "failures": 0,
+    "buggyVisibleFailures": 46,
+    "buggyHiddenFailures": 36,
+    "referenceSyntaxPasses": 50,
+    "referenceVisiblePasses": 50,
+    "referenceHiddenPasses": 50
+  },
+  "rows": [
+    {
+      "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "7c9afebf8d58c92c4162c2e84c698cfe5454e594e8ce756fc540c6306afaa77e"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "7bf94352511ad7a45a925ee718ed9e3604155a8156e2ac1daf331e05f1342214"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "fed77c6ebd5c1f4bd868858b478eb46fe8d786fd595f9064012b71bd36014784"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "c7e27a459a8aae5f4fc503fbec432fa11191b6478d413bfe4fcf087eef052a40"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/clamp-upper.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "4af17bb8b7fe5c26cca7c39e07dfb47b4c6a68b50e5214c5b2257d2b2e634364"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f04f4160d98d5de49089ff1cb912ea5540c881e64fced221a8aa254575a54c0c"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "12b23f51b097469e9efac4ebb131e6cc40d2369e7196a9787f3f9906b9d9a127"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "af25349f20bf41b2eb3bcbb51160f87474f06d42a21b29732405f9e675c8c1e5"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/median-even.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "3a812cc4c83e1efd3100b78126dfb5873c4a990cd274a8718f1afe80139450b4"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "d748cdfe29bbb2bb087257f928fc7a28c152adc5ed017e4b7a4b7868b9855cf6"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "a869ef9c5d79ae924548cb2f8dc809e2793baf0543687cce67640ce6537f21fa"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "38586dcbe9c42b5510fec3dc338260091b5b809e934b958c2e58a6894ed25c95"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/stable-unique.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f203d022511d84d28b02e87abfaee155eca35ac08c6d8386bf283ad6c86559ee"
+        },
+        "hidden": {
+          "status": "TIMED_OUT",
+          "exitCode": 1,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "0bb3437bf8f371e756c8c9467fea16a673dc4a5e711b08c8653c505b42f739d5"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5c7e8b345e0c0d812cba76c72bdf94e9368d4eff290747650a0183b7241bd2aa"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/chunk-tail.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "8e7ff5250422ddaa869ddaa69c057e80b2539f022b52ff466447598c7e6b9469"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "9b030aeece5fbee43a27f2546de98521dadab0d297187797b1470850e28049c4"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "fba3bae2c040fcf1bbeaaf245d45b1fc9bdefbff531839f9e7619b93da1ece9c"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "0129a83c92d82cd4ff0d058ef724b10607c5130a43a32ec417cefeaa0cee068b"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/palindrome-normalize.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "8281e74144439b76bd1eac9feddc5eb2b614591a18ecda402c2679cafe8680f7"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f0bd59a4d51989305128998d7d19c1874cf79f7a71252b5399f8e7dba7987eda"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "cb6ffb2be1a8e67b2429bc7f0dd3793c158add68861096245af5def8931c36a5"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "7d45e2d09f335d9520d9115c2f767a54b6e762ca8146267cf80d7ced8cfaedfc"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-port.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e72d561451d0eebf4ef0a5ee1c933cb2496eff54dc3f1914bcd3cb00e6e06209"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "4d52f7f4d5c11a2459b7728f8d5da5eff719fc7a9a84c57fbd43c9c9a3786f56"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "0f3e0f13b49b2f6d3c0054c87944107c1a066eb83e6c7a3f45521263192d3991"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "b0a823286e0241bea8f9ea00abe7221fd5d5da9140ca3b18a2a82e2db2cb2924"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/retry-delay.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "b783355a5076b73e9477d7d34bdaf0914dcf426e1f22b9c13dfd2c5c68bd5b85"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "8e85c4df70cff9e076295521f74d51284b438b8ca0dd215c50a1c02b81b70e93"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e6973c45b769092634e44d25b747fb76f75c24e25a97d358483d57efa67857b0"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "cf49933cac099d6d26f3e6cc042eaa19c189b70c97138ad62d89e74137675674"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/join-url.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "bd8502149b9e9043d93a618f52a3b88cf4a7604108a0fef28cb96730ad88765d"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "0fedbe254b847196f25a4404923f01f08708440a2354137e48d636f11350ac58"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "fdb22426cc4b8d3301bf5b6fb813e204fcd8359f256028c682c165c55141465f"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "82e6035d6d51c2f350d61283d5b87a29b121ed1774e397a4aa6db44e441cd760"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/escape-regexp.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "5da024ef0de985bc30adce39ee49d2431bb4c913951e93f72739af4dac698966"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "2194d08737b3d5d0c6b37f0c06f78f86f550f451280137166f1f9ea3f60bbb5b"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e94ddc878fa7f0c4fe93b61f7d859386d62820b219644040e6933f5b6aa7ab64"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "081bb726f4f65fb857f93eb663b1ee2a553ef5bdd2f64376ef3863a7814a2a5a"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/group-by.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "eb1bb1b4b267af644ee2be7ff8ee1af8b886368fcd08c2eaebf7164cf124efaf"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "21c57053e7d09f5186a34c07b12ca1ace2d46ffed2be78cd24ecce4439aad847"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "a422a1f1786ed4940230f9e2d878578007318874970ee050879d83e59f768a58"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "62ceb20af62a96e73f40e3af38be781d9f6934159ec8ed2a3d377b4ea84bc191"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/inclusive-range.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "0f941731d41b522c5d0c1c76588dd833651d94441bcf0f84835fb12027ee7382"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "33ba907a5d6c7bee28d171f5926d66ad1ef29b5576904cad3a55bf28b8e2d352"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "96ce4e26b6b81564ad28f426e273c17caf82c9c36efb0bce077057b82af18506"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e592e59a18f32aff1d3041bb68bd04fd75ffe48277281fce7608b372e5d3c53d"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/truncate-ellipsis.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-13-normalize-path-3ba2860b51",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "29953b883627ed05d1edad11c1429fe83b4dae8c25bd262cf18fae51215fa435"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e19cdaee80042d57406d78557770fe740457a5ac1f79de63a86271a822ea3c8b"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "0a5325c23ecf0d83f1261baa95e7c444030ccd284d6f0797121e4e4bbe24b5d2"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "9d4d4dfcfd7712a981e91a5d9f6e126f5ae394c36d70d0d3691878d6826b7d5c"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/normalize-path.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-14-parse-bool-8881da94ff",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "6e1a6a4da4ff7861a288ba0295a4dd850560b452dd232666e53781a6f92de23b"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f48df18bd0b46838f8abbb485dd4901a4b14db31c5f548e749c2a3e220609530"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "ec56e3b79b7a5cc6e8d528370d1b5763cd95dd7ec8ba0037ce1d9efec587cb22"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "3a3ab8431895d6b8941988f9de3035e4cc6737c7ef4f26b2a29ae8bd9284c6d5"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-bool.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-15-format-bytes-5a0b763ebc",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "d47459e32f60b37f4b8a61818d15f33502406a69c03ebdb4c9879b3d4562b44a"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f03e6a720693be88f5901c42ce5ab3e3df4c33a59f67932e1c64a80edafa705e"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e648f81afd171e3f5dc1baebdd1d7651b68412a3a69687ad5b843e4c79e8b0f9"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "d26625e773ffe0071d5df57cfb429424b51d4931a7de952dae990a8958c46932"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/format-bytes.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-16-intersection-multiplicity-985d47dab3",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "5f459cb89939a31956923ad44bc945b8e20393f65dce770ac691bfcb67d948c4"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "54964c5481b827255de2a1545426bf01ba4564fdc91256bb49db0c5fe69472a4"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "ac1f99e47f1fe93cefdb3a3e04c493fdb8172672ce182edc7032fcee7cea3257"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "dad8f262df5ea6e1ffbd3c73f8fc318ffbef280cc8fc1c13a69421cd9f00e7c7"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/intersection-multiplicity.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-17-decode-query-4535736542",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "39685f900971bc7c7b8508656f5fb75efb14bf25f9c3b33fa1db1c98120f7816"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "624e7a3c713ea027ed94f1f77c7605170a339bd3a3c2b087185d86d7a6a7fd74"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "273fed632e5fd57cea46ca8d94b26ac299b9e4c022117a89d9e49d1e9af69fa4"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "8aa446a4ec82f5387be921f9a5e89e82dd60ce338bfdc95a6050ffcee49043d0"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/decode-query.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-18-title-case-a3b15a1136",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "4541517112a3e1e37370210a414fe535e0ec79d97a0794612c627edc2859aa7e"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "5faa57d653b4364d52c951d90ffb204097c7429a6137a5b1126a13dd704aa5a9"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "cccce428b368816b5fe02ecf36d69d2fbe778618dd12a54da39549b44e87f038"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "4be1f067a65210fa9ded8e3cc3414a70061780993a8fb1487caabd08fa3e07cc"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/title-case.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-19-safe-divide-8f8f4db38c",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "d858855823368ec1323a0d54fbbcb902078089c77e3f4ced2f5ccf7d798d58bc"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "07ff720bbfce347001514ef308f4da0fefb745e2cd21f5292c3f7c326dda440e"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "6ee6b69550048fc632d49dbfab4975184562bfcded4af97c97535fef80069ce9"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "90294b437fee29d27795fe3ddb8d635b7ca7da31353f466c48e31175ad0f9587"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/safe-divide.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-20-rotate-array-beb86287eb",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "95dda7729f1fd8c817a4ce7c8f282088107e62e41680bc60b21ef4c59abbf9d3"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "fd3c7cc35d3821b433dc9d442dfe506b5cd6e2c5c7b400ca7e95387d5f02b7e0"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "8e742c40c72b4e3809a36dfe7c4e33a2c3e08f94f65cde3f5c5224148c45b9dd"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "45c5a5c7368f30e143299ea2cabbfc7267149dfcc32cddb2545904ca0f67e579"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/rotate-array.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-21-binary-search-ffb6f8735f",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "afb3e47e656f6fe8cac428f0b6bd212cff9c5834c3090ae9d5ee06ba00273fbc"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "75b1563fb639d0f0d30706883143d74bc59d91a176c674539707c3dbe4027ea8"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5a01f1693cf7a9d87ed96be720ffc982560ad9c9d2b8f5d228fa9b4e20f3ad4c"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "bb135b11bcf1f782eae64bf3d3d52a3376b9edfff930b77ef4fb0768cf81e2dd"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/binary-search.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-22-merge-headers-e4433a12bf",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "5543f4e4da65490e80a21a29bad6c9bc67a48fc71921553d6dcb9c5229be8306"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "96ea8682a321bd08e70aa6a510567ff7b18824d7b066ee7ad0bd722422a529e5"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "28ea7adc750bdd2fdb5e8bfe637b6c41e529757632a523829d816869fdbbf746"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "d871fc000926c9c19b5c03b74f21fc784e0824344a68c596c2e6ea1fa6989b33"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/merge-headers.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-23-min-max-72396b9df5",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "662c1477451a3d4a0b21ea9b3676f05f4cbd971dca2cb87e955b3b085042d99b"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "30016732a287004d58879fea0799f66545c635d297d73521552941f6334f0275"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5c2d149a17495cbde6b7ae6864cff66f1f3d4aac1aefffbf3eddd4ae1726b0a4"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "56cb7fac60de943d1144545719afc3fbba155134157a5d406324540f8b394a0a"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/min-max.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-24-count-words-bfaa1bef8c",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "daf4fa12740279eb51f90d4c4c7fd7f3bec8d45084af0f78e92900b8d64a4626"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e78f8ce0bf22df24438689b044de7f946fc9d27fbe0a9f99368aed78e4afcdc1"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "cd6c47f0a65d798b5a9b6adc86f70104c06b543ba674c4ffc9b66530669f1b1e"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "ca54e591cec1b7495f1df9b66b0623ce868183858a8070b2a573d74c403b242a"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/count-words.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "g4-dev-patch-25-has-own-de49412ce2",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e067be80bdb769e71e0f3841be93c9a24dfe63b4233044a4c7b17d23376cf702"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e36ff62d15b1df40aaacab852022e02faf5b317817ba6d279c09e1b2dc1ed1ae"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "d399f94eceb9ad2c044ba4c31958185d93b5c501dccdf8c664bfd308f6453995"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "4ce082714f5cb4d5cbb2b9eb419c48a713f63ac732264a4cab4a00050ce2cf60"
+        }
+      },
+      "exactRange": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/has-own.mjs"
+      ],
+      "changedLineBudget": 12,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-01-parse-content-length-25e1045380",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e78aa627c7a4968ab977bdea319a331164e0431d9d42ddf0333368c3a3658b75"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "85c5743c80f5216b32e98502d2549eca13d478e4dc39512a1783d319fa5843e4"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "25f1a8504511649dd2d9a4e6058997b94adb03076dd2ce717437c2ed053bfa35"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "56e3eefedce3911954a0d24f571c25b07d931a5d45468697b13262b9b51c04b7"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-content-length.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-02-normalize-locale-tag-db0bd6e9be",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "d57f3c0cdfce5526b6de11537b40b173f49c66bd72cf51b3b1e7889867394ca5"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "df7f47267b4b0fe1bdc00e702fd464d2f3cef445fea75b876bf6be59e9f91510"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "352b9ce183c954906147374b4ef6ce21ec13d89ef481a1e9624c04fead2f523a"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "09e4ec21b8d96fb9b2fdd0c6feae9f85623f941b582fd30ffa3c1b66ca91ce9a"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/normalize-locale-tag.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-03-merge-intervals-a4f184632f",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "375db01de41418f36413d7fd575ad5010451bb410a6bdb14b1d20236031a16b6"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "1bdab7311dee4e374903ada6f9ff72f44705efbe9f7a003ea44c85c38b016753"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "28c2522a0ba60909377d6dc803d98b16d3a6e2a6bba190eebffd120f1dd53dfc"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "182c59d4d4f69a019f845a353255a8c9b40c17e7897a3014c0ccfbd074cf5980"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/merge-intervals.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-04-split-universal-lines-5d98dcc91a",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "2b65cb43cf3f0e700dae0e06cb1e155e7d0c82e222e28d4136425adfbd7cc020"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "999674a74e83de506d1415b67d059d3b2d18c3efaa79e648db90c3593cf24521"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "c281c6933ba534954416632306f1faed50facff5244bc67d22d440a08e1d24c3"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "887fac4b097bf63471c39b47c3751436571e5102f478b8e103f0f11d73b12c02"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/split-universal-lines.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-05-redact-token-af9834ca39",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "518186731ab92931122ca812807a497446cb5bb9222d61a62309cbadae8a6e71"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "25372104245a31a5cecfe6ec8c196b7a794a3dcee5e16fb5616a18f8317e6373"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "93f112918a8b742baed0157f3fd8a4bfa2291ed42ca48436e8477b2a49a67c11"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "47eb744a4dc80e420dea434e2fffbd42074ccc952765fff2a39d805ca61995da"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/redact-token.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-06-zip-longest-54b2859ccd",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "be0ccdb2087611cc3e8ac52683964f2779930512fd9e3718623fa4a44427a678"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "c3b0f293a3fb13252784c78ca5e6c33962ff69adb4632884c3f772a43a1c957b"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "b3d0946e336652f56e2999de77a98b7bcd65533a9cc65339d23dc7372431130e"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "65f959c565853c066adfcdd055f797999330fe38daa26f4e964a35b4b64456c6"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/zip-longest.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-07-partition-values-2d49780853",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "63dfe287dbfaaf69d6a46ab4d801794e963f56705f20dfd8c7d0fd0f2717ce39"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "24456bbf44108311f858ceb1474f243501b01b8e0ebc63253e39f85f18c30a36"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "85a059edeb14f367c3ebaf30a00ab45c771fdaf13e500d6ec1d78a4c5ca10f00"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "46d9ecc3672dc805e0c5901ab34ee0696b852520e64f17fae8557d66aa54f7b4"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/partition-values.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-08-parse-duration-ms-b8f471c5b7",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "704231284a9b4eeaf7a761bb8984089a94410e541faead9de3c0bb99c3a58603"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f3da6983aff4ea2a8fb69f7225ff979130720ced8793eacaba0021f9c0feda3b"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5ff9f5ff114766ea5b8b6c0903b37a73edbb7bf0edc3c2f696572bf2502079a8"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "32f22d18dae6774e8f455d1d8a29998a2f15d4bb0f62baccead107b2883a50cd"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-duration-ms.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-09-encode-html-bbbf198eeb",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e6f5a9706c9dce52fac522c74d3fd1abecd484b6b63599d1ae1523851064eaaf"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f8e20c4b29596516e1671cd33eeeb32f44bd1ba13a5f05de1d205180c5ea581c"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "3f341fd821882ff35272cb3c01c1bafe3b55b366272c2d192ad7ac5251878645"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "27b5a46f14741e3a7277f17d586f9f3dcdf9d1008679d68289d527af2b6c0876"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/encode-html.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-10-parse-ipv4-17f15db3ae",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e2b3f7c61283345293116ad39e21ab24bc74a0144282c5f4b9a71da876039561"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "3f707927f92be3b3c591543d50c1b6bdede2c4a4b95bdbccf4cbf9ea11461ddb"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "aee0f29aedeb5bd0a2770ca2d6b462ed63a54685219e03f08a21404ff0adfeae"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "cfebf1879e351d2bcee2a7da06411c5db5dbf5aa23fd60b69caaca986bb878a4"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-ipv4.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-11-compare-semver-800b4bd494",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "15c752b2e06694c27c648c2ad5283ee634ca99d88ba514cc48580ea4479b0a3a"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "7ecfc83076622e72a197d37e6879a74de31c54763a89a3a45ec93eef8e16786b"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "464c71782c95feccee209821b3710c6f040cb0a4bc5c18b563d344ea69a0b0a9"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "d7cb12b62310c4ba7a1b36d886bbd485bee2acad1f559d346f80b00f20ac6d9d"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/compare-semver.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-12-parse-json-object-789a69d942",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "d19c0b6a2e19b6403c4f4714a9403fe81498569b8fbfd0a874951c9131b6e68e"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "ed7569112951e0a83bba159d627fb3fc79ca53921c6a60da5aeadf05189e7b74"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "45e0302297b59781b6bfc57536982e6458fd459496713dcd1d11c3b16b42d706"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "96dda174cea271fdb730c8cc3d091e870f789ba7fd32270bf55853b43616129b"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-json-object.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-13-take-last-items-8d922260f9",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "5eafc315119c4033113ebf1f7695dd47f5cecbf4f2bb861880640a5aa666d78f"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "816d2067deff9cb030f5e235efe7fe021e4f67c7bc8e912212e6ba2a1a140ac6"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "8ee63e2940956940be69f5b2c9faf07ebe262c84f5212bfdcd7921483df0caef"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "0f4d82183e747d81daee49c7945e88ebdfe5a68cbb0dd9ec9055edac45c7769b"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/take-last-items.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-14-move-list-item-c5fff25837",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "c12821ccbf54afd445ef3c654bd01e2c3ff859d520084f2582ad9f1df3889888"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "49ffeb1d9feb2e4fcb7e8e5567faf27cfc019f53b948427cee6bf5a1a5e92c37"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5ffdc1182719388823a40d1c72934c800ab162dc99b7b5d55bf6f77763f37bf3"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "9edb9729807b8725691f267de551df5cf3ca9303bdaae86a177c51947666d5a0"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/move-list-item.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-15-weighted-average-126e8c7044",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "0025faa330da7246a54a352a6cc36c1f4c6c45ea000ba3c2888e4273761fb741"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "6d69d872002d580e37d5a81f0f09bb629891d160457e984f31afbc253dbbe6f6"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "86369084308b87ad581cefac441c5db4e48cbd314e5e858e91733cfa0efd87a5"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "b7403ee8ef95fa21528b1901d36e23b285443d52aa22f7b641250f545a4cf42d"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/weighted-average.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-16-rolling-average-cae4a611da",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "6fc60ec71d9ee342957b2e03a4ed06eba7897b490aae208cb0cd93ec1de631d8"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "e6a6e239385a8f3588f74cd2ec7ce021de80b420d5c009363327e8fee90b7b92"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "4e15007029f716b9fc6a9c48b658e75ddeb8d22602c08cb594b801382eebbd9f"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "b3725c0f91aede717242f41dec38fa094039ba760800a57b478cf7f32fe23a83"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/rolling-average.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-17-parse-env-assignment-af2c1c4afe",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "1d4afc3b171a94e8a51889844d4c8ac96336d7e97d078659788f8b3401380b93"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "fd3720e2e6f21168d136da48d097fa5268bd9f629089a0584c606cb437e0ae78"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "d8e2402251a8e719bcce416cadfac70e14dce89bce0b2862bb2fed7b12a6bdf4"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "2c2ca5b7de85d0b04f762840e55fde9e04b734be8f74de89c82d3e45c6055a4b"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-env-assignment.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-18-get-path-value-280b061326",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "7a1eb626b0f859874801e1bba84836706b499d41564a29ac5d217324838d552a"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f0808d41264fcfebb379ff51d73129a4e1c8475f58533aa95123ab1883055e17"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "f3019ff4e69115aebe8b3caeee2aea99f65aca7651835277d3e75df93c7c3528"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "29558c94aae788e7745b48ca4f314e30d95facf5948a97a39300c8edc8ce5580"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/get-path-value.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-19-apply-defaults-305d454174",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "f73732ba1614c16e95988b71d7c3b6a3e3cb184d4bd328d555b29248bdaa0a3d"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "2b48f04829f476fe4c661f1409e9ed6b7017cb28168b9558c10840078459a7fb"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "e7cd9208ef3f9b16b8f9d80873ac4013b644db37e58947b690e6c18653e2dc10"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5c9d6ab7dcc8aedb196e855047e9d3c2ae4d5ef0fe3589f58439c959c46bbbd8"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/apply-defaults.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-20-serialize-query-c0867650c6",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "8715a79b7e847bd7ea8c04b382c32fc2f29753307a4e2ca913a752439d79663d"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "24b9a8a63f11224f271b5a8925d221b9f9970d676a0115e10ed40f1deafa62c2"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "799c17e1408393c12517fbbc598a43dd8df6e02ea4f9bdfc6fe2e10855fb15f4"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5e1670bef6b9be63b0ed98be5fb4a9a14f7dea8b886f038ae4d58e0caa215e2c"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/serialize-query.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-21-match-etag-list-593647080b",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "8f0d9d03e144bffa738a97047be28378783bcb9bca437eff5a179cd17f59ce78"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "a7769af2d714e502b74afe2a8241c80870be62cdccca2ce5080bbc7c8468c34d"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "8fd921ea51c8e5e533aa50717aeaf6cb2f02d116c82fcf6883d5112f1520df7e"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "cb85f48beae7265ccd685ee4e5fe4cdf5129c660ec0b64a97f76fd4d433178b8"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/match-etag-list.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-22-choose-language-f6b919bf2c",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "012c3f7a8b4cb32caa500c8849c43b85fc0f8777fc2fdd0f68640664c1012277"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "13be2ffb28c74921701b27e5f7cb968058f378ca252652a79f2dbf2e4c0bc2be"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5fc383c8aeb7cdf5897bcbb5cf404823ee26cdac8718a6ee5ddbf5e80cb78e7b"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "5cd3fa08542d68ea05247d660fd0515daf434fae0c038c9fa0766a2d5091b1fd"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/choose-language.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-23-seconds-to-clock-8fde531045",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "526118a1cb5a1bba62aa960df1a85e66bdccb1d1f97074c62dbe630836ae586a"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "913b1ee7b8b21fe199fb39938166abccf70b4331f0e86b5bdcc662f173efba85"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "cfdec771fb4fd278679c09d364d493c027a3736699e24f7673b84ce50a011a49"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "7407739519aa45d84c5ac17b86941a37785262393a6c01fa7e01f2b0df27abbf"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/seconds-to-clock.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-24-intersect-ranges-b6f8538698",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "edb2efc66fe226337f2218e6a4d2fe7864e85de5047877f70ef27f579af6b04b"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "57945a07b117761a0b66d6da4869ab753493abe88be21a87077175bcbf3901ac"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01db0c4677bc0b7cd000722f4a09863dc2885f0966bca0203ece582817390d1a"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "1f854b66d4a70e3d11cc920abbff0f027699cb3cbb4e35613eee2d61cd89dc40"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/intersect-ranges.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    },
+    {
+      "taskId": "patch-interface-dev-new-25-parse-byte-range-2f2f3376de",
+      "valid": true,
+      "before": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "bd3142f3e8bdebfa20ec28d480470d43da182029fefc5dc532344816aae3bd5b"
+        },
+        "hidden": {
+          "status": "FAIL",
+          "exitCode": 1,
+          "outputHash": "3f5030a39a6c30392f80bb8d697da0f39de0b10f2641d9af126f5fa28dd2d1be"
+        }
+      },
+      "referenceFix": {
+        "syntax": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        "visible": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "dd3e807513b83ee683ab76b73b9637dd7cf9d333d5a6ee4655d6514f31fb99af"
+        },
+        "hidden": {
+          "status": "PASS",
+          "exitCode": 0,
+          "outputHash": "dabc8fddb833a9d07f00bd8f2e1b57b9b475284820adae43924ec2ed6a8bb30b"
+        }
+      },
+      "exactRange": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "allowedFiles": [
+        "src/parse-byte-range.mjs"
+      ],
+      "changedLineBudget": 32,
+      "mutationCertification": "SAFE_MUTATION_REQUIRED"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "indexId": "dca-patch-interface-v3-coder-index",
+  "recordedAt": "2026-08-11T09:12:21+08:00",
+  "status": "PASS_420_OF_420_SEALED_AND_CLEANED_UP",
+  "classification": "DEVELOPMENT_ONLY_INTERFACE_SELECTION_NOT_HOLDOUT",
+  "profile": {
+    "profileId": "coder",
+    "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "precision": "bfloat16",
+    "licenseUse": "NON_COMMERCIAL_RESEARCH_EVALUATION_ONLY"
+  },
+  "runDirectory": "docs/experiments/runs/patch-interface-coder-v3-20260811T005651Z",
+  "artifacts": {
+    "freshRun": { "sha256": "d8de2b2704715db2f3a020cf800449b0922810cb8e822a19d8a40f0c40d8f272" },
+    "checkpoint": { "records": 420, "sha256": "57998df06cdb2b30f8556d2856292f59e4c911a3e7e9ba77b30160c39deef8ef" },
+    "callEvents": { "records": 840, "sha256": "8e734df7499de8c75f5f0b50ec3fe8483378506e3710b6d638ce72b53e4a910c" },
+    "observationsFinal": { "records": 420, "sha256": "63c76e7d452596250d7bfeae86fb99cf6c76f296fb1fe3d62137fa94f37a7734" },
+    "result": { "sha256": "30a628def03591884b546d3cdb9092e8fdcc3c6cb61084ee52dbd35891a54cdc", "status": "COMPLETE_DEVELOPMENT_DIAGNOSTIC" },
+    "lifecycle": { "sha256": "fab3bd7aa4384acf2c6adb43fcaf65a5641a1e41882441f02faa1c1815908759", "status": "PASS" }
+  },
+  "schedule": {
+    "planned": 420,
+    "completed": 420,
+    "oneShot": true,
+    "retries": 0,
+    "scheduleSha256": "b06b2394a19115feb45e761f6f8dab52f7a9122a8f1821ddfba6063f4aa7d472",
+    "materializedRequestIntentsSha256": "24c5d7b4692b95de589bf1206320f7becf649fd697bdd85fd395a14cae853105"
+  },
+  "lineage": {
+    "historicalV2PhysicalCalls": 7,
+    "historicalV2CallsExcluded": 7,
+    "historicalV2ValidPrimaryCalls": 0,
+    "v3BaselineValidPrimaryCalls": 420,
+    "v3CoderValidPrimaryCalls": 420,
+    "v3ValidPrimaryCalls": 840,
+    "physicalCallsAcrossV2AndV3": 847,
+    "v2RowsImported": false,
+    "v2EventsImported": false
+  },
+  "validity": {
+    "transportInfrastructureErrors": 0,
+    "finalServingIdentity": "PASS",
+    "causalClosure": "PASS",
+    "causalClosureSha256": "c7b322b5d3dcc62ad453a69954308bab45d74b7521356a53ad1901bf7c27ed21",
+    "strictRecovery": "PASS"
+  },
+  "safety": {
+    "wrongFileOutputAttempts": 0,
+    "actualSafetyViolations": 0,
+    "cleanupFailures": 0,
+    "temporaryFixtureResidue": 0
+  },
+  "cleanup": {
+    "port8000Clear": true,
+    "modelProcessAbsent": true,
+    "gpuMemoryMiB": 0,
+    "apiKeyAbsent": true,
+    "servingStateAbsent": true
+  },
+  "nextGate": "SEALED_PAIRED_ANALYSIS_AND_PREREGISTERED_PROMOTION_DECISION"
+}

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 5,
+  "reportId": "dca-patch-capability-ceiling-v5",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T14:21:50.112Z",
+  "supersedes": {
+    "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v4.json",
+    "reason": "Practical local 7B tournament Session-D evidence"
+  },
+  "immutableEvidence": {
+    "sessionC": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_C.v1.json",
+      "sha256": "32ff39c05b5ce6c64b57ac77085df2b5666750a8a5689d3ac801a683bd3ec683"
+    },
+    "pairedAnalysis": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_PAIRED_ANALYSIS.v1.json",
+      "sha256": "1c7a6746196ce94d4a06408532c2b050d27de7ad8b08fc428c1d0f160f7118a9"
+    },
+    "modelSelection": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_MODEL_SELECTION.v1.json",
+      "sha256": "03fcb625a219bcbc37eec1421583371ca76b3a745f1e938f59ceeff16bdc544c"
+    },
+    "productDecision": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_PRODUCT_DECISION.v1.json",
+      "sha256": "28dd461cae05e001b712e1c3198fecd0702ef3eb0bb6b916b880785eae80ef13"
+    }
+  },
+  "observedCeiling": {
+    "actionInterface": "E-EDIT P2 remains effectively solved at 89-92 valid actions among scored models",
+    "retrieval": "90/95 exact-source selection/inclusion remains a secondary fixed limitation",
+    "dominant": "VISIBLE_BEHAVIOR_REASONING",
+    "supportingFailureShift": {
+      "reference": {
+        "RETRIEVAL": 5,
+        "ACTION_VALIDATION": 6,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 17,
+        "VISIBLE_TEST": 34,
+        "HIDDEN_TEST": 10,
+        "SUCCESS": 23,
+        "TOOL_INFRASTRUCTURE": 0,
+        "OTHER": 0
+      },
+      "M1": {
+        "RETRIEVAL": 5,
+        "ACTION_VALIDATION": 1,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 49,
+        "VISIBLE_TEST": 30,
+        "HIDDEN_TEST": 3,
+        "SUCCESS": 7,
+        "TOOL_INFRASTRUCTURE": 0,
+        "OTHER": 0
+      },
+      "M2": {
+        "RETRIEVAL": 5,
+        "ACTION_VALIDATION": 2,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 6,
+        "VISIBLE_TEST": 47,
+        "HIDDEN_TEST": 6,
+        "SUCCESS": 29,
+        "TOOL_INFRASTRUCTURE": 0,
+        "OTHER": 0
+      }
+    },
+    "precisionCaveat": "Reference is BF16; 7B candidates are online FP8 W8A8"
+  },
+  "conclusion": "M2 converts substantially more accepted edits than M1, especially by reducing syntax failures, but 29/95 remains below research and product thresholds and visible behavioral reasoning is the largest remaining measured bottleneck.",
+  "productRecommendation": "KEEP_MUTATION_DISABLED",
+  "nextScientificExperiment": {
+    "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PROTOCOL.v1.json",
+    "sha256": "228ca9e5d8a836c40f345db2f7d39a415d6e4a1cc1d9bfa7af62b9fcfdfe51b3"
+  }
+}

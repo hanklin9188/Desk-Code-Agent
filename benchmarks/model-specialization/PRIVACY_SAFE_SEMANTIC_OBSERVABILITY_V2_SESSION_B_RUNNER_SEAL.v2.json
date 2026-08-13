@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 2,
+  "sealId": "dca-privacy-safe-semantic-observability-v2-session-b-runner-seal",
+  "state": "SEALED_BEFORE_FIRST_V2_TARGET_MODEL_CALL",
+  "sealedAt": "2026-08-11T20:31:56.850Z",
+  "targetModelCallsAtSeal": 0,
+  "runner": {
+    "path": "scripts/run_privacy_safe_observability_v2_session_b.ts",
+    "sha256": "b62a77be4da7beaf29eb3cf0d497a1f61c10c5c8b0474a2c55c129597651e006",
+    "bytes": 22285
+  },
+  "totalExtractor": {
+    "path": "services/semantic-observability-v2/src/index.ts",
+    "sha256": "9410b9f48d8cc11bae1f09c00cc6ba5754e60ba84047e168e1eec30fdada8e0e",
+    "bytes": 14628
+  },
+  "inputs": {
+    "manifest": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_TASK_MANIFEST.v2.json",
+      "sha256": "ab7aa471e02911f0c24d97cf30e39304f0927bec476e524c4a09c9e89108c010"
+    },
+    "repositories": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_REPOSITORIES.v2.json",
+      "sha256": "5b30ad3f3a678478f5d00c88bd9585dbdf26bfcae7b8d584282d76b8d72831af"
+    },
+    "oracle": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_ORACLE.v2.sealed.json",
+      "sha256": "afe6d80b81f4442f00a98b48ddac270d57f9c3cc4d59dee246e9e3a24380be7a"
+    },
+    "L1Schema": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_L1_SCHEMA.v2.json",
+      "sha256": "b40cf1819135d2cc64fd0573a67880c259e2d4c717aab414e26f583e31359bad"
+    },
+    "supersession": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SUPERSESSION.v2.json",
+      "sha256": "8a716a5e16a33df50e60d3b79069b65d7b1b6dba2a794bc68efb2ec28719e01e"
+    },
+    "totality": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_OBSERVABILITY_V2_TOTALITY_VALIDATION.v2.json",
+      "sha256": "2db52b5ba423d2e01188ac1c5d47ec8a3111b105b5f433ff08bef6e2d1772f2c"
+    }
+  },
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "scripts/freeze_privacy_safe_semantic_observability_v2_session_a.ts",
+        "sha256": "58a9b80714e81ad762e0271e31497a3e9cc4be404f0ece45fc86744e584352b7",
+        "bytes": 38015
+      },
+      {
+        "path": "scripts/run_privacy_safe_observability_v2_session_b.ts",
+        "sha256": "b62a77be4da7beaf29eb3cf0d497a1f61c10c5c8b0474a2c55c129597651e006",
+        "bytes": 22285
+      },
+      {
+        "path": "services/semantic-observability-v2/src/index.ts",
+        "sha256": "9410b9f48d8cc11bae1f09c00cc6ba5754e60ba84047e168e1eec30fdada8e0e",
+        "bytes": 14628
+      },
+      {
+        "path": "tests/semantic-observability-v2.test.ts",
+        "sha256": "a7d9192a8519d94cca5e4b1fbb83d5bad9a867ac51116e2eea13ecf99ee0e452",
+        "bytes": 7975
+      },
+      {
+        "path": "services/semantic-observability/src/index.ts",
+        "sha256": "96b92bed402662ad1c3d008fe29a8573bd037bacdffa3a94c6686c14d153e028",
+        "bytes": 12544
+      },
+      {
+        "path": "services/g3-evaluation-runtime/src/index.ts",
+        "sha256": "02ebfd6a7914cbe35c49048c182236d578cf56a1ddeb40ff8a4b9ac141affad2",
+        "bytes": 10087
+      },
+      {
+        "path": "services/g3-benchmark-runtime/src/index.ts",
+        "sha256": "edcbc59ac3164da338289f9ae6499074a51a8e92625e189d722a9162a34b6478",
+        "bytes": 37293
+      },
+      {
+        "path": "services/model-specialization-runtime/src/index.ts",
+        "sha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee",
+        "bytes": 14994
+      },
+      {
+        "path": "services/patch-interface-runtime/src/index.ts",
+        "sha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+        "bytes": 59703
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21",
+        "bytes": 13021
+      },
+      {
+        "path": "services/repo-intelligence/src/index.ts",
+        "sha256": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d",
+        "bytes": 37025
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      }
+    ],
+    "sha256": "e64b46e48f094a7e8a93be6963dbbe53dd7fa6889eb0bc475809e88376a0f706"
+  },
+  "lifecycle": [
+    "call lifecycle",
+    "transient model output",
+    "L0 derivation",
+    "total L1 derivation",
+    "malformed fallback",
+    "invalid-action fallback",
+    "patch/verification",
+    "privacy destruction",
+    "serialization",
+    "ledger",
+    "cleanup"
+  ],
+  "protectedActions": {
+    "targetModelCall": false,
+    "vllmStart": false,
+    "modelDownload": false
+  }
+}

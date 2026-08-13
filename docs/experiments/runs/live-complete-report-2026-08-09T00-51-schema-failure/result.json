@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "runId": "live-complete-report-2026-08-09T00-51-schema-failure",
+  "status": "FAIL",
+  "model": {
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "backend": "vllm-0.26.0"
+  },
+  "failure": {
+    "taxonomy": "schema failure",
+    "stage": "model report validation",
+    "reason": "Model report confidence was not a JSON number; output failed closed before artifact promotion"
+  },
+  "privacy": {
+    "apiKeyStored": false,
+    "promptStored": false,
+    "evidenceExcerptsStored": false,
+    "rawModelProseStored": false
+  }
+}

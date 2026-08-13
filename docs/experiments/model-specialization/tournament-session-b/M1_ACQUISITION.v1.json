@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "acquisitionId": "dca-practical-local-model-tournament-m1-acquisition-v1",
+  "status": "PASS_EXACT_AUTHORIZED_SNAPSHOT",
+  "classification": "SESSION_B_EXACT_BF16_SNAPSHOT_ACQUISITION",
+  "verifiedAt": "2026-08-11T05:04:25.263Z",
+  "authorizationScope": {
+    "exactModelOnly": true,
+    "modelId": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+    "sourceTensorType": "BF16",
+    "preQuantizedSnapshot": false
+  },
+  "immutableInputs": {
+    "candidateManifest": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_CANDIDATE_MANIFEST.v1.json",
+      "sha256": "0ff04ada4842631ca3973b380667daa9b58f592c1b090e18b6903beb553066e1"
+    }
+  },
+  "officialMetadata": {
+    "apiUrl": "https://huggingface.co/api/models/Qwen/Qwen2.5-Coder-7B-Instruct/revision/c03e6d358207e414f1eca0bb1891e29f1db0e242",
+    "treeUrl": "https://huggingface.co/api/models/Qwen/Qwen2.5-Coder-7B-Instruct/tree/c03e6d358207e414f1eca0bb1891e29f1db0e242?recursive=true&expand=true",
+    "id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+    "lastModified": "2025-01-12T02:03:41.000Z",
+    "public": true,
+    "gated": false,
+    "disabled": false,
+    "library": "transformers",
+    "pipeline": "text-generation",
+    "licenseTag": "apache-2.0",
+    "parameterCount": 7615616512
+  },
+  "snapshot": {
+    "relativeCache": ".runtime/model/huggingface/hub/models--Qwen--Qwen2.5-Coder-7B-Instruct/snapshots/c03e6d358207e414f1eca0bb1891e29f1db0e242",
+    "exactRevisionDirectory": true,
+    "files": 14,
+    "totalBytes": 15242807397,
+    "weightFiles": 4,
+    "weightBytes": 15231271864,
+    "inventorySha256": "4cf9bcf1d285c7f7b28de66a1481dffa81841fca79cbaca32578a7216d29619a",
+    "inventory": [
+      {
+        "path": ".gitattributes",
+        "bytes": 1519,
+        "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+        "officialGitOid": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+        "officialLfsSha256": null
+      },
+      {
+        "path": "LICENSE",
+        "bytes": 11343,
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "officialGitOid": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+        "officialLfsSha256": null
+      },
+      {
+        "path": "README.md",
+        "bytes": 6392,
+        "sha256": "3c090be37f829adc1e4cdb78733667437732541470430ab2cd785d7f0d460077",
+        "officialGitOid": "f29baca4ff38a69df22ec441e22f7ac8dfac277b",
+        "officialLfsSha256": null
+      },
+      {
+        "path": "config.json",
+        "bytes": 663,
+        "sha256": "c0242402ad6a13b331ea320feea8c7e3776ffb7a4eff0757b9cd667e116d9a28",
+        "officialGitOid": "1a2ea88621f4248fccfb575beaf64c1ea5d9587f",
+        "officialLfsSha256": null
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 242,
+        "sha256": "1a628a5775bc69cde01c6749a531150ca4d3189652c618a174f7077923acf3b1",
+        "officialGitOid": "b7849b3dad857bc1e227afd6ca21d1e4cb3f8f82",
+        "officialLfsSha256": null
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "officialGitOid": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "officialLfsSha256": null
+      },
+      {
+        "path": "model-00001-of-00004.safetensors",
+        "bytes": 4877660776,
+        "sha256": "0b6f069918b07c064cbba8ae4f00f529aa9bbf84b7cdfcb7fc2694a40f6aa8ef",
+        "officialGitOid": "0bdac2c748c298a520c6e91dc4194dc2984349a8",
+        "officialLfsSha256": "0b6f069918b07c064cbba8ae4f00f529aa9bbf84b7cdfcb7fc2694a40f6aa8ef"
+      },
+      {
+        "path": "model-00002-of-00004.safetensors",
+        "bytes": 4932751008,
+        "sha256": "c3d46733e7aa054ea7b063fbccd0a5a08446e7bd1814bef26936c5aa1331da62",
+        "officialGitOid": "03c643b956c343266860a4a037c56d1f81d9dfca",
+        "officialLfsSha256": "c3d46733e7aa054ea7b063fbccd0a5a08446e7bd1814bef26936c5aa1331da62"
+      },
+      {
+        "path": "model-00003-of-00004.safetensors",
+        "bytes": 4330865200,
+        "sha256": "9fe45dacee087385b3d2d6dd27a7413a8a56d95f145772facc148fa86fc73446",
+        "officialGitOid": "d50d253b55e5d97e0e277e97a38d92b6d95dc359",
+        "officialLfsSha256": "9fe45dacee087385b3d2d6dd27a7413a8a56d95f145772facc148fa86fc73446"
+      },
+      {
+        "path": "model-00004-of-00004.safetensors",
+        "bytes": 1089994880,
+        "sha256": "5aa6e5cbe642377fd441fb4e60e83cca96b2bcd9820e245b9ea06d94653f17f2",
+        "officialGitOid": "eb75c022771ad104dd0432cb85f0fc2b1550554f",
+        "officialLfsSha256": "5aa6e5cbe642377fd441fb4e60e83cca96b2bcd9820e245b9ea06d94653f17f2"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "bytes": 27752,
+        "sha256": "998a078123ffc97763690de7f2a677eb89168af5eaf8a5e12e6bc24d18e25bdb",
+        "officialGitOid": "6ca5084b88f1a95fef37f1b94c6e87ff69422bb7",
+        "officialLfsSha256": null
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 7031645,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "officialGitOid": "443909a61d429dff23010e5bddd28ff530edda00",
+        "officialLfsSha256": null
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 7305,
+        "sha256": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4",
+        "officialGitOid": "acee076f49bf3c0298e15de0909d1da7b392f0c3",
+        "officialLfsSha256": null
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "officialGitOid": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "officialLfsSha256": null
+      }
+    ]
+  },
+  "licenseAndProvenance": {
+    "declaredLicense": "apache-2.0",
+    "evidence": "pinned LICENSE plus official HF metadata",
+    "standaloneLicenseFile": true,
+    "licenseSha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "provenance": "instruction-tuned generic code-specialized control",
+    "primaryScoringAllowed": true,
+    "legalApprovalClaimed": false
+  },
+  "localIntegrity": {
+    "everyOfficialFilePresent": true,
+    "noExtraFiles": true,
+    "everyLfsSha256Matched": true,
+    "allSymlinksResolveInsideCandidateCache": true
+  },
+  "protectedActions": {
+    "otherModelDownload": false,
+    "quantizedSnapshotDownload": false,
+    "dependencyInstall": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

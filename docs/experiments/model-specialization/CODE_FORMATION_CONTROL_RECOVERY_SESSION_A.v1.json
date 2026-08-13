@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "CODE_FORMATION_CONTROL_RECOVERY_GENERATION",
+  "session": "A",
+  "status": "PASS_ZERO_CALL_FREEZE",
+  "completedAt": "2026-08-11T23:49:34.391Z",
+  "authority": {
+    "protocol": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_GENERATION_PROTOCOL.v1.json",
+      "sha256": "fec8bf25db741a7b142ebf851a2f87515e3de4c0a1eb6dabcf9aca8575e4dec6"
+    },
+    "invalidHistoricalDecision": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_SCIENTIFIC_VALIDITY_DECISION.v1.json",
+      "sha256": "409526b762b4c6f55a78a25479d1c00e16c91f1176d3773c1236870b679e57eb"
+    },
+    "historicalSessionB": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_SESSION_B.v1.json",
+      "sha256": "0cd2c2d8f94b152e5179698ccbb31b0a9088db94ae1274155e2a9b011f6e5581"
+    },
+    "historicalSessionC": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_SESSION_C.v1.json",
+      "sha256": "adafbe6111ca3de880a181fefe84e4d8f0f8d7bb030ea74c37e2442a5fc5187f"
+    }
+  },
+  "controlRecovery": {
+    "knownGoodNormalizedConfigSha256": "8db52063db63f6453b70b153ed748c6111a977f737597b9ff2e6d3298ca54d7a",
+    "recoveryControlNormalizedConfigSha256": "8db52063db63f6453b70b153ed748c6111a977f737597b9ff2e6d3298ca54d7a",
+    "equivalent": true,
+    "retrieveG3": "PASS",
+    "eMinV2": "PASS",
+    "C1": "PASS",
+    "generationSemantics": "PASS",
+    "generationSeed": 20260809,
+    "scheduleSeed": 20260813
+  },
+  "population": {
+    "tasks": 40,
+    "repositoryCount": 40,
+    "targetModelUnseen": true,
+    "exposedTaskOverlap": 0,
+    "historicalTaskIdOverlap": 0,
+    "historicalRevisionOverlap": 0,
+    "historicalFingerprintOverlap": 0,
+    "referenceSyntaxVisibleHidden": "PASS",
+    "manifest": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_TASK_MANIFEST.v1.json",
+      "sha256": "b37b399128411ac0de241db5cd9eb167e526aaf560af0aec976e81126f1127e7",
+      "bytes": 25164
+    },
+    "repositoryArtifact": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_REPOSITORIES.v1.json",
+      "sha256": "a8c417f2cccc3e7ced8e84354e040214045ae73bcac82974c325ddf4f5b5e86e",
+      "bytes": 30958
+    },
+    "oracle": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_ORACLE.v1.sealed.json",
+      "sha256": "4d1a0c01e520c73245aab3ac073036c194a0006e706a195d246c6516a8c0957c",
+      "bytes": 37195
+    }
+  },
+  "design": {
+    "control": "KNOWN_GOOD_FIM_E_MIN_V2_C1_E_EDIT_P2",
+    "treatment": "CONTROL_PLUS_ONLY_FROZEN_FORMATION_CONSTRAINT",
+    "primaryCallsPlanned": 80,
+    "sanityCallMaximum": 1,
+    "retries": 0,
+    "reviewers": 0,
+    "treatmentReachabilityDesign": "PASS_AFTER_VALID_BASE_P2"
+  },
+  "artifacts": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_PREREGISTRATION.v1.json",
+      "sha256": "bc0b40b867f195d9eead6da9e09d59a7b61a947dfd6b46794574184c1b834cfd",
+      "bytes": 13904
+    },
+    "requestIntentEquivalence": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_REQUEST_INTENT_EQUIVALENCE.v1.json",
+      "sha256": "be9407648656b064188e816b421f9ca303b88702b2742989e7a06d1b4bb526fe",
+      "bytes": 110740
+    },
+    "parserTelemetryValidation": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_PARSER_TELEMETRY_VALIDATION.v1.json",
+      "sha256": "70495b7cbaa25cec78a2e44f211883474067314de165fc913529ad90232b0272",
+      "bytes": 5771
+    },
+    "runnerSeal": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RUNNER_SEAL.v1.json",
+      "sha256": "6ef0e72de5efc847e4bdcb1d397c0a87657567fcf2a14f08b8e5e363e0888dcb",
+      "bytes": 4466
+    }
+  },
+  "ledgers": {
+    "callEventsBytes": 0,
+    "pairedObservationsBytes": 0,
+    "sanityEventsBytes": 0
+  },
+  "privacy": {
+    "rawModelOutputs": 0,
+    "rawEditBodies": 0,
+    "L2": false
+  },
+  "runtime": {
+    "targetModelCalls": 0,
+    "vllmProcesses": 0,
+    "port8000Listeners": 0,
+    "gpuAllocationMiB": 0,
+    "ephemeralStateAbsent": true
+  },
+  "sessionBStarted": false,
+  "nextAuthorizedSession": "B_SEPARATE_INVOCATION",
+  "stop": "SESSION_A_BOUNDARY_REACHED"
+}

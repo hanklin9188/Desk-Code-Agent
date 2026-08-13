@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "attestationId": "dca-g3-immutable-before-g4-development-2026-08-09",
+  "state": "PASS_G3_IMMUTABLE_READ_ONLY",
+  "verifiedAt": "2026-08-09T11:56:09.259Z",
+  "taskContract": {
+    "path": "implementation/CURRENT_TASK_CONTRACT.json",
+    "sha256": "79d426e4b7dd6efd6ba4a4831ac327296e7ef6163fa9f9edc907c2b6fd945b29",
+    "requestAttachmentSha256": "4788bbae7b186b2e03925ecb97dee48319d4d697817f2228043a093fa7491673"
+  },
+  "g3": {
+    "sealedArtifacts": [
+      {
+        "path": "benchmarks/g3/G3_PREREGISTRATION.json",
+        "sha256": "17380638021a09b24ac64b53ebb2090bef6b313943e0e7c90f1101eab99a6200"
+      },
+      {
+        "path": "benchmarks/g3/G3_RESULTS_INDEX.json",
+        "sha256": "fa9a4680cd409af1f9eb774fb2282d41147bcf6f165f23d8b8c719df5c43a063"
+      },
+      {
+        "path": "benchmarks/g3/G3_SEAL.json",
+        "sha256": "4bab0fd681ea01fcdeb09937f4a4cff2bf05c0b978d29c2eed5dbb024db95689"
+      },
+      {
+        "path": "benchmarks/g3/g3_authoring_revision_record.json",
+        "sha256": "87adbc15fabd13453ac1bebb3584dfdbac1207001aac25f78cbd568d353a2615"
+      },
+      {
+        "path": "benchmarks/g3/g3_long_horizon_manifest.json",
+        "sha256": "d37e75b0080edabc7a81ede44310a1179baadd45818f5d78b8a10c5c53bf9d47"
+      },
+      {
+        "path": "benchmarks/g3/g3_long_horizon_manifest.v2.json",
+        "sha256": "64ab3c8cc76cbba67ba15b6394c2095d2a2a12481f0398a09eacc9b0f080e43a"
+      },
+      {
+        "path": "benchmarks/g3/g3_naturalistic_task_audit.json",
+        "sha256": "ceb9f191454889774cf1f85bed29d2ae826b8e934428f397cb79618e6472898c"
+      },
+      {
+        "path": "benchmarks/g3/g3_naturalistic_task_audit.v2.json",
+        "sha256": "04c5eba67d3823384fb9337ce28c2dfe56f65dc1c2b25864581de8458d5dd7e4"
+      },
+      {
+        "path": "benchmarks/g3/g3_onboarding_manifest.json",
+        "sha256": "08693d687a5958de570aee11982646511e925f03e3450a8d94c2b0588e9c1561"
+      },
+      {
+        "path": "benchmarks/g3/g3_option_cue_audit.json",
+        "sha256": "f995b5a2eaae5cd768ec38af575a2b99b3cbc5cc93db7991a45e49a56b8330e7"
+      },
+      {
+        "path": "benchmarks/g3/g3_option_cue_audit.v2.json",
+        "sha256": "73e2621df0bf72e59ac79d51b3d211f26e80dd7a8cfdb3122c854c6dfda1e559"
+      },
+      {
+        "path": "benchmarks/g3/g3_oracle.sealed.json",
+        "sha256": "e5748cfd9f1941624372fa5ad5a8f657140fe017d382e4eb705ca6b9b07c91b1"
+      },
+      {
+        "path": "benchmarks/g3/g3_oracle.v2.sealed.json",
+        "sha256": "206b0f53147004bbd405bc49337d4c9c6e9612460086be02648d36e3f2bce04e"
+      },
+      {
+        "path": "benchmarks/g3/g3_real_patch_manifest.json",
+        "sha256": "3222597b156e11645d761dc59e4c92f32ab766a6e500b2f5980836384bedd662"
+      },
+      {
+        "path": "benchmarks/g3/g3_real_patch_oracle.sealed.json",
+        "sha256": "0653741b1bfb01c21871daba64fcb86c10f4ff201310f2d0c4bee453051b6598"
+      },
+      {
+        "path": "benchmarks/g3/g3_repository_manifest.json",
+        "sha256": "58498365b68d90fe9759c9fbd3ae27c061796f4ca41de879e5cba7495ed4d806"
+      },
+      {
+        "path": "benchmarks/g3/g3_task_manifest.json",
+        "sha256": "1fdec92ef07a5c821b6308d1853d436d4325a1014862644902bfa2a8ac80dd45"
+      },
+      {
+        "path": "benchmarks/g3/g3_task_manifest.v2.json",
+        "sha256": "d17318fd96b4294e2231b678c2bf0c5b68bc4abd5a502fcaaf4ec41255423861"
+      },
+      {
+        "path": "benchmarks/g3/g3_task_provenance_report.json",
+        "sha256": "39635735f7d9f7137ab321a62d97edfb2ddf1b8815e77f7f70fe6919ed92e76a"
+      },
+      {
+        "path": "benchmarks/g3/g3_task_provenance_report.v2.json",
+        "sha256": "eedb27620666f1b38c0bc9d32d615d88ed0ee9fd2b51a3d30ae384c9647ea8f7"
+      }
+    ],
+    "resultIndex": {
+      "path": "benchmarks/g3/G3_RESULTS_INDEX.json",
+      "sha256": "fa9a4680cd409af1f9eb774fb2282d41147bcf6f165f23d8b8c719df5c43a063"
+    },
+    "selectedResultFamilies": 15,
+    "selectedResultFiles": 39,
+    "repositories": [
+      {
+        "id": "werkzeug",
+        "commit": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "ky",
+        "commit": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "echo",
+        "commit": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "anyhow",
+        "commit": "bf3ed9149f4334c984c1ad252b534107b307078c",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "zlib",
+        "commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "gson",
+        "commit": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "pluggy",
+        "commit": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "p-queue",
+        "commit": "180ab9e25cd10b6f548767d7176076b50d25e188",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "viper",
+        "commit": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "fd",
+        "commit": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "libexpat",
+        "commit": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "jsoup",
+        "commit": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "cachecontrol",
+        "commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "pyjwt",
+        "commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "multidict",
+        "commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "zod",
+        "commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "dotenv",
+        "commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "axios",
+        "commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "lipgloss",
+        "commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "testify",
+        "commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "bytes",
+        "commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "serde-json",
+        "commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "fmt",
+        "commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+        "clean": true,
+        "worktreeCount": 1
+      },
+      {
+        "id": "nlohmann-json",
+        "commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+        "clean": true,
+        "worktreeCount": 1
+      }
+    ],
+    "candidates": [
+      {
+        "candidateId": "E-MIN-V2",
+        "path": "config/production/emin-v2-frozen-2026-08-09.json",
+        "sha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+        "sourceClosureVerified": true
+      },
+      {
+        "candidateId": "E-MIN-V3",
+        "path": "config/production/emin-v3-frozen-2026-08-09.json",
+        "sha256": "7b8829aded41cc996785ce5197627a4b712991d526b7e9e3045b3bf3f9d91be0",
+        "sourceClosureVerified": true
+      }
+    ],
+    "frozenRuntimeFiles": [
+      {
+        "path": "services/agent-runtime/src/index.ts",
+        "sha256": "1111f03e4e6f9c6a71b4066bc0c8b4e1a00f11075ea12ea566d3b0835d363948"
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "bd3e6dd7c43d5d1ec3d7397d9c0ddc7c7b253c1beaf4c3ccb8f2935a40309e00"
+      }
+    ],
+    "policy": "All G3 manifests, oracles, results, scorers, repository states, E-MIN-V2, and E-MIN-V3 are read-only evidence. G3 outcomes may be diagnosed but cannot tune a candidate."
+  },
+  "privacy": {
+    "historicalModelResponses": "HASH_ONLY_WHERE_ORIGINALLY_REDACTED",
+    "reconstruction": "PROHIBITED",
+    "retroactiveUnavailableFields": "NOT_AVAILABLE_NOT_INFERRED"
+  },
+  "protectedActions": {
+    "commit": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false,
+    "modelDownload": false
+  }
+}

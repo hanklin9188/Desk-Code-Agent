@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-fresh-holdout-g2-2026-08-09T08-14-16-853Z",
+  "transitions": {
+    "E1:PASS -> E-MIN-V2:PASS -> E-MIN-V3:PASS": 210
+  },
+  "paired": {
+    "v3VsV2": {
+      "candidate": "E-MIN-V3",
+      "baseline": "E-MIN-V2",
+      "candidateOnly": 0,
+      "baselineOnly": 0,
+      "bothPass": 210,
+      "bothFail": 0,
+      "difference": 0,
+      "pairedBootstrap95": [
+        0,
+        0
+      ],
+      "exactMcNemarP": 1
+    },
+    "v3VsE1": {
+      "candidate": "E-MIN-V3",
+      "baseline": "E1",
+      "candidateOnly": 0,
+      "baselineOnly": 0,
+      "bothPass": 210,
+      "bothFail": 0,
+      "difference": 0,
+      "pairedBootstrap95": [
+        0,
+        0
+      ],
+      "exactMcNemarP": 1
+    }
+  }
+}

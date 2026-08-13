@@ -1,0 +1,35 @@
+schema_version: 1
+sources:
+- name: mattpocock-skills
+  url: https://github.com/mattpocock/skills
+  revision: PIN_AT_M0_IMPLEMENTATION
+  license: MIT
+  purpose: selective engineering-principle adaptation
+  paths:
+  - skills/engineering/grill-with-docs/SKILL.md
+  - skills/engineering/to-spec/SKILL.md
+  - skills/engineering/prototype/SKILL.md
+  - skills/engineering/implement/SKILL.md
+  - skills/engineering/tdd/SKILL.md
+  - skills/engineering/diagnosing-bugs/SKILL.md
+  - skills/engineering/code-review/SKILL.md
+  - skills/engineering/codebase-design/SKILL.md
+  - skills/productivity/writing-for-agents/SKILL.md
+- name: animate-ui
+  url: https://github.com/imskyleen/animate-ui
+  revision: PIN_AT_M1
+  license: MIT
+  purpose: selected copy-first UI components
+  paths: []
+- name: qwen3.5-4b
+  url: https://huggingface.co/Qwen/Qwen3.5-4B
+  revision: PIN_AT_M2
+  license: VERIFY_MODEL_LICENSE_AT_M2
+  purpose: local shared model
+  paths: []
+- name: vllm
+  url: https://github.com/vllm-project/vllm
+  revision: PIN_AT_M2
+  license: Apache-2.0
+  purpose: local inference server
+  paths: []

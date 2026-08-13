@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T11:26:49.166Z",
+  "overall": "BLOCKED_QUALITY_EXTERNAL_AND_APPROVAL",
+  "gates": {
+    "sourceRevision": {
+      "status": "BLOCKED_APPROVAL",
+      "evidence": "No authorized commit exists"
+    },
+    "frozenCandidateIntegrity": {
+      "status": "PASS",
+      "evidence": "Both E-MIN-V2 and E-MIN-V3 source-closure validators pass"
+    },
+    "g3NaturalisticGeneralization": {
+      "status": "PASS_MEASURED_LOW_QUALITY_NO_PROMOTION",
+      "evidence": "benchmarks/g3/G3_RESULTS_INDEX.json#fa9a4680cd409af1f9eb774fb2282d41147bcf6f165f23d8b8c719df5c43a063"
+    },
+    "autonomousPatchQuality": {
+      "status": "BLOCKED",
+      "evidence": "G3 exact historical patch E1/V2/V3 = 0/60 each"
+    },
+    "correctedVram": {
+      "status": "PASS",
+      "evidence": "G3 primary plus streaming device-level nvidia-smi and NVML cross-check"
+    },
+    "typecheckUnitBuild": {
+      "status": "PASS",
+      "evidence": "npm run check rerun after implementation"
+    },
+    "uiExtendedQa": {
+      "status": "PASS_HEADLESS_BLOCKED_WINDOWS",
+      "evidence": "m9-g3-ui-soak-2026-08-09T09-52-14-842Z"
+    },
+    "sbom": {
+      "status": "PASS",
+      "evidence": "artifacts/release/sbom.spdx.json"
+    },
+    "licenseReview": {
+      "status": "BLOCKED_EXTERNAL_AND_OWNER_DECISION",
+      "evidence": "m10-g3-license-resolution-2026-08-09T09-59-45-947Z"
+    },
+    "dependencyResolution": {
+      "status": "PASS",
+      "evidence": "npm ci --dry-run --offline --ignore-scripts"
+    },
+    "cleanInstall": {
+      "status": "NOT_RUN",
+      "evidence": "Existing locked install verified; no disposable environment"
+    },
+    "linuxPackage": {
+      "status": "BLOCKED_EXTERNAL",
+      "evidence": "pkg-config/libdbus/WebKitGTK/rsvg/appindicator/patchelf missing"
+    },
+    "windowsInstallerQa": {
+      "status": "NOT_RUN",
+      "evidence": "Windows host unavailable"
+    },
+    "signing": {
+      "status": "BLOCKED_EXTERNAL",
+      "evidence": "Signing certificate and Windows signtool unavailable"
+    },
+    "quantization": {
+      "status": "BLOCKED_APPROVAL",
+      "evidence": "No pinned reduced-precision snapshot; model acquisition not authorized"
+    },
+    "skillAdmission": {
+      "status": "PASS",
+      "evidence": "m9-fresh-holdout-g1-2026-08-09T06-37-31-981Z",
+      "production": 1
+    },
+    "externalDelivery": {
+      "status": "BLOCKED_APPROVAL",
+      "evidence": "No commit/push/PR/tag/release authorized"
+    }
+  },
+  "stopShip": [
+    "G3 exact real-patch success is 0/60 for every candidate",
+    "G3 naturalistic holdout quality is low",
+    "source revision absent",
+    "root project license and remaining authoritative license metadata incomplete",
+    "native installers unbuilt",
+    "Windows QA NOT_RUN",
+    "signing absent",
+    "quantization NOT_RUN"
+  ]
+}

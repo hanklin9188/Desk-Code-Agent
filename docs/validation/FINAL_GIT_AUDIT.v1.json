@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "auditId": "dca-final-git-audit-v1",
+  "status": "PASS_LOCAL_AUDIT_EXTERNAL_PUBLICATION_NOT_EXECUTED",
+  "repository": {
+    "branch": "main",
+    "unbornBranch": true,
+    "head": null,
+    "remotes": [],
+    "configuredRemoteCount": 0,
+    "stagedFiles": 0,
+    "gitVisibleUntrackedFiles": 2411,
+    "workingTreeState": "UNBORN_BRANCH_ALL_PUBLICATION_FILES_UNTRACKED"
+  },
+  "ignoredState": {
+    "entries": [
+      ".runtime/",
+      "node_modules/",
+      "runtime/model/.venv/"
+    ],
+    "expectedHeavyRootsIgnored": false,
+    "installerPatternsIgnored": true,
+    "modelWeightPatternsIgnored": true,
+    "signingSecretPatternsIgnored": true
+  },
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "upload": false,
+    "signing": false
+  },
+  "blockers": [
+    "ROOT_LICENSE_DECISION_REQUIRED",
+    "10_DISTRIBUTED_PACKAGE_LICENSE_TEXT_GAPS_REQUIRE_AUTHORITATIVE_SOURCE_OR_LEGAL_REVIEW",
+    "NO_CONFIGURED_GIT_REMOTE",
+    "PROTECTED_EXTERNAL_WRITE_APPROVAL_REQUIRED"
+  ]
+}

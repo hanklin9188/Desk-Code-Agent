@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "supersessionId": "dca-patch-interface-v2-partial-abort-v3",
+  "status": "V2_PARTIAL_RUN_INVALID_INFRASTRUCTURE_EXCLUDED",
+  "classification": "DEVELOPMENT_ONLY_APPEND_ONLY_NONRESULT_DEPENDENT_CORRECTION",
+  "recordedAt": "2026-08-09T17:26:19.706Z",
+  "supersededArtifacts": {
+    "v1PrecallSupersession": {
+      "path": "docs/experiments/patch-interface/PATCH_INTERFACE_V1_PRECALL_ABORT.v2.json",
+      "sha256": "a9d7c7d57c4c2b695d0674c3bc4cb0dc857a8ad2f5e8e0c56d6de4af2169151a"
+    },
+    "securityRegression": {
+      "path": "docs/experiments/patch-interface/PATCH_INTERFACE_SECURITY_REGRESSION.v2.json",
+      "sha256": "c916d5aa9acf64d77aa7c2ebf9b316c784603194de11c729147c19efd6e757fd"
+    },
+    "referenceActionPreflight": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_REFERENCE_PREFLIGHT.v2.json",
+      "sha256": "367ef7bd6591173119a13d9300c2decf33584a9c24ecf3e4ce9924f1b5225251"
+    },
+    "preregistration": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_PREREGISTRATION.v2.json",
+      "sha256": "b04336814ebf814b44f249550306e592a88b67ad7ce1ef9720c6cdf442cc6aad"
+    }
+  },
+  "partialRun": {
+    "profileId": "baseline",
+    "runDirectory": "docs/experiments/runs/patch-interface-baseline-v2-20260810T0125",
+    "assignment": {
+      "path": ".runtime/patch-interface-experiment/b04336814ebf814b44f249550306e592a88b67ad7ce1ef9720c6cdf442cc6aad-baseline.assignment.json",
+      "sha256": "8b4ace854bd12b7a77870958f90620697b205299bf8d3cbcf283ee950de3a27d",
+      "preregistrationSha256": "b04336814ebf814b44f249550306e592a88b67ad7ce1ef9720c6cdf442cc6aad"
+    },
+    "checkpoint": {
+      "path": "docs/experiments/runs/patch-interface-baseline-v2-20260810T0125/observations.checkpoint.jsonl",
+      "sha256": "f0be8ffd8c9dde126d9873e7668ef984f73f59cbb9837b9dd0fd79f4f75a57e9",
+      "bytes": 46685,
+      "records": 7
+    },
+    "callEvents": {
+      "path": "docs/experiments/runs/patch-interface-baseline-v2-20260810T0125/call-events.jsonl",
+      "sha256": "70746c10fcafc030d585b66f8147598c4b22643b4fbc65ee0ce44c8004c2f29e",
+      "bytes": 5240,
+      "records": 14,
+      "started": 7,
+      "completed": 7,
+      "recovered": 0
+    },
+    "lifecycle": {
+      "path": "docs/experiments/runs/patch-interface-baseline-v2-20260810T0125/lifecycle.json",
+      "sha256": "949b68fd43b467e798fcdc68b655ab9b6a78d3f5890040c654e5869640f0553a",
+      "status": "PASS"
+    },
+    "unaffectedPrefix": [
+      {
+        "observationId": "baseline::P0_EXACT::g4-dev-patch-01-clamp-upper-62e329d1de",
+        "observationSha256": "0a311c5f2164b88d9be92b611a93e713f44cb4a529ce5ca641eba1c1ef443760",
+        "outputSha256": "f4bb1e8a2ea4ec03729f096c1817437c7292a1bfecf70615f86224aba2a64062",
+        "promptSha256": "1777df8bcc294e25b809db3394c9f96da87c6c9272358297e387c0e6f4179ff3"
+      },
+      {
+        "observationId": "baseline::P0_EXACT::g4-dev-patch-02-median-even-eb13216fac",
+        "observationSha256": "6dbe1527f9ed618b72ecbc99e7022f975f57201a81425384a89245ff4771d5cf",
+        "outputSha256": "8734827725c0150cdb4dc1accf1bbeca476165e6dfe9ce49154ccca7bd421347",
+        "promptSha256": "37bfa5ff88e6269e0be86ea2fbb3195a6cc8a3b26f433d606683451ca0f61391"
+      },
+      {
+        "observationId": "baseline::P0_EXACT::g4-dev-patch-03-stable-unique-bfbb248484",
+        "observationSha256": "2ee65fb6ae07b113e943f353df9abd2f31037baecdf4aa7ddabe4c17a5587ab6",
+        "outputSha256": "d7b92843191d638ca872b27c6788ad8bf322fc121d8eb52b30b58b4c60324940",
+        "promptSha256": "418ec21584eaaf9b56d17bf9e08c8c4ff26741f4db1516fa2346ac50b4e05af7"
+      },
+      {
+        "observationId": "baseline::P0_EXACT::g4-dev-patch-04-chunk-tail-04b7a8c083",
+        "observationSha256": "4ab475c3d057d8a30214a1a4310de3b95be1f0ccb2f384c9666d7d95251c9bb2",
+        "outputSha256": "453c8a7484c62eae3737cde54305a6c17855e89dac615a833a8038515ea12894",
+        "promptSha256": "7da4601ce8c073c8861866e9b44fb9c31bc915534b1727c170428122fea68995"
+      },
+      {
+        "observationId": "baseline::P0_EXACT::g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+        "observationSha256": "dd97766e3054ace21fc725674d1c8512e6f073cb461896e7adc60506bc864eaa",
+        "outputSha256": "ac60da1e4bb3829929bc661c45e09908005bb512f7a8543a24ccd5e07b2b216e",
+        "promptSha256": "f3b5b9256f4576b1514adaebe249ab6d3fbdfc0560eae17060159bde8e4b0b32"
+      },
+      {
+        "observationId": "baseline::P0_EXACT::g4-dev-patch-06-parse-port-2ad8cc00c3",
+        "observationSha256": "dc353c589e9e074b0eb3fc254cc1c03400b2832537ecd0e474a7d87467496cf4",
+        "outputSha256": "8a58dc20ea4663014f05e75f248d068630ccb6a13701377d783cfd4330438520",
+        "promptSha256": "4be9233a164da0fe3c9d27d30ab05f6b5b454497ff25297ab4f41375ca02b763"
+      },
+      {
+        "observationId": "baseline::P0_EXACT::g4-dev-patch-07-retry-delay-d9ff40e069",
+        "observationSha256": "2ecf0e50b1920cafe265d5f49cedcb66aaa3897522c5af369796cda7137d1044",
+        "outputSha256": "f1b0be1dc1dc0ee9ac250a6c765bcb73f0133d2eb080e6b21122ae6c8c143b9f",
+        "promptSha256": "9d635d2b7c96e3dfe72902ef79611ff7c5285af17fc8e75327da9ea0ec5c1a06"
+      }
+    ],
+    "physicalModelCalls": 7,
+    "validPrimaryObservations": 0,
+    "excludedPhysicalCalls": 7,
+    "callsOnAffectedTasks": 0,
+    "firstAffectedIndex": 7,
+    "firstAffectedObservationIdSha256": "7241586c75b6bdf1e9c0113489c7b53cc2c8a8f5760a9d2d3e411aa231fb0e58",
+    "absentArtifacts": [
+      "docs/experiments/runs/patch-interface-baseline-v2-20260810T0125/result.json",
+      "docs/experiments/runs/patch-interface-baseline-v2-20260810T0125/result.json.sha256",
+      "docs/experiments/runs/patch-interface-baseline-v2-20260810T0125/observations.final.json",
+      "docs/experiments/runs/patch-interface-baseline-v2-20260810T0125/observations.final.json.sha256",
+      "docs/experiments/runs/patch-interface-baseline-v2-20260810T0125/recovery.json",
+      ".runtime/patch-interface-experiment/b04336814ebf814b44f249550306e592a88b67ad7ce1ef9720c6cdf442cc6aad-baseline.active.lock",
+      ".runtime/patch-interface-experiment/b04336814ebf814b44f249550306e592a88b67ad7ce1ef9720c6cdf442cc6aad-baseline.active.lock.recovery",
+      ".runtime/model/api-key",
+      ".runtime/model/profile-start.json",
+      ".runtime/model/profile-launch.json",
+      ".runtime/model/profile-ready.json"
+    ]
+  },
+  "rootCause": {
+    "code": "PROMPT_RENDERER_FAIL_CLOSED_BEFORE_FIRST_AFFECTED_CALL",
+    "details": [
+      "POST_INJECTION_PLACEHOLDER_SCAN_FALSE_POSITIVE",
+      "REPLACEMENT_STRING_DOLLAR_EXPANSION"
+    ],
+    "oldCausalClosureSha256": "653d1f6d3062638f437624c4593ce04e9ef9d8cd5b44430ce847efff7330a931",
+    "oldRunner": {
+      "path": "scripts/run_patch_interface_experiment.ts",
+      "sha256": "32749fa03686f133a2e0c19f6a20238c45d1cf3cbe210a79bb8cb329756376bb"
+    },
+    "firstTriggerTaskId": "g4-dev-patch-08-join-url-73cba0b515",
+    "nextDollarReplacementAffectedTaskId": "g4-dev-patch-09-escape-regexp-958695ce0b"
+  },
+  "promptRemediationPreflight": {
+    "tasks": 50,
+    "passes": 50,
+    "failures": 0,
+    "totalPromptBytes": 69687,
+    "taskPromptHashesSha256": "97c80839d7b1505ff7981f2598f5acc0d016826f64f305b694448d2d2070fb0e",
+    "oldVersusCorrectedUnaffectedPrefixByteEqual": 7,
+    "inheritedEventPromptHashesMatched": 7,
+    "hiddenSourceLeaks": 0,
+    "referenceFixLeaks": 0
+  },
+  "decisionIntegrity": {
+    "v3FreshRerunChosen": true,
+    "prefixImportedIntoPrimaryEvidence": false,
+    "principalDecisionLockedWithoutEffectivenessInput": true,
+    "subagentInspectedOneRowAfterOrIndependentOfDecision": true,
+    "subagentOutcomeCommunicatedBeforeDecision": false,
+    "effectivenessFieldsUsedForDecision": false,
+    "rationale": "Missing persisted end-of-run serving identity and causal-closure attestation for the partial segment"
+  },
+  "v3CallAccounting": {
+    "invalidPhysicalCallsBeforeV3Seal": 7,
+    "validPrimaryCallsAtV3Seal": 0,
+    "baselinePlannedAfterSeal": 420,
+    "coderPlannedAfterSeal": 420,
+    "totalValidPrimaryPlannedAfterSeal": 840,
+    "finalPhysicalCallsAcrossV2AndV3": 847
+  },
+  "implementation": {
+    "generator": {
+      "path": "scripts/write_patch_interface_v2_partial_supersession.ts",
+      "sha256": "ccf69eedc504edc69bc1353b2c2877da1dd2a74ddffca08ab8675b5efc8d5fbb"
+    },
+    "promptRuntime": {
+      "path": "scripts/patch_interface_prompt_runtime.ts",
+      "sha256": "51405532f248b540b77ec5089eb74306e4b6c3c2342d1221765ab5331cbba678"
+    },
+    "remediatedRunner": {
+      "path": "scripts/run_patch_interface_experiment.ts",
+      "sha256": "03bad293b6ff68fd469dc3f2ff3a684929c90a40caeda84ad57c452f83a183e2"
+    }
+  },
+  "newArtifactLineage": [
+    "docs/experiments/patch-interface/PATCH_INTERFACE_SECURITY_REGRESSION.v3.json",
+    "benchmarks/patch-interface/PATCH_INTERFACE_REFERENCE_PREFLIGHT.v3.json",
+    "benchmarks/patch-interface/PATCH_INTERFACE_PREREGISTRATION.v3.json"
+  ],
+  "protectedActions": {
+    "modelCall": false,
+    "modelDownload": false,
+    "dependencyInstall": false,
+    "sudoAdmin": false,
+    "commit": false,
+    "remoteConfiguration": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false
+  }
+}

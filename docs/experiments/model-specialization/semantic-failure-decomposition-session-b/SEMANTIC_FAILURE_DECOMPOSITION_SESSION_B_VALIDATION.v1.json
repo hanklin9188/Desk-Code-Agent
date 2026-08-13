@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "validationId": "dca-semantic-failure-decomposition-session-b-validation-v1",
+  "status": "PASS",
+  "validatedAt": "2026-08-11T19:11:06.048Z",
+  "inputs": {
+    "resultsIndex": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_DECOMPOSITION_RESULTS_INDEX.v1.json",
+      "sha256": "f0f020501898aed91c64c6f2c8d8ffd71dc8ec437e975546b9fc6bdd90edb978"
+    }
+  },
+  "checks": {
+    "schemaValidation": "PASS",
+    "failureRecords": "PASS_66",
+    "exactlyOnePrimary": "PASS",
+    "maximumTwoSecondary": "PASS",
+    "successControls": "PASS_29",
+    "duplicateTaskIds": "PASS_NONE",
+    "allTasksAccounted": "PASS_95",
+    "citations": "PASS",
+    "strictTypeScript": "PASS",
+    "projectTypecheck": "PASS",
+    "completeTests": "PASS",
+    "productionBuild": "PASS",
+    "designValidation": "PASS",
+    "secretScan": "PASS",
+    "artifactSidecars": "PASS",
+    "sourceClosure": "PASS",
+    "lineage": "PASS",
+    "gatesApplied": false
+  },
+  "commands": [
+    {
+      "command": "npx tsc --ignoreConfig --noEmit --strict --skipLibCheck --target ES2022 --module ESNext --moduleResolution Bundler --types node services/semantic-failure-decomposition/src/index.ts scripts/run_semantic_failure_decomposition_session_b.ts tests/semantic-failure-decomposition.test.ts",
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "stdoutSha256": "1fcfe57781045a818698db7cbe3c9428c10ea084583a12bb0925411079a7a5df",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 0,
+      "stdoutSha256": "82d68a9fbb17582b5ccc43dc5e52ea54cdb6b5b5fded0b98a33b1618f9cae083",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "stdoutSha256": "0d1acf25e9c4dc4f71951828bc955938ff2ad35d16e53235a8371a8411252f2e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run validate:design",
+      "exitCode": 0,
+      "stdoutSha256": "afae00e40414af9d07b075c2743814888e7b057d53b5ee16af95e67585d8bb58",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "services/semantic-failure-decomposition/src/index.ts",
+        "sha256": "b30fcf4a658289d1d7935839c91bccf63916d16f179126387e8050c4fbf55982",
+        "bytes": 11577
+      },
+      {
+        "path": "scripts/run_semantic_failure_decomposition_session_b.ts",
+        "sha256": "dd8f4fdd1795148b96cfb3de2071acc28763307b9f1632f00ecd4c5383d40734",
+        "bytes": 30860
+      },
+      {
+        "path": "tests/semantic-failure-decomposition.test.ts",
+        "sha256": "e07048d40335f0108775b04d3974f5793617106e5f0decae9e369ee2a9524d7c",
+        "bytes": 5038
+      },
+      {
+        "path": "services/g3-evaluation-runtime/src/index.ts",
+        "sha256": "02ebfd6a7914cbe35c49048c182236d578cf56a1ddeb40ff8a4b9ac141affad2",
+        "bytes": 10087
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      }
+    ],
+    "sha256": "4517f93a18298599b74f37507439e719b3248028ad4e76ad944c742c225232d3"
+  },
+  "cleanup": {
+    "targetModelCalls": 0,
+    "modelProcessCount": 0,
+    "modelComputeProcesses": 0,
+    "modelGpuAllocationMiB": 0,
+    "ambientGpuMemoryMiB": 0,
+    "port8000Clear": true,
+    "ephemeralStateAbsent": true,
+    "temporaryDirectories": 0,
+    "worktrees": 1
+  }
+}

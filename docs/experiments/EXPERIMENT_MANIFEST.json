@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "manifest_id": "dca-harness-recovery-20260809",
+  "hardware": "RTX 4080 SUPER 16GB",
+  "model": "Qwen/Qwen3.5-4B",
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "baseline_precision": "bfloat16",
+  "status": "EXPANDED_GENERATION_2_PASS_HOLDOUT_REQUIRED",
+  "blocker": null,
+  "baseline_run": "docs/experiments/runs/live-vllm-2026-08-08T19-08-18-560Z/result.json",
+  "immutable_pilot_run": "docs/experiments/runs/m9-e1-e7-2026-08-09T01-18-51-568Z/result.json",
+  "diagnostic_run": "docs/experiments/runs/m9-harness-recovery-diagnostic-2026-08-09T04-32-48-950Z/result.json",
+  "generation_2_run": "docs/experiments/runs/m9-harness-recovery-final-2026-08-09T04-43-33-470Z/result.json",
+  "optimized_followup_run": "docs/experiments/runs/m9-harness-recovery-optimized-2026-08-09T05-00-34-145Z/result.json",
+  "benchmark_manifest": "benchmarks/harness_recovery_manifest.json",
+  "benchmark_tasks": 108,
+  "experiments": ["PILOT_E1_E7", "RETRIEVAL_TOP_K", "CONTEXT_C0_C5", "REVIEWER_VALUE", "CONDITIONAL_SPECIALISTS", "GENERATION_2_E1_E7", "E_MIN_V2", "QUANTIZATION_NOT_RUN"],
+  "metrics": ["task_success", "unique_task_success", "hidden_test_status", "wrong_action_attempts", "deterministic_policy_blocks", "precision_at_k", "recall_at_k", "mrr", "first_relevant_rank", "relevant_token_ratio", "irrelevant_token_ratio", "duplicate_evidence_ratio", "source_test_balance", "instruction_tokens", "task_tokens", "evidence_tokens", "history_tokens", "signal_ratio", "reviewer_false_reject", "reviewer_false_approve", "llm_calls", "tool_calls", "input_tokens", "output_tokens", "latency_median_p95", "peak_vram_mib"]
+}

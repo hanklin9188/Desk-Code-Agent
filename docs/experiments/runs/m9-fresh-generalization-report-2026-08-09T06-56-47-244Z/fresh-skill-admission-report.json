@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "reportId": "m9-fresh-skill-admission-g1",
+  "status": "PASS",
+  "policy": {
+    "taskConditionalAdmission": true,
+    "universalUsefulnessRequired": false,
+    "frozenRegistryMutated": false,
+    "reason": "Changing frozen routing after holdout would create a new candidate generation."
+  },
+  "decisions": [
+    {
+      "skillId": "R09",
+      "previous": "PRODUCTION",
+      "decision": "RETAIN_PRODUCTION_TASK_CONDITIONAL",
+      "scope": "C1 packaging where critical evidence is present and omission is traceable",
+      "freshEvidence": "150/150 controlled E-MIN; token ratio 0.997; real repositories 10/12 with 151 vs 529 median tokens",
+      "reason": "Primary non-inferiority and cost gates pass, but public-repository evidence coverage is a documented limit."
+    },
+    {
+      "skillId": "R01",
+      "previous": "EXPERIMENTAL",
+      "decision": "REMAIN_EXPERIMENTAL",
+      "scope": "task contract",
+      "freshEvidence": "E1 and E-MIN both 150/150; no isolated fresh R01 contrast",
+      "reason": "No task-conditional gain attributable to R01 alone."
+    },
+    {
+      "skillId": "R04",
+      "previous": "EXPERIMENTAL",
+      "decision": "REMAIN_EXPERIMENTAL",
+      "scope": "L4 feasibility/report-only",
+      "freshEvidence": "18/18 controlled L4 outcomes",
+      "reason": "Safe outcome evidence is positive but lacks an isolated without-R04 comparison."
+    },
+    {
+      "skillId": "R08",
+      "previous": "EXPERIMENTAL",
+      "decision": "REMAIN_EXPERIMENTAL",
+      "scope": "Symbol Top-2 retrieval",
+      "freshEvidence": "controlled MRR 0.983, failure rate 47.3%; public-repo recall@2 0.514",
+      "reason": "The preregistered retrieval-failure threshold was missed."
+    },
+    {
+      "skillId": "R17",
+      "previous": "EXPERIMENTAL",
+      "decision": "REMAIN_EXPERIMENTAL",
+      "scope": "bug reproduction loop",
+      "freshEvidence": "25/25 controlled diagnosis workflow, no isolated fresh R17 contrast",
+      "reason": "Workflow evidence cannot support Skill-level promotion."
+    },
+    {
+      "skillId": "R18",
+      "previous": "EXPERIMENTAL",
+      "decision": "REMAIN_EXPERIMENTAL",
+      "scope": "triggered diagnosis critic",
+      "freshEvidence": "15/15 no escalation vs 14/15 conditional critic; 0 recoveries, 1 introduced regression",
+      "reason": "Fresh task-conditional contrast is negative and roughly doubles cost."
+    },
+    {
+      "skillId": "R21",
+      "previous": "EXPERIMENTAL",
+      "decision": "REMAIN_EXPERIMENTAL_CODE_ENFORCED",
+      "scope": "deterministic verification",
+      "freshEvidence": "23/24 verified patches; 24/24 rollback; zero safety violations",
+      "reason": "Protection remains code-enforced, but an unsafe without-verification arm was not run and no Skill-level causal contrast exists."
+    },
+    {
+      "skillId": "R22",
+      "previous": "EXPERIMENTAL",
+      "decision": "REMAIN_EXPERIMENTAL",
+      "scope": "explicit semantic review",
+      "freshEvidence": "16/16 machine-only vs 16/16 reviewer; 0 regression detections; median tokens 646.5 vs 1332.5",
+      "reason": "No quality gain and more than double token cost."
+    },
+    {
+      "skillId": "R26",
+      "previous": "EXPERIMENTAL",
+      "decision": "REMAIN_EXPERIMENTAL_CODE_ENFORCED",
+      "scope": "untrusted content defense",
+      "freshEvidence": "20/20 adversarial execution cases; zero actual violations",
+      "reason": "Security policy stays mandatory in code; no intentionally unsafe production arm is admissible evidence for model-facing Skill promotion."
+    }
+  ],
+  "summary": {
+    "retainedProduction": [
+      "R09"
+    ],
+    "newlyPromoted": [],
+    "experimental": [
+      "R01",
+      "R04",
+      "R08",
+      "R17",
+      "R18",
+      "R21",
+      "R22",
+      "R26"
+    ],
+    "globalSpecialistsEnabled": false
+  },
+  "specialistEvidence": {
+    "architecture": {
+      "tasks": 12,
+      "singleCorrect": 12,
+      "specialistCorrect": 12,
+      "meanSingleEvidenceCoverage": 0.8888888888888887,
+      "meanSpecialistEvidenceCoverage": 0.9166666666666666,
+      "singleUnsupportedClaims": 9,
+      "specialistUnsupportedClaims": 10,
+      "medianTokens": {
+        "single": 636.5,
+        "specialist": 1326
+      },
+      "medianLatencyMs": {
+        "single": 800.7415000000001,
+        "specialist": 1514.5405
+      }
+    },
+    "diagnosis": {
+      "tasks": 15,
+      "triggersSatisfied": 15,
+      "noEscalationCorrect": 15,
+      "conditionalEscalationCorrect": 14,
+      "recoveredFailures": 0,
+      "introducedRegressions": 1,
+      "medianTokens": {
+        "noEscalation": 637,
+        "conditional": 1306
+      },
+      "medianLatencyMs": {
+        "noEscalation": 772.467,
+        "conditional": 1494.073
+      }
+    },
+    "review": {
+      "tasks": 16,
+      "machineCorrect": 16,
+      "semanticCorrect": 16,
+      "regressionDetections": 0,
+      "falseRejections": 0,
+      "falseApprovals": 0,
+      "medianTokens": {
+        "machine": 646.5,
+        "semantic": 1332.5
+      },
+      "medianLatencyMs": {
+        "machine": 789.9865,
+        "semantic": 1521.0729999999999
+      }
+    }
+  },
+  "evidence": {
+    "primary": {
+      "path": "docs/experiments/runs/m9-fresh-holdout-g1-2026-08-09T06-37-31-981Z/paired-transition-matrix.json",
+      "sha256": "63bb3a21401ee9f04d4f02fab52534dc5157be0bdad9ff130914d87b6941bce0"
+    },
+    "patchInvalid": {
+      "path": "docs/experiments/runs/m9-fresh-real-patch-g1-2026-08-09T06-43-35-547Z/real-patch-corpus-result.json",
+      "sha256": "116eef22f9e34bc7dc8d873ab0019ad8826e2dfcbfbb08d9d92c7897e7b74355"
+    },
+    "patch": {
+      "path": "docs/experiments/runs/m9-fresh-real-patch-g1-evaluator-correction-2026-08-09T06-45-01-506Z/real-patch-corpus-result.json",
+      "sha256": "d3754d60ebe4b7caa8cc37665d8ed96e8f2454be52959f2cf7d752a10421d9d4"
+    },
+    "safety": {
+      "path": "docs/experiments/runs/m9-fresh-safety-g1-2026-08-09T06-46-52-884Z/fresh-safety-result.json",
+      "sha256": "0b4d51903d5aef479900188584e4fa9b3558a1760c75703973bca0d2ffc63cf5"
+    },
+    "specialistInvalid": {
+      "path": "docs/experiments/runs/m9-fresh-specialists-g1-2026-08-09T06-48-55-240Z/specialist-ablation-result.json",
+      "sha256": "c8ae86a0a32cc987e392d926c3e0cdf3d0584eb7f934c58ec1c0981cf7b02a4e"
+    },
+    "specialists": {
+      "path": "docs/experiments/runs/m9-fresh-specialists-g1-evaluator-correction-2026-08-09T06-49-53-336Z/specialist-ablation-result.json",
+      "sha256": "2b78eb30ed6e48760528fbc994da06a8e7c7587943c45ecdc3d4e1790ac451f2"
+    },
+    "repositories": {
+      "path": "docs/experiments/runs/m9-real-repositories-g1-2026-08-09T06-53-15-910Z/real-repository-result.json",
+      "sha256": "5559b39c38e3e4585353bc8ad29ddc528abefddb06cea7b4c726d3557c67381e"
+    },
+    "m8": {
+      "path": "docs/experiments/runs/m8-ui-performance-2026-08-09T06-54-15-004Z/result.json",
+      "sha256": "7d02427a2168fc3e20fe5e24e792146a5e1313230ff89fd6d9214d9c3d141eb8"
+    }
+  }
+}

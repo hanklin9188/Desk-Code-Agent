@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "protocolId": "dca-privacy-safe-semantic-observability-experiment-v1",
+  "state": "PREPARED_NOT_PREREGISTERED_NOT_EXECUTED",
+  "classification": "NEW_REPOSITORY_DISJOINT_DIAGNOSTIC_PROTOCOL_ONLY",
+  "preparedAt": "2026-08-11T19:30:44.295Z",
+  "ownerDecision": {
+    "frozenGate": "G5_MIXED_SEMANTIC_CEILING__NO_SINGLE_INTERVENTION",
+    "selectedExperiment": "PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_EXPERIMENT",
+    "exactlyOneExperiment": true
+  },
+  "researchQuestion": "Can privacy-minimized structured mutation features materially increase supported T1-T9 failure-cause classification coverage without retaining raw model output or weakening local-first privacy?",
+  "hypothesis": "Level-1 deterministic derived edit features increase supported semantic classification coverage and reduce T14 relative to Level-0 hash-only views, without raw-output persistence or secret leakage.",
+  "population": {
+    "tasks": 80,
+    "minimumSatisfied": true,
+    "source": "NEW_REPOSITORY_DISJOINT_TASKS",
+    "overlapWithAnalysisExposed95": 0,
+    "difficultyAndCategoryBalance": "PREREGISTER_BEFORE_CALLS",
+    "mutationRequired": true
+  },
+  "fixedVariables": {
+    "model": "TIGER-Lab/FIM-7B",
+    "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+    "modelStatus": "BEST_RESEARCH_MODEL__STRONGEST_SCORED_RESEARCH_CANDIDATE_ASSISTED_FLOOR_ONLY",
+    "patchInterface": "E-EDIT_P2_RESEARCH_ONLY",
+    "retrieval": "E-MIN-V2",
+    "contextPackaging": "C1",
+    "servingAndDecoding": "USE_EXISTING_FROZEN_FIM_PROFILE_EXACTLY",
+    "verificationHarness": "EXISTING_FROZEN_HARNESS",
+    "candidateSpecificTuning": false
+  },
+  "independentVariable": "SEMANTIC_EVIDENCE_RETENTION",
+  "design": {
+    "unit": "FIRST_ATTEMPT_FAILURE",
+    "modelCallsPerTask": 1,
+    "retentionViewsFromSameCall": [
+      "L0_HASH_ONLY",
+      "L1_STRUCTURED_DERIVED_EDIT_FEATURES"
+    ],
+    "extraModelCallsForRetentionComparison": 0,
+    "pairing": "Each transient edit deterministically yields both L0 and L1 analyst views; analysts are blinded to the alternate view.",
+    "objectiveIsModelSuccessImprovement": false
+  },
+  "level1Schema": {
+    "taskId": "string",
+    "repositoryRevision": "sha256",
+    "selectedFile": "normalized repo-relative path after secret scan",
+    "range": {
+      "startLine": "positive integer",
+      "endLine": "positive integer"
+    },
+    "targetSymbol": "hash plus kind or null",
+    "replacementLength": "integer only",
+    "changedAstNodeTypes": "sorted enum/counts",
+    "identifiersReferencedOrModified": "salted hashes plus role/count; never raw names",
+    "literalChanges": "literal type, length and salted hash; never raw literal",
+    "operatorChanges": "bounded operator enums",
+    "controlFlowChanges": "AST node enum/count deltas",
+    "apiCallChanges": "salted callee hashes and add/remove counts",
+    "importChanges": "module-specifier hash and add/remove counts",
+    "canonicalEditDigest": "sha256",
+    "verificationFailure": "frozen stage/status/code and bounded diagnostic hash",
+    "visibleBehavioralEffect": "PASS/FAIL/NOT_RUN plus bounded assertion category/hash"
+  },
+  "extraction": {
+    "producer": "DETERMINISTIC_TRANSIENT_LOCAL_EXTRACTOR",
+    "method": "Parse before/after source with pinned Tree-sitter; compute feature deltas before deleting replacement bytes.",
+    "rawModelOutputPersisted": false,
+    "rawEditBodyPersisted": false,
+    "sourceRepersisted": false,
+    "hiddenOracleExposedToModel": false,
+    "secretScanningBeforePersistence": true,
+    "featureAllowlistExact": true,
+    "transientDeletionRequiredBeforeNextTask": true
+  },
+  "privacyTiers": {
+    "L0_HASH_ONLY": {
+      "authorizedForFuturePreregisteredRun": true,
+      "purpose": "matched historical baseline"
+    },
+    "L1_STRUCTURED_DERIVED_EDIT_FEATURES": {
+      "authorizedForFuturePreregisteredRun": true,
+      "preferred": true,
+      "rawIdentifiersOrLiterals": false
+    },
+    "L2_BOUNDED_LOCAL_ONLY_EDIT_BODY": {
+      "authorized": false,
+      "status": "REQUIRES_SEPARATE_EXPLICIT_PRIVACY_APPROVAL",
+      "prerequisites": [
+        "local-only ignored storage",
+        "0600 or stronger access control",
+        "no surrounding context",
+        "bounded replacement only",
+        "redaction",
+        "fixed TTL and verified deletion",
+        "never uploaded"
+      ]
+    }
+  },
+  "privacyDecisionGate": {
+    "evaluateAfterL1": true,
+    "L2MayBeProposedOnlyIf": [
+      "L1 supported T1-T9 coverage remains below 0.30",
+      "L1 raw/derived privacy checks all pass",
+      "written necessity analysis shows which causes cannot be distinguished",
+      "separate owner approval is obtained"
+    ],
+    "automaticL2Authorization": false
+  },
+  "frozenTaxonomy": {
+    "source": {
+      "path": "benchmarks/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_PREREGISTRATION.v1.json",
+      "sha256": "6851a9a2a2fd25757413f71c0b331e5899a397c1928b59259f3cc6606123ed47"
+    },
+    "categories": [
+      "T1_TASK_REQUIREMENT_MISUNDERSTANDING",
+      "T2_LOCAL_LOGIC_ERROR",
+      "T3_BOUNDARY_EDGE_CASE_ERROR",
+      "T4_API_CONTRACT_MISUNDERSTANDING",
+      "T5_DATAFLOW_STATE_REASONING_ERROR",
+      "T6_EXCEPTION_ERROR_SEMANTICS",
+      "T7_INCOMPLETE_PATCH_SCOPE",
+      "T8_CROSS_FILE_DEPENDENCY_MISSED",
+      "T9_TEST_CONTRACT_MISUNDERSTANDING",
+      "T10_EVIDENCE_MISSING_OR_INSUFFICIENT",
+      "T11_RETRIEVAL_FAILURE",
+      "T12_ACTION_OR_PATCH_REPRESENTATION",
+      "T13_SYNTAX_CODE_FORMATION",
+      "T14_AMBIGUOUS_OR_INCONCLUSIVE"
+    ],
+    "precedence": [
+      {
+        "rank": 1,
+        "category": "T11_RETRIEVAL_FAILURE",
+        "rule": "Required evidence exists in the repository and frozen retrieval metadata proves it was not selected or included."
+      },
+      {
+        "rank": 2,
+        "category": "T12_ACTION_OR_PATCH_REPRESENTATION",
+        "rule": "The first authoritative failure is P2 action validation or patch construction, before semantic execution can be evaluated."
+      },
+      {
+        "rank": 3,
+        "category": "T13_SYNTAX_CODE_FORMATION",
+        "rule": "Syntax/type formation is the first failure and no stronger semantic cause is supported by persisted edit evidence."
+      },
+      {
+        "rank": 4,
+        "category": "T10_EVIDENCE_MISSING_OR_INSUFFICIENT",
+        "rule": "Required information is proven absent from model-visible context and was not a retrievable-but-missed repository item covered by T11."
+      },
+      {
+        "rank": 5,
+        "category": "T8_CROSS_FILE_DEPENDENCY_MISSED",
+        "rule": "A necessary cross-file dependency is central, evidence was sufficient, and observable edit evidence proves it was missed."
+      },
+      {
+        "rank": 6,
+        "category": "T7_INCOMPLETE_PATCH_SCOPE",
+        "rule": "Required companion work is within one file or otherwise not centrally cross-file, evidence was sufficient, and observable edit evidence proves incomplete scope."
+      },
+      {
+        "rank": 7,
+        "category": "T1_TASK_REQUIREMENT_MISUNDERSTANDING",
+        "rule": "Observable edit behavior addresses a different requested behavior; task text alone is not enough."
+      },
+      {
+        "rank": 8,
+        "category": "T9_TEST_CONTRACT_MISUNDERSTANDING",
+        "rule": "Visible model-available verification evidence was sufficient and observable edit behavior contradicts that contract."
+      },
+      {
+        "rank": 9,
+        "category": "T6_EXCEPTION_ERROR_SEMANTICS",
+        "rule": "Observable edit behavior specifically mishandles exception type, propagation, fallback, retry, message, or error state."
+      },
+      {
+        "rank": 10,
+        "category": "T4_API_CONTRACT_MISUNDERSTANDING",
+        "rule": "Observable edit behavior contradicts an available API, caller, return-type, or public-interface contract."
+      },
+      {
+        "rank": 11,
+        "category": "T5_DATAFLOW_STATE_REASONING_ERROR",
+        "rule": "Observable edit behavior mishandles mutation, copy, lifecycle, dependency ordering, stale state, or propagated values."
+      },
+      {
+        "rank": 12,
+        "category": "T3_BOUNDARY_EDGE_CASE_ERROR",
+        "rule": "Core observable edit is otherwise supported but fails a specific boundary, sentinel, empty, null, first/last, or off-by-one case."
+      },
+      {
+        "rank": 13,
+        "category": "T2_LOCAL_LOGIC_ERROR",
+        "rule": "Evidence and scope are local and sufficient and observable edit behavior implements incorrect branch, operator, ordering, calculation, or return semantics."
+      },
+      {
+        "rank": 14,
+        "category": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "rule": "Use whenever persisted evidence cannot distinguish a stronger cause; never infer a semantic cause from failure stage or oracle alone."
+      }
+    ],
+    "changeAllowedAfterCallsStart": false
+  },
+  "analysisPlan": {
+    "primaryDenominator": "all first-attempt failures among 80 tasks",
+    "l0AndL1Classification": "Apply the same frozen T1-T14 rules independently to paired views",
+    "audits": "Two independent passes; disagreements preserved and adjudicated fail-closed to T14/LOW",
+    "noPrivateReasoningPersistence": true,
+    "noSemanticInferenceFromDigest": true
+  },
+  "successCriteria": {
+    "supportedT1ToT9Coverage": {
+      "L1Minimum": 0.3,
+      "L1MinusL0MinimumAbsolute": 0.2
+    },
+    "highOrMediumConfidenceRateL1Minimum": 0.5,
+    "t14RateL1Maximum": 0.6,
+    "interAuditAgreement": {
+      "rawAgreementMinimum": 0.8,
+      "cohensKappaMinimum": 0.6
+    },
+    "privacyAndSafety": {
+      "rawModelOutputsPersisted": 0,
+      "rawEditBodiesPersisted": 0,
+      "secretFindings": 0,
+      "hiddenOracleLeaks": 0,
+      "unauthorizedL2Records": 0,
+      "wrongFileMutations": 0,
+      "safetyViolations": 0
+    }
+  },
+  "interpretation": {
+    "passMeaning": "L1 is a viable privacy-preserving diagnostic evidence tier.",
+    "failMeaning": "L1 did not establish adequate observability; it does not authorize L2 or prove model semantics adequate.",
+    "futureTreatmentExperiment": "Separate and selected only after the dominant supported cause is observed."
+  },
+  "executionGate": {
+    "executedInSessionC": false,
+    "futureRequirements": [
+      "separate immutable preregistration",
+      "owner authorization for target-model calls",
+      "sealed 80-task manifest/oracle",
+      "deterministic extractor security regression",
+      "source/serving closure",
+      "clean runtime preflight"
+    ],
+    "protectedActionsNotAuthorizedHere": [
+      "model call",
+      "model download",
+      "retry",
+      "L2 retention",
+      "product promotion"
+    ]
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "sessionId": "dca-best-7b-bounded-retry-session-c-v1",
+  "session": "C",
+  "status": "PASS",
+  "classification": "ZERO_CALL_FINAL_ANALYSIS_AND_DECISION_COMPLETE",
+  "completedAt": "2026-08-11T17:48:10.497Z",
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_A.v1.json",
+      "sha256": "fd81c875019ba4ef903185bb6b96faf94d99b202dea5b33fb626405947ec9c08"
+    },
+    "sessionB": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_B.v1.json",
+      "sha256": "631769a8d1b2dae6c27970a9898c18e4db028d225e484fa4d1ac05212b32b4e5"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PREREGISTRATION.v1.json",
+      "sha256": "aaede424d4ae204a098d5fb2610ce7117d0e5fa4159441a56e646059cfd07cf1"
+    },
+    "eligibility": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ELIGIBILITY_MANIFEST.v1.json",
+      "sha256": "0eb3a573d5e2401d14c4793f730521f91f2e5ff93bf1dc0e102aa2bad66df6a0"
+    },
+    "retryResult": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/result.json",
+      "sha256": "fe46972b7d06a293f2c49a674391990e9e629d31d07f70395b7875cc480cb01b"
+    },
+    "telemetrySupplement": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/telemetry-supplement.v1.json",
+      "sha256": "ea482fb47d77ad78a9e455e008c971f6946cf76ca2ee5690898d6ffb46b3e1d0"
+    },
+    "originalCheckpoint": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+      "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a",
+      "rows": 95
+    },
+    "retryCheckpoint": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+      "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd",
+      "rows": 66
+    }
+  },
+  "resultsIndex": {
+    "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_RESULTS_INDEX.v1.json",
+    "sha256": "d8f22c99a06fad23124fee561ae6bedf558d965a6aca10e9b0034adc3c2b402a"
+  },
+  "analysis": {
+    "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ANALYSIS.v1.json",
+    "sha256": "607cc2fbe41f4e9fd6172d3c848d4f8a2f5c2a9457b746ffd96c8a7b564c6549"
+  },
+  "validation": {
+    "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_C_VALIDATION.v1.json",
+    "sha256": "80b8bf3b089facadf47a3150c2c03e5d7274e6aa43df4dc8d90b94a6418b30d7"
+  },
+  "decisions": {
+    "retry": "RETRY_NO_MATERIAL_GAIN",
+    "productMutation": "KEEP_MUTATION_DISABLED",
+    "fimStatus": "BEST_RESEARCH_MODEL__STRONGEST_SCORED_RESEARCH_CANDIDATE_ASSISTED_FLOOR_ONLY",
+    "nextScientificExperiment": "SEMANTIC_FAILURE_DECOMPOSITION"
+  },
+  "maximumTwoCall": {
+    "successes": 30,
+    "denominator": 95,
+    "ratePercent": 31.57894736842105,
+    "absoluteGainTasks": 1,
+    "absoluteGainPercentagePoints": 1.0526315789473684,
+    "relativeSuccessGainPercent": 3.4482758620689653
+  },
+  "retryRecovery": {
+    "recovered": 1,
+    "eligible": 66,
+    "recoveryRatePercent": 1.5151515151515151,
+    "unsuccessful": 65,
+    "unsuccessfulRatePercent": 98.48484848484848
+  },
+  "safety": {
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0,
+    "safetyRejected": 4
+  },
+  "cost": {
+    "originalCalls": 95,
+    "retryCalls": 66,
+    "maximumTwoCallCalls": 161,
+    "callsPerOriginalTask": 1.694736842105263,
+    "originalPromptTokens": 18140,
+    "originalCompletionTokens": 6120,
+    "originalTotalTokens": 24260,
+    "retryPromptTokens": 35877,
+    "retryCompletionTokens": 4485,
+    "retryTotalTokens": 40362,
+    "maximumTwoCallTotalTokens": 64622,
+    "productTokenMultiplier": 2.6637262984336356,
+    "productTokenOverheadPercent": 166.37262984336357,
+    "retryLatencyMs": 63193.953714,
+    "originalLatencyMs": 83542.10408499998,
+    "maximumTwoCallLatencyMs": 146736.057799,
+    "productLatencyMultiplier": 1.756432393056599,
+    "averageAddedLatencyPerOriginalTaskMs": 665.1995127789475,
+    "addedCallsPerRecoveredTask": 66,
+    "addedTokensPerRecoveredTask": 40362,
+    "eligibleSubset": {
+      "originalTokens": 16880,
+      "maximumTwoCallTokens": 57242,
+      "tokenMultiplier": 3.391113744075829,
+      "originalLatencyMs": 59174.158611999956,
+      "maximumTwoCallLatencyMs": 122368.11232599996,
+      "latencyMultiplier": 2.0679315971074046
+    },
+    "unavailableTelemetry": [
+      "loadTimeMs",
+      "loadedIdleVramMiB",
+      "inferencePeakVramMiB",
+      "ttftMs"
+    ]
+  },
+  "thresholdClassification": {
+    "assistedFloor29": true,
+    "research33": false,
+    "strong40": false,
+    "product57": false,
+    "highestClassification": "ASSISTED_FLOOR"
+  },
+  "nextScientificExperiment": {
+    "selection": "SEMANTIC_FAILURE_DECOMPOSITION",
+    "protocol": {
+      "path": "benchmarks/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_PROTOCOL.v1.json",
+      "sha256": "0c0806e564a3fe5da3fa6fa77de694c38ff635396b1afa91b3065f1511833823"
+    },
+    "executed": false
+  },
+  "scientificQuestions": {
+    "Q1": "No. Strict success increased only 29/95 to 30/95; recovery was 1/66 and failed the frozen material-gain gate.",
+    "Q2": "VISIBLE_TEST was the only recoverable class, at 1/47 (2.13%); this single recovery does not establish broad recoverability.",
+    "Q3": "No. Hidden failures recovered 0/6 and all remained HIDDEN_TEST.",
+    "Q4": "No. Syntax/type failures recovered 0/6; four stayed syntax, one moved later to visible, and one regressed to action validation.",
+    "Q5": "Exact repeated edit was dominant: 42/66 (63.64%). Overall, 55/66 remained at the same failure stage.",
+    "Q6": "No. Sixty-six extra calls and 40,362 retry tokens produced one recovery; the eligible-subset token multiplier was 3.39x and failed the 2x gate.",
+    "Q7": "Yes at the deterministic mutation boundary: zero wrong-file attempts, actual safety violations and rollback failures. Four SAFETY_REJECTED proposals were blocked before unsafe mutation.",
+    "Q8": "It retained the assisted floor only (30/95) and did not cross research 33, strong 40, or product 57.",
+    "Q9": "No. Retry remains disabled by default and protocol-only for research.",
+    "Q10": "Behavioral semantic reasoning after a valid localized edit is the strongest remaining measured bottleneck; exact-source retrieval remains a smaller 5/95 limitation."
+  },
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "services/bounded-retry-analysis/src/index.ts",
+        "sha256": "f2c35d07e151c20fff47e26b7cff6daf52e4e7a91d76d1a713dac8e906771f23",
+        "bytes": 11040
+      },
+      {
+        "path": "scripts/finalize_best_7b_bounded_retry_session_c.ts",
+        "sha256": "ef6a42abb534b0f3f0fb237f90f4ad071914e21f6a9d288b0a9458c92073f7f0",
+        "bytes": 26813
+      },
+      {
+        "path": "tests/bounded-retry-analysis.test.ts",
+        "sha256": "b889f21ee04dd87b65e54c618f607d564231d971ed4eea4fe41ee4e5289793a2",
+        "bytes": 2632
+      },
+      {
+        "path": "CONTEXT.md",
+        "sha256": "b61c0281b07141471cf25aa4da92579fe2a2895c8d5e43a2624ccad3e3126bc8",
+        "bytes": 18812
+      },
+      {
+        "path": "docs/exec-plans/active/MASTER_EXECUTION_PLAN.md",
+        "sha256": "bd34474eda838f81829a12e86554f3e6a5e0930d854c4c34c4bb6ec7a9a325b4",
+        "bytes": 42156
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      }
+    ],
+    "sha256": "8f141ee03c25d107688cb1aba84aef6d13a2c5311474255cff0ea778f458f97e"
+  },
+  "cleanup": {
+    "modelProcessCount": 0,
+    "modelComputeProcesses": 0,
+    "modelGpuAllocationMiB": 0,
+    "ambientGpuMemoryMiB": 1109,
+    "port8000Clear": true,
+    "ephemeralStateAbsent": true,
+    "temporaryDirectories": 0,
+    "worktrees": 1
+  },
+  "protectedActions": {
+    "modelCall": false,
+    "modelDownload": false,
+    "thirdAttempt": false,
+    "repair": false,
+    "FIMRerun": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  },
+  "modelCalls": 0,
+  "stop": "SESSION_C_BOUNDARY_REACHED"
+}

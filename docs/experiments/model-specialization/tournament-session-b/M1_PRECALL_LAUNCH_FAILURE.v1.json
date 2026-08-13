@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "failureId": "dca-model-tournament-m1-precall-launch-failure-v1",
+  "status": "RECORDED_PRECALL_INFRASTRUCTURE_INTEGRATION_FAILURE",
+  "classification": "SESSION_B_NON_PRIMARY_PRECALL_DIAGNOSTIC",
+  "recordedAt": "2026-08-11T05:12:09.392Z",
+  "candidateId": "M1",
+  "reasonCode": "PYTHON_MULTIPROCESSING_REIMPORT_ATTESTATION_O_EXCL",
+  "modelEndpointCalls": 0,
+  "modelLoadCompleted": false,
+  "precisionFallback": false,
+  "substitutions": false,
+  "stateEvidence": {
+    "tournament-start.json": {
+      "bytes": 92,
+      "sha256": "58f6c4e21bc13b8b5f40de1a1cb36486830b5e835757b91dfda09e35638eed12"
+    },
+    "tournament-launch.json": {
+      "bytes": 2133,
+      "sha256": "102c094eec1ce1d09421140589c89de8e6c0316e255e1db9263f41ceeebc99fe"
+    }
+  },
+  "cleanup": {
+    "servingProcessPresent": false,
+    "port8000Clear": true,
+    "gpuMemoryMiB": 0,
+    "ephemeralApiKeyAbsent": true
+  },
+  "protectedActions": {
+    "primaryHoldoutCalls": false,
+    "otherModelDownload": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

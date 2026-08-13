@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "analysisId": "dca-best-7b-bounded-retry-analysis-v1",
+  "status": "PASS",
+  "classification": "SEALED_ZERO_CALL_DETERMINISTIC_ANALYSIS",
+  "generatedAt": "2026-08-11T17:48:10.497Z",
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_A.v1.json",
+      "sha256": "fd81c875019ba4ef903185bb6b96faf94d99b202dea5b33fb626405947ec9c08"
+    },
+    "sessionB": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_B.v1.json",
+      "sha256": "631769a8d1b2dae6c27970a9898c18e4db028d225e484fa4d1ac05212b32b4e5"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PREREGISTRATION.v1.json",
+      "sha256": "aaede424d4ae204a098d5fb2610ce7117d0e5fa4159441a56e646059cfd07cf1"
+    },
+    "eligibility": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ELIGIBILITY_MANIFEST.v1.json",
+      "sha256": "0eb3a573d5e2401d14c4793f730521f91f2e5ff93bf1dc0e102aa2bad66df6a0"
+    },
+    "retryResult": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/result.json",
+      "sha256": "fe46972b7d06a293f2c49a674391990e9e629d31d07f70395b7875cc480cb01b"
+    },
+    "telemetrySupplement": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/telemetry-supplement.v1.json",
+      "sha256": "ea482fb47d77ad78a9e455e008c971f6946cf76ca2ee5690898d6ffb46b3e1d0"
+    },
+    "originalCheckpoint": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+      "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a",
+      "rows": 95
+    },
+    "retryCheckpoint": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+      "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd",
+      "rows": 66
+    }
+  },
+  "analysis": {
+    "oneShot": {
+      "successes": 29,
+      "denominator": 95,
+      "ratePercent": 30.526315789473685
+    },
+    "maximumTwoCall": {
+      "successes": 30,
+      "denominator": 95,
+      "ratePercent": 31.57894736842105,
+      "absoluteGainTasks": 1,
+      "absoluteGainPercentagePoints": 1.0526315789473684,
+      "relativeSuccessGainPercent": 3.4482758620689653
+    },
+    "retryRecovery": {
+      "recovered": 1,
+      "eligible": 66,
+      "recoveryRatePercent": 1.5151515151515151,
+      "unsuccessful": 65,
+      "unsuccessfulRatePercent": 98.48484848484848
+    },
+    "byFirstFailureClass": {
+      "RETRIEVAL": {
+        "eligible": 5,
+        "retryCalls": 5,
+        "recovered": 0,
+        "recoveryRatePercent": 0,
+        "repeatedEdits": 0
+      },
+      "ACTION_VALIDATION": {
+        "eligible": 2,
+        "retryCalls": 2,
+        "recovered": 0,
+        "recoveryRatePercent": 0,
+        "repeatedEdits": 0
+      },
+      "PATCH_CONSTRUCTION": {
+        "eligible": 0,
+        "retryCalls": 0,
+        "recovered": 0,
+        "recoveryRatePercent": 0,
+        "repeatedEdits": 0
+      },
+      "SYNTAX_TYPE": {
+        "eligible": 6,
+        "retryCalls": 6,
+        "recovered": 0,
+        "recoveryRatePercent": 0,
+        "repeatedEdits": 3
+      },
+      "VISIBLE_TEST": {
+        "eligible": 47,
+        "retryCalls": 47,
+        "recovered": 1,
+        "recoveryRatePercent": 2.127659574468085,
+        "repeatedEdits": 36
+      },
+      "HIDDEN_TEST": {
+        "eligible": 6,
+        "retryCalls": 6,
+        "recovered": 0,
+        "recoveryRatePercent": 0,
+        "repeatedEdits": 3
+      }
+    },
+    "transitionMatrix": {
+      "RETRIEVAL": {
+        "RETRIEVAL": 0,
+        "ACTION_VALIDATION": 4,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 0,
+        "VISIBLE_TEST": 1,
+        "HIDDEN_TEST": 0,
+        "SUCCESS": 0
+      },
+      "ACTION_VALIDATION": {
+        "RETRIEVAL": 0,
+        "ACTION_VALIDATION": 1,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 0,
+        "VISIBLE_TEST": 0,
+        "HIDDEN_TEST": 1,
+        "SUCCESS": 0
+      },
+      "PATCH_CONSTRUCTION": {
+        "RETRIEVAL": 0,
+        "ACTION_VALIDATION": 0,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 0,
+        "VISIBLE_TEST": 0,
+        "HIDDEN_TEST": 0,
+        "SUCCESS": 0
+      },
+      "SYNTAX_TYPE": {
+        "RETRIEVAL": 0,
+        "ACTION_VALIDATION": 1,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 4,
+        "VISIBLE_TEST": 1,
+        "HIDDEN_TEST": 0,
+        "SUCCESS": 0
+      },
+      "VISIBLE_TEST": {
+        "RETRIEVAL": 0,
+        "ACTION_VALIDATION": 1,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 1,
+        "VISIBLE_TEST": 44,
+        "HIDDEN_TEST": 0,
+        "SUCCESS": 1
+      },
+      "HIDDEN_TEST": {
+        "RETRIEVAL": 0,
+        "ACTION_VALIDATION": 0,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 0,
+        "VISIBLE_TEST": 0,
+        "HIDDEN_TEST": 6,
+        "SUCCESS": 0
+      }
+    },
+    "stageMigration": {
+      "realRecovery": 1,
+      "realRecoveryPercent": 1.5151515151515151,
+      "sameFailureStage": 55,
+      "sameFailureStagePercent": 83.33333333333333,
+      "laterFailureStage": 7,
+      "laterFailureStagePercent": 10.606060606060606,
+      "regressedEarlierStage": 3,
+      "regressedEarlierStagePercent": 4.545454545454546
+    },
+    "outcomes": {
+      "RECOVERED": 1,
+      "FAILED_DIFFERENT": 12,
+      "REPEATED_EDIT": 42,
+      "CONTRADICTION": 4,
+      "MALFORMED": 3,
+      "SAFETY_REJECTED": 4,
+      "INFRASTRUCTURE_FAILURE": 0
+    },
+    "safety": {
+      "wrongFileAttempts": 0,
+      "actualSafetyViolations": 0,
+      "rollbackFailures": 0,
+      "safetyRejected": 4
+    },
+    "cost": {
+      "originalCalls": 95,
+      "retryCalls": 66,
+      "maximumTwoCallCalls": 161,
+      "callsPerOriginalTask": 1.694736842105263,
+      "originalPromptTokens": 18140,
+      "originalCompletionTokens": 6120,
+      "originalTotalTokens": 24260,
+      "retryPromptTokens": 35877,
+      "retryCompletionTokens": 4485,
+      "retryTotalTokens": 40362,
+      "maximumTwoCallTotalTokens": 64622,
+      "productTokenMultiplier": 2.6637262984336356,
+      "productTokenOverheadPercent": 166.37262984336357,
+      "retryLatencyMs": 63193.953714,
+      "originalLatencyMs": 83542.10408499998,
+      "maximumTwoCallLatencyMs": 146736.057799,
+      "productLatencyMultiplier": 1.756432393056599,
+      "averageAddedLatencyPerOriginalTaskMs": 665.1995127789475,
+      "addedCallsPerRecoveredTask": 66,
+      "addedTokensPerRecoveredTask": 40362,
+      "eligibleSubset": {
+        "originalTokens": 16880,
+        "maximumTwoCallTokens": 57242,
+        "tokenMultiplier": 3.391113744075829,
+        "originalLatencyMs": 59174.158611999956,
+        "maximumTwoCallLatencyMs": 122368.11232599996,
+        "latencyMultiplier": 2.0679315971074046
+      },
+      "unavailableTelemetry": [
+        "loadTimeMs",
+        "loadedIdleVramMiB",
+        "inferencePeakVramMiB",
+        "ttftMs"
+      ],
+      "retryMedianLatencyMs": 816.828843999996,
+      "retryP95LatencyMs": 2335.0086090000004
+    },
+    "thresholds": {
+      "assistedFloor29": true,
+      "research33": false,
+      "strong40": false,
+      "product57": false,
+      "highestClassification": "ASSISTED_FLOOR"
+    },
+    "retryGate": {
+      "thresholds": {
+        "absoluteRecoveriesMinimum": 10,
+        "recoveryRateMinimum": 0.2,
+        "wrongFileMaximum": 0,
+        "actualSafetyMaximum": 0,
+        "rollbackFailuresMaximum": 0,
+        "repeatedPatchMaximum": 0.25,
+        "contradictionMaximum": 0.2,
+        "tokenMultiplierMaximum": 2,
+        "latencyMultiplierMaximum": 2.5
+      },
+      "checks": {
+        "absoluteRecoveries": false,
+        "recoveryRate": false,
+        "wrongFile": true,
+        "actualSafety": true,
+        "rollback": true,
+        "repeatedPatch": false,
+        "contradiction": true,
+        "tokenMultiplier": false,
+        "latencyMultiplier": true
+      },
+      "passed": false,
+      "classification": "RETRY_NO_MATERIAL_GAIN"
+    },
+    "productDecision": "KEEP_MUTATION_DISABLED",
+    "modelStatus": "BEST_RESEARCH_MODEL__STRONGEST_SCORED_RESEARCH_CANDIDATE_ASSISTED_FLOOR_ONLY",
+    "nextScientificExperiment": "SEMANTIC_FAILURE_DECOMPOSITION"
+  },
+  "interpretationBoundaries": {
+    "noPrivateReasoningInference": true,
+    "repeatedEditMeansExactCanonicalDiffHashEquality": true,
+    "safetyRejectedMeansPolicyBlockedNotUnsafeMutation": true,
+    "taxonomyContradictionCount": 4,
+    "overlappingRawContradictionFlagCount": 5,
+    "detailedSemanticFailureClassificationRetrospectivelyAvailable": false,
+    "reason": "Raw transient patches, source and verifier details were intentionally not persisted; Session C therefore prepares, but does not execute, deterministic semantic decomposition."
+  },
+  "modelCalls": 0
+}

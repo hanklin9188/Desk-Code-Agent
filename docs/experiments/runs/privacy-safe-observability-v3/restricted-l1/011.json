@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 3,
+  "packetLevel": "L1",
+  "identity": {
+    "taskId": "observability-030-a4e5b8b42b10",
+    "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+    "physicalCallId": "privacy-observability-v3-012-ebd3e203-6d24-4c45-b31f-012c9575bc5c",
+    "requestSha256": "f43382028e380ca7c06355c920f73811629aebf61bb7833a9d4be2e129cb1e74",
+    "actionIdentitySha256": "c9b918e17bded7fbe9b4dcb500c5fe3d3999a048d9582969f940d8f2f8b0d9cf"
+  },
+  "evidence": {
+    "schemaVersion": 2,
+    "level": "L1_STRUCTURED_DERIVED_EDIT_FEATURES",
+    "taskId": "observability-030-a4e5b8b42b10",
+    "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+    "physicalCallId": "privacy-observability-v3-012-ebd3e203-6d24-4c45-b31f-012c9575bc5c",
+    "requestSha256": "f43382028e380ca7c06355c920f73811629aebf61bb7833a9d4be2e129cb1e74",
+    "actionIdentitySha256": "c9b918e17bded7fbe9b4dcb500c5fe3d3999a048d9582969f940d8f2f8b0d9cf",
+    "modelResponseStatus": "COMPLETED",
+    "actionParseStatus": "JSON_OBJECT",
+    "actionValidationStatus": "PASS",
+    "replacementPresent": true,
+    "afterSourceParseStatus": "PASS",
+    "astFeaturesAvailable": true,
+    "parserFailureCategory": "NONE",
+    "selectedFile": "src/case-10.mjs",
+    "range": {
+      "startLine": 2,
+      "endLine": 2
+    },
+    "targetSymbol": {
+      "digest": "712bf5a065803b08d4180a5ec15645797fe2a17a191d6e7dd65e99ff1c40a50b",
+      "kind": "function"
+    },
+    "replacementShape": {
+      "bytes": 107,
+      "characters": 107,
+      "lines": 1,
+      "newlines": 0,
+      "whitespaceOnly": false,
+      "indentation": [
+        {
+          "kind": "0",
+          "count": 1
+        }
+      ],
+      "lexicalTokenKinds": [
+        {
+          "kind": "IDENTIFIER",
+          "count": 15
+        },
+        {
+          "kind": "NUMBER",
+          "count": 1
+        }
+      ],
+      "operatorCategories": [
+        {
+          "kind": "-",
+          "count": 1
+        },
+        {
+          "kind": "=>",
+          "count": 1
+        },
+        {
+          "kind": ">",
+          "count": 1
+        }
+      ],
+      "commentTokens": 0,
+      "delimiterBalance": {
+        "parentheses": 0,
+        "brackets": 0,
+        "braces": 0
+      },
+      "identifierDigests": [
+        {
+          "digest": "1c6164a7e9e8f96c8f0e0d5c0166a0be3b2f4d7e1b1ef8000284899a0da3f394",
+          "count": 1
+        },
+        {
+          "digest": "1ebae90dd12d216588ebeba8c352edbf2a27a6d39664ea19534827a2a487847d",
+          "count": 4
+        },
+        {
+          "digest": "38207cd98765495f102334ac4d49475c4c83a8a75035fe344dc1654178760338",
+          "count": 1
+        },
+        {
+          "digest": "39003201a5400c39b445433ba3c599c0048f06433944c7e19c449f0d9e55403f",
+          "count": 1
+        },
+        {
+          "digest": "53be6d5dd9410aabc82f3f2f148f3f0123384ec58500dfd98d3f4811fbc8beb8",
+          "count": 1
+        },
+        {
+          "digest": "7de2b27f74c858c69a30e67eb398e5563b968776d8de09cf269db7332b7cdbee",
+          "count": 1
+        },
+        {
+          "digest": "8004cbed0786d5d89e54f7ca08c1ef57307d473979e1edfbcc854ca9303ab1dc",
+          "count": 1
+        },
+        {
+          "digest": "953d700fcd2a424cb9451fc6661c1ca9d4da5353b31e3c1abd47a4fb78bc78a7",
+          "count": 2
+        },
+        {
+          "digest": "97bfd403c18d29a36525b1eed9466465b9a89ab314ff9be8afe48a4b5f640a6e",
+          "count": 1
+        },
+        {
+          "digest": "ccd017f6014ef76efa7aea95d67b2c55c40c8c7a934d32028f27cf6f9ded6819",
+          "count": 1
+        },
+        {
+          "digest": "d8c46a7224e5383e51cb22245ffa0cede005ca3e35e121b1d0ff365e13bb7528",
+          "count": 1
+        }
+      ],
+      "literalDigests": [
+        {
+          "digest": "619841bdb2dc5364b9789ef53d7df6adb1691fbe6e604becead2bbe87b02a2a9",
+          "count": 1
+        }
+      ]
+    },
+    "astFeatures": {
+      "astNodeChanges": [
+        {
+          "kind": "binary_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "identifier",
+          "before": 7,
+          "after": 8,
+          "delta": 1
+        },
+        {
+          "kind": "member_expression",
+          "before": 3,
+          "after": 4,
+          "delta": 1
+        },
+        {
+          "kind": "property_identifier",
+          "before": 3,
+          "after": 4,
+          "delta": 1
+        }
+      ],
+      "expressionChanges": [
+        {
+          "kind": "binary_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "member_expression",
+          "before": 3,
+          "after": 4,
+          "delta": 1
+        }
+      ],
+      "controlFlowChanges": [],
+      "operatorChanges": [
+        {
+          "kind": "-",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "identifierChanges": [
+        {
+          "digest": "1ebae90dd12d216588ebeba8c352edbf2a27a6d39664ea19534827a2a487847d",
+          "before": 3,
+          "after": 4,
+          "delta": 1
+        },
+        {
+          "digest": "7de2b27f74c858c69a30e67eb398e5563b968776d8de09cf269db7332b7cdbee",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "literalChanges": [
+        {
+          "digest": "43c4200af3cc22f420cf62d5066b6a41a1ce4c7adc0da8b9d80d6faed849ac38",
+          "literalType": "number",
+          "length": 1,
+          "before": 1,
+          "after": 0,
+          "delta": -1
+        },
+        {
+          "digest": "619841bdb2dc5364b9789ef53d7df6adb1691fbe6e604becead2bbe87b02a2a9",
+          "literalType": "number",
+          "length": 1,
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "apiCallChanges": [],
+      "importChanges": []
+    },
+    "canonicalEditSha256": "5570e003f913681a9a71d741dfa5a1c01ada603de152f37269b667b5f21ff6dc",
+    "hashKeyId": "10b76595429d293bbf0364e08dfbd6a62e71f9a5bc6fcc9d01e51213717c2c92",
+    "verification": {
+      "stage": "SUCCESS",
+      "status": "PASS",
+      "code": "ALL_VERIFICATION_PASS",
+      "diagnosticSha256": null
+    },
+    "visibleBehavioralEffect": {
+      "status": "PASS",
+      "category": "PASS",
+      "diagnosticSha256": null
+    },
+    "privacy": {
+      "rawPromptStored": false,
+      "rawModelOutputStored": false,
+      "rawEditBodyStored": false,
+      "rawIdentifiersStored": false,
+      "rawLiteralsStored": false,
+      "commentsStored": false,
+      "sourceStored": false,
+      "rawParserMessageStored": false,
+      "hashKeyStored": false
+    }
+  }
+}

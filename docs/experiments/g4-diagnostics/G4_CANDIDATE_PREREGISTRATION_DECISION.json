@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "status": "NOT_CREATED_NOT_JUSTIFIED",
+  "evaluatedHypothesis": "E-ITER-HYPOTHESIS-V1",
+  "evidence": {
+    "path": "docs/experiments/g4-capability/RETRY_DEPTH_ABLATION.json",
+    "sha256": "7bbee3e67f9350d28c6bfef5121a23d34d26cc85c021e4973ca9d6546de89361"
+  },
+  "failedGate": {
+    "improvement2Vs1Pp": 0,
+    "recovery2": 0,
+    "repeated2": 0,
+    "contradiction2": 1,
+    "safety2": 0,
+    "tokenRatio2Vs1": 2.2376141441616473,
+    "improvement3Vs2Pp": 0,
+    "passed": false,
+    "thirdCallJustified": false
+  },
+  "candidatesPreserved": [
+    "E-MIN-V2",
+    "E-MIN-V3"
+  ],
+  "futureHoldoutCreated": false,
+  "explanation": "The user required a candidate preregistration only if justified. Behavioral success and retry gates failed, so creating a candidate ID/hash would misrepresent evidence."
+}

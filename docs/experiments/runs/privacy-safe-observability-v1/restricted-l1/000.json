@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "packetLevel": "L1",
+  "requestSha256": "170cca5dfe2b09e33e17a1d7cadaf515dbd39c135e7bff142181988c5b9294fe",
+  "actionIdentitySha256": "b465d63132dd6a85358687da3a5c52e00f61c2ba2f6a5aaf8a96cad983a55b76",
+  "evidence": {
+    "schemaVersion": 1,
+    "level": "L1_STRUCTURED_DERIVED_EDIT_FEATURES",
+    "taskId": "observability-001-acdea14a8297",
+    "repositoryRevision": "sha256:6f1ef98cda52259b29d2af6245eab3f665892981f240830da5c5f16469e55ee7",
+    "physicalCallId": "privacy-observability-001-a43e1322-f962-42ba-b6b7-506cceef884a",
+    "selectedFile": "src/case-1.mjs",
+    "range": {
+      "startLine": 2,
+      "endLine": 2
+    },
+    "targetSymbol": null,
+    "replacement": {
+      "bytes": 88,
+      "characters": 88,
+      "lines": 1
+    },
+    "astNodeChanges": [
+      {
+        "kind": "binary_expression",
+        "before": 1,
+        "after": 3,
+        "delta": 2
+      },
+      {
+        "kind": "identifier",
+        "before": 5,
+        "after": 7,
+        "delta": 2
+      },
+      {
+        "kind": "parenthesized_expression",
+        "before": 0,
+        "after": 2,
+        "delta": 2
+      }
+    ],
+    "expressionChanges": [
+      {
+        "kind": "binary_expression",
+        "before": 1,
+        "after": 3,
+        "delta": 2
+      }
+    ],
+    "controlFlowChanges": [],
+    "operatorChanges": [
+      {
+        "kind": "%",
+        "before": 1,
+        "after": 2,
+        "delta": 1
+      },
+      {
+        "kind": "+",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      }
+    ],
+    "identifierChanges": [
+      {
+        "digest": "654106836cf2a60f7354b066f9d403417d5c3b9dca4e874494a3cb1af3b93bd3",
+        "before": 2,
+        "after": 4,
+        "delta": 2
+      }
+    ],
+    "literalChanges": [],
+    "apiCallChanges": [],
+    "importChanges": [],
+    "canonicalEditSha256": "c447ca356a83f699bb9b69be1da3879b4164015fb663fe9e86a0e2041cd11145",
+    "hashKeyId": "c79cf8ff23bab10f247c660a6db0907bf9e80af8400c36becf649338d5ebfbfb",
+    "verification": {
+      "stage": "SUCCESS",
+      "status": "PASS",
+      "code": "ALL_VERIFICATION_PASS",
+      "diagnosticSha256": null
+    },
+    "visibleBehavioralEffect": {
+      "status": "PASS",
+      "category": "PASS",
+      "diagnosticSha256": null
+    },
+    "privacy": {
+      "rawPromptStored": false,
+      "rawModelOutputStored": false,
+      "rawEditBodyStored": false,
+      "rawIdentifiersStored": false,
+      "rawLiteralsStored": false,
+      "commentsStored": false,
+      "sourceStored": false
+    }
+  }
+}

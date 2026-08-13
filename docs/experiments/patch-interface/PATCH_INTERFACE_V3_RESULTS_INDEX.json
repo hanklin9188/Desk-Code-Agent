@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "indexId": "dca-patch-interface-v3-results-index",
+  "generatedAt": "2026-08-11T01:11:15.543Z",
+  "status": "PASS_PRIMARY_COMPLETE_CONDITIONAL_CONTINUATION_REQUIRED",
+  "lineage": {
+    "historicalExcluded": 7,
+    "baselineValidPrimary": 420,
+    "coderValidPrimary": 420,
+    "validPrimary": 840,
+    "physicalLineage": 847
+  },
+  "artifacts": {
+    "pipelineFailureMatrix": {
+      "path": "docs/experiments/patch-interface/PATCH_PIPELINE_FAILURE_MATRIX.v3.json",
+      "sha256": "47afc2cf352b6f7eec7a5a21755f719e5b97fb1783e26b64988527273fab079c"
+    },
+    "results": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_V3_RESULTS.json",
+      "sha256": "597de4d4f71d8b2def5410b75f43fc85098cbeaea68d513400e669936252478e"
+    },
+    "promotionDecision": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_V3_PROMOTION_DECISION.json",
+      "sha256": "668ed05945c5f0f4747d4b651cc4bdb30e2dde76f7ba1fc8aac6c8af631624b7"
+    }
+  },
+  "decision": "E_EDIT_JUSTIFIED",
+  "selectedInterface": "P2_MINIMAL",
+  "nextGate": "FREEZE_E_EDIT_AND_PREREGISTER_NORMAL_RETRIEVAL_BEFORE_ANY_SECONDARY_CALL",
+  "productPolicyUnchanged": true
+}

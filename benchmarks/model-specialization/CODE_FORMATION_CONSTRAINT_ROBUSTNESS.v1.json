@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "cases": [
+    {
+      "id": "valid",
+      "expected": "ACCEPTED",
+      "observed": "ACCEPTED",
+      "deterministic": true,
+      "crashed": false,
+      "replacementRewritten": false
+    },
+    {
+      "id": "malformed",
+      "expected": "BASE_P2_REJECTED",
+      "observed": "BASE_P2_REJECTED",
+      "deterministic": true,
+      "crashed": false,
+      "replacementRewritten": false
+    },
+    {
+      "id": "indentation",
+      "expected": "AFTER_SOURCE_PARSE_ERROR",
+      "observed": "AFTER_SOURCE_PARSE_ERROR",
+      "deterministic": true,
+      "crashed": false,
+      "replacementRewritten": false
+    },
+    {
+      "id": "delimiter",
+      "expected": "AFTER_SOURCE_PARSE_ERROR",
+      "observed": "AFTER_SOURCE_PARSE_ERROR",
+      "deterministic": true,
+      "crashed": false,
+      "replacementRewritten": false
+    },
+    {
+      "id": "incomplete_expression",
+      "expected": "AFTER_SOURCE_PARSE_ERROR",
+      "observed": "AFTER_SOURCE_PARSE_ERROR",
+      "deterministic": true,
+      "crashed": false,
+      "replacementRewritten": false
+    },
+    {
+      "id": "empty",
+      "expected": "EMPTY_REPLACEMENT",
+      "observed": "EMPTY_REPLACEMENT",
+      "deterministic": true,
+      "crashed": false,
+      "replacementRewritten": false
+    },
+    {
+      "id": "whitespace",
+      "expected": "WHITESPACE_ONLY_REPLACEMENT",
+      "observed": "WHITESPACE_ONLY_REPLACEMENT",
+      "deterministic": true,
+      "crashed": false,
+      "replacementRewritten": false
+    },
+    {
+      "id": "parser_edge_regex",
+      "expected": "ACCEPTED",
+      "observed": "ACCEPTED",
+      "deterministic": true,
+      "crashed": false,
+      "replacementRewritten": false
+    },
+    {
+      "id": "parser_edge_template",
+      "expected": "ACCEPTED",
+      "observed": "ACCEPTED",
+      "deterministic": true,
+      "crashed": false,
+      "replacementRewritten": false
+    },
+    {
+      "id": "wrong_file",
+      "expected": "BASE_P2_REJECTED",
+      "observed": "BASE_P2_REJECTED",
+      "deterministic": true,
+      "crashed": false,
+      "replacementRewritten": false
+    }
+  ],
+  "crashes": 0,
+  "nondeterminism": 0,
+  "semanticRewrites": 0,
+  "privacyLeaks": 0,
+  "unsafeFileExpansions": 0
+}

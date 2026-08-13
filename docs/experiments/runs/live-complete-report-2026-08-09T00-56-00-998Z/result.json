@@ -1,0 +1,1439 @@
+{
+  "schemaVersion": 1,
+  "runId": "live-complete-report-2026-08-09T00-56-00-998Z",
+  "status": "PASS",
+  "timestamp": "2026-08-09T00:56:00.998Z",
+  "model": {
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "backend": "vllm-0.26.0"
+  },
+  "report": {
+    "repository": "desk-code-agent-v2",
+    "sectionCounts": {
+      "Executive Summary": 1,
+      "Repository Overview": 18,
+      "Architecture": 68,
+      "Code Quality": 30,
+      "Testing": 19,
+      "Security/Risk": 56,
+      "Performance Hypotheses": 8,
+      "Technical Debt": 12,
+      "Priority Recommendations": 12,
+      "Onboarding Guide": 5,
+      "Evidence Appendix": 1
+    },
+    "metrics": {
+      "filesScanned": 247,
+      "claims": 230,
+      "citedClaims": 220,
+      "citationCoverage": 0.9565217391304348,
+      "unsupportedClaims": 0
+    }
+  },
+  "validation": {
+    "modelClaims": 7,
+    "citedModelClaims": 7,
+    "unknownCitations": 0,
+    "unsupportedClaimsPresentedAsDeterministic": 0,
+    "labels": [
+      "DETERMINISTIC_EVIDENCE",
+      "HYPOTHESIS",
+      "UNKNOWN",
+      "MODEL_INFERENCE"
+    ]
+  },
+  "telemetry": {
+    "promptTokens": 2603,
+    "completionTokens": 709,
+    "latencyMs": 12206.272596
+  },
+  "evidenceLedger": [
+    {
+      "id": "evidence_1360feaf6ccf",
+      "path": "README.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "cd14c5f561aae4e317fea9ad45c42a51176a7544883e8873d830269db63ff18a"
+    },
+    {
+      "id": "evidence_4226f1f991ef",
+      "path": "apps/desktop/src-tauri/Cargo.toml",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "59567b2528122eb04e26829123b43380c5da3a96f660f0e95d3b594536b68cca"
+    },
+    {
+      "id": "evidence_f5d57590cf6b",
+      "path": "package.json",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "3df6ecb51c7828fcd7cdb537815bb48a5ed35188bcea7b3dffcb2ed59fe47adc"
+    },
+    {
+      "id": "evidence_7cc9778fde02",
+      "path": "runtime/model/pyproject.toml",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "4d8a29ebbe82a7a74e74c0d05c6d3ef4c41f3c60685e1c804b8196f9f57f66c4"
+    },
+    {
+      "id": "evidence_a1086d612c0c",
+      "path": "apps/desktop/src-tauri/src/main.rs",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "6199e3de082dc24c119b195bcf9f5b3e3c0a60fd5b4278685fa9f7257371ef27"
+    },
+    {
+      "id": "evidence_f6de80768d27",
+      "path": "apps/desktop/src/app/App.tsx",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "95436985202845fb8da780fdbdd5adb661c58cfbaebeaa2be9f83fb6b18b64e9"
+    },
+    {
+      "id": "evidence_23951865c610",
+      "path": "apps/desktop/src/main.tsx",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "64b597ccee16c24871c47a583f76b9d00838a1e4ec07f7ffdd72cfdd3d4da51b"
+    },
+    {
+      "id": "evidence_911d69845c39",
+      "path": "packages/contracts/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "c9a1a6ee177bb9316086e1955ff4188b79ef9fe04b8f84b1c0b05be3a03bc50d"
+    },
+    {
+      "id": "evidence_8276853dda72",
+      "path": "packages/event-protocol/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "05c5ab15dcf0520f075f10a6760d8fdb941d661c324c9a35198bafac1d30409b"
+    },
+    {
+      "id": "evidence_af8d01e09e67",
+      "path": "services/agent-runtime/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "1111f03e4e6f9c6a71b4066bc0c8b4e1a00f11075ea12ea566d3b0835d363948"
+    },
+    {
+      "id": "evidence_fb7bc3644521",
+      "path": "services/analysis-runtime/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "62ab9aaf6cc2ee22eda3575a0436aa7be8f6a9f65af25fd90f057ec05a912e8f"
+    },
+    {
+      "id": "evidence_d57adfcae5ff",
+      "path": "services/github-delivery/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "84ded0275b531ae5e415b1bf063a2ffdeddba84ab90804cd8aac957b6ae7923f"
+    },
+    {
+      "id": "evidence_b2ddb89d3a02",
+      "path": "services/model-gateway/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "1b85e99ead2ec6aca1440a803377305d80127d7a76d3dc0e7330d2c68fdf76cd"
+    },
+    {
+      "id": "evidence_7582617b8fa5",
+      "path": "services/repo-intelligence/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "b481d5488bbe91b1c47851baafdd46e9ba5bcc92e952e9d13e58fa907dd076eb"
+    },
+    {
+      "id": "evidence_89b5bc003449",
+      "path": "services/review-runtime/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "18a3bb54b6f7647fe815b687e039a1ccd2f17cfb8c1e950932a882bacce7e903"
+    },
+    {
+      "id": "evidence_e0b178dd436a",
+      "path": "services/skill-runtime/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "e2ac58a3607c132a68ab77cae0ef10f5dfb5d4e6f96b9ae193b80b3818486cc9"
+    },
+    {
+      "id": "evidence_1efd7910b2eb",
+      "path": "apps/desktop/src-tauri/Cargo.toml",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "59567b2528122eb04e26829123b43380c5da3a96f660f0e95d3b594536b68cca"
+    },
+    {
+      "id": "evidence_05c6f633690b",
+      "path": "AGENTS.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "d0538d9dc4105dae852e48edceda55b94ccd48ad2c3585ffed394809b538551f"
+    },
+    {
+      "id": "evidence_7d0b4875fef9",
+      "path": "CONTEXT.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "9775d57677541db0e97aa01558433f8113c74ad5c9bbfbcbe0a7284b472651bb"
+    },
+    {
+      "id": "evidence_16ee28a4b9ff",
+      "path": "DESIGN_CHANGELOG_V2.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "fa55d2224986447120837cb54e5f38975ea79e76cce34ee5c045a889c3fe1261"
+    },
+    {
+      "id": "evidence_48838e8f4507",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_e513b92fd86d",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_c63592a4323d",
+      "path": "GITHUB_SYNC_POLICY.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "46e8c2f5f73fed1a031451e6236c01f1d28d5656219d411a2679b64aebf658e3"
+    },
+    {
+      "id": "evidence_9d3697812488",
+      "path": "IMPLEMENTATION_BACKLOG.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "b372c0f09f8ac7179864984796b8428f6269065bc0bf02ed9e1b8f9198582c74"
+    },
+    {
+      "id": "evidence_7d22eee68d20",
+      "path": "MANIFEST.json",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "023336a1bd48236c99bc323099aeac91ea2371cec0445a0158610fa42e033104"
+    },
+    {
+      "id": "evidence_76684f4085f8",
+      "path": "README.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "cd14c5f561aae4e317fea9ad45c42a51176a7544883e8873d830269db63ff18a"
+    },
+    {
+      "id": "evidence_a8a6304d398e",
+      "path": "SOURCE_BASELINE.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "46f0328ddcaef07c97f01ac03c2a3acb46ebf9fec6841414cb587f1ae02fbd8a"
+    },
+    {
+      "id": "evidence_98ef24df95cc",
+      "path": "THIRD_PARTY_NOTICES.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "f5491a7bd14571514f73a8a245c44d1f89595ac5b9c3ebd37e453f28d4af796e"
+    },
+    {
+      "id": "evidence_d404baefa2c4",
+      "path": "VALIDATION_REPORT.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "2a763bef016e5bc2e527caacc3fad6d4e721755ca89907c560b603b3e597077f"
+    },
+    {
+      "id": "evidence_5dbd965ae06d",
+      "path": "adrs/0001-shared-model-logical-agents.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "37034f0f606e172bd05ccc0a18322e0034ce6b9a72bf59c0f3aa0d6cb06cc44f"
+    },
+    {
+      "id": "evidence_010b50242d55",
+      "path": "agents/CODER.agent.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "eedc6765fa3133e1c815728441e977041570bfe8839e42b557bf7308026f77e2"
+    },
+    {
+      "id": "evidence_a219a965c529",
+      "path": "apps/desktop/src-tauri/Cargo.toml",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "59567b2528122eb04e26829123b43380c5da3a96f660f0e95d3b594536b68cca"
+    },
+    {
+      "id": "evidence_dff879e1140b",
+      "path": "benchmarks/EVALUATION_PROTOCOL.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "943c4b1b5dd46e2153205453da99c675326136351a555ab52c92a1104a73eb58"
+    },
+    {
+      "id": "evidence_b5d459932160",
+      "path": "checklists/GITHUB_MILESTONES.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "41f3532e622a5626c007332cbcce74efbb8c94910a12c38ff88f3e70a2e2182c"
+    },
+    {
+      "id": "evidence_849af95aab2a",
+      "path": "config/agent_profiles.example.yaml",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "4ad97c6a14a60e2bfed3480e5a2807308a28978f391106d30758b65c5fcd7165"
+    },
+    {
+      "id": "evidence_0dfaa158a766",
+      "path": "docs/00_DOCUMENT_MAP.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "7ec5f4e4e5c87e61a8dcda3a0c0b44b199d41d27236dc5afc7b8f618ba54a16e"
+    },
+    {
+      "id": "evidence_6d92da786375",
+      "path": "implementation/ACCEPTANCE_TESTS.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "a9bd7c733b592fcc11eb3fbf9c3052ff82639881914917e9df381822f4b0419d"
+    },
+    {
+      "id": "evidence_d01d5a404bec",
+      "path": "apps/desktop/src/app/App.tsx",
+      "startLine": 2,
+      "endLine": 4,
+      "hash": "95436985202845fb8da780fdbdd5adb661c58cfbaebeaa2be9f83fb6b18b64e9"
+    },
+    {
+      "id": "evidence_c7620a656994",
+      "path": "apps/desktop/src/app/App.tsx",
+      "startLine": 3,
+      "endLine": 5,
+      "hash": "95436985202845fb8da780fdbdd5adb661c58cfbaebeaa2be9f83fb6b18b64e9"
+    },
+    {
+      "id": "evidence_d48945efb2ed",
+      "path": "apps/desktop/src/app/App.tsx",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "95436985202845fb8da780fdbdd5adb661c58cfbaebeaa2be9f83fb6b18b64e9"
+    },
+    {
+      "id": "evidence_2afabcd7fa0a",
+      "path": "apps/desktop/src/app/App.tsx",
+      "startLine": 6,
+      "endLine": 8,
+      "hash": "95436985202845fb8da780fdbdd5adb661c58cfbaebeaa2be9f83fb6b18b64e9"
+    },
+    {
+      "id": "evidence_b3e1eac6ed93",
+      "path": "apps/desktop/src/app/App.tsx",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "95436985202845fb8da780fdbdd5adb661c58cfbaebeaa2be9f83fb6b18b64e9"
+    },
+    {
+      "id": "evidence_2e220d83591d",
+      "path": "apps/desktop/src/app/Views.tsx",
+      "startLine": 2,
+      "endLine": 4,
+      "hash": "599096ed703b4b42ccc1e71d88c03db67dbd27a14b713a27a7bea159b4049356"
+    },
+    {
+      "id": "evidence_c14827ca6c13",
+      "path": "apps/desktop/src/app/Views.tsx",
+      "startLine": 3,
+      "endLine": 5,
+      "hash": "599096ed703b4b42ccc1e71d88c03db67dbd27a14b713a27a7bea159b4049356"
+    },
+    {
+      "id": "evidence_808aaea28df3",
+      "path": "apps/desktop/src/app/Views.tsx",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "599096ed703b4b42ccc1e71d88c03db67dbd27a14b713a27a7bea159b4049356"
+    },
+    {
+      "id": "evidence_1ce7508a2474",
+      "path": "apps/desktop/src/app/Views.tsx",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "599096ed703b4b42ccc1e71d88c03db67dbd27a14b713a27a7bea159b4049356"
+    },
+    {
+      "id": "evidence_267dee9e6d76",
+      "path": "apps/desktop/src/app/demo.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "d6f11d470a4020ad7baa64f4f2625bcafefd1427b827bb4369bdaae4f152de65"
+    },
+    {
+      "id": "evidence_4ff838141588",
+      "path": "apps/desktop/src/main.tsx",
+      "startLine": 3,
+      "endLine": 5,
+      "hash": "64b597ccee16c24871c47a583f76b9d00838a1e4ec07f7ffdd72cfdd3d4da51b"
+    },
+    {
+      "id": "evidence_787b096f93c5",
+      "path": "packages/event-protocol/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "05c5ab15dcf0520f075f10a6760d8fdb941d661c324c9a35198bafac1d30409b"
+    },
+    {
+      "id": "evidence_4b3047cf4ca0",
+      "path": "scripts/run_deterministic_benchmarks.ts",
+      "startLine": 7,
+      "endLine": 9,
+      "hash": "1bdd1507aa9ba516072590f67d40fd2d54df9cfdebe1cb6eb462358b3ebb660b"
+    },
+    {
+      "id": "evidence_7c159f954324",
+      "path": "scripts/run_deterministic_benchmarks.ts",
+      "startLine": 6,
+      "endLine": 8,
+      "hash": "1bdd1507aa9ba516072590f67d40fd2d54df9cfdebe1cb6eb462358b3ebb660b"
+    },
+    {
+      "id": "evidence_70aead988b53",
+      "path": "scripts/run_deterministic_benchmarks.ts",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "1bdd1507aa9ba516072590f67d40fd2d54df9cfdebe1cb6eb462358b3ebb660b"
+    },
+    {
+      "id": "evidence_c88becf67ebd",
+      "path": "scripts/run_deterministic_benchmarks.ts",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "1bdd1507aa9ba516072590f67d40fd2d54df9cfdebe1cb6eb462358b3ebb660b"
+    },
+    {
+      "id": "evidence_86a59d9d26ca",
+      "path": "scripts/run_live_analysis.ts",
+      "startLine": 3,
+      "endLine": 5,
+      "hash": "e8c06e5f5ba975cbaf5beef89a9facf33cfd2abad42cafd582b6caa1edc5e370"
+    },
+    {
+      "id": "evidence_33e3fdc5edbc",
+      "path": "scripts/run_live_analysis.ts",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "e8c06e5f5ba975cbaf5beef89a9facf33cfd2abad42cafd582b6caa1edc5e370"
+    },
+    {
+      "id": "evidence_07c1244dc089",
+      "path": "scripts/run_live_complete_report.ts",
+      "startLine": 3,
+      "endLine": 5,
+      "hash": "9382a059cd7b6edde3f726716aa0db62e4b33f891c07a2c7dd88de7dfed211f9"
+    },
+    {
+      "id": "evidence_6731125ef47d",
+      "path": "scripts/run_live_complete_report.ts",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "9382a059cd7b6edde3f726716aa0db62e4b33f891c07a2c7dd88de7dfed211f9"
+    },
+    {
+      "id": "evidence_6aa6f4ec2a2b",
+      "path": "scripts/run_live_model_probe.ts",
+      "startLine": 6,
+      "endLine": 8,
+      "hash": "68c7089ad69368989e9881894ab50c717fe426c5100cabc8d2f48d99be342f86"
+    },
+    {
+      "id": "evidence_8b8241fa83eb",
+      "path": "scripts/run_m3_incremental_benchmark.ts",
+      "startLine": 8,
+      "endLine": 10,
+      "hash": "05703737973dbf29d41ed52e0ed9eed7952b81e8325f7e1b7bf447e71f014567"
+    },
+    {
+      "id": "evidence_3d61232bf6e4",
+      "path": "scripts/run_m4_report_corpus.ts",
+      "startLine": 8,
+      "endLine": 10,
+      "hash": "02cb98bf8bcabc623b3ee27b1a0562c4e661cc038523ac13849bde89abe8bc2d"
+    },
+    {
+      "id": "evidence_7af677e8f9b9",
+      "path": "services/agent-runtime/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "1111f03e4e6f9c6a71b4066bc0c8b4e1a00f11075ea12ea566d3b0835d363948"
+    },
+    {
+      "id": "evidence_48cdddf83ffb",
+      "path": "services/agent-runtime/src/index.ts",
+      "startLine": 2,
+      "endLine": 4,
+      "hash": "1111f03e4e6f9c6a71b4066bc0c8b4e1a00f11075ea12ea566d3b0835d363948"
+    },
+    {
+      "id": "evidence_870ee59cd55e",
+      "path": "services/analysis-runtime/src/index.ts",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "62ab9aaf6cc2ee22eda3575a0436aa7be8f6a9f65af25fd90f057ec05a912e8f"
+    },
+    {
+      "id": "evidence_421403e79baa",
+      "path": "services/analysis-runtime/src/index.ts",
+      "startLine": 6,
+      "endLine": 8,
+      "hash": "62ab9aaf6cc2ee22eda3575a0436aa7be8f6a9f65af25fd90f057ec05a912e8f"
+    },
+    {
+      "id": "evidence_2b282b4ddd19",
+      "path": "services/analysis-runtime/src/index.ts",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "62ab9aaf6cc2ee22eda3575a0436aa7be8f6a9f65af25fd90f057ec05a912e8f"
+    },
+    {
+      "id": "evidence_96059a84d591",
+      "path": "services/repo-intelligence/src/index.ts",
+      "startLine": 10,
+      "endLine": 12,
+      "hash": "b481d5488bbe91b1c47851baafdd46e9ba5bcc92e952e9d13e58fa907dd076eb"
+    },
+    {
+      "id": "evidence_0ee805582e7b",
+      "path": "services/review-runtime/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "18a3bb54b6f7647fe815b687e039a1ccd2f17cfb8c1e950932a882bacce7e903"
+    },
+    {
+      "id": "evidence_790b42f71a33",
+      "path": "packages/contracts/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "c9a1a6ee177bb9316086e1955ff4188b79ef9fe04b8f84b1c0b05be3a03bc50d"
+    },
+    {
+      "id": "evidence_32756ffeaffd",
+      "path": "services/repo-intelligence/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "b481d5488bbe91b1c47851baafdd46e9ba5bcc92e952e9d13e58fa907dd076eb"
+    },
+    {
+      "id": "evidence_9fd60e32f4f4",
+      "path": "packages/event-protocol/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "05c5ab15dcf0520f075f10a6760d8fdb941d661c324c9a35198bafac1d30409b"
+    },
+    {
+      "id": "evidence_7769c44a9a07",
+      "path": "services/model-gateway/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "1b85e99ead2ec6aca1440a803377305d80127d7a76d3dc0e7330d2c68fdf76cd"
+    },
+    {
+      "id": "evidence_8b8b74a37ef0",
+      "path": "services/analysis-runtime/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "62ab9aaf6cc2ee22eda3575a0436aa7be8f6a9f65af25fd90f057ec05a912e8f"
+    },
+    {
+      "id": "evidence_7583b0d3775f",
+      "path": "apps/desktop/src/app/App.tsx",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "95436985202845fb8da780fdbdd5adb661c58cfbaebeaa2be9f83fb6b18b64e9"
+    },
+    {
+      "id": "evidence_fdf1e096ab9d",
+      "path": "AGENTS.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "d0538d9dc4105dae852e48edceda55b94ccd48ad2c3585ffed394809b538551f"
+    },
+    {
+      "id": "evidence_1fd91b4953f5",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_c7ddaa24ac36",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_e4ea7c3ae1fe",
+      "path": "MANIFEST.json",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "023336a1bd48236c99bc323099aeac91ea2371cec0445a0158610fa42e033104"
+    },
+    {
+      "id": "evidence_b922ffefc645",
+      "path": "docs/07_UI_UX_MOTION.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "6773786ceaad7c47d98b18e3a6e763d8882cc75bb41d7012073f61231215bc5f"
+    },
+    {
+      "id": "evidence_e58bcc1f01bc",
+      "path": "docs/validation/2026-08-09-implementation-session.md",
+      "startLine": 29,
+      "endLine": 31,
+      "hash": "2ad9a849485e490c588ec663975e207152cdc481c41f48e56b2b08d4f4968bd2"
+    },
+    {
+      "id": "evidence_9db26f3732ec",
+      "path": "package-lock.json",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2"
+    },
+    {
+      "id": "evidence_8c4dd15c2369",
+      "path": "services/analysis-runtime/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "62ab9aaf6cc2ee22eda3575a0436aa7be8f6a9f65af25fd90f057ec05a912e8f"
+    },
+    {
+      "id": "evidence_ad35250cae37",
+      "path": "services/analysis-runtime/src/index.ts",
+      "startLine": 138,
+      "endLine": 140,
+      "hash": "62ab9aaf6cc2ee22eda3575a0436aa7be8f6a9f65af25fd90f057ec05a912e8f"
+    },
+    {
+      "id": "evidence_d66de27a513e",
+      "path": "services/repo-intelligence/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "b481d5488bbe91b1c47851baafdd46e9ba5bcc92e952e9d13e58fa907dd076eb"
+    },
+    {
+      "id": "evidence_639d5e9b8d1a",
+      "path": "skills/catalog.yaml",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "4ea2ccfa5d87a925a0a9145399bc3280fd84be6173050cab7097c05fdf5ee3e5"
+    },
+    {
+      "id": "evidence_7865e1155fa1",
+      "path": "skills/development/d03-decision-prototype/SKILL.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "27a279af768236c69b73231ccf1efc37e26783fcc2519a469112f406061debb4"
+    },
+    {
+      "id": "evidence_80808c7fae7d",
+      "path": "skills/development/d04-implementation-orchestration/SKILL.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "939070d2aeac1915cec65ee3f8af797275361e05e5fb903da6b1e3114bb824c3"
+    },
+    {
+      "id": "evidence_88bc89604850",
+      "path": "skills/development/d06-disciplined-diagnosis/SKILL.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "a2227ed36f63a249a9e9cfcf73c47f3130728f8bd016ca59f8b2008d8ffbf5e3"
+    },
+    {
+      "id": "evidence_9aaf21b4bda7",
+      "path": "skills/development/d07-dual-axis-review/SKILL.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "3b9807f5871319d9bfa35d3dccd965bc2bd043d75cffc3bd27baf93cab5ef4da"
+    },
+    {
+      "id": "evidence_24ba176cc3fc",
+      "path": "skills/development/d08-deep-module-tool-surface/SKILL.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "7059383dd4b73b279e7cfa26d108fa205181f4ea1905c5f7669ee70316d272c2"
+    },
+    {
+      "id": "evidence_a678b70eaf05",
+      "path": "skills/development/d09-agent-document-authoring/SKILL.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "e2eb232c2c082c6c3f17b12625d5c4aaa98f1231821785b2c9fca5b944914b08"
+    },
+    {
+      "id": "evidence_6b3cbc0612c9",
+      "path": "skills/development/d11-milestone-handoff-github-checkpoint/SKILL.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "7035b6d6246f97e60863ce934abf713becda0e4fe09298863aafea02d5084603"
+    },
+    {
+      "id": "evidence_bd845693a1d3",
+      "path": "skills/runtime/r27-github-delivery/SKILL.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "ef64739dd0ed107640aafa7e5452f5e6ebdf48abcc02f095ebf790c19edd643b"
+    },
+    {
+      "id": "evidence_1fc81a576adb",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 6,
+      "endLine": 8,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_c57f99c79117",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 6,
+      "endLine": 8,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_18ae239ba606",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 7,
+      "endLine": 9,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_fdf980b7ab34",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 7,
+      "endLine": 9,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_77532b8fdf5b",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 18,
+      "endLine": 20,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_40ef48635503",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 18,
+      "endLine": 20,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_123e9a606c1c",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 20,
+      "endLine": 22,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_04330660dba2",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 20,
+      "endLine": 22,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_d31084abe8da",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 28,
+      "endLine": 30,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_bb394187f6c5",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 28,
+      "endLine": 30,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_5ea116eaad58",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 36,
+      "endLine": 38,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_b40584d7bd82",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 36,
+      "endLine": 38,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_d512ed74867f",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 49,
+      "endLine": 51,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_9d44cfbdb687",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 49,
+      "endLine": 51,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_71c5aee2baa0",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 51,
+      "endLine": 53,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_4f37bb944efb",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 51,
+      "endLine": 53,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_c3c5c4c475f5",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 52,
+      "endLine": 54,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_e8980f8642e1",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 52,
+      "endLine": 54,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_4b7ddc8838e1",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 53,
+      "endLine": 55,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_b94d4bce29ac",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 53,
+      "endLine": 55,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484"
+    },
+    {
+      "id": "evidence_e415ef33a761",
+      "path": "tests/accessibility.test.tsx",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "0a76a363aefc3da91a894a9d0fdaab8847b2c5b2df96331e15d888f8ab55527c"
+    },
+    {
+      "id": "evidence_b45ba443c148",
+      "path": "tests/analysis-runtime.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "11cb4352874b6d90fd5d9669aebc082b4b1a6dfe85527baf0c11888ea27c0ab3"
+    },
+    {
+      "id": "evidence_23e710a3d060",
+      "path": "tests/app.test.tsx",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "d922e63e4fb83f09b843951e7550ea2ea018cab871c161d5e293e7cc314b5adc"
+    },
+    {
+      "id": "evidence_4d777e0722b6",
+      "path": "tests/event-protocol.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "769d6f17f4686efa856681eb833e80ab635f91d3298ad005227a6c9b65b9f6c6"
+    },
+    {
+      "id": "evidence_c4c3574dc6f1",
+      "path": "tests/github-delivery.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "49ef2d7ee0ee825bca1957b8d1b4ad56d7ae8a7ee5ab0a960a2e0278534a9ddf"
+    },
+    {
+      "id": "evidence_64275a4a3c1b",
+      "path": "tests/model-gateway.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "a7f2b638e566bfb9d42cf571de374b72b0902da5a4b71eddf92d8b5121929a67"
+    },
+    {
+      "id": "evidence_07ea4bfa7e26",
+      "path": "tests/repo-intelligence.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "fdd31e7c67ffaad127e95b3cea00d65715dbffcefbfbdcae70ac200ef17069a9"
+    },
+    {
+      "id": "evidence_69c9947ac306",
+      "path": "tests/review-runtime.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "2fc8b52b32f89a4570398bddb872fba2979f3f59d971604374bf85d870dd8bb7"
+    },
+    {
+      "id": "evidence_a388d1fbd3a6",
+      "path": "tests/accessibility.test.tsx",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "0a76a363aefc3da91a894a9d0fdaab8847b2c5b2df96331e15d888f8ab55527c"
+    },
+    {
+      "id": "evidence_fe406a95942e",
+      "path": "tests/analysis-runtime.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "11cb4352874b6d90fd5d9669aebc082b4b1a6dfe85527baf0c11888ea27c0ab3"
+    },
+    {
+      "id": "evidence_683459d7391f",
+      "path": "tests/app.test.tsx",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "d922e63e4fb83f09b843951e7550ea2ea018cab871c161d5e293e7cc314b5adc"
+    },
+    {
+      "id": "evidence_b757624ad488",
+      "path": "tests/event-protocol.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "769d6f17f4686efa856681eb833e80ab635f91d3298ad005227a6c9b65b9f6c6"
+    },
+    {
+      "id": "evidence_f203645d6857",
+      "path": "tests/github-delivery.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "49ef2d7ee0ee825bca1957b8d1b4ad56d7ae8a7ee5ab0a960a2e0278534a9ddf"
+    },
+    {
+      "id": "evidence_bee449ea5b59",
+      "path": "tests/model-gateway.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "a7f2b638e566bfb9d42cf571de374b72b0902da5a4b71eddf92d8b5121929a67"
+    },
+    {
+      "id": "evidence_ae4bef1e3659",
+      "path": "tests/repo-intelligence.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "fdd31e7c67ffaad127e95b3cea00d65715dbffcefbfbdcae70ac200ef17069a9"
+    },
+    {
+      "id": "evidence_8a273fff771d",
+      "path": "tests/review-runtime.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "2fc8b52b32f89a4570398bddb872fba2979f3f59d971604374bf85d870dd8bb7"
+    },
+    {
+      "id": "evidence_e6f971ca52ab",
+      "path": "tests/runtime.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "3bb0996ecca49c8e4eb26f87d7c7805671f66315f86b9a60b40238c6d6f5db31"
+    },
+    {
+      "id": "evidence_861a1b345714",
+      "path": "tests/skill-runtime.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "a020e23cb244191418a9647cf43054d9bc6a1910e998d9804182dae9271e7d11"
+    },
+    {
+      "id": "evidence_e8ba1de186a3",
+      "path": "tests/tool-runtime.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "1ed52ba32c34cce1413bf292c7bc2cdd8058e0c848d2dc37fb2de905287311e3"
+    },
+    {
+      "id": "evidence_5b6b8b57786f",
+      "path": "tests/verification.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "85021dfb25b2386e7a3b9c29b822df33535264deff683e8bf16150e47e5bc432"
+    },
+    {
+      "id": "evidence_80168f292eed",
+      "path": "tests/workspace-index.test.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "99a82ffb728846536c692cd5c4a6a5c983bfd8526822f8814cdeb50b3585aed0"
+    },
+    {
+      "id": "evidence_359fed960299",
+      "path": "apps/desktop/src-tauri/capabilities/default.json",
+      "startLine": 2,
+      "endLine": 4,
+      "hash": "945240b9793545a50322d99a05e09154b4ecf0a3b8003a9d72af57db1f3d3e5f"
+    },
+    {
+      "id": "evidence_78c13cb229ae",
+      "path": "apps/desktop/src-tauri/tauri.conf.json",
+      "startLine": 10,
+      "endLine": 12,
+      "hash": "e88eb6fc0a3576d5aaec1bc4422112c55701059d8b46b4d9e7587f6efd195983"
+    },
+    {
+      "id": "evidence_fc46aff28c60",
+      "path": "apps/desktop/src/app/App.tsx",
+      "startLine": 2,
+      "endLine": 4,
+      "hash": "95436985202845fb8da780fdbdd5adb661c58cfbaebeaa2be9f83fb6b18b64e9"
+    },
+    {
+      "id": "evidence_69267f115485",
+      "path": "apps/desktop/src/app/Views.tsx",
+      "startLine": 2,
+      "endLine": 4,
+      "hash": "599096ed703b4b42ccc1e71d88c03db67dbd27a14b713a27a7bea159b4049356"
+    },
+    {
+      "id": "evidence_2a7a78699d5e",
+      "path": "apps/desktop/src/app/demo.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "d6f11d470a4020ad7baa64f4f2625bcafefd1427b827bb4369bdaae4f152de65"
+    },
+    {
+      "id": "evidence_0fc3650d409d",
+      "path": "apps/desktop/vite.config.ts",
+      "startLine": 8,
+      "endLine": 10,
+      "hash": "8b898ffb5dc90ce7ef7416d9a9229d7bfe42ff8233388e3d0bf53227a07fe463"
+    },
+    {
+      "id": "evidence_5b8b94fe2de4",
+      "path": "docs/01_PRODUCT_REQUIREMENTS.md",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "c6ed698e06c63ebf964ab4cd2408be8d136ee329040f0257b52d913769ed1e55"
+    },
+    {
+      "id": "evidence_e8c1a84a6566",
+      "path": "docs/02_SYSTEM_ARCHITECTURE.md",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "ed42fff23d8e2761b4b106b3c2287ef1b68e2a0528f7aba98476cac35d3cc2de"
+    },
+    {
+      "id": "evidence_986bda5d890c",
+      "path": "docs/03_AGENT_HARNESS.md",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "da9f1e76eb782edef402b7a3f0f1db1bab217d5d4d400522d3cf354d6d351f77"
+    },
+    {
+      "id": "evidence_d92cc882c5ea",
+      "path": "docs/04_REPO_INTELLIGENCE.md",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "768feacc3eb9f17599496e1956cba0d6128c66a554a89c677f1e3edc153d1469"
+    },
+    {
+      "id": "evidence_389e45e564d6",
+      "path": "docs/06_TOOL_SAFETY_VERIFICATION.md",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "1ca3a4c539fe454396117104f368388969834d516dbf56da448e851a4d38daf6"
+    },
+    {
+      "id": "evidence_f889949a5064",
+      "path": "docs/07_UI_UX_MOTION.md",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "6773786ceaad7c47d98b18e3a6e763d8882cc75bb41d7012073f61231215bc5f"
+    },
+    {
+      "id": "evidence_53803ad939f8",
+      "path": "docs/08_EVALUATION.md",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "7dd80a33b737668f94d2a9deb1853558b32ca687cd09a7e51dcf0bddb6e7f555"
+    },
+    {
+      "id": "evidence_99f7016d98d5",
+      "path": "docs/11_RISK_REGISTER.md",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "e7f540f3fabfc2048e2450a79486ca58778546e2ab8951088930acf4aa6ce76b"
+    },
+    {
+      "id": "evidence_5644f616241e",
+      "path": "docs/12_DEFINITION_OF_DONE.md",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "6c2097c5815116d2006bde283ade45904d4fde6225b063812958d3398e14736b"
+    },
+    {
+      "id": "evidence_25c4463c995e",
+      "path": "package.json",
+      "startLine": 19,
+      "endLine": 21,
+      "hash": "3df6ecb51c7828fcd7cdb537815bb48a5ed35188bcea7b3dffcb2ed59fe47adc"
+    },
+    {
+      "id": "evidence_41511a3ddd0e",
+      "path": "packages/event-protocol/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "05c5ab15dcf0520f075f10a6760d8fdb941d661c324c9a35198bafac1d30409b"
+    },
+    {
+      "id": "evidence_fdc0e02c24e5",
+      "path": "scripts/run_deterministic_benchmarks.ts",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "1bdd1507aa9ba516072590f67d40fd2d54df9cfdebe1cb6eb462358b3ebb660b"
+    },
+    {
+      "id": "evidence_80c1a757c048",
+      "path": "scripts/run_live_analysis.ts",
+      "startLine": 3,
+      "endLine": 5,
+      "hash": "e8c06e5f5ba975cbaf5beef89a9facf33cfd2abad42cafd582b6caa1edc5e370"
+    },
+    {
+      "id": "evidence_f9ddaaca52e1",
+      "path": "scripts/run_live_complete_report.ts",
+      "startLine": 3,
+      "endLine": 5,
+      "hash": "9382a059cd7b6edde3f726716aa0db62e4b33f891c07a2c7dd88de7dfed211f9"
+    },
+    {
+      "id": "evidence_acbd10ab4c77",
+      "path": "scripts/run_live_model_probe.ts",
+      "startLine": 17,
+      "endLine": 19,
+      "hash": "68c7089ad69368989e9881894ab50c717fe426c5100cabc8d2f48d99be342f86"
+    },
+    {
+      "id": "evidence_da5bd880e390",
+      "path": "scripts/run_live_model_probe.ts",
+      "startLine": 23,
+      "endLine": 25,
+      "hash": "68c7089ad69368989e9881894ab50c717fe426c5100cabc8d2f48d99be342f86"
+    },
+    {
+      "id": "evidence_188057e030a9",
+      "path": "scripts/run_live_model_probe.ts",
+      "startLine": 6,
+      "endLine": 8,
+      "hash": "68c7089ad69368989e9881894ab50c717fe426c5100cabc8d2f48d99be342f86"
+    },
+    {
+      "id": "evidence_1efcf20637df",
+      "path": "scripts/run_m3_incremental_benchmark.ts",
+      "startLine": 40,
+      "endLine": 42,
+      "hash": "05703737973dbf29d41ed52e0ed9eed7952b81e8325f7e1b7bf447e71f014567"
+    },
+    {
+      "id": "evidence_266bd644ef4e",
+      "path": "scripts/run_m3_incremental_benchmark.ts",
+      "startLine": 8,
+      "endLine": 10,
+      "hash": "05703737973dbf29d41ed52e0ed9eed7952b81e8325f7e1b7bf447e71f014567"
+    },
+    {
+      "id": "evidence_3fb06e404d08",
+      "path": "scripts/run_m4_report_corpus.ts",
+      "startLine": 21,
+      "endLine": 23,
+      "hash": "02cb98bf8bcabc623b3ee27b1a0562c4e661cc038523ac13849bde89abe8bc2d"
+    },
+    {
+      "id": "evidence_e655dcc4bcec",
+      "path": "scripts/run_m4_report_corpus.ts",
+      "startLine": 8,
+      "endLine": 10,
+      "hash": "02cb98bf8bcabc623b3ee27b1a0562c4e661cc038523ac13849bde89abe8bc2d"
+    },
+    {
+      "id": "evidence_3d1c3fdf15bb",
+      "path": "scripts/run_m4_report_corpus.ts",
+      "startLine": 24,
+      "endLine": 26,
+      "hash": "02cb98bf8bcabc623b3ee27b1a0562c4e661cc038523ac13849bde89abe8bc2d"
+    },
+    {
+      "id": "evidence_2e70c2a95874",
+      "path": "services/agent-runtime/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "1111f03e4e6f9c6a71b4066bc0c8b4e1a00f11075ea12ea566d3b0835d363948"
+    },
+    {
+      "id": "evidence_8e2cdd1f19f1",
+      "path": "services/analysis-runtime/src/index.ts",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "62ab9aaf6cc2ee22eda3575a0436aa7be8f6a9f65af25fd90f057ec05a912e8f"
+    },
+    {
+      "id": "evidence_abd1eb44ea4c",
+      "path": "services/github-delivery/src/index.ts",
+      "startLine": 26,
+      "endLine": 28,
+      "hash": "84ded0275b531ae5e415b1bf063a2ffdeddba84ab90804cd8aac957b6ae7923f"
+    },
+    {
+      "id": "evidence_792b9fdf58c8",
+      "path": "services/model-gateway/src/index.ts",
+      "startLine": 145,
+      "endLine": 147,
+      "hash": "1b85e99ead2ec6aca1440a803377305d80127d7a76d3dc0e7330d2c68fdf76cd"
+    },
+    {
+      "id": "evidence_31fd7637f3fb",
+      "path": "services/repo-intelligence/src/index.ts",
+      "startLine": 170,
+      "endLine": 172,
+      "hash": "b481d5488bbe91b1c47851baafdd46e9ba5bcc92e952e9d13e58fa907dd076eb"
+    },
+    {
+      "id": "evidence_8789c4ebbfe0",
+      "path": "services/repo-intelligence/src/index.ts",
+      "startLine": 10,
+      "endLine": 12,
+      "hash": "b481d5488bbe91b1c47851baafdd46e9ba5bcc92e952e9d13e58fa907dd076eb"
+    },
+    {
+      "id": "evidence_650dd07bb7b3",
+      "path": "services/review-runtime/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "18a3bb54b6f7647fe815b687e039a1ccd2f17cfb8c1e950932a882bacce7e903"
+    },
+    {
+      "id": "evidence_5a461103f890",
+      "path": "services/skill-runtime/src/index.ts",
+      "startLine": 68,
+      "endLine": 70,
+      "hash": "e2ac58a3607c132a68ab77cae0ef10f5dfb5d4e6f96b9ae193b80b3818486cc9"
+    },
+    {
+      "id": "evidence_01d2b2dddd37",
+      "path": "services/tool-runtime/src/index.ts",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "e7f15c55ec47dd033b6ad630e7a9b9d3685b40db0ce23de995bdf8edf8353956"
+    },
+    {
+      "id": "evidence_7dbb945fb9bb",
+      "path": "services/verification/src/index.ts",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "1c2448a252a61841748995e8ffa0128d5431ba1d2598fe3ca5fbf80899e627c6"
+    },
+    {
+      "id": "evidence_4d61d8ec908b",
+      "path": "tests/accessibility.test.tsx",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "0a76a363aefc3da91a894a9d0fdaab8847b2c5b2df96331e15d888f8ab55527c"
+    },
+    {
+      "id": "evidence_4275a886475d",
+      "path": "tests/analysis-runtime.test.ts",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "11cb4352874b6d90fd5d9669aebc082b4b1a6dfe85527baf0c11888ea27c0ab3"
+    },
+    {
+      "id": "evidence_46d5a8d8c0d6",
+      "path": "tests/app.test.tsx",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "d922e63e4fb83f09b843951e7550ea2ea018cab871c161d5e293e7cc314b5adc"
+    },
+    {
+      "id": "evidence_ebd90119ffd5",
+      "path": "tests/event-protocol.test.ts",
+      "startLine": 2,
+      "endLine": 4,
+      "hash": "769d6f17f4686efa856681eb833e80ab635f91d3298ad005227a6c9b65b9f6c6"
+    },
+    {
+      "id": "evidence_e8c1e7bcc165",
+      "path": "tests/github-delivery.test.ts",
+      "startLine": 2,
+      "endLine": 4,
+      "hash": "49ef2d7ee0ee825bca1957b8d1b4ad56d7ae8a7ee5ab0a960a2e0278534a9ddf"
+    },
+    {
+      "id": "evidence_1c83ecb9ac66",
+      "path": "tests/model-gateway.test.ts",
+      "startLine": 5,
+      "endLine": 7,
+      "hash": "a7f2b638e566bfb9d42cf571de374b72b0902da5a4b71eddf92d8b5121929a67"
+    },
+    {
+      "id": "evidence_0151ac271ff1",
+      "path": "tests/repo-intelligence.test.ts",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "fdd31e7c67ffaad127e95b3cea00d65715dbffcefbfbdcae70ac200ef17069a9"
+    },
+    {
+      "id": "evidence_1585d55524a6",
+      "path": "tests/review-runtime.test.ts",
+      "startLine": 2,
+      "endLine": 4,
+      "hash": "2fc8b52b32f89a4570398bddb872fba2979f3f59d971604374bf85d870dd8bb7"
+    },
+    {
+      "id": "evidence_20742acbf938",
+      "path": "tests/runtime.test.ts",
+      "startLine": 2,
+      "endLine": 4,
+      "hash": "3bb0996ecca49c8e4eb26f87d7c7805671f66315f86b9a60b40238c6d6f5db31"
+    },
+    {
+      "id": "evidence_041249225f7a",
+      "path": "tests/skill-runtime.test.ts",
+      "startLine": 4,
+      "endLine": 6,
+      "hash": "a020e23cb244191418a9647cf43054d9bc6a1910e998d9804182dae9271e7d11"
+    },
+    {
+      "id": "evidence_8784ccbaab93",
+      "path": "tests/tool-runtime.test.ts",
+      "startLine": 89,
+      "endLine": 91,
+      "hash": "1ed52ba32c34cce1413bf292c7bc2cdd8058e0c848d2dc37fb2de905287311e3"
+    },
+    {
+      "id": "evidence_2ca920c37336",
+      "path": "tests/tool-runtime.test.ts",
+      "startLine": 8,
+      "endLine": 10,
+      "hash": "1ed52ba32c34cce1413bf292c7bc2cdd8058e0c848d2dc37fb2de905287311e3"
+    },
+    {
+      "id": "evidence_97413a5f3c7b",
+      "path": "tests/tool-runtime.test.ts",
+      "startLine": 78,
+      "endLine": 80,
+      "hash": "1ed52ba32c34cce1413bf292c7bc2cdd8058e0c848d2dc37fb2de905287311e3"
+    },
+    {
+      "id": "evidence_aa6d94b6a7fb",
+      "path": "tests/verification.test.ts",
+      "startLine": 2,
+      "endLine": 4,
+      "hash": "85021dfb25b2386e7a3b9c29b822df33535264deff683e8bf16150e47e5bc432"
+    },
+    {
+      "id": "evidence_a96a0f6ed1d3",
+      "path": "tests/workspace-index.test.ts",
+      "startLine": 24,
+      "endLine": 26,
+      "hash": "99a82ffb728846536c692cd5c4a6a5c983bfd8526822f8814cdeb50b3585aed0"
+    },
+    {
+      "id": "evidence_aa4b65c3228b",
+      "path": "tests/workspace-index.test.ts",
+      "startLine": 11,
+      "endLine": 13,
+      "hash": "99a82ffb728846536c692cd5c4a6a5c983bfd8526822f8814cdeb50b3585aed0"
+    },
+    {
+      "id": "evidence_439e989bf769",
+      "path": "ui/README.md",
+      "startLine": 17,
+      "endLine": 19,
+      "hash": "98bbd3b11eda9b1f63dd4e484dacb7d12fdd418cce8dc932d9326a22e86ebd5c"
+    },
+    {
+      "id": "evidence_4f9bc972c1d7",
+      "path": "scripts/run_live_model_probe.ts",
+      "startLine": 83,
+      "endLine": 85,
+      "hash": "68c7089ad69368989e9881894ab50c717fe426c5100cabc8d2f48d99be342f86"
+    },
+    {
+      "id": "evidence_5079d0533ba2",
+      "path": "scripts/run_m4_report_corpus.ts",
+      "startLine": 30,
+      "endLine": 32,
+      "hash": "02cb98bf8bcabc623b3ee27b1a0562c4e661cc038523ac13849bde89abe8bc2d"
+    },
+    {
+      "id": "evidence_243ceb29c0fd",
+      "path": "services/analysis-runtime/src/index.ts",
+      "startLine": 112,
+      "endLine": 114,
+      "hash": "62ab9aaf6cc2ee22eda3575a0436aa7be8f6a9f65af25fd90f057ec05a912e8f"
+    },
+    {
+      "id": "evidence_fdd1223bc077",
+      "path": "services/model-gateway/src/index.ts",
+      "startLine": 191,
+      "endLine": 193,
+      "hash": "1b85e99ead2ec6aca1440a803377305d80127d7a76d3dc0e7330d2c68fdf76cd"
+    },
+    {
+      "id": "evidence_d402729dbbd5",
+      "path": "services/repo-intelligence/src/index.ts",
+      "startLine": 266,
+      "endLine": 268,
+      "hash": "b481d5488bbe91b1c47851baafdd46e9ba5bcc92e952e9d13e58fa907dd076eb"
+    },
+    {
+      "id": "evidence_6b78789a8666",
+      "path": "services/skill-runtime/src/index.ts",
+      "startLine": 110,
+      "endLine": 112,
+      "hash": "e2ac58a3607c132a68ab77cae0ef10f5dfb5d4e6f96b9ae193b80b3818486cc9"
+    },
+    {
+      "id": "evidence_8cbb0686a4b4",
+      "path": "services/tool-runtime/src/index.ts",
+      "startLine": 55,
+      "endLine": 57,
+      "hash": "e7f15c55ec47dd033b6ad630e7a9b9d3685b40db0ce23de995bdf8edf8353956"
+    },
+    {
+      "id": "evidence_8df9185f85aa",
+      "path": "README.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "cd14c5f561aae4e317fea9ad45c42a51176a7544883e8873d830269db63ff18a"
+    },
+    {
+      "id": "evidence_8a0086580fc5",
+      "path": "apps/desktop/src-tauri/Cargo.toml",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "59567b2528122eb04e26829123b43380c5da3a96f660f0e95d3b594536b68cca"
+    }
+  ],
+  "privacy": {
+    "apiKeyStored": false,
+    "promptStored": false,
+    "evidenceExcerptsStored": false,
+    "rawModelProseStored": false
+  }
+}

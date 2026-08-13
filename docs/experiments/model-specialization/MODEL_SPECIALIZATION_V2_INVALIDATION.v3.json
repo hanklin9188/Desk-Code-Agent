@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "invalidationId": "dca-model-specialization-v2-decoding-confound",
+  "recordedAt": "2026-08-09T22:11:15+08:00",
+  "status": "INVALID_FOR_MODEL_ONLY_CAUSAL_COMPARISON",
+  "discoveredBy": "POST_SEAL_STANDARDS_REVIEW",
+  "cause": {
+    "baselineSnapshotGenerationConfig": "ABSENT",
+    "baselineEffectiveServerDefaults": "VLLM_DEFAULTS",
+    "candidateSnapshotGenerationConfig": {
+      "do_sample": true,
+      "repetition_penalty": 1.05,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20
+    },
+    "candidateV2ServerGenerationConfig": "AUTO_MODEL_SNAPSHOT",
+    "requestTemperature": 0,
+    "remainingConfound": "repetition_penalty=1.05 remained candidate-specific even though temperature=0 made sampling filters non-operative"
+  },
+  "affectedArtifacts": [
+    "docs/experiments/model-specialization/CODER_MODEL_SMOKE_VALIDATION.v2.json",
+    "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.json",
+    "docs/experiments/model-specialization/MODEL_SPECIALIZATION_RESULTS_INDEX.v2.json",
+    "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FINAL_REPORT.v2.json",
+    "benchmarks/model-specialization/MODEL_SPECIALIZATION_SEAL.v2.json",
+    "benchmarks/model-specialization/MODEL_SPECIALIZATION_FINAL_SEAL.v2.json"
+  ],
+  "artifactPolicy": "PRESERVE_APPEND_ONLY_DO_NOT_USE_V2_CAPABILITY_OR_PROMOTION_CONCLUSION",
+  "stillValidFromV2": [
+    "exact authorized acquisition and snapshot hashes",
+    "local license/model-card provenance",
+    "loopback and ephemeral-key lifecycle controls",
+    "candidate model load and static VRAM observation",
+    "deterministic worktree safety and rollback observations"
+  ],
+  "correctiveAction": {
+    "sharedServerFlag": "--generation-config vllm",
+    "effect": "Disable model-repository generation defaults and make both profiles use identical vLLM defaults",
+    "baselineRerunRequired": false,
+    "baselineRerunReason": "The baseline snapshot contains no generation_config.json, so its completed run already used vLLM defaults.",
+    "candidateRerunRequired": true,
+    "newFairnessGateRequiredBeforeCorrectedCalls": true,
+    "taskPromptScoringChangesAllowed": false
+  },
+  "protectedActionsExpanded": false
+}

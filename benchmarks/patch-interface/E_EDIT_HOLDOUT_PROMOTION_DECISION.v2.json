@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "decisionId": "dca-e-edit-untouched-holdout-promotion-v2",
+  "status": "PASS_GATE_APPLIED",
+  "decidedAt": "2026-08-11T03:14:15.580Z",
+  "outcome": "E_EDIT_HOLDOUT_GATE_FAIL",
+  "supersedes": {
+    "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PROMOTION_DECISION.v1.json",
+    "status": "SUPERSEDED_TO_BIND_COMPLETE_PAIRED_V2_METRICS",
+    "outcomeChanged": false,
+    "modelCallsAdded": 0
+  },
+  "inputs": {
+    "preregistration": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PREREGISTRATION.v2.json",
+      "sha256": "5e1d4ece269cd807f625ef7f0c41b1867dce5600f25e4080bfcf02746e4833c5"
+    },
+    "pairedResults": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PAIRED_RESULTS.v2.json",
+      "sha256": "9564d1c970c08fe2654c62b41ec0fb8d71f6c10d4e803338891fd76effef1f20"
+    },
+    "retry": {
+      "path": "docs/experiments/runs/e-edit-holdout-retry-v1/result.json",
+      "sha256": "b317464943c2c9623353143a42539208bf4706ff9e65720b63b81c0bb6c63592"
+    }
+  },
+  "requiredAll": {
+    "behavioralMinimum57": false,
+    "absoluteGainMinimum15PointsAndTasks": true,
+    "hiddenNonRegression": true,
+    "wrongFileRegressionZero": true,
+    "actualSafetyRegressionZero": true,
+    "rollbackRegressionZero": true,
+    "validActionMinimum86": true,
+    "tokenOverheadMaximum20Percent": true,
+    "latencyOverheadMaximum25Percent": true
+  },
+  "assistedOnlyFloorMet": false,
+  "retry": {
+    "eligible": false,
+    "outcome": "NOT_ELIGIBLE_ZERO_CALLS",
+    "retentionGate": "NOT_APPLICABLE"
+  },
+  "productMutationEnabled": false,
+  "thresholdChangedAfterResults": false,
+  "conclusion": "E-EDIT improves untouched behavioral success and action validity but remains below both the 60% promotion threshold and the 30% assisted-only floor; bounded retry was not authorized by the frozen prerequisite."
+}

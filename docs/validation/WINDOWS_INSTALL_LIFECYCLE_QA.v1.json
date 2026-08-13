@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "lifecycleId": "dca-w3-nsis-install-lifecycle-v1",
+  "status": "PASS",
+  "package": {
+    "filename": "Desk Code Agent_0.1.0_x64-setup.exe",
+    "sha256": "ee6877d02e20c346aa7446430ea3366eeaf15d85473c0f8f15dc196e3b9a89f0",
+    "installMode": "CURRENT_USER",
+    "signed": false
+  },
+  "cleanStart": {
+    "priorUninstallRegistration": false,
+    "method": "CURRENT_USER_INSTALL_LOCATION_WITH_REGISTRY_AND_PROCESS_PRECHECK",
+    "limitation": "A separate disposable Windows account or VM was not used."
+  },
+  "install": {
+    "result": "PASS_EXIT_0",
+    "location": "%LOCALAPPDATA%\\Desk Code Agent",
+    "unexpectedPrivilegeRequest": false,
+    "registry": "PASS",
+    "startMenuShortcut": "PASS",
+    "desktopShortcut": "PASS"
+  },
+  "installedApplication": {
+    "startup": "PASS",
+    "window": "PASS_1440_X_900_AT_ACTUAL_150_PERCENT",
+    "webView2": "PASS_150.0.4078.48",
+    "surfaces": "PASS_18_OF_18",
+    "dashboardCapabilitiesExperimentsWorkspaceSafety": "PASS",
+    "artifactViewer": "PASS_6_PATH_CASES_READ_ONLY",
+    "sourceTreeDependency": false,
+    "mutationState": "KEEP_MUTATION_DISABLED",
+    "offlineFailureHandling": "PASS_OFFLINE_NOT_RUN_VISIBLE_NO_CRASH",
+    "shutdown": "PASS",
+    "reportSha256": "088d7a5ef0162c2b069e13702399e84253fcfbef63d94476c70b0f8348b5c1e7"
+  },
+  "uninstall": {
+    "result": "PASS_EXIT_0",
+    "applicationFilesRemoved": true,
+    "registrationRemoved": true,
+    "shortcutsRemoved": true,
+    "processesRemaining": 0,
+    "persistentUserData": "%LOCALAPPDATA%\\com.deskcodeagent.desktop",
+    "persistentUserDataTreatment": "PRESERVED_NOT_CLASSIFIED_AS_DEFECT"
+  },
+  "reinstall": {
+    "exactPackage": true,
+    "result": "PASS_EXIT_0",
+    "startup": "PASS",
+    "surfaces": "PASS_18_OF_18",
+    "artifactPaths": "PASS_6_OF_6",
+    "reportSha256": "2b58ce71a0c4e2275b8e65d8093a7be51ef012293ff9bac9ba81cfacfe0ce159"
+  },
+  "finalCleanup": {
+    "applicationUninstalled": true,
+    "installDirectoryAbsent": true,
+    "registrationAbsent": true,
+    "applicationProcesses": 0,
+    "modelProcesses": 0
+  },
+  "upgradePath": "UPGRADE_PATH_NOT_APPLICABLE_FIRST_RELEASE"
+}

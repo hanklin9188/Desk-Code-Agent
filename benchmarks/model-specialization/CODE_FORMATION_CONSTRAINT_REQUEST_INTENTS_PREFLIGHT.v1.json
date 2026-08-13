@@ -1,0 +1,836 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_ZERO_CALL",
+  "counts": {
+    "planned": 80,
+    "materialized": 80,
+    "control": 40,
+    "treatment": 40,
+    "pairs": 40,
+    "duplicates": 0,
+    "missing": 0,
+    "malformed": 0,
+    "modelCalls": 0
+  },
+  "frozen": {
+    "seed": 20260812,
+    "scheduleSha256": "1e2b1b9febafb47b096f264694a81c597b3423a413d7859d586ae4af4f530467",
+    "taskIdsSha256": "13f14af078b1b9b35922c2bee5e8f534ab28c5f0617dc42075176d7c8f246133",
+    "preregistrationSha256": "41c24a0c8eacdbc57636e942ef0c4c78047dbc899bdaed83e83a2d421466a926",
+    "manifestSha256": "33d8f1be7395caa50c0f2938785a8e01cde12d6ff1218ed15c9a11a7ccb98093",
+    "repositoriesSha256": "e9ea68767941aa35ba0df54f539e9df4a6381305c3c274e2ff9193dce2f19ea8",
+    "oracleSha256": "c4184b66413ce6df403b52db6b42edb0f6d8e9c20b8291160f88872d6f27bb0c"
+  },
+  "promptHashes": {
+    "controlSystemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+    "treatmentSystemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+    "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724"
+  },
+  "intents": [
+    {
+      "pairIndex": 1,
+      "taskId": "cfc-v1-window-selection-07",
+      "repositoryRevision": "053c91b6f81f66b59184651cfd06deadb96e070b1983a97ef8fb5a32afedd984",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "41428d2df2bf4e9f49700134afa44b62a5d062bc10f5e158a281e678b931cf65",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "d45e775f0dee925abec0895ba6aef378cb73f358ebca8dc277b50496ad19d95a"
+    },
+    {
+      "pairIndex": 1,
+      "taskId": "cfc-v1-window-selection-07",
+      "repositoryRevision": "053c91b6f81f66b59184651cfd06deadb96e070b1983a97ef8fb5a32afedd984",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "41428d2df2bf4e9f49700134afa44b62a5d062bc10f5e158a281e678b931cf65",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "f75016ff8ff57f07776ad96846460a6508b28758123a871a993b96f5d34e5f43"
+    },
+    {
+      "pairIndex": 2,
+      "taskId": "cfc-v1-label-normalization-06",
+      "repositoryRevision": "3a0e042f3812dc40613e5c69fd5b989645ce68e04a738b91671482610a7a0cb3",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "8a285bac119b7b82d0ecb6d680d66bb7f683a5ca18e4a27345daa78de752e34e",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "826a9f50c0bddab9f907f44db38c0848967ed4592c8a0f028d3b81ec4ce0922b"
+    },
+    {
+      "pairIndex": 2,
+      "taskId": "cfc-v1-label-normalization-06",
+      "repositoryRevision": "3a0e042f3812dc40613e5c69fd5b989645ce68e04a738b91671482610a7a0cb3",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "8a285bac119b7b82d0ecb6d680d66bb7f683a5ca18e4a27345daa78de752e34e",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "ea5a5b60885ce8452b97984c4821060ca700e4301d77cd4b3361738b5f6c4d61"
+    },
+    {
+      "pairIndex": 3,
+      "taskId": "cfc-v1-window-selection-05",
+      "repositoryRevision": "669e596ecffc1c7a5ef81cd3a17fb6ecaaf25a000594a1909fce7118628f227e",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "aff2c0c40f11e2e6f828e79af57aa0fa7f2c1365d819609d320698074f8dbf61",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "94c663ac3ff66ab375fe11c08f3b4c51551dbac81eebaddde26b5ea7b82bcac5"
+    },
+    {
+      "pairIndex": 3,
+      "taskId": "cfc-v1-window-selection-05",
+      "repositoryRevision": "669e596ecffc1c7a5ef81cd3a17fb6ecaaf25a000594a1909fce7118628f227e",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "aff2c0c40f11e2e6f828e79af57aa0fa7f2c1365d819609d320698074f8dbf61",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "7c1e3613425793e024f974d25a5f0899a603209fe66d15c1bcef9bab3e74d1de"
+    },
+    {
+      "pairIndex": 4,
+      "taskId": "cfc-v1-token-rendering-02",
+      "repositoryRevision": "2ed6aa7f610c19401be0b27bd690647a5959645ee9e627e66872ab63a177fb47",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "56bed6b489468e04bc23ffe924e4eecf2cf93efbb5a32ca658ee3fe622539c0b",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "5c2f3746f4dc1d1bb640f5010dbbb5f7b5aa37d23ea8593ed9af96582179f367"
+    },
+    {
+      "pairIndex": 4,
+      "taskId": "cfc-v1-token-rendering-02",
+      "repositoryRevision": "2ed6aa7f610c19401be0b27bd690647a5959645ee9e627e66872ab63a177fb47",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "56bed6b489468e04bc23ffe924e4eecf2cf93efbb5a32ca658ee3fe622539c0b",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "150b7c63fec12f9bcd5fc02f7c188054bd291f4421a3927b5365cd6a7e7bc0a3"
+    },
+    {
+      "pairIndex": 5,
+      "taskId": "cfc-v1-bounded-number-03",
+      "repositoryRevision": "4171073e6df48eb4fec51e596ee5bdb4b48d605ab3b6de3ea2a7f6298fb2401e",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "e0f83fd047d9c57e76e853a296e47d992ed2c4beb78c34cad6d2e3956593faec",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "ac6b7815f8cf0a782583c0e3c177d7bd04db356cb3801c71f0aa2b9119eedad0"
+    },
+    {
+      "pairIndex": 5,
+      "taskId": "cfc-v1-bounded-number-03",
+      "repositoryRevision": "4171073e6df48eb4fec51e596ee5bdb4b48d605ab3b6de3ea2a7f6298fb2401e",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "e0f83fd047d9c57e76e853a296e47d992ed2c4beb78c34cad6d2e3956593faec",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "a05e67349f96a324630c931448cac509638364e7a0d5c13fb59d8551ebd3204b"
+    },
+    {
+      "pairIndex": 6,
+      "taskId": "cfc-v1-token-rendering-03",
+      "repositoryRevision": "118e9b00c33924d9f1b624167cfb3dc1039b5819021386d52786d9b872780342",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "73e5fb23f66c13c34b1a29046da0e7dc8d9ebda39ba363a398c03bbf3c19d09f",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "45d15a68f2d9d0b0ed6f5dd5e9b4f33d6e6df58084fa090aa0748b98b9182691"
+    },
+    {
+      "pairIndex": 6,
+      "taskId": "cfc-v1-token-rendering-03",
+      "repositoryRevision": "118e9b00c33924d9f1b624167cfb3dc1039b5819021386d52786d9b872780342",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "73e5fb23f66c13c34b1a29046da0e7dc8d9ebda39ba363a398c03bbf3c19d09f",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "c2874268a328e9e8b91e5019b78860048f6fd983ab0a284a9e42829c76a7f22e"
+    },
+    {
+      "pairIndex": 7,
+      "taskId": "cfc-v1-token-rendering-08",
+      "repositoryRevision": "56a388db1bc3876fd7da76106b038df90fe833153c7dfc6309d97eedb4f8fe7f",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "92bcaed16b59533c6a1b20d2b07bdb0e1a8df9bd8179f0906b0c7f946b41588e",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "f6c253253f86f1fb9fdf698ca7b02b29ec213ae10bfd2b016d272d7ed752068f"
+    },
+    {
+      "pairIndex": 7,
+      "taskId": "cfc-v1-token-rendering-08",
+      "repositoryRevision": "56a388db1bc3876fd7da76106b038df90fe833153c7dfc6309d97eedb4f8fe7f",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "92bcaed16b59533c6a1b20d2b07bdb0e1a8df9bd8179f0906b0c7f946b41588e",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "3d358da6b947f061a82f53f3b009b39d56c5bf65d00facb2e309fabe5df35500"
+    },
+    {
+      "pairIndex": 8,
+      "taskId": "cfc-v1-count-parsing-03",
+      "repositoryRevision": "2e795adb7577082c1bb20b0124d2eee4c196a01f45ee88d255130c84b9120552",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "08e21bdd10767c3bff2f20f309237ae4817c636c505b95fc19c4fea7d747a221",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "04016f5550f1754b4047fd417cfe93f6740aa8e1a97c12320f3f621ef75f9f14"
+    },
+    {
+      "pairIndex": 8,
+      "taskId": "cfc-v1-count-parsing-03",
+      "repositoryRevision": "2e795adb7577082c1bb20b0124d2eee4c196a01f45ee88d255130c84b9120552",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "08e21bdd10767c3bff2f20f309237ae4817c636c505b95fc19c4fea7d747a221",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "4fe01bd5728439b1a5c360ca85f9fe2886dab080c6adef23c5ed85c13f9f56b6"
+    },
+    {
+      "pairIndex": 9,
+      "taskId": "cfc-v1-window-selection-02",
+      "repositoryRevision": "465a9288fdd5f6bc1befcfdb229f3694a22732c4851dc7c01f71cb66f1986005",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "dc69394ef8b59a3a9c15c166ca4b0b9bad94aeb10938ece7992315b1fc0d2ce6",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "067095304b2badcf02f4bd06616423238de4f7bad5ebb82c51c47396c1310655"
+    },
+    {
+      "pairIndex": 9,
+      "taskId": "cfc-v1-window-selection-02",
+      "repositoryRevision": "465a9288fdd5f6bc1befcfdb229f3694a22732c4851dc7c01f71cb66f1986005",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "dc69394ef8b59a3a9c15c166ca4b0b9bad94aeb10938ece7992315b1fc0d2ce6",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "1a823dd466b5308014ffa5312c94b0b3b1f0a89631327cfbca481507f32e9fc6"
+    },
+    {
+      "pairIndex": 10,
+      "taskId": "cfc-v1-count-parsing-02",
+      "repositoryRevision": "0536f7b48b68c4d125a249a877df497fb1949608ab95b13d4ad7e6eb9b2f8320",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "1c094c84eeed3f97b470100b75e925fe2e574d5e9bcc7644ba912f110fe32071",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "87cfd0150e19fcdaf5a55b16baf1e90e5abaa17964c42905afe44ed133d3910a"
+    },
+    {
+      "pairIndex": 10,
+      "taskId": "cfc-v1-count-parsing-02",
+      "repositoryRevision": "0536f7b48b68c4d125a249a877df497fb1949608ab95b13d4ad7e6eb9b2f8320",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "1c094c84eeed3f97b470100b75e925fe2e574d5e9bcc7644ba912f110fe32071",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "fd1c11745e07d08c0ed4f355bff64317842765f27bf0d74c8442edb0ce33d55c"
+    },
+    {
+      "pairIndex": 11,
+      "taskId": "cfc-v1-token-rendering-04",
+      "repositoryRevision": "53d750016ba10047861cd893b8e2ec5b36dd2f6e1d6d4c94aebc3fdce24f2bfc",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "46115218fdd44da5942d4c84462ce5092c9d91766c2952b4378667b38dfc258f",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "d980e25050392f6a7d1353bf85982e03e4f6171ee80c56d45defb6fb88babfc4"
+    },
+    {
+      "pairIndex": 11,
+      "taskId": "cfc-v1-token-rendering-04",
+      "repositoryRevision": "53d750016ba10047861cd893b8e2ec5b36dd2f6e1d6d4c94aebc3fdce24f2bfc",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "46115218fdd44da5942d4c84462ce5092c9d91766c2952b4378667b38dfc258f",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "cc64b88d783f02fabb9a4ea6536075497138be7855ba97a4032d12246c964f3b"
+    },
+    {
+      "pairIndex": 12,
+      "taskId": "cfc-v1-count-parsing-05",
+      "repositoryRevision": "c0739ab1bf135a8554564f0f4cd15c52bd06b6ff123bb8b14a6c39a8300b1460",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "32cbcbd83fa4474e8e713383452a44b4fef0932bd8a3ad9b5a65af4781273c77",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "e2c1b8663740611694e560ca3ec4125a4739e4a095c230af9192aadaf74f4115"
+    },
+    {
+      "pairIndex": 12,
+      "taskId": "cfc-v1-count-parsing-05",
+      "repositoryRevision": "c0739ab1bf135a8554564f0f4cd15c52bd06b6ff123bb8b14a6c39a8300b1460",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "32cbcbd83fa4474e8e713383452a44b4fef0932bd8a3ad9b5a65af4781273c77",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "7d34559c406218b0f3351ba680c91f9ba91c27be78be1aeacfb60d5eecf349bc"
+    },
+    {
+      "pairIndex": 13,
+      "taskId": "cfc-v1-window-selection-01",
+      "repositoryRevision": "0d7e18c41a0fe87e40beedab8ea3c52361bfbdbd6534293b7b4ae82a0103e84d",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "67ca4864cf4b5bf526faf813c302017c69116448597b846155c34d3a39465af6",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "2a6cd4fd7047ceb79285e2335919bb53b3a3c79b935096b60480eacda754e87a"
+    },
+    {
+      "pairIndex": 13,
+      "taskId": "cfc-v1-window-selection-01",
+      "repositoryRevision": "0d7e18c41a0fe87e40beedab8ea3c52361bfbdbd6534293b7b4ae82a0103e84d",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "67ca4864cf4b5bf526faf813c302017c69116448597b846155c34d3a39465af6",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "15e9e1c43070ed5cbec75bd2f8e8306be889fb0d8f2584dd37e80218b6d51c7b"
+    },
+    {
+      "pairIndex": 14,
+      "taskId": "cfc-v1-label-normalization-04",
+      "repositoryRevision": "10d3309e5e74c388f6492973efe7a9dbb21daa004db41b6ee1f2ff192e5da609",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "74588f73fcde8ab3e9addf10e9920d81105b72c99f8e223d8f9421fac624d95c",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "99c6f634c4287c6fad4842b9b6af677d8d0296acb61a010390db10ccf66d9476"
+    },
+    {
+      "pairIndex": 14,
+      "taskId": "cfc-v1-label-normalization-04",
+      "repositoryRevision": "10d3309e5e74c388f6492973efe7a9dbb21daa004db41b6ee1f2ff192e5da609",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "74588f73fcde8ab3e9addf10e9920d81105b72c99f8e223d8f9421fac624d95c",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "ff3f555f3d762d02c87bf92e007873e414447a88666298de748cfe0428b6e172"
+    },
+    {
+      "pairIndex": 15,
+      "taskId": "cfc-v1-count-parsing-06",
+      "repositoryRevision": "e69dd68366ade36e7ece6f82b49d115d8a4bf9fab917e8687b55fc19f41d2d9c",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "9192a4a4a78b10c0e0527a916023c5795fefa8a233453540ecc4ecac4cc10904",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "c546fd6c954e43b0218f54afdc95285f14e0866f1214aec5c56914d65c155c6a"
+    },
+    {
+      "pairIndex": 15,
+      "taskId": "cfc-v1-count-parsing-06",
+      "repositoryRevision": "e69dd68366ade36e7ece6f82b49d115d8a4bf9fab917e8687b55fc19f41d2d9c",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "9192a4a4a78b10c0e0527a916023c5795fefa8a233453540ecc4ecac4cc10904",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "9af61a87f04228d3132f1c99f592c6199391d26f8f5ccf42a752516ceb2851f3"
+    },
+    {
+      "pairIndex": 16,
+      "taskId": "cfc-v1-window-selection-04",
+      "repositoryRevision": "b12aa2e352f219a3d95b5781945de886eb98bd03ace53c1cfd1df9cb07150c65",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "2c31f134e91b09f616aae1cf7c4b71abdb55f26d8ee95880cd1335b3b40d220a",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "e079d28380820803f692a153ab7ab3597ceb021c0f0c6411c545930878c9bcfa"
+    },
+    {
+      "pairIndex": 16,
+      "taskId": "cfc-v1-window-selection-04",
+      "repositoryRevision": "b12aa2e352f219a3d95b5781945de886eb98bd03ace53c1cfd1df9cb07150c65",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "2c31f134e91b09f616aae1cf7c4b71abdb55f26d8ee95880cd1335b3b40d220a",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "c2f5684c1db245ba962997f053f6f84ad336aff12e3967d1e0bf7aa6ec8e715e"
+    },
+    {
+      "pairIndex": 17,
+      "taskId": "cfc-v1-count-parsing-07",
+      "repositoryRevision": "9d0d6224b825950abd05648ba3a3c9e0c0326e4a029315687ac7086cd6452450",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "ed83022f7f4ef4a2c1dfe8ced077847e7b5cca1cfcb64c90de3e0bbaa3ee2354",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "d30dd4ba7ae70d528b6591cab65cc20bc1a32561f517fc667bfce6ec0ce564ef"
+    },
+    {
+      "pairIndex": 17,
+      "taskId": "cfc-v1-count-parsing-07",
+      "repositoryRevision": "9d0d6224b825950abd05648ba3a3c9e0c0326e4a029315687ac7086cd6452450",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "ed83022f7f4ef4a2c1dfe8ced077847e7b5cca1cfcb64c90de3e0bbaa3ee2354",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "83c1800100ca7f9a1e0f142f68853d36065f941a91e8120f84d94d576e37e101"
+    },
+    {
+      "pairIndex": 18,
+      "taskId": "cfc-v1-token-rendering-05",
+      "repositoryRevision": "a30696aa7ea3414b65bf9be2cb156aa2738a4af0d04a678fef90e83ef2dd03a7",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "b8798215af3508b32b57eaa3a3975a0ffefd99ecefdebfb6f2687c928e217175",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "4c14f176d2ed9cf42c843847d047515b119c8339a916305ec27166f90433cb54"
+    },
+    {
+      "pairIndex": 18,
+      "taskId": "cfc-v1-token-rendering-05",
+      "repositoryRevision": "a30696aa7ea3414b65bf9be2cb156aa2738a4af0d04a678fef90e83ef2dd03a7",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "b8798215af3508b32b57eaa3a3975a0ffefd99ecefdebfb6f2687c928e217175",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "01c320ae6b493b0543bf81bc80a72cb021b6c937ddc10d69e37c3d2b38e82003"
+    },
+    {
+      "pairIndex": 19,
+      "taskId": "cfc-v1-window-selection-03",
+      "repositoryRevision": "978993c490ca83aed4ad64b6773ec8e9a7feac4b95737185aeba3f2bbb53830b",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "fad13cbfd75cc919a4a7fa83f65fa14d437762e4fa1f3e5fead8959eb3a2a640",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "f6345c6567a7ceeb87f6594a0f047c8613c4144fb37b2fc4eeb4288a2d5bb0fa"
+    },
+    {
+      "pairIndex": 19,
+      "taskId": "cfc-v1-window-selection-03",
+      "repositoryRevision": "978993c490ca83aed4ad64b6773ec8e9a7feac4b95737185aeba3f2bbb53830b",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "fad13cbfd75cc919a4a7fa83f65fa14d437762e4fa1f3e5fead8959eb3a2a640",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "78fcdf3a36badb4545cdbee6792cd0cc71c8b6dfa61af4472b623f31adf7dd42"
+    },
+    {
+      "pairIndex": 20,
+      "taskId": "cfc-v1-token-rendering-07",
+      "repositoryRevision": "2cb0e4734398abf48640e68ec835b315f2298a41d73ce8af6fc6561dd4c450f4",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "758f5409db7d6b885abc7205f21e28389fc1212a18cbb9a2bf6da7a45930db33",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "83ba27312286b0d78ff3a5eabcb16900cfe4e84a19ad2890723f21d7e94daf5d"
+    },
+    {
+      "pairIndex": 20,
+      "taskId": "cfc-v1-token-rendering-07",
+      "repositoryRevision": "2cb0e4734398abf48640e68ec835b315f2298a41d73ce8af6fc6561dd4c450f4",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "758f5409db7d6b885abc7205f21e28389fc1212a18cbb9a2bf6da7a45930db33",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "986f8ff5b65f886ca1c7123cc7a3f271ce532835d016759838091812814d64b0"
+    },
+    {
+      "pairIndex": 21,
+      "taskId": "cfc-v1-bounded-number-05",
+      "repositoryRevision": "fce2961a98c362410672c731946a9d4766faba93f51198a34fe9dbd52f1b4abd",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "de3228e961ef73fb9de3641e88ac0c617e46f89d3f3184b21813c9c93ce57f3a",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "d95c029d12e8439dcf8efd7ef2d573c80f31507554ce4ea0140cda4b7e40fb9a"
+    },
+    {
+      "pairIndex": 21,
+      "taskId": "cfc-v1-bounded-number-05",
+      "repositoryRevision": "fce2961a98c362410672c731946a9d4766faba93f51198a34fe9dbd52f1b4abd",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "de3228e961ef73fb9de3641e88ac0c617e46f89d3f3184b21813c9c93ce57f3a",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "3684f6dbfcd51c14f6c421156377bc5f63384d30a1c87eb0b1915ae4e02389d7"
+    },
+    {
+      "pairIndex": 22,
+      "taskId": "cfc-v1-bounded-number-04",
+      "repositoryRevision": "1a8405c2ee8c0b6c102f1c6b18a87dca2bc3aa10a26eb7dcb92774f759c182dd",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "48c414b5d00fca9e10acee92d52253597b90599fc112270adcfb397d057107fd",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "8baed989e2add6c204c2c436c9f082f2ecb2f8505c362beab44d7c9e657ed93b"
+    },
+    {
+      "pairIndex": 22,
+      "taskId": "cfc-v1-bounded-number-04",
+      "repositoryRevision": "1a8405c2ee8c0b6c102f1c6b18a87dca2bc3aa10a26eb7dcb92774f759c182dd",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "48c414b5d00fca9e10acee92d52253597b90599fc112270adcfb397d057107fd",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "536e67186ff41b2a1217e6091114278d08de863bd60e84534b078f98a8ac080d"
+    },
+    {
+      "pairIndex": 23,
+      "taskId": "cfc-v1-bounded-number-01",
+      "repositoryRevision": "c5f4fb5d08ab423cf788487580738a19258547c5a7390672c76db0bdefaac55c",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "d19f3f9b55bcc1a47dc2d6edb848e7cabf1f9adc423f7a238a9454a96d5cba4c",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "acb7c9b212b3e40cddcacbe5e6cda3a8dc2eaa30ecdae0c2df177e24dd045642"
+    },
+    {
+      "pairIndex": 23,
+      "taskId": "cfc-v1-bounded-number-01",
+      "repositoryRevision": "c5f4fb5d08ab423cf788487580738a19258547c5a7390672c76db0bdefaac55c",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "d19f3f9b55bcc1a47dc2d6edb848e7cabf1f9adc423f7a238a9454a96d5cba4c",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "1fdb9ad597fc9a06deeaeec5393ebb8ebaf3b032c2c9f60433a87317e5b9f6a4"
+    },
+    {
+      "pairIndex": 24,
+      "taskId": "cfc-v1-bounded-number-06",
+      "repositoryRevision": "1661fcfdcf394effeeceac016c38224d114ce5470901b147e6068428c9493533",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "3ea81ef9c4fcceb33ea09e10240a4a9a81650f0fd7a53db08cce6934261ab05f",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "1aba468f519d400b975b4b21012da4be723cec84b11fdd8c06a10f2acd4a45f1"
+    },
+    {
+      "pairIndex": 24,
+      "taskId": "cfc-v1-bounded-number-06",
+      "repositoryRevision": "1661fcfdcf394effeeceac016c38224d114ce5470901b147e6068428c9493533",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "3ea81ef9c4fcceb33ea09e10240a4a9a81650f0fd7a53db08cce6934261ab05f",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "1c0e1934a580b35edc726b4671b5dbabc1e71436b54a1f0359af354f7ffeaf75"
+    },
+    {
+      "pairIndex": 25,
+      "taskId": "cfc-v1-bounded-number-07",
+      "repositoryRevision": "bd35323dc3a1cf235a4c549c2f49eb86be87deb63c12d4d3df52ef3a4df27410",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "c0cebc9911b2492a70a3cf48e15b875b09cc082c3bb25ba6ad77a85f648d9775",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "0c1c171fc0f4b62f35ebf9beeef0cc90f0739a3a941c07ed7f2b326d8a1f8351"
+    },
+    {
+      "pairIndex": 25,
+      "taskId": "cfc-v1-bounded-number-07",
+      "repositoryRevision": "bd35323dc3a1cf235a4c549c2f49eb86be87deb63c12d4d3df52ef3a4df27410",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "c0cebc9911b2492a70a3cf48e15b875b09cc082c3bb25ba6ad77a85f648d9775",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "67cc788076ac8b61d0da0d63e1cdec2183e5dcec0e06a3b2665a7ccf716149aa"
+    },
+    {
+      "pairIndex": 26,
+      "taskId": "cfc-v1-bounded-number-08",
+      "repositoryRevision": "f91f7bff4dad6525b53e394e533f9a01a5fc33ef62279440dcc3214eec13499b",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "ddcce519d204c9892eb8697243b7fe5d00bbcc954f1f6bf2960df666c29373e5",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "5a03de786213c208bff2ecada5a2c539f384eec51de827920f14c59452fceedf"
+    },
+    {
+      "pairIndex": 26,
+      "taskId": "cfc-v1-bounded-number-08",
+      "repositoryRevision": "f91f7bff4dad6525b53e394e533f9a01a5fc33ef62279440dcc3214eec13499b",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "ddcce519d204c9892eb8697243b7fe5d00bbcc954f1f6bf2960df666c29373e5",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "04bccb7666331c8079a5d910599b502feca70f7b332dac500391497c04a6d105"
+    },
+    {
+      "pairIndex": 27,
+      "taskId": "cfc-v1-label-normalization-01",
+      "repositoryRevision": "bb6dc2e5aefb01dbf2b3e4b89c2be9ecf5707990cbacbc933aa546b6af36c59b",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "6341b363e666e408a1b0efd131b3b7adbc569209c68d430562e488ac817de56e",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "4221b3f3691cd13133675129b9a72fdfcac63fe5429bafd0b617691afe387dd7"
+    },
+    {
+      "pairIndex": 27,
+      "taskId": "cfc-v1-label-normalization-01",
+      "repositoryRevision": "bb6dc2e5aefb01dbf2b3e4b89c2be9ecf5707990cbacbc933aa546b6af36c59b",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "6341b363e666e408a1b0efd131b3b7adbc569209c68d430562e488ac817de56e",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "2e3048716fc526b094ca2889a50e55f64b886c7ef32c28bf244c52dcd931c3c0"
+    },
+    {
+      "pairIndex": 28,
+      "taskId": "cfc-v1-label-normalization-08",
+      "repositoryRevision": "4daa35bfe77b7a6ccb5726911b5a5ff447cc5479594c27f3403bf4ce9220e24d",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "a520613d8969fdd4f925ab347084096cd51dd1aea25691a571696670c03e93c1",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "e1deeb612939ea503558ae1f0577d943d3d8348977daaa716b32beb876487d4b"
+    },
+    {
+      "pairIndex": 28,
+      "taskId": "cfc-v1-label-normalization-08",
+      "repositoryRevision": "4daa35bfe77b7a6ccb5726911b5a5ff447cc5479594c27f3403bf4ce9220e24d",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "a520613d8969fdd4f925ab347084096cd51dd1aea25691a571696670c03e93c1",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "3b34ce3c6688b5a0b79c87c2bfdc76590b6311e00fc6fc55057feb8021e7cca8"
+    },
+    {
+      "pairIndex": 29,
+      "taskId": "cfc-v1-count-parsing-01",
+      "repositoryRevision": "a64c800f575d29bc65d953bb294c501e09a560cc8cd3db4ab467a6b469ee7396",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "658486980b074953f20301b1dc9d4ed612c936ac9e587e64418a3fed201f1352",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "7165d48e99302cf5fa2ce7c4dd7a1081c2fffb0b44b3f6a626a547b01614a618"
+    },
+    {
+      "pairIndex": 29,
+      "taskId": "cfc-v1-count-parsing-01",
+      "repositoryRevision": "a64c800f575d29bc65d953bb294c501e09a560cc8cd3db4ab467a6b469ee7396",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "658486980b074953f20301b1dc9d4ed612c936ac9e587e64418a3fed201f1352",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "bb52abef6bf743994e3fc0bcefad8db44b230f4440c935ce4bb04d6f07c0c772"
+    },
+    {
+      "pairIndex": 30,
+      "taskId": "cfc-v1-count-parsing-04",
+      "repositoryRevision": "1625ad8eb41a33b8607423d011b1256528598b4cac4cb50a9875f037612f921a",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "b36f03fbe785a63240e28835cedb2de7c26414f70bdeb01844087f1b3bf3db65",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "f5b9b791b22d9ed4c38afec87abc460bbbf9868363cc127d9f87abdf8317dbb2"
+    },
+    {
+      "pairIndex": 30,
+      "taskId": "cfc-v1-count-parsing-04",
+      "repositoryRevision": "1625ad8eb41a33b8607423d011b1256528598b4cac4cb50a9875f037612f921a",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "b36f03fbe785a63240e28835cedb2de7c26414f70bdeb01844087f1b3bf3db65",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "a51c83e6ce076730d68ed316913c0a21903786f0c2db0607fd8e3a20fa338dc5"
+    },
+    {
+      "pairIndex": 31,
+      "taskId": "cfc-v1-label-normalization-05",
+      "repositoryRevision": "208fb932dd3ee6eb4382f68a98062f55a7b99c93c38620640f9d25389f5cb8b5",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "f81addfbac2d7cd17a27f78b7cc0bdf6ff7357a5bb251ed3d1db71ce3392d383",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "c4c791cc17d49924b2efc03bae32f69977c356c061ec98e02c0c8445442b5dad"
+    },
+    {
+      "pairIndex": 31,
+      "taskId": "cfc-v1-label-normalization-05",
+      "repositoryRevision": "208fb932dd3ee6eb4382f68a98062f55a7b99c93c38620640f9d25389f5cb8b5",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "f81addfbac2d7cd17a27f78b7cc0bdf6ff7357a5bb251ed3d1db71ce3392d383",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "d6d11ba548183d755d66f3747107cd49a05c775850a83e6162e0e2444adaee78"
+    },
+    {
+      "pairIndex": 32,
+      "taskId": "cfc-v1-token-rendering-01",
+      "repositoryRevision": "2a79d375929734cfc81beabe40203701d5f924753771fbe492eda1f4bdeb91d7",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "b0599e8fa45fc0e69aa60174cbf4f6723064d898b2aea9e79009d7a436dfb046",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "39e7881e51190db3bb1235e6c1438d2e9b7fb313946dd0a02b5398ec58c11799"
+    },
+    {
+      "pairIndex": 32,
+      "taskId": "cfc-v1-token-rendering-01",
+      "repositoryRevision": "2a79d375929734cfc81beabe40203701d5f924753771fbe492eda1f4bdeb91d7",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "b0599e8fa45fc0e69aa60174cbf4f6723064d898b2aea9e79009d7a436dfb046",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "d3de8cdd79f763092d93def77079c454bc972e9e1fd05073b37b335e70e3a460"
+    },
+    {
+      "pairIndex": 33,
+      "taskId": "cfc-v1-label-normalization-02",
+      "repositoryRevision": "8599e45e9c5ae93f4db8928f64349aacb02815208e58b199c3a9e856926c8b09",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "6c0db631740d66db4243ef01fb49caf743386ffb07a673258b9747c551a0e101",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "5dad293c5aba61de7f744ed532db988cb0a6ac1287ba21e8cfb0b53e05506c8b"
+    },
+    {
+      "pairIndex": 33,
+      "taskId": "cfc-v1-label-normalization-02",
+      "repositoryRevision": "8599e45e9c5ae93f4db8928f64349aacb02815208e58b199c3a9e856926c8b09",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "6c0db631740d66db4243ef01fb49caf743386ffb07a673258b9747c551a0e101",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "80d9f053256394b0407d5ee2aa9d3915b11fc32a9a55565d9e06865ac9fc6e11"
+    },
+    {
+      "pairIndex": 34,
+      "taskId": "cfc-v1-count-parsing-08",
+      "repositoryRevision": "f24b05f44f6c9da559b39ab0e87d88d2951ee7e9b8f3faa13778cafd5b9a7dee",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "aebd9e20260f116a9c865122d4c641478e770f18b293b37ed2b533aeaacf0426",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "7a496e0073ccd314b97c10b751f9e8931b4180ee49619e39e03447a8ef5bab24"
+    },
+    {
+      "pairIndex": 34,
+      "taskId": "cfc-v1-count-parsing-08",
+      "repositoryRevision": "f24b05f44f6c9da559b39ab0e87d88d2951ee7e9b8f3faa13778cafd5b9a7dee",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "aebd9e20260f116a9c865122d4c641478e770f18b293b37ed2b533aeaacf0426",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "9f8ab23434725d8607f3d1afdc1c0422457b9ec8d716881e2617e9498343accd"
+    },
+    {
+      "pairIndex": 35,
+      "taskId": "cfc-v1-bounded-number-02",
+      "repositoryRevision": "3c8ffee0467b33515c9772dd6b748186d519d59f8e961c6f680b68260ebeeed4",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "8ae6f7a34aa971d0c982908ad06a0d5f61ad43eaefa70bc28c9798e5b9ce2838",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "fe7bbdc2a2c1f1ce1e4222a635d028d439a1fff8bc9edf655633464ed9da6234"
+    },
+    {
+      "pairIndex": 35,
+      "taskId": "cfc-v1-bounded-number-02",
+      "repositoryRevision": "3c8ffee0467b33515c9772dd6b748186d519d59f8e961c6f680b68260ebeeed4",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "8ae6f7a34aa971d0c982908ad06a0d5f61ad43eaefa70bc28c9798e5b9ce2838",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "c0e743413aa4013c3c003d721740f6299d1b485e65c460d3c7e4b54cd7a200ec"
+    },
+    {
+      "pairIndex": 36,
+      "taskId": "cfc-v1-label-normalization-07",
+      "repositoryRevision": "c67717849c87bf41581fed38d7f61dae1af7e1931d4dcfbe7a7b611e27ce8758",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "9061e7d5d45444081da52ef9f765ab93c9f6d3ab33edcef4a2dde9903e821002",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "615f7ad8033166d5f7094ad564827702aeb5678b5f6dd452db27c267e274da66"
+    },
+    {
+      "pairIndex": 36,
+      "taskId": "cfc-v1-label-normalization-07",
+      "repositoryRevision": "c67717849c87bf41581fed38d7f61dae1af7e1931d4dcfbe7a7b611e27ce8758",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "9061e7d5d45444081da52ef9f765ab93c9f6d3ab33edcef4a2dde9903e821002",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "1c53d8f7f9f092275c1297ccdd3e9f7b5f45cbaa63633342f7d5064f5775e3d6"
+    },
+    {
+      "pairIndex": 37,
+      "taskId": "cfc-v1-window-selection-06",
+      "repositoryRevision": "b7429a4bdc50539aab3b794aa646d37cb40a64edddb26f8127fb305bb9b213fd",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "8dad623da53f56f674d10637abb3e8adffe52993f21a3b856026bb41e6b7f352",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "70114b09479d2228c5c01f3df8a8ccf1d18a632dc22816e15a66d70012c27620"
+    },
+    {
+      "pairIndex": 37,
+      "taskId": "cfc-v1-window-selection-06",
+      "repositoryRevision": "b7429a4bdc50539aab3b794aa646d37cb40a64edddb26f8127fb305bb9b213fd",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "8dad623da53f56f674d10637abb3e8adffe52993f21a3b856026bb41e6b7f352",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "29bbe47571e467edca9f17d37dacb8375eebb1d20376cd8354d898097d4f36ee"
+    },
+    {
+      "pairIndex": 38,
+      "taskId": "cfc-v1-window-selection-08",
+      "repositoryRevision": "7bea9d3a36ae04deef0294fcb9758de31c9fca2f24869d2312193935268f3ab2",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "4ff64ad1f58211642b852d09939c9f1bf7bb10ca8ca53ac016341a2e85223ee2",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "985348a97752f1204eda682acd61452a50d1b2cdce786157c2664744dd5d359a"
+    },
+    {
+      "pairIndex": 38,
+      "taskId": "cfc-v1-window-selection-08",
+      "repositoryRevision": "7bea9d3a36ae04deef0294fcb9758de31c9fca2f24869d2312193935268f3ab2",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "4ff64ad1f58211642b852d09939c9f1bf7bb10ca8ca53ac016341a2e85223ee2",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "dc5577a35ded96c4dc349f46a7556948de851743e4d2bfab1233d73c3c46d767"
+    },
+    {
+      "pairIndex": 39,
+      "taskId": "cfc-v1-token-rendering-06",
+      "repositoryRevision": "52268bce81914bc625a4638266f254f0dbda5da9de93bff17e1b7b326cdc12d9",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "5801398bfcc3a5a28ea781ce7ff539a3646518bc1ef73ba6447414218e508f1f",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "5e47de4ce741c75dd465ea1e20d670ac6c4fdb1af9aa1f2643c95b87575ed483"
+    },
+    {
+      "pairIndex": 39,
+      "taskId": "cfc-v1-token-rendering-06",
+      "repositoryRevision": "52268bce81914bc625a4638266f254f0dbda5da9de93bff17e1b7b326cdc12d9",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "5801398bfcc3a5a28ea781ce7ff539a3646518bc1ef73ba6447414218e508f1f",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "ab9a13e2c2ec3076b2f7cd03785400a1aa6d44dfeeaf284b509f0c90c3c23c0e"
+    },
+    {
+      "pairIndex": 40,
+      "taskId": "cfc-v1-label-normalization-03",
+      "repositoryRevision": "13dd5bb75b5aac113efa7a8eb06ce937bc47d29ef5c5c975fedf436fb56ae949",
+      "condition": "TREATMENT",
+      "systemSha256": "618a3f2064b387942b732f063d06d16c34da1f1d633eea915b11f3d964ca6bfd",
+      "promptSha256": "13131fe05818ed8b74fd1d485d00b0e491bca5dd74d66864f7f02435b502c80f",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "f7129422c77942f508cd24a735187365e735d2b2805666f32a6b02a5076b2fda"
+    },
+    {
+      "pairIndex": 40,
+      "taskId": "cfc-v1-label-normalization-03",
+      "repositoryRevision": "13dd5bb75b5aac113efa7a8eb06ce937bc47d29ef5c5c975fedf436fb56ae949",
+      "condition": "CONTROL",
+      "systemSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "promptSha256": "13131fe05818ed8b74fd1d485d00b0e491bca5dd74d66864f7f02435b502c80f",
+      "schemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "requestIntentSha256": "5dcb731d696566de4cc9870454e46dbe1f3ef5b59a9b58dcef5c57205ae06274"
+    }
+  ],
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "rawEditBodiesStored": false
+  }
+}

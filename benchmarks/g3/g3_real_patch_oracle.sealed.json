@@ -1,0 +1,1149 @@
+{
+  "schema_version": 1,
+  "corpus_id": "dca-g3-real-patch",
+  "model_prompt_visibility": "NEVER",
+  "task_payload_sha256": "1242046ca09e562a2a09da5336b1203ec6002b8173e16f48566c906fd89d6bea",
+  "oracle_payload_sha256": "e9b30fab4b9a342019cc7cee182871f2ddbd487b93cb1758a64a9f9c14474ffb",
+  "rows": [
+    {
+      "task_id": "g3-patch-werkzeug-2481648714d4",
+      "repository_id": "werkzeug",
+      "base_commit": "0caf67da4fbecce88cadeaa68490c47910100dfc",
+      "fix_commit": "4ce92208da851b30ac1a8fe0b2448ddfb962f308",
+      "source_path": "src/werkzeug/formparser.py",
+      "allowed_files": [
+        "src/werkzeug/formparser.py"
+      ],
+      "expected_patch_sha256": "06d03870f94dbbfb6248f8f4650a7f290694b9c32d4f262378e18d5c897dbfa2",
+      "before_sha256": "fd13ac97d11d36825fd74ad5310ac8db18fba852732df1710b791e74edb2b74f",
+      "after_sha256": "2a48fa6ed9819711548734eb58e63f93d57ba7ea533138c9102dd9d59adcac46",
+      "hidden_oracle": {
+        "patch": "diff --git a/src/werkzeug/formparser.py b/src/werkzeug/formparser.py\nindex da90612..af04600 100644\n--- a/src/werkzeug/formparser.py\n+++ b/src/werkzeug/formparser.py\n@@ -61,9 +61,8 @@ def parse_form_data(\n     max_form_parts: int | None = None,\n     **kwargs: t.Any,\n ) -> t_parse_result:\n-    \"\"\"Parse the form data in the environ and return it as tuple in the form\n-    ``(stream, form, files)``.  You should only call this method if the\n-    transport method is `POST`, `PUT`, or `PATCH`.\n+    \"\"\"Parse the form data from the request body and return it as a\n+    tuple ``(stream, form, files)``.\n \n     If the mimetype of the data transmitted is `multipart/form-data` the\n     files multidict will be filled with `FileStorage` objects.  If the\n",
+        "after_content_sha256": "2a48fa6ed9819711548734eb58e63f93d57ba7ea533138c9102dd9d59adcac46",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-ky-f77af9f78506",
+      "repository_id": "ky",
+      "base_commit": "6edddd986f2f6a9c7d91e851d9b9a48df439d328",
+      "fix_commit": "06375efbacfc1bdc96f7a4de7560684b765e1274",
+      "source_path": "source/utils/merge.ts",
+      "allowed_files": [
+        "source/utils/merge.ts"
+      ],
+      "expected_patch_sha256": "12f46cd8516169cb156a88ad72438b4defd170b79b2b904157e1f007b1c288bf",
+      "before_sha256": "254d66408502aabf0840a2cc4671cb50c4b9308923b6c3ad0b8b8699bd696e5f",
+      "after_sha256": "03b5b800027821ee2ec17eb95e01b6e86eb1a6b007ccf06b0b77e723abf1118b",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/utils/merge.ts b/source/utils/merge.ts\nindex 762f017..aa046c4 100644\n--- a/source/utils/merge.ts\n+++ b/source/utils/merge.ts\n@@ -204,7 +204,7 @@ const appendSearchParameters = (target: any, source: any): URLSearchParams => {\n };\n \n // TODO: Make this strongly-typed (no `any`).\n-export const deepMerge = <T>(...sources: Array<Partial<T> | undefined>): T => {\n+const deepMergeInternal = <T>(isRoot: boolean, ...sources: Array<Partial<T> | undefined>): T => {\n \tlet returnValue: any = {};\n \tlet headers: KyHeadersInit = {};\n \tlet hooks = {};\n@@ -264,8 +264,17 @@ export const deepMerge = <T>(...sources: Array<Partial<T> | undefined>): T => {\n \t\t\t\t\tcontinue;\n \t\t\t\t}\n \n+\t\t\t\t// `retry` accepts a number as shorthand for `{limit: number}`. Expand it before\n+\t\t\t\t// merging so extending a numeric `retry` with an object keeps the limit instead\n+\t\t\t\t// of dropping it (e.g. `ky.create({retry: 3}).extend({retry: {methods: ['get']}})`).\n+\t\t\t\t// Scoped to the root options level so it never rewrites nested user data that\n+\t\t\t\t// happens to contain a `retry` key (e.g. a `json` request body).\n+\t\t\t\tif (isRoot && key === 'retry' && isObject(value) && !isReplace && typeof returnValue[key] === 'number') {\n+\t\t\t\t\treturnValue = {...returnValue, [key]: {limit: returnValue[key]}};\n+\t\t\t\t}\n+\n \t\t\t\tif (isObject(value) && !isReplace && key in returnValue) {\n-\t\t\t\t\tvalue = deepMerge(returnValue[key], value);\n+\t\t\t\t\tvalue = deepMergeInternal(false, returnValue[key], value);\n \t\t\t\t}\n \n \t\t\t\treturnValue = {...returnValue, [key]: value};\n@@ -310,3 +319,6 @@ export const deepMerge = <T>(...sources: Array<Partial<T> | undefined>): T => {\n \n \treturn returnValue;\n };\n+\n+export const deepMerge = <T>(...sources: Array<Partial<T> | undefined>): T =>\n+\tdeepMergeInternal<T>(true, ...sources);\n",
+        "after_content_sha256": "03b5b800027821ee2ec17eb95e01b6e86eb1a6b007ccf06b0b77e723abf1118b",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pluggy-fcf12862c082",
+      "repository_id": "pluggy",
+      "base_commit": "dd20a85e38af556e1c818b03391eab1480438e0c",
+      "fix_commit": "0258484dc180a0c28705de83783b269f4fed4873",
+      "source_path": "src/pluggy/_hooks.py",
+      "allowed_files": [
+        "src/pluggy/_hooks.py"
+      ],
+      "expected_patch_sha256": "5872d2f3b2ac24d0222b9c4b1842fe173a3051adcba0edd138b9fb54e6e9a9ea",
+      "before_sha256": "abffecf3558e24afb0725ae73dbc3957f278e009fc96c8802a21ceb6c38145a2",
+      "after_sha256": "ee1c8cc8fefc5656f23efdc330a2b735c5bba7b7b1dfd41f6c3b0aa4aa2cd52f",
+      "hidden_oracle": {
+        "patch": "diff --git a/src/pluggy/_hooks.py b/src/pluggy/_hooks.py\nindex d62dff1..f079d3b 100644\n--- a/src/pluggy/_hooks.py\n+++ b/src/pluggy/_hooks.py\n@@ -291,6 +291,17 @@ def normalize_hookimpl_opts(opts: HookimplOpts) -> None:\n _PYPY = sys.implementation.name == \"pypy\"\n _IMPLICIT_NAMES = (\"self\", \"cls\", \"obj\") if _PYPY else (\"self\", \"cls\")\n \n+# Qualnames whose missing-self deprecation warning is suppressed because\n+# their upstream code is already fixed but not yet released.\n+# Remove entries once a release with the fix is available.\n+_NOSELF_WARN_SUPPRESS: frozenset[str] = frozenset(\n+    {\n+        # pytest-timeout >=2.3.2 has the fix, but is unreleased as of 2026-05.\n+        \"TimeoutHooks.pytest_timeout_set_timer\",\n+        \"TimeoutHooks.pytest_timeout_cancel_timer\",\n+    }\n+)\n+\n \n def varnames(\n     func: object, *, legacy_noself: bool = False\n@@ -306,7 +317,7 @@ def varnames(\n     :param legacy_noself:\n         If ``True``, support hookspec classes whose methods omit ``self``.\n         When the function looks like a class method but has no implicit first\n-        parameter, a :class:`FutureWarning` is emitted.\n+        parameter, a :class:`DeprecationWarning` is emitted.\n     \"\"\"\n     is_bound = False\n     if inspect.isclass(func):\n@@ -360,14 +371,15 @@ def varnames(\n         elif _is_class_method and args[0] in _IMPLICIT_NAMES:\n             args = args[1:]\n         elif _is_class_method and legacy_noself:\n-            warnings.warn(\n-                f\"{qualname} is a method but its first parameter\"\n-                f\" {args[0]!r} is not 'self'.\"\n-                f\" Add 'self' as the first parameter or use @staticmethod.\"\n-                f\" This will become an error in a future version of pluggy.\",\n-                FutureWarning,\n-                stacklevel=2,\n-            )\n+            if _tail not in _NOSELF_WARN_SUPPRESS:\n+                warnings.warn(\n+                    f\"{qualname} is a method but its first parameter\"\n+                    f\" {args[0]!r} is not 'self'.\"\n+                    f\" Add 'self' as the first parameter or use @staticmethod.\"\n+                    f\" This will become an error in a future version of pluggy.\",\n+                    DeprecationWarning,\n+                    stacklevel=2,\n+                )\n \n     return args, kwargs\n \n",
+        "after_content_sha256": "ee1c8cc8fefc5656f23efdc330a2b735c5bba7b7b1dfd41f6c3b0aa4aa2cd52f",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-p-queue-84a9ec80c32f",
+      "repository_id": "p-queue",
+      "base_commit": "a06fbc928725f074c72716e1ba21106df6822dae",
+      "fix_commit": "9efde425e233ab59ff3e6842430d40fd2208c103",
+      "source_path": "source/index.ts",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "expected_patch_sha256": "bf301b5251c173d42b1b2d011c363d08b0724dfcecb3b9c24665692dca08e1aa",
+      "before_sha256": "17d8f1c999fedd2a4c33ab10d63912f47f96f68018fefe61ab57c6b05dd7368d",
+      "after_sha256": "43ce8fdedaca0b8825c5e62f7df62376ec4b4f960120837eacb8dd6fa73e86f7",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/index.ts b/source/index.ts\nindex bbc055b..f7bcaed 100644\n--- a/source/index.ts\n+++ b/source/index.ts\n@@ -450,6 +450,10 @@ export default class PQueue<QueueType extends Queue<RunFunction, EnqueueOptionsT\n \t\t\tid: options.id ?? (this.#idAssigner++).toString(),\n \t\t};\n \n+\t\tif (options.timeout !== undefined && !(Number.isFinite(options.timeout) && options.timeout > 0)) {\n+\t\t\tthrow new TypeError(`Expected \\`timeout\\` to be a positive finite number, got \\`${options.timeout}\\` (${typeof options.timeout})`);\n+\t\t}\n+\n \t\treturn new Promise((resolve, reject) => {\n \t\t\t// Create a unique symbol for tracking this task\n \t\t\tconst taskSymbol = Symbol(`task-${options.id}`);\n@@ -489,7 +493,7 @@ export default class PQueue<QueueType extends Queue<RunFunction, EnqueueOptionsT\n \n \t\t\t\t\tlet operation = function_({signal: options.signal});\n \n-\t\t\t\t\tif (options.timeout) {\n+\t\t\t\t\tif (options.timeout !== undefined) {\n \t\t\t\t\t\toperation = pTimeout(Promise.resolve(operation), {\n \t\t\t\t\t\t\tmilliseconds: options.timeout,\n \t\t\t\t\t\t\tmessage: `Task timed out after ${options.timeout}ms (queue has ${this.#pending} running, ${this.#queue.size} waiting)`,\n",
+        "after_content_sha256": "43ce8fdedaca0b8825c5e62f7df62376ec4b4f960120837eacb8dd6fa73e86f7",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-cachecontrol-b70e71a0e6c7",
+      "repository_id": "cachecontrol",
+      "base_commit": "9b85ea1bbb197fd126b675b0e9bf88a50e3ab76e",
+      "fix_commit": "e46a97fedcdd4ab4dcb41b40837768f58e71f602",
+      "source_path": "cachecontrol/controller.py",
+      "allowed_files": [
+        "cachecontrol/controller.py"
+      ],
+      "expected_patch_sha256": "50145f06d5372421a89398da2f654bddbef449a164428418e468cf7e4c1a5713",
+      "before_sha256": "66313667c189a0c01fc6ca48aff06a4abc908cf50a4c4538b61b6c9673ae4f61",
+      "after_sha256": "c716f004bc889f6bed321d428289d6021f23a54f582820b87a66921cf0a8aba9",
+      "hidden_oracle": {
+        "patch": "diff --git a/cachecontrol/controller.py b/cachecontrol/controller.py\nindex 733684f..03b2218 100644\n--- a/cachecontrol/controller.py\n+++ b/cachecontrol/controller.py\n@@ -219,7 +219,9 @@ class CacheController:\n \n         now = time.time()\n         time_tuple = parsedate_tz(headers[\"date\"])\n-        assert time_tuple is not None\n+        if time_tuple is None:\n+            logger.debug(\"Ignoring cached response: invalid date\")\n+            return False\n         date = calendar.timegm(time_tuple[:6])\n         current_age = max(0, now - date)\n         logger.debug(\"Current age based on date: %i\", current_age)\n@@ -358,8 +360,7 @@ class CacheController:\n \n         if \"date\" in response_headers:\n             time_tuple = parsedate_tz(response_headers[\"date\"])\n-            assert time_tuple is not None\n-            date = calendar.timegm(time_tuple[:6])\n+            date = calendar.timegm(time_tuple[:6]) if time_tuple is not None else 0\n         else:\n             date = 0\n \n@@ -430,7 +431,8 @@ class CacheController:\n         # the cache.\n         elif \"date\" in response_headers:\n             time_tuple = parsedate_tz(response_headers[\"date\"])\n-            assert time_tuple is not None\n+            if time_tuple is None:\n+                return\n             date = calendar.timegm(time_tuple[:6])\n             # cache when there is a max-age > 0\n             max_age = cc.get(\"max-age\")\n",
+        "after_content_sha256": "c716f004bc889f6bed321d428289d6021f23a54f582820b87a66921cf0a8aba9",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pyjwt-7896e921b589",
+      "repository_id": "pyjwt",
+      "base_commit": "22f478cebddd8294259c30f037ecb92b0b348774",
+      "fix_commit": "d2f4bec4963897c0ef96ef64a875894f2c8542ab",
+      "source_path": "jwt/algorithms.py",
+      "allowed_files": [
+        "jwt/algorithms.py"
+      ],
+      "expected_patch_sha256": "0eb61ec6643ed54f429649b802948325069d4d42f842c1aee2ee6257af43b07c",
+      "before_sha256": "861467efb5d406ae72da61f552b838bfac43869cc4d9f710752a3faac8c55fa1",
+      "after_sha256": "f637f8b5e4f1f4ba6365acf18eb6576e9eb13d1f622eb5659efd586d45e9271b",
+      "hidden_oracle": {
+        "patch": "diff --git a/jwt/algorithms.py b/jwt/algorithms.py\nindex a5b73d9..f848397 100644\n--- a/jwt/algorithms.py\n+++ b/jwt/algorithms.py\n@@ -443,7 +443,10 @@ if has_crypto:\n \n         def prepare_key(self, key: AllowedRSAKeys | str | bytes) -> AllowedRSAKeys:\n             if isinstance(key, self._crypto_key_types):\n-                return key\n+                # Cast is required for type narrowing on Python 3.9's mypy\n+                # but redundant on newer mypy versions; suppress both\n+                # diagnostics so the line works across all supported envs.\n+                return cast(AllowedRSAKeys, key)  # type: ignore[redundant-cast,unused-ignore]\n \n             if not isinstance(key, (bytes, str)):\n                 raise TypeError(\"Expecting a PEM-formatted key.\")\n@@ -637,8 +640,10 @@ if has_crypto:\n \n         def prepare_key(self, key: AllowedECKeys | str | bytes) -> AllowedECKeys:\n             if isinstance(key, self._crypto_key_types):\n-                self._validate_curve(key)\n-                return key\n+                # See note in RSAAlgorithm.prepare_key.\n+                ec_key = cast(AllowedECKeys, key)  # type: ignore[redundant-cast,unused-ignore]\n+                self._validate_curve(ec_key)\n+                return ec_key\n \n             if not isinstance(key, (bytes, str)):\n                 raise TypeError(\"Expecting a PEM-formatted key.\")\n",
+        "after_content_sha256": "f637f8b5e4f1f4ba6365acf18eb6576e9eb13d1f622eb5659efd586d45e9271b",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-multidict-9b9cd28ac785",
+      "repository_id": "multidict",
+      "base_commit": "8d0edb4dba3f1d9f1a512ac6be42812055f32843",
+      "fix_commit": "656c4de8f7dbeb6ecfb281ce857bdda931b5c909",
+      "source_path": "multidict/_multidict_py.py",
+      "allowed_files": [
+        "multidict/_multidict_py.py"
+      ],
+      "expected_patch_sha256": "6e49d3028aedbf2a20c26c5158f060c3df89fe5d877f0dfe5d141990462b7b70",
+      "before_sha256": "736e31cab12bec3bb7ef8fe6678ccc073e9423bd979faea33ae208d61f135884",
+      "after_sha256": "d45a67bb2f5c6eb6be14d054339bf228a73cc1791e733a39b48b75add49b61ef",
+      "hidden_oracle": {
+        "patch": "diff --git a/multidict/_multidict_py.py b/multidict/_multidict_py.py\nindex 5cb7c02..e286713 100644\n--- a/multidict/_multidict_py.py\n+++ b/multidict/_multidict_py.py\n@@ -817,7 +817,7 @@ class MultiDict(_CSMixin, MutableMultiMapping[_V]):\n                     arg = list(arg)\n                     arg.extend(list(kwargs.items()))\n                 try:\n-                    yield len(arg) + len(kwargs)  # type: ignore[arg-type]\n+                    yield len(arg)  # type: ignore[arg-type]\n                 except TypeError:\n                     yield 0\n                 for pos, item in enumerate(arg):\n",
+        "after_content_sha256": "d45a67bb2f5c6eb6be14d054339bf228a73cc1791e733a39b48b75add49b61ef",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-zod-4da14f497654",
+      "repository_id": "zod",
+      "base_commit": "ee7376ad3ac04ede2567a7074762d20b0de1de6d",
+      "fix_commit": "f29f2a6db443284eff44db181dbe146df98f92c2",
+      "source_path": "packages/zod/src/v4/core/regexes.ts",
+      "allowed_files": [
+        "packages/zod/src/v4/core/regexes.ts"
+      ],
+      "expected_patch_sha256": "193c2f2f7d3421212bc3a8611281e7895b0ac7259d7b1316c23704c7557f7b55",
+      "before_sha256": "47ddb6cf93b4c672e8693a1496d075e75355849609e99cab34bea8f0fb45ec49",
+      "after_sha256": "da0efe9a6612fc6cdc0b5ac9606b5b5375e3a011bcdccecf7bb605600f844455",
+      "hidden_oracle": {
+        "patch": "diff --git a/packages/zod/src/v4/core/regexes.ts b/packages/zod/src/v4/core/regexes.ts\nindex 4afe887..7968470 100644\n--- a/packages/zod/src/v4/core/regexes.ts\n+++ b/packages/zod/src/v4/core/regexes.ts\n@@ -73,7 +73,7 @@ export const mac = (delimiter?: string): RegExp => {\n export const cidrv4: RegExp =\n   /^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\/([0-9]|[1-2][0-9]|3[0-2])$/;\n export const cidrv6: RegExp =\n-  /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::|([0-9a-fA-F]{1,4})?::([0-9a-fA-F]{1,4}:?){0,6})\\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/;\n+  /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))\\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/;\n \n // https://stackoverflow.com/questions/7860392/determine-if-string-is-in-base64-using-javascript\n export const base64: RegExp = /^$|^(?:[0-9a-zA-Z+/]{4})*(?:(?:[0-9a-zA-Z+/]{2}==)|(?:[0-9a-zA-Z+/]{3}=))?$/;\n",
+        "after_content_sha256": "da0efe9a6612fc6cdc0b5ac9606b5b5375e3a011bcdccecf7bb605600f844455",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-dotenv-f21f9cad3d1e",
+      "repository_id": "dotenv",
+      "base_commit": "98c6030882b9f8dbf204426771e41e7ee86b0916",
+      "fix_commit": "5b70de00150a3f74625de456b2386078b38eee4c",
+      "source_path": "lib/main.js",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "expected_patch_sha256": "4e3dfd1f94707799d930fc060f6df6f1a856adf58adea478b959b5512f0356e5",
+      "before_sha256": "812212a2ce5ea1390fc59a8ea457962b2f4db8c054d431a33098a5fe28b70c3b",
+      "after_sha256": "4fcf55cdbb09a5758396bb2985518ffc87eceb7108dc644eeeae5d3b377b77d8",
+      "hidden_oracle": {
+        "patch": "diff --git a/lib/main.js b/lib/main.js\nindex 5895a73..1403fbd 100644\n--- a/lib/main.js\n+++ b/lib/main.js\n@@ -146,13 +146,22 @@ function parseFast (src) {\n       let j = vStart\n       while (j < len) {\n         const cc = str.charCodeAt(j)\n-        if (cc === 92 /* \\ */ && j + 1 < len && str.charCodeAt(j + 1) === quote) {\n-          j += 2\n-        } else if (cc === quote) {\n+        // a backslash consumes the next character when it escapes the quote (\\\") or\n+        // another backslash (\\\\). Without the \\\\ case the second backslash of a pair\n+        // is left free to escape a following closing quote, so a value ending in an\n+        // escaped backslash — VAR=\"C:\\\\dir\\\\\" — runs past its own closing quote and\n+        // swallows the rest of the file.\n+        if (cc === 92 /* \\ */ && j + 1 < len) {\n+          const nc = str.charCodeAt(j + 1)\n+          if (nc === quote || nc === 92 /* \\ */) {\n+            j += 2\n+            continue\n+          }\n+        }\n+        if (cc === quote) {\n           break\n-        } else {\n-          j++\n         }\n+        j++\n       }\n       if (j >= len) {\n         // unterminated quote — fall back to unquoted-from-here semantics\n",
+        "after_content_sha256": "4fcf55cdbb09a5758396bb2985518ffc87eceb7108dc644eeeae5d3b377b77d8",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-axios-7d34905d4cb0",
+      "repository_id": "axios",
+      "base_commit": "a092bae50d1884782151b2fcea12974d6da6e376",
+      "fix_commit": "878bb29de570765b0d4c0970e30400d9ea9399f7",
+      "source_path": "sandbox/server.js",
+      "allowed_files": [
+        "sandbox/server.js"
+      ],
+      "expected_patch_sha256": "5ddec812a3056e0b465d38061989617752b3dcbff0b2722c5341ed3207f1b0ca",
+      "before_sha256": "1fab43d909265bc39a204ac1043a50ab1ed202cffc378333c277870d9d53ec64",
+      "after_sha256": "5b5ee6f0a4f726cef8adcd9c526796a379564d0198b76f6551b98f9875f6e032",
+      "hidden_oracle": {
+        "patch": "diff --git a/sandbox/server.js b/sandbox/server.js\nindex 0246f47..31f5373 100644\n--- a/sandbox/server.js\n+++ b/sandbox/server.js\n@@ -76,7 +76,7 @@ function requestHandler(req, res) {\n   req.setEncoding('utf8');\n \n   const parsed = new URL(req.url, 'http://localhost');\n-  const pathname = parsed.pathname;\n+  let pathname = parsed.pathname;\n \n   console.log('[' + new Date() + ']', req.method, pathname);\n \n",
+        "after_content_sha256": "5b5ee6f0a4f726cef8adcd9c526796a379564d0198b76f6551b98f9875f6e032",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-werkzeug-67f0694b7c36",
+      "repository_id": "werkzeug",
+      "base_commit": "b2b281beec14dad63882bcee863d8c2fc5be34c0",
+      "fix_commit": "4da3786f1443cbd6efd3f4107bcd5b4ab121f122",
+      "source_path": "src/werkzeug/urls.py",
+      "allowed_files": [
+        "src/werkzeug/urls.py"
+      ],
+      "expected_patch_sha256": "a4ac31072886efbc2083ab6c12615b86e4663e570399e1844b2beda0d5364b12",
+      "before_sha256": "5f234ac07bcae480b7efec2e2033185a4882277c8b4cb1afef09f6185de776a2",
+      "after_sha256": "67f0f278834ac7fef3cc32cada16750d05c19771ecb11cd78b479dded107eacb",
+      "hidden_oracle": {
+        "patch": "diff --git a/src/werkzeug/urls.py b/src/werkzeug/urls.py\nindex 5bffe39..89ef699 100644\n--- a/src/werkzeug/urls.py\n+++ b/src/werkzeug/urls.py\n@@ -68,6 +68,9 @@ def uri_to_iri(uri: str) -> str:\n \n     :param uri: The URI to convert.\n \n+    .. versionchanged:: 3.1.9\n+        Empty username, password, and port 0 are preserved.\n+\n     .. versionchanged:: 3.0\n         Passing a tuple or bytes, and the ``charset`` and ``errors`` parameters,\n         are removed.\n@@ -95,13 +98,13 @@ def uri_to_iri(uri: str) -> str:\n     if \":\" in netloc:\n         netloc = f\"[{netloc}]\"\n \n-    if parts.port:\n+    if parts.port is not None:\n         netloc = f\"{netloc}:{parts.port}\"\n \n-    if parts.username:\n+    if parts.username is not None:\n         auth = _unquote_user(parts.username)\n \n-        if parts.password:\n+        if parts.password is not None:\n             password = _unquote_user(parts.password)\n             auth = f\"{auth}:{password}\"\n \n@@ -119,6 +122,9 @@ def iri_to_uri(iri: str) -> str:\n \n     :param iri: The IRI to convert.\n \n+    .. versionchanged:: 3.1.9\n+        Empty username, password, and port 0 are preserved.\n+\n     .. versionchanged:: 3.0\n         Passing a tuple or bytes, the ``charset`` and ``errors`` parameters,\n         and the ``safe_conversion`` parameter, are removed.\n@@ -150,13 +156,13 @@ def iri_to_uri(iri: str) -> str:\n     if \":\" in netloc:\n         netloc = f\"[{netloc}]\"\n \n-    if parts.port:\n+    if parts.port is not None:\n         netloc = f\"{netloc}:{parts.port}\"\n \n-    if parts.username:\n+    if parts.username is not None:\n         auth = quote(parts.username, safe=\"%!$&'()*+,;=\")\n \n-        if parts.password:\n+        if parts.password is not None:\n             password = quote(parts.password, safe=\"%!$&'()*+,;=\")\n             auth = f\"{auth}:{password}\"\n \n",
+        "after_content_sha256": "67f0f278834ac7fef3cc32cada16750d05c19771ecb11cd78b479dded107eacb",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-ky-943680c06acc",
+      "repository_id": "ky",
+      "base_commit": "e0fcf780de2bd69af2528e4b7b87ccae6bb727b1",
+      "fix_commit": "61d6d66d27911001b9b4d57ab93139f9ad61384b",
+      "source_path": "source/utils/is-network-error.ts",
+      "allowed_files": [
+        "source/utils/is-network-error.ts"
+      ],
+      "expected_patch_sha256": "a55be9382de615dfa863cfc811e42c18ea2102125d51e4fcb6fac25b00662e4d",
+      "before_sha256": "0f49fc0a57d87caf5fbe0fb6d219cbd7a0f27dcd515d3d822b798d56e9307737",
+      "after_sha256": "0f9464473184bc45102e3c10cd9a3fffeb55d779a15831cc5acf62248f67e6dc",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/utils/is-network-error.ts b/source/utils/is-network-error.ts\nindex d7a5449..616203c 100644\n--- a/source/utils/is-network-error.ts\n+++ b/source/utils/is-network-error.ts\n@@ -1,4 +1,4 @@\n-// Inlined from https://github.com/sindresorhus/is-network-error v1.3.1\n+// Inlined from https://github.com/sindresorhus/is-network-error v1.3.2\n \n const objectToString = Object.prototype.toString;\n \n@@ -28,7 +28,7 @@ export default function isRawNetworkError(error: unknown): error is TypeError {\n \tconst {message, stack} = error;\n \n \t// Safari 17+ has generic message but no stack for network errors\n-\tif (message === 'Load failed') {\n+\tif (message === 'Load failed' || (message.startsWith('Load failed (') && message.endsWith(')'))) {\n \t\treturn stack === undefined\n \t\t\t// Sentry adds its own stack trace to the fetch error, so also check for that\n \t\t\t|| '__sentry_captured__' in error;\n",
+        "after_content_sha256": "0f9464473184bc45102e3c10cd9a3fffeb55d779a15831cc5acf62248f67e6dc",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pluggy-da7d136e03f6",
+      "repository_id": "pluggy",
+      "base_commit": "c1dfc0b9ca32355c214883471d15ecc5133cd2b8",
+      "fix_commit": "0b7790eb2adf436c6df39c9a2256aa8a31ba3893",
+      "source_path": "src/pluggy/_hooks.py",
+      "allowed_files": [
+        "src/pluggy/_hooks.py"
+      ],
+      "expected_patch_sha256": "6395b445e5dec96f03085b98fbb4971255785746d8ca3fdd7e6c7ee136731fdb",
+      "before_sha256": "20b4f97437bbb91168aba3039bf6d1784eff400d348a31cab2e8230b7aaf605f",
+      "after_sha256": "7b25108d9bf729f23a35ecd27c975a06afc133b9858944bb8dfb1036e0720ab8",
+      "hidden_oracle": {
+        "patch": "diff --git a/src/pluggy/_hooks.py b/src/pluggy/_hooks.py\nindex 86cdcdf..f3d62fc 100644\n--- a/src/pluggy/_hooks.py\n+++ b/src/pluggy/_hooks.py\n@@ -311,9 +311,11 @@ def varnames(func: object) -> tuple[tuple[str, ...], tuple[str, ...]]:\n         except Exception:  # pragma: no cover - pypy special case\n             return (), ()\n \n-    # Unwrap decorated functions to get the original signature\n+    # Track bound methods before unwrapping, since __func__ loses that info.\n+    is_bound = inspect.ismethod(func)\n     func = inspect.unwrap(func)  # type: ignore[arg-type]\n     if inspect.ismethod(func):\n+        is_bound = True\n         func = func.__func__\n \n     try:\n@@ -335,8 +337,9 @@ def varnames(func: object) -> tuple[tuple[str, ...], tuple[str, ...]]:\n         kwargs = ()\n \n     # Strip implicit instance arg (self/obj for methods)\n-    if args and \".\" in qualname and args[0] in _IMPLICIT_NAMES:\n-        args = args[1:]\n+    if args and args[0] in _IMPLICIT_NAMES:\n+        if is_bound or \".\" in qualname:\n+            args = args[1:]\n \n     return args, kwargs\n \n",
+        "after_content_sha256": "7b25108d9bf729f23a35ecd27c975a06afc133b9858944bb8dfb1036e0720ab8",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-p-queue-6ba45037be0c",
+      "repository_id": "p-queue",
+      "base_commit": "9eec7efb433c33f66799d9dec41aa56d43f3435a",
+      "fix_commit": "a20e1f34b5c82e4e91e5d2e0c8b663e831dc16ab",
+      "source_path": "source/index.ts",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "expected_patch_sha256": "ac6ed65157bb7d902665a4ea1d608fefaef243475f1b4046d0733623f13e94eb",
+      "before_sha256": "b0815d227bbb134226c83a9b12727b4bb64e8fcf7abd0efaeb8af863c89dad5c",
+      "after_sha256": "dad7a86b49d27d1d83af548c678f257222c5cca763365c737cdddf9d69748b75",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/index.ts b/source/index.ts\nindex 3f47edd..7859e7d 100644\n--- a/source/index.ts\n+++ b/source/index.ts\n@@ -961,6 +961,7 @@ export default class PQueue<QueueType extends Queue<RunFunction, EnqueueOptionsT\n }\n \n export type {Queue} from './queue.js';\n+export {default as PriorityQueue} from './priority-queue.js';\n export {type QueueAddOptions, type Options} from './options.js';\n \n /**\n",
+        "after_content_sha256": "dad7a86b49d27d1d83af548c678f257222c5cca763365c737cdddf9d69748b75",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-cachecontrol-8bac6d0430a0",
+      "repository_id": "cachecontrol",
+      "base_commit": "385618ef9e04277b2d219e8f13c86cfb22c4fee1",
+      "fix_commit": "2d4710cb2bd622cc96b47a593dea9c9afe96fbe0",
+      "source_path": "cachecontrol/controller.py",
+      "allowed_files": [
+        "cachecontrol/controller.py"
+      ],
+      "expected_patch_sha256": "404fab6ae183bb8e5f452204fc65083d6249545b4652338bfd64a902bee6cb93",
+      "before_sha256": "fb3694b24e5ea37d013941991ec4a45d1345b9d6fac885aa3cb0a791f52f96b1",
+      "after_sha256": "66313667c189a0c01fc6ca48aff06a4abc908cf50a4c4538b61b6c9673ae4f61",
+      "hidden_oracle": {
+        "patch": "diff --git a/cachecontrol/controller.py b/cachecontrol/controller.py\nindex b993570..733684f 100644\n--- a/cachecontrol/controller.py\n+++ b/cachecontrol/controller.py\n@@ -163,7 +163,7 @@ class CacheController:\n \n         result = self.serializer.loads(request, cache_data, body_file)\n         if result is None:\n-            logger.warning(\"Cache entry deserialization failed, entry ignored\")\n+            logger.debug(\"Cache entry deserialization failed, entry ignored\")\n         return result\n \n     def cached_request(self, request: PreparedRequest) -> HTTPResponse | Literal[False]:\n",
+        "after_content_sha256": "66313667c189a0c01fc6ca48aff06a4abc908cf50a4c4538b61b6c9673ae4f61",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pyjwt-00216e6a316f",
+      "repository_id": "pyjwt",
+      "base_commit": "95791b1759b8aa4f2203575d344d5c78564cdc81",
+      "fix_commit": "22f478cebddd8294259c30f037ecb92b0b348774",
+      "source_path": "jwt/algorithms.py",
+      "allowed_files": [
+        "jwt/algorithms.py"
+      ],
+      "expected_patch_sha256": "1ad8bd0f3a119260c6298b361936f3e5cdc926b2b19758712c1bde2311bd384a",
+      "before_sha256": "10cb95539e1a0f3799fdd862e5ff7ee36bd48e307a74384ac3f329093ca79067",
+      "after_sha256": "861467efb5d406ae72da61f552b838bfac43869cc4d9f710752a3faac8c55fa1",
+      "hidden_oracle": {
+        "patch": "diff --git a/jwt/algorithms.py b/jwt/algorithms.py\nindex 20444bf..a5b73d9 100644\n--- a/jwt/algorithms.py\n+++ b/jwt/algorithms.py\n@@ -443,7 +443,7 @@ if has_crypto:\n \n         def prepare_key(self, key: AllowedRSAKeys | str | bytes) -> AllowedRSAKeys:\n             if isinstance(key, self._crypto_key_types):\n-                return cast(AllowedRSAKeys, key)\n+                return key\n \n             if not isinstance(key, (bytes, str)):\n                 raise TypeError(\"Expecting a PEM-formatted key.\")\n@@ -637,9 +637,8 @@ if has_crypto:\n \n         def prepare_key(self, key: AllowedECKeys | str | bytes) -> AllowedECKeys:\n             if isinstance(key, self._crypto_key_types):\n-                ec_key = cast(AllowedECKeys, key)\n-                self._validate_curve(ec_key)\n-                return ec_key\n+                self._validate_curve(key)\n+                return key\n \n             if not isinstance(key, (bytes, str)):\n                 raise TypeError(\"Expecting a PEM-formatted key.\")\n",
+        "after_content_sha256": "861467efb5d406ae72da61f552b838bfac43869cc4d9f710752a3faac8c55fa1",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-multidict-f40c4f834a46",
+      "repository_id": "multidict",
+      "base_commit": "eebdb187601ee6110982b8614c5705bb0bed3493",
+      "fix_commit": "02d49bc12535d0ac1610d039cbe6af01bc73f45e",
+      "source_path": "multidict/_multidict_py.py",
+      "allowed_files": [
+        "multidict/_multidict_py.py"
+      ],
+      "expected_patch_sha256": "6a8cde305cac72f5317f29cdff40a8f3f6caf9503ba0d96437e13ba93fc8b863",
+      "before_sha256": "5af7ae26f0129b6ceb216112e78223ce3abd57b87600fbe538ded56fb00b6818",
+      "after_sha256": "c82ea0a6cd9611a41d147cac11086ee72878a8b05b994a0f66f6cb1b59317ff1",
+      "hidden_oracle": {
+        "patch": "diff --git a/multidict/_multidict_py.py b/multidict/_multidict_py.py\nindex 86bc23a..ef6c03c 100644\n--- a/multidict/_multidict_py.py\n+++ b/multidict/_multidict_py.py\n@@ -831,7 +831,7 @@ class MultiDict(_CSMixin, MutableMultiMapping[_V]):\n                 for pos, item in enumerate(arg):\n                     if not len(item) == 2:\n                         raise ValueError(\n-                            f\"multidict update sequence element #{pos}\"\n+                            f\"multidict update sequence element #{pos} \"\n                             f\"has length {len(item)}; 2 is required\"\n                         )\n                     identity = identity_func(item[0])\n",
+        "after_content_sha256": "c82ea0a6cd9611a41d147cac11086ee72878a8b05b994a0f66f6cb1b59317ff1",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-zod-a7153658e7cf",
+      "repository_id": "zod",
+      "base_commit": "1fb56a5c18c27102dbc92260a4007c7732a0ccca",
+      "fix_commit": "fbe8ad1b709460fc45d88fdcb5eca591198de60d",
+      "source_path": "packages/zod/src/v4/core/json-schema-processors.ts",
+      "allowed_files": [
+        "packages/zod/src/v4/core/json-schema-processors.ts"
+      ],
+      "expected_patch_sha256": "1c582341a3defb03a57d113e6a78e4c59bd8ca9b993b7b53d136888b9b67ad54",
+      "before_sha256": "63ac0be9d3a6ff37a28a4ff7d294ddc4818727cf3434cc35de90d4bf733c6637",
+      "after_sha256": "f73b65afdfd9f016523b9091f82258e6fecbf3bf79fe58f046083cf3e7563e99",
+      "hidden_oracle": {
+        "patch": "diff --git a/packages/zod/src/v4/core/json-schema-processors.ts b/packages/zod/src/v4/core/json-schema-processors.ts\nindex 8d2790e..0680fc7 100644\n--- a/packages/zod/src/v4/core/json-schema-processors.ts\n+++ b/packages/zod/src/v4/core/json-schema-processors.ts\n@@ -518,7 +518,10 @@ export const catchProcessor: Processor<schemas.$ZodCatch> = (schema, ctx, json,\n   try {\n     catchValue = def.catchValue(undefined as any);\n   } catch {\n-    throw new Error(\"Dynamic catch values are not supported in JSON Schema\");\n+    if (ctx.unrepresentable === \"throw\") {\n+      throw new Error(\"Dynamic catch values are not supported in JSON Schema\");\n+    }\n+    return;\n   }\n   json.default = catchValue;\n };\n",
+        "after_content_sha256": "f73b65afdfd9f016523b9091f82258e6fecbf3bf79fe58f046083cf3e7563e99",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-dotenv-48aa85c1d093",
+      "repository_id": "dotenv",
+      "base_commit": "c0e32b8267b69a438bc0cc31345f73b5e2f037db",
+      "fix_commit": "bfb434360ffaf6cf53c7ca1f696165b0fbdf0d6c",
+      "source_path": "lib/main.js",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "expected_patch_sha256": "76f46d98db6f1aa0d6dce2762508f42546baf50c9f1dc9fde22aad7328c94e02",
+      "before_sha256": "01e078b6c26a81d2b8f724d7cd6a6309b5fd9e64ffba1c0b51b6b09be75a32e3",
+      "after_sha256": "812212a2ce5ea1390fc59a8ea457962b2f4db8c054d431a33098a5fe28b70c3b",
+      "hidden_oracle": {
+        "patch": "diff --git a/lib/main.js b/lib/main.js\nindex b5446e1..5895a73 100644\n--- a/lib/main.js\n+++ b/lib/main.js\n@@ -74,7 +74,9 @@ function parseFast (src) {\n     let c = str.charCodeAt(i)\n \n     // skip whitespace / blank lines (\\r already normalized out)\n-    while (i < len && (c === 32 || c === 9 || c === 10)) {\n+    // 65279 is a BOM (U+FEFF), which editors on Windows write ahead of the\n+    // first key — the classic parser skips it as part of \\s*, so do the same\n+    while (i < len && (c === 32 || c === 9 || c === 10 || c === 65279)) {\n       i++\n       c = str.charCodeAt(i)\n     }\n",
+        "after_content_sha256": "812212a2ce5ea1390fc59a8ea457962b2f4db8c054d431a33098a5fe28b70c3b",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-axios-34d8fa97f19b",
+      "repository_id": "axios",
+      "base_commit": "ff60b43277c32a5b2f7589c917db16d8e043c0d4",
+      "fix_commit": "a93b1c90d919542987cc38591d10eed949a345d0",
+      "source_path": "lib/core/AxiosError.js",
+      "allowed_files": [
+        "lib/core/AxiosError.js"
+      ],
+      "expected_patch_sha256": "3fdf933e6bd88711bcef9641508a1f00c8f73d314803ff62e3a50a0e44f1973f",
+      "before_sha256": "b1a36145d3e75da53dfc79750af706b239113e3fee38aab902b0e67ddb0fed5d",
+      "after_sha256": "6c2860a06292ab37ce5fc172514171288f2745c671fda1705c3b0e0870fe01ae",
+      "hidden_oracle": {
+        "patch": "diff --git a/lib/core/AxiosError.js b/lib/core/AxiosError.js\nindex 911a6ff..740d8a2 100644\n--- a/lib/core/AxiosError.js\n+++ b/lib/core/AxiosError.js\n@@ -72,9 +72,40 @@ function redactConfig(config, redactKeys) {\n   return visit(config);\n }\n \n+function stringifySafely(value) {\n+  try {\n+    return String(value);\n+  } catch (err) {\n+    return '';\n+  }\n+}\n+\n+function aggregateErrorMessage(error) {\n+  const message = error.errors\n+    .map((entry) => {\n+      try {\n+        return entry && entry.message ? stringifySafely(entry.message) : stringifySafely(entry);\n+      } catch (err) {\n+        return '';\n+      }\n+    })\n+    .filter(Boolean)\n+    .join('; ');\n+\n+  return message || error.name || 'AggregateError';\n+}\n+\n class AxiosError extends Error {\n   static from(error, code, config, request, response, customProps) {\n-    const axiosError = new AxiosError(error.message, code || error.code, config, request, response);\n+    // `AggregateError` (thrown by Node on dual-stack/Happy-Eyeballs connection\n+    // failures) has an empty `message`; its detail lives in `errors[]`. Without\n+    // this, the wrapped error surfaces with a blank message (see #6721).\n+    let message = error.message;\n+    if (!message && utils.isArray(error.errors) && error.errors.length) {\n+      message = aggregateErrorMessage(error);\n+    }\n+\n+    const axiosError = new AxiosError(message, code || error.code, config, request, response);\n     // Match native `Error` `cause` semantics: non-enumerable. The wrapped\n     // error often carries circular internals (sockets, requests, agents), so\n     // an enumerable `cause` makes structured loggers (pino/winston) and any\n",
+        "after_content_sha256": "6c2860a06292ab37ce5fc172514171288f2745c671fda1705c3b0e0870fe01ae",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-werkzeug-1f6977fc12f6",
+      "repository_id": "werkzeug",
+      "base_commit": "48dde21febc3db2bd75cbad3bf3aa74dedf32e4a",
+      "fix_commit": "eff2d027012a6a858f6d40ca91de303016d95513",
+      "source_path": "src/werkzeug/middleware/profiler.py",
+      "allowed_files": [
+        "src/werkzeug/middleware/profiler.py"
+      ],
+      "expected_patch_sha256": "c7e2b251c4ef238c666f3077a9ac43750638f4d758e526da8b55e87ccbf485bd",
+      "before_sha256": "d5900794379835d860a7c4c7397915e6582670b977d3ba6102bd947f2df4fa56",
+      "after_sha256": "76e40e529ce9cd1a01bcbc66040b393ab0e4240bdc4af7e89ee8707c628ec000",
+      "hidden_oracle": {
+        "patch": "diff --git a/src/werkzeug/middleware/profiler.py b/src/werkzeug/middleware/profiler.py\nindex 112b877..7574a93 100644\n--- a/src/werkzeug/middleware/profiler.py\n+++ b/src/werkzeug/middleware/profiler.py\n@@ -20,10 +20,13 @@ import time\n import typing as t\n from pstats import Stats\n \n-try:\n-    from cProfile import Profile\n-except ImportError:\n-    from profile import Profile  # type: ignore\n+if sys.version_info >= (3, 15):\n+    from profiling.tracing import Profile\n+else:\n+    try:\n+        from cProfile import Profile\n+    except ImportError:\n+        from profile import Profile  # type: ignore[assignment]\n \n if t.TYPE_CHECKING:\n     from _typeshed.wsgi import StartResponse\n",
+        "after_content_sha256": "76e40e529ce9cd1a01bcbc66040b393ab0e4240bdc4af7e89ee8707c628ec000",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-ky-226a7be37e73",
+      "repository_id": "ky",
+      "base_commit": "e9eeb35770bdf6d894998c6c9f9a3fb090c8b5d2",
+      "fix_commit": "346f8986f98b3b6769034e28d5095922670a7ed6",
+      "source_path": "source/core/Ky.ts",
+      "allowed_files": [
+        "source/core/Ky.ts"
+      ],
+      "expected_patch_sha256": "9ccf9ebbe9fc4609346af02626d7abfa539942eaa682600d12dafc3543663f62",
+      "before_sha256": "e7e7ba6c385d7d3dc826a8e76d9612ec34181e7fac572e32a6a9aa7dd3ee1058",
+      "after_sha256": "741aba6eb53bd4051d1787a067ef87af073c4633281b896c4f3b97c55942490d",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/core/Ky.ts b/source/core/Ky.ts\nindex 5e8c8f5..2ede2a7 100644\n--- a/source/core/Ky.ts\n+++ b/source/core/Ky.ts\n@@ -84,6 +84,14 @@ const isRequestInstance = (value: unknown): value is Request =>\n const isResponseInstance = (value: unknown): value is Response =>\n \tvalue instanceof globalThis.Response || objectToString.call(value) === '[object Response]';\n \n+const cloneSearchParametersForInitHook = (searchParameters: SearchParamsOption | undefined): SearchParamsOption | undefined => {\n+\tif (Array.isArray(searchParameters)) {\n+\t\treturn searchParameters.map(parameter => [...parameter]) as SearchParamsOption;\n+\t}\n+\n+\treturn cloneShallow(searchParameters) as SearchParamsOption | undefined;\n+};\n+\n // Shallow-clone mutable option properties so init hook mutations don't leak across requests.\n function cloneInitHookOptions(options: Options): Options {\n \tconst clonedOptions: Options = {\n@@ -91,7 +99,7 @@ function cloneInitHookOptions(options: Options): Options {\n \t\tjson: cloneShallow(options.json),\n \t\tcontext: cloneShallow(options.context)!,\n \t\theaders: cloneShallow(options.headers)!,\n-\t\tsearchParams: cloneShallow(options.searchParams) as SearchParamsOption | undefined,\n+\t\tsearchParams: cloneSearchParametersForInitHook(options.searchParams),\n \t};\n \n \tif (options.retry !== undefined) {\n",
+        "after_content_sha256": "741aba6eb53bd4051d1787a067ef87af073c4633281b896c4f3b97c55942490d",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pluggy-cba86e442251",
+      "repository_id": "pluggy",
+      "base_commit": "74876c40efa3137aee8ebf5d53d9542d65a13381",
+      "fix_commit": "c4e254ca53d02f969c81586dc50c83cc8bb3dea9",
+      "source_path": "src/pluggy/_hooks.py",
+      "allowed_files": [
+        "src/pluggy/_hooks.py"
+      ],
+      "expected_patch_sha256": "6145ef67bcb26effbaeff3b9d4a46e20a1c9065e82e2b438ec4b22946b86689c",
+      "before_sha256": "b359cd2770c714d3606a64886001b307830eff6cfd8ca6d175d0b9cfc1cdc027",
+      "after_sha256": "08e27d83f6d5c05977e56243f2ec67c3eccfd3f48d1e44de7d1654083d4997f7",
+      "hidden_oracle": {
+        "patch": "diff --git a/src/pluggy/_hooks.py b/src/pluggy/_hooks.py\nindex bd74f15..aa0d3df 100644\n--- a/src/pluggy/_hooks.py\n+++ b/src/pluggy/_hooks.py\n@@ -11,6 +11,7 @@ from collections.abc import Sequence\n from collections.abc import Set\n import inspect\n import sys\n+import types\n from types import ModuleType\n from typing import Any\n from typing import Final\n@@ -288,27 +289,8 @@ def normalize_hookimpl_opts(opts: HookimplOpts) -> None:\n \n \n _PYPY = hasattr(sys, \"pypy_version_info\")\n-\n-\n-if sys.version_info >= (3, 14):\n-    import annotationlib\n-\n-    def _signature(func: object) -> inspect.Signature:\n-        \"\"\"Return the signature of a callable, avoiding annotation resolution.\n-\n-        In Python 3.14+, annotations are evaluated lazily (PEP 649/749).\n-        Using annotation_format=STRING prevents errors when annotations\n-        reference undefined names.\n-        \"\"\"\n-        return inspect.signature(\n-            func,  # type: ignore[arg-type]\n-            annotation_format=annotationlib.Format.STRING,\n-        )\n-else:\n-\n-    def _signature(func: object) -> inspect.Signature:\n-        \"\"\"Return the signature of a callable.\"\"\"\n-        return inspect.signature(func)  # type: ignore[arg-type]\n+# pypy3 uses \"obj\" instead of \"self\" for default dunder methods\n+_IMPLICIT_NAMES = (\"self\", \"obj\") if _PYPY else (\"self\",)\n \n \n def varnames(func: object) -> tuple[tuple[str, ...], tuple[str, ...]]:\n@@ -329,47 +311,32 @@ def varnames(func: object) -> tuple[tuple[str, ...], tuple[str, ...]]:\n         except Exception:  # pragma: no cover - pypy special case\n             return (), ()\n \n+    # Unwrap decorated functions to get the original signature\n+    func = inspect.unwrap(func)  # type: ignore[arg-type]\n+    if inspect.ismethod(func):\n+        func = func.__func__\n+\n     try:\n-        # func MUST be a function or method here or we won't parse any args.\n-        sig = _signature(func.__func__ if inspect.ismethod(func) else func)\n-    except TypeError:  # pragma: no cover\n+        code: types.CodeType = func.__code__  # type: ignore[attr-defined]\n+        defaults: tuple[object, ...] | None = func.__defaults__  # type: ignore[attr-defined]\n+        qualname: str = func.__qualname__  # type: ignore[attr-defined]\n+    except AttributeError:  # pragma: no cover\n         return (), ()\n \n-    _valid_param_kinds = (\n-        inspect.Parameter.POSITIONAL_ONLY,\n-        inspect.Parameter.POSITIONAL_OR_KEYWORD,\n-    )\n-    _valid_params = {\n-        name: param\n-        for name, param in sig.parameters.items()\n-        if param.kind in _valid_param_kinds\n-    }\n-    args = tuple(_valid_params)\n-    defaults = (\n-        tuple(\n-            param.default\n-            for param in _valid_params.values()\n-            if param.default is not param.empty\n-        )\n-        or None\n-    )\n+    # Get positional argument names (positional-only + positional-or-keyword)\n+    args: tuple[str, ...] = code.co_varnames[: code.co_argcount]\n \n+    # Determine which args have defaults\n+    kwargs: tuple[str, ...]\n     if defaults:\n         index = -len(defaults)\n-        args, kwargs = args[:index], tuple(args[index:])\n+        args, kwargs = args[:index], args[index:]\n     else:\n         kwargs = ()\n \n-    # strip any implicit instance arg\n-    # pypy3 uses \"obj\" instead of \"self\" for default dunder methods\n-    if not _PYPY:\n-        implicit_names: tuple[str, ...] = (\"self\",)\n-    else:\n-        implicit_names = (\"self\", \"obj\")\n-    if args:\n-        qualname: str = getattr(func, \"__qualname__\", \"\")\n-        if inspect.ismethod(func) or (\".\" in qualname and args[0] in implicit_names):\n-            args = args[1:]\n+    # Strip implicit instance arg (self/obj for methods)\n+    if args and \".\" in qualname and args[0] in _IMPLICIT_NAMES:\n+        args = args[1:]\n \n     return args, kwargs\n \n",
+        "after_content_sha256": "08e27d83f6d5c05977e56243f2ec67c3eccfd3f48d1e44de7d1654083d4997f7",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-p-queue-cbe8eae2e48e",
+      "repository_id": "p-queue",
+      "base_commit": "5e400174a89395a44399713191b76544cf743fe5",
+      "fix_commit": "e9074f06fff500a13e0ef7c910ff4fc2fe65b01c",
+      "source_path": "source/index.ts",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "expected_patch_sha256": "853651d08725b5ff826dd0d264791d81d012f235ff50323b6c1b5d96d0030914",
+      "before_sha256": "68e6ecef7217b99b3e616b3e55be2369e20770e14fa2bb516dd48c4d67dc1e86",
+      "after_sha256": "3982b8df3e17933a8e8ea69229ee42e816bf9aba6cfd385c14ae5af5eb112010",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/index.ts b/source/index.ts\nindex adcf4a4..e04f9e4 100644\n--- a/source/index.ts\n+++ b/source/index.ts\n@@ -287,14 +287,6 @@ export default class PQueue<QueueType extends Queue<RunFunction, EnqueueOptionsT\n \t\tthis.#processQueue();\n \t}\n \n-\tasync #throwOnAbort(signal: AbortSignal): Promise<never> {\n-\t\treturn new Promise((_resolve, reject) => {\n-\t\t\tsignal.addEventListener('abort', () => {\n-\t\t\t\treject(signal.reason);\n-\t\t\t}, {once: true});\n-\t\t});\n-\t}\n-\n \t/**\n \tUpdates the priority of a promise function by its id, affecting its execution order. Requires a defined concurrency limit to take effect.\n \n@@ -367,6 +359,8 @@ export default class PQueue<QueueType extends Queue<RunFunction, EnqueueOptionsT\n \t\t\t\t\ttimeout: options.timeout,\n \t\t\t\t});\n \n+\t\t\t\tlet eventListener: (() => void) | undefined;\n+\n \t\t\t\ttry {\n \t\t\t\t\t// Check abort signal - if aborted, need to decrement the counter\n \t\t\t\t\t// that was incremented in tryToStartAnother\n@@ -394,7 +388,13 @@ export default class PQueue<QueueType extends Queue<RunFunction, EnqueueOptionsT\n \t\t\t\t\t}\n \n \t\t\t\t\tif (options.signal) {\n-\t\t\t\t\t\toperation = Promise.race([operation, this.#throwOnAbort(options.signal)]);\n+\t\t\t\t\t\toperation = Promise.race([operation, new Promise<never>((_resolve, reject) => {\n+\t\t\t\t\t\t\teventListener = () => {\n+\t\t\t\t\t\t\t\treject(options.signal!.reason);\n+\t\t\t\t\t\t\t};\n+\n+\t\t\t\t\t\t\toptions.signal!.addEventListener('abort', eventListener);\n+\t\t\t\t\t\t})]);\n \t\t\t\t\t}\n \n \t\t\t\t\tconst result = await operation;\n@@ -404,6 +404,11 @@ export default class PQueue<QueueType extends Queue<RunFunction, EnqueueOptionsT\n \t\t\t\t\treject(error);\n \t\t\t\t\tthis.emit('error', error);\n \t\t\t\t} finally {\n+\t\t\t\t\t// Clean up abort event listener\n+\t\t\t\t\tif (eventListener) {\n+\t\t\t\t\t\toptions.signal!.removeEventListener('abort', eventListener);\n+\t\t\t\t\t}\n+\n \t\t\t\t\t// Remove from running tasks\n \t\t\t\t\tthis.#runningTasks.delete(taskSymbol);\n \n",
+        "after_content_sha256": "3982b8df3e17933a8e8ea69229ee42e816bf9aba6cfd385c14ae5af5eb112010",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-cachecontrol-bbb8dc60f77d",
+      "repository_id": "cachecontrol",
+      "base_commit": "184ed034c2d2cc743ca4a29031ed390630e7d2f2",
+      "fix_commit": "b4f1ab5a78bec0ab97b9d45f77b792b22e0d22e4",
+      "source_path": "cachecontrol/controller.py",
+      "allowed_files": [
+        "cachecontrol/controller.py"
+      ],
+      "expected_patch_sha256": "ae95ceb15740568925d5c9228cd66892e9eac86f77713103fbbc92cc62e2818b",
+      "before_sha256": "a9917d04ecbf6831253005cf7a31f9a218b14e09316245d63e807439c7abfd59",
+      "after_sha256": "fb3694b24e5ea37d013941991ec4a45d1345b9d6fac885aa3cb0a791f52f96b1",
+      "hidden_oracle": {
+        "patch": "diff --git a/cachecontrol/controller.py b/cachecontrol/controller.py\nindex c7dd8a1..b993570 100644\n--- a/cachecontrol/controller.py\n+++ b/cachecontrol/controller.py\n@@ -128,12 +128,12 @@ class CacheController:\n                 except IndexError:\n                     if required:\n                         logger.debug(\n-                            \"Missing value for cache-control \" \"directive: %s\",\n+                            \"Missing value for cache-control directive: %s\",\n                             directive,\n                         )\n                 except ValueError:\n                     logger.debug(\n-                        \"Invalid value for cache-control directive \" \"%s, must be %s\",\n+                        \"Invalid value for cache-control directive %s, must be %s\",\n                         directive,\n                         typ.__name__,\n                     )\n",
+        "after_content_sha256": "fb3694b24e5ea37d013941991ec4a45d1345b9d6fac885aa3cb0a791f52f96b1",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pyjwt-c0e398c9fe1d",
+      "repository_id": "pyjwt",
+      "base_commit": "bd9700cca7f9258fadcc429c1034e508025931f2",
+      "fix_commit": "a4e1a3d1218b01c5806420b8f16d9308ac4adc30",
+      "source_path": "jwt/__init__.py",
+      "allowed_files": [
+        "jwt/__init__.py"
+      ],
+      "expected_patch_sha256": "6cef32ac468582ad1395cb9a86cefd6cee2af17e779bb25fb95f347a1c1e3c6c",
+      "before_sha256": "9b039b7a31c60227163d8e1fae08674fc472bcca7caf8e4a70298033ee1eb479",
+      "after_sha256": "9e690ab5351a89aedf97851b2f08a9c5447ce240cfe3e5bf050ce865a2b631a4",
+      "hidden_oracle": {
+        "patch": "diff --git a/jwt/__init__.py b/jwt/__init__.py\nindex 2255db8..21a3c1a 100644\n--- a/jwt/__init__.py\n+++ b/jwt/__init__.py\n@@ -28,7 +28,7 @@ from .exceptions import (\n from .jwks_client import PyJWKClient\n from .warnings import InsecureKeyLengthWarning\n \n-__version__ = \"2.12.0\"\n+__version__ = \"2.12.1\"\n \n __title__ = \"PyJWT\"\n __description__ = \"JSON Web Token implementation in Python\"\n",
+        "after_content_sha256": "9e690ab5351a89aedf97851b2f08a9c5447ce240cfe3e5bf050ce865a2b631a4",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-multidict-4a530a53c8a5",
+      "repository_id": "multidict",
+      "base_commit": "39d3c322f6a9e824beee9b6f178e3166205f0f59",
+      "fix_commit": "80c910bd1badf4b5c2ecfbe5571c5c2367e6e707",
+      "source_path": "multidict/__init__.py",
+      "allowed_files": [
+        "multidict/__init__.py"
+      ],
+      "expected_patch_sha256": "eed85b480c56b44f8e9c7b6b000a3e63d1c44cf1cc60568259dad2ebedfa6c24",
+      "before_sha256": "0cce7a554a07132c7ba4ab0bad3f4411e2234e581698fc9042e0b98ee2f36e16",
+      "after_sha256": "55c0fd60df4726f30d5aa640204bc7d6666d20c7b3f18d3c74993ffd1ca34d18",
+      "hidden_oracle": {
+        "patch": "diff --git a/multidict/__init__.py b/multidict/__init__.py\nindex e3db9e1..653494f 100644\n--- a/multidict/__init__.py\n+++ b/multidict/__init__.py\n@@ -23,7 +23,7 @@ __all__ = (\n     \"upstr\",\n )\n \n-__version__ = \"6.7.1\"\n+__version__ = \"6.7.2.dev0\"\n \n \n if TYPE_CHECKING or not USE_EXTENSIONS:\n",
+        "after_content_sha256": "55c0fd60df4726f30d5aa640204bc7d6666d20c7b3f18d3c74993ffd1ca34d18",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-zod-2c19718ccd86",
+      "repository_id": "zod",
+      "base_commit": "b8dffe9e62f17e6571e6249d05cc5102b54d94e4",
+      "fix_commit": "1cab69383fcdeae2a366d5e2a2fc4d8fc765d168",
+      "source_path": "packages/zod/src/v4/core/schemas.ts",
+      "allowed_files": [
+        "packages/zod/src/v4/core/schemas.ts"
+      ],
+      "expected_patch_sha256": "f44a78d2bd87f646191914e63f53c4276f3769a1c7985fd422a05a994edae9b6",
+      "before_sha256": "56e74e95208cff94be40389801e6170f75effda628085d452ba5f37658f89764",
+      "after_sha256": "8115b34aa4800a56cd69d532c5c40a3f6016ccc800d5ad9c61af92e22b542fcb",
+      "hidden_oracle": {
+        "patch": "diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts\nindex 3210a89..6aa7cab 100644\n--- a/packages/zod/src/v4/core/schemas.ts\n+++ b/packages/zod/src/v4/core/schemas.ts\n@@ -36,6 +36,8 @@ export interface ParsePayload<T = unknown> {\n   issues: errors.$ZodRawIssue[];\n   /** A way to mark a whole payload as aborted. Used in codecs/pipes. */\n   aborted?: boolean;\n+  /** @internal Set when $ZodCatch substitutes its catchValue. */\n+  caught?: boolean;\n }\n \n export type CheckFn<T> = (input: ParsePayload<T>) => util.MaybeAsync<void>;\n@@ -3468,7 +3470,7 @@ export interface $ZodOptional<T extends SomeType = $ZodType> extends $ZodType {\n }\n \n function handleOptionalResult(result: ParsePayload, input: unknown) {\n-  if (result.issues.length && input === undefined) {\n+  if (input === undefined && (result.issues.length || result.caught)) {\n     return { issues: [], value: undefined };\n   }\n   return result;\n@@ -3491,9 +3493,10 @@ export const $ZodOptional: core.$constructor<$ZodOptional> = /*@__PURE__*/ core.\n \n     inst._zod.parse = (payload, ctx) => {\n       if (def.innerType._zod.optin === \"optional\") {\n+        const input = payload.value;\n         const result = def.innerType._zod.run(payload, ctx);\n-        if (result instanceof Promise) return result.then((r) => handleOptionalResult(r, payload.value));\n-        return handleOptionalResult(result, payload.value);\n+        if (result instanceof Promise) return result.then((r) => handleOptionalResult(r, input));\n+        return handleOptionalResult(result, input);\n       }\n       if (payload.value === undefined) {\n         return payload;\n@@ -3886,7 +3889,7 @@ export interface $ZodCatch<T extends SomeType = $ZodType> extends $ZodType {\n \n export const $ZodCatch: core.$constructor<$ZodCatch> = /*@__PURE__*/ core.$constructor(\"$ZodCatch\", (inst, def) => {\n   $ZodType.init(inst, def);\n-  util.defineLazy(inst._zod, \"optin\", () => def.innerType._zod.optin);\n+  inst._zod.optin = \"optional\";\n   util.defineLazy(inst._zod, \"optout\", () => def.innerType._zod.optout);\n   util.defineLazy(inst._zod, \"values\", () => def.innerType._zod.values);\n \n@@ -3909,6 +3912,7 @@ export const $ZodCatch: core.$constructor<$ZodCatch> = /*@__PURE__*/ core.$const\n             input: payload.value,\n           });\n           payload.issues = [];\n+          payload.caught = true;\n         }\n \n         return payload;\n@@ -3926,6 +3930,7 @@ export const $ZodCatch: core.$constructor<$ZodCatch> = /*@__PURE__*/ core.$const\n       });\n \n       payload.issues = [];\n+      payload.caught = true;\n     }\n \n     return payload;\n",
+        "after_content_sha256": "8115b34aa4800a56cd69d532c5c40a3f6016ccc800d5ad9c61af92e22b542fcb",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-dotenv-03b4d37aa976",
+      "repository_id": "dotenv",
+      "base_commit": "a61f616a3160bb6e6f22ff55f08b7eba3a3fab68",
+      "fix_commit": "217861c31a52abc76b5c05dd80bb8b725a9a0c8d",
+      "source_path": "lib/main.js",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "expected_patch_sha256": "b2a15013f030f45cb743be1980d9481dff65356d7cdcca7e9d5f7a37c2b9369e",
+      "before_sha256": "46c50c6399a53bde79a1f85e720a80a073cb959b21072fad44a98b1bde72c3c2",
+      "after_sha256": "5f80ac5ae6fc52b7891f46772a9dd7bd259b1cf2a6dcedbddb479e26f427b9ce",
+      "hidden_oracle": {
+        "patch": "diff --git a/lib/main.js b/lib/main.js\nindex 163e0d2..8541f35 100644\n--- a/lib/main.js\n+++ b/lib/main.js\n@@ -7,6 +7,7 @@ const crypto = require('crypto')\n const TIPS = [\n   '◈ encrypted .env [www.dotenvx.com]',\n   '◈ secrets for agents [www.dotenvx.com]',\n+  '✦ add agent skills [npx skills add motdotla/dotenv]',\n   '⌁ auth for agents [www.vestauth.com]',\n   '⌘ custom filepath { path: \\'/custom/path/.env\\' }',\n   '⌘ enable debugging { debug: true }',\n",
+        "after_content_sha256": "5f80ac5ae6fc52b7891f46772a9dd7bd259b1cf2a6dcedbddb479e26f427b9ce",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-axios-565fb806aeba",
+      "repository_id": "axios",
+      "base_commit": "3ebc76240c835a07fc6af23cb10d41579371a08f",
+      "fix_commit": "ff60b43277c32a5b2f7589c917db16d8e043c0d4",
+      "source_path": "lib/helpers/shouldBypassProxy.js",
+      "allowed_files": [
+        "lib/helpers/shouldBypassProxy.js"
+      ],
+      "expected_patch_sha256": "160eebd6e209da9865985e69de9189df5398dfe067741c942724b7f9ea625af1",
+      "before_sha256": "398be17370f51e69e1fb23ccc25582e3ed8371132e2ac93ea761c7861f4e6d2a",
+      "after_sha256": "7469d0735e7894edd69b0952802863ae07cffb3d33dcc720f80fd8ff0e6b3739",
+      "hidden_oracle": {
+        "patch": "diff --git a/lib/helpers/shouldBypassProxy.js b/lib/helpers/shouldBypassProxy.js\nindex 072a85b..a1c3173 100644\n--- a/lib/helpers/shouldBypassProxy.js\n+++ b/lib/helpers/shouldBypassProxy.js\n@@ -300,6 +300,10 @@ export default function shouldBypassProxy(location) {\n       return false;\n     }\n \n+    if (entry === '*') {\n+      return true;\n+    }\n+\n     let [entryHost, entryPort] = parseNoProxyEntry(entry);\n \n     entryHost = normalizeNoProxyHost(entryHost);\n",
+        "after_content_sha256": "7469d0735e7894edd69b0952802863ae07cffb3d33dcc720f80fd8ff0e6b3739",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-werkzeug-b019c2c682da",
+      "repository_id": "werkzeug",
+      "base_commit": "1b00618e787f40dfb21eba29caf8f8be7c8e1d93",
+      "fix_commit": "884437aef93e543ebaff3b9cdbe857ee47e7e00c",
+      "source_path": "src/werkzeug/routing/map.py",
+      "allowed_files": [
+        "src/werkzeug/routing/map.py"
+      ],
+      "expected_patch_sha256": "a50cbeb9dbc8f2e049db5874b3fcdd7a763a39cebfeada9b1920b8341a8ab602",
+      "before_sha256": "02c0bbdf7c9254021b10ce296e8e9545cd60779b94053c4cf595790b868a47fd",
+      "after_sha256": "b334151abeab5428162c7d37edf8dc51a57815d1c009fb132896cfabbc6b17fc",
+      "hidden_oracle": {
+        "patch": "diff --git a/src/werkzeug/routing/map.py b/src/werkzeug/routing/map.py\nindex e4f3aae..564ef55 100644\n--- a/src/werkzeug/routing/map.py\n+++ b/src/werkzeug/routing/map.py\n@@ -960,13 +960,10 @@ class MapAdapter:\n \n         # Return a plain path if neither host or subdomain matching is enabled,\n         # or if they are enabled and the current host matches.\n-        if (\n-            not force_external\n-            and (self.map.subdomain_matching or self.map.host_matching)\n-            and (\n-                (self.map.subdomain_matching and domain_part == self.subdomain)\n-                or (self.map.host_matching and host == self.server_name)\n-            )\n+        if not force_external and (\n+            not (self.map.subdomain_matching or self.map.host_matching)\n+            or (self.map.subdomain_matching and domain_part == self.subdomain)\n+            or (self.map.host_matching and host == self.server_name)\n         ):\n             return f\"{self.script_name.rstrip('/')}/{path.lstrip('/')}\"\n \n",
+        "after_content_sha256": "b334151abeab5428162c7d37edf8dc51a57815d1c009fb132896cfabbc6b17fc",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-ky-91caaa753b6c",
+      "repository_id": "ky",
+      "base_commit": "2df9b7e71963b8d0bb7edd172a5d3518c2778330",
+      "fix_commit": "4ba8c15feaca524b4a716413db21a481c494721b",
+      "source_path": "source/core/Ky.ts",
+      "allowed_files": [
+        "source/core/Ky.ts"
+      ],
+      "expected_patch_sha256": "2939942edbbbe129462a8ff97b15323dd24d6dee5a8d92c85e1154024f02bdbf",
+      "before_sha256": "d2b09180009d55ed92c2415e5992dfbaa214c2d17990b9ebed5dcaffef989fa8",
+      "after_sha256": "06694f3c0ebc57ec0cb7c98cc9c28d18cc411c422db5287ef880bf2c18196152",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/core/Ky.ts b/source/core/Ky.ts\nindex e4b03f9..39987af 100644\n--- a/source/core/Ky.ts\n+++ b/source/core/Ky.ts\n@@ -447,6 +447,8 @@ export class Ky {\n \t\t\tthrow new TypeError('The `onUploadProgress` option must be a function');\n \t\t}\n \n+\t\t// `totalTimeout` starts when the request pipeline is created, so it also includes\n+\t\t// Ky's internal scheduling and user hook time before the first fetch attempt.\n \t\tthis.#startTime = typeof this.#options.totalTimeout === 'number' ? this.#getCurrentTime() : undefined;\n \t}\n \n",
+        "after_content_sha256": "06694f3c0ebc57ec0cb7c98cc9c28d18cc411c422db5287ef880bf2c18196152",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pluggy-779c8701ae0f",
+      "repository_id": "pluggy",
+      "base_commit": "59e66fdb231bf47ce5e0b8ed75b788820b135c34",
+      "fix_commit": "74876c40efa3137aee8ebf5d53d9542d65a13381",
+      "source_path": "src/pluggy/_hooks.py",
+      "allowed_files": [
+        "src/pluggy/_hooks.py"
+      ],
+      "expected_patch_sha256": "4e9a85be3b9192b6b1b2fbd7552b8737b1a39151995e602e278497b393b30324",
+      "before_sha256": "46d3248e87045976f51122e2a837ddb153b43cab52cfd506348a52bf150f6d47",
+      "after_sha256": "b359cd2770c714d3606a64886001b307830eff6cfd8ca6d175d0b9cfc1cdc027",
+      "hidden_oracle": {
+        "patch": "diff --git a/src/pluggy/_hooks.py b/src/pluggy/_hooks.py\nindex 3d23287..bd74f15 100644\n--- a/src/pluggy/_hooks.py\n+++ b/src/pluggy/_hooks.py\n@@ -290,6 +290,27 @@ def normalize_hookimpl_opts(opts: HookimplOpts) -> None:\n _PYPY = hasattr(sys, \"pypy_version_info\")\n \n \n+if sys.version_info >= (3, 14):\n+    import annotationlib\n+\n+    def _signature(func: object) -> inspect.Signature:\n+        \"\"\"Return the signature of a callable, avoiding annotation resolution.\n+\n+        In Python 3.14+, annotations are evaluated lazily (PEP 649/749).\n+        Using annotation_format=STRING prevents errors when annotations\n+        reference undefined names.\n+        \"\"\"\n+        return inspect.signature(\n+            func,  # type: ignore[arg-type]\n+            annotation_format=annotationlib.Format.STRING,\n+        )\n+else:\n+\n+    def _signature(func: object) -> inspect.Signature:\n+        \"\"\"Return the signature of a callable.\"\"\"\n+        return inspect.signature(func)  # type: ignore[arg-type]\n+\n+\n def varnames(func: object) -> tuple[tuple[str, ...], tuple[str, ...]]:\n     \"\"\"Return tuple of positional and keywrord argument names for a function,\n     method, class or callable.\n@@ -310,9 +331,7 @@ def varnames(func: object) -> tuple[tuple[str, ...], tuple[str, ...]]:\n \n     try:\n         # func MUST be a function or method here or we won't parse any args.\n-        sig = inspect.signature(\n-            func.__func__ if inspect.ismethod(func) else func  # type:ignore[arg-type]\n-        )\n+        sig = _signature(func.__func__ if inspect.ismethod(func) else func)\n     except TypeError:  # pragma: no cover\n         return (), ()\n \n",
+        "after_content_sha256": "b359cd2770c714d3606a64886001b307830eff6cfd8ca6d175d0b9cfc1cdc027",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-p-queue-c7a77f5e2b9c",
+      "repository_id": "p-queue",
+      "base_commit": "27839dc04ae221441e2534ce378ed0e58b498473",
+      "fix_commit": "81cbae2128a1a0cef5029042fe4076ddbafdfd15",
+      "source_path": "source/index.ts",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "expected_patch_sha256": "a9a852d5a87ebb03910c65971b21279dd763a721b8802a17f237bf47579e262e",
+      "before_sha256": "831752cdb598fa7a78df08e0e31c3e99b71656d1a39d646a630717c1edb280d6",
+      "after_sha256": "5908834f5a57ed0776f8cba56e30708480fe96d862205371c1a0f9f32d048e10",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/index.ts b/source/index.ts\nindex 13ea83a..397052b 100644\n--- a/source/index.ts\n+++ b/source/index.ts\n@@ -354,7 +354,10 @@ export default class PQueue<QueueType extends Queue<RunFunction, EnqueueOptionsT\n \t\t\t\t\treject(error);\n \t\t\t\t\tthis.emit('error', error);\n \t\t\t\t} finally {\n-\t\t\t\t\tthis.#next();\n+\t\t\t\t\t// Use queueMicrotask to prevent deep recursion while maintaining timing\n+\t\t\t\t\tqueueMicrotask(() => {\n+\t\t\t\t\t\tthis.#next();\n+\t\t\t\t\t});\n \t\t\t\t}\n \t\t\t}, options);\n \n",
+        "after_content_sha256": "5908834f5a57ed0776f8cba56e30708480fe96d862205371c1a0f9f32d048e10",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pyjwt-68dfff00e2ac",
+      "repository_id": "pyjwt",
+      "base_commit": "f3ba74c106df9ce10e272dfaad96acb4ab3ef5a5",
+      "fix_commit": "1451d70eca2059bc472703692f0bb0777bc0fe93",
+      "source_path": "jwt/api_jwk.py",
+      "allowed_files": [
+        "jwt/api_jwk.py"
+      ],
+      "expected_patch_sha256": "43f612ba9252ade3e534c132d920ce9233fed35b043ff3f2bcfff44ebd6f2e11",
+      "before_sha256": "16a2167814e4c61df65b28cff2437396cd8279999b342097b748353bd815fbd3",
+      "after_sha256": "a975331615c74aae1d64dfd9e8a8543c9a82a3cf040b0b624af1ef42323d921d",
+      "hidden_oracle": {
+        "patch": "diff --git a/jwt/api_jwk.py b/jwt/api_jwk.py\nindex 960de75..4ae7cc3 100644\n--- a/jwt/api_jwk.py\n+++ b/jwt/api_jwk.py\n@@ -28,7 +28,6 @@ class PyJWK:\n         :raises MissingCryptographyError: If the algorithm requires ``cryptography`` to be installed and it is not available.\n         :raises PyJWKError: If unable to find an algorithm for the key.\n         \"\"\"\n-        self._algorithms = get_default_algorithms()\n         self._jwk_data = jwk_data\n \n         kty = self._jwk_data.get(\"kty\", None)\n@@ -73,10 +72,12 @@ class PyJWK:\n \n         self.algorithm_name = algorithm\n \n-        if algorithm in self._algorithms:\n-            self.Algorithm = self._algorithms[algorithm]\n-        else:\n-            raise PyJWKError(f\"Unable to find an algorithm for key: {self._jwk_data}\")\n+        try:\n+            self.Algorithm = get_default_algorithms()[algorithm]\n+        except KeyError:\n+            raise PyJWKError(\n+                f\"Unable to find an algorithm for key: {self._jwk_data}\",\n+            ) from None\n \n         self.key = self.Algorithm.from_jwk(self._jwk_data)\n \n",
+        "after_content_sha256": "a975331615c74aae1d64dfd9e8a8543c9a82a3cf040b0b624af1ef42323d921d",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-zod-97e7209aaa3e",
+      "repository_id": "zod",
+      "base_commit": "76e8f706bb554de82234106de8299d0139cb3b8e",
+      "fix_commit": "f0b0608ee300e609772405501ab4b219f0e19680",
+      "source_path": "packages/docs/components/ecosystem.tsx",
+      "allowed_files": [
+        "packages/docs/components/ecosystem.tsx"
+      ],
+      "expected_patch_sha256": "06ea610d3eca160e6048ceff467881c2d044b34f78cfced88ce76d9a136e975d",
+      "before_sha256": "617fa361fe86fb3f75fa902bf4f95e839563c26e66ae7990433c420663561b01",
+      "after_sha256": "edceabeeea2209aa42e9b80cc6e2986906b2db68ffab3fe35a435a93ad681141",
+      "hidden_oracle": {
+        "patch": "diff --git a/packages/docs/components/ecosystem.tsx b/packages/docs/components/ecosystem.tsx\nindex c92a796..894b157 100644\n--- a/packages/docs/components/ecosystem.tsx\n+++ b/packages/docs/components/ecosystem.tsx\n@@ -305,10 +305,10 @@ const zodUtilities: ZodResource[] = [\n     slug: \"marilari88/zod-playground\",\n   },\n   {\n-    name: \"eslint-plugin-zod-x\",\n-    url: \"https://github.com/marcalexiei/eslint-plugin-zod-x\",\n+    name: \"eslint-plugin-zod\",\n+    url: \"https://github.com/marcalexiei/eslint-plugin-zod\",\n     description: \"ESLint plugin that adds custom linting rules to enforce best practices when using Zod\",\n-    slug: \"marcalexiei/eslint-plugin-zod-x\",\n+    slug: \"marcalexiei/eslint-plugin-zod\",\n   },\n   {\n     name: \"Zod Compare\",\n",
+        "after_content_sha256": "edceabeeea2209aa42e9b80cc6e2986906b2db68ffab3fe35a435a93ad681141",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-dotenv-d064be827e3a",
+      "repository_id": "dotenv",
+      "base_commit": "ccc50d50d9e398a0b20355748e710852e1db5d07",
+      "fix_commit": "3f01a8b61addc4e6978f2c40b0147f6812e2f64b",
+      "source_path": "lib/main.js",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "expected_patch_sha256": "5a1852e01e7c3ed6528809067146be984d49f48caccdd935a24f68e90d67fd21",
+      "before_sha256": "ec9e12246ed558e0da3dd5609277153e40c6c4461aa84ac8feaeb50d83132f45",
+      "after_sha256": "46c50c6399a53bde79a1f85e720a80a073cb959b21072fad44a98b1bde72c3c2",
+      "hidden_oracle": {
+        "patch": "diff --git a/lib/main.js b/lib/main.js\nindex a8cbbbc..163e0d2 100644\n--- a/lib/main.js\n+++ b/lib/main.js\n@@ -306,7 +306,7 @@ function configDotenv (options) {\n       }\n     }\n \n-    _log(`injecting env (${keysCount}) from ${shortPaths.join(',')} ${dim(`// tip: ${_getRandomTip()}`)}`)\n+    _log(`injected env (${keysCount}) from ${shortPaths.join(',')} ${dim(`// tip: ${_getRandomTip()}`)}`)\n   }\n \n   if (lastError) {\n",
+        "after_content_sha256": "46c50c6399a53bde79a1f85e720a80a073cb959b21072fad44a98b1bde72c3c2",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-axios-83a72e800288",
+      "repository_id": "axios",
+      "base_commit": "02c2c4f891d76b15712a9edd149a2d9f7978774f",
+      "fix_commit": "3d253b4f17a5107e6f274ee5b2e96e03508dceb2",
+      "source_path": "lib/helpers/progressEventReducer.js",
+      "allowed_files": [
+        "lib/helpers/progressEventReducer.js"
+      ],
+      "expected_patch_sha256": "58ba083c249d92180d8b6647a29a601beb56fceb116a3885c5319bdb8a82c724",
+      "before_sha256": "516cbded3bf05b31bb17a1c4936d459b1b24bec1c2c67f59df370515ebfa0817",
+      "after_sha256": "997e7531a239c94d7f623dec81b23ba624e2d043d3719243e07962b8dcbc39e2",
+      "hidden_oracle": {
+        "patch": "diff --git a/lib/helpers/progressEventReducer.js b/lib/helpers/progressEventReducer.js\nindex e2c15c0..703fd13 100644\n--- a/lib/helpers/progressEventReducer.js\n+++ b/lib/helpers/progressEventReducer.js\n@@ -12,7 +12,7 @@ export const progressEventReducer = (listener, isDownloadStream, freq = 3) => {\n     }\n     const rawLoaded = e.loaded;\n     const total = e.lengthComputable ? e.total : undefined;\n-    const loaded = total != null ? Math.min(rawLoaded, total) : rawLoaded;\n+    const loaded = Math.max(0, total != null ? Math.min(rawLoaded, total) : rawLoaded);\n     const progressBytes = Math.max(0, loaded - bytesNotified);\n     const rate = _speedometer(progressBytes);\n \n",
+        "after_content_sha256": "997e7531a239c94d7f623dec81b23ba624e2d043d3719243e07962b8dcbc39e2",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-werkzeug-b75bcb795224",
+      "repository_id": "werkzeug",
+      "base_commit": "801ea65e8bcfb215fad4a6184a7d80fa4115c95d",
+      "fix_commit": "e6892a69e3321791779cbe7c16b3db7d862d2b32",
+      "source_path": "src/werkzeug/datastructures/cache_control.py",
+      "allowed_files": [
+        "src/werkzeug/datastructures/cache_control.py"
+      ],
+      "expected_patch_sha256": "e4f7e47df854681a01cfbb54e129390ab803dcd354761eb38a48485ada6323f7",
+      "before_sha256": "83d4f62bab9283698aa02ee01e3b72be079b6c1dbd487751ef1354d1b92f3f6e",
+      "after_sha256": "44feca600aa850f5d3cc1f35d09616456f9534a82a611ba7a43636559fa86bf5",
+      "hidden_oracle": {
+        "patch": "diff --git a/src/werkzeug/datastructures/cache_control.py b/src/werkzeug/datastructures/cache_control.py\nindex 9a358f9..c717939 100644\n--- a/src/werkzeug/datastructures/cache_control.py\n+++ b/src/werkzeug/datastructures/cache_control.py\n@@ -272,10 +272,14 @@ class ResponseCacheControl(_CacheControl):\n        Request-only properties are not present on this response class.\n     \"\"\"\n \n+    # https://httpwg.org/specs/rfc9111.html#cache-response-directive.no-cache\n+    # This can be with or without a value, not mentioned on MDN.\n     no_cache: str | t.Literal[True] | None = cache_control_property(\n         \"no-cache\", True, None\n     )\n     public: bool = cache_control_property(\"public\", None, bool)\n+    # https://httpwg.org/specs/rfc9111.html#cache-response-directive.private\n+    # This can be with or without a value, not mentioned on MDN.\n     private: str | t.Literal[True] | None = cache_control_property(\n         \"private\", True, None\n     )\n",
+        "after_content_sha256": "44feca600aa850f5d3cc1f35d09616456f9534a82a611ba7a43636559fa86bf5",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-ky-638b6b6d14e0",
+      "repository_id": "ky",
+      "base_commit": "c168a7ccd44d11bfc44390faca1e01cfc8895658",
+      "fix_commit": "a541fc08b8c078a835b4ffc146226107aba375fe",
+      "source_path": "source/core/Ky.ts",
+      "allowed_files": [
+        "source/core/Ky.ts"
+      ],
+      "expected_patch_sha256": "812acd02337f03a0bb948b8ff09a0e624281484ee6b9fd859e80ab2221e9713a",
+      "before_sha256": "4375695bbee4838f9b054c66993b1719bfca3e72d8db1bd3dc5370a99db5000d",
+      "after_sha256": "96b975f9108729c58cbe3a2c37a6a28d55450e370e7a2f8200c99302966c7147",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/core/Ky.ts b/source/core/Ky.ts\nindex 4aaa12b..4a084af 100644\n--- a/source/core/Ky.ts\n+++ b/source/core/Ky.ts\n@@ -161,10 +161,15 @@ export class Ky {\n \t\t\t\tlet processedError: Error = error;\n \t\t\t\tfor (const hook of ky.#options.hooks.beforeError) {\n \t\t\t\t\t// eslint-disable-next-line no-await-in-loop\n-\t\t\t\t\tprocessedError = await hook({\n+\t\t\t\t\tconst hookResult: unknown = await hook({\n \t\t\t\t\t\terror: processedError,\n \t\t\t\t\t\tretryCount,\n \t\t\t\t\t});\n+\n+\t\t\t\t\t// Only overwrite if the hook returns a valid Error instance.\n+\t\t\t\t\tif (hookResult instanceof Error) {\n+\t\t\t\t\t\tprocessedError = hookResult;\n+\t\t\t\t\t}\n \t\t\t\t}\n \n \t\t\t\tthrow processedError;\n",
+        "after_content_sha256": "96b975f9108729c58cbe3a2c37a6a28d55450e370e7a2f8200c99302966c7147",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pluggy-8b5baee5d473",
+      "repository_id": "pluggy",
+      "base_commit": "40f3ab1293c48d2a149a5328be893dc3fa08b395",
+      "fix_commit": "5b9a37cbf43fee0f3bbf8ed03586e5dd0695bf56",
+      "source_path": "downstream/run_downstream.py",
+      "allowed_files": [
+        "downstream/run_downstream.py"
+      ],
+      "expected_patch_sha256": "e1e8e63cd74f50a8d9704cb7a0743648fa04bd1fe968dd1983973bcaae6fbf15",
+      "before_sha256": "34c7c399eec7fde063d938070772ca5f8c3c4e3e7e3499b14fec1423d924de85",
+      "after_sha256": "8962d0b8ac66d54e36fe03c8a53e0d6398b4868574bc1265895d7d41e8b198b8",
+      "hidden_oracle": {
+        "patch": "diff --git a/downstream/run_downstream.py b/downstream/run_downstream.py\nindex 1bb91b2..da3b393 100644\n--- a/downstream/run_downstream.py\n+++ b/downstream/run_downstream.py\n@@ -219,6 +219,18 @@ def run_recipe(\n     profile = recipe.environment\n \n     if isinstance(profile, EnvironmentScript):\n+        if skip_install or only_install:\n+            flags: list[str] = []\n+            if skip_install:\n+                flags.append(\"--skip-install\")\n+            if only_install:\n+                flags.append(\"--only-install\")\n+            joined_flags = \", \".join(flags)\n+            print(\n+                f\"{joined_flags} is not supported for script-based recipe {name!r}.\",\n+                file=sys.stderr,\n+            )\n+            sys.exit(2)\n         script = DOWNSTREAM_DIR / profile.run\n         run_cmd([\"bash\", str(script)], cwd=DOWNSTREAM_DIR)\n         return\n",
+        "after_content_sha256": "8962d0b8ac66d54e36fe03c8a53e0d6398b4868574bc1265895d7d41e8b198b8",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-p-queue-ecd7758b3aa6",
+      "repository_id": "p-queue",
+      "base_commit": "7b3f53e5da211449e8c42ad7ef656a8f4333a6b7",
+      "fix_commit": "7fea65877a12f1d74ba75c0e5a5d96f2be117149",
+      "source_path": "source/index.ts",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "expected_patch_sha256": "e0643570fc3769d124b23d2986001241754c215fb918ea5e17b1e7c1fa9fb8f4",
+      "before_sha256": "306b7de1594da8a6b0a8077b55b432ae4a62d16faf0e6b9ece8f434485cd2b83",
+      "after_sha256": "831752cdb598fa7a78df08e0e31c3e99b71656d1a39d646a630717c1edb280d6",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/index.ts b/source/index.ts\nindex 69608a4..13ea83a 100644\n--- a/source/index.ts\n+++ b/source/index.ts\n@@ -185,6 +185,11 @@ export default class PQueue<QueueType extends Queue<RunFunction, EnqueueOptionsT\n \t\t\tif (this.#doesIntervalAllowAnother && this.#doesConcurrentAllowAnother) {\n \t\t\t\tconst job = this.#queue.dequeue()!;\n \n+\t\t\t\t// Increment interval count immediately to prevent race conditions\n+\t\t\t\tif (!this.#isIntervalIgnored) {\n+\t\t\t\t\tthis.#intervalCount++;\n+\t\t\t\t}\n+\n \t\t\t\tthis.emit('active');\n \t\t\t\tthis.#lastExecutionTime = Date.now();\n \t\t\t\tjob();\n@@ -314,8 +319,18 @@ export default class PQueue<QueueType extends Queue<RunFunction, EnqueueOptionsT\n \t\t\t\tthis.#pending++;\n \n \t\t\t\ttry {\n-\t\t\t\t\toptions.signal?.throwIfAborted();\n-\t\t\t\t\tthis.#intervalCount++;\n+\t\t\t\t\t// Check abort signal - if aborted, need to decrement the counter\n+\t\t\t\t\t// that was incremented in tryToStartAnother\n+\t\t\t\t\ttry {\n+\t\t\t\t\t\toptions.signal?.throwIfAborted();\n+\t\t\t\t\t} catch (error) {\n+\t\t\t\t\t\t// Decrement the counter that was already incremented\n+\t\t\t\t\t\tif (!this.#isIntervalIgnored) {\n+\t\t\t\t\t\t\tthis.#intervalCount--;\n+\t\t\t\t\t\t}\n+\n+\t\t\t\t\t\tthrow error;\n+\t\t\t\t\t}\n \n \t\t\t\t\tlet operation = function_({signal: options.signal});\n \n",
+        "after_content_sha256": "831752cdb598fa7a78df08e0e31c3e99b71656d1a39d646a630717c1edb280d6",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pyjwt-1ef69b3ead48",
+      "repository_id": "pyjwt",
+      "base_commit": "53e9381ef9e529ea196bf862e445e90b264ef940",
+      "fix_commit": "412cb67a93363812ae4029d6a95f5d4d40ab2609",
+      "source_path": "jwt/jwks_client.py",
+      "allowed_files": [
+        "jwt/jwks_client.py"
+      ],
+      "expected_patch_sha256": "8aeb492117b5a21f9a8c835ddad3eb4a6fac198613875c5b53482b53e4259e23",
+      "before_sha256": "a07bd2cc059e58479c09b19c09e9c953b23ca6d370288da2c8fc8eacff961ea4",
+      "after_sha256": "5ad761f0af650f164dcb3903455c7470a997f358f8a7d9689c4878336f95e7c1",
+      "hidden_oracle": {
+        "patch": "diff --git a/jwt/jwks_client.py b/jwt/jwks_client.py\nindex 3997e6b..b81e8f4 100644\n--- a/jwt/jwks_client.py\n+++ b/jwt/jwks_client.py\n@@ -5,7 +5,7 @@ import urllib.request\n from functools import lru_cache\n from ssl import SSLContext\n from typing import Any\n-from urllib.error import URLError\n+from urllib.error import HTTPError, URLError\n \n from .api_jwk import PyJWK, PyJWKSet\n from .api_jwt import decode_complete as decode_token\n@@ -110,6 +110,8 @@ class PyJWKClient:\n             ) as response:\n                 jwk_set = json.load(response)\n         except (URLError, TimeoutError) as e:\n+            if isinstance(e, HTTPError):\n+                e.close()\n             raise PyJWKClientConnectionError(\n                 f'Fail to fetch data from the url, err: \"{e}\"'\n             ) from e\n",
+        "after_content_sha256": "5ad761f0af650f164dcb3903455c7470a997f358f8a7d9689c4878336f95e7c1",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-zod-ce6f73faa157",
+      "repository_id": "zod",
+      "base_commit": "8fcb71a5ffa5b32a508ac8bb38b7e1e13c387bf5",
+      "fix_commit": "76e8f706bb554de82234106de8299d0139cb3b8e",
+      "source_path": "packages/zod/src/v4/core/schemas.ts",
+      "allowed_files": [
+        "packages/zod/src/v4/core/schemas.ts"
+      ],
+      "expected_patch_sha256": "37f04b347a513d3f4c34a0e9f6083c3420f7f7c2e2f66107e8e846922c3556e9",
+      "before_sha256": "434692ec1bd35c121a2102eab735b658aa8999c11bcc860530269b2d62c7e2ff",
+      "after_sha256": "518e75e274d11c1ca5350521f5af17553138fe49b1a5774687496bd9f5988736",
+      "hidden_oracle": {
+        "patch": "diff --git a/packages/zod/src/v4/core/schemas.ts b/packages/zod/src/v4/core/schemas.ts\nindex 236f424..c3677f8 100644\n--- a/packages/zod/src/v4/core/schemas.ts\n+++ b/packages/zod/src/v4/core/schemas.ts\n@@ -1845,12 +1845,14 @@ function handleCatchall(\n   inst: $ZodObject\n ) {\n   const unrecognized: string[] = [];\n-  // iterate over input keys\n   const keySet = def.keySet;\n   const _catchall = def.catchall!._zod;\n   const t = _catchall.def.type;\n   const isOptionalOut = _catchall.optout === \"optional\";\n   for (const key in input) {\n+    // skip __proto__ so it can't replace the result prototype via the\n+    // assignment setter on the plain {} we build into\n+    if (key === \"__proto__\") continue;\n     if (keySet.has(key)) continue;\n     if (t === \"never\") {\n       unrecognized.push(key);\n",
+        "after_content_sha256": "518e75e274d11c1ca5350521f5af17553138fe49b1a5774687496bd9f5988736",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-dotenv-31fb3845ee6e",
+      "repository_id": "dotenv",
+      "base_commit": "d35b6a9f019944ef014387f362bd5fe23433d84a",
+      "fix_commit": "9a3f955cc8809f64c61d0de7266ea380cdc3ac31",
+      "source_path": "lib/main.js",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "expected_patch_sha256": "d85f66f1d3e011ff010af01808d195781309ceee88ad42b513c7a5b8277dced2",
+      "before_sha256": "28c32591c34260fcb8b5e4a8b883375568ff71f8f6c54ede1974cb074471def7",
+      "after_sha256": "ec9e12246ed558e0da3dd5609277153e40c6c4461aa84ac8feaeb50d83132f45",
+      "hidden_oracle": {
+        "patch": "diff --git a/lib/main.js b/lib/main.js\nindex b954bdf..a8cbbbc 100644\n--- a/lib/main.js\n+++ b/lib/main.js\n@@ -2,9 +2,6 @@ const fs = require('fs')\n const path = require('path')\n const os = require('os')\n const crypto = require('crypto')\n-const packageJson = require('../package.json')\n-\n-const version = packageJson.version\n \n // Array of tips to display randomly\n const TIPS = [\n",
+        "after_content_sha256": "ec9e12246ed558e0da3dd5609277153e40c6c4461aa84ac8feaeb50d83132f45",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-axios-3fc86cd7335e",
+      "repository_id": "axios",
+      "base_commit": "bdba132964d91d2e74341cf0af0a54e4d2346870",
+      "fix_commit": "02c2c4f891d76b15712a9edd149a2d9f7978774f",
+      "source_path": "lib/helpers/combineURLs.js",
+      "allowed_files": [
+        "lib/helpers/combineURLs.js"
+      ],
+      "expected_patch_sha256": "6f010cd94b2741bda54b90603b799f4a104598c33e2d4e39a948449369772385",
+      "before_sha256": "4ba8cf99c8ecafb3eb840c80acaed436d692e3f2449f2f06a91bf1a16c3d6292",
+      "after_sha256": "f4ae2b221e8ee30fa99432a1419f4a09c0bb8eff41bce71dc428ba787e18717f",
+      "hidden_oracle": {
+        "patch": "diff --git a/lib/helpers/combineURLs.js b/lib/helpers/combineURLs.js\nindex 9f04f02..8863435 100644\n--- a/lib/helpers/combineURLs.js\n+++ b/lib/helpers/combineURLs.js\n@@ -9,7 +9,15 @@\n  * @returns {string} The combined URL\n  */\n export default function combineURLs(baseURL, relativeURL) {\n-  return relativeURL\n-    ? baseURL.replace(/\\/?\\/$/, '') + '/' + relativeURL.replace(/^\\/+/, '')\n-    : baseURL;\n+  if (!relativeURL) {\n+    return baseURL;\n+  }\n+\n+  let end = baseURL.length;\n+\n+  while (end > 0 && baseURL.charCodeAt(end - 1) === 47) {\n+    end--;\n+  }\n+\n+  return baseURL.slice(0, end) + '/' + relativeURL.replace(/^\\/+/, '');\n }\n",
+        "after_content_sha256": "f4ae2b221e8ee30fa99432a1419f4a09c0bb8eff41bce71dc428ba787e18717f",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-werkzeug-218d06e61f7a",
+      "repository_id": "werkzeug",
+      "base_commit": "cd8be56a8a3cd70ed359cfaeeee6905933b1e07a",
+      "fix_commit": "ff1b12a6629b37f5d8372b9e53f02de9d1322e19",
+      "source_path": "src/werkzeug/http.py",
+      "allowed_files": [
+        "src/werkzeug/http.py"
+      ],
+      "expected_patch_sha256": "888f183d360a02bf638d47a7a7ef822425956deff11a505ead7cb538dccb2a80",
+      "before_sha256": "5c0ea806bc76f2fa1ca46294db5cbb275fa63db4922058f364fa1fcf6c4dd9e2",
+      "after_sha256": "eee14663dc4ed14b4983403bdbab5854ab1c65cac9bc023c0ada287c85ff4196",
+      "hidden_oracle": {
+        "patch": "diff --git a/src/werkzeug/http.py b/src/werkzeug/http.py\nindex c7c04f0..411573c 100644\n--- a/src/werkzeug/http.py\n+++ b/src/werkzeug/http.py\n@@ -5,6 +5,7 @@ import hashlib\n import re\n import typing as t\n import warnings\n+from base64 import b64encode\n from datetime import date\n from datetime import datetime\n from datetime import time\n@@ -1062,14 +1063,16 @@ def generate_etag(data: bytes) -> str:\n     \"\"\"Generate a strong ETag value by hashing the given data.\n \n     .. versionchanged:: 3.2\n-        Use SHA3-256. SHA-1 is not allowed in FIPS-enabled systems. This\n-        increases the length from 40 to 64 characters.\n+        Use SHA3-256. SHA-1 is not allowed in FIPS-enabled systems. Use base64\n+        instead of hex digest. This increases the length from 40 to 43\n+        characters.\n \n     .. versionchanged:: 2.0\n         Use SHA-1. MD5 is not allowed in FIPS-enabled systems. This increases\n         the length from 32 to 40 characters.\n     \"\"\"\n-    return hashlib.sha3_256(data, usedforsecurity=False).hexdigest()\n+    digest = hashlib.sha3_256(data, usedforsecurity=False).digest()\n+    return b64encode(digest).decode().rstrip(\"=\")\n \n \n def parse_date(value: str | None) -> datetime | None:\n",
+        "after_content_sha256": "eee14663dc4ed14b4983403bdbab5854ab1c65cac9bc023c0ada287c85ff4196",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-ky-8f51cf7c2b85",
+      "repository_id": "ky",
+      "base_commit": "aac83fa9403355d628e8c1bdc505311b6a8683e7",
+      "fix_commit": "433febd55cc19c98c7a643be934693927ac38503",
+      "source_path": "source/core/Ky.ts",
+      "allowed_files": [
+        "source/core/Ky.ts"
+      ],
+      "expected_patch_sha256": "0ec81f30b0f2b66a721d13abd8df4912844a77fdd4cca2114d3bbdf72d7edf7d",
+      "before_sha256": "bf7db21934066f1053d7c119400a61975b6bf6f5772e3abfa190bf9b4972fc00",
+      "after_sha256": "259408a78f299697418a163e4d9c0f4af45659eca2aa7ce63bed4382bca893fa",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/core/Ky.ts b/source/core/Ky.ts\nindex 6f6efb1..b85a27e 100644\n--- a/source/core/Ky.ts\n+++ b/source/core/Ky.ts\n@@ -691,7 +691,19 @@ export class Ky {\n \n \t#getNormalizedOptions(): NormalizedOptions {\n \t\tif (!this.#cachedNormalizedOptions) {\n-\t\t\tconst {hooks, ...normalizedOptions} = this.#options;\n+\t\t\t// Exclude Ky-specific options that are not part of `RequestInit`.\n+\t\t\tconst {\n+\t\t\t\thooks,\n+\t\t\t\tjson,\n+\t\t\t\tparseJson,\n+\t\t\t\tstringifyJson,\n+\t\t\t\tsearchParams,\n+\t\t\t\ttimeout,\n+\t\t\t\tthrowHttpErrors,\n+\t\t\t\tfetch,\n+\t\t\t\t...normalizedOptions\n+\t\t\t} = this.#options;\n+\n \t\t\tthis.#cachedNormalizedOptions = Object.freeze(normalizedOptions) as NormalizedOptions;\n \t\t}\n \n",
+        "after_content_sha256": "259408a78f299697418a163e4d9c0f4af45659eca2aa7ce63bed4382bca893fa",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pluggy-f7ac61a9103b",
+      "repository_id": "pluggy",
+      "base_commit": "fa2af2b84a3c164b7a16ac340119d42668a7da40",
+      "fix_commit": "40f3ab1293c48d2a149a5328be893dc3fa08b395",
+      "source_path": "downstream/run_downstream.py",
+      "allowed_files": [
+        "downstream/run_downstream.py"
+      ],
+      "expected_patch_sha256": "f071b3ffa8561f8bbf21ac9bc377c6917e189e599e93a5d67370d78b1a945189",
+      "before_sha256": "a276a08c93e52d381f1780441f180823868fdaa284fd68c0947c7fc489b7c68d",
+      "after_sha256": "34c7c399eec7fde063d938070772ca5f8c3c4e3e7e3499b14fec1423d924de85",
+      "hidden_oracle": {
+        "patch": "diff --git a/downstream/run_downstream.py b/downstream/run_downstream.py\nindex dc2b649..1bb91b2 100644\n--- a/downstream/run_downstream.py\n+++ b/downstream/run_downstream.py\n@@ -118,9 +118,7 @@ def subprocess_env(\n ) -> dict[str, str]:\n     env = {**os.environ, **(extra or {})}\n     # Empty-string values mean \"remove from environment\".\n-    for key, val in env.items():\n-        if val == \"\":\n-            del env[key]\n+    env = {k: v for k, v in env.items() if v != \"\"}\n     if venv_home is None:\n         return env\n     root = venv_home.resolve()\n",
+        "after_content_sha256": "34c7c399eec7fde063d938070772ca5f8c3c4e3e7e3499b14fec1423d924de85",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-p-queue-4e03f7199ff7",
+      "repository_id": "p-queue",
+      "base_commit": "5ecfda8d64a24f7baf7bab9dfaba2e9c73bb04be",
+      "fix_commit": "439d512cd901adc5c7053745ade15c9048982c53",
+      "source_path": "source/priority-queue.ts",
+      "allowed_files": [
+        "source/priority-queue.ts"
+      ],
+      "expected_patch_sha256": "00aff46c5a723a2dcfcf684a21b47a519c9e94f82edc0cfc2b7e237667d94182",
+      "before_sha256": "b9f49f9854c6a7356f8b24e4409bd9969ebd761bb8bf0391907ba93899b84228",
+      "after_sha256": "85345999e81e341c7d2902e765bcd97321d8b13fdbaf765c90c99b1f070fd09c",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/priority-queue.ts b/source/priority-queue.ts\nindex 944514a..3d81913 100644\n--- a/source/priority-queue.ts\n+++ b/source/priority-queue.ts\n@@ -10,18 +10,18 @@ export default class PriorityQueue implements Queue<RunFunction, PriorityQueueOp\n \treadonly #queue: Array<PriorityQueueOptions & {run: RunFunction}> = [];\n \n \tenqueue(run: RunFunction, options?: Partial<PriorityQueueOptions>): void {\n-\t\toptions = {\n-\t\t\tpriority: 0,\n-\t\t\t...options,\n-\t\t};\n+\t\tconst {\n+\t\t\tpriority = 0,\n+\t\t\tid,\n+\t\t} = options ?? {};\n \n \t\tconst element = {\n-\t\t\tpriority: options.priority,\n-\t\t\tid: options.id,\n+\t\t\tpriority,\n+\t\t\tid,\n \t\t\trun,\n \t\t};\n \n-\t\tif (this.size === 0 || this.#queue[this.size - 1]!.priority! >= options.priority!) {\n+\t\tif (this.size === 0 || this.#queue[this.size - 1]!.priority! >= priority) {\n \t\t\tthis.#queue.push(element);\n \t\t\treturn;\n \t\t}\n",
+        "after_content_sha256": "85345999e81e341c7d2902e765bcd97321d8b13fdbaf765c90c99b1f070fd09c",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pyjwt-930a15446693",
+      "repository_id": "pyjwt",
+      "base_commit": "0f4de5a48c0d5567b62f979cf055597cbf73415e",
+      "fix_commit": "53e9381ef9e529ea196bf862e445e90b264ef940",
+      "source_path": "jwt/api_jwk.py",
+      "allowed_files": [
+        "jwt/api_jwk.py"
+      ],
+      "expected_patch_sha256": "a08d41004d1f549df6fc97baa255c026e7bc97c6af75561bf5431af87570f71f",
+      "before_sha256": "30642abffbc298cf5db93f27cce9063e222109d01044d1f2127032a9d6c63196",
+      "after_sha256": "16a2167814e4c61df65b28cff2437396cd8279999b342097b748353bd815fbd3",
+      "hidden_oracle": {
+        "patch": "diff --git a/jwt/api_jwk.py b/jwt/api_jwk.py\nindex 3034d04..960de75 100644\n--- a/jwt/api_jwk.py\n+++ b/jwt/api_jwk.py\n@@ -133,7 +133,7 @@ class PyJWK:\n \n class PyJWKSet:\n     def __init__(self, keys: list[JWKDict]) -> None:\n-        self.keys = []\n+        self.keys: list[PyJWK] = []\n \n         if not keys:\n             raise PyJWKSetError(\"The JWK Set did not contain any keys\")\n",
+        "after_content_sha256": "16a2167814e4c61df65b28cff2437396cd8279999b342097b748353bd815fbd3",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-zod-8d260b6e58c9",
+      "repository_id": "zod",
+      "base_commit": "fa4a37404966d7ada0f5bb02ceeb592f1d4d9c52",
+      "fix_commit": "ebc8287ca206402cf3a9aceb745b204493cbadfb",
+      "source_path": "packages/zod/src/v4/core/to-json-schema.ts",
+      "allowed_files": [
+        "packages/zod/src/v4/core/to-json-schema.ts"
+      ],
+      "expected_patch_sha256": "3fca8041915e5bb97654c1021fc955b69713b4dc58a0ba5c2700b9c3b1c6ee9c",
+      "before_sha256": "111568c2b76e5417ea8fe581683a63cb7e4246024acd112b7747b010f00cfb80",
+      "after_sha256": "fa9dda46bee81a6241d6a196675906e8166140595b3d871e035a1754e812fb5d",
+      "hidden_oracle": {
+        "patch": "diff --git a/packages/zod/src/v4/core/to-json-schema.ts b/packages/zod/src/v4/core/to-json-schema.ts\nindex 9b727fa..8c37c05 100644\n--- a/packages/zod/src/v4/core/to-json-schema.ts\n+++ b/packages/zod/src/v4/core/to-json-schema.ts\n@@ -205,7 +205,7 @@ export function process<T extends schemas.$ZodType>(\n   }\n \n   // set prefault as default\n-  if (ctx.io === \"input\" && result.schema._prefault) result.schema.default ??= result.schema._prefault;\n+  if (ctx.io === \"input\" && \"_prefault\" in result.schema) result.schema.default ??= result.schema._prefault;\n   delete result.schema._prefault;\n \n   // pulling fresh from ctx.seen in case it was overwritten\n",
+        "after_content_sha256": "fa9dda46bee81a6241d6a196675906e8166140595b3d871e035a1754e812fb5d",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-dotenv-9048c8185be0",
+      "repository_id": "dotenv",
+      "base_commit": "185e641b8f1d69a6586ef75dd97d980a83b989e5",
+      "fix_commit": "a115e3ab874b31c6f9460a2a8c9336bff30fb62c",
+      "source_path": "lib/main.js",
+      "allowed_files": [
+        "lib/main.js"
+      ],
+      "expected_patch_sha256": "913ecff56b7afae8067dc9bd976feae394ba9332624cccfbb7b66cf8b875db75",
+      "before_sha256": "ba498e26754df53bba93c98d38c5d59e80c097da48716c3550ef4eca2e22d905",
+      "after_sha256": "28c32591c34260fcb8b5e4a8b883375568ff71f8f6c54ede1974cb074471def7",
+      "hidden_oracle": {
+        "patch": "diff --git a/lib/main.js b/lib/main.js\nindex 529411c..b954bdf 100644\n--- a/lib/main.js\n+++ b/lib/main.js\n@@ -123,15 +123,15 @@ function _parseVault (options) {\n }\n \n function _warn (message) {\n-  console.error(`⚠ ${message} · dotenv@${version}`)\n+  console.error(`⚠ ${message}`)\n }\n \n function _debug (message) {\n-  console.log(`┆ ${message} · dotenv@${version}`)\n+  console.log(`┆ ${message}`)\n }\n \n function _log (message) {\n-  console.log(`◇ ${message} · dotenv@${version}`)\n+  console.log(`◇ ${message}`)\n }\n \n function _dotenvKey (options) {\n",
+        "after_content_sha256": "28c32591c34260fcb8b5e4a8b883375568ff71f8f6c54ede1974cb074471def7",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-axios-59743d4e186d",
+      "repository_id": "axios",
+      "base_commit": "7737fae3c54937105d3ab27ae814d857856fe058",
+      "fix_commit": "7b1825ff0832981f02a7aa6f3995522b0be297ee",
+      "source_path": "rollup.config.js",
+      "allowed_files": [
+        "rollup.config.js"
+      ],
+      "expected_patch_sha256": "813fbb0c725c898cd408628411c52ce53c3559a9c82592550fc0baf4c1d1749d",
+      "before_sha256": "157c4c7a0b753ee52c8bfe6a570ff603475ec93ba140f9f54ab3cd2c24f73f98",
+      "after_sha256": "498a1d8568baa9d80e851798efefd3f4477830e44aa8160c2634a7fad8a22530",
+      "hidden_oracle": {
+        "patch": "diff --git a/rollup.config.js b/rollup.config.js\nindex 2f213dc..c4091ea 100644\n--- a/rollup.config.js\n+++ b/rollup.config.js\n@@ -28,6 +28,7 @@ const buildConfig = ({ es5, browser = true, minifiedVersion = true, alias, ...co\n     output: {\n       ...config.output,\n       file: `${path.dirname(file)}/${basename}.${(minified ? ['min', ...extArr] : extArr).join('.')}`,\n+      sourcemap: minified,\n     },\n     plugins: [\n       aliasPlugin({\n",
+        "after_content_sha256": "498a1d8568baa9d80e851798efefd3f4477830e44aa8160c2634a7fad8a22530",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-werkzeug-fcf52ef0664f",
+      "repository_id": "werkzeug",
+      "base_commit": "811b9e511e336fd122933690a50451f99ab6b0de",
+      "fix_commit": "9ffdc2d38581119fa82829bdbde4b75e2519866f",
+      "source_path": "src/werkzeug/sansio/utils.py",
+      "allowed_files": [
+        "src/werkzeug/sansio/utils.py"
+      ],
+      "expected_patch_sha256": "796d89c91afc3ec3ab42c7859d04ec7a757564309841cab56dc6d8f85aa9fbf0",
+      "before_sha256": "612e64b3bc7228d1a0f4f3eb3730f7ee571a0e82dfd2d0d77ad226d877c4b24e",
+      "after_sha256": "0d4aefd6be705aac7362b107bdc8e726229bd8927c6d4c2422efeacc63b88076",
+      "hidden_oracle": {
+        "patch": "diff --git a/src/werkzeug/sansio/utils.py b/src/werkzeug/sansio/utils.py\nindex ae6da2c..567e596 100644\n--- a/src/werkzeug/sansio/utils.py\n+++ b/src/werkzeug/sansio/utils.py\n@@ -11,12 +11,12 @@ from ..urls import uri_to_iri\n \n _host_re = re.compile(\n     r\"\"\"\n-    (\n+    (?P<hostname>\n         [a-z0-9.-]+  # domain or ipv4\n     |\n         \\[[a-f0-9]*:[a-f0-9.:]+]  # ipv6\n     )\n-    (?::[0-9]+)?  # optional port\n+    (?P<port>:[0-9]+)?  # optional port\n     \"\"\",\n     flags=re.ASCII | re.IGNORECASE | re.VERBOSE,\n )\n@@ -31,10 +31,9 @@ def host_is_trusted(\n \n     :param hostname: The ``Host`` header ``host:port`` to check.\n     :param trusted_list: A list of trusted domains to match. These should\n-        already be IDNA encoded, but will be encoded if needed. The port is\n-        ignored for this check. If a name starts with a dot it will match as a\n-        suffix, accepting all subdomains. If empty or ``None``, all domains are\n-        allowed.\n+        already be IDNA encoded, but will be encoded if needed. If a name starts\n+        with a dot it will match as a suffix, accepting all subdomains. If empty\n+        or ``None``, all domains are allowed.\n \n     .. versionchanged:: 3.2\n         The value's characters are validated.\n@@ -47,10 +46,10 @@ def host_is_trusted(\n     if not hostname:\n         return False\n \n-    if _host_re.fullmatch(hostname) is None:\n+    if (match := _host_re.fullmatch(hostname)) is None:\n         return False\n \n-    hostname = hostname.partition(\":\")[0]\n+    hostname = match.group(\"hostname\")\n \n     if not trusted_list:\n         return True\n@@ -66,7 +65,7 @@ def host_is_trusted(\n             suffix_match = False\n \n         try:\n-            ref = ref.partition(\":\")[0].encode(\"idna\").decode(\"ascii\")\n+            ref = ref.encode(\"idna\").decode(\"ascii\")\n         except UnicodeEncodeError:\n             return False\n \n",
+        "after_content_sha256": "0d4aefd6be705aac7362b107bdc8e726229bd8927c6d4c2422efeacc63b88076",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-ky-71a240924c0e",
+      "repository_id": "ky",
+      "base_commit": "5791b664a07ab9533c1261984a623d2d5bb60ee2",
+      "fix_commit": "e673eaa6e42e5d96399db7996c9fd940a1cf02c8",
+      "source_path": "source/core/Ky.ts",
+      "allowed_files": [
+        "source/core/Ky.ts"
+      ],
+      "expected_patch_sha256": "e64894de444f422352636ebc58f672c96e0f202ee9e824199c776175751efc64",
+      "before_sha256": "7d0e9df3b6cb4af2189853a0076c088decc259f9dca872f0f69eb2e501e18380",
+      "after_sha256": "4846f2dd1e0672798d724c4c7c1cd9a8e6b7dbbda1e0149936a687d7dae8da87",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/core/Ky.ts b/source/core/Ky.ts\nindex c387b51..b656170 100644\n--- a/source/core/Ky.ts\n+++ b/source/core/Ky.ts\n@@ -62,10 +62,9 @@ export class Ky {\n \t\t\t\t}\n \n \t\t\t\tif (modifiedResponse instanceof RetryMarker) {\n-\t\t\t\t\t// Cancel both the cloned response passed to the hook and the current response\n-\t\t\t\t\t// to prevent resource leaks (especially important in Deno/Bun)\n-\t\t\t\t\t// eslint-disable-next-line no-await-in-loop\n-\t\t\t\t\tawait Promise.all([\n+\t\t\t\t\t// Cancel both the cloned response passed to the hook and the current response to prevent resource leaks (especially important in Deno/Bun).\n+\t\t\t\t\t// Do not await cancellation since hooks can clone the response, leaving extra tee branches that keep cancel promises pending per the Streams spec.\n+\t\t\t\t\tvoid Promise.allSettled([\n \t\t\t\t\t\tclonedResponse.body?.cancel(),\n \t\t\t\t\t\tresponse.body?.cancel(),\n \t\t\t\t\t]);\n@@ -111,17 +110,14 @@ export class Ky {\n \t\tconst result = ky.#retry(function_)\n \t\t\t.finally(async () => {\n \t\t\t\tconst originalRequest = ky.#originalRequest;\n-\t\t\t\tconst cleanupPromises = [];\n \n \t\t\t\tif (originalRequest && !originalRequest.bodyUsed) {\n-\t\t\t\t\tcleanupPromises.push(originalRequest.body?.cancel());\n+\t\t\t\t\tvoid originalRequest.body?.cancel();\n \t\t\t\t}\n \n \t\t\t\tif (!ky.request.bodyUsed) {\n-\t\t\t\t\tcleanupPromises.push(ky.request.body?.cancel());\n+\t\t\t\t\tvoid ky.request.body?.cancel();\n \t\t\t\t}\n-\n-\t\t\t\tawait Promise.all(cleanupPromises);\n \t\t\t}) as ResponsePromise;\n \n \t\tfor (const [type, mimeType] of Object.entries(responseTypes) as ObjectEntries<typeof responseTypes>) {\n",
+        "after_content_sha256": "4846f2dd1e0672798d724c4c7c1cd9a8e6b7dbbda1e0149936a687d7dae8da87",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pluggy-65a32d44cd32",
+      "repository_id": "pluggy",
+      "base_commit": "b6be9d907422621d878b09234146db9598ee3a59",
+      "fix_commit": "fa2af2b84a3c164b7a16ac340119d42668a7da40",
+      "source_path": "downstream/run_downstream.py",
+      "allowed_files": [
+        "downstream/run_downstream.py"
+      ],
+      "expected_patch_sha256": "4f02c7a87ce8ff30dc43c3d14bbc0d620604c6c7a5962a2e863a343ed51dcf68",
+      "before_sha256": "e95e61f6fbf4b9bd0558ab26ec475e5751232eceede78378b7cfb2075a801994",
+      "after_sha256": "a276a08c93e52d381f1780441f180823868fdaa284fd68c0947c7fc489b7c68d",
+      "hidden_oracle": {
+        "patch": "diff --git a/downstream/run_downstream.py b/downstream/run_downstream.py\nindex cb554ad..dc2b649 100644\n--- a/downstream/run_downstream.py\n+++ b/downstream/run_downstream.py\n@@ -116,9 +116,9 @@ def subprocess_env(\n     extra: Mapping[str, str] | None,\n     venv_home: Path | None,\n ) -> dict[str, str]:\n-    env = {**os.environ, **dict(extra or {})}\n+    env = {**os.environ, **(extra or {})}\n     # Empty-string values mean \"remove from environment\".\n-    for key, val in list(env.items()):\n+    for key, val in env.items():\n         if val == \"\":\n             del env[key]\n     if venv_home is None:\n@@ -198,7 +198,7 @@ def load_recipe(name: str) -> RecipeFile:\n \n def build_uv_install_argv(*, venv_home: Path, env: EnvironmentUv) -> list[str]:\n     py = str(venv_python(venv_home))\n-    args: list[str] = [\"uv\", \"pip\", \"install\", \"--python\", py]\n+    args = [\"uv\", \"pip\", \"install\", \"--python\", py]\n     for g in env.groups:\n         args.extend([\"--group\", g])\n     for spec in env.editables:\n@@ -236,7 +236,7 @@ def run_recipe(\n     if not only_install:\n         for step in recipe.test:\n             run_cmd(\n-                list(step.argv),\n+                step.argv,\n                 cwd=dest,\n                 env=step.env or None,\n                 venv_home=venv_home,\n",
+        "after_content_sha256": "a276a08c93e52d381f1780441f180823868fdaa284fd68c0947c7fc489b7c68d",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-p-queue-a1d2371e2a22",
+      "repository_id": "p-queue",
+      "base_commit": "b846a358ffb1d4160e4a56467d156ffbc949bd21",
+      "fix_commit": "e5dc53c11ab44ac622fa13fff86c8f77b59a35c3",
+      "source_path": "source/index.ts",
+      "allowed_files": [
+        "source/index.ts"
+      ],
+      "expected_patch_sha256": "1cb0a71d39c1745ec11daa2c4d232238eafaacefed727b628cf22ad70e845c2c",
+      "before_sha256": "9e9308682fc1de5129389146fcd7991244b982923e3836d351cbaa7ebe845ff6",
+      "after_sha256": "506e6f4fa89909dc70af230c943f4cc94d03407e2979aa9f345a95f2918113c4",
+      "hidden_oracle": {
+        "patch": "diff --git a/source/index.ts b/source/index.ts\nindex 3b63d74..f3ffead 100644\n--- a/source/index.ts\n+++ b/source/index.ts\n@@ -157,10 +157,7 @@ export default class PQueue<QueueType extends Queue<RunFunction, EnqueueOptionsT\n \t\tif (!this.#isPaused) {\n \t\t\tconst canInitializeInterval = !this.#isIntervalPaused;\n \t\t\tif (this.#doesIntervalAllowAnother && this.#doesConcurrentAllowAnother) {\n-\t\t\t\tconst job = this.#queue.dequeue();\n-\t\t\t\tif (!job) {\n-\t\t\t\t\treturn false;\n-\t\t\t\t}\n+\t\t\t\tconst job = this.#queue.dequeue()!;\n \n \t\t\t\tthis.emit('active');\n \t\t\t\tjob();\n",
+        "after_content_sha256": "506e6f4fa89909dc70af230c943f4cc94d03407e2979aa9f345a95f2918113c4",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-pyjwt-882156dfedd3",
+      "repository_id": "pyjwt",
+      "base_commit": "96ae3563b9db8f5e18621c4d612f622cf476c92b",
+      "fix_commit": "635c8d89dd8b8bea1813fe8830a26d0274a4e724",
+      "source_path": "jwt/types.py",
+      "allowed_files": [
+        "jwt/types.py"
+      ],
+      "expected_patch_sha256": "d64bf22d182f014ca0b15d838889e7473ce6c8affd38c902b5bfc5042d7c1371",
+      "before_sha256": "316f63e03d2fbf47adc3db6a7800b73ccb7bba2dea4b30694bf7035c4c6bf2ca",
+      "after_sha256": "56fad669cd83e87a837626d8ffd90bad5355b61a1ca7a9342f5ea64b11a11ad1",
+      "hidden_oracle": {
+        "patch": "diff --git a/jwt/types.py b/jwt/types.py\nindex df16e0d..fa861e2 100644\n--- a/jwt/types.py\n+++ b/jwt/types.py\n@@ -5,7 +5,7 @@ JWKDict = dict[str, Any]\n HashlibHash = Callable[..., Any]\n \n \n-class SigOptions(TypedDict):\n+class SigOptions(TypedDict, total=False):\n     \"\"\"Options for PyJWS class (TypedDict). Note that this is a smaller set of options than\n     for :py:func:`jwt.decode()`.\"\"\"\n \n",
+        "after_content_sha256": "56fad669cd83e87a837626d8ffd90bad5355b61a1ca7a9342f5ea64b11a11ad1",
+        "parser": "python_ast_compile",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    },
+    {
+      "task_id": "g3-patch-zod-2034772eb316",
+      "repository_id": "zod",
+      "base_commit": "6217527e4880054dda5e4d33aa12192a36a35062",
+      "fix_commit": "757f0b0f5217e0e7125478cd91af1e2c0cd21aa9",
+      "source_path": "packages/zod/src/v4/classic/schemas.ts",
+      "allowed_files": [
+        "packages/zod/src/v4/classic/schemas.ts"
+      ],
+      "expected_patch_sha256": "60b6de5a070143c53a59912008e4482941845e1e190003a6efda05b9dad43c30",
+      "before_sha256": "82d0e5cbf438d4fd43cdf89f188888efdac3d70edc2dcfde7326a7ecd509b22b",
+      "after_sha256": "767348e67cc459f1494de897b866fe2aae3ad3c3fa212fe9291bb1261309b8cf",
+      "hidden_oracle": {
+        "patch": "diff --git a/packages/zod/src/v4/classic/schemas.ts b/packages/zod/src/v4/classic/schemas.ts\nindex c32ee69..594c9a5 100644\n--- a/packages/zod/src/v4/classic/schemas.ts\n+++ b/packages/zod/src/v4/classic/schemas.ts\n@@ -1322,7 +1322,7 @@ export function object<T extends core.$ZodLooseShape = Partial<Record<never, cor\n export function strictObject<T extends core.$ZodLooseShape>(\n   shape: T,\n   params?: string | core.$ZodObjectParams\n-): ZodObject<T, core.$strict> {\n+): ZodObject<util.Writeable<T>, core.$strict> {\n   return new ZodObject({\n     type: \"object\",\n     shape,\n@@ -1336,7 +1336,7 @@ export function strictObject<T extends core.$ZodLooseShape>(\n export function looseObject<T extends core.$ZodLooseShape>(\n   shape: T,\n   params?: string | core.$ZodObjectParams\n-): ZodObject<T, core.$loose> {\n+): ZodObject<util.Writeable<T>, core.$loose> {\n   return new ZodObject({\n     type: \"object\",\n     shape,\n",
+        "after_content_sha256": "767348e67cc459f1494de897b866fe2aae3ad3c3fa212fe9291bb1261309b8cf",
+        "parser": "node_syntax_check",
+        "comparison": "exact historical after-content plus real language parser; text comparison alone is insufficient"
+      }
+    }
+  ]
+}

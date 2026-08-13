@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "qaId": "dca-w1-native-runtime-qa-20260812",
+  "status": "PARTIAL_REQUIRED_OS_MATRIX_INCOMPLETE",
+  "executableSha256": "b8bd28c7a14f5544a5f7df78bfec6f16c1621dc38be26033d6b95e6851ecdc90",
+  "host": {
+    "windowsBuild": "10.0.26200.0",
+    "physicalDisplayCount": 1,
+    "primaryDisplay": "DISPLAY5",
+    "logicalBounds": "1707x960",
+    "applicationDpi": 144,
+    "actualScalePercent": 150
+  },
+  "startup": {
+    "processLaunch": "PASS",
+    "mainWindow": "PASS_DESK_CODE_AGENT",
+    "responding": true,
+    "webView2Initialization": "PASS_150.0.4078.48",
+    "frontendRendering": "PASS_HTTP_TAURI_LOCALHOST",
+    "relaunch": "PASS",
+    "cleanAltF4ShutdownWithin10Seconds": "PASS",
+    "remainingDeskCodeAgentWebViewProcesses": 0
+  },
+  "nativeWebViewAutomation": {
+    "reportPath": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508\\.qa-logs\\native-qa-v2\\native-webview-qa.json",
+    "reportSha256": "088d7a5ef0162c2b069e13702399e84253fcfbef63d94476c70b0f8348b5c1e7",
+    "result": "PASS",
+    "canonicalSurfaces": "PASS_18_OF_18_NO_HORIZONTAL_OVERFLOW",
+    "artifactPathCases": "PASS_6_OF_6",
+    "devicePixelRatio": 1.5
+  },
+  "dpi": {
+    "100": "NOT_RUN_SINGLE_DISPLAY_FIXED_AT_150",
+    "125": "NOT_RUN_SINGLE_DISPLAY_FIXED_AT_150",
+    "150": "PASS_ALL_18_SURFACES_AND_DIALOG",
+    "200": "NOT_RUN_SINGLE_DISPLAY_FIXED_AT_150",
+    "requiredMatrixComplete": false,
+    "osScalingChanged": false
+  },
+  "keyboard": {
+    "status": "PASS_NATIVE_WEBVIEW",
+    "tab": "PASS_VISIBLE_FOCUS",
+    "shiftTab": "PASS_VISIBLE_FOCUS",
+    "enter": "PASS_WINDOWS_SENDKEYS",
+    "space": "PASS_WEBVIEW_INPUT",
+    "escape": "PASS_WEBVIEW_INPUT",
+    "modalTrap": "PASS_FORWARD_AND_REVERSE",
+    "focusRestoration": "PASS"
+  },
+  "narrator": {
+    "status": "PARTIAL_NOT_AUDIBLY_OBSERVED",
+    "actualNarratorProcessRun": true,
+    "appActivated": true,
+    "uiaFocusTransitionsObserved": 6,
+    "observedNamedRoles": ["Skip to workspace/Hyperlink", "Repository (Ctrl+1)/Button", "Overview (Ctrl+2)/Button", "Architecture (Ctrl+3)/Button"],
+    "spokenOutputVerified": false,
+    "limitation": "The automation session has no trustworthy audio-observation channel.",
+    "shutdown": "PASS_CTRL_WINDOWS_ENTER"
+  },
+  "fonts": {
+    "150": "PASS_VISUAL_INSPECTION_INTER_SEGOE_UI_SYSTEM_UI",
+    "100_125_200": "NOT_RUN_WITH_DPI_MATRIX",
+    "normalScreenshotSha256": "ee75653a8bfa5cf2bb2d67873db8ac9b4966a3ea95e91ad6c3bafc3c24e1d845",
+    "reducedScreenshotSha256": "56dd1d64a4e95389366033c7a0fe00cc29b6945b2fc53d12dac81ded4fa26a71"
+  },
+  "motion": {
+    "normalNativeShell": "PASS_NINE_300MS_REVEALS",
+    "reducedNativeShell": "PASS_WEBVIEW_MEDIA_EMULATION_ZERO_ANIMATIONS",
+    "actualWindowsReducedMotionSetting": "NOT_RUN_NO_AUTHORIZED_OS_PREFERENCE_MUTATION"
+  },
+  "artifactPathSecurity": {
+    "allowlistedRelative": "PASS_READ_ONLY",
+    "windowsSeparators": "PASS_READ_ONLY",
+    "spacesNonAllowlisted": "PASS_REJECTED",
+    "absolutePath": "PASS_REJECTED",
+    "traversal": "PASS_REJECTED",
+    "nonAllowlisted": "PASS_REJECTED",
+    "editableControls": 0
+  },
+  "blockingLimitations": [
+    "Actual Windows 100%, 125%, and 200% scaling could not be exercised on the single-display session fixed at 150% without changing system/user display settings.",
+    "Narrator ran and followed UIA focus, but spoken output could not be observed.",
+    "Actual Windows reduced-motion preference was not changed; the reduced path was exercised through WebView2 media emulation."
+  ]
+}

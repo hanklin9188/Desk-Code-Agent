@@ -1,0 +1,29 @@
+{
+  "record_id": "svr_r17_v020_dca_debug_v2",
+  "skill_id": "R17",
+  "skill_version": "0.2.0",
+  "model_profile": "qwen3.5-4b-bf16",
+  "backend_version": "vllm-pinned-at-run",
+  "task_suite": "dca-debug-l1-v2",
+  "task_manifest_hash": "sha256:EXAMPLE",
+  "sample_count": 100,
+  "without_skill_success": 0.52,
+  "with_skill_success": 0.61,
+  "delta_pp": 9.0,
+  "without_skill_median_tokens": 6800,
+  "with_skill_median_tokens": 7752,
+  "token_overhead_ratio": 0.14,
+  "without_skill_median_latency_ms": 42000,
+  "with_skill_median_latency_ms": 48500,
+  "schema_validity": 1.0,
+  "safety_violations": 0,
+  "critical_regressions": 0,
+  "decision": "ADMIT",
+  "decision_reasons": [
+    "+9.0 pp example task success (illustrative record)",
+    "No safety or critical regression",
+    "14% token overhead within policy"
+  ],
+  "evaluated_at": "2026-08-08T06:30:00+08:00",
+  "evaluator": "Desk Code Agent evaluation runner"
+}

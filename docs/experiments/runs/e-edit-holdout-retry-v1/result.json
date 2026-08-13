@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "dca-e-edit-untouched-holdout-retry-v1",
+  "status": "NOT_ELIGIBLE_ZERO_CALLS",
+  "classification": "PREREGISTERED_CONDITIONAL_BRANCH_NOT_EXECUTED",
+  "completedAt": "2026-08-11T03:14:15.580Z",
+  "prerequisite": {
+    "requiredBehavioralSuccesses": 29,
+    "observedBehavioralSuccesses": 23,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0,
+    "eligible": false
+  },
+  "potentialFailedTasks": 72,
+  "summary": {
+    "modelCalls": 0,
+    "recoveries": 0,
+    "repeatedPatches": 0,
+    "contradictions": 0,
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0,
+    "tokenMultiplier": "NOT_APPLICABLE",
+    "latencyMultiplier": "NOT_APPLICABLE"
+  },
+  "inputs": {
+    "preregistration": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PREREGISTRATION.v2.json",
+      "sha256": "5e1d4ece269cd807f625ef7f0c41b1867dce5600f25e4080bfcf02746e4833c5"
+    },
+    "seal": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_SEAL.v2.json",
+      "sha256": "51b7c6d79d7f07eab84017488aeae6aa8a061430af36eda3df34348b76f9f823"
+    },
+    "eEditResult": {
+      "path": "docs/experiments/runs/e-edit-holdout-p2-20260811T111300Z/result.json",
+      "sha256": "e6eb86b1837525581c134fc0e3cc24ea51e83bfeac7594af76809338b17f797f"
+    }
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "rawPatchesStored": false
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "preflightId": "dca-best-7b-bounded-retry-session-b-preflight-v1",
+  "state": "SEALED_BEFORE_FIRST_RETRY_CALL",
+  "sealedAt": "2026-08-11T16:16:45.761Z",
+  "retryCallsAtSeal": 0,
+  "inputs": {
+    "eligibility": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ELIGIBILITY_MANIFEST.v1.json",
+      "sha256": "0eb3a573d5e2401d14c4793f730521f91f2e5ff93bf1dc0e102aa2bad66df6a0"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PREREGISTRATION.v1.json",
+      "sha256": "aaede424d4ae204a098d5fb2610ce7117d0e5fa4159441a56e646059cfd07cf1"
+    },
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_A.v1.json",
+      "sha256": "fd81c875019ba4ef903185bb6b96faf94d99b202dea5b33fb626405947ec9c08"
+    }
+  },
+  "contract": {
+    "intents": 66,
+    "aggregateSha256": "765c9f8171d5f8d8dee95de7962da16ef9bf5f5111f918a969116deead451b45",
+    "duplicates": 0,
+    "maxCallsPerTask": 1,
+    "hiddenOracleLeakage": 0,
+    "emptyEventsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "emptyCheckpointSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hardIsolation": true
+  },
+  "implementation": {
+    "package-lock.json": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+    "scripts/launch_model_tournament_candidate.py": "07ee838e78c19ee2df839c6943300d9b49c7153d8a67149524ed5c13dc3a47f3",
+    "scripts/run_best_7b_bounded_retry_session_b.ts": "1a7e9c9a384b161d0da32771d773f3c0701135a160ebdebfa2e62f42c9480282",
+    "scripts/start_model_tournament_candidate.sh": "afe879bbc0dd831f673b05a9d96f3cd299f44b606a15f0e7605765c5fc553c45",
+    "services/bounded-retry-runtime/src/index.ts": "b5df2630b3b5bedceebb6b241b6f913125a67688b20e179e995e221736d883a3",
+    "services/bounded-retry-session-b-runtime/src/index.ts": "e837025e13a4787329eb42d9c762043be687a5f426556fbd8ad683146431b7d8",
+    "services/model-specialization-runtime/src/index.ts": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee",
+    "services/patch-interface-runtime/src/index.ts": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+    "services/tool-runtime/src/index.ts": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21"
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "otherModel": false,
+    "fallback": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

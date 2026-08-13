@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "matrixId": "dca-semantic-failure-evidence-sufficiency-v1",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T19:11:06.048Z",
+  "definition": "Model-visible task contract plus regenerated frozen E-MIN-V2/C1 context; exact source absent=MISSING, exact source present but visible test absent=PARTIALLY_SUFFICIENT, both present=SUFFICIENT",
+  "failures": {
+    "total": 66,
+    "counts": {
+      "MISSING_REQUIRED_EVIDENCE": 5,
+      "PARTIALLY_SUFFICIENT": 61
+    },
+    "ratesPercent": {
+      "MISSING_REQUIRED_EVIDENCE": 7.575757575757576,
+      "PARTIALLY_SUFFICIENT": 92.42424242424242
+    }
+  },
+  "controls": {
+    "total": 29,
+    "counts": {
+      "PARTIALLY_SUFFICIENT": 29
+    },
+    "ratesPercent": {
+      "PARTIALLY_SUFFICIENT": 100
+    }
+  },
+  "allTasks": {
+    "total": 95,
+    "counts": {
+      "MISSING_REQUIRED_EVIDENCE": 5,
+      "PARTIALLY_SUFFICIENT": 90
+    },
+    "ratesPercent": {
+      "MISSING_REQUIRED_EVIDENCE": 5.2631578947368425,
+      "PARTIALLY_SUFFICIENT": 94.73684210526316
+    }
+  },
+  "caveat": "PARTIALLY_SUFFICIENT does not establish that missing visible tests caused failure; all 29 successes had the same partial-evidence label.",
+  "targetModelCalls": 0
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 4,
+  "indexId": "dca-privacy-safe-semantic-observability-results-index-v4",
+  "status": "V2_SESSION_B_ABORTED_FAIL_CLOSED",
+  "generatedAt": "2026-08-11T20:48:11.222Z",
+  "v1": {
+    "status": "PERMANENTLY_CLOSED_PARTIAL_ABORT",
+    "consumedCalls": 4,
+    "completePairs": 3
+  },
+  "v2": {
+    "A": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_A.v2.json",
+      "sha256": "c4bae265ebdac2f658a94e1032628df350810c58ba47e10dceb6e75164f7c77d",
+      "status": "PASS"
+    },
+    "B": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B.v2.json",
+      "sha256": "aa61f458fe3f039bdc7b732d37cef06dc9d31a41b7e405927ed31c0950c63204",
+      "status": "ABORTED_FAIL_CLOSED"
+    },
+    "C": null,
+    "D": null,
+    "consumedCalls": 14,
+    "completePairs": 13,
+    "primaryAnalysisEligible": false
+  },
+  "artifacts": {
+    "partialAbort": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B_PARTIAL_ABORT.v2.json",
+      "sha256": "74bf5552ed0f1465dd35fd392f2fe9f0c2bf867da93dfc926bbe3af86efbb68e"
+    },
+    "validation": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B_ABORT_VALIDATION.v2.json",
+      "sha256": "031a19931bffacfac502fa3407ff4ec6877dd43236f1a30ce4630c56e518704d"
+    }
+  },
+  "next": "RECOVERY_PROTOCOL_REQUIRED_SEPARATE_INVOCATION"
+}

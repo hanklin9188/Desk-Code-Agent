@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "indexId": "dca-privacy-safe-semantic-observability-results-index-v2",
+  "status": "SESSION_B_ABORTED_FAIL_CLOSED",
+  "generatedAt": "2026-08-11T20:06:20.559Z",
+  "supersedes": {
+    "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_RESULTS_INDEX.v1.json",
+    "sha256": "670d7827a4311385426b2b249aad0832c5661d97584bac2b017bd96ca77d0609"
+  },
+  "sessions": {
+    "A": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_A.v1.json",
+      "sha256": "f6027c2de31d623acd2d24d57e19c5e3c91adc62af7eef5d0a0dee6b7d07a761"
+    },
+    "B": {
+      "status": "ABORTED_NOT_PASS",
+      "partialAbort": {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_B_PARTIAL_ABORT.v1.json",
+        "sha256": "67d3b9a086cca0d55ff1f057ef93786b1f2f76a427e47586118dea914b062f70"
+      },
+      "validation": {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_SESSION_B_ABORT_VALIDATION.v1.json",
+        "sha256": "b124a78f831410c5c61f5a2d8c14de70d214aba5e19c4400e38da240243d4be9"
+      }
+    },
+    "C": null,
+    "D": null
+  },
+  "accounting": {
+    "plannedPhysicalCalls": 80,
+    "consumedPhysicalCalls": 4,
+    "completedObservations": 3,
+    "pairedL0L1": 3,
+    "unmatchedStartedCalls": 1,
+    "unstartedTasks": 76,
+    "retries": 0,
+    "reviewerCalls": 0,
+    "sessionBComplete": false,
+    "sessionBPass": false
+  },
+  "decisions": {
+    "generationPermanentlyClosed": true,
+    "SessionCReady": false,
+    "productStateChanged": false,
+    "semanticClassificationPerformed": false
+  },
+  "next": "NEW_APPEND_ONLY_PROTOCOL_REQUIRED"
+}

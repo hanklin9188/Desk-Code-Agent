@@ -1,0 +1,51 @@
+version: 1
+profiles:
+  quality:
+    model: Qwen/Qwen3.5-4B
+    revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+    tokenizer_revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+    backend: vllm
+    dtype: bfloat16
+    max_model_len: 8192
+    gpu_memory_utilization: 0.82
+    concurrency: 1
+    prefix_caching: true
+    thinking_policy:
+      orchestrator: short
+      repo_analyst: short
+      coder: enabled
+      reviewer: short
+      reporter: disabled
+    max_output_tokens:
+      orchestrator: 512
+      repo_analyst: 1400
+      coder: 2400
+      reviewer: 900
+      reporter: 1600
+
+  balanced:
+    model: Qwen/Qwen3.5-4B
+    backend: vllm
+    dtype: fp8_or_int8_after_benchmark
+    max_model_len: 8192
+    gpu_memory_utilization: 0.78
+    concurrency: 1
+    prefix_caching: true
+    admission_rule: "Use only if coding success is within 1 pp of BF16 and no safety regression."
+
+  compact:
+    model: Qwen/Qwen3.5-4B-AWQ-or-GPTQ
+    backend: vllm
+    dtype: int4
+    max_model_len: 8192
+    gpu_memory_utilization: 0.72
+    concurrency: 1
+    admission_rule: "Use only after task-level BF16 vs INT4 benchmark; never assume quality parity."
+
+server:
+  host: 127.0.0.1
+  port: 8000
+  expose_lan: false
+  api_style: openai_compatible
+  request_timeout_seconds: 180
+  max_queue_depth: 8

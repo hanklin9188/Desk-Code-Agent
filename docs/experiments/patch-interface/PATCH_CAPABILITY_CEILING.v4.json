@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 4,
+  "reportId": "dca-patch-capability-ceiling-v4",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T03:14:15.580Z",
+  "supersedes": {
+    "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v3.json",
+    "reason": "Fresh repository-disjoint E-EDIT holdout evidence"
+  },
+  "immutableEvidence": {
+    "paired": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PAIRED_RESULTS.v2.json",
+      "sha256": "9564d1c970c08fe2654c62b41ec0fb8d71f6c10d4e803338891fd76effef1f20"
+    },
+    "failureDecomposition": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_FAILURE_DECOMPOSITION.v1.json",
+      "sha256": "69cd74acf9f3fc6e39bc21727f827f56d67276d41b54fb4213b1ad2b05d9e10c"
+    },
+    "promotion": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PROMOTION_DECISION.v2.json",
+      "sha256": "816d457d295654806b6aac3d35bb710c83c6fceca8e22920a58f7774b788be22"
+    }
+  },
+  "capabilityCeiling": {
+    "interface": "P2 substantially improves action validity",
+    "strictBehavior": "23/95 remains below assisted and promotion thresholds",
+    "retrieval": "90/95 exact-source selected/included",
+    "safetyRuntime": "zero wrong-file, safety and rollback failures",
+    "retry": "not eligible"
+  },
+  "productRecommendation": "KEEP_MUTATION_DISABLED",
+  "eEditStatus": "RESEARCH_ONLY_MUTATION_INTERFACE",
+  "nextScientificGate": "Separately approved practical local 7B tournament protocol, followed by a new untouched holdout if a candidate qualifies",
+  "tournamentProtocol": {
+    "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PROTOCOL.v1.json",
+    "sha256": "62b4ac12a82e90f42a9e532ec9b7fa60e7bca383ba56726425ae4d8857aad713"
+  }
+}

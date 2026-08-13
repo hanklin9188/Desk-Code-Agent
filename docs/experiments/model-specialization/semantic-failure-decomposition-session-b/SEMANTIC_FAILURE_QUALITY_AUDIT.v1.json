@@ -1,0 +1,4958 @@
+{
+  "schemaVersion": 1,
+  "auditId": "dca-semantic-failure-quality-audit-v1",
+  "status": "PASS_NO_DISAGREEMENTS",
+  "generatedAt": "2026-08-11T19:11:06.048Z",
+  "frozenPlan": {
+    "alwaysReview": [
+      "all LOW confidence",
+      "all T14",
+      "all T10",
+      "all T11",
+      "all T8"
+    ],
+    "deterministicSample": {
+      "population": "remaining HIGH/MEDIUM",
+      "algorithm": "sort taskId ascending then select every fifth row starting at index 0",
+      "seedless": true
+    },
+    "disagreements": "APPEND_ONLY",
+    "silentRewrite": false
+  },
+  "mandatoryCounts": {
+    "low": 53,
+    "t14": 53,
+    "t10": 0,
+    "t11": 5,
+    "t8": 0
+  },
+  "deterministicRemainingSampleTaskIds": [
+    "holdout-013-5d557d000b1b",
+    "holdout-059-2e9d8048f513"
+  ],
+  "uniqueAudited": 60,
+  "rows": [
+    {
+      "taskId": "holdout-003-5e3903e649c4",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-003-5e3903e649c4]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-01-sable-metrics]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-003-5e3903e649c4]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[2]",
+          "rowSha256": "208b1d1405c2a6c2f72ddc77264693a669c9aad801cb21cc5e35e1a2f4994921",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[0]",
+          "rowSha256": "2a94668ceacc32b3ad309c7818e3c99a489254ba96d78733b1f7a55bc849ce7e",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-004-53e3a889c55a",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-004-53e3a889c55a]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-01-sable-metrics]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-004-53e3a889c55a]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[3]",
+          "rowSha256": "9161349dee3565f8e2e5b2ce71ba16a7deaf2535fa67641dea6512796ea78e89",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[1]",
+          "rowSha256": "556749d0f15f6c2164acfe4067bfb68d11678d78657ba5052040d9dc02d01caf",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-005-edee1a90b69e",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-005-edee1a90b69e]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-01-sable-metrics]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-005-edee1a90b69e]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[4]",
+          "rowSha256": "78585b91484eafd7b98bdd796511a1d4efa162b52712b734dfc7262ed79ee8e5",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[2]",
+          "rowSha256": "e55cce463f3874703a870b32aa394407c0825e535582d41654b63736bfe21db6",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-006-078693d6b3de",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-006-078693d6b3de]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-01-sable-metrics]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-006-078693d6b3de]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[5]",
+          "rowSha256": "84448a8bad683e27eef57c469e4c7c0832622c80c3c16bdb15de6509031078c6",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[3]",
+          "rowSha256": "e3abc14a2e52799302bcb3e5d4b1077b53815cd47f7d5e89d09af5d9133d7e04",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-007-9dc86fdb3a47",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-007-9dc86fdb3a47]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-01-sable-metrics]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-007-9dc86fdb3a47]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[6]",
+          "rowSha256": "fb81c9e5942f9367820e8dc3b81c2e3b0f9c0c446b6c728a847c1af1a6b4cf4c",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[4]",
+          "rowSha256": "6babbf080ec3de92798e2dfae02552b6890904780255f0725b9a8d94fe5bd319",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-008-950c857777ba",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-008-950c857777ba]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-01-sable-metrics]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-008-950c857777ba]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[7]",
+          "rowSha256": "6e8e89c729d40cf252176213fb8171b82e5d8ba462ac1fbdbade07392cd754bb",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[5]",
+          "rowSha256": "5cf8a7532424801e6644ad96de5fcf9d406a8ef82bb3accdca9d49d9911f7a0a",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-012-3d0cbd287831",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-012-3d0cbd287831]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-02-lumen-router]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-012-3d0cbd287831]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[11]",
+          "rowSha256": "ed346ad5bd14ee8eb60901ec3ccb436bfafcc6431c88012fa90457ba2888d361",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[6]",
+          "rowSha256": "0d2cd140aae4398d267b93d1190a1d3f25cc2fbaee4478a33d159eeb8e962ab5",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-013-5d557d000b1b",
+      "original": {
+        "primaryCategory": "T12_ACTION_OR_PATCH_REPRESENTATION",
+        "confidence": "HIGH"
+      },
+      "audit": {
+        "primaryCategory": "T12_ACTION_OR_PATCH_REPRESENTATION",
+        "confidence": "HIGH"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-013-5d557d000b1b]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-02-lumen-router]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-013-5d557d000b1b]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[12]",
+          "rowSha256": "e18ad953b51a47dbeb2321d0cb0fedc4c83730d3e7cd850637be478b42ace74a",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[7]",
+          "rowSha256": "397cd717370d5ed0dccaebd71faec9ba7a70363cbc06642d691f1d3d02622acf",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-015-dd129f14970a",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-015-dd129f14970a]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-02-lumen-router]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-015-dd129f14970a]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[14]",
+          "rowSha256": "ce6f49c2896a177e5a074b47c5bc1e10bfc2a31612e204f6d11a1678861808c4",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[9]",
+          "rowSha256": "4634245d0b74d6037be9f24e2aca783e72482fa1c5da942989895842d706c0a2",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-018-b1420e9ae053",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-018-b1420e9ae053]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-03-cedar-ledger]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-018-b1420e9ae053]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[17]",
+          "rowSha256": "069cb212b9d264cb668ea3767c027d47f368b892743291c85fd25854b2bbf515",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[11]",
+          "rowSha256": "83ce4b143527022cbad464407fe90d0cc50cf7185586d8485e3476aa3b07fefb",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-019-580af46c94a0",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-019-580af46c94a0]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-03-cedar-ledger]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-019-580af46c94a0]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[18]",
+          "rowSha256": "e3921585c958737cd9fb434ed36bb8311761a509a7b70b76dbe45d80d10e23de",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[12]",
+          "rowSha256": "49a883749aadef3be5c47b95e579a70df474d30fdc15bb576c86429b67ed2758",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-020-668cf63fd0be",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-020-668cf63fd0be]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-03-cedar-ledger]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-020-668cf63fd0be]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[19]",
+          "rowSha256": "f03da76d95c02f86c3bf640a0a19081243b8f35615b588ab973700e87f2f33d8",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[13]",
+          "rowSha256": "63bcf6eee0a9b905026b888a4cf33ba07060ae475bed40c6f6214390ba5f65a8",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-021-97fb2ee2dff5",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-021-97fb2ee2dff5]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-03-cedar-ledger]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-021-97fb2ee2dff5]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[20]",
+          "rowSha256": "752f9cea9884c9a06fab00a50af36f8e5dd72595e8769d55d0eb62ef366b7f0e",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[14]",
+          "rowSha256": "e7c18b7af60156fa6da670b08c4337fbaafcaa9a3463ce10df61cb5af0aa3bcd",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-023-1180321a83e0",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-023-1180321a83e0]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-03-cedar-ledger]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-023-1180321a83e0]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[22]",
+          "rowSha256": "597cbc70ecd125aa90344247232b22dfb4c3c655a38ce0e92353e4714e444e59",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[16]",
+          "rowSha256": "e6ed6f90f91103d738900f2eacc61eded480984069863ca190e61c96b0107d65",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-027-0bdfebe57bb9",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-027-0bdfebe57bb9]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-04-quartz-parser]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-027-0bdfebe57bb9]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[26]",
+          "rowSha256": "572deb5de2c6efaeded0d9e452e7bd8d7f29892d20702ca0d478d7ae767a6627",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[17]",
+          "rowSha256": "f9b56984baa5f5f8292308b7380cb0e370631a31c37e9a42d13069345196a00e",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-028-1903ecf5ab15",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-028-1903ecf5ab15]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-04-quartz-parser]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-028-1903ecf5ab15]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[27]",
+          "rowSha256": "22fac5d54b296eb1d906a93fc026ca410ccf78cc92b6351426bdb89f6d35519d",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[18]",
+          "rowSha256": "824ee1175b1412a57d17a509fcf6c3b331a5c1c562a68c263f94ca0006ece32c",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-030-972ec436cbb0",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-030-972ec436cbb0]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-04-quartz-parser]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-030-972ec436cbb0]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[29]",
+          "rowSha256": "6e8a038dafa0bad1ca74bef9db85b65c2b5bc1130c8cabfb228244b81b45c994",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[19]",
+          "rowSha256": "da69344c390156b464a177dd83079b48ba15dba5a90ef32993a9515f11e630c1",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-032-7fc6ff887bdc",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-032-7fc6ff887bdc]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-04-quartz-parser]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-032-7fc6ff887bdc]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[31]",
+          "rowSha256": "dcbf6c81435682e9a86ee19536a75423b5dde21c503eab43ed2fe990c8d24df4",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[20]",
+          "rowSha256": "ca4c4b72fb3d52c876cda4af6206647d31168e8523e1df580b84cfeead0ca626",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-033-9ef543fc9afe",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-033-9ef543fc9afe]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-05-harbor-cache]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-033-9ef543fc9afe]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[32]",
+          "rowSha256": "624b96cef567398c825f2e67a733c73ae365d9079b9afb9d9933808643d938b8",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[21]",
+          "rowSha256": "991da60f4b3166b43c2270e63da628e9b9049e321bd93d140c996a36956e3862",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-034-6404daac6c8d",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-034-6404daac6c8d]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-05-harbor-cache]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-034-6404daac6c8d]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[33]",
+          "rowSha256": "94ae791ed459c12e5dd3170afb5239d6b59ba247a1e3cd8596b28b17d3daafb7",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[22]",
+          "rowSha256": "228a9efd347f91de8df7ce93daff35121d8248f88124128ab7f2555d99f7e53a",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-035-eebd0076f0a0",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-035-eebd0076f0a0]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-05-harbor-cache]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-035-eebd0076f0a0]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[34]",
+          "rowSha256": "c6f1c3f7f4708b8947273c7af548ab05634525d65136e07cc3c701ec449461c1",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[23]",
+          "rowSha256": "45ea6101ac233b1df6813e8d89f38ace5f6c25cc940b8de1ca380dd77be3c459",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-036-b36ffcbc6c61",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-036-b36ffcbc6c61]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-05-harbor-cache]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-036-b36ffcbc6c61]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[35]",
+          "rowSha256": "dc69b08dd732807b87a332c25f5efa6e18b534003f505c7b985247f73c22f0bc",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[24]",
+          "rowSha256": "4a400784bb29bf8d8df698060166b9d6df9915e8f21bbe468211f8ffe39abf6d",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-037-717be2e92482",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-037-717be2e92482]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-05-harbor-cache]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-037-717be2e92482]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[36]",
+          "rowSha256": "047ed9487222b967b7756dc915f4cee5410842cd833d19145c7f6b99c0d578ad",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[25]",
+          "rowSha256": "67dea8b1cc6a6fff64a8f269d7332f05079e4dcd112fb055f8f7b94cb3fdf1e8",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-038-4a28c0299ac1",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-038-4a28c0299ac1]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-05-harbor-cache]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-038-4a28c0299ac1]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[37]",
+          "rowSha256": "aceafb8ef59d7bf0fa77b3b8f8c6747a3416c0cfc0cac7f1eec8a1b6013a48c6",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[26]",
+          "rowSha256": "7ecaca4955c802c0f2554643993d74d654f9feb6f4289368a105bd95eca24675",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-042-ff42691ce02b",
+      "original": {
+        "primaryCategory": "T11_RETRIEVAL_FAILURE",
+        "confidence": "HIGH"
+      },
+      "audit": {
+        "primaryCategory": "T11_RETRIEVAL_FAILURE",
+        "confidence": "HIGH"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-042-ff42691ce02b]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-06-ember-policy]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-042-ff42691ce02b]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[41]",
+          "rowSha256": "450552528fe3c57da5d7b4954967abf7717273b256fcee47243bfbd1e14cbc5f",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[27]",
+          "rowSha256": "eb18145f81558b55174955340ee73da3ca802025afb0acad18d5d3a3eff41da1",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-043-75560a470232",
+      "original": {
+        "primaryCategory": "T11_RETRIEVAL_FAILURE",
+        "confidence": "HIGH"
+      },
+      "audit": {
+        "primaryCategory": "T11_RETRIEVAL_FAILURE",
+        "confidence": "HIGH"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-043-75560a470232]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-06-ember-policy]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-043-75560a470232]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[42]",
+          "rowSha256": "d02f71d2124b088cdf8afc6d2ac5481d88d73f79aa64d5fc64ac6aab3c5ed1be",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[28]",
+          "rowSha256": "03a6ec80809a25fb77ba7b8c00d6266a4319c6cd1c8c1168ffd8419331444903",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-045-b1027dc3f2fa",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-045-b1027dc3f2fa]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-06-ember-policy]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-045-b1027dc3f2fa]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[44]",
+          "rowSha256": "233dbe206223fed37e5bfd070089516b5b133e14c673d8ecfeab174ecfc1ab63",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[30]",
+          "rowSha256": "71d9fb5a52bad79cbcfb6d5ae264b791b3da6d8f731465825891c3c6de365826",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-048-fd403684528e",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-048-fd403684528e]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-06-ember-policy]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-048-fd403684528e]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[47]",
+          "rowSha256": "4735c5f3b95d41e2f0c5e93b7b8efaaabd2e3b3c80c18aca69e8bba04614ab4d",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[31]",
+          "rowSha256": "bf0c32a76a67df8997ed6c7e7e6ee98cfb9f5347b9ed979fc4cc42f3a3ee5bb5",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-049-3057d3ce7070",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-049-3057d3ce7070]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-07-tundra-scheduler]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-049-3057d3ce7070]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[48]",
+          "rowSha256": "ef8199aeda2da5bb4fe874a43bbe8d71df774ddb226a5cf374d321496cf8d942",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[32]",
+          "rowSha256": "75190687109994cc5632d99feef4bc0b84f5e85a27bdbc5fec22586f27d69ecf",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-050-cef39f7fef3f",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-050-cef39f7fef3f]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-07-tundra-scheduler]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-050-cef39f7fef3f]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[49]",
+          "rowSha256": "f7818ebbba045c8340de4cffdfcf979ea3c8f6678ddb61433b8b8da16bb86153",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[33]",
+          "rowSha256": "8df9ee3d6a7282b6d913c764f519db1c11d715a7f76b303fffe9cc889f5d6f22",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-051-f69bf26131b8",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-051-f69bf26131b8]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-07-tundra-scheduler]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-051-f69bf26131b8]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[50]",
+          "rowSha256": "93295c478021a96784baa23d506e0b2d90993438f59f84657ab876730455edbe",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[34]",
+          "rowSha256": "816126f3ad8a543decad7a95a8f735813bd579a239bff3764825678407623d43",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-052-d47ce7bab6d5",
+      "original": {
+        "primaryCategory": "T11_RETRIEVAL_FAILURE",
+        "confidence": "HIGH"
+      },
+      "audit": {
+        "primaryCategory": "T11_RETRIEVAL_FAILURE",
+        "confidence": "HIGH"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-052-d47ce7bab6d5]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-07-tundra-scheduler]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-052-d47ce7bab6d5]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[51]",
+          "rowSha256": "2c5c5dc5689c7962bb058a7aa179193ee26912898f20ce062a515a283dfb76ac",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[35]",
+          "rowSha256": "b01b43bcea32243d9b407dcf83cbc6ba63ab99e711fe5ec10043faa0cb8cc47d",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-053-34ce18abb247",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-053-34ce18abb247]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-07-tundra-scheduler]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-053-34ce18abb247]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[52]",
+          "rowSha256": "7329ca798360727b53fe928849ccd005136d92a2496f91ac3c9dfee837487fb6",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[36]",
+          "rowSha256": "414ef34c9c163fc4c7f31e7cb590e66cbd427c84cd4b176b4f6f40a5c540b483",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-056-66e32a002f0a",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-056-66e32a002f0a]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-07-tundra-scheduler]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-056-66e32a002f0a]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[55]",
+          "rowSha256": "fe4b3341bdec278cf5b3be34fd98945db4c1833f6fc4ddd53937d9d1545d1dc2",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[37]",
+          "rowSha256": "a7dda87e52851b8526b566e29de720b075f1732264799207d8314df8727fd7c1",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-057-e7a7874e180f",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-057-e7a7874e180f]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-08-cobalt-config]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-057-e7a7874e180f]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[56]",
+          "rowSha256": "52631035347911a301d013d7c7853beafbc9cef03eb8e3e936dd6629325e274b",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[38]",
+          "rowSha256": "e5a0bec53c1ff2ed5ac4f7bb53b4b7605891ce755ef8750ab10f180a238bc750",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-058-429a3db39441",
+      "original": {
+        "primaryCategory": "T11_RETRIEVAL_FAILURE",
+        "confidence": "HIGH"
+      },
+      "audit": {
+        "primaryCategory": "T11_RETRIEVAL_FAILURE",
+        "confidence": "HIGH"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-058-429a3db39441]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-08-cobalt-config]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-058-429a3db39441]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[57]",
+          "rowSha256": "56781c1afd61788da75fe4ce9eddf34169a88dfe6b16950b6420db38cf17efe5",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[39]",
+          "rowSha256": "a1ceb0830b90d405de4e0dcb31e230102da449a04c1582a9dae9870186b22905",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-059-2e9d8048f513",
+      "original": {
+        "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+        "confidence": "HIGH"
+      },
+      "audit": {
+        "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+        "confidence": "HIGH"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-059-2e9d8048f513]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-08-cobalt-config]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-059-2e9d8048f513]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[58]",
+          "rowSha256": "743a77113bc853e5ec3bfa0dfd95b46ca227ddbb8ed59c23fc6693c2b8aef9f6",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[40]",
+          "rowSha256": "7f9ccf67ec1c98b4997ee2db47b551586ed32689e6d1a9a4c0b7fa4bcf259317",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-060-499ac6d813e6",
+      "original": {
+        "primaryCategory": "T11_RETRIEVAL_FAILURE",
+        "confidence": "HIGH"
+      },
+      "audit": {
+        "primaryCategory": "T11_RETRIEVAL_FAILURE",
+        "confidence": "HIGH"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-060-499ac6d813e6]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-08-cobalt-config]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-060-499ac6d813e6]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[59]",
+          "rowSha256": "6f999049fd220c83ee25b5e105f76f706829106742881114c02ac27bf6f5cf8a",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[41]",
+          "rowSha256": "bb4642945995d971450043bea17ca62aa3f50398524a672bf3c42c5ed2480a77",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-063-1478b1138e5b",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-063-1478b1138e5b]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-08-cobalt-config]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-063-1478b1138e5b]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[62]",
+          "rowSha256": "593f1cd64b2384f826d363113c5e153ad2dfebe82d0e67c7d3ea614d69c7808b",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[42]",
+          "rowSha256": "83bf3bc705aa4739531296cd36bd0505d801de8461f30deb61e5ef8b7b5f4da6",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-064-a7dd1b9eadff",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-064-a7dd1b9eadff]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-08-cobalt-config]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-064-a7dd1b9eadff]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[63]",
+          "rowSha256": "6752cf3405f392a211e093fb86fe42ac84f24af02731be718e5b6824c0a61afa",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[43]",
+          "rowSha256": "d7bf5267f9e20e1c8a97656330105c5f8d77520dcbacbfd6b95792c26a4bb7ff",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-065-1a8ed4c228ed",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-065-1a8ed4c228ed]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-09-willow-events]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-065-1a8ed4c228ed]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[64]",
+          "rowSha256": "d9831730509d11c28875301e5624d03f1b55070022de704cf9cc49ba2354026f",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[44]",
+          "rowSha256": "af674fe22fbc53a56dd614f136cf4dd55ef7e61d8b7e4c2a99782d8beef50197",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-066-181f74021ed8",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-066-181f74021ed8]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-09-willow-events]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-066-181f74021ed8]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[65]",
+          "rowSha256": "2021500225d830ebabf8d2be2e5d5ab657867652829c293733404a4f45f4914d",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[45]",
+          "rowSha256": "07d88b30458fa6b00c3168331c422b687e8885e4f25d092ac68784cd3f7cff3a",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-067-63feab066d52",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-067-63feab066d52]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-09-willow-events]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-067-63feab066d52]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[66]",
+          "rowSha256": "758319f1ea78ce2f899916bd2fb7aef0a2ece654a158b6067a0c15e6e6ef42c4",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[46]",
+          "rowSha256": "09c56d9593a96c4197807b977d9406d02cd16f7beeb2dfa0f505adb2fb618911",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-068-d2cf079444dc",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-068-d2cf079444dc]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-09-willow-events]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-068-d2cf079444dc]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[67]",
+          "rowSha256": "63bde3ac4651c60e1bd0c5f177fc67a47739934b173b03608c66e98b1c4b10a5",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[47]",
+          "rowSha256": "df2e1672724bb0dfba5537d48cf1f98eb4e2f491e32958e96724c33fcfb49652",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-071-0b4bf43ea722",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-071-0b4bf43ea722]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-09-willow-events]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-071-0b4bf43ea722]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[70]",
+          "rowSha256": "52f29618a5b9c78ebd575e259f7943ec397c1b5721af63877170aa6e5e534048",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[48]",
+          "rowSha256": "ab2840ccf9c1ae43a796ff2ba80c42b5abf336da1f16df9fa29478525ea5c9f5",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-072-974cdc048e90",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-072-974cdc048e90]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-09-willow-events]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-072-974cdc048e90]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[71]",
+          "rowSha256": "f959fdfecbebc90071cb7e22e05a329a9af3a06a6563c21fbac01cd70ab20d3e",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[49]",
+          "rowSha256": "d8a91f5a3fc4d9786ecc137e244d8432d8a09b85e2dbe4bb7ca5f4add0cb4e92",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-073-2080df2f7d1f",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-073-2080df2f7d1f]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-10-marble-protocol]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-073-2080df2f7d1f]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[72]",
+          "rowSha256": "5e0def7c1121aaa62f9bd845056eedb50bd959ee05d5f708ae86f56f640cb8ee",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[50]",
+          "rowSha256": "f636fe13bd2ae612a6a84f94f580c65cc65ac1734ac8abf048e49e316e8851b4",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-075-cd9fc970570a",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-075-cd9fc970570a]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-10-marble-protocol]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-075-cd9fc970570a]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[74]",
+          "rowSha256": "fbfd4279282290a4d4f41fb87f73befc12d51ca011a96b474cf5b097cf63966c",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[51]",
+          "rowSha256": "87168f19ce19ddd98f685defb328cfa4441eb7c644a1388f602ce45f8a49f6a8",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-078-3598af9fe400",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-078-3598af9fe400]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-10-marble-protocol]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-078-3598af9fe400]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[77]",
+          "rowSha256": "2b652e25b559193a11512e9f5159e429b5b08d8d81e364b02ba041f9bab1b28d",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[52]",
+          "rowSha256": "72ef27e8ab365bc7dcdaa79b59da4fcaed48ee2f47d7ac31e4d57dd3c2831823",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-079-3bfd416fe458",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-079-3bfd416fe458]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-10-marble-protocol]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-079-3bfd416fe458]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[78]",
+          "rowSha256": "841d205d25ecab803ad620510ed0a86b256f1d82426769e43ea650e670dceaa2",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[53]",
+          "rowSha256": "c7da9b5eb3ff05ace2a29d00570c25246d02ee06e0bf880fe6dbf60609ae01d6",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-080-26f32f100d8c",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-080-26f32f100d8c]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-10-marble-protocol]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-080-26f32f100d8c]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[79]",
+          "rowSha256": "e25bfb5d29190925174f420be3776f55bacc6b1e75cf838e462118badf059337",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[54]",
+          "rowSha256": "d3c6702d5497ffe7846df6476e247b069e0fb89cc3ab660aa0fd90a08f8c6fdd",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-081-0ca18edcd640",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-081-0ca18edcd640]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-11-opal-batches]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-081-0ca18edcd640]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[80]",
+          "rowSha256": "4e11fbb43a8cc681f44c007f10046a6b90cbfccb92b600272aa298488c53e29f",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[55]",
+          "rowSha256": "20be14e32c998b9408541e5fa1f36f147588ccbb873151ba83fdefa52a6af4a2",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-082-7f63731ecb8f",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-082-7f63731ecb8f]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-11-opal-batches]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-082-7f63731ecb8f]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[81]",
+          "rowSha256": "d4b929f1b5075e5b8fc80074a800f5d75a5139378ed536393839aa0a33f4c215",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[56]",
+          "rowSha256": "a1fefcb34954cd0d44c7cd0fcde88346a29ca98d67199a9081255e6da62dbf36",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-083-dc24ea1dd2e3",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-083-dc24ea1dd2e3]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-11-opal-batches]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-083-dc24ea1dd2e3]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[82]",
+          "rowSha256": "550fce902ce2dbfb035e5c9700c289f133ac8e575ef947ca12d5876b5f46b56f",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[57]",
+          "rowSha256": "af14f2f01881fd00b70df2cbb9fafed3f17425ee83aa12950837c471ae9652b7",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-086-4bb2bd5d29cd",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-086-4bb2bd5d29cd]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-11-opal-batches]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-086-4bb2bd5d29cd]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[85]",
+          "rowSha256": "d4e672814e0f43302622a10918e1a3cfa85fb71be02b192d18c5edf3459fa14f",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[58]",
+          "rowSha256": "a651ee711e28b0506e9db16bdc87fb3331d105ac0401d30b3efb49ade6fb1330",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-087-169db7fc84ec",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-087-169db7fc84ec]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-11-opal-batches]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-087-169db7fc84ec]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[86]",
+          "rowSha256": "3ae560fac6d564e32fecdfd450ba04d097169ee0085a0464f06754a87b97b26a",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[59]",
+          "rowSha256": "9542393208c2fadbf2700f7100f5ebd7ca95a95c9bd6eb2ce7d5d1967893d782",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-090-5f9d97b92b1f",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-090-5f9d97b92b1f]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-12-raven-errors]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-090-5f9d97b92b1f]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[89]",
+          "rowSha256": "6fece475473306dc6f184b1146da7cf1a8e7732187d06bc1c0e30bda84c9fd3f",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[62]",
+          "rowSha256": "b1259064c291037bbe63e7cdf9e0880e6126d46c5b4468574b8a1e57531225fd",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-093-afa120cc8c99",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-093-afa120cc8c99]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-12-raven-errors]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-093-afa120cc8c99]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[92]",
+          "rowSha256": "ab620ab8fffe70e503615f8754000d4ae988d809a1941ae2502f4962560efbbb",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[63]",
+          "rowSha256": "a72cd81f1053beb8783d8731307a3db212e295bc69ded02c03f0bad6f6daec6d",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-094-83590e5fae4c",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-094-83590e5fae4c]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-12-raven-errors]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-094-83590e5fae4c]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[93]",
+          "rowSha256": "813e12d9bb030934623d54c30fc36cb60c9f221ff86b6eed4b6ca52e373b91fb",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[64]",
+          "rowSha256": "f5786c91ee5d9fb82c69a499d4ca8a12988bd138158c69e72c8b9b4cbe456e4f",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    },
+    {
+      "taskId": "holdout-095-dc7e7ec8630a",
+      "original": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "audit": {
+        "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+        "confidence": "LOW"
+      },
+      "agrees": true,
+      "auditEvidence": [
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+            "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+          },
+          "selector": "tasks[task_id=holdout-095-dc7e7ec8630a]",
+          "fields": [
+            "prompt",
+            "category",
+            "difficulty",
+            "file_scope",
+            "allowed_files",
+            "visible_test_path",
+            "repository_revision"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+            "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+          },
+          "selector": "repositories[repository_id=eedit-holdout-12-raven-errors]",
+          "fields": [
+            "immutable_revision",
+            "file paths and hashes used for retrieval regeneration"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+            "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+          },
+          "selector": "rows[task_id=holdout-095-dc7e7ec8630a]",
+          "fields": [
+            "exact_relevant_file",
+            "exact_relevant_symbol",
+            "exact_relevant_range_1_based",
+            "original_source_sha256",
+            "reference_fixed_source_sha256"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+            "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+          },
+          "selector": "jsonl[94]",
+          "rowSha256": "fe959184ff16335f0f8c0bc08d1e172c2397eae2a74f35738118e4e1cbbd078c",
+          "fields": [
+            "retrieval",
+            "normalization",
+            "execution",
+            "outcome"
+          ]
+        },
+        {
+          "artifact": {
+            "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+            "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+          },
+          "selector": "jsonl[65]",
+          "rowSha256": "2c8bca31c2868baf0c5e29a37f085cabaadd8c3504e58d0d6eb244c0d38b18a7",
+          "fields": [
+            "outcome.taxonomy",
+            "outcome.transition"
+          ]
+        }
+      ],
+      "procedure": "INDEPENDENT_CONTROL_FLOW_FROZEN_PRECEDENCE"
+    }
+  ],
+  "independentProcedure": true,
+  "targetModelCalls": 0
+}

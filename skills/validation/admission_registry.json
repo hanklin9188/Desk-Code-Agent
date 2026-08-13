@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-09T05:05:00.000Z",
+  "l0": { "passed": 39, "total": 39 },
+  "l1_l2_evidence": {
+    "run": "docs/experiments/runs/m6-l1-l2-2026-08-09T01-13-06-538Z/result.json",
+    "sha256": "3f33823786821c6c09f7e1c73e96e3094928204c750997d2b90af442e6f1c62b"
+  },
+  "l3_evidence": {
+    "pilot_run": "docs/experiments/runs/m9-e1-e7-2026-08-09T01-18-51-568Z/result.json",
+    "pilot_sha256": "ff00d43950028aa373d32bcccebc7271d6850a6fb770833eb9a372c069d84cb3",
+    "diagnostic_run": "docs/experiments/runs/m9-harness-recovery-diagnostic-2026-08-09T04-32-48-950Z/result.json",
+    "diagnostic_sha256": "96ab3988be27ab9b7243c560cc8448395a2ceff423e965baa0369c8bb17054c2",
+    "generation_2_run": "docs/experiments/runs/m9-harness-recovery-final-2026-08-09T04-43-33-470Z/result.json",
+    "generation_2_sha256": "a5f37342e3f080d1b7dee1f0dbceca8867a3057958609f00bf5ad9f7e5c65097",
+    "optimized_run": "docs/experiments/runs/m9-harness-recovery-optimized-2026-08-09T05-00-34-145Z/result.json",
+    "optimized_sha256": "89d5fbaf59b06a6d9a9b69f8fc5858b1abcb19357a010c0d3cbb60f88af844dd"
+  },
+  "records": [
+    { "skill_id": "R01", "decision": "EXPERIMENTAL", "l1_fixtures": 17, "l2_runs": 1, "l3_independent_runs": 3, "reason": "Full model-facing contract regressed 321/324 to 315/324 and added tokens; keep the immutable artifact but disclose only task-conditional fields" },
+    { "skill_id": "R04", "decision": "EXPERIMENTAL", "l1_fixtures": 17, "l2_runs": 1, "l3_independent_runs": 3, "reason": "Deterministic feasibility policy remains mandatory, but the model Skill has no isolated positive L3 pair" },
+    { "skill_id": "R08", "decision": "EXPERIMENTAL", "l1_fixtures": 17, "l2_runs": 1, "l3_independent_runs": 3, "reason": "Symbol Top-2 recovered quality, but E2 to E3 improved only 0.93 pp overall and did not meet the admission gain threshold" },
+    { "skill_id": "R09", "decision": "PRODUCTION", "l1_fixtures": 17, "l2_runs": 1, "l3_independent_runs": 3, "reason": "Isolated E3 to E4 pair was non-inferior at 318/324 with zero critical/safety regressions while median tokens fell 188 to 164; C1 is the admitted production variant" },
+    { "skill_id": "R17", "decision": "EXPERIMENTAL", "l1_fixtures": 17, "l2_runs": 1, "l3_independent_runs": 3, "reason": "Reproduction remains task-conditional; no isolated expanded L3 pair attributes success to R17" },
+    { "skill_id": "R18", "decision": "EXPERIMENTAL", "l1_fixtures": 17, "l2_runs": 1, "l3_independent_runs": 3, "reason": "Concise diagnosis disclosure is promising, but the optimized follow-up also changed contract/context presentation and requires a holdout isolated pair" },
+    { "skill_id": "R21", "decision": "EXPERIMENTAL", "l1_fixtures": 17, "l2_runs": 1, "l3_independent_runs": 3, "reason": "Machine verification remains code-enforced, but this action-choice suite did not execute full real patches and cannot independently admit the Skill" },
+    { "skill_id": "R22", "decision": "EXPERIMENTAL", "l1_fixtures": 17, "l2_runs": 1, "l3_independent_runs": 3, "reason": "Always review regressed 56/57 to 53/57 and conditional review to 55/57 with zero regression detections; disabled by default" },
+    { "skill_id": "R26", "decision": "EXPERIMENTAL", "l1_fixtures": 17, "l2_runs": 1, "l3_independent_runs": 3, "reason": "Deterministic protections produced zero actual safety violations, but no safe unprotected paired runtime was executed; policy stays code-enforced without production Skill admission" }
+  ]
+}

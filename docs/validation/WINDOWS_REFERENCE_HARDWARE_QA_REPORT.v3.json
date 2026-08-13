@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 3,
+  "reportId": "dca-windows-reference-hardware-qa-w1-v3-provisioned-build-blocked",
+  "phase": "WINDOWS_REFERENCE_HARDWARE_QA",
+  "status": "BLOCKED_EXTERNAL",
+  "blockingStatus": "BLOCKED_ADDITIONAL_MSVC_COMPONENT_APPROVAL_REQUIRED",
+  "lineage": [
+    { "path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.json", "sha256": "2d5ae681480eb7a1df736d0178d9dc877b5eae86799a5c9a4474d43601fea88a", "integrity": "PASS" },
+    { "path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.v2.json", "sha256": "a4443e7a2231015610323f9a7a818aa45d0d423286a03e66bc01785f4fb9da06", "integrity": "PASS" },
+    { "path": "docs/validation/WINDOWS_NATIVE_EXECUTION_PATH_AUDIT.v1.json", "sha256": "ff4ba326310cd4d6b8b4315409517c43b658674a2b49d1efc30f84f22c19bd6b", "integrity": "PASS" }
+  ],
+  "invariants": {
+    "research": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "p1ThroughP5": "PASS_UNCHANGED",
+    "modelCalls": 0,
+    "benchmarkCalls": 0,
+    "w2Entered": false
+  },
+  "provisioning": {
+    "preInventory": "docs/validation/WINDOWS_NATIVE_PREPROVISION_INVENTORY.v1.json",
+    "toolchainReport": "docs/validation/WINDOWS_NATIVE_TOOLCHAIN_PROVISIONING.v1.json",
+    "node": "PASS_24.15.0",
+    "npm": "PASS_11.12.1",
+    "rustup": "PASS_1.29.0",
+    "rustc": "PASS_1.97.1_X86_64_PC_WINDOWS_MSVC",
+    "cargo": "PASS_1.97.1",
+    "rustfmt": "PASS_1.9.0_STABLE",
+    "clippy": "PASS_0.1.97",
+    "lockedNpmDependencies": "PASS_137_PACKAGES",
+    "lockedCargoFetch": "PASS",
+    "unauthorizedDependenciesInstalled": 0
+  },
+  "nativeSourceIdentity": {
+    "path": "docs/validation/WINDOWS_NATIVE_SOURCE_IDENTITY.v1.json",
+    "sha256": "61ece48ca3a5257c5add5b27db0d97c08f486dfe4053c9ca2969a48eddb4ec93",
+    "nativePath": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508",
+    "closureSha256": "07208e31be8ed0170952cfe71bfa0fadbe8306adc431f745769e0cedb14b90fc",
+    "fileCount": 2197,
+    "totalBytes": 86239290,
+    "result": "PASS_CURRENT_SOURCE_IDENTITY"
+  },
+  "nativeQaBuild": {
+    "manifest": "docs/validation/WINDOWS_NATIVE_QA_BUILD_MANIFEST.v1.json",
+    "sha256": "966d79721067dfa446298292039c4e7f3ed505046feafc311c73dd710904ee5a",
+    "result": "FAIL_BLOCKED_MISSING_MSVC_DESKTOP_CRT",
+    "command": "cargo build --locked",
+    "error": "LNK1104 cannot open file msvcrt.lib",
+    "executableProduced": false
+  },
+  "additionalApprovalRequired": {
+    "visualStudioComponentId": "Microsoft.VisualStudio.Component.VC.Tools.x86.x64",
+    "componentName": "MSVC x64/x86 desktop build tools",
+    "strictReason": "Required desktop x64 CRT import library msvcrt.lib is absent; only OneCore variants are installed.",
+    "installationAttempted": false
+  },
+  "nativeGates": {
+    "startup": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "webView2": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "dpi100": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "dpi125": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "dpi150": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "dpi200": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "keyboard": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "screenReader": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "fonts": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "motion": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "artifactPathSecurity": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "runtimeSafety": "NOT_RUN_ENVIRONMENT_LIMITATION"
+  },
+  "defects": {
+    "productDefectsFound": [],
+    "productDefectsFixed": [],
+    "environmentDefect": "Visual Studio desktop C++ library component absent"
+  },
+  "validation": {
+    "nativeStrictTypeScript": "PASS",
+    "nativeTargetedTests": "PASS_4_FILES_12_TESTS",
+    "nativeFrontendBuild": "PASS_32_MODULES",
+    "nativeLockedCargoBuild": "FAIL_LNK1104_MSVCRT_LIB",
+    "jsonValidation": "PASS_6_OF_6",
+    "artifactChecksums": "PASS_8_OF_8",
+    "documentationLinks": "PASS_3_OF_3",
+    "secretScan": "PASS_ZERO_FINDINGS",
+    "designValidation": "PASS_2206_FILES_39_SKILLS_24_SCHEMAS_5_AGENTS_ZERO_WARNINGS_ZERO_ERRORS",
+    "fullCompletionSuite": "NOT_RUN_BUILD_GATE_FAILED",
+    "claimBoundary": "No native startup, WebView2, DPI, keyboard, Narrator, font, motion, or path PASS is inferred without a native executable."
+  },
+  "cleanup": {
+    "toolchainsRetained": "APPROVED_PROVISIONED_STATE",
+    "nativeNtfsCopyRetained": "REQUIRED_FOR_RESUME_WITH_QA_LOGS",
+    "provisioningDownloadStage": "REMOVED",
+    "nativeQaLogFiles": 7,
+    "nativeApplicationProcesses": 0,
+    "modelProcesses": 0,
+    "developmentPorts4173And5173": "CLEAR",
+    "modelPort8000": "CLEAR"
+  },
+  "decision": {
+    "windowsReferenceHardwareQa": "BLOCKED_EXTERNAL",
+    "finalMediaCaptureAuthorized": false,
+    "nextAuthorizedPhase": "WINDOWS_REFERENCE_HARDWARE_QA",
+    "resumeCondition": "Explicitly approve installation of Microsoft.VisualStudio.Component.VC.Tools.x86.x64, then resume from the retained locked NTFS copy and rerun the native build gate."
+  }
+}

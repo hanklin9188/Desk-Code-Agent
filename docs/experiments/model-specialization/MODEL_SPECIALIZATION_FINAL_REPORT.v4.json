@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T14:22:37.069Z",
+  "classification": "CONTROLLED_MODEL_SPECIALIZATION_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "decision": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "baseline": {
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "status": "RUN_COMPLETE"
+  },
+  "coder": {
+    "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "status": "RUN_COMPLETE",
+    "licenseUse": "NON_COMMERCIAL_RESEARCH_EVALUATION_EXPERIMENTAL_DEVELOPMENT_ONLY"
+  },
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "coder": {
+      "path": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.v3.json",
+      "sha256": "20f8943120f302d025062c674e7bd6a7409db67067e0f5cb71eff1214fb4babc"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "fairness": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v3.json",
+      "sha256": "a86f9c0db0e489e0dd3974aa52fbcc53fb556f674491bd313dd9eba06a525045"
+    }
+  },
+  "status": "COMPLETE_DEVELOPMENT_PROMOTION_FAILED",
+  "conclusion": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "priorInvalidation": {
+    "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_V2_INVALIDATION.v3.json",
+    "sha256": "30f07a5cd2183fe5b8f90431c85cba44e48e3bd8a9a4d19f9919abb35886884c"
+  },
+  "priorReportingSupersession": {
+    "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_V3_REPORTING_SUPERSESSION.v4.json",
+    "sha256": "6afba692ae4de1ff58f5448146b6e75991044a05448fe5b6e6808b37c244dfd9"
+  },
+  "exactModels": {
+    "path": "benchmarks/model-specialization/EXACT_MODEL_MANIFESTS.json",
+    "sha256": "f16fa1c3d2a8c266b4c9675f3cc771362ed83b4c66ef76a9c68f18f9a449825b"
+  },
+  "acquisition": {
+    "path": "benchmarks/model-specialization/MODEL_ACQUISITION_STATUS.v2.json",
+    "sha256": "6a4ac304b00b927013206aa88d4c92d83674be76d1f373623f293ed4c99a1542"
+  },
+  "authorization": {
+    "path": "benchmarks/model-specialization/MODEL_ACQUISITION_AUTHORIZATION.v2.json",
+    "sha256": "060baa55091b404ed30a5bc4b0d59464851831fbc31662ed6a83d92ad6a55be1"
+  },
+  "license": {
+    "path": "docs/experiments/model-specialization/CANDIDATE_LICENSE_PROVENANCE.v2.json",
+    "sha256": "491ac9e34410562ef293e975d3e66462d234a7f90fabca6cd7ab6fa5a9cb6582"
+  },
+  "artifacts": {
+    "countReconciliation": {
+      "path": "docs/experiments/model-specialization/OBSERVATION_COUNT_RECONCILIATION.v4.json",
+      "sha256": "0b169b76dd4f7f01617f7ca5c526078fa24ff1ec769a57cdb317cab5aac49c3e"
+    },
+    "startupResolution": {
+      "path": "docs/experiments/model-specialization/CANDIDATE_STARTUP_COMPATIBILITY_RESOLUTION.v4.json",
+      "sha256": "b169d7ebf736b7d01d4970f2040008cacdb2a5dec522c7c9e11e114825c8f80b"
+    },
+    "promotion": {
+      "path": "docs/experiments/model-specialization/DEVELOPMENT_PROMOTION_GATE.v4.json",
+      "sha256": "f739967a151eceac662a1c167b7cef296e324494a02be8839e01682f275da122"
+    },
+    "phaseComparisons": {
+      "oracleContext": {
+        "path": "docs/experiments/model-specialization/ORACLE_CONTEXT_COMPARISON.v4.json",
+        "sha256": "811f4556cd8629487fd2157200ae6ec727282ebce30372cdcd2f00d96721d146"
+      },
+      "taskUnderstanding": {
+        "path": "docs/experiments/model-specialization/TASK_UNDERSTANDING_COMPARISON.v4.json",
+        "sha256": "ecb1d97433dc1cb78b5e806ea217312ee5ea3b72329cf9a93167d594f5011b4a"
+      },
+      "navigation": {
+        "path": "docs/experiments/model-specialization/NAVIGATION_COMPARISON.v4.json",
+        "sha256": "b0038312e24e705c8fbd41b3363030a56bb43f39a9adf205919f20b88fc09399"
+      },
+      "diagnosis": {
+        "path": "docs/experiments/model-specialization/DIAGNOSIS_COMPARISON.v4.json",
+        "sha256": "d581beea4f5fcc7a829fe64747eaccac7a02cb615eba4569398440e9e91e7e7b"
+      },
+      "patchOnly": {
+        "path": "docs/experiments/model-specialization/PATCH_ONLY_COMPARISON.v4.json",
+        "sha256": "beb4580bfae3e86d74dd1fd789d4ca1537793c71b3878b8d30efef69f33c7360"
+      },
+      "planning": {
+        "path": "docs/experiments/model-specialization/PLANNING_COMPARISON.v4.json",
+        "sha256": "3613d93715e9fe62719a058a89d7806f8ce469ca05c4c2abe7eb23b3848d7b55"
+      },
+      "oneShotEndToEnd": {
+        "path": "docs/experiments/model-specialization/ONE_SHOT_END_TO_END_COMPARISON.v4.json",
+        "sha256": "5a5dafd7d535369543caebd617d2e3584c687c9f8f36b89651fa88be4db4d623"
+      },
+      "boundedRetry": {
+        "path": "docs/experiments/model-specialization/RETRY_DEPTH_COMPARISON.v4.json",
+        "sha256": "476be4e36eb4f3e90569c18510298bac23e1ac9c72656787db5b508b72222a36"
+      }
+    },
+    "refusal": {
+      "path": "docs/experiments/model-specialization/REFUSAL_BEHAVIOR_ANALYSIS.v4.json",
+      "sha256": "1a7fa71cfd29ee597223097ac150e995138efd3b48728e2782c7efad246879f3"
+    },
+    "structured": {
+      "path": "docs/experiments/model-specialization/STRUCTURED_OUTPUT_ROBUSTNESS_REPORT.v4.json",
+      "sha256": "68fa9495860a6db16a12340563ce3280a799b1c03fedef456242038f44d824ba"
+    },
+    "safety": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_SAFETY_REPORT.v4.json",
+      "sha256": "fc410711e7496d26d133a2a1c5f49a6d3d6f34e3eae891820e3ba11f84d81f1e"
+    },
+    "performance": {
+      "path": "docs/experiments/model-specialization/VRAM_LATENCY_REPORT.v4.json",
+      "sha256": "44767a0334ac69466d5913d0cb7085a7f9def8a2d039f9c4caa8fe53d1ff4c5f"
+    },
+    "specialization": {
+      "path": "docs/experiments/model-specialization/SPECIALIZATION_EFFECT_REPORT.v4.json",
+      "sha256": "69089700e7bb58c4f4c0aa80f441f4d61090657ff30c60dcaa6d29d7ee0e6a18"
+    },
+    "matrix": {
+      "path": "docs/experiments/model-specialization/MODEL_CAPABILITY_MATRIX.v4.json",
+      "sha256": "20db9873f4633559e1b714b9b89e10fdf34c7ecb9eb77380a635483d0fc01602"
+    },
+    "holdout": {
+      "path": "docs/experiments/model-specialization/FRESH_HOLDOUT_DECISION.v4.json",
+      "sha256": "0b16fb4cd3c4d795b40e6c6a51e33f81fd7285b63407a659c1b0f28dece1040c"
+    },
+    "routing": {
+      "path": "docs/experiments/model-specialization/PRODUCT_ROUTING_DECISION.v4.json",
+      "sha256": "6c2cfedc4cee88fae19fc027fc882011eff744edc2d9d48ff99c379467083f05"
+    },
+    "stronger": {
+      "path": "docs/experiments/model-specialization/CODER_7B_SCALE_EXPERIMENT_DECISION.v4.json",
+      "sha256": "952f571bbe5483fef9667be6cec83116d1efe48d60f05fe11424a762b87e3336"
+    },
+    "switching": {
+      "path": "docs/experiments/model-specialization/MODEL_SWITCH_BENCHMARK_DECISION.v4.json",
+      "sha256": "d50271f0d7f9b1ac7a0e12e56d0d362bac4cbc077127ecfc8b07d497d09f8461"
+    }
+  },
+  "finalMarkdown": {
+    "path": "docs/experiments/model-specialization/2026-08-09-controlled-model-specialization.v4.md",
+    "sha256": "674c38b8f7484631c71a59352df24ee53dd091b3f38304c1f395f0c45c10d0fe"
+  },
+  "holdoutCreatedOrInspected": false,
+  "routingChanged": false,
+  "otherModelDownloaded": false,
+  "releaseGate": {
+    "path": "artifacts/release/release-gate.json",
+    "sha256": "c734e9faa1ea500d5a49ed6910402ef857c61e8c426ef4a7021dc9fbd2e4dfbb",
+    "changed": false
+  },
+  "protectedActions": {
+    "authorizedCoder3bDownload": true,
+    "dependencyInstall": false,
+    "sudoAdmin": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false
+  }
+}

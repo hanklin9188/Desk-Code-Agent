@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "auditId": "dca-final-third-party-license-audit-v1",
+  "status": "PASS_MECHANICAL_CLOSURE_WITH_EXTERNAL_TEXT_GAPS",
+  "inputs": {
+    "priorInventory": {
+      "path": "artifacts/release/license-inventory.json",
+      "sha256": "3b962a6202568b5cfeec3fc74284f5519a1c479ec5368a9ed4fff49c8aad9627"
+    },
+    "cargoLock": {
+      "path": "apps/desktop/src-tauri/Cargo.lock",
+      "sha256": "d12b3ce4329728f91d2ba043dc877035dda869e3993a92c2219a0b492e6639cc"
+    },
+    "npmLock": {
+      "path": "package-lock.json",
+      "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2"
+    }
+  },
+  "outputs": {
+    "inventory": {
+      "path": "artifacts/release/third-party-license-inventory.v1.json",
+      "sha256": "f8c34520028727b4db333a95d0ad518bed95043ab2d8fcf33791f37c6ee59edc"
+    },
+    "notices": {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "17fc79e838f894fea62a9a30572dec58cab3bc97181eb6f6556eff3500f30854"
+    }
+  },
+  "counts": {
+    "historicalUnexplainedInput": 139,
+    "historicalRawNoAssertionRemaining": 0,
+    "historicalResolvedLicense": 22,
+    "historicalNotDistributed": 110,
+    "historicalBuildOnlyNotDistributed": 6,
+    "historicalOwnerLegalReviewRequired": 1,
+    "distributedRuntimeDependencies": 197,
+    "distributedNpm": 3,
+    "distributedCargo": 194,
+    "packagesWithPinnedText": 187,
+    "packagesWithTextGap": 10,
+    "uniquePinnedTexts": 120
+  },
+  "checks": {
+    "allPriorUnexplainedRowsClassified": true,
+    "rawNoAssertionRemaining": 0,
+    "distributedDependencyInventoryComplete": true,
+    "pinnedTextChecksumsValid": true,
+    "unofficialWebSourcesUsed": 0,
+    "guessedLicenses": 0
+  },
+  "remaining": {
+    "rootLicense": "ROOT_LICENSE_DECISION_REQUIRED",
+    "packageTextGaps": 10,
+    "disposition": "OWNER_OR_LEGAL_REVIEW_REQUIRED_BEFORE_PUBLIC_BINARY_DISTRIBUTION"
+  }
+}

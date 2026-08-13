@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 1,
+  "repositoryCount": 40,
+  "pairwiseRevisionDisjoint": true,
+  "repositories": [
+    {
+      "repository_id": "cfcr-v1-repo-finite-tolerance-01",
+      "immutable_revision": "sha256:667da4799dbf171f6472d2b98a708b7d653dba893283b8ac5d408abe53db2f03",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function withinTolerance1(left, right, tolerance) {\n  return left - right <= tolerance;\n}\nexport const recoveryMarker = 1;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { withinTolerance1 } from '../src/subject.mjs';\ntest('withinTolerance1', () => { assert.equal(withinTolerance1(10, 12, 2), true); assert.equal(withinTolerance1(10, 13, 2), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-stable-unique-01",
+      "immutable_revision": "sha256:611f687ea83132fea7e01d88626643a58c9c8301dde10f37fe04fc2e524d06ac",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function stableUnique1(items) {\n  return items.sort();\n}\nexport const recoveryMarker = 11;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { stableUnique1 } from '../src/subject.mjs';\ntest('stableUnique1', () => { assert.deepEqual(stableUnique1([3,1,3,2]), [3,1,2]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-boolean-token-01",
+      "immutable_revision": "sha256:d308f5a1a132ea6c6216ffb5f74727e125d2fa99f96a3b1e45ca1d2ee88b2561",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseFlag1(value, fallback) {\n  return Boolean(value);\n}\nexport const recoveryMarker = 21;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseFlag1 } from '../src/subject.mjs';\ntest('parseFlag1', () => { assert.equal(parseFlag1(' YES ', false), true); assert.equal(parseFlag1('no', true), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-port-token-01",
+      "immutable_revision": "sha256:73c0247413b733787707b8cfd9bcda4313a98dde9b75a0986ab02a963d86077b",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parsePort1(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const recoveryMarker = 31;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parsePort1 } from '../src/subject.mjs';\ntest('parsePort1', () => { assert.equal(parsePort1('8080', 9), 8080); assert.equal(parsePort1('80x', 9), 9); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-left-rotation-01",
+      "immutable_revision": "sha256:483190f9c422fd0e4c4310b7f387be093a0814e033308286752220314f161efd",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function rotateLeft1(items, offset) {\n  return items.slice(offset);\n}\nexport const recoveryMarker = 41;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rotateLeft1 } from '../src/subject.mjs';\ntest('rotateLeft1', () => { assert.deepEqual(rotateLeft1([1,2,3,4], 1), [2,3,4,1]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-finite-tolerance-02",
+      "immutable_revision": "sha256:344022b5512fb0205a9a64c47df7776ee6a4fd5d813502fbc36ad3ead56319bd",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function withinTolerance2(left, right, tolerance) {\n  return left - right <= tolerance;\n}\nexport const recoveryMarker = 2;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { withinTolerance2 } from '../src/subject.mjs';\ntest('withinTolerance2', () => { assert.equal(withinTolerance2(10, 12, 2), true); assert.equal(withinTolerance2(10, 13, 2), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-stable-unique-02",
+      "immutable_revision": "sha256:05cec9847474706e7bb8e1919280bea2957ee04cb1bbd2209b0236f02cc3ab06",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function stableUnique2(items) {\n  return items.sort();\n}\nexport const recoveryMarker = 12;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { stableUnique2 } from '../src/subject.mjs';\ntest('stableUnique2', () => { assert.deepEqual(stableUnique2([3,1,3,2]), [3,1,2]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-boolean-token-02",
+      "immutable_revision": "sha256:b25cf2eb72e9613c0582ffa435672192a657dd3d7df1abf2eb5faf87a17fb271",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseFlag2(value, fallback) {\n  return Boolean(value);\n}\nexport const recoveryMarker = 22;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseFlag2 } from '../src/subject.mjs';\ntest('parseFlag2', () => { assert.equal(parseFlag2(' YES ', false), true); assert.equal(parseFlag2('no', true), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-port-token-02",
+      "immutable_revision": "sha256:9a23ae1cf03a826a1fd92335590f3c4c874b4e07b038ec074d994f24b6f3aaf4",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parsePort2(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const recoveryMarker = 32;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parsePort2 } from '../src/subject.mjs';\ntest('parsePort2', () => { assert.equal(parsePort2('8080', 9), 8080); assert.equal(parsePort2('80x', 9), 9); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-left-rotation-02",
+      "immutable_revision": "sha256:fe8ec92f15a14a323a3442995dcbc88c0fe7a27d53b2498e94674a85f1c80582",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function rotateLeft2(items, offset) {\n  return items.slice(offset);\n}\nexport const recoveryMarker = 42;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rotateLeft2 } from '../src/subject.mjs';\ntest('rotateLeft2', () => { assert.deepEqual(rotateLeft2([1,2,3,4], 1), [2,3,4,1]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-finite-tolerance-03",
+      "immutable_revision": "sha256:cf939a38880b007f2b4fae1e8bf1a825ab17d964037ae409831d81a991ab984f",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function withinTolerance3(left, right, tolerance) {\n  return left - right <= tolerance;\n}\nexport const recoveryMarker = 3;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { withinTolerance3 } from '../src/subject.mjs';\ntest('withinTolerance3', () => { assert.equal(withinTolerance3(10, 12, 2), true); assert.equal(withinTolerance3(10, 13, 2), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-stable-unique-03",
+      "immutable_revision": "sha256:389c4eb8abd098bf0bfa7303ba6163748ee41c4cfca0e8e3640527f89c5a90d3",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function stableUnique3(items) {\n  return items.sort();\n}\nexport const recoveryMarker = 13;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { stableUnique3 } from '../src/subject.mjs';\ntest('stableUnique3', () => { assert.deepEqual(stableUnique3([3,1,3,2]), [3,1,2]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-boolean-token-03",
+      "immutable_revision": "sha256:b7da203ef919c9b22aeeb79419c1a16a83cbf46f422b41f033002b842987fe4e",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseFlag3(value, fallback) {\n  return Boolean(value);\n}\nexport const recoveryMarker = 23;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseFlag3 } from '../src/subject.mjs';\ntest('parseFlag3', () => { assert.equal(parseFlag3(' YES ', false), true); assert.equal(parseFlag3('no', true), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-port-token-03",
+      "immutable_revision": "sha256:f7bd1135db29bb5d4049d8b38800250596799a6be229f83a0d9661b57c5bb732",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parsePort3(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const recoveryMarker = 33;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parsePort3 } from '../src/subject.mjs';\ntest('parsePort3', () => { assert.equal(parsePort3('8080', 9), 8080); assert.equal(parsePort3('80x', 9), 9); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-left-rotation-03",
+      "immutable_revision": "sha256:b256784bcff4fc3c27feeb20af96d4fefd5b1fbaa5b39cbd63542d000626f46e",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function rotateLeft3(items, offset) {\n  return items.slice(offset);\n}\nexport const recoveryMarker = 43;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rotateLeft3 } from '../src/subject.mjs';\ntest('rotateLeft3', () => { assert.deepEqual(rotateLeft3([1,2,3,4], 1), [2,3,4,1]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-finite-tolerance-04",
+      "immutable_revision": "sha256:533a1b3cebf8ac65c4c214fea94169de7efc28b98fa1496159d70c20df23a3c2",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function withinTolerance4(left, right, tolerance) {\n  return left - right <= tolerance;\n}\nexport const recoveryMarker = 4;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { withinTolerance4 } from '../src/subject.mjs';\ntest('withinTolerance4', () => { assert.equal(withinTolerance4(10, 12, 2), true); assert.equal(withinTolerance4(10, 13, 2), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-stable-unique-04",
+      "immutable_revision": "sha256:2ef740bff6ebc36195e66b3a6882b27292ff5686c94dee837af92ff94df1140f",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function stableUnique4(items) {\n  return items.sort();\n}\nexport const recoveryMarker = 14;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { stableUnique4 } from '../src/subject.mjs';\ntest('stableUnique4', () => { assert.deepEqual(stableUnique4([3,1,3,2]), [3,1,2]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-boolean-token-04",
+      "immutable_revision": "sha256:496cd8dc22513042397e4d41d0022216caba5c1b2341bb04a01c0f880a6d16f9",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseFlag4(value, fallback) {\n  return Boolean(value);\n}\nexport const recoveryMarker = 24;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseFlag4 } from '../src/subject.mjs';\ntest('parseFlag4', () => { assert.equal(parseFlag4(' YES ', false), true); assert.equal(parseFlag4('no', true), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-port-token-04",
+      "immutable_revision": "sha256:615dd8b2e4fe6e54ef31940fb29225740219fe33af2764c25d1e1f97c5332e61",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parsePort4(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const recoveryMarker = 34;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parsePort4 } from '../src/subject.mjs';\ntest('parsePort4', () => { assert.equal(parsePort4('8080', 9), 8080); assert.equal(parsePort4('80x', 9), 9); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-left-rotation-04",
+      "immutable_revision": "sha256:e04f2d49169a98352d57398f18c5161d298453e31847d4b6c37cdf5f544dda1a",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function rotateLeft4(items, offset) {\n  return items.slice(offset);\n}\nexport const recoveryMarker = 44;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rotateLeft4 } from '../src/subject.mjs';\ntest('rotateLeft4', () => { assert.deepEqual(rotateLeft4([1,2,3,4], 1), [2,3,4,1]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-finite-tolerance-05",
+      "immutable_revision": "sha256:8cc762efc13e0e86d84e68942cceb843374faf2af128d7b3beb5469bb918b72a",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function withinTolerance5(left, right, tolerance) {\n  return left - right <= tolerance;\n}\nexport const recoveryMarker = 5;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { withinTolerance5 } from '../src/subject.mjs';\ntest('withinTolerance5', () => { assert.equal(withinTolerance5(10, 12, 2), true); assert.equal(withinTolerance5(10, 13, 2), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-stable-unique-05",
+      "immutable_revision": "sha256:0ca6ac8c6bfb4163d8a38c987744b60c524932f13066784aa7fc03f8b80190c0",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function stableUnique5(items) {\n  return items.sort();\n}\nexport const recoveryMarker = 15;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { stableUnique5 } from '../src/subject.mjs';\ntest('stableUnique5', () => { assert.deepEqual(stableUnique5([3,1,3,2]), [3,1,2]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-boolean-token-05",
+      "immutable_revision": "sha256:24f89abcc0267ac310fe20182111156c67f47ba4c4ecc86fda2c3a083348597c",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseFlag5(value, fallback) {\n  return Boolean(value);\n}\nexport const recoveryMarker = 25;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseFlag5 } from '../src/subject.mjs';\ntest('parseFlag5', () => { assert.equal(parseFlag5(' YES ', false), true); assert.equal(parseFlag5('no', true), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-port-token-05",
+      "immutable_revision": "sha256:00a449485b427f07cef0a2ae6406d6fffff6e11dad613952e82064553e1efa33",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parsePort5(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const recoveryMarker = 35;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parsePort5 } from '../src/subject.mjs';\ntest('parsePort5', () => { assert.equal(parsePort5('8080', 9), 8080); assert.equal(parsePort5('80x', 9), 9); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-left-rotation-05",
+      "immutable_revision": "sha256:9d957ef60d6ee6a9b8274e89197fe8de0c690077e78e78d999dd967c657761ac",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function rotateLeft5(items, offset) {\n  return items.slice(offset);\n}\nexport const recoveryMarker = 45;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rotateLeft5 } from '../src/subject.mjs';\ntest('rotateLeft5', () => { assert.deepEqual(rotateLeft5([1,2,3,4], 1), [2,3,4,1]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-finite-tolerance-06",
+      "immutable_revision": "sha256:85a90246a0b573071c13b79640a1a5631b9cf865affe09a52b2d0ca89c277376",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function withinTolerance6(left, right, tolerance) {\n  return left - right <= tolerance;\n}\nexport const recoveryMarker = 6;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { withinTolerance6 } from '../src/subject.mjs';\ntest('withinTolerance6', () => { assert.equal(withinTolerance6(10, 12, 2), true); assert.equal(withinTolerance6(10, 13, 2), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-stable-unique-06",
+      "immutable_revision": "sha256:1cd56bde469edddd2bcfd4f03f8d2c67c2dcbe439c9adddd06b3b2bb5f16db17",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function stableUnique6(items) {\n  return items.sort();\n}\nexport const recoveryMarker = 16;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { stableUnique6 } from '../src/subject.mjs';\ntest('stableUnique6', () => { assert.deepEqual(stableUnique6([3,1,3,2]), [3,1,2]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-boolean-token-06",
+      "immutable_revision": "sha256:713eef8e4b98702d3acffe2abd62fa9e313471b3c11464c9fe33e7deb04415c6",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseFlag6(value, fallback) {\n  return Boolean(value);\n}\nexport const recoveryMarker = 26;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseFlag6 } from '../src/subject.mjs';\ntest('parseFlag6', () => { assert.equal(parseFlag6(' YES ', false), true); assert.equal(parseFlag6('no', true), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-port-token-06",
+      "immutable_revision": "sha256:d18af55c87f474343aa905f4cc6e4a0afd44e0fd27ef39b55c6df8149ba6408a",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parsePort6(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const recoveryMarker = 36;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parsePort6 } from '../src/subject.mjs';\ntest('parsePort6', () => { assert.equal(parsePort6('8080', 9), 8080); assert.equal(parsePort6('80x', 9), 9); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-left-rotation-06",
+      "immutable_revision": "sha256:f9dc53852cf1411e5c59d0c01816377b053b518f157d8e323e1d992d7e5f33ed",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function rotateLeft6(items, offset) {\n  return items.slice(offset);\n}\nexport const recoveryMarker = 46;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rotateLeft6 } from '../src/subject.mjs';\ntest('rotateLeft6', () => { assert.deepEqual(rotateLeft6([1,2,3,4], 1), [2,3,4,1]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-finite-tolerance-07",
+      "immutable_revision": "sha256:8e31255654daaf15258daf3f8e2fb43ce32309e3a9398dcf3311db81907f20c2",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function withinTolerance7(left, right, tolerance) {\n  return left - right <= tolerance;\n}\nexport const recoveryMarker = 7;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { withinTolerance7 } from '../src/subject.mjs';\ntest('withinTolerance7', () => { assert.equal(withinTolerance7(10, 12, 2), true); assert.equal(withinTolerance7(10, 13, 2), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-stable-unique-07",
+      "immutable_revision": "sha256:756b642cc6b62f3f2f4e1d67adb5f0463f3ae4fd90a2b23a4834748e6b462c67",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function stableUnique7(items) {\n  return items.sort();\n}\nexport const recoveryMarker = 17;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { stableUnique7 } from '../src/subject.mjs';\ntest('stableUnique7', () => { assert.deepEqual(stableUnique7([3,1,3,2]), [3,1,2]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-boolean-token-07",
+      "immutable_revision": "sha256:ce77fc81f1f06921e9fce2857976870d35e912959789e7222629577b7f759cb4",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseFlag7(value, fallback) {\n  return Boolean(value);\n}\nexport const recoveryMarker = 27;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseFlag7 } from '../src/subject.mjs';\ntest('parseFlag7', () => { assert.equal(parseFlag7(' YES ', false), true); assert.equal(parseFlag7('no', true), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-port-token-07",
+      "immutable_revision": "sha256:650add21ff1b3dfc4e5dbf09f9728947e3091eeeb813f634962112aba65abfd9",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parsePort7(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const recoveryMarker = 37;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parsePort7 } from '../src/subject.mjs';\ntest('parsePort7', () => { assert.equal(parsePort7('8080', 9), 8080); assert.equal(parsePort7('80x', 9), 9); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-left-rotation-07",
+      "immutable_revision": "sha256:e369ed64441237b6020dbfe6c0cddc0f5429c73c9ebff6c9184612392e0b8ff8",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function rotateLeft7(items, offset) {\n  return items.slice(offset);\n}\nexport const recoveryMarker = 47;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rotateLeft7 } from '../src/subject.mjs';\ntest('rotateLeft7', () => { assert.deepEqual(rotateLeft7([1,2,3,4], 1), [2,3,4,1]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-finite-tolerance-08",
+      "immutable_revision": "sha256:a6cea9ac0a9495898d97bd8399ab314d6fb5e11636113b2be6bb396f0f537c61",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function withinTolerance8(left, right, tolerance) {\n  return left - right <= tolerance;\n}\nexport const recoveryMarker = 8;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { withinTolerance8 } from '../src/subject.mjs';\ntest('withinTolerance8', () => { assert.equal(withinTolerance8(10, 12, 2), true); assert.equal(withinTolerance8(10, 13, 2), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-stable-unique-08",
+      "immutable_revision": "sha256:8b56bfc89d96aa9b5a43905c5356c9f4ee8a7018e53f0c57071dd3eb015657ae",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function stableUnique8(items) {\n  return items.sort();\n}\nexport const recoveryMarker = 18;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { stableUnique8 } from '../src/subject.mjs';\ntest('stableUnique8', () => { assert.deepEqual(stableUnique8([3,1,3,2]), [3,1,2]); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-boolean-token-08",
+      "immutable_revision": "sha256:94fabe75d8f3124b7ccfe91f89d11b78a3b24b7a6f54b23d7e618d4900286a1a",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parseFlag8(value, fallback) {\n  return Boolean(value);\n}\nexport const recoveryMarker = 28;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseFlag8 } from '../src/subject.mjs';\ntest('parseFlag8', () => { assert.equal(parseFlag8(' YES ', false), true); assert.equal(parseFlag8('no', true), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-port-token-08",
+      "immutable_revision": "sha256:49e486d4f7fe5b8823aabdd86c7a00ce55a661915d98c0d6a4194dadde0393ee",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function parsePort8(value, fallback) {\n  return parseInt(value, 10);\n}\nexport const recoveryMarker = 38;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parsePort8 } from '../src/subject.mjs';\ntest('parsePort8', () => { assert.equal(parsePort8('8080', 9), 8080); assert.equal(parsePort8('80x', 9), 9); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "cfcr-v1-repo-left-rotation-08",
+      "immutable_revision": "sha256:09c6df91d3c56b2cf099520c0bad8b5a68f8bd1cc5f17e54cdd317cd56d5d159",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function rotateLeft8(items, offset) {\n  return items.slice(offset);\n}\nexport const recoveryMarker = 48;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rotateLeft8 } from '../src/subject.mjs';\ntest('rotateLeft8', () => { assert.deepEqual(rotateLeft8([1,2,3,4], 1), [2,3,4,1]); });\n",
+          "role": "test"
+        }
+      ]
+    }
+  ]
+}

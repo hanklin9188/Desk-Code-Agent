@@ -1,0 +1,45 @@
+import { createHash } from "node:crypto";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import path from "node:path";
+
+const root = path.resolve(process.cwd());
+const sha256 = (value: string | Buffer) => createHash("sha256").update(value).digest("hex");
+const primaryPath = path.join(root, "docs/experiments/runs/m9-g3-primary-2026-08-09T09-20-10-123Z/g3-primary-result.json");
+const primaryBytes = await readFile(primaryPath);
+const primary = JSON.parse(primaryBytes.toString("utf8")) as { observations: Array<Record<string, unknown>> };
+const seal = JSON.parse(await readFile(path.join(root, "benchmarks/g3/G3_SEAL.json"), "utf8")) as { references: Record<string, { path: string }> };
+const tasks = JSON.parse(await readFile(path.join(root, seal.references.task_manifest.path), "utf8")) as { tasks: Array<{ task_id: string; prompt: string }> };
+const prompts = new Map(tasks.tasks.map((task) => [task.task_id, task.prompt]));
+const rows = primary.observations.filter((row) => row.configuration === "E-MIN-V2" && row.split === "holdout");
+if (rows.length !== 96) throw new Error(`Expected 96 V2 holdout observations, received ${rows.length}`);
+const classes = (file: string) => /(?:^|\/)(?:tests?|spec|__tests__)(?:\/|$)|(?:test|spec)\.[^.]+$/i.test(file) ? "TEST" : /(?:^|\/)readme|(?:^|\/)docs?\//i.test(file) ? "DOCUMENTATION" : /(?:license|copying|notice|package\.json|pyproject\.toml|cargo\.toml|go\.mod|pom\.xml)$/i.test(file) ? "METADATA" : /(?:\.github\/workflows|makefile|cmakelists|dockerfile)/i.test(file) ? "BUILD" : "SYMBOL";
+const taxonomyNames = ["wrong_evidence_class", "wrong_file", "wrong_symbol", "missing_secondary_evidence", "lexical_distractor", "dependency_traversal_failure", "documentation_omission", "metadata_omission", "test_affinity_failure", "truncation", "stale_index", "fallback_failure", "excessive_noise"] as const;
+const detailed = rows.map((row) => {
+  const required = row.requiredEvidencePaths as string[]; const included = row.includedEvidencePaths as string[]; const selected = row.selectedEvidencePaths as string[];
+  const requestedClasses = row.requestedEvidenceClasses as string[]; const selectedClasses = row.selectedEvidenceClasses as string[];
+  const missing = required.filter((item) => !included.includes(item)); const prompt = prompts.get(String(row.taskId)) ?? "";
+  const promptTokens = prompt.toLowerCase().split(/[^a-z0-9]+/).filter((token) => token.length >= 4);
+  const labels: string[] = [];
+  if (requestedClasses.some((item) => !selectedClasses.includes(item))) labels.push("wrong_evidence_class");
+  if (missing.length > 0 && included.every((item) => !required.includes(item))) labels.push("wrong_file");
+  if (requestedClasses.includes("SYMBOL") && missing.length > 0) labels.push("wrong_symbol");
+  if (required.length > 1 && missing.length > 0) labels.push("missing_secondary_evidence");
+  if (selected.some((item) => !required.includes(item) && promptTokens.some((token) => item.toLowerCase().includes(token)))) labels.push("lexical_distractor");
+  if (["cross_file_coding", "diagnosis", "navigation"].includes(String(row.category)) && required.length > 1 && missing.length > 0) labels.push("dependency_traversal_failure");
+  if (missing.some((item) => classes(item) === "DOCUMENTATION")) labels.push("documentation_omission");
+  if (missing.some((item) => classes(item) === "METADATA")) labels.push("metadata_omission");
+  if (missing.some((item) => classes(item) === "TEST")) labels.push("test_affinity_failure");
+  if (required.some((item) => selected.includes(item) && !included.includes(item))) labels.push("truncation");
+  if (Number(row.fallbackRounds) > 0 && missing.length > 0) labels.push("fallback_failure");
+  if (Number(row.irrelevantTokenRatio) > 0.5) labels.push("excessive_noise");
+  return { taskId: row.taskId, repositoryId: row.repositoryId, category: row.category, difficulty: row.difficulty, labels, required, selected, included, missing, fallbackRounds: row.fallbackRounds, irrelevantTokenRatio: row.irrelevantTokenRatio };
+});
+const counts = Object.fromEntries(taxonomyNames.map((name) => [name, detailed.filter((row) => row.labels.includes(name)).length]));
+const byCategory = Object.fromEntries([...new Set(rows.map((row) => String(row.category)))].map((category) => [category, Object.fromEntries(taxonomyNames.map((name) => [name, detailed.filter((row) => row.category === category && row.labels.includes(name)).length]))]));
+const experimentId = `m9-g3-retrieval-taxonomy-v2-${new Date().toISOString().replace(/[:.]/g, "-")}`;
+const result = { schemaVersion: 2, experimentId, status: "PASS", classification: "DETAILED_OVERLAPPING_RETRIEVAL_FAILURE_TAXONOMY_V2", source: { primaryArtifact: path.relative(root, primaryPath), sha256: sha256(primaryBytes), configuration: "E-MIN-V2", split: "holdout", observations: rows.length }, counts, byCategory, staleIndexEvidence: { count: 0, basis: "All 24 repositories were clean and exact pinned SHA checks passed at seal and execution; separate mutation stress evaluates stale-index behavior." }, scoringNote: "Labels are deterministic and may overlap. Wrong-symbol and dependency labels are mechanism indicators derived from requested class/task category, not exclusive root-cause claims.", rows: detailed };
+const directory = path.join(root, "docs/experiments/runs", experimentId); await mkdir(directory, { recursive: false });
+await writeFile(path.join(directory, "retrieval-failure-taxonomy-v2-detailed.json"), `${JSON.stringify(result, null, 2)}\n`, { flag: "wx" });
+await writeFile(path.join(directory, "result.json"), `${JSON.stringify({ schemaVersion: 2, experimentId, status: result.status, source: result.source, counts, byCategory }, null, 2)}\n`, { flag: "wx" });
+process.stdout.write(`${JSON.stringify({ directory, status: result.status, counts, byCategory }, null, 2)}\n`);
+

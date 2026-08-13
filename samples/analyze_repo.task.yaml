@@ -1,0 +1,15 @@
+task_id: task_analyze_001
+repo_ref: https://github.com/example/project
+goal: Analyze the repository and produce an evidence-backed architecture, testing, quality, risk, and onboarding report.
+modes: [ANALYZE, ONBOARD]
+success_criteria:
+  - Identify verified entry points and major modules.
+  - Provide a module/dependency view with evidence links.
+  - Rank at least five actionable findings without inventing measurements.
+  - Provide run/build/test commands only when supported by repository evidence.
+constraints:
+  - Read-only; do not modify repository files.
+  - Do not send source code to external services.
+non_goals:
+  - No automatic refactoring.
+approval_required: []

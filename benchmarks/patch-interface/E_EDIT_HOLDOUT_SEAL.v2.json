@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 2,
+  "holdoutSealId": "dca-e-edit-untouched-holdout-seal-v2",
+  "sealedAt": "2026-08-11T02:47:15.849Z",
+  "status": "PASS_SESSION_A_ZERO_CALL_SEALED",
+  "classification": "UNTOUCHED_REPOSITORY_DISJOINT_HOLDOUT",
+  "supersedes": {
+    "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_SEAL.v1.json",
+    "status": "SUPERSEDED_FOR_IDEMPOTENT_SINGLE_TIMESTAMP_PUBLICATION",
+    "modelCalls": 0
+  },
+  "holdoutExecutionStarted": false,
+  "holdoutModelCallsAtSeal": 0,
+  "inputs": {
+    "preregistration": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PREREGISTRATION.v2.json",
+      "sha256": "5e1d4ece269cd807f625ef7f0c41b1867dce5600f25e4080bfcf02746e4833c5"
+    },
+    "repositories": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+      "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+    },
+    "manifest": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+      "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+    },
+    "oracle": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+      "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+    },
+    "integrity": {
+      "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_INTEGRITY.v2.json",
+      "sha256": "76f0d407886e41a8f21e04d7061d37f97fd095bcbfabc5cfbe7353f78c5ff274"
+    }
+  },
+  "counts": {
+    "repositories": 15,
+    "tasks": 120,
+    "mutationModelCallsPerCondition": 95,
+    "policyOnlyTasks": 25,
+    "plannedOneShotCalls": 190
+  },
+  "requestIntents": {
+    "baselineSha256": "2893292979c10d7b9ea175eda23393056895d419333178298efced012f56c372",
+    "eEditSha256": "bd85ee32d1928e55ba8422479bde7978c1afac66cdf44ddb16cb61192d2a2a14",
+    "combinedSha256": "6acec5762d993566fb6ff5b4defefc349ce6e79aa69119e67a261a52753a9764",
+    "count": 190,
+    "rawPromptsStored": false
+  },
+  "executionSourceClosure": {
+    "scripts/run_e_edit_holdout.ts": "c9dea2c04829d8c460eed65b0d7c237528398e2df651e406432ee7784579cb69",
+    "scripts/seal_e_edit_holdout.ts": "cc32203fb3c4d6b2eaa205e6e0ee28ef871ad901c9bc234b7d68991f039ebedc",
+    "scripts/write_e_edit_holdout.ts": "194152bd721420f4ad60e55c59bc6cc7b06e5fddb9dcd0eb985a9c96ef5012ab",
+    "scripts/preregister_e_edit_holdout.ts": "47f16d15dca8e5057e51feb0387a3e69a8c2d30e11978f53d379140adb63fd14",
+    "scripts/model_serving_attestation.ts": "c2a589d2ad82c28923c2de8b0de6070cead075e91a061f2998c0ebdde0c50702",
+    "services/patch-interface-runtime/src/index.ts": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+    "services/tool-runtime/src/index.ts": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21",
+    "services/g3-evaluation-runtime/src/index.ts": "02ebfd6a7914cbe35c49048c182236d578cf56a1ddeb40ff8a4b9ac141affad2",
+    "services/g3-benchmark-runtime/src/index.ts": "edcbc59ac3164da338289f9ae6499074a51a8e92625e189d722a9162a34b6478",
+    "services/repo-intelligence/src/index.ts": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d",
+    "services/task-aware-retrieval/src/index.ts": "a6aca66c4758d7b35126dc4bb3c53a6ebd38bf17ec3006d8f5b1bc40fa3d18eb",
+    "services/model-specialization-runtime/src/index.ts": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee",
+    "scripts/start_model_profile.sh": "298e0446ee178e405af8d4fd8ce346fb75ab506931cba777eb52d0b54b5c3037",
+    "scripts/launch_model_profile.py": "1053d094c2e7c6d5558c8e992c7b9806ce995bee34eac077840e56f98af418c7",
+    "scripts/record_patch_interface_lifecycle.ts": "d60d47c9b05a94b7a615fc4ba77e5a8c9fb4a06f35362ca0bede68297b26c61e",
+    "config/model_specialization_profiles.json": "2b099955217f7e6f81876135ead852f4938a544c1b413d28cca811f705549e4a",
+    "package.json": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+    "package-lock.json": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2"
+  },
+  "sessionBPlan": {
+    "baselineResultPath": "docs/experiments/runs/e-edit-holdout-baseline-v1/result.json",
+    "eEditResultPath": "docs/experiments/runs/e-edit-holdout-p2-v1/result.json",
+    "retryResultPath": "docs/experiments/runs/e-edit-holdout-retry-v1/result.json",
+    "conditionOrder": [
+      "baseline",
+      "e-edit",
+      "conditional retry"
+    ],
+    "model": "baseline",
+    "callsBeforeSessionB": 0
+  },
+  "lineage": {
+    "historicalPhysicalCalls": 979,
+    "holdoutPhysicalCalls": 0
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

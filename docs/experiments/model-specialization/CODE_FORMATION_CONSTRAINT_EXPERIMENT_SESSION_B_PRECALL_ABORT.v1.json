@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "CODE_FORMATION_CONSTRAINT_EXPERIMENT",
+  "session": "B",
+  "status": "ABORTED_FAIL_CLOSED_BEFORE_FIRST_CALL",
+  "recordedAt": "2026-08-11T23:02:18.214Z",
+  "sessionA": {
+    "path": "docs/experiments/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_SESSION_A.v1.json",
+    "sha256": "3c9590dd51b5564894cc4c5add3dbd9d3f48c75ef63347ef2d3d3e4f8ef92fea",
+    "identityCheck": "PASS"
+  },
+  "entryGates": {
+    "sourceClosure": "PASS",
+    "taskPopulation": "PASS_40_TASKS_40_REPOSITORIES",
+    "counterbalancedSchedule": "PASS_40_PAIRS_SEED_20260812",
+    "emptyLedgers": "PASS",
+    "hardIsolation": "PASS",
+    "storageCapacity": "PASS",
+    "existingPinnedSnapshot": "PASS",
+    "exactServingIdentity": "PASS"
+  },
+  "serving": {
+    "candidateId": "M2",
+    "modelId": "TIGER-Lab/FIM-7B",
+    "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+    "vllm": "0.26.0",
+    "quantization": "fp8_per_tensor",
+    "startStateSha256": "63396a20d673543ca25a065af8a75771d1506b108f22c10a6e9eae553b3be96d",
+    "launchStateSha256": "3d68313906434d38790e6238eb78f59b1262c3d5cc8d4ab5046b03de5ef7583e"
+  },
+  "failure": {
+    "class": "INFRASTRUCTURE_FAILURE",
+    "stage": "PRE_CALL_REQUEST_MATERIALIZATION",
+    "errorCode": "SEALED_RUNNER_PREREGISTRATION_FIELD_MISMATCH",
+    "description": "The sealed runner reads core.prereg.systemPrompt, but the sealed preregistration stores the identical control prompt at core.prereg.control.systemPrompt. sha256(undefined) therefore throws before CALL_STARTED is appended.",
+    "runner": {
+      "path": "scripts/run_code_formation_constraint_experiment.ts",
+      "sha256": "f2b6a46705a11f1e07439c6a20fd7c0ae6779e2d4f9d759819d86e7088fa1570",
+      "line": 87
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_PREREGISTRATION.v1.json",
+      "sha256": "41c24a0c8eacdbc57636e942ef0c4c78047dbc899bdaed83e83a2d421466a926"
+    },
+    "behaviorChangingHotPatchPerformed": false,
+    "silentRetryPerformed": false
+  },
+  "accounting": {
+    "plannedPhysicalCalls": 80,
+    "callStartedRecords": 0,
+    "actualModelCalls": 0,
+    "controlCalls": 0,
+    "treatmentCalls": 0,
+    "pairedObservations": 0,
+    "duplicateCalls": 0,
+    "retries": 0,
+    "callEventsBytes": 0,
+    "pairedObservationsBytes": 0
+  },
+  "scientificState": {
+    "primaryEvidenceCollected": false,
+    "sessionBComplete": false,
+    "sessionCReady": false,
+    "semanticInterpretationPerformed": false,
+    "promotionDecisionPerformed": false
+  },
+  "cleanup": {
+    "modelProcesses": 0,
+    "port8000Clear": true,
+    "gpuAllocationMiB": 0,
+    "ephemeralApiKeyAbsent": true,
+    "disposableWorkspaces": 0,
+    "stateFilesRemovedAfterEvidenceCapture": true
+  },
+  "requiredRemediation": "A separate zero-call invocation must correct and reseal the runner before Session B can be attempted. The immutable Session-A and this abort record must remain append-only.",
+  "stop": "SESSION_B_ABORT_BOUNDARY_REACHED"
+}

@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 1,
+  "reportId": "dca-practical-local-model-tournament-final-report-v1",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T14:21:50.112Z",
+  "skill": {
+    "skillId": "R24",
+    "skillVersion": "0.2.0",
+    "status": "PASS",
+    "warnings": [
+      "M3 diagnostic only",
+      "Reference BF16 versus candidate FP8 prevents pure scale attribution"
+    ],
+    "errors": []
+  },
+  "inputs": {
+    "sessionC": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_C.v1.json",
+      "sha256": "32ff39c05b5ce6c64b57ac77085df2b5666750a8a5689d3ac801a683bd3ec683"
+    },
+    "analysis": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_PAIRED_ANALYSIS.v1.json",
+      "sha256": "1c7a6746196ce94d4a06408532c2b050d27de7ad8b08fc428c1d0f160f7118a9"
+    },
+    "matrix": {
+      "path": "docs/experiments/model-specialization/MODEL_CAPABILITY_MATRIX.v5.json",
+      "sha256": "9a75a8dea90d4f3f71902fa962864c4978139a2c7da2ac41ee56da78cacbe26a"
+    },
+    "selection": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_MODEL_SELECTION.v1.json",
+      "sha256": "03fcb625a219bcbc37eec1421583371ca76b3a745f1e938f59ceeff16bdc544c"
+    },
+    "productDecision": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_PRODUCT_DECISION.v1.json",
+      "sha256": "28dd461cae05e001b712e1c3198fecd0702ef3eb0bb6b916b880785eae80ef13"
+    },
+    "ceiling": {
+      "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v5.json",
+      "sha256": "9d725bead6117aeef29393a19b9e07060cf1a04053f0c35aea78b62a694a06e7"
+    },
+    "m3Infrastructure": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_M3_INFRASTRUCTURE.v1.json",
+      "sha256": "029e1aa6b69c7eed3eeaa4e5e1559ea7d084c64a889afd1b67f7bd6e9dffba98"
+    },
+    "retryEligibility": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_RETRY_ELIGIBILITY.v1.json",
+      "sha256": "c88e39e24f0b08b95cdab8bded29c2b9e19e6a9490f891617e177aedd325f728"
+    },
+    "retryProtocol": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PROTOCOL.v1.json",
+      "sha256": "228ca9e5d8a836c40f345db2f7d39a415d6e4a1cc1d9bfa7af62b9fcfdfe51b3"
+    }
+  },
+  "thresholds": {
+    "reference": {
+      "successes": 23,
+      "denominator": 95,
+      "highestClassification": "BELOW_ASSISTED",
+      "gates": {
+        "assistedFloor29": false,
+        "researchThreshold33": false,
+        "strongCandidate40": false,
+        "productThreshold57": false
+      }
+    },
+    "M1": {
+      "successes": 7,
+      "denominator": 95,
+      "highestClassification": "BELOW_ASSISTED",
+      "gates": {
+        "assistedFloor29": false,
+        "researchThreshold33": false,
+        "strongCandidate40": false,
+        "productThreshold57": false
+      }
+    },
+    "M2": {
+      "successes": 29,
+      "denominator": 95,
+      "highestClassification": "ASSISTED_FLOOR",
+      "gates": {
+        "assistedFloor29": true,
+        "researchThreshold33": false,
+        "strongCandidate40": false,
+        "productThreshold57": false
+      }
+    },
+    "M3": {
+      "status": "NOT_SCORED"
+    }
+  },
+  "comparisons": {
+    "m1VsReference": {
+      "metric": "strictBehavioral",
+      "population": 95,
+      "leftLabel": "reference",
+      "rightLabel": "M1",
+      "bothPass": 4,
+      "leftOnly": 19,
+      "rightOnly": 3,
+      "bothFail": 69,
+      "leftSuccesses": 23,
+      "rightSuccesses": 7,
+      "absoluteDifferencePercentagePoints": -16.842105263157894,
+      "statistics": {
+        "repetitions": 10000,
+        "seed": 20260811,
+        "taskPairedBootstrap95PercentCI": [
+          -26.31578947368421,
+          -8.394736842105646
+        ],
+        "repositoryClusterBootstrap95PercentCI": [
+          -26.881720430107528,
+          -7.291666666666667
+        ],
+        "mcnemarExactTwoSidedP": 0.0008554458618164062,
+        "discordantPairs": 22
+      }
+    },
+    "m2VsReference": {
+      "metric": "strictBehavioral",
+      "population": 95,
+      "leftLabel": "reference",
+      "rightLabel": "M2",
+      "bothPass": 15,
+      "leftOnly": 8,
+      "rightOnly": 14,
+      "bothFail": 58,
+      "leftSuccesses": 23,
+      "rightSuccesses": 29,
+      "absoluteDifferencePercentagePoints": 6.315789473684211,
+      "statistics": {
+        "repetitions": 10000,
+        "seed": 20260811,
+        "taskPairedBootstrap95PercentCI": [
+          -3.1578947368421053,
+          15.789473684210526
+        ],
+        "repositoryClusterBootstrap95PercentCI": [
+          0,
+          12.5
+        ],
+        "mcnemarExactTwoSidedP": 0.28627872467041016,
+        "discordantPairs": 22
+      }
+    },
+    "m2VsM1": {
+      "strictBehavioral": {
+        "metric": "strictBehavioral",
+        "population": 95,
+        "leftLabel": "M1",
+        "rightLabel": "M2",
+        "bothPass": 5,
+        "leftOnly": 2,
+        "rightOnly": 24,
+        "bothFail": 64,
+        "leftSuccesses": 7,
+        "rightSuccesses": 29,
+        "absoluteDifferencePercentagePoints": 23.157894736842106,
+        "statistics": {
+          "repetitions": 10000,
+          "seed": 20260811,
+          "taskPairedBootstrap95PercentCI": [
+            13.68421052631579,
+            32.63157894736842
+          ],
+          "repositoryClusterBootstrap95PercentCI": [
+            14.736842105263158,
+            31.25
+          ],
+          "mcnemarExactTwoSidedP": 0.00001049041748046875,
+          "discordantPairs": 26
+        }
+      },
+      "syntax": {
+        "metric": "syntax",
+        "population": 95,
+        "leftLabel": "M1",
+        "rightLabel": "M2",
+        "bothPass": 40,
+        "leftOnly": 3,
+        "rightOnly": 43,
+        "bothFail": 9,
+        "leftSuccesses": 43,
+        "rightSuccesses": 83,
+        "absoluteDifferencePercentagePoints": 42.10526315789474,
+        "statistics": {
+          "repetitions": 10000,
+          "seed": 20260811,
+          "taskPairedBootstrap95PercentCI": [
+            30.526315789473685,
+            52.63157894736842
+          ],
+          "repositoryClusterBootstrap95PercentCI": [
+            32.291666666666664,
+            52.17391304347826
+          ],
+          "mcnemarExactTwoSidedP": 4.6219383875722997e-10,
+          "discordantPairs": 46
+        }
+      },
+      "visible": {
+        "metric": "visible",
+        "population": 95,
+        "leftLabel": "M1",
+        "rightLabel": "M2",
+        "bothPass": 8,
+        "leftOnly": 2,
+        "rightOnly": 27,
+        "bothFail": 58,
+        "leftSuccesses": 10,
+        "rightSuccesses": 35,
+        "absoluteDifferencePercentagePoints": 26.31578947368421,
+        "statistics": {
+          "repetitions": 10000,
+          "seed": 20260811,
+          "taskPairedBootstrap95PercentCI": [
+            16.842105263157894,
+            35.78947368421053
+          ],
+          "repositoryClusterBootstrap95PercentCI": [
+            16.842105263157894,
+            35.416666666666664
+          ],
+          "mcnemarExactTwoSidedP": 0.0000016242265701293945,
+          "discordantPairs": 29
+        }
+      },
+      "hidden": {
+        "metric": "hidden",
+        "population": 95,
+        "leftLabel": "M1",
+        "rightLabel": "M2",
+        "bothPass": 14,
+        "leftOnly": 3,
+        "rightOnly": 40,
+        "bothFail": 38,
+        "leftSuccesses": 17,
+        "rightSuccesses": 54,
+        "absoluteDifferencePercentagePoints": 38.94736842105263,
+        "statistics": {
+          "repetitions": 10000,
+          "seed": 20260811,
+          "taskPairedBootstrap95PercentCI": [
+            28.42105263157895,
+            49.473684210526315
+          ],
+          "repositoryClusterBootstrap95PercentCI": [
+            29.166666666666668,
+            50
+          ],
+          "mcnemarExactTwoSidedP": 3.0213413992896676e-9,
+          "discordantPairs": 43
+        }
+      }
+    }
+  },
+  "failureProfiles": {
+    "reference": {
+      "RETRIEVAL": 5,
+      "ACTION_VALIDATION": 6,
+      "PATCH_CONSTRUCTION": 0,
+      "SYNTAX_TYPE": 17,
+      "VISIBLE_TEST": 34,
+      "HIDDEN_TEST": 10,
+      "SUCCESS": 23,
+      "TOOL_INFRASTRUCTURE": 0,
+      "OTHER": 0
+    },
+    "M1": {
+      "RETRIEVAL": 5,
+      "ACTION_VALIDATION": 1,
+      "PATCH_CONSTRUCTION": 0,
+      "SYNTAX_TYPE": 49,
+      "VISIBLE_TEST": 30,
+      "HIDDEN_TEST": 3,
+      "SUCCESS": 7,
+      "TOOL_INFRASTRUCTURE": 0,
+      "OTHER": 0
+    },
+    "M2": {
+      "RETRIEVAL": 5,
+      "ACTION_VALIDATION": 2,
+      "PATCH_CONSTRUCTION": 0,
+      "SYNTAX_TYPE": 6,
+      "VISIBLE_TEST": 47,
+      "HIDDEN_TEST": 6,
+      "SUCCESS": 29,
+      "TOOL_INFRASTRUCTURE": 0,
+      "OTHER": 0
+    }
+  },
+  "performance": {
+    "M1": {
+      "inputTokens": 18140,
+      "outputTokens": 5443,
+      "totalTokens": 23583,
+      "loadTimeMs": 36330.81396484375,
+      "ttftMs": 270.5903389999985,
+      "generationThroughputTokensPerSecond": 73.59096507169872,
+      "medianLatencyMs": 733.5090409999975,
+      "p95LatencyMs": 1559.515241000001,
+      "loadedIdleVramMiB": 13466,
+      "inferencePeakVramMiB": 16019,
+      "peakAtLeastIdle": true,
+      "vramHeadroomMiB": 357,
+      "vramHeadroomPercent": 2.180019540791402
+    },
+    "M2": {
+      "inputTokens": 18140,
+      "outputTokens": 6120,
+      "totalTokens": 24260,
+      "loadTimeMs": 35797.28515625,
+      "ttftMs": 257.97709499999837,
+      "generationThroughputTokensPerSecond": 76.51526820093567,
+      "medianLatencyMs": 798.5549269999974,
+      "p95LatencyMs": 1495.5199550000034,
+      "loadedIdleVramMiB": 13466,
+      "inferencePeakVramMiB": 13492,
+      "peakAtLeastIdle": true,
+      "vramHeadroomMiB": 2884,
+      "vramHeadroomPercent": 17.61113825109917
+    },
+    "M3": {
+      "inputTokens": 18140,
+      "outputTokens": 5895,
+      "totalTokens": 24035,
+      "loadTimeMs": 161800.4814453125,
+      "ttftMs": 246.12860499999806,
+      "generationThroughputTokensPerSecond": 76.15126064830527,
+      "medianLatencyMs": 706.5979029999871,
+      "p95LatencyMs": 4914.310933999994,
+      "loadedIdleVramMiB": 13466,
+      "inferencePeakVramMiB": 16009,
+      "peakAtLeastIdle": true,
+      "vramHeadroomMiB": 367,
+      "vramHeadroomPercent": 2.241084513922814
+    }
+  },
+  "provenance": {
+    "M1": {
+      "acquisition": {
+        "path": "docs/experiments/model-specialization/tournament-session-b/M1_ACQUISITION.v1.json",
+        "sha256": "69ed9e00b59f030c5fd829145a0ae09e4124437fd67c42c973fa9e70f66c9cf1"
+      },
+      "status": "PASS_EXACT_AUTHORIZED_SNAPSHOT",
+      "licenseAndProvenance": {
+        "declaredLicense": "apache-2.0",
+        "evidence": "pinned LICENSE plus official HF metadata",
+        "standaloneLicenseFile": true,
+        "licenseSha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "provenance": "instruction-tuned generic code-specialized control",
+        "primaryScoringAllowed": true,
+        "legalApprovalClaimed": false
+      }
+    },
+    "M2": {
+      "acquisition": {
+        "path": "docs/experiments/model-specialization/tournament-session-b/M2_ACQUISITION.v1.json",
+        "sha256": "cf8e77a5bf0fe8828c1f8deeacc9c87c995a05546efde46341eeccee29998fb6"
+      },
+      "status": "PASS_IDENTITY_APACHE_METADATA_WITH_NO_STANDALONE_LICENSE",
+      "licenseAndProvenance": {
+        "declaredLicense": "apache-2.0",
+        "evidence": "official pinned HF API/model-card metadata",
+        "standaloneLicenseFile": false,
+        "caveatRetained": true,
+        "provenance": "function-aware FIM mid-training followed by R2E-Gym agent-trajectory post-training",
+        "primaryScoringAllowed": true,
+        "legalApprovalClaimed": false
+      }
+    },
+    "M3": {
+      "acquisition": {
+        "path": "docs/experiments/model-specialization/tournament-session-b/M3_ACQUISITION.v1.json",
+        "sha256": "f2e92741c5f3f5f9b8f23356e4fdcef3290839f19c5769ebf1c36a1eef35fedc"
+      },
+      "status": "PASS_EXACT_AUTHORIZED_SNAPSHOT",
+      "licenseAndProvenance": {
+        "declaredLicense": "apache-2.0",
+        "evidence": "pinned LICENSE plus official HF metadata",
+        "standaloneLicenseFile": true,
+        "licenseSha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "provenance": "SWE-smith software-engineering agent trajectory specialization",
+        "primaryScoringAllowed": true,
+        "legalApprovalClaimed": false
+      }
+    }
+  },
+  "scientificConclusions": {
+    "Q1": {
+      "answer": "NO",
+      "conclusion": "M1 materially regressed versus the 4B reference under the practical FP8 profile",
+      "evidence": "pairedAnalysis.comparisons.m1VsReference"
+    },
+    "Q2": {
+      "answer": "YES_MATCHED_EVIDENCE",
+      "conclusion": "M2 materially improved over M1 under the matched 7B serving profile",
+      "evidence": "pairedAnalysis.comparisons.m2VsM1"
+    },
+    "Q3": {
+      "answer": "DIRECTIONAL_BUT_INCONCLUSIVE",
+      "conclusion": "M2 observed +6/95 over 4B, but paired uncertainty does not establish a material gain",
+      "evidence": "pairedAnalysis.comparisons.m2VsReference"
+    },
+    "Q4": {
+      "answer": "NO",
+      "conclusion": "M1's regression and the BF16/FP8 difference do not support scale alone",
+      "evidence": "pairedAnalysis.interpretation"
+    },
+    "Q5": {
+      "answer": "YES_BOUNDED",
+      "conclusion": "FIM/agentic post-training is associated with a material matched 7B gain, without claiming pure causal isolation",
+      "evidence": "pairedAnalysis.comparisons.m2VsM1"
+    },
+    "Q6": {
+      "answer": "YES_RESEARCH_INTERFACE",
+      "conclusion": "P2 action validity remains high; semantic correctness, not interface compliance, differentiates scored models",
+      "evidence": "capabilityMatrix.rows"
+    },
+    "Q7": {
+      "answer": "VISIBLE_BEHAVIOR_REASONING",
+      "conclusion": "M2's largest earliest-failure bucket is 47 visible-test failures after syntax improved",
+      "evidence": "pairedAnalysis.failureProfiles.M2"
+    },
+    "Q8": {
+      "answer": "NO_PRODUCT_CANDIDATE",
+      "conclusion": "M2 reaches only the absolute assisted floor and is eligible for new validation/retry research, not an enabled assisted route",
+      "evidence": "modelSelection"
+    },
+    "Q9": {
+      "answer": "NO",
+      "conclusion": "No candidate reaches the 57/95 autonomous/product threshold",
+      "evidence": "modelSelection.gates.productThreshold57"
+    }
+  },
+  "decisions": {
+    "modelWinner": "NO_MODEL_PROMOTED",
+    "productMutation": "KEEP_MUTATION_DISABLED",
+    "retry": "BEST_7B_BOUNDED_RETRY_PROTOCOL_JUSTIFIED_NOT_EXECUTED",
+    "nextExperiment": "dca-best-7b-bounded-retry-protocol-v1"
+  },
+  "portfolioFinding": "Under frozen E-EDIT P2, action validity stayed high across scored models, while matched 7B post-training—not parameter count alone—was associated with whether bounded edits became correct repository patches. FIM-7B materially beat Qwen Coder 7B, but did not establish a statistically reliable gain over the 4B BF16 reference or meet product thresholds.",
+  "claimBoundary": {
+    "screeningReuseNotUntouched": true,
+    "newRepositoryDisjointUntouchedHoldoutRequiredForProductClaim": true,
+    "noPureScaleClaim": true,
+    "M3Excluded": true
+  },
+  "modelCalls": 0
+}

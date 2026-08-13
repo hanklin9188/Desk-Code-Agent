@@ -1,0 +1,17 @@
+flowchart LR
+  classDef human fill:#172033,stroke:#83a7ff,color:#f3f6fb
+  classDef deterministic fill:#13291f,stroke:#69d59c,color:#f3f6fb
+  classDef model fill:#292342,stroke:#b59cff,color:#f3f6fb
+  classDef stop fill:#351c25,stroke:#ef858d,color:#f3f6fb
+
+  U[User task]:::human --> RI[Repository intelligence<br/>map · symbols · tests]:::deterministic
+  RI --> CP[Retrieval + bounded<br/>context package]:::deterministic
+  CP --> LM[Shared local model<br/>proposal only]:::model
+  LM --> BE[Bounded edit interface<br/>allowlist · budget · worktree]:::deterministic
+  BE --> DV[Deterministic verification<br/>tests · types · policy]:::deterministic
+  DV --> G{Verified and<br/>approved?}:::deterministic
+  G -->|yes| A[Accept in worktree]:::human
+  G -->|no| R[Reject / rollback]:::stop
+  A --> EL[Typed evidence log<br/>report · replay · metrics]:::deterministic
+  R --> EL
+

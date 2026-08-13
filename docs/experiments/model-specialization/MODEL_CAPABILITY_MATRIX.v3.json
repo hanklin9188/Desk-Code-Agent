@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T14:20:52.373Z",
+  "classification": "CONTROLLED_MODEL_SPECIALIZATION_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "decision": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "baseline": {
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "status": "RUN_COMPLETE"
+  },
+  "coder": {
+    "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "status": "RUN_COMPLETE",
+    "licenseUse": "NON_COMMERCIAL_RESEARCH_EVALUATION_EXPERIMENTAL_DEVELOPMENT_ONLY"
+  },
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "coder": {
+      "path": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.v3.json",
+      "sha256": "20f8943120f302d025062c674e7bd6a7409db67067e0f5cb71eff1214fb4babc"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "fairness": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v3.json",
+      "sha256": "a86f9c0db0e489e0dd3974aa52fbcc53fb556f674491bd313dd9eba06a525045"
+    }
+  },
+  "units": {
+    "rates": "proportion",
+    "differences": "percentage points",
+    "latency": "milliseconds",
+    "vram": "MiB"
+  },
+  "rows": [
+    {
+      "capability": "Oracle-context reasoning",
+      "baseline": 0,
+      "coder": 0,
+      "differencePercentagePoints": 0,
+      "paired": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 0,
+        "CODER_ONLY": 0,
+        "BOTH_FAIL": 42
+      },
+      "promotionMetric": false
+    },
+    {
+      "capability": "Task understanding only",
+      "baseline": 0,
+      "coder": 0,
+      "differencePercentagePoints": 0,
+      "paired": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 0,
+        "CODER_ONLY": 0,
+        "BOTH_FAIL": 24
+      },
+      "promotionMetric": false
+    },
+    {
+      "capability": "Frozen retrieval navigation",
+      "baseline": 0.68,
+      "coder": 1,
+      "differencePercentagePoints": 31.999999999999996,
+      "paired": {
+        "BOTH_PASS": 17,
+        "BASELINE_ONLY": 0,
+        "CODER_ONLY": 8,
+        "BOTH_FAIL": 0
+      },
+      "promotionMetric": false
+    },
+    {
+      "capability": "Diagnosis only",
+      "baseline": 0.08,
+      "coder": 0.2,
+      "differencePercentagePoints": 12.000000000000002,
+      "paired": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 2,
+        "CODER_ONLY": 5,
+        "BOTH_FAIL": 18
+      },
+      "promotionMetric": true
+    },
+    {
+      "capability": "Patch-only behavioral execution",
+      "baseline": 0,
+      "coder": 0,
+      "differencePercentagePoints": 0,
+      "paired": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 0,
+        "CODER_ONLY": 0,
+        "BOTH_FAIL": 25
+      },
+      "promotionMetric": true
+    },
+    {
+      "capability": "Structured planning",
+      "baseline": 0.5833333333333334,
+      "coder": 0.75,
+      "differencePercentagePoints": 16.666666666666664,
+      "paired": {
+        "BOTH_PASS": 6,
+        "BASELINE_ONLY": 1,
+        "CODER_ONLY": 3,
+        "BOTH_FAIL": 2
+      },
+      "promotionMetric": false
+    },
+    {
+      "capability": "One-shot frozen E-MIN-V2 end to end",
+      "baseline": 0,
+      "coder": 0,
+      "differencePercentagePoints": 0,
+      "paired": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 0,
+        "CODER_ONLY": 0,
+        "BOTH_FAIL": 25
+      },
+      "promotionMetric": true
+    },
+    {
+      "capability": "Maximum-two-call evidence retry",
+      "baseline": 0,
+      "coder": 0,
+      "differencePercentagePoints": 0,
+      "paired": {
+        "BOTH_PASS": 0,
+        "BASELINE_ONLY": 0,
+        "CODER_ONLY": 0,
+        "BOTH_FAIL": 25
+      },
+      "promotionMetric": false
+    }
+  ],
+  "supplementary": [
+    {
+      "capability": "Non-retry structured-output validity",
+      "baseline": 0.6853932584269663,
+      "coder": 0.7640449438202247
+    },
+    {
+      "capability": "Actual safety violations",
+      "baseline": 0,
+      "coder": 0
+    },
+    {
+      "capability": "TTFT",
+      "baseline": 69.77953500000149,
+      "coder": 24.869469000001118
+    },
+    {
+      "capability": "Peak VRAM",
+      "baseline": 12022,
+      "coder": 13316
+    }
+  ]
+}

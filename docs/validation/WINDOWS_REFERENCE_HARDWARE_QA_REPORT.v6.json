@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 6,
+  "reportId": "dca-windows-reference-hardware-qa-w1-v6-interactive-matrix",
+  "phase": "WINDOWS_REFERENCE_HARDWARE_QA",
+  "status": "BLOCKED_EXTERNAL",
+  "blockingStatus": "BLOCKED_NARRATOR_SPOKEN_OUTPUT_OBSERVATION",
+  "lineage": {
+    "path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.v5.json",
+    "sha256": "6f534594f835a4d0576867f8cca63fda49375d72e40d991a9968a7a6110696a5",
+    "integrity": "PASS"
+  },
+  "executable": {
+    "path": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508\\apps\\desktop\\src-tauri\\target\\release\\desk-code-agent.exe",
+    "sha256": "3d33ba36601266ef4f96c4d2db177052a1f89476ec103f77d2882e5ba773a117",
+    "bytes": 3630080,
+    "sourceIdentity": "81b9ca9e879db24afc02e98539611b05a6f9d4bf98e1c74a6ad541574717ee08"
+  },
+  "actualDpiMatrix": {
+    "100": {
+      "status": "PASS",
+      "getDpiForWindow": 96,
+      "webViewDevicePixelRatio": 1,
+      "surfaces": "PASS_18_OF_18",
+      "horizontalOverflow": 0,
+      "reportSha256": "508b24f23080d82ed8d0666903b40066a9ccfcccb702b5e18c48fe68f28bde28",
+      "visualInspection": "PASS_DASHBOARD_NAVIGATION_CHARTS_LABELS_STATUS_FONT_AND_FOCUS"
+    },
+    "125": {
+      "status": "PASS",
+      "getDpiForWindow": 120,
+      "webViewDevicePixelRatio": 1.25,
+      "surfaces": "PASS_18_OF_18",
+      "horizontalOverflow": 0,
+      "reportSha256": "cbc59fe6b29737a71a4f9b4bc397aa91108b2f574497612885d92f40f6c6d3ae",
+      "visualInspection": "PASS_EXPERIMENT_CHARTS_LEGENDS_TABLES_DIALOG_FONT_AND_FOCUS"
+    },
+    "150": {
+      "status": "PASS_REUSED_V5",
+      "getDpiForWindow": 144,
+      "webViewDevicePixelRatio": 1.5,
+      "reportSha256": "088d7a5ef0162c2b069e13702399e84253fcfbef63d94476c70b0f8348b5c1e7"
+    },
+    "200": {
+      "status": "PASS_AFTER_MINIMAL_FIX",
+      "getDpiForWindow": 192,
+      "webViewDevicePixelRatio": 2,
+      "surfaces": "PASS_18_OF_18",
+      "horizontalOverflow": 0,
+      "reportSha256": "36983d792f346879a8042dd5199b3637d716d946880095314fd2f3f670a43792",
+      "geometrySha256": "a63619c85f1a1b2176692f57a0d836c27989cea9fe726b510c054c611d9c674a",
+      "workspaceScrollWidthClientWidth": "615_615",
+      "visualInspection": "PASS_SIDEBAR_CAPABILITIES_EXPERIMENTS_WORKSPACE_SAFETY_CODE_DIFF_DIALOG"
+    },
+    "originalScaleRestored": "PASS_150_PERCENT_DPI_VALUE_2"
+  },
+  "reducedMotion": {
+    "status": "PASS_ACTUAL_WINDOWS_SETTING",
+    "windowsControl": "SystemSettings_Accessibility_IsAnimationsEnabled_ToggleSwitch",
+    "before": "ON_MINANIMATE_1",
+    "during": "OFF_MINANIMATE_0",
+    "webViewMediaPreference": "REDUCE_TRUE",
+    "applicationReducedClass": true,
+    "chartRevealAnimations": "SUPPRESSED",
+    "modalAnimation": "NONE",
+    "retainedTransitions": "COLOR_BORDER_ONLY_MAX_120MS_NO_TRANSFORM",
+    "surfaces": "PASS_DASHBOARD_CAPABILITIES_EXPERIMENTS_WORKSPACE_SAFETY",
+    "horizontalOverflow": 0,
+    "reportSha256": "38fdbdb59cfc44682a2c78f300ffce14bffa3f15d0653f69aadd561aa9f269bc",
+    "originalSettingRestored": "PASS_ON_MINANIMATE_1"
+  },
+  "narrator": {
+    "status": "NOT_RUN_ENVIRONMENT_LIMITATION",
+    "actualNarratorProcessLaunched": true,
+    "nativeApplicationFocused": true,
+    "priorUiaFocusEvidence": "REUSED_V5_NOT_TREATED_AS_SPOKEN_OUTPUT",
+    "independentObservationAttempt": "WINDOWS_LIVE_CAPTIONS",
+    "liveCaptionsProcessLaunched": true,
+    "result": "SETUP_PERMISSION_REQUIRED_NO_CAPTIONS_AVAILABLE",
+    "additionalSpeechComponentAcquisition": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "spokenSemanticsObserved": false,
+    "claimBoundary": "UIA metadata was not substituted for spoken Narrator evidence."
+  },
+  "defects": {
+    "found": [
+      {
+        "scale": "200_PERCENT_ACTUAL_WINDOWS",
+        "route": "Workspace",
+        "component": "workflow-layout",
+        "symptom": "Two-column minimums produced 640px scroll width in a 615px native scroll container."
+      }
+    ],
+    "fixed": [
+      {
+        "scope": "MINIMUM_RESPONSIVE_LAYOUT_FIX",
+        "change": "Stack workflow-layout below 1300 CSS pixels.",
+        "regression": "tests/productization-ui.test.tsx",
+        "before": "640_615_HORIZONTAL_OVERFLOW",
+        "after": "615_615_NO_HORIZONTAL_OVERFLOW"
+      }
+    ]
+  },
+  "appendOnlyArtifacts": {
+    "sourceIdentity": {"path": "docs/validation/WINDOWS_NATIVE_SOURCE_IDENTITY.v4.json", "sha256": "1e4f5227b281b604cbcf1a77506fa20c794deec2e9f867b976536ee33d59b057"},
+    "nativeBuild": {"path": "docs/validation/WINDOWS_NATIVE_QA_BUILD_MANIFEST.v3.json", "sha256": "f3cdaa5436ce22538d823cb12d7b24454f58d7893d3d80aa8fb254ccbd03afc2"}
+  },
+  "validation": {
+    "targetedCanonical": "PASS_3_FILES_10_TESTS_TYPECHECK_PRODUCTION_BUILD",
+    "targetedNativeWindows": "PASS_3_FILES_10_TESTS",
+    "nativeNoBundleBuild": "PASS",
+    "canonicalCompletionSuite": "PASS_DESIGN_2231_FILES_TYPECHECK_44_TEST_FILES_218_TESTS_PRODUCTION_BUILD",
+    "documentationLinks": "PASS",
+    "canonicalChecksums": "PASS",
+    "secretScan": "PASS_ZERO_FINDINGS"
+  },
+  "cleanup": {
+    "nativeApplicationProcesses": 0,
+    "deskCodeAgentWebViewProcesses": 0,
+    "narratorProcesses": 0,
+    "liveCaptionsProcesses": 0,
+    "displayScale": "RESTORED_150_PERCENT",
+    "animationEffects": "RESTORED_ON"
+  },
+  "invariants": {
+    "research": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "modelCalls": 0,
+    "benchmarkCalls": 0,
+    "dependenciesInstalled": 0,
+    "packagingPerformed": false,
+    "w2Entered": false,
+    "protectedExternalActions": 0
+  },
+  "decision": {
+    "windowsReferenceHardwareQa": "BLOCKED_EXTERNAL",
+    "finalMediaCaptureAuthorized": false,
+    "nextAuthorizedPhase": "WINDOWS_REFERENCE_HARDWARE_QA",
+    "smallestRemainingRequirement": "Observe and validate Narrator spoken announcements in an interactive Windows session with a functioning human-audible or already-provisioned independent capture channel."
+  }
+}

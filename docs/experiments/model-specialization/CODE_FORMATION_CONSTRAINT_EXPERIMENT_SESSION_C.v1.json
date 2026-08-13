@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "CODE_FORMATION_CONSTRAINT_EXPERIMENT",
+  "session": "C",
+  "status": "PASS",
+  "classification": "ZERO_CALL_CONTROL_SANITY_AND_SCIENTIFIC_VALIDITY_DECISION",
+  "completedAt": "2026-08-11T23:36:28.242Z",
+  "inputs": {
+    "sessionB": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_SESSION_B.v1.json",
+      "sha256": "0cd2c2d8f94b152e5179698ccbb31b0a9088db94ae1274155e2a9b011f6e5581"
+    },
+    "resultsIndex": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_RESULTS_INDEX.v3.json",
+      "sha256": "fc859cf306a4c373def0dc95db7ddbdb8df48f703b4b39355b984158b7a83a87"
+    },
+    "pairedResults": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_SESSION_B_PAIRED_RESULTS.v1.json",
+      "sha256": "14bc2618e8f045f75d8823a4038e74a3409956edf30c801cca7cff88e65398b3"
+    },
+    "transitions": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_SESSION_B_TRANSITIONS.v1.json",
+      "sha256": "f415bfbf00fe8ed8caef37ff36b3a3a4517d73322fbc48a2a285189da7c6e031"
+    }
+  },
+  "artifacts": {
+    "controlSanityMatrix": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_SANITY_COMPARISON_MATRIX.v1.json",
+      "sha256": "3a11d6ba589847a2067b5c3e8470208e95bb4c2e59ce1e3b632d5eaacc2bc729",
+      "bytes": 5914
+    },
+    "parserSchemaAudit": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_PARSER_SCHEMA_AUDIT.v1.json",
+      "sha256": "8a72d4b925645b54f68d1270d33573b45ddd55e3e87d9a13aa522dffd2b5efbe",
+      "bytes": 2019
+    },
+    "treatmentReachability": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_TREATMENT_CONSTRAINT_REACHABILITY_REPORT.v1.json",
+      "sha256": "d73ec7daf1148a8a55b0be55bacb299e4834dd7078896b7aac4a3eec205e8d2e",
+      "bytes": 1285
+    },
+    "scientificValidityDecision": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_SCIENTIFIC_VALIDITY_DECISION.v1.json",
+      "sha256": "409526b762b4c6f55a78a25479d1c00e16c91f1176d3773c1236870b679e57eb",
+      "bytes": 3233
+    },
+    "nextStepProtocol": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_GENERATION_PROTOCOL.v1.json",
+      "sha256": "fec8bf25db741a7b142ebf851a2f87515e3de4c0a1eb6dabcf9aca8575e4dec6",
+      "bytes": 2796
+    },
+    "capabilityResearchStatus": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CAPABILITY_RESEARCH_STATUS.v1.json",
+      "sha256": "e97f50020c8dec9996ea2f998bdbc15d09e83ff0559271a21f27622697d11561",
+      "bytes": 851
+    }
+  },
+  "conclusions": {
+    "formationEffectIdentifiability": "NOT_IDENTIFIABLE_UPSTREAM_ACTION_COLLAPSE",
+    "rootCauseClass": "MULTIPLE_UPSTREAM_CONFIGURATION_DEFECTS",
+    "scientificValidity": "INVALID_UPSTREAM_CONTROL_COLLAPSE",
+    "formationEffect": "NOT_INTERPRETABLE_FOR_FORMATION_EFFECT",
+    "productStatus": "KEEP_MUTATION_DISABLED",
+    "selectedNextStep": "CODE_FORMATION_CONTROL_RECOVERY_GENERATION"
+  },
+  "validation": {
+    "status": "PASS",
+    "commands": [
+      {
+        "command": "npx tsc --ignoreConfig --types node --noEmit --strict --module ESNext --moduleResolution Bundler --target ES2022 --skipLibCheck scripts/analyze_code_formation_constraint_session_c.ts",
+        "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": "npm run typecheck",
+        "stdoutSha256": "1fcfe57781045a818698db7cbe3c9428c10ea084583a12bb0925411079a7a5df",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": "npm run test",
+        "stdoutSha256": "b6067e44fc82281859b50f55adbaf73b6f0bebe723be83464738d5ba85946ceb",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": "npm run build",
+        "stdoutSha256": "80dbb797344efe2ef1392c30b0a9bfb9f50b143fab06b10f871052841eeb8c55",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": "npm run validate:design",
+        "stdoutSha256": "d7a362fafdeb3bac7b6ea839f855924374da36736ee24f893ceea4d8aec9c16a",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "targetModelCalls": 0,
+    "vllmStarts": 0,
+    "port8000Clear": true,
+    "gpuAllocationMiB": 0,
+    "ephemeralStateAbsent": true
+  },
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "scripts/analyze_code_formation_constraint_session_c.ts",
+        "sha256": "9eb482afc039b7ff288a636334a2dea9d3de7ab184b63de6238c53d1119db5d1"
+      }
+    ]
+  },
+  "nextExperimentExecuted": false,
+  "stop": "SESSION_C_BOUNDARY_REACHED"
+}

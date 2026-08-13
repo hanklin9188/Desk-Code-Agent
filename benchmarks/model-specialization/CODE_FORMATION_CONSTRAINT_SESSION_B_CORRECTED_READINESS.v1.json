@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_READY_FOR_SEPARATE_SESSION_B",
+  "sealedAt": "2026-08-11T23:14:10.639Z",
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_SESSION_A.v1.json",
+      "sha256": "3c9590dd51b5564894cc4c5add3dbd9d3f48c75ef63347ef2d3d3e4f8ef92fea"
+    },
+    "preservedAbort": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_SESSION_B_PRECALL_ABORT.v1.json",
+      "sha256": "7c4f58158b9314c410044d9f994e798842924bb3d00a292d61b5536636bc4a9f"
+    },
+    "correction": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_SESSION_B_CORRECTION.v1.json",
+      "sha256": "ef39e618d3d1a4b1d1767abe2b1b7d3f134c1a20d89c5717ab326fc07f920946",
+      "bytes": 4043
+    },
+    "runnerSeal": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_CORRECTED_RUNNER_SEAL.v1.json",
+      "sha256": "063ae37fad1f48797f2d3f74b17e4370f6f2a4f01bc78c4cbf0062279a8d0cd8",
+      "bytes": 2861
+    },
+    "fieldAudit": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_PREREG_FIELD_ACCESS_AUDIT.v1.json",
+      "sha256": "940559b89ec496104f0a94f28afd70c57082bb4adaa49652e14d769a6129e94a",
+      "bytes": 1354
+    },
+    "requestIntentPreflight": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_REQUEST_INTENTS_PREFLIGHT.v1.json",
+      "sha256": "097252ecd106741925de46057eb987f05387b64ab437921d7dce0e88636ee798",
+      "bytes": 47213
+    }
+  },
+  "gates": {
+    "correctedRunnerSourceClosure": "PASS",
+    "all80RequestIntents": "PASS",
+    "taskPopulationUnchanged": "PASS",
+    "scheduleUnchanged": "PASS",
+    "controlTreatmentConfigsUnchanged": "PASS",
+    "ledgersEmpty": "PASS",
+    "modelCallsRemainZero": "PASS",
+    "testsTypecheckBuildDesign": "PASS"
+  },
+  "correctedSourceClosure": {
+    "entries": [
+      {
+        "path": "scripts/run_code_formation_constraint_experiment.ts",
+        "sha256": "4ab314e6429f96150e5c46b4ac88162ea2934fa56390b9ae023b501dd52d21ac"
+      },
+      {
+        "path": "services/code-formation-experiment/src/index.ts",
+        "sha256": "24657fd43cd703827bd54757a6e6c3fedf1d59c6fffb9eb530d88a3710a915f3"
+      },
+      {
+        "path": "services/code-formation-constraint/src/index.ts",
+        "sha256": "fb3e89e452c92b7b5e3f620cc92bc708c5bacd8b5e196e3d81d9e2c175bb5bf7"
+      },
+      {
+        "path": "services/patch-interface-runtime/src/index.ts",
+        "sha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508"
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21"
+      },
+      {
+        "path": "services/model-specialization-runtime/src/index.ts",
+        "sha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee"
+      },
+      {
+        "path": "tests/code-formation-experiment-runner.test.ts",
+        "sha256": "1082e1efd5d3c0deab296d194f1a3245d88718c673397deb4f3e62006388c9b6"
+      }
+    ]
+  },
+  "executionNow": false,
+  "next": "SESSION_B_SEPARATE_INVOCATION_REQUIRED"
+}

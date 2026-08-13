@@ -1,0 +1,35 @@
+version: 1
+shared_model_profile: quality
+agents:
+  orchestrator:
+    prompt: agents/ORCHESTRATOR.agent.md
+    tools: [repo_metadata, artifact_read, route_registry, budget_calculator, approval_request]
+    memory_namespace: orchestrator
+    max_context_tokens: 3500
+  repo_analyst:
+    prompt: agents/REPO_ANALYST.agent.md
+    tools: [search_symbol, find_definition, find_references, find_tests, read_file_range, dependency_graph, static_analysis_read]
+    memory_namespace: analyst
+    max_context_tokens: 7000
+  coder:
+    prompt: agents/CODER.agent.md
+    tools: [read_file_range, search_symbol, find_references, apply_patch, git_diff, request_targeted_test]
+    memory_namespace: coder
+    max_context_tokens: 8192
+  reviewer:
+    prompt: agents/REVIEWER.agent.md
+    tools: [read_diff, read_file_range, read_verification_result, search_references_limited]
+    memory_namespace: reviewer
+    max_context_tokens: 5000
+  reporter:
+    prompt: agents/REPORTER.agent.md
+    tools: [artifact_read, evidence_resolver, report_template, export_markdown]
+    memory_namespace: reporter
+    max_context_tokens: 6500
+runtime_services:
+  - policy_engine
+  - repo_service
+  - deterministic_tester
+  - tool_executor
+  - artifact_store
+  - event_bus

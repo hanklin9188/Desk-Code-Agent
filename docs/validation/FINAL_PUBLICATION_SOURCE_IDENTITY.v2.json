@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "identityId": "dca-final-publication-source-identity-v2",
+  "status": "PASS_INTENTIONAL_PUBLICATION_ONLY_DRIFT",
+  "algorithm": "SHA256_OVER_SORTED_SHA256_RELATIVE_PATH_NUL_RECORDS",
+  "sourceClosure": {
+    "sha256": "219f3be09b4c3466477746bf51cef23a7f39b19ec7a91e54b6de75ff1f4400c8",
+    "files": 2326,
+    "excludes": [
+      "machine-specific or personal-path internal evidence",
+      "sidecars whose targets are excluded",
+      "v2 final publication seal artifacts to avoid recursive identity"
+    ]
+  },
+  "nativePackageBaseline": {
+    "path": "docs/validation/WINDOWS_PACKAGING_SOURCE_IDENTITY.v1.json",
+    "sourceIdentitySha256": "889efaa7fadb222073fa7e0ca5be735ada47fe4c357ebe2fd5373cb0b1b421bb"
+  },
+  "intentionalDrift": [
+    "owner-approved Apache-2.0 root license and package metadata",
+    "authoritative closure of ten distributed dependency license-text gaps",
+    "public README, changelog, release-note, and navigation finalization",
+    "publication validation, checksum, policy, and manifest records"
+  ],
+  "runtimeCapabilityChanges": 0,
+  "modelChanges": 0,
+  "benchmarkChanges": 0,
+  "mutationPolicyChanges": 0,
+  "installerRebuilds": 0,
+  "unexplainedDrift": 0
+}

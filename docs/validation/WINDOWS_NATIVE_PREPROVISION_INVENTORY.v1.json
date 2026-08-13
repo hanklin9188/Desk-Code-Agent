@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "inventoryId": "dca-w1-windows-native-preprovision-v1",
+  "recordedAt": "2026-08-12T15:05:47.0734198+08:00",
+  "privacy": { "hostnameRecorded": false },
+  "windows": {
+    "edition": "Microsoft Windows 11 Home",
+    "version": "10.0.26200",
+    "build": "26200",
+    "architecture": "64-bit"
+  },
+  "cpu": {
+    "name": "AMD Ryzen 7 9700X 8-Core Processor",
+    "physicalCores": 8,
+    "logicalProcessors": 16
+  },
+  "ramBytes": 66191269888,
+  "gpu": [
+    { "name": "NVIDIA GeForce RTX 4080 SUPER", "driverVersion": "32.0.15.9186" },
+    { "name": "AMD Radeon(TM) Graphics", "driverVersion": "32.0.21043.5001", "activeResolution": "2560x1440" }
+  ],
+  "display": { "resolution": "2560x1440", "appliedDpi": 144, "scalingPercent": 150 },
+  "existingPrerequisites": {
+    "visualStudio": { "name": "Visual Studio Community 2026", "version": "18.8.2", "path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community" },
+    "msvc": { "fileVersion": "19.51.36252.0", "path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe" },
+    "windowsSdk": { "version": "10.0.26100.0", "resourceCompilerVersion": "10.0.26100.7705", "path": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" },
+    "webView2": { "version": "150.0.4078.48", "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\150.0.4078.48\\msedgewebview2.exe" }
+  },
+  "approvedToolingBeforeProvision": {
+    "node.exe": "ABSENT",
+    "npm.cmd": "ABSENT",
+    "rustup.exe": "ABSENT",
+    "rustc.exe": "ABSENT",
+    "cargo.exe": "ABSENT"
+  },
+  "relevantExistingPathEntries": ["C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"],
+  "lineage": {
+    "w1V2Sha256": "a4443e7a2231015610323f9a7a818aa45d0d423286a03e66bc01785f4fb9da06",
+    "nativePathAuditSha256": "ff4ba326310cd4d6b8b4315409517c43b658674a2b49d1efc30f84f22c19bd6b",
+    "originalW1Sha256": "2d5ae681480eb7a1df736d0178d9dc877b5eae86799a5c9a4474d43601fea88a"
+  }
+}

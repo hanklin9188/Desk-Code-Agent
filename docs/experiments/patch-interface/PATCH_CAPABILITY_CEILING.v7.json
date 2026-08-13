@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 7,
+  "reportId": "dca-patch-capability-ceiling-v7",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T19:30:44.295Z",
+  "supersedes": {
+    "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v6.json",
+    "sha256": "920700a606ccbaa6fe15476c808f11a4a0275d3870ef74f9c6a838c428aad59f",
+    "reason": "Append-only Session-C correction of causal-claim boundary"
+  },
+  "immutableEvidence": {
+    "gateDecision": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_GATE_DECISION.v1.json",
+      "sha256": "a2466306cb619858d23078abf905c40b214730001165384591db4f8759b01a74"
+    },
+    "observabilityCeiling": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_OBSERVABILITY_CEILING.v1.json",
+      "sha256": "a8ecb303739a426ed93bbdebe71f48d15db59648c7cd3f821dd366a826071c6b"
+    },
+    "productDecision": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_PRODUCT_DECISION.v1.json",
+      "sha256": "e022e162465ffb319b500e13a89362cfc356865e3e821f33f05a6d85d111e6c1"
+    }
+  },
+  "observedCeiling": {
+    "executionStageFindingPreserved": "Behavioral verification remains where most failures became visible.",
+    "causalAttributionCorrection": "Historical artifacts cannot reliably distinguish the semantic cause for 53/66 failures.",
+    "dominantDiagnosableLimitation": "SEMANTIC_OBSERVABILITY",
+    "notEstablished": [
+      "retrieval as dominant",
+      "P2 representation as dominant",
+      "syntax/code formation as dominant",
+      "model semantic capability as dominant or adequate"
+    ]
+  },
+  "conclusion": "No single intervention among G1-G4 is supported by the available historical evidence, and semantic observability is insufficient for a more specific causal intervention.",
+  "productRecommendation": "KEEP_MUTATION_DISABLED",
+  "nextScientificExperiment": {
+    "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PROTOCOL.v1.json",
+    "sha256": "8a8c5d9852eaeb05577c990b195921e44fdc4dddb235a83b816ba468eecfd643"
+  }
+}

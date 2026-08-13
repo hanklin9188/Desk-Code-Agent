@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "reportId": "dca-semantic-failure-confidence-v1",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T19:11:06.048Z",
+  "distribution": {
+    "total": 66,
+    "counts": {
+      "HIGH": 13,
+      "LOW": 53
+    },
+    "ratesPercent": {
+      "HIGH": 19.696969696969695,
+      "LOW": 80.3030303030303
+    }
+  },
+  "t14": 53,
+  "specificPrimaryCoverage": {
+    "count": 13,
+    "denominator": 66,
+    "percent": 19.696969696969695,
+    "definition": "Non-T14 primary classification supported by direct immutable stage/retrieval evidence"
+  },
+  "semanticProgramCauseCoverage": {
+    "count": 0,
+    "denominator": 66,
+    "percent": 0,
+    "definition": "T1-T9 semantic program-cause classification; intentionally zero because edit bodies are unavailable"
+  },
+  "noSuccessThresholdInvented": true,
+  "targetModelCalls": 0
+}

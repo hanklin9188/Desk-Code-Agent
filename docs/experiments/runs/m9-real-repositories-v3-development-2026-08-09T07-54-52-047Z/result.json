@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-real-repositories-v3-development-2026-08-09T07-54-52-047Z",
+  "status": "PASS",
+  "resultSha256": "fa29e24c923bbf21fdf97cbb24f622979c5235f28fc65613724a21266f2d0c30",
+  "summary": {
+    "E1": {
+      "overall": {
+        "tasks": 48,
+        "repositories": 12,
+        "successes": 47,
+        "successRate": 0.9791666666666666,
+        "schemaValidity": 1,
+        "evidenceSetCompleteness": 1,
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "mrr": 1,
+        "fallbackRate": 0,
+        "irrelevantTokenRatio": 0,
+        "medianRetrievedTokens": 1250,
+        "medianPromptTokens": 1414,
+        "medianLatencyMs": 453.261
+      },
+      "byEvidenceClass": {
+        "METADATA": {
+          "tasks": 12,
+          "repositories": 12,
+          "successes": 12,
+          "successRate": 1,
+          "schemaValidity": 1,
+          "evidenceSetCompleteness": 1,
+          "precisionAtK": 1,
+          "recallAtK": 1,
+          "mrr": 1,
+          "fallbackRate": 0,
+          "irrelevantTokenRatio": 0,
+          "medianRetrievedTokens": 278,
+          "medianPromptTokens": 315,
+          "medianLatencyMs": 385.719
+        },
+        "MIXED": {
+          "tasks": 23,
+          "repositories": 12,
+          "successes": 22,
+          "successRate": 0.9565217391304348,
+          "schemaValidity": 1,
+          "evidenceSetCompleteness": 1,
+          "precisionAtK": 1,
+          "recallAtK": 1,
+          "mrr": 1,
+          "fallbackRate": 0,
+          "irrelevantTokenRatio": 0,
+          "medianRetrievedTokens": 1718,
+          "medianPromptTokens": 2277,
+          "medianLatencyMs": 536.23
+        },
+        "ARCHITECTURE": {
+          "tasks": 13,
+          "repositories": 12,
+          "successes": 13,
+          "successRate": 1,
+          "schemaValidity": 1,
+          "evidenceSetCompleteness": 1,
+          "precisionAtK": 1,
+          "recallAtK": 1,
+          "mrr": 1,
+          "fallbackRate": 0,
+          "irrelevantTokenRatio": 0,
+          "medianRetrievedTokens": 1250,
+          "medianPromptTokens": 1350,
+          "medianLatencyMs": 442.824
+        }
+      }
+    },
+    "E-MIN-V2": {
+      "overall": {
+        "tasks": 48,
+        "repositories": 12,
+        "successes": 33,
+        "successRate": 0.6875,
+        "schemaValidity": 1,
+        "evidenceSetCompleteness": 0.2708333333333333,
+        "precisionAtK": 0.2916666666666667,
+        "recallAtK": 0.40625,
+        "mrr": 0.4583333333333333,
+        "fallbackRate": 0,
+        "irrelevantTokenRatio": 0.6963431425993458,
+        "medianRetrievedTokens": 2500,
+        "medianPromptTokens": 1358,
+        "medianLatencyMs": 409.532
+      },
+      "byEvidenceClass": {
+        "METADATA": {
+          "tasks": 12,
+          "repositories": 12,
+          "successes": 9,
+          "successRate": 0.75,
+          "schemaValidity": 1,
+          "evidenceSetCompleteness": 0.08333333333333333,
+          "precisionAtK": 0.041666666666666664,
+          "recallAtK": 0.08333333333333333,
+          "mrr": 0.041666666666666664,
+          "fallbackRate": 0,
+          "irrelevantTokenRatio": 0.9439546599496221,
+          "medianRetrievedTokens": 2500,
+          "medianPromptTokens": 1346,
+          "medianLatencyMs": 443.164
+        },
+        "MIXED": {
+          "tasks": 23,
+          "repositories": 12,
+          "successes": 11,
+          "successRate": 0.4782608695652174,
+          "schemaValidity": 1,
+          "evidenceSetCompleteness": 0,
+          "precisionAtK": 0.2608695652173913,
+          "recallAtK": 0.2608695652173913,
+          "mrr": 0.3695652173913043,
+          "fallbackRate": 0,
+          "irrelevantTokenRatio": 0.6972426097557595,
+          "medianRetrievedTokens": 2500,
+          "medianPromptTokens": 1372,
+          "medianLatencyMs": 446.086
+        },
+        "ARCHITECTURE": {
+          "tasks": 13,
+          "repositories": 12,
+          "successes": 13,
+          "successRate": 1,
+          "schemaValidity": 1,
+          "evidenceSetCompleteness": 0.9230769230769231,
+          "precisionAtK": 0.5769230769230769,
+          "recallAtK": 0.9615384615384616,
+          "mrr": 1,
+          "fallbackRate": 0,
+          "irrelevantTokenRatio": 0.46618730007620535,
+          "medianRetrievedTokens": 2500,
+          "medianPromptTokens": 1350,
+          "medianLatencyMs": 354.912
+        }
+      }
+    },
+    "E-MIN-V3": {
+      "overall": {
+        "tasks": 48,
+        "repositories": 12,
+        "successes": 47,
+        "successRate": 0.9791666666666666,
+        "schemaValidity": 1,
+        "evidenceSetCompleteness": 0.75,
+        "precisionAtK": 0.7916666666666666,
+        "recallAtK": 0.875,
+        "mrr": 0.75,
+        "fallbackRate": 0.25,
+        "irrelevantTokenRatio": 0.1415431154028016,
+        "medianRetrievedTokens": 1250,
+        "medianPromptTokens": 894,
+        "medianLatencyMs": 420.45
+      },
+      "byEvidenceClass": {
+        "METADATA": {
+          "tasks": 12,
+          "repositories": 12,
+          "successes": 12,
+          "successRate": 1,
+          "schemaValidity": 1,
+          "evidenceSetCompleteness": 1,
+          "precisionAtK": 1,
+          "recallAtK": 1,
+          "mrr": 1,
+          "fallbackRate": 0,
+          "irrelevantTokenRatio": 0,
+          "medianRetrievedTokens": 278,
+          "medianPromptTokens": 325,
+          "medianLatencyMs": 375.846
+        },
+        "MIXED": {
+          "tasks": 23,
+          "repositories": 12,
+          "successes": 22,
+          "successRate": 0.9565217391304348,
+          "schemaValidity": 1,
+          "evidenceSetCompleteness": 0.5217391304347826,
+          "precisionAtK": 0.5869565217391304,
+          "recallAtK": 0.7608695652173914,
+          "mrr": 0.5,
+          "fallbackRate": 0.5217391304347826,
+          "irrelevantTokenRatio": 0.27105743963745743,
+          "medianRetrievedTokens": 1619,
+          "medianPromptTokens": 1041,
+          "medianLatencyMs": 425.973
+        },
+        "ARCHITECTURE": {
+          "tasks": 13,
+          "repositories": 12,
+          "successes": 13,
+          "successRate": 1,
+          "schemaValidity": 1,
+          "evidenceSetCompleteness": 0.9230769230769231,
+          "precisionAtK": 0.9615384615384616,
+          "recallAtK": 0.9615384615384616,
+          "mrr": 0.9615384615384616,
+          "fallbackRate": 0,
+          "irrelevantTokenRatio": 0.043057571359458154,
+          "medianRetrievedTokens": 1250,
+          "medianPromptTokens": 1030,
+          "medianLatencyMs": 428.131
+        }
+      }
+    }
+  }
+}

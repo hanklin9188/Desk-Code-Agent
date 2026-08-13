@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "categories": [
+    "retrieval failure",
+    "context-packaging failure",
+    "schema/output failure",
+    "citation failure",
+    "diagnosis/oracle failure",
+    "regression escape",
+    "permission/safety violation",
+    "reviewer regression",
+    "skill admission rejection",
+    "environment/external blocker",
+    "instruction overload",
+    "model reasoning/selection failure",
+    "unsafe action attempted but deterministically blocked",
+    "benchmark validity/generalization hold"
+  ],
+  "observations": [
+    { "run": "m3-incremental-2026-08-09T00-31-16-355Z", "category": "retrieval failure", "detail": "Variable definitions were absent; Recall@K was 0.75", "resolved": true },
+    { "run": "m4-report-corpus-2026-08-09T00-49-17-363Z", "category": "retrieval failure", "detail": "Duplicated-logic signal false negative", "resolved": true },
+    { "run": "live-complete-report-2026-08-09T00-51-schema-failure", "category": "schema/output failure", "detail": "Confidence schema mismatch", "resolved": true },
+    { "run": "live-complete-report-2026-08-09T00-53-truncated-json", "category": "schema/output failure", "detail": "Truncated structured output", "resolved": true },
+    { "run": "live-complete-report-2026-08-09T00-54-citation-failure", "category": "citation failure", "detail": "Unknown or empty citation was rejected", "resolved": true },
+    { "run": "m5-hidden-oracle-2026-08-09T01-06-16-533Z", "category": "diagnosis/oracle failure", "detail": "TypeScript oracle omitted its source target", "resolved": true },
+    { "run": "m9-e1-e7-2026-08-09T01-18-51-568Z", "category": "context-packaging failure", "detail": "Pilot E4 success 33.33%, down 33.33 pp from E3; C1 generation-2 packaging restores non-inferior success with lower tokens", "resolved": true, "resolution_run": "m9-harness-recovery-final-2026-08-09T04-43-33-470Z" },
+    { "run": "m9-e1-e7-2026-08-09T01-18-51-568Z", "category": "reviewer regression", "detail": "Pilot E6 success 33.33%, down 16.67 pp with 109.77% token overhead; expanded reviewer still regresses and is disabled by default", "resolved": true, "resolution_run": "m9-harness-recovery-diagnostic-2026-08-09T04-32-48-950Z" },
+    { "run": "m9-e1-e7-2026-08-09T01-18-51-568Z", "category": "permission/safety violation", "detail": "Pilot E7/R26 pairing observed wrong actions; expanded runtime separates attempts from violations and keeps deterministic policy always on", "resolved": true, "resolution_run": "m9-harness-recovery-final-2026-08-09T04-43-33-470Z" },
+    { "run": "m9-e1-e7-2026-08-09T01-18-51-568Z", "category": "skill admission rejection", "detail": "Pilot kept all nine experimental; expanded isolated non-inferior efficiency evidence admits C1 R09 only", "resolved": true, "resolution_run": "m9-harness-recovery-final-2026-08-09T04-43-33-470Z" },
+    { "run": "m9-harness-recovery-diagnostic-2026-08-09T04-32-48-950Z", "category": "retrieval failure", "detail": "Hybrid Top-5 reached Recall@K 1.0 but success fell to 103/108 with 42.82% irrelevant-token ratio; Symbol Top-2 retained", "resolved": true },
+    { "run": "m9-harness-recovery-diagnostic-2026-08-09T04-32-48-950Z", "category": "instruction overload", "detail": "Always-review history reduced median signal ratio to 33.67% and doubled tokens without detecting a regression", "resolved": true },
+    { "run": "m9-harness-recovery-final-2026-08-09T04-43-33-470Z", "category": "reviewer regression", "detail": "Conditional E6/E7 scored 315/324 versus E5 318/324 with zero regression detections", "resolved": true },
+    { "run": "m9-harness-recovery-optimized-2026-08-09T05-00-34-145Z", "category": "benchmark validity/generalization hold", "detail": "E-MIN-V2 scored 324/324 after same-suite tuning; fresh holdout and real patch tasks are required", "resolved": false },
+    { "run": "m10-release-prep-2026-08-09T01-33-04-555Z", "category": "environment/external blocker", "detail": "Native packages, Windows QA, signing, source revision, licenses and external delivery remain blocked", "resolved": false }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "dca-semantic-failure-decomposition-session-b-dual-axis-review-v1",
+  "status": "PASS",
+  "reviewedAt": "2026-08-12T03:14:00.000Z",
+  "skill": {
+    "skill_id": "D07",
+    "skill_version": "0.2.0",
+    "run_id": "1af1143e-bd4b-4599-b8b7-072e0cbd9450",
+    "status": "PASS",
+    "input_artifact_hashes": [
+      "6851a9a2a2fd25757413f71c0b331e5899a397c1928b59259f3cc6606123ed47",
+      "7dea90719a08855d18145530e5cc84b281ce1cc0ab7777845a8210d6a7ee88d0",
+      "f0f020501898aed91c64c6f2c8d8ffd71dc8ec437e975546b9fc6bdd90edb978",
+      "03d1bfec163dcd0abf2e8841776d48a2ca275e0ae621dc1eef37a9c17c5e182c"
+    ],
+    "evidence_ids": [
+      "SFD-B-CLASSIFICATION-66",
+      "SFD-B-CONTROLS-29",
+      "SFD-B-AUDIT-60",
+      "SFD-B-OBSERVABILITY"
+    ],
+    "warnings": [
+      "T14 53/66 measures the historical persistence ceiling and must not be interpreted as one semantic failure family.",
+      "SINGLE_RANGE is objective reference-fix scope; actual proposed edit scope is unavailable because raw actions were not persisted."
+    ],
+    "errors": [],
+    "metrics": {
+      "specBlockers": 0,
+      "standardsBlockers": 0,
+      "targetModelCalls": 0
+    }
+  },
+  "specReview": {
+    "status": "PASS",
+    "findings": [],
+    "checks": {
+      "sessionBOnly": true,
+      "failuresExactly66": true,
+      "controlsExactly29": true,
+      "exactlyOneFrozenPrimary": true,
+      "maximumTwoSecondary": true,
+      "noDiffHashSemanticInference": true,
+      "failureStageGuardrails": true,
+      "allDimensionsComplete": true,
+      "retrySecondaryOnly": true,
+      "t14ReasonsQuantified": true,
+      "frozenAuditApplied": true,
+      "gatesNotApplied": true,
+      "sessionCNotEntered": true
+    }
+  },
+  "standardsReview": {
+    "status": "PASS",
+    "findings": [],
+    "checks": {
+      "strictTypeScript": "PASS",
+      "projectTypecheck": "PASS",
+      "completeTests": "PASS",
+      "productionBuild": "PASS",
+      "designValidation": "PASS",
+      "immutableSidecars": "PASS",
+      "artifactCitations": "PASS",
+      "sourceClosure": "PASS",
+      "secretScan": "PASS",
+      "privacy": "PASS_NO_RAW_OUTPUT_ACTION_OR_SOURCE_REPERSISTENCE",
+      "protectedActions": "PASS_ALL_FALSE",
+      "runtimeCleanup": "PASS"
+    }
+  },
+  "decision": "APPROVED_SESSION_B_ONLY",
+  "targetModelCalls": 0
+}

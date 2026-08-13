@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "experimentId": "m9-g3-ui-soak-2026-08-09T12-34-53-064Z",
+  "status": "PASS",
+  "classification": "HEADLESS_EVENT_PROJECTION_AND_SERVER_RENDER_UI_SOAK",
+  "supersedesImplementationBaseline": "m9-g3-ui-soak-2026-08-09T09-45-09-535Z",
+  "boundedRuntimeControl": {
+    "maxRunsInMemory": 100,
+    "maxEventsPerRunInMemory": 2000,
+    "monotonicTotalAndLastSequencePreservedAcrossTrim": true
+  },
+  "runs": 100,
+  "eventsPerRun": 2000,
+  "totalEvents": 200000,
+  "rapidCancelRestartRuns": 10,
+  "repositoryIdentities": 12,
+  "largeLogEvents": 2000,
+  "metrics": {
+    "renderSamples": 900,
+    "renderP50Ms": 2.2881789999999,
+    "renderP95Ms": 6.015247000000272,
+    "renderMaxMs": 8.801418999999896,
+    "repositorySwitchP95Ms": 6.400967999999921,
+    "rssStartMiB": 91.76171875,
+    "rssPeakMiB": 319.76953125,
+    "rssGrowthMiB": 228.0078125,
+    "peakGrowthMiB": 228.0078125,
+    "droppedTruthEvents": 0,
+    "reconnectFailures": 0,
+    "staleStates": 0,
+    "duplicateNotifications": 0
+  },
+  "targets": {
+    "renderP95Under50Ms": true,
+    "repositorySwitchP95Under100Ms": true,
+    "peakRssGrowthUnder256MiB": true,
+    "zeroDroppedTruthEvents": true,
+    "zeroReconnectFailures": true,
+    "zeroStaleStates": true,
+    "zeroDuplicateNotifications": true
+  },
+  "limitation": "Headless React server rendering and event-projection soak measures truth-state/render preparation, not Windows compositor frame time or screen-reader behavior."
+}

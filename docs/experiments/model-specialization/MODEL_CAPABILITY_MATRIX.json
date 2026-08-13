@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T13:31:19.534Z",
+  "classification": "CONTROLLED_MODEL_SPECIALIZATION_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "baseline": {
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "status": "RUN"
+  },
+  "coder": {
+    "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "status": "BLOCKED_APPROVAL",
+    "reason": "Pinned Qwen2.5-Coder-3B-Instruct snapshot is absent; download and Qwen Research License acceptance require explicit owner approval.",
+    "modelCalls": 0,
+    "measuredValues": null
+  },
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "exactModels": {
+      "path": "benchmarks/model-specialization/EXACT_MODEL_MANIFESTS.json",
+      "sha256": "f16fa1c3d2a8c266b4c9675f3cc771362ed83b4c66ef76a9c68f18f9a449825b"
+    }
+  },
+  "comparisonStatus": "NOT_ESTIMABLE_CANDIDATE_NOT_RUN",
+  "units": {
+    "capabilityRates": "proportion",
+    "latency": "milliseconds",
+    "peakVram": "MiB",
+    "safety": "actual violations"
+  },
+  "rows": [
+    {
+      "capability": "Task understanding",
+      "baseline": 0,
+      "coder": null,
+      "comparison": "NOT_ESTIMABLE"
+    },
+    {
+      "capability": "Navigation",
+      "baseline": 0.68,
+      "coder": null,
+      "comparison": "NOT_ESTIMABLE"
+    },
+    {
+      "capability": "Oracle-context reasoning",
+      "baseline": 0,
+      "coder": null,
+      "comparison": "NOT_ESTIMABLE"
+    },
+    {
+      "capability": "Diagnosis",
+      "baseline": 0.08,
+      "coder": null,
+      "comparison": "NOT_ESTIMABLE"
+    },
+    {
+      "capability": "Patch only",
+      "baseline": 0,
+      "coder": null,
+      "comparison": "NOT_ESTIMABLE"
+    },
+    {
+      "capability": "Planning",
+      "baseline": 0.5833333333333334,
+      "coder": null,
+      "comparison": "NOT_ESTIMABLE"
+    },
+    {
+      "capability": "One-shot end-to-end",
+      "baseline": 0,
+      "coder": null,
+      "comparison": "NOT_ESTIMABLE"
+    },
+    {
+      "capability": "2-call recovery",
+      "baseline": 0,
+      "coder": null,
+      "comparison": "NOT_ESTIMABLE"
+    },
+    {
+      "capability": "Hidden-test generalization",
+      "baseline": 0,
+      "coder": null,
+      "comparison": "NOT_ESTIMABLE"
+    },
+    {
+      "capability": "Structured-output validity",
+      "baseline": 0.6853932584269663,
+      "coder": null,
+      "comparison": "NOT_ESTIMABLE"
+    },
+    {
+      "capability": "Safety",
+      "baseline": 0,
+      "coder": null,
+      "comparison": "0 baseline violations; coder NOT_RUN"
+    },
+    {
+      "capability": "Latency",
+      "baseline": 403.77480300000025,
+      "coder": null,
+      "comparison": "milliseconds; coder NOT_RUN"
+    },
+    {
+      "capability": "Peak VRAM",
+      "baseline": 12022,
+      "coder": null,
+      "comparison": "MiB; coder NOT_RUN"
+    }
+  ],
+  "noImputation": true
+}

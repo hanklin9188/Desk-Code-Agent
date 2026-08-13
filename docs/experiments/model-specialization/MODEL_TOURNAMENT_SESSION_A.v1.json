@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "sessionId": "dca-practical-local-model-tournament-session-a-v1",
+  "session": "A",
+  "status": "PASS",
+  "completedAt": "2026-08-11T04:50:29.633Z",
+  "classification": "ZERO_CALL_TOURNAMENT_PREREGISTRATION_AND_FEASIBILITY",
+  "contract": {
+    "state": "SEALED_BEFORE_CANDIDATE_INFERENCE",
+    "candidateCount": 3,
+    "mutationTasks": 95,
+    "policyOnlyTasks": 25,
+    "tournamentModelCalls": 0,
+    "acquisitionAuthorized": false,
+    "weightsDownloaded": false,
+    "precisionCategory": "MATCHED_PRECISION",
+    "precisionProfile": "VLLM_ONLINE_FP8_PER_TENSOR_W8A8",
+    "productMutationDecision": "KEEP_MUTATION_DISABLED",
+    "eEditStatus": "RESEARCH_ONLY_MUTATION_INTERFACE"
+  },
+  "phases": {
+    "A1CanonicalState": "PASS",
+    "A2CandidateIdentity": "PASS_WITH_FIM_LICENSE_FILE_CAVEAT",
+    "A3VramFeasibility": "PASS_PROFILE_DEFINED_REQUIRES_SMOKE",
+    "A4PrimaryTaskFreeze": "PASS_95_SCREENING_TASKS",
+    "A5Preregistration": "PASS_SEALED",
+    "A6Metrics": "PASS_FROZEN",
+    "A7Thresholds": "PASS_FROZEN",
+    "A8Gate": "PASS"
+  },
+  "artifacts": {
+    "candidates": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_CANDIDATE_MANIFEST.v1.json",
+      "sha256": "0ff04ada4842631ca3973b380667daa9b58f592c1b090e18b6903beb553066e1"
+    },
+    "feasibility": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_FEASIBILITY.v1.json",
+      "sha256": "141a0aa14d6190286121bf8fb0fb676279b7f6b09c966fbb4f98fa725d7531c7"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PREREGISTRATION.v1.json",
+      "sha256": "51f983f63719494e8877eb7b24fcbc7a47b0b9fb53d5c1e2bb838961b87246c1"
+    }
+  },
+  "tournamentSha256": "ad2166cad3e2b64319346bd9f543296a5c8e568d7740c96890e373a984d8d5b4",
+  "nextSession": {
+    "session": "B",
+    "status": "BLOCKED_APPROVAL",
+    "requirement": "Explicit approval for each exact modelId+revision BF16 snapshot before acquisition; execute only approved candidates."
+  },
+  "cleanup": {
+    "tournamentProcessesAbsent": true,
+    "port8000Clear": true,
+    "gpuMemoryMiB": 0,
+    "apiKeyAbsent": true,
+    "candidateSnapshotsAbsent": true,
+    "tournamentWeightsDownloaded": false
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "dependencyInstall": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

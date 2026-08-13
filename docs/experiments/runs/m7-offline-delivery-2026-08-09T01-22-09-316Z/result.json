@@ -1,0 +1,83 @@
+{
+  "experimentId": "m7-offline-delivery-2026-08-09T01-22-09-316Z",
+  "status": "PASS",
+  "mode": "OFFLINE_INJECTED_TRANSPORT",
+  "externalNetworkUsed": false,
+  "externalWriteOccurred": false,
+  "target": {
+    "owner": "hanklin91888",
+    "repo": "Desk-Code-Agent"
+  },
+  "branch": "milestone/m7-offline",
+  "artifactHash": "sha256:3e4f9585a4cb164e06f60637c1d95421864f15d8924f96e4915ba8e9956a8965",
+  "receipts": [
+    {
+      "status": "EXECUTED",
+      "action": "CREATE_BRANCH",
+      "target": {
+        "owner": "hanklin91888",
+        "repo": "Desk-Code-Agent"
+      },
+      "branch": "milestone/m7-offline",
+      "artifactHash": "sha256:3e4f9585a4cb164e06f60637c1d95421864f15d8924f96e4915ba8e9956a8965",
+      "remoteReference": "refs/heads/milestone/m7-offline"
+    },
+    {
+      "status": "EXECUTED",
+      "action": "PUSH",
+      "target": {
+        "owner": "hanklin91888",
+        "repo": "Desk-Code-Agent"
+      },
+      "branch": "milestone/m7-offline",
+      "artifactHash": "sha256:3e4f9585a4cb164e06f60637c1d95421864f15d8924f96e4915ba8e9956a8965",
+      "remoteReference": "offline-fixture-sha"
+    },
+    {
+      "status": "EXECUTED",
+      "action": "OPEN_DRAFT_PR",
+      "target": {
+        "owner": "hanklin91888",
+        "repo": "Desk-Code-Agent"
+      },
+      "branch": "milestone/m7-offline",
+      "artifactHash": "sha256:3e4f9585a4cb164e06f60637c1d95421864f15d8924f96e4915ba8e9956a8965",
+      "remoteReference": "offline://draft-pr/1"
+    }
+  ],
+  "calls": [
+    {
+      "action": "CREATE_BRANCH",
+      "target": "hanklin91888/Desk-Code-Agent",
+      "branch": "milestone/m7-offline",
+      "base": "main"
+    },
+    {
+      "action": "PUSH",
+      "target": "hanklin91888/Desk-Code-Agent",
+      "branch": "milestone/m7-offline",
+      "contentHash": "3e4f9585a4cb164e06f60637c1d95421864f15d8924f96e4915ba8e9956a8965"
+    },
+    {
+      "action": "OPEN_DRAFT_PR",
+      "target": "hanklin91888/Desk-Code-Agent",
+      "branch": "milestone/m7-offline",
+      "base": "main",
+      "metadataHash": "6bb829fd7fb888b0066e44bfe467b1f15c729a3a93bd7081020e0bcd7a577113"
+    }
+  ],
+  "controls": {
+    "exactActionApproval": true,
+    "exactTargetApproval": true,
+    "exactArtifactApproval": true,
+    "expiry": true,
+    "oneTimeApproval": true,
+    "protectedMain": true,
+    "secretScan": true,
+    "boundedDraftMetadata": true
+  },
+  "externalDelivery": {
+    "status": "BLOCKED_APPROVAL",
+    "reason": "No commit, remote, push, PR, or GitHub write is authorized"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T13:31:19.534Z",
+  "classification": "CONTROLLED_MODEL_SPECIALIZATION_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "baseline": {
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "status": "RUN"
+  },
+  "coder": {
+    "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "status": "BLOCKED_APPROVAL",
+    "reason": "Pinned Qwen2.5-Coder-3B-Instruct snapshot is absent; download and Qwen Research License acceptance require explicit owner approval.",
+    "modelCalls": 0,
+    "measuredValues": null
+  },
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "exactModels": {
+      "path": "benchmarks/model-specialization/EXACT_MODEL_MANIFESTS.json",
+      "sha256": "f16fa1c3d2a8c266b4c9675f3cc771362ed83b4c66ef76a9c68f18f9a449825b"
+    }
+  },
+  "comparisonStatus": "NOT_ESTIMABLE_CANDIDATE_NOT_RUN",
+  "report": "Task understanding only",
+  "baselineResult": {
+    "tasks": 24,
+    "successes": 0,
+    "successRate": 0,
+    "wilson95": [
+      1.3877787807814457e-17,
+      0.13797620467498017
+    ],
+    "schemaValidity": 0.375,
+    "meanLatencyMs": 3636.3464088333326,
+    "totalTokens": 9429
+  },
+  "coderResult": {
+    "status": "BLOCKED_APPROVAL",
+    "reason": "Pinned Qwen2.5-Coder-3B-Instruct snapshot is absent; download and Qwen Research License acceptance require explicit owner approval.",
+    "modelCalls": 0,
+    "measuredValues": null
+  },
+  "absolutePercentagePointChange": null,
+  "pairedOutcomes": null,
+  "conclusion": "No model-specialization effect can be computed without candidate observations."
+}

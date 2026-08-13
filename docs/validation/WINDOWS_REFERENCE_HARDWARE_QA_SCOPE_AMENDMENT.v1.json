@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "dca-w1-narrator-scope-amendment-v1",
+  "phase": "WINDOWS_REFERENCE_HARDWARE_QA",
+  "status": "PASS_WITH_EXPLICIT_NONBLOCKING_ACCESSIBILITY_LIMITATION",
+  "basis": {
+    "path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.v6.json",
+    "sha256": "59416a7e2dfaf48aee7601f762e73bd06f7a18243f0561fd6a98b42882e56161",
+    "integrity": "PASS",
+    "historicalReportModified": false
+  },
+  "originalBlockingCondition": "Narrator spoken output could not be independently observed in the available Windows session.",
+  "scopeClassification": {
+    "item": "Human-observed Windows Narrator spoken-output validation",
+    "status": "DEFERRED_NONBLOCKING_PUBLIC_RELEASE_ACCESSIBILITY_QA",
+    "originalPhase": "W1_WINDOWS_REFERENCE_HARDWARE_QA",
+    "revisedPhaseOwnership": "WINDOWS_RELEASE_ACCESSIBILITY_QA",
+    "releaseBlocking": true,
+    "portfolioMediaCaptureBlocking": false
+  },
+  "justification": [
+    "W1's immediate purpose is native Windows product-operation verification and readiness for deterministic portfolio media capture.",
+    "Native startup, WebView2, required DPI states, keyboard access, focus behavior, semantic accessibility structure, fonts, actual reduced motion, and path safety have passed.",
+    "Audible Narrator verification does not affect screenshot or GIF correctness or the core Windows execution path.",
+    "Human-observed screen-reader behavior remains required future work for public-distribution accessibility QA.",
+    "The unresolved evidence remains explicit and is reassigned rather than suppressed."
+  ],
+  "preservedAccessibilityEvidence": {
+    "keyboardNavigation": "PASS",
+    "focusVisibility": "PASS",
+    "modalFocusTrap": "PASS",
+    "escapeDismissal": "PASS",
+    "focusRestoration": "PASS",
+    "uiaSemanticStructure": "VALIDATED",
+    "chartTextualAlternatives": "PRESENT",
+    "actualWindowsReducedMotion": "PASS",
+    "narratorLaunched": true,
+    "spokenOutputObserved": false,
+    "spokenOutputResult": "NOT_RUN_ENVIRONMENT_LIMITATION"
+  },
+  "explicitNonclaims": [
+    "NARRATOR_PASS",
+    "FULL_SCREEN_READER_CERTIFICATION",
+    "WCAG_CERTIFICATION",
+    "ACCESSIBILITY_CERTIFICATION"
+  ],
+  "authorization": {
+    "w1FinalStatus": "PASS_WITH_EXPLICIT_NONBLOCKING_ACCESSIBILITY_LIMITATION",
+    "w2Phase": "FINAL_MEDIA_CAPTURE",
+    "w2Status": "READY_NOT_STARTED",
+    "w2Executed": false
+  },
+  "invariants": {
+    "research": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "modelCalls": 0,
+    "benchmarkCalls": 0,
+    "narratorQaRerun": false,
+    "dependenciesInstalled": 0,
+    "protectedExternalActions": 0
+  },
+  "validation": {
+    "json": "PASS",
+    "documentationLinks": "PASS",
+    "designValidation": "PASS_ZERO_WARNINGS_ZERO_ERRORS",
+    "checksumSidecar": "PASS",
+    "secretScan": "PASS_ZERO_FINDINGS",
+    "currentStateConsistency": "PASS"
+  }
+}

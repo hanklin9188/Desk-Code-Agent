@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 3,
+  "dryRunId": "dca-privacy-safe-semantic-observability-v3-complete-pipeline-dry-run",
+  "status": "PASS_ZERO_TARGET_MODEL_CALLS",
+  "createdAt": "2026-08-11T21:14:09.839Z",
+  "inputs": {
+    "runnerSeal": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_B_RUNNER_SEAL.v3.json",
+      "sha256": "e63d4831dcf3bed2e23b262998ce8211d58a6ad7ec6ba62a45ae648d6baed9e2"
+    }
+  },
+  "completedResponseScenarios": [
+    {
+      "scenario": "valid_success",
+      "pairSha256": "cbb47a160fa2234466edadf5c7470e06508768032469ad1daee70622d7926499",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_OBJECT",
+      "actionValidationStatus": "PASS",
+      "afterSourceParseStatus": "PASS",
+      "syntax": "PASS",
+      "visible": "PASS",
+      "hidden": "PASS",
+      "privacyLeaks": 0
+    },
+    {
+      "scenario": "invalid_action",
+      "pairSha256": "00619a1e12c3cb6a46714539cf5f2f15c08992c2d01824f17b1b4c72c8a9ddd9",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_INVALID",
+      "actionValidationStatus": "NOT_APPLICABLE",
+      "afterSourceParseStatus": "NOT_APPLICABLE",
+      "syntax": "NOT_RUN",
+      "visible": "NOT_RUN",
+      "hidden": "NOT_RUN",
+      "privacyLeaks": 0
+    },
+    {
+      "scenario": "malformed_replacement",
+      "pairSha256": "efc2e19bc38860de61dc97ec7c3378171639443e19d0aa14db5172d114c148c1",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_OBJECT",
+      "actionValidationStatus": "PASS",
+      "afterSourceParseStatus": "FAIL",
+      "syntax": "FAIL",
+      "visible": "NOT_RUN",
+      "hidden": "NOT_RUN",
+      "privacyLeaks": 0
+    },
+    {
+      "scenario": "syntax_failure",
+      "pairSha256": "ee8dddf458f8cbf1aae935555235f0e8ed99802bef894cb92621c8002c5f52da",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_OBJECT",
+      "actionValidationStatus": "PASS",
+      "afterSourceParseStatus": "FAIL",
+      "syntax": "FAIL",
+      "visible": "NOT_RUN",
+      "hidden": "NOT_RUN",
+      "privacyLeaks": 0
+    },
+    {
+      "scenario": "visible_failure",
+      "pairSha256": "03678d20c16509d08eb996e2f82c99c1c7ed3cdc5375cc6f68b57db4880220dd",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_OBJECT",
+      "actionValidationStatus": "PASS",
+      "afterSourceParseStatus": "PASS",
+      "syntax": "PASS",
+      "visible": "FAIL",
+      "hidden": "FAIL",
+      "privacyLeaks": 0
+    },
+    {
+      "scenario": "hidden_failure",
+      "pairSha256": "0745a5d19731a93fd18d9bc2f1d8fd9fc728296b7cba2815ee2ad23ebe5d719b",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_OBJECT",
+      "actionValidationStatus": "PASS",
+      "afterSourceParseStatus": "PASS",
+      "syntax": "PASS",
+      "visible": "PASS",
+      "hidden": "FAIL",
+      "privacyLeaks": 0
+    }
+  ],
+  "storageScenarios": [
+    {
+      "scenario": "insufficient_disk_before_task",
+      "status": "DISK_CAPACITY_PRECHECK_FAILED",
+      "callStarted": false
+    },
+    {
+      "scenario": "cleanup_failure",
+      "status": "CLEANUP_FAILED",
+      "nextCallStarted": false
+    },
+    {
+      "scenario": "stale_isolation",
+      "status": "STALE_ISOLATION_DETECTED",
+      "callStarted": false
+    }
+  ],
+  "summary": {
+    "scenarios": 9,
+    "syntheticCompletedResponses": 6,
+    "L0Packets": 6,
+    "L1Packets": 6,
+    "sameCallPairs": 6,
+    "extractorCrashes": 0,
+    "privacyLeaks": 0,
+    "targetModelCalls": 0,
+    "storageFailuresBeforeCallStarted": 2,
+    "cleanupFailuresBlockNextCall": 1,
+    "networkInference": false
+  },
+  "protectedActions": {
+    "targetModelCall": false,
+    "vllmStart": false,
+    "modelDownload": false
+  }
+}

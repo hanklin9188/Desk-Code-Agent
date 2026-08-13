@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "supersessionId": "dca-model-specialization-v3-static-narrative-correction",
+  "recordedAt": "2026-08-09T22:21:53+08:00",
+  "status": "SUPERSEDED_REPORT_RENDERING_ONLY",
+  "rawCorrectedEvidence": {
+    "status": "VALID",
+    "candidateDevelopment": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.v3.json",
+    "candidateSmoke": "docs/experiments/model-specialization/CODER_MODEL_SMOKE_VALIDATION.v3.json",
+    "fairness": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v3.json",
+    "cleanup": "docs/experiments/model-specialization/CODER_MODEL_SHUTDOWN_CLEANUP.v3.json"
+  },
+  "affectedRenderedArtifacts": [
+    {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_RESULTS_INDEX.v3.json",
+      "sha256": "9fcb412994fc329d3ec3595d68b3b948ebed24c73f603ff38d4af332a15b96c8"
+    },
+    {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FINAL_REPORT.v3.json",
+      "sha256": "b51317c07832556eecff91fc8ce56fb2eb10ec4c9df2b431618f39b0aee75aa4"
+    },
+    {
+      "path": "docs/experiments/model-specialization/2026-08-09-controlled-model-specialization.v3.md",
+      "sha256": "a4f85d21dce5ad050ce37e78bd7a61afee80c766bef9ff23e33a6291f1462d3c"
+    }
+  ],
+  "cause": "Two prose interpretation sentences retained v2 literal counts after the v3 data source was selected. Machine-readable phase comparisons and promotion gates were computed from v3 rows and are correct, but the final narrative is not canonical.",
+  "decisionImpact": "NONE_C_REMAINS_CORRECT_BECAUSE_PATCH_ONLY_GAIN_IS_ZERO",
+  "correctiveAction": "Generate append-only v4 reports from the same immutable corrected v3 raw rows using fully data-derived narrative fields.",
+  "modelRerunRequired": false,
+  "taskPromptScoringChanges": false
+}

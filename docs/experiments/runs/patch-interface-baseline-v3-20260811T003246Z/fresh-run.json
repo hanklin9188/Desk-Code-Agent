@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "markerId": "dca-patch-interface-v3-fresh-primary-run",
+  "createdAt": "2026-08-11T00:34:40.839Z",
+  "preregistration": {
+    "path": "benchmarks/patch-interface/PATCH_INTERFACE_PREREGISTRATION.v3.json",
+    "sha256": "d5cce7dfa35b8943d46a1d949a9f810f583997ae0cc7fbbb2c260c470844bbaa"
+  },
+  "partialV2Supersession": {
+    "path": "docs/experiments/patch-interface/PATCH_INTERFACE_V2_PARTIAL_ABORT.v3.json",
+    "sha256": "76e77da9283a088b5cacdedb8b945b68573e9496b9ea306acdcb5dded29c36ab"
+  },
+  "profileId": "baseline",
+  "runDirectory": "docs/experiments/runs/patch-interface-baseline-v3-20260811T003246Z",
+  "schedule": {
+    "observations": 420,
+    "observationIdsSha256": "47fa44bd05369b309ff153c380eff4952613b0556687f8f6e4a2dbdb44b3b72e",
+    "materializedRequestIntentsSha256": "01c61618e78adf0e5f7013db29a3cf196a043f2e66f2668ff26be2c536f24a0e"
+  },
+  "initialEvidence": {
+    "checkpoint": {
+      "path": "docs/experiments/runs/patch-interface-baseline-v3-20260811T003246Z/observations.checkpoint.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "records": 0
+    },
+    "callEvents": {
+      "path": "docs/experiments/runs/patch-interface-baseline-v3-20260811T003246Z/call-events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "records": 0
+    }
+  },
+  "lineage": {
+    "v2RowsImported": false,
+    "v2EventsImported": false,
+    "checkpointSeeded": false,
+    "freshPrimaryRun": true
+  },
+  "protectedActions": {
+    "modelCallBeforeMarker": false,
+    "modelDownload": false,
+    "dependencyInstall": false,
+    "sudoAdmin": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false
+  }
+}

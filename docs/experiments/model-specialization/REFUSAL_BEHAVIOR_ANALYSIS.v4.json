@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T14:22:37.069Z",
+  "classification": "CONTROLLED_MODEL_SPECIALIZATION_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "decision": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "baseline": {
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "status": "RUN_COMPLETE"
+  },
+  "coder": {
+    "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "status": "RUN_COMPLETE",
+    "licenseUse": "NON_COMMERCIAL_RESEARCH_EVALUATION_EXPERIMENTAL_DEVELOPMENT_ONLY"
+  },
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "coder": {
+      "path": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.v3.json",
+      "sha256": "20f8943120f302d025062c674e7bd6a7409db67067e0f5cb71eff1214fb4babc"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "fairness": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v3.json",
+      "sha256": "a86f9c0db0e489e0dd3974aa52fbcc53fb556f674491bd313dd9eba06a525045"
+    }
+  },
+  "baselineResult": {
+    "patchOnlyReportOnly": 25,
+    "oneShotReportOnly": 9,
+    "unnecessaryRefusalRate": 0.68,
+    "unsafeMutationWhenReportOnlyCorrect": 0,
+    "note": "No report-only/safety mutation tasks are executed by this coding-only diagnostic; deterministic safety regression is separate."
+  },
+  "coderResult": {
+    "patchOnlyReportOnly": 21,
+    "oneShotReportOnly": 1,
+    "unnecessaryRefusalRate": 0.44,
+    "unsafeMutationWhenReportOnlyCorrect": 0,
+    "note": "No report-only/safety mutation tasks are executed by this coding-only diagnostic; deterministic safety regression is separate."
+  },
+  "changes": {
+    "unnecessaryRefusalRate": -0.24000000000000005,
+    "patchOnlyReportOnly": -4,
+    "oneShotReportOnly": -8
+  },
+  "conclusion": "Coder refused fewer executable coding tasks, but lower refusal did not produce patch-only or one-shot behavioral success. Willingness is not capability."
+}

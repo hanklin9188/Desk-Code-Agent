@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-g3-long-run-stability-2026-08-09T11-14-47-297Z",
+  "status": "PASS",
+  "deltas": {
+    "durationMs": 5191807,
+    "rssMiB": 18.5234375,
+    "fileDescriptors": -2,
+    "runtimeBytes": 974
+  },
+  "completedModelCalls": 2443,
+  "workspace": {
+    "repositories": 24,
+    "registeredWorktrees": 24,
+    "expectedPrimaryWorktrees": 24
+  },
+  "targets": {
+    "sameModelProcess": true,
+    "rssGrowthUnder1024MiB": true,
+    "fileDescriptorGrowthUnder64": true,
+    "exactlyOneListener": true,
+    "apiKeyMode600": true,
+    "noAdditionalWorktrees": true,
+    "atLeast100SequentialCalls": true
+  }
+}

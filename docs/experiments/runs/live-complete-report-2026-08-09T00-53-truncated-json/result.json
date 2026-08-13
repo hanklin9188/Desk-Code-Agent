@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "runId": "live-complete-report-2026-08-09T00-53-truncated-json",
+  "status": "FAIL",
+  "model": {
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "backend": "vllm-0.26.0"
+  },
+  "failure": {
+    "taxonomy": "context-budget failure",
+    "stage": "structured model output parse",
+    "reason": "Generation reached the prior output budget with an unterminated JSON string; no partial output was admitted"
+  },
+  "privacy": {
+    "apiKeyStored": false,
+    "promptStored": false,
+    "evidenceExcerptsStored": false,
+    "rawModelProseStored": false
+  }
+}

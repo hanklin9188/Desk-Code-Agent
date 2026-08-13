@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 2,
+  "experimentId": "CODE_FORMATION_CONTROL_RECOVERY_GENERATION",
+  "state": "FROZEN_BEFORE_FIRST_RECOVERY_TARGET_MODEL_CALL",
+  "generationSeed": 20260809,
+  "scheduleSeed": 20260813,
+  "seedSeparation": "PASS_DISTINCT",
+  "design": {
+    "paired": true,
+    "primaryTasks": 40,
+    "primaryCalls": 80,
+    "sanityCallsMaximum": 1,
+    "counterbalanced": true,
+    "retry": false,
+    "reviewer": false,
+    "primaryMetric": "strict behavioral success"
+  },
+  "control": {
+    "construction": "HISTORICAL_EQUIVALENT_FIM_E_MIN_V2_C1_E_EDIT_P2",
+    "systemPrompt": "This development task is certified safe and mutation-required. Emit only the required bounded edit payload for the exact target.\n\nReturn one JSON range edit. start_line and end_line are 1-based inclusive original-source coordinates; replacement replaces that complete range and may contain multiple lines."
+  },
+  "treatment": {
+    "construction": "CONTROL_PLUS_ONLY_FROZEN_CODE_FORMATION_CONSTRAINT",
+    "suffix": "CODE_FORMATION_CONSTRAINT_V1: Return exactly one P2 JSON edit whose replacement is non-empty and forms a syntactically complete fragment at the registered source range. Keep the exact registered file and range, emit no Markdown fences, and do not introduce a top-level import or export when replacing an interior range. This constraint supplies no task semantics and does not authorize retries, repair, extra context, or any edit outside the existing P2 contract.",
+    "constraintId": "P2_FORMATION_CONSTRAINT_V1",
+    "applicationStage": "AFTER_VALID_BASE_P2_ACTION_BEFORE_EXECUTION",
+    "semanticRewriting": false
+  },
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "file": {
+        "type": "string"
+      },
+      "start_line": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "end_line": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "replacement": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "file",
+      "start_line",
+      "end_line",
+      "replacement"
+    ]
+  },
+  "model": {
+    "modelId": "TIGER-Lab/FIM-7B",
+    "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+    "precision": "FP8_PER_TENSOR_W8A8",
+    "backend": "vllm",
+    "backendVersion": "0.26.0"
+  },
+  "generation": {
+    "temperature": 0,
+    "seed": 20260809,
+    "maxTokens": 2048,
+    "timeoutMs": 120000,
+    "thinking": false,
+    "responseFormat": "JSON_SCHEMA_STRICT"
+  },
+  "retrieval": {
+    "implementation": "retrieveG3",
+    "configuration": "E-MIN-V2",
+    "hardTokenCap": 2048,
+    "contextVariant": "C1_TASK_PLUS_SOURCE"
+  },
+  "normalizedConfiguration": {
+    "knownGood": {
+      "modelId": "TIGER-Lab/FIM-7B",
+      "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+      "precision": "FP8_PER_TENSOR_W8A8",
+      "vllm": "0.26.0",
+      "retrieval": "retrieveG3(task,E-MIN-V2,2048)",
+      "contextPackaging": "C1_TASK_PLUS_SOURCE",
+      "systemPromptSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "p2SchemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "modelRuntimeSha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee",
+      "p2NormalizerSha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+      "temperature": 0,
+      "generationSeed": 20260809,
+      "maxTokens": 2048,
+      "timeoutMs": 120000,
+      "responseFormat": "JSON_SCHEMA_STRICT",
+      "thinking": false,
+      "stopConditions": "API_DEFAULTS"
+    },
+    "knownGoodSha256": "8db52063db63f6453b70b153ed748c6111a977f737597b9ff2e6d3298ca54d7a",
+    "recoveryControl": {
+      "modelId": "TIGER-Lab/FIM-7B",
+      "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+      "precision": "FP8_PER_TENSOR_W8A8",
+      "vllm": "0.26.0",
+      "retrieval": "retrieveG3(task,E-MIN-V2,2048)",
+      "contextPackaging": "C1_TASK_PLUS_SOURCE",
+      "systemPromptSha256": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+      "p2SchemaSha256": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+      "modelRuntimeSha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee",
+      "p2NormalizerSha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+      "temperature": 0,
+      "generationSeed": 20260809,
+      "maxTokens": 2048,
+      "timeoutMs": 120000,
+      "responseFormat": "JSON_SCHEMA_STRICT",
+      "thinking": false,
+      "stopConditions": "API_DEFAULTS"
+    },
+    "recoveryControlSha256": "8db52063db63f6453b70b153ed748c6111a977f737597b9ff2e6d3298ca54d7a",
+    "equivalent": true
+  },
+  "parserTelemetry": [
+    "schemaValid",
+    "bounded model error enum",
+    "finish-reason category",
+    "output-empty flag",
+    "output-length bucket",
+    "normalization classification",
+    "jsonParsed",
+    "schemaValidated",
+    "action-validation code",
+    "patch-construction code"
+  ],
+  "formationReachabilityGate": {
+    "treatmentValidBaseP2CandidatesMinimum": 20,
+    "treatmentValidBaseP2FractionMinimum": 0.5,
+    "constraintInvocationsMustEqualTreatmentValidBaseP2Candidates": true
+  },
+  "prePrimaryControlSanity": {
+    "maximumCalls": 1,
+    "fixtureClass": "NON_PRIMARY_NOT_SCORED",
+    "requiredValidP2Actions": 1,
+    "failureDisposition": "CONTROL_SANITY_GATE_FAIL_STOP_BEFORE_PRIMARY_NO_TUNING"
+  },
+  "sanityFixture": {
+    "task": {
+      "task_id": "cfcr-v1-non-primary-control-sanity",
+      "repository_id": "cfcr-v1-non-primary-control-sanity-repo",
+      "repository_revision": "sha256:f9ff74dfa5d017d22253af4574b550cb3961da8fe2acccf30ed8d6ac99a15cee",
+      "prompt": "Fix withinTolerance99 to return true only when both values and a non-negative tolerance are finite and their absolute difference is within that tolerance.",
+      "difficulty": "non-primary-sanity",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 16,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    "repository": {
+      "repository_id": "cfcr-v1-non-primary-control-sanity-repo",
+      "immutable_revision": "sha256:f9ff74dfa5d017d22253af4574b550cb3961da8fe2acccf30ed8d6ac99a15cee",
+      "files": [
+        {
+          "path": "src/subject.mjs",
+          "content": "export function withinTolerance99(left, right, tolerance) {\n  return left - right <= tolerance;\n}\nexport const recoveryMarker = 99;\n",
+          "role": "source"
+        },
+        {
+          "path": "test/visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { withinTolerance99 } from '../src/subject.mjs';\ntest('withinTolerance99', () => { assert.equal(withinTolerance99(10, 12, 2), true); assert.equal(withinTolerance99(10, 13, 2), false); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    "oracle": {
+      "task_id": "cfcr-v1-non-primary-control-sanity",
+      "original_source_sha256": "6dbfe4d5d20706d5605057adfc018ae6e8eb69a50af557970dd97e744ab76096",
+      "reference_fixed_source": "export function withinTolerance99(left, right, tolerance) {\n  return Number.isFinite(left) && Number.isFinite(right) && Number.isFinite(tolerance) && tolerance >= 0 && Math.abs(left - right) <= tolerance;\n}\nexport const recoveryMarker = 99;\n",
+      "exact_relevant_symbol": "withinTolerance99",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { withinTolerance99 } from '../src/subject.mjs';\ntest('withinTolerance99', () => { assert.equal(withinTolerance99(NaN, 1, 2), false); assert.equal(withinTolerance99(1, 1, -1), false); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    }
+  },
+  "schedule": [
+    {
+      "pair_index": 1,
+      "task_id": "cfcr-v1-stable-unique-01",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 2,
+      "task_id": "cfcr-v1-left-rotation-05",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 3,
+      "task_id": "cfcr-v1-boolean-token-05",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 4,
+      "task_id": "cfcr-v1-boolean-token-04",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 5,
+      "task_id": "cfcr-v1-port-token-03",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 6,
+      "task_id": "cfcr-v1-boolean-token-07",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 7,
+      "task_id": "cfcr-v1-left-rotation-04",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 8,
+      "task_id": "cfcr-v1-finite-tolerance-04",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 9,
+      "task_id": "cfcr-v1-port-token-07",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 10,
+      "task_id": "cfcr-v1-port-token-06",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 11,
+      "task_id": "cfcr-v1-left-rotation-07",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 12,
+      "task_id": "cfcr-v1-stable-unique-05",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 13,
+      "task_id": "cfcr-v1-port-token-01",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 14,
+      "task_id": "cfcr-v1-port-token-04",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 15,
+      "task_id": "cfcr-v1-port-token-08",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 16,
+      "task_id": "cfcr-v1-port-token-05",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 17,
+      "task_id": "cfcr-v1-stable-unique-03",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 18,
+      "task_id": "cfcr-v1-finite-tolerance-03",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 19,
+      "task_id": "cfcr-v1-finite-tolerance-07",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 20,
+      "task_id": "cfcr-v1-boolean-token-03",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 21,
+      "task_id": "cfcr-v1-stable-unique-06",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 22,
+      "task_id": "cfcr-v1-finite-tolerance-06",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 23,
+      "task_id": "cfcr-v1-port-token-02",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 24,
+      "task_id": "cfcr-v1-finite-tolerance-01",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 25,
+      "task_id": "cfcr-v1-stable-unique-07",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 26,
+      "task_id": "cfcr-v1-boolean-token-06",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 27,
+      "task_id": "cfcr-v1-left-rotation-02",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 28,
+      "task_id": "cfcr-v1-boolean-token-08",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 29,
+      "task_id": "cfcr-v1-boolean-token-01",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 30,
+      "task_id": "cfcr-v1-left-rotation-01",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 31,
+      "task_id": "cfcr-v1-stable-unique-02",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 32,
+      "task_id": "cfcr-v1-finite-tolerance-08",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 33,
+      "task_id": "cfcr-v1-boolean-token-02",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 34,
+      "task_id": "cfcr-v1-left-rotation-03",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 35,
+      "task_id": "cfcr-v1-finite-tolerance-02",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 36,
+      "task_id": "cfcr-v1-left-rotation-08",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 37,
+      "task_id": "cfcr-v1-left-rotation-06",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 38,
+      "task_id": "cfcr-v1-stable-unique-08",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    },
+    {
+      "pair_index": 39,
+      "task_id": "cfcr-v1-finite-tolerance-05",
+      "order": [
+        "CONTROL",
+        "TREATMENT"
+      ]
+    },
+    {
+      "pair_index": 40,
+      "task_id": "cfcr-v1-stable-unique-04",
+      "order": [
+        "TREATMENT",
+        "CONTROL"
+      ]
+    }
+  ],
+  "protectedActions": {
+    "sessionATargetModelCalls": 0,
+    "vllmStart": false,
+    "modelDownload": false,
+    "L2": false,
+    "retry": false,
+    "reviewer": false
+  },
+  "supersedes": {
+    "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_PREREGISTRATION.v1.json",
+    "sha256": "bc0b40b867f195d9eead6da9e09d59a7b61a947dfd6b46794574184c1b834cfd",
+    "reason": "Strengthen meaningful formation reachability and explicitly freeze strict-success-primary paired decision thresholds before any target-model call."
+  },
+  "analysisThresholds": {
+    "primaryMetric": "strict behavioral success",
+    "pairedMethod": "exact two-sided McNemar on discordant strict-success pairs",
+    "alpha": 0.05,
+    "strictSuccessAbsoluteGainMinimum": 0.05,
+    "syntaxFailureReductionAbsoluteMinimum": 0.15,
+    "strictSuccessNonInferiorityMargin": 0.03,
+    "wrongFileEditsMaximum": 0,
+    "safetyViolationsMaximum": 0,
+    "materialGain": "formation identifiable AND strict-success absolute gain >= 0.05 AND exact paired p <= 0.05 AND safety/wrong-file gates pass",
+    "syntaxOnlyGain": "formation identifiable AND syntax-failure reduction >= 0.15 AND strict-success material-gain gate fails AND strict-success difference >= -0.03 AND safety/wrong-file gates pass",
+    "regression": "strict-success difference < -0.03 OR any safety violation OR any wrong-file edit",
+    "noMaterialGain": "formation identifiable AND material/syntax-only/regression gates do not apply",
+    "inconclusive": "CONTROL sanity fails OR treatment valid base P2 candidates < 20 OR formation invocation binding fails OR primary lineage is incomplete"
+  }
+}

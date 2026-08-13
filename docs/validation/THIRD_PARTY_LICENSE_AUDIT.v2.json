@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 2,
+  "auditId": "dca-final-third-party-license-audit-v2",
+  "status": "PASS_BINARY_DISTRIBUTION_LICENSE_GATE",
+  "inputs": {
+    "baselineAudit": { "path": "docs/validation/THIRD_PARTY_LICENSE_AUDIT.v1.json", "sha256": "a9fb0daa7166d22e4e764d435bc158581d05f30bb8511febc2d2682b44039527" },
+    "baselineInventory": { "path": "artifacts/release/third-party-license-inventory.v1.json", "sha256": "f8c34520028727b4db333a95d0ad518bed95043ab2d8fcf33791f37c6ee59edc" },
+    "rootLicense": { "path": "LICENSE", "spdx": "Apache-2.0", "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30" }
+  },
+  "checks": {
+    "totalDependencyComponents": 840,
+    "distributedRuntimeDependencies": 197,
+    "priorPackageTextGaps": 10,
+    "textPinnedAuthoritative": 10,
+    "remainingLegalReviewRequired": 0,
+    "unresolvedDistributedLicenseBlockers": 0,
+    "rawNoAssertionRemaining": 0,
+    "guessedLicenses": 0,
+    "unofficialLicenseTexts": 0,
+    "pinnedTextChecksums": "PASS",
+    "rootNotice": "ROOT_NOTICE_NOT_REQUIRED_BY_CURRENT_AUDIT"
+  },
+  "output": "artifacts/release/third-party-license-inventory.v2.json",
+  "sourcePublicationGate": "PASS_APACHE_2_0",
+  "binaryPublicationGate": "PASS",
+  "signingIsSeparateFromLicenseGate": true
+}

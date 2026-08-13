@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "validationId": "dca-best-7b-bounded-retry-session-c-validation-v1",
+  "status": "PASS",
+  "validatedAt": "2026-08-11T17:48:10.497Z",
+  "inputs": {
+    "resultsIndex": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_RESULTS_INDEX.v1.json",
+      "sha256": "d8f22c99a06fad23124fee561ae6bedf558d965a6aca10e9b0034adc3c2b402a"
+    },
+    "securityRegression": {
+      "path": "docs/experiments/patch-interface/PATCH_INTERFACE_SECURITY_REGRESSION.v3.json",
+      "sha256": "a9a43b1a263446b128685a3d9b16cf1f788665b1186d39679827ff4aa8d1f39a"
+    }
+  },
+  "checks": {
+    "strictTypeScript": "PASS",
+    "projectTypecheck": "PASS",
+    "completeTestSuite": "PASS",
+    "productionBuild": "PASS",
+    "designValidation": "PASS",
+    "securityRegression": "PASS",
+    "secretScan": "PASS",
+    "artifactChecksums": "PASS",
+    "sourceClosure": "PASS",
+    "experimentLineage": "PASS_95_ORIGINAL_66_RETRY_0_SESSION_C_CALLS",
+    "modelWeightGitExclusion": "PASS",
+    "worktreeCleanup": "PASS",
+    "dualAxisSpecReview": "PASS",
+    "dualAxisStandardsReview": "PASS"
+  },
+  "commands": [
+    {
+      "command": "npx tsc --ignoreConfig --noEmit --strict --skipLibCheck --target ES2022 --module ESNext --moduleResolution Bundler --types node services/bounded-retry-analysis/src/index.ts scripts/finalize_best_7b_bounded_retry_session_c.ts tests/bounded-retry-analysis.test.ts",
+      "exitCode": 0,
+      "durationMs": 248.780201,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "durationMs": 313.84732,
+      "stdoutSha256": "1fcfe57781045a818698db7cbe3c9428c10ea084583a12bb0925411079a7a5df",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 0,
+      "durationMs": 6800.795606000001,
+      "stdoutSha256": "f81ed4e5e02409a111b1fcd025f182ffa30cfbfa52135ecbfbeac2dd1465e970",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "durationMs": 582.0960180000002,
+      "stdoutSha256": "ebf95aa69e53b4192eee44305d918daf60be9d39f680fda87c7d6811ab107bfe",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run validate:design",
+      "exitCode": 0,
+      "durationMs": 6270.098945000001,
+      "stdoutSha256": "206dbb4710b87c5968e51636089a51904e56ca5610f42d6c062f097623bed50f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npx tsx scripts/run_patch_interface_security_regression.ts",
+      "exitCode": 0,
+      "durationMs": 1098.3526160000001,
+      "stdoutSha256": "48e3773996576c4883e6c25295ea117831f8a683466548d1df8d7c10db3285e6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "services/bounded-retry-analysis/src/index.ts",
+        "sha256": "f2c35d07e151c20fff47e26b7cff6daf52e4e7a91d76d1a713dac8e906771f23",
+        "bytes": 11040
+      },
+      {
+        "path": "scripts/finalize_best_7b_bounded_retry_session_c.ts",
+        "sha256": "ef6a42abb534b0f3f0fb237f90f4ad071914e21f6a9d288b0a9458c92073f7f0",
+        "bytes": 26813
+      },
+      {
+        "path": "tests/bounded-retry-analysis.test.ts",
+        "sha256": "b889f21ee04dd87b65e54c618f607d564231d971ed4eea4fe41ee4e5289793a2",
+        "bytes": 2632
+      },
+      {
+        "path": "CONTEXT.md",
+        "sha256": "b61c0281b07141471cf25aa4da92579fe2a2895c8d5e43a2624ccad3e3126bc8",
+        "bytes": 18812
+      },
+      {
+        "path": "docs/exec-plans/active/MASTER_EXECUTION_PLAN.md",
+        "sha256": "bd34474eda838f81829a12e86554f3e6a5e0930d854c4c34c4bb6ec7a9a325b4",
+        "bytes": 42156
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      }
+    ],
+    "sha256": "8f141ee03c25d107688cb1aba84aef6d13a2c5311474255cff0ea778f458f97e"
+  },
+  "cleanup": {
+    "modelProcessCount": 0,
+    "modelComputeProcesses": 0,
+    "modelGpuAllocationMiB": 0,
+    "ambientGpuMemoryMiB": 1109,
+    "port8000Clear": true,
+    "ephemeralStateAbsent": true,
+    "temporaryDirectories": 0,
+    "worktrees": 1
+  },
+  "modelCalls": 0
+}

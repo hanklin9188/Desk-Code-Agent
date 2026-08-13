@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T11:17:19.267Z",
+  "classification": "G3_EVIDENCE_COMPLETE_RELEASE_BLOCKED",
+  "resultsIndex": {
+    "path": "benchmarks/g3/G3_RESULTS_INDEX.json",
+    "sha256": "fa9a4680cd409af1f9eb774fb2282d41147bcf6f165f23d8b8c719df5c43a063"
+  },
+  "finalReport": {
+    "path": "docs/experiments/G3_FINAL_REPORT.json",
+    "sha256": "83a0f971a2c5d8135e36dc97d917c21331843ac8ba2553ae7ea95056b5e1e3be"
+  },
+  "decision": {
+    "productionRelativeDefault": "E-MIN-V2",
+    "researchCandidate": "E-MIN-V3",
+    "conditionalRouting": "DISABLED",
+    "globalMultiAgent": "DISABLED",
+    "semanticReviewer": "DISABLED_BY_DEFAULT",
+    "deterministicSafetyAndVerification": "ENABLED"
+  },
+  "qualityGate": {
+    "status": "BLOCKED_LOW_NATURALISTIC_AND_PATCH_SUCCESS",
+    "holdoutSuccesses": {
+      "E1": "6/96",
+      "E-MIN-V2": "3/96",
+      "E-MIN-V3": "2/96"
+    },
+    "exactHistoricalPatchSuccess": {
+      "E1": "0/60",
+      "E-MIN-V2": "0/60",
+      "E-MIN-V3": "0/60"
+    }
+  },
+  "openGates": [
+    "AUTHORIZED_SOURCE_REVISION",
+    "ROOT_LICENSE_OWNER_DECISION",
+    "AUTHORITATIVE_DEPENDENCY_LICENSE_METADATA",
+    "MANUAL_LEGAL_REVIEW_FOR_AMBIGUOUS_DEPENDENCIES",
+    "APPROVED_QUANTIZED_SNAPSHOT_AND_COMPARISON",
+    "NATIVE_WINDOWS_INSTALLER_AND_ACCESSIBILITY_QA",
+    "SIGNING_AND_EXTERNAL_DELIVERY_APPROVALS"
+  ],
+  "protectedActionsPerformed": []
+}

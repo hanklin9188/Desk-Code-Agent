@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "resultsId": "dca-e-edit-normal-retrieval-and-retry-v1",
+  "generatedAt": "2026-08-11T01:43:33.791Z",
+  "status": "PASS_AS_MEASURED_DEVELOPMENT_ONLY",
+  "classification": "DEVELOPMENT_ONLY_NOT_HOLDOUT_NOT_PRODUCT_PROMOTION",
+  "inputs": {
+    "candidate": {
+      "path": "docs/experiments/patch-interface/E_EDIT_CANDIDATE.v1.json",
+      "sha256": "7abdcd7cfe84b3e3e6844ecc81c8a4c783a9af53e45dcbb0489fa0e157a32fbc"
+    },
+    "secondaryPreregistration": {
+      "path": "benchmarks/patch-interface/E_EDIT_NORMAL_RETRIEVAL_PREREGISTRATION.v1.json",
+      "sha256": "937e4a80d871d63626cee70b22a1248af22eae2a4b395a63870cf01c023dd6b3"
+    },
+    "retryPreregistration": {
+      "path": "benchmarks/patch-interface/E_EDIT_RETRY_PREREGISTRATION.v1.json",
+      "sha256": "332a2183a8d21a93dca450ebafb756ecb08d12c2ddf1feb82ab699f4301da6e6"
+    },
+    "primaryResults": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_V3_RESULTS.json",
+      "sha256": "597de4d4f71d8b2def5410b75f43fc85098cbeaea68d513400e669936252478e"
+    },
+    "promotionDecision": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_V3_PROMOTION_DECISION.json",
+      "sha256": "668ed05945c5f0f4747d4b651cc4bdb30e2dde76f7ba1fc8aac6c8af631624b7"
+    }
+  },
+  "normalRetrieval": {
+    "baseline": {
+      "result": {
+        "path": "docs/experiments/runs/e-edit-normal-baseline-20260811T093200Z/result.json",
+        "sha256": "a68eb6ff018632b3c787dafe678f6802ec06e27ef71396ab07aee7ae84cf0cb1"
+      },
+      "lifecycle": {
+        "path": "docs/experiments/runs/e-edit-normal-baseline-20260811T093200Z/lifecycle.json",
+        "sha256": "96e572b4f9bc50c1b4e5def00bbc8a76b987010cf0fe34cbb3bb79a589cbed74"
+      },
+      "tasks": 50,
+      "behavioralSuccesses": 18,
+      "behavioralSuccessRate": 0.36,
+      "hiddenSuccesses": 23,
+      "validActions": 46,
+      "exactSourceSelected": 50,
+      "exactSourceIncluded": 50,
+      "wrongFileAttempts": 0,
+      "actualSafetyViolations": 0,
+      "rollbackFailures": 0,
+      "totalPromptTokens": 12377,
+      "totalCompletionTokens": 4944,
+      "totalLatencyMs": 69726.70690600002,
+      "retryEligible": true
+    },
+    "coder": {
+      "result": {
+        "path": "docs/experiments/runs/e-edit-normal-coder-20260811T093430Z/result.json",
+        "sha256": "505f457e0424e755764a065997c924674de37e66029a31b86b69087e2b1c8a16"
+      },
+      "lifecycle": {
+        "path": "docs/experiments/runs/e-edit-normal-coder-20260811T093430Z/lifecycle.json",
+        "sha256": "ec4bed5dc388c1347ff9ec077c9ed25d9a518dac8abf3d74ec82a7701d8a952a"
+      },
+      "tasks": 50,
+      "behavioralSuccesses": 9,
+      "behavioralSuccessRate": 0.18,
+      "hiddenSuccesses": 12,
+      "validActions": 48,
+      "exactSourceSelected": 50,
+      "exactSourceIncluded": 50,
+      "wrongFileAttempts": 0,
+      "actualSafetyViolations": 0,
+      "rollbackFailures": 0,
+      "totalPromptTokens": 11638,
+      "totalCompletionTokens": 3382,
+      "totalLatencyMs": 36249.534926000015,
+      "retryEligible": false
+    },
+    "comparison": {
+      "behavioralDifferenceCoderMinusBaseline": -0.18,
+      "pairedClaim": "NOT_COMPUTED_FROM_AGGREGATES",
+      "interpretation": "Coder-3B does not improve P2 normal-retrieval behavioral success in this development generation."
+    }
+  },
+  "retry": {
+    "profile": "baseline",
+    "result": {
+      "path": "docs/experiments/runs/e-edit-retry-baseline-20260811T094020Z/result.json",
+      "sha256": "270f353626a8d2c5da863a37be813b1f562a0c06d220b2bf4eee82d36b3f57bb"
+    },
+    "lifecycle": {
+      "path": "docs/experiments/runs/e-edit-retry-baseline-20260811T094020Z/lifecycle.json",
+      "sha256": "0fac048c0ef7a47d03c842f9d8fb715205ef04636867ba2158738a987f5b764c"
+    },
+    "eligibleFailures": 32,
+    "secondCalls": 32,
+    "recoveries": 5,
+    "recoveryRate": 0.15625,
+    "finalTwoCallSuccesses": 23,
+    "finalTwoCallSuccessRate": 0.46,
+    "repeatedPatches": 4,
+    "contradictions": 5,
+    "actualSafetyViolations": 0,
+    "totalPromptTokens": 12924,
+    "totalCompletionTokens": 3504,
+    "totalLatencyMs": 49394.59015899998,
+    "coderRetryCalls": 0,
+    "reasonCoderNotRetried": "one-shot 9/50 is below frozen 13/50 gate"
+  },
+  "lineage": {
+    "historicalV2ExcludedPhysicalCalls": 7,
+    "validV3PrimaryCalls": 840,
+    "secondaryOneShotCalls": 100,
+    "retryCalls": 32,
+    "totalPhysicalCalls": 979,
+    "validDevelopmentCalls": 972,
+    "duplicates": 0,
+    "silentRetries": 0
+  },
+  "conclusions": {
+    "simplerEditInterfaceRevealsLatentCapability": true,
+    "survivesNormalRetrieval": {
+      "baseline": "YES_18_OF_50",
+      "coder": "LIMITED_9_OF_50"
+    },
+    "evidenceDrivenRetryAddsValue": "YES_BASELINE_PLUS_5_OF_32_FAILED_TASKS",
+    "primaryBottleneck": [
+      "MUTATION_INTERFACE",
+      "REASONING",
+      "MODEL_CAPACITY_OR_SPECIALIZATION"
+    ],
+    "retrievalBottleneckObserved": false,
+    "retrievalEvidence": "exact source selected and included 50/50 for both profiles",
+    "coderSpecializationGain": "NO_NORMAL_RETRIEVAL_BEHAVIORAL_GAIN",
+    "productMutationRecommendation": "REMAIN_DISABLED_PENDING_FRESH_REPOSITORY_DISJOINT_HOLDOUT_AND_PRODUCT_APPROVAL",
+    "freshHoldoutCreated": false,
+    "scaleGateReached": false,
+    "sevenBExperimentRequiredNow": false
+  },
+  "safety": {
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0,
+    "lifecycleCleanupPasses": 3
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "rawPatchesStored": false,
+    "boundedHashesAndMetricsOnly": true
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "dependencyInstall": false,
+    "sudoAdmin": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false
+  }
+}

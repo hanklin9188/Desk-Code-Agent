@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "cleanupId": "dca-best-7b-bounded-retry-session-b-cleanup-v1",
+  "status": "PASS_FULLY_CLEANED",
+  "completedAt": "2026-08-11T16:20:26.794Z",
+  "input": {
+    "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/result.json",
+    "sha256": "fe46972b7d06a293f2c49a674391990e9e629d31d07f70395b7875cc480cb01b"
+  },
+  "states": {
+    "tournament-start.json": {
+      "sha256": "7397aabe0c29ca0ec418d8ccd4b7c2c9e0ffb2968ee55b745d8aa3a952096411",
+      "bytes": 93
+    },
+    "tournament-launch.json": {
+      "sha256": "bea2c0fdcdc9e2015fe92e66dca9d36347ef768af3978b2686f790ab1907d07e",
+      "bytes": 2062
+    },
+    "tournament-ready.json": {
+      "sha256": "53b47f90045bc89eddb6abb5536727a6585df4afa22ef30da41ae25fe6f9f881",
+      "bytes": 373
+    }
+  },
+  "checks": {
+    "modelProcessCount": 0,
+    "port8000Clear": true,
+    "gpuMemoryMiB": 0,
+    "ephemeralApiKeyAbsent": true,
+    "servingStateRemoved": true,
+    "orphanWorktrees": 0
+  },
+  "protectedActions": {
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

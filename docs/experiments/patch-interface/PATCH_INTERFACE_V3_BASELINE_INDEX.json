@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "indexId": "dca-patch-interface-v3-baseline-index",
+  "recordedAt": "2026-08-11T08:55:38+08:00",
+  "status": "PASS_420_OF_420_SEALED_AND_CLEANED_UP",
+  "classification": "DEVELOPMENT_ONLY_INTERFACE_SELECTION_NOT_HOLDOUT",
+  "profile": {
+    "profileId": "baseline",
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16"
+  },
+  "runDirectory": "docs/experiments/runs/patch-interface-baseline-v3-20260811T003246Z",
+  "artifacts": {
+    "freshRun": { "sha256": "c0f09ce973dd83e614d8ce88fc6d098d8959763ab6a3c431c7a372f26dacd032" },
+    "checkpoint": { "records": 420, "sha256": "3726d253ccfad012028b915560ad300597f333389ece32032ff1d5b9ddc3a14a" },
+    "callEvents": { "records": 840, "sha256": "4d1a895fe75007cc10dafb93c91c2a276e721cf3cb8944bf57e50fcda0864b04" },
+    "observationsFinal": { "records": 420, "sha256": "95be72224b32b871c14142f231c61093980317ba09d58d4c269fb678894d99ca" },
+    "result": { "sha256": "66db7559d7ea624317f16b56c00d96b0802c229e89272912ab37a433ef214635", "status": "COMPLETE_DEVELOPMENT_DIAGNOSTIC" },
+    "lifecycle": { "sha256": "dbff6cb7b61ab1f43d9f6e99ed56a458d3a01b1bb8d272ac526679488a9bc704", "status": "PASS" }
+  },
+  "schedule": {
+    "planned": 420,
+    "completed": 420,
+    "oneShot": true,
+    "retries": 0,
+    "scheduleSha256": "47fa44bd05369b309ff153c380eff4952613b0556687f8f6e4a2dbdb44b3b72e",
+    "materializedRequestIntentsSha256": "01c61618e78adf0e5f7013db29a3cf196a043f2e66f2668ff26be2c536f24a0e"
+  },
+  "lineage": {
+    "historicalV2PhysicalCalls": 7,
+    "historicalV2CallsExcluded": 7,
+    "historicalV2ValidPrimaryCalls": 0,
+    "v3BaselineValidPrimaryCalls": 420,
+    "v2RowsImported": false,
+    "v2EventsImported": false
+  },
+  "validity": {
+    "transportInfrastructureErrors": 0,
+    "finalServingIdentity": "PASS",
+    "causalClosure": "PASS",
+    "causalClosureSha256": "c7b322b5d3dcc62ad453a69954308bab45d74b7521356a53ad1901bf7c27ed21",
+    "strictRecovery": "PASS"
+  },
+  "safety": {
+    "wrongFileOutputAttempts": 1,
+    "actualSafetyViolations": 0,
+    "cleanupFailures": 0,
+    "temporaryFixtureResidue": 0
+  },
+  "cleanup": {
+    "port8000Clear": true,
+    "modelProcessAbsent": true,
+    "gpuMemoryMiB": 0,
+    "apiKeyAbsent": true,
+    "servingStateAbsent": true
+  },
+  "nextGate": "FRESH_CODER_V3_EXACTLY_420_ONE_SHOT_CALLS"
+}

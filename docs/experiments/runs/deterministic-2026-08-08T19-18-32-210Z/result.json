@@ -1,0 +1,38 @@
+{
+  "experiment_id": "deterministic-2026-08-08T19-18-32-210Z",
+  "status": "PASS",
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "retrieval": {
+    "queries": 2,
+    "hits": 2,
+    "recall_at_k": 1,
+    "index_files": 37,
+    "symbols": 204,
+    "references": 4968,
+    "duration_ms": 83.342
+  },
+  "event_replay": {
+    "events": 1000,
+    "final_state": "DONE",
+    "duration_ms": 6.044,
+    "events_per_second": 165448
+  },
+  "skill_l0": {
+    "total": 39,
+    "valid": 39,
+    "duration_ms": 61.625,
+    "production_enabled": 0
+  },
+  "model_experiments": {
+    "status": "NOT_RUN",
+    "reason": "BF16 live gateway smoke and Analyst slice PASS; E1-E7 task-suite experiments have not run"
+  },
+  "quantization": {
+    "status": "NOT_RUN",
+    "reason": "BF16 live smoke PASS; BF16 task-suite baseline and E1-E7 must run before quantization comparison"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 3,
+  "artifactId": "dca-privacy-safe-semantic-observability-v3-capability-ceiling",
+  "state": "SEALED",
+  "sealedAt": "2026-08-11T22:34:47.308Z",
+  "sources": {
+    "l1Baseline": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_L1_SEMANTIC_CLASSIFICATION_BASELINE.v3.json",
+      "sha256": "3d667a05f8dfbde5b5f3dd651bbe733d6af4693d3bfca564cbbda53e261faa78",
+      "bytes": 93185
+    },
+    "pairedReport": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_PAIRED_OBSERVABILITY_REPORT.v3.json",
+      "sha256": "4598bb72fcdd7e03007e27efe32ec368f10220c3f097b860c2c9a1f821e34d0c",
+      "bytes": 24329
+    }
+  },
+  "finding": "Hash-only retention preserves execution auditability but leaves most behavioral failures semantically ambiguous. Structured derived edit features improve post-hoc diagnosis without raw edit retention or additional model calls.",
+  "supportedByGate": "L1_OBSERVABILITY_JUSTIFIED",
+  "remainingCeiling": {
+    "t14": {
+      "count": 16,
+      "denominator": 44,
+      "rate": 0.36363636363636365
+    },
+    "interpretation": "Structured aggregate relationships still cannot bind many edits to semantic roles."
+  },
+  "privacyBoundary": {
+    "rawEditRetention": false,
+    "rawOutputRetention": false,
+    "L2Authorized": false
+  },
+  "nextProtocol": {
+    "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_PROTOCOL.v1.json",
+    "sha256": "f60d723aa9d2a8e6cc9b9aa05f39ba26acf0c74f7f97a4aa59670e0712ac9cc0",
+    "bytes": 2091
+  }
+}

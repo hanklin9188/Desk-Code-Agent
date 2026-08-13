@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "suite_id": "dca-naturalistic-open-ended-g3",
+  "authoring_revision": 2,
+  "preregistration_sha256": "17380638021a09b24ac64b53ebb2090bef6b313943e0e7c90f1101eab99a6200",
+  "repository_manifest_sha256": "58498365b68d90fe9759c9fbd3ae27c061796f4ca41de879e5cba7495ed4d806",
+  "task_manifest_sha256": "d17318fd96b4294e2231b678c2bf0c5b68bc4abd5a502fcaaf4ec41255423861",
+  "oracle_sha256": "206b0f53147004bbd405bc49337d4c9c6e9612460086be02648d36e3f2bce04e",
+  "long_horizon_manifest_sha256": "64ab3c8cc76cbba67ba15b6394c2095d2a2a12481f0398a09eacc9b0f080e43a",
+  "patch_manifest_sha256": "3222597b156e11645d761dc59e4c92f32ab766a6e500b2f5980836384bedd662",
+  "patch_oracle_sha256": "0653741b1bfb01c21871daba64fcb86c10f4ff201310f2d0c4bee453051b6598",
+  "repository_disjointness": {
+    "prior_manifest_paths": [
+      "benchmarks/holdout/real_repository_manifest.json",
+      "benchmarks/retrieval-v3/real_repository_development_manifest.json"
+    ],
+    "overlap_count": 0,
+    "split_unit": "repository"
+  },
+  "repositories": [
+    {
+      "id": "werkzeug",
+      "url": "https://github.com/pallets/werkzeug.git",
+      "commit": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "split": "development",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "ky",
+      "url": "https://github.com/sindresorhus/ky.git",
+      "commit": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "split": "development",
+      "license": "MIT"
+    },
+    {
+      "id": "echo",
+      "url": "https://github.com/labstack/echo.git",
+      "commit": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+      "split": "development",
+      "license": "MIT"
+    },
+    {
+      "id": "anyhow",
+      "url": "https://github.com/dtolnay/anyhow.git",
+      "commit": "bf3ed9149f4334c984c1ad252b534107b307078c",
+      "split": "development",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "id": "zlib",
+      "url": "https://github.com/madler/zlib.git",
+      "commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "split": "development",
+      "license": "Zlib"
+    },
+    {
+      "id": "gson",
+      "url": "https://github.com/google/gson.git",
+      "commit": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+      "split": "development",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "pluggy",
+      "url": "https://github.com/pytest-dev/pluggy.git",
+      "commit": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "split": "validation",
+      "license": "MIT"
+    },
+    {
+      "id": "p-queue",
+      "url": "https://github.com/sindresorhus/p-queue.git",
+      "commit": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "split": "validation",
+      "license": "MIT"
+    },
+    {
+      "id": "viper",
+      "url": "https://github.com/spf13/viper.git",
+      "commit": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+      "split": "validation",
+      "license": "MIT"
+    },
+    {
+      "id": "fd",
+      "url": "https://github.com/sharkdp/fd.git",
+      "commit": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+      "split": "validation",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "id": "libexpat",
+      "url": "https://github.com/libexpat/libexpat.git",
+      "commit": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+      "split": "validation",
+      "license": "MIT"
+    },
+    {
+      "id": "jsoup",
+      "url": "https://github.com/jhy/jsoup.git",
+      "commit": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+      "split": "validation",
+      "license": "MIT"
+    },
+    {
+      "id": "cachecontrol",
+      "url": "https://github.com/psf/cachecontrol.git",
+      "commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "pyjwt",
+      "url": "https://github.com/jpadilla/pyjwt.git",
+      "commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "license": "MIT"
+    },
+    {
+      "id": "multidict",
+      "url": "https://github.com/aio-libs/multidict.git",
+      "commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "zod",
+      "url": "https://github.com/colinhacks/zod.git",
+      "commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "license": "MIT"
+    },
+    {
+      "id": "dotenv",
+      "url": "https://github.com/motdotla/dotenv.git",
+      "commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "license": "BSD-2-Clause"
+    },
+    {
+      "id": "axios",
+      "url": "https://github.com/axios/axios.git",
+      "commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "license": "MIT"
+    },
+    {
+      "id": "lipgloss",
+      "url": "https://github.com/charmbracelet/lipgloss.git",
+      "commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "license": "MIT"
+    },
+    {
+      "id": "testify",
+      "url": "https://github.com/stretchr/testify.git",
+      "commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "license": "MIT"
+    },
+    {
+      "id": "bytes",
+      "url": "https://github.com/tokio-rs/bytes.git",
+      "commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "license": "MIT"
+    },
+    {
+      "id": "serde-json",
+      "url": "https://github.com/serde-rs/json.git",
+      "commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "id": "fmt",
+      "url": "https://github.com/fmtlib/fmt.git",
+      "commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "license": "MIT"
+    },
+    {
+      "id": "nlohmann-json",
+      "url": "https://github.com/nlohmann/json.git",
+      "commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "license": "MIT"
+    }
+  ],
+  "authoring_sources": {
+    "primary": "pinned local repository artifacts plus explicit policy cases",
+    "long_horizon": "pinned holdout evidence and bounded workflow",
+    "patch": "small historical public commit subjects and diffs"
+  }
+}

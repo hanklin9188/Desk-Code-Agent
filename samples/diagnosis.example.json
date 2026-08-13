@@ -1,0 +1,37 @@
+{
+  "diagnosis_id": "diag_example",
+  "task_id": "task_fix_001",
+  "repro_id": "repro_example",
+  "hypotheses": [
+    {
+      "id": "H1",
+      "rank": 1,
+      "statement": "Empty YAML is normalized after dereference",
+      "prediction": "Guarding before dereference makes the exact repro green",
+      "probe": "Inspect safe_load return path and run minimal fixture",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "E17",
+        "E21"
+      ]
+    },
+    {
+      "id": "H2",
+      "rank": 2,
+      "statement": "Schema defaulting is missing",
+      "prediction": "Schema path fails even when parser output is object",
+      "probe": "Run schema unit with empty object",
+      "status": "FALSIFIED",
+      "evidence_ids": [
+        "E22"
+      ]
+    }
+  ],
+  "selected_hypothesis": "H1",
+  "confidence": 0.91,
+  "evidence_ids": [
+    "E17",
+    "E21",
+    "E22"
+  ]
+}

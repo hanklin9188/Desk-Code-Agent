@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "supplementId": "dca-best-7b-bounded-retry-session-c-completion-supplement-v1",
+  "status": "PASS_COMPLETE",
+  "sealedAt": "2026-08-11T17:50:58.250Z",
+  "inputs": {
+    "sessionC": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_C.v1.json",
+      "sha256": "09b95513e063377646f8cba52e34c181a53182f47380061e59af66707407f25a"
+    },
+    "validation": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_C_VALIDATION.v1.json",
+      "sha256": "80b8bf3b089facadf47a3150c2c03e5d7274e6aa43df4dc8d90b94a6418b30d7"
+    },
+    "priorIndex": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_RESULTS_INDEX.v1.json",
+      "sha256": "d8f22c99a06fad23124fee561ae6bedf558d965a6aca10e9b0034adc3c2b402a"
+    }
+  },
+  "outputs": {
+    "canonicalResultsIndex": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_RESULTS_INDEX.v2.json",
+      "sha256": "a540c988b5bc4d6946370809460acf7de4e5f9a83dab2e2cc5f234a22d6f0720"
+    },
+    "dualAxisReview": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_C_REVIEW.v1.json",
+      "sha256": "342c66261712f5a4d7caf3b2dad87e589ea3168fb3f02081c1969833be6be1df"
+    }
+  },
+  "reason": "Resolve the intentional no-forward-reference publication order without mutating the sealed v1 Session-C record or v1 index.",
+  "source": {
+    "path": "scripts/seal_best_7b_bounded_retry_session_c_completion.ts",
+    "sha256": "d9db54891a9a0db51cc5b2d0fc124028f27dfc7cf2c58f9af7625bd0d17146a8"
+  },
+  "decisionsUnchanged": true,
+  "modelCalls": 0,
+  "protectedActions": {
+    "modelCall": false,
+    "modelDownload": false,
+    "retry": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

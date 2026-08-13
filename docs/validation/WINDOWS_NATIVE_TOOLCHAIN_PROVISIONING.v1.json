@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "provisioningId": "dca-w1-windows-native-toolchain-provisioning-v1",
+  "status": "PASS_APPROVED_TOOLING_INSTALLED",
+  "authorizationAttachmentSha256": "8539acd0d15431a491911a278421524a49ed70221dc5592a45c8d01709b5f1b9",
+  "preProvisionInventory": {
+    "path": "docs/validation/WINDOWS_NATIVE_PREPROVISION_INVENTORY.v1.json",
+    "sha256": "3e1e44c537da8344db29641241d0184151c1c45ef7f1f2fa56ec9183697e708a"
+  },
+  "node": {
+    "distribution": "OFFICIAL_NODEJS_ORG_WINDOWS_X64_ZIP",
+    "version": "24.15.0",
+    "npmVersion": "11.12.1",
+    "installPath": "C:\\Users\\User\\AppData\\Local\\Programs\\nodejs-24.15.0",
+    "nodeExecutable": "C:\\Users\\User\\AppData\\Local\\Programs\\nodejs-24.15.0\\node.exe",
+    "npmExecutable": "C:\\Users\\User\\AppData\\Local\\Programs\\nodejs-24.15.0\\npm.cmd",
+    "archive": "node-v24.15.0-win-x64.zip",
+    "archiveSha256": "cc5149eabd53779ce1e7bdc5401643622d0c7e6800ade18928a767e940bb0e62",
+    "checksumSource": "https://nodejs.org/dist/v24.15.0/SHASUMS256.txt",
+    "checksumVerification": "PASS",
+    "freshProcessVerification": "PASS"
+  },
+  "rust": {
+    "distribution": "OFFICIAL_STATIC_RUST_LANG_RUSTUP_INIT_WINDOWS_MSVC",
+    "rustupVersion": "1.29.0",
+    "rustupInitSha256": "86478e53f769379d7f0ebfa7c9aa97cb76ca92233f79aa2cc0dbee2efaac73c7",
+    "toolchain": "1.97.1-x86_64-pc-windows-msvc",
+    "rustc": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+    "rustcCommit": "8bab26f4f68e0e26f0bb7960be334d5b520ea452",
+    "cargo": "cargo 1.97.1 (c980f4866 2026-06-30)",
+    "rustfmt": "rustfmt 1.9.0-stable (8bab26f4f6 2026-07-14)",
+    "clippy": "clippy 0.1.97 (8bab26f4f6 2026-07-14)",
+    "host": "x86_64-pc-windows-msvc",
+    "components": ["cargo", "clippy", "rust-std", "rustc", "rustfmt"],
+    "installPath": "C:\\Users\\User\\.cargo\\bin",
+    "freshProcessVerification": "PASS"
+  },
+  "reusedWithoutReinstallation": {
+    "visualStudio": "Visual Studio Community 2026 18.8.2",
+    "msvcCompiler": "19.51.36252.0",
+    "windowsSdk": "10.0.26100.0",
+    "webView2": "150.0.4078.48"
+  },
+  "repositoryDependencies": {
+    "nativeSourcePath": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508",
+    "sourceIdentitySha256": "07208e31be8ed0170952cfe71bfa0fadbe8306adc431f745769e0cedb14b90fc",
+    "npmCommand": "npm ci --no-audit --no-fund",
+    "npmExitCode": 0,
+    "packagesInstalled": 137,
+    "packageLockSha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+    "npmLogSha256": "1c9ecbdae23ffdb28b93852c9f9ffbc209ffde70bdcab8041d7ba568aee48c8c",
+    "cargoFetchCommand": "cargo fetch --locked",
+    "cargoFetchExitCode": 0,
+    "cargoLockSha256": "d12b3ce4329728f91d2ba043dc877035dda869e3993a92c2219a0b492e6639cc",
+    "cargoFetchLogSha256": "97f887187030928c4f03210199679993c82ca59e963f982525ffd475bd3fe83a"
+  },
+  "changes": {
+    "dependencyVersionsModified": 0,
+    "lockfilesModified": 0,
+    "newProductDependencies": 0,
+    "unrelatedGlobalToolsInstalled": 0,
+    "modelsDownloaded": 0
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 2,
+  "identityId": "dca-w1-windows-native-authoritative-source-identity-v2",
+  "status": "PASS_NATIVE_AUTHORITATIVE_SOURCE_IDENTITY",
+  "policy": {
+    "version": 2,
+    "implementation": "scripts/windows_native_source_identity.ts",
+    "regressionTests": "tests/windows-native-source-identity.test.ts",
+    "testResult": "PASS_10_OF_10",
+    "defaultClassification": "AUTHORITATIVE_SOURCE",
+    "unknownPaths": "FAIL_CLOSED_INCLUDED_AS_AUTHORITATIVE",
+    "symbolicLinks": "FAIL_CLOSED_REJECTED"
+  },
+  "historicalIdentity": {
+    "path": "docs/validation/WINDOWS_NATIVE_SOURCE_IDENTITY.v1.json",
+    "sha256": "61ece48ca3a5257c5add5b27db0d97c08f486dfe4053c9ca2969a48eddb4ec93",
+    "closureSha256": "07208e31be8ed0170952cfe71bfa0fadbe8306adc431f745769e0cedb14b90fc",
+    "classification": "SUPERSEDED_IDENTITY_POLICY_INCLUDED_MUTABLE_BUILD_STATE"
+  },
+  "observedWholeTreeDrift": {
+    "path": "docs/validation/WINDOWS_NATIVE_SOURCE_IDENTITY_DRIFT.v1.json",
+    "sha256": "f78bc14cdc9ef4d7e3018bcb2cc416a470d797818dd9859c8234232d9f14277c",
+    "wholeTreeObservedSha256": "a3bfae6d9c2e15cd6be9c92e1763c876889781043e456e5baa4c07af761b3e29",
+    "exactChangedFiles": ["tsconfig.node.tsbuildinfo", "tsconfig.app.tsbuildinfo"],
+    "addedFiles": [],
+    "removedFiles": [],
+    "materialSourceConfigLockOrProductFilesChanged": 0,
+    "mechanicalEvidence": "Original and retained file counts remain 2197; exactly two non-ephemeral paths have post-seal mtimes, both reported tsbuildinfo caches; zero other post-seal paths remain after exact-cache exclusion."
+  },
+  "generatedClassification": {
+    "generatingTool": "TypeScript compiler build mode",
+    "generatingCommands": ["tsc -b --pretty false", "tsc -b"],
+    "sourceConfigs": ["tsconfig.json", "tsconfig.app.json", "tsconfig.node.json"],
+    "repositoryIgnoreEvidence": ".gitignore contains *.tsbuildinfo",
+    "expectedToMutateAcrossBuilds": true,
+    "exactMutableFilesExcludedByCorrection": ["tsconfig.node.tsbuildinfo", "tsconfig.app.tsbuildinfo"],
+    "similarNamesExcluded": false
+  },
+  "normalizedIdentity": {
+    "nativePath": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508",
+    "algorithm": "SHA256_OVER_SORTED_NUL_DELIMITED_SHA256_AND_RELATIVE_PATH_PAIRS",
+    "sha256": "05dffcadfcb1aadc6881626cb5ef0bee8bccf6c7807582bc92a91465be4d2eae",
+    "authoritativeFileCount": 2195,
+    "authoritativeBytes": 86135386,
+    "repeatComputation": "PASS_BYTE_IDENTICAL_RESULT"
+  },
+  "preexistingEphemeralTreesExcludedFromTraversal": [
+    ".git/",
+    ".qa-logs/",
+    ".runtime/",
+    "apps/desktop/src-tauri/target/",
+    "coverage/",
+    "dist/",
+    "node_modules/",
+    "runtime/model/.venv/"
+  ],
+  "authoritativeExamples": [
+    "application .ts/.tsx source",
+    "Tauri/Rust source",
+    "tests",
+    "package.json and package-lock.json",
+    "Cargo.toml and Cargo.lock",
+    "TypeScript/Tauri/build configs",
+    "canonical bundled artifacts",
+    "productization and W1 product fixes",
+    "all otherwise unclassified files"
+  ]
+}

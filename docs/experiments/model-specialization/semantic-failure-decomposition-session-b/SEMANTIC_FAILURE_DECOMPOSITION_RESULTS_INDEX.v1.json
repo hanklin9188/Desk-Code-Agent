@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "indexId": "dca-semantic-failure-decomposition-session-b-results-index-v1",
+  "status": "PASS_SESSION_B_CLASSIFICATION_COMPLETE",
+  "generatedAt": "2026-08-11T19:11:06.048Z",
+  "inputs": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_PREREGISTRATION.v1.json",
+      "sha256": "6851a9a2a2fd25757413f71c0b331e5899a397c1928b59259f3cc6606123ed47"
+    },
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_SESSION_A.v1.json",
+      "sha256": "368ba02473ef7baf09f7c3927b969c579c1848c8c362c2be12f27cacd36535eb"
+    },
+    "manifest": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+      "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+    },
+    "oracle": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+      "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+    },
+    "repositories": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+      "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+    },
+    "originalObservations": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+      "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a"
+    },
+    "retryObservations": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/retry-observations.checkpoint.jsonl",
+      "sha256": "b5b9010951209b13dd7afb2ebf521941577c1ec0a06c82d2ec75260ef74de3bd"
+    }
+  },
+  "artifacts": {
+    "classificationMatrix": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_CLASSIFICATION_MATRIX.v1.json",
+      "sha256": "8d8a176212956b07fc13139f3517a1a8d8c7cad03a7ba836ccfe43ff8c0de1de"
+    },
+    "successControls": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_SUCCESS_CONTROLS.v1.json",
+      "sha256": "9e7647a0d26dbdcd795bf266f3db616fb0f828ee7ebfa16ca2ce2177aa871175"
+    },
+    "evidenceSufficiency": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_EVIDENCE_SUFFICIENCY.v1.json",
+      "sha256": "4d1bb985971349d2fc0bcd285a0f5c97e784f4862b8500c1e70dcd9e97c40079"
+    },
+    "patchScope": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_PATCH_SCOPE.v1.json",
+      "sha256": "6306920f8df95c7d448d8ec3bb34facddfc2035ea51b4b1a0687aa23330d0499"
+    },
+    "reasoningHorizon": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_REASONING_HORIZON.v1.json",
+      "sha256": "6954f521fe3d96eb836ea1c14af61df41c6aa0bded1ad159d9cebb380919ac50"
+    },
+    "successFailureComparison": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_SUCCESS_FAILURE_COMPARISON.v1.json",
+      "sha256": "2d0e7bea4d2557fdd472336099ed9c46d220d4a5d994a86ac178d360449d7b77"
+    },
+    "retryByCategory": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_RETRY_BY_CATEGORY.v1.json",
+      "sha256": "8030cd8914240602fbe1a0a6c0507a9a7db40a44db5fd3f56193f1f969a394e1"
+    },
+    "t14Observability": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_T14_OBSERVABILITY.v1.json",
+      "sha256": "66c0d303631044d34c74a79f6fbaaa3dfc9b7f3353482140ce2db2c1a9839cee"
+    },
+    "confidence": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_CONFIDENCE.v1.json",
+      "sha256": "3b64a01db296fe614c15ffc5239bf1982d67593a6718ce822c11ff6548f030dc"
+    },
+    "qualityAudit": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_QUALITY_AUDIT.v1.json",
+      "sha256": "7a4608f6ac222e8eb5296941c663e1e438065872c22a9fdf89c6d722f57235b5"
+    },
+    "disagreements": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_DISAGREEMENTS.v1.json",
+      "sha256": "7848b5f0c8db62b92d3568d1b2980e0cd11191e8626a176f6f7c3c3c96d4ee43"
+    }
+  },
+  "population": {
+    "failures": 66,
+    "controls": 29,
+    "total": 95
+  },
+  "primaryCategoryCounts": {
+    "total": 66,
+    "counts": {
+      "T11_RETRIEVAL_FAILURE": 5,
+      "T12_ACTION_OR_PATCH_REPRESENTATION": 2,
+      "T13_SYNTAX_CODE_FORMATION": 6,
+      "T14_AMBIGUOUS_OR_INCONCLUSIVE": 53
+    },
+    "ratesPercent": {
+      "T11_RETRIEVAL_FAILURE": 7.575757575757576,
+      "T12_ACTION_OR_PATCH_REPRESENTATION": 3.0303030303030303,
+      "T13_SYNTAX_CODE_FORMATION": 9.090909090909092,
+      "T14_AMBIGUOUS_OR_INCONCLUSIVE": 80.3030303030303
+    }
+  },
+  "confidenceDistribution": {
+    "total": 66,
+    "counts": {
+      "HIGH": 13,
+      "LOW": 53
+    },
+    "ratesPercent": {
+      "HIGH": 19.696969696969695,
+      "LOW": 80.3030303030303
+    }
+  },
+  "t14": 53,
+  "evidenceSufficiency": {
+    "total": 66,
+    "counts": {
+      "MISSING_REQUIRED_EVIDENCE": 5,
+      "PARTIALLY_SUFFICIENT": 61
+    },
+    "ratesPercent": {
+      "MISSING_REQUIRED_EVIDENCE": 7.575757575757576,
+      "PARTIALLY_SUFFICIENT": 92.42424242424242
+    }
+  },
+  "patchScope": {
+    "total": 66,
+    "counts": {
+      "SINGLE_RANGE": 66
+    },
+    "ratesPercent": {
+      "SINGLE_RANGE": 100
+    }
+  },
+  "reasoningHorizon": {
+    "total": 66,
+    "counts": {
+      "CROSS_FILE": 13,
+      "LOCAL": 32,
+      "STATEFUL_OR_API_LEVEL": 21
+    },
+    "ratesPercent": {
+      "CROSS_FILE": 19.696969696969695,
+      "LOCAL": 48.484848484848484,
+      "STATEFUL_OR_API_LEVEL": 31.818181818181817
+    }
+  },
+  "audit": {
+    "audited": 60,
+    "disagreements": 0
+  },
+  "historicalDecisionsUnchanged": true,
+  "gatesG1ToG5Applied": false,
+  "SessionCSelectionPerformed": false,
+  "targetModelCalls": 0
+}

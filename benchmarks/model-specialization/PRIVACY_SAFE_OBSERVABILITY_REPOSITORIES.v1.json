@@ -1,0 +1,875 @@
+{
+  "schemaVersion": 1,
+  "repositoryManifestId": "dca-privacy-safe-observability-repositories-v1",
+  "state": "SEALED_IMMUTABLE_GENERATOR_OUTPUT",
+  "classification": "NEW_REPOSITORY_DISJOINT_SYNTHETIC_FIXTURES",
+  "authoredAt": "2026-08-11T19:51:54.832Z",
+  "repositories": [
+    {
+      "repository_id": "observability-01-aurora-clock",
+      "source": "DETERMINISTIC_SESSION_A_AUTHORED_FIXTURE",
+      "immutable_revision": "sha256:6f1ef98cda52259b29d2af6245eab3f665892981f240830da5c5f16469e55ee7",
+      "file_count": 20,
+      "files": [
+        {
+          "path": "src/case-1.mjs",
+          "content": "// deterministic observability fixture 1\nexport function observe001(index,length){ return index%length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-1.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe001 } from '../src/case-1.mjs';\ntest('visible index_normalization 1',()=>{ assert.equal(observe001(-1,5),4); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-2.mjs",
+          "content": "// deterministic observability fixture 2\nexport function observe002(value,fallback){ return value||fallback; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-2.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe002 } from '../src/case-2.mjs';\ntest('visible nullish_defaulting 2',()=>{ assert.equal(observe002(false,true),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-3.mjs",
+          "content": "// deterministic observability fixture 3\nexport function observe003(value,min,max){ return value>min&&value<max; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-3.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe003 } from '../src/case-3.mjs';\ntest('visible inclusive_boundary 3',()=>{ assert.equal(observe003(22,22,26),true); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-4.mjs",
+          "content": "// deterministic observability fixture 4\nexport function observe004(text){ return text.split('\\n'); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-4.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe004 } from '../src/case-4.mjs';\ntest('visible line_ending_contract 4',()=>{ assert.deepEqual(observe004('a\\r\\nb'),['a','b']); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-5.mjs",
+          "content": "// deterministic observability fixture 5\nexport function observe005(items){ return [...items].sort(); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-5.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe005 } from '../src/case-5.mjs';\ntest('visible numeric_ordering 5',()=>{ assert.deepEqual(observe005([10,2,1]),[1,2,10]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-6.mjs",
+          "content": "// deterministic observability fixture 6\nexport function observe006(items,n){ return items.slice(0,n); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-6.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe006 } from '../src/case-6.mjs';\ntest('visible tail_window 6',()=>{ assert.deepEqual(observe006([1,2,3,4],2),[3,4]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-7.mjs",
+          "content": "// deterministic observability fixture 7\nexport function observe007(value){ return Number(value); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-7.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe007 } from '../src/case-7.mjs';\ntest('visible finite_number_contract 7',()=>{ assert.equal(observe007('not-a-number'),null); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-8.mjs",
+          "content": "// deterministic observability fixture 8\nexport function observe008(record,key){ return key in record; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-8.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe008 } from '../src/case-8.mjs';\ntest('visible record_ownership 8',()=>{ assert.equal(observe008(Object.create({x:1}),'x'),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-9.mjs",
+          "content": "// deterministic observability fixture 9\nexport function observe009(items){ return items.reduce((a,b)=>a+b,0)/items.length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-9.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe009 } from '../src/case-9.mjs';\ntest('visible safe_average 9',()=>{ assert.equal(observe009([2,Number.NaN,4]),3); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-10.mjs",
+          "content": "// deterministic observability fixture 10\nexport function observe010(rows){ return Object.fromEntries(rows.map(row=>[row.id,rows[0]])); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-10.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe010 } from '../src/case-10.mjs';\ntest('visible map_last_write 10',()=>{ assert.deepEqual(observe010([{id:'a',v:1},{id:'b',v:2}]).b,{id:'b',v:2}); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "observability-02-birch-stream",
+      "source": "DETERMINISTIC_SESSION_A_AUTHORED_FIXTURE",
+      "immutable_revision": "sha256:a59ec284bc1276342fabf61dde441242404f39efd5b595d502b1d55c84f28c2a",
+      "file_count": 20,
+      "files": [
+        {
+          "path": "src/case-1.mjs",
+          "content": "// deterministic observability fixture 11\nexport function observe011(index,length){ return index%length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-1.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe011 } from '../src/case-1.mjs';\ntest('visible index_normalization 11',()=>{ assert.equal(observe011(-1,5),4); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-2.mjs",
+          "content": "// deterministic observability fixture 12\nexport function observe012(value,fallback){ return value||fallback; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-2.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe012 } from '../src/case-2.mjs';\ntest('visible nullish_defaulting 12',()=>{ assert.equal(observe012(false,true),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-3.mjs",
+          "content": "// deterministic observability fixture 13\nexport function observe013(value,min,max){ return value>min&&value<max; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-3.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe013 } from '../src/case-3.mjs';\ntest('visible inclusive_boundary 13',()=>{ assert.equal(observe013(29,29,33),true); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-4.mjs",
+          "content": "// deterministic observability fixture 14\nexport function observe014(text){ return text.split('\\n'); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-4.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe014 } from '../src/case-4.mjs';\ntest('visible line_ending_contract 14',()=>{ assert.deepEqual(observe014('a\\r\\nb'),['a','b']); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-5.mjs",
+          "content": "// deterministic observability fixture 15\nexport function observe015(items){ return [...items].sort(); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-5.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe015 } from '../src/case-5.mjs';\ntest('visible numeric_ordering 15',()=>{ assert.deepEqual(observe015([10,2,1]),[1,2,10]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-6.mjs",
+          "content": "// deterministic observability fixture 16\nexport function observe016(items,n){ return items.slice(0,n); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-6.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe016 } from '../src/case-6.mjs';\ntest('visible tail_window 16',()=>{ assert.deepEqual(observe016([1,2,3,4],2),[3,4]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-7.mjs",
+          "content": "// deterministic observability fixture 17\nexport function observe017(value){ return Number(value); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-7.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe017 } from '../src/case-7.mjs';\ntest('visible finite_number_contract 17',()=>{ assert.equal(observe017('not-a-number'),null); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-8.mjs",
+          "content": "// deterministic observability fixture 18\nexport function observe018(record,key){ return key in record; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-8.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe018 } from '../src/case-8.mjs';\ntest('visible record_ownership 18',()=>{ assert.equal(observe018(Object.create({x:1}),'x'),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-9.mjs",
+          "content": "// deterministic observability fixture 19\nexport function observe019(items){ return items.reduce((a,b)=>a+b,0)/items.length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-9.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe019 } from '../src/case-9.mjs';\ntest('visible safe_average 19',()=>{ assert.equal(observe019([2,Number.NaN,4]),3); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-10.mjs",
+          "content": "// deterministic observability fixture 20\nexport function observe020(rows){ return Object.fromEntries(rows.map(row=>[row.id,rows[0]])); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-10.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe020 } from '../src/case-10.mjs';\ntest('visible map_last_write 20',()=>{ assert.deepEqual(observe020([{id:'a',v:1},{id:'b',v:2}]).b,{id:'b',v:2}); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "observability-03-cirrus-table",
+      "source": "DETERMINISTIC_SESSION_A_AUTHORED_FIXTURE",
+      "immutable_revision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+      "file_count": 20,
+      "files": [
+        {
+          "path": "src/case-1.mjs",
+          "content": "// deterministic observability fixture 21\nexport function observe021(index,length){ return index%length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-1.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe021 } from '../src/case-1.mjs';\ntest('visible index_normalization 21',()=>{ assert.equal(observe021(-1,5),4); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-2.mjs",
+          "content": "// deterministic observability fixture 22\nexport function observe022(value,fallback){ return value||fallback; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-2.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe022 } from '../src/case-2.mjs';\ntest('visible nullish_defaulting 22',()=>{ assert.equal(observe022(false,true),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-3.mjs",
+          "content": "// deterministic observability fixture 23\nexport function observe023(value,min,max){ return value>min&&value<max; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-3.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe023 } from '../src/case-3.mjs';\ntest('visible inclusive_boundary 23',()=>{ assert.equal(observe023(36,36,40),true); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-4.mjs",
+          "content": "// deterministic observability fixture 24\nexport function observe024(text){ return text.split('\\n'); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-4.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe024 } from '../src/case-4.mjs';\ntest('visible line_ending_contract 24',()=>{ assert.deepEqual(observe024('a\\r\\nb'),['a','b']); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-5.mjs",
+          "content": "// deterministic observability fixture 25\nexport function observe025(items){ return [...items].sort(); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-5.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe025 } from '../src/case-5.mjs';\ntest('visible numeric_ordering 25',()=>{ assert.deepEqual(observe025([10,2,1]),[1,2,10]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-6.mjs",
+          "content": "// deterministic observability fixture 26\nexport function observe026(items,n){ return items.slice(0,n); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-6.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe026 } from '../src/case-6.mjs';\ntest('visible tail_window 26',()=>{ assert.deepEqual(observe026([1,2,3,4],2),[3,4]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-7.mjs",
+          "content": "// deterministic observability fixture 27\nexport function observe027(value){ return Number(value); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-7.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe027 } from '../src/case-7.mjs';\ntest('visible finite_number_contract 27',()=>{ assert.equal(observe027('not-a-number'),null); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-8.mjs",
+          "content": "// deterministic observability fixture 28\nexport function observe028(record,key){ return key in record; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-8.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe028 } from '../src/case-8.mjs';\ntest('visible record_ownership 28',()=>{ assert.equal(observe028(Object.create({x:1}),'x'),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-9.mjs",
+          "content": "// deterministic observability fixture 29\nexport function observe029(items){ return items.reduce((a,b)=>a+b,0)/items.length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-9.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe029 } from '../src/case-9.mjs';\ntest('visible safe_average 29',()=>{ assert.equal(observe029([2,Number.NaN,4]),3); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-10.mjs",
+          "content": "// deterministic observability fixture 30\nexport function observe030(rows){ return Object.fromEntries(rows.map(row=>[row.id,rows[0]])); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-10.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe030 } from '../src/case-10.mjs';\ntest('visible map_last_write 30',()=>{ assert.deepEqual(observe030([{id:'a',v:1},{id:'b',v:2}]).b,{id:'b',v:2}); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "observability-04-delta-queue",
+      "source": "DETERMINISTIC_SESSION_A_AUTHORED_FIXTURE",
+      "immutable_revision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+      "file_count": 20,
+      "files": [
+        {
+          "path": "src/case-1.mjs",
+          "content": "// deterministic observability fixture 31\nexport function observe031(index,length){ return index%length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-1.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe031 } from '../src/case-1.mjs';\ntest('visible index_normalization 31',()=>{ assert.equal(observe031(-1,5),4); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-2.mjs",
+          "content": "// deterministic observability fixture 32\nexport function observe032(value,fallback){ return value||fallback; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-2.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe032 } from '../src/case-2.mjs';\ntest('visible nullish_defaulting 32',()=>{ assert.equal(observe032(false,true),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-3.mjs",
+          "content": "// deterministic observability fixture 33\nexport function observe033(value,min,max){ return value>min&&value<max; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-3.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe033 } from '../src/case-3.mjs';\ntest('visible inclusive_boundary 33',()=>{ assert.equal(observe033(43,43,47),true); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-4.mjs",
+          "content": "// deterministic observability fixture 34\nexport function observe034(text){ return text.split('\\n'); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-4.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe034 } from '../src/case-4.mjs';\ntest('visible line_ending_contract 34',()=>{ assert.deepEqual(observe034('a\\r\\nb'),['a','b']); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-5.mjs",
+          "content": "// deterministic observability fixture 35\nexport function observe035(items){ return [...items].sort(); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-5.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe035 } from '../src/case-5.mjs';\ntest('visible numeric_ordering 35',()=>{ assert.deepEqual(observe035([10,2,1]),[1,2,10]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-6.mjs",
+          "content": "// deterministic observability fixture 36\nexport function observe036(items,n){ return items.slice(0,n); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-6.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe036 } from '../src/case-6.mjs';\ntest('visible tail_window 36',()=>{ assert.deepEqual(observe036([1,2,3,4],2),[3,4]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-7.mjs",
+          "content": "// deterministic observability fixture 37\nexport function observe037(value){ return Number(value); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-7.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe037 } from '../src/case-7.mjs';\ntest('visible finite_number_contract 37',()=>{ assert.equal(observe037('not-a-number'),null); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-8.mjs",
+          "content": "// deterministic observability fixture 38\nexport function observe038(record,key){ return key in record; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-8.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe038 } from '../src/case-8.mjs';\ntest('visible record_ownership 38',()=>{ assert.equal(observe038(Object.create({x:1}),'x'),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-9.mjs",
+          "content": "// deterministic observability fixture 39\nexport function observe039(items){ return items.reduce((a,b)=>a+b,0)/items.length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-9.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe039 } from '../src/case-9.mjs';\ntest('visible safe_average 39',()=>{ assert.equal(observe039([2,Number.NaN,4]),3); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-10.mjs",
+          "content": "// deterministic observability fixture 40\nexport function observe040(rows){ return Object.fromEntries(rows.map(row=>[row.id,rows[0]])); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-10.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe040 } from '../src/case-10.mjs';\ntest('visible map_last_write 40',()=>{ assert.deepEqual(observe040([{id:'a',v:1},{id:'b',v:2}]).b,{id:'b',v:2}); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "observability-05-elm-registry",
+      "source": "DETERMINISTIC_SESSION_A_AUTHORED_FIXTURE",
+      "immutable_revision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d",
+      "file_count": 20,
+      "files": [
+        {
+          "path": "src/case-1.mjs",
+          "content": "// deterministic observability fixture 41\nexport function observe041(index,length){ return index%length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-1.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe041 } from '../src/case-1.mjs';\ntest('visible index_normalization 41',()=>{ assert.equal(observe041(-1,5),4); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-2.mjs",
+          "content": "// deterministic observability fixture 42\nexport function observe042(value,fallback){ return value||fallback; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-2.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe042 } from '../src/case-2.mjs';\ntest('visible nullish_defaulting 42',()=>{ assert.equal(observe042(false,true),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-3.mjs",
+          "content": "// deterministic observability fixture 43\nexport function observe043(value,min,max){ return value>min&&value<max; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-3.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe043 } from '../src/case-3.mjs';\ntest('visible inclusive_boundary 43',()=>{ assert.equal(observe043(50,50,54),true); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-4.mjs",
+          "content": "// deterministic observability fixture 44\nexport function observe044(text){ return text.split('\\n'); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-4.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe044 } from '../src/case-4.mjs';\ntest('visible line_ending_contract 44',()=>{ assert.deepEqual(observe044('a\\r\\nb'),['a','b']); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-5.mjs",
+          "content": "// deterministic observability fixture 45\nexport function observe045(items){ return [...items].sort(); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-5.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe045 } from '../src/case-5.mjs';\ntest('visible numeric_ordering 45',()=>{ assert.deepEqual(observe045([10,2,1]),[1,2,10]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-6.mjs",
+          "content": "// deterministic observability fixture 46\nexport function observe046(items,n){ return items.slice(0,n); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-6.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe046 } from '../src/case-6.mjs';\ntest('visible tail_window 46',()=>{ assert.deepEqual(observe046([1,2,3,4],2),[3,4]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-7.mjs",
+          "content": "// deterministic observability fixture 47\nexport function observe047(value){ return Number(value); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-7.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe047 } from '../src/case-7.mjs';\ntest('visible finite_number_contract 47',()=>{ assert.equal(observe047('not-a-number'),null); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-8.mjs",
+          "content": "// deterministic observability fixture 48\nexport function observe048(record,key){ return key in record; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-8.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe048 } from '../src/case-8.mjs';\ntest('visible record_ownership 48',()=>{ assert.equal(observe048(Object.create({x:1}),'x'),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-9.mjs",
+          "content": "// deterministic observability fixture 49\nexport function observe049(items){ return items.reduce((a,b)=>a+b,0)/items.length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-9.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe049 } from '../src/case-9.mjs';\ntest('visible safe_average 49',()=>{ assert.equal(observe049([2,Number.NaN,4]),3); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-10.mjs",
+          "content": "// deterministic observability fixture 50\nexport function observe050(rows){ return Object.fromEntries(rows.map(row=>[row.id,rows[0]])); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-10.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe050 } from '../src/case-10.mjs';\ntest('visible map_last_write 50',()=>{ assert.deepEqual(observe050([{id:'a',v:1},{id:'b',v:2}]).b,{id:'b',v:2}); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "observability-06-fjord-window",
+      "source": "DETERMINISTIC_SESSION_A_AUTHORED_FIXTURE",
+      "immutable_revision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+      "file_count": 20,
+      "files": [
+        {
+          "path": "src/case-1.mjs",
+          "content": "// deterministic observability fixture 51\nexport function observe051(index,length){ return index%length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-1.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe051 } from '../src/case-1.mjs';\ntest('visible index_normalization 51',()=>{ assert.equal(observe051(-1,5),4); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-2.mjs",
+          "content": "// deterministic observability fixture 52\nexport function observe052(value,fallback){ return value||fallback; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-2.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe052 } from '../src/case-2.mjs';\ntest('visible nullish_defaulting 52',()=>{ assert.equal(observe052(false,true),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-3.mjs",
+          "content": "// deterministic observability fixture 53\nexport function observe053(value,min,max){ return value>min&&value<max; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-3.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe053 } from '../src/case-3.mjs';\ntest('visible inclusive_boundary 53',()=>{ assert.equal(observe053(57,57,61),true); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-4.mjs",
+          "content": "// deterministic observability fixture 54\nexport function observe054(text){ return text.split('\\n'); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-4.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe054 } from '../src/case-4.mjs';\ntest('visible line_ending_contract 54',()=>{ assert.deepEqual(observe054('a\\r\\nb'),['a','b']); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-5.mjs",
+          "content": "// deterministic observability fixture 55\nexport function observe055(items){ return [...items].sort(); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-5.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe055 } from '../src/case-5.mjs';\ntest('visible numeric_ordering 55',()=>{ assert.deepEqual(observe055([10,2,1]),[1,2,10]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-6.mjs",
+          "content": "// deterministic observability fixture 56\nexport function observe056(items,n){ return items.slice(0,n); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-6.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe056 } from '../src/case-6.mjs';\ntest('visible tail_window 56',()=>{ assert.deepEqual(observe056([1,2,3,4],2),[3,4]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-7.mjs",
+          "content": "// deterministic observability fixture 57\nexport function observe057(value){ return Number(value); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-7.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe057 } from '../src/case-7.mjs';\ntest('visible finite_number_contract 57',()=>{ assert.equal(observe057('not-a-number'),null); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-8.mjs",
+          "content": "// deterministic observability fixture 58\nexport function observe058(record,key){ return key in record; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-8.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe058 } from '../src/case-8.mjs';\ntest('visible record_ownership 58',()=>{ assert.equal(observe058(Object.create({x:1}),'x'),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-9.mjs",
+          "content": "// deterministic observability fixture 59\nexport function observe059(items){ return items.reduce((a,b)=>a+b,0)/items.length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-9.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe059 } from '../src/case-9.mjs';\ntest('visible safe_average 59',()=>{ assert.equal(observe059([2,Number.NaN,4]),3); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-10.mjs",
+          "content": "// deterministic observability fixture 60\nexport function observe060(rows){ return Object.fromEntries(rows.map(row=>[row.id,rows[0]])); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-10.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe060 } from '../src/case-10.mjs';\ntest('visible map_last_write 60',()=>{ assert.deepEqual(observe060([{id:'a',v:1},{id:'b',v:2}]).b,{id:'b',v:2}); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "observability-07-grove-index",
+      "source": "DETERMINISTIC_SESSION_A_AUTHORED_FIXTURE",
+      "immutable_revision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+      "file_count": 20,
+      "files": [
+        {
+          "path": "src/case-1.mjs",
+          "content": "// deterministic observability fixture 61\nexport function observe061(index,length){ return index%length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-1.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe061 } from '../src/case-1.mjs';\ntest('visible index_normalization 61',()=>{ assert.equal(observe061(-1,5),4); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-2.mjs",
+          "content": "// deterministic observability fixture 62\nexport function observe062(value,fallback){ return value||fallback; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-2.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe062 } from '../src/case-2.mjs';\ntest('visible nullish_defaulting 62',()=>{ assert.equal(observe062(false,true),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-3.mjs",
+          "content": "// deterministic observability fixture 63\nexport function observe063(value,min,max){ return value>min&&value<max; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-3.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe063 } from '../src/case-3.mjs';\ntest('visible inclusive_boundary 63',()=>{ assert.equal(observe063(64,64,68),true); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-4.mjs",
+          "content": "// deterministic observability fixture 64\nexport function observe064(text){ return text.split('\\n'); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-4.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe064 } from '../src/case-4.mjs';\ntest('visible line_ending_contract 64',()=>{ assert.deepEqual(observe064('a\\r\\nb'),['a','b']); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-5.mjs",
+          "content": "// deterministic observability fixture 65\nexport function observe065(items){ return [...items].sort(); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-5.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe065 } from '../src/case-5.mjs';\ntest('visible numeric_ordering 65',()=>{ assert.deepEqual(observe065([10,2,1]),[1,2,10]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-6.mjs",
+          "content": "// deterministic observability fixture 66\nexport function observe066(items,n){ return items.slice(0,n); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-6.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe066 } from '../src/case-6.mjs';\ntest('visible tail_window 66',()=>{ assert.deepEqual(observe066([1,2,3,4],2),[3,4]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-7.mjs",
+          "content": "// deterministic observability fixture 67\nexport function observe067(value){ return Number(value); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-7.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe067 } from '../src/case-7.mjs';\ntest('visible finite_number_contract 67',()=>{ assert.equal(observe067('not-a-number'),null); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-8.mjs",
+          "content": "// deterministic observability fixture 68\nexport function observe068(record,key){ return key in record; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-8.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe068 } from '../src/case-8.mjs';\ntest('visible record_ownership 68',()=>{ assert.equal(observe068(Object.create({x:1}),'x'),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-9.mjs",
+          "content": "// deterministic observability fixture 69\nexport function observe069(items){ return items.reduce((a,b)=>a+b,0)/items.length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-9.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe069 } from '../src/case-9.mjs';\ntest('visible safe_average 69',()=>{ assert.equal(observe069([2,Number.NaN,4]),3); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-10.mjs",
+          "content": "// deterministic observability fixture 70\nexport function observe070(rows){ return Object.fromEntries(rows.map(row=>[row.id,rows[0]])); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-10.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe070 } from '../src/case-10.mjs';\ntest('visible map_last_write 70',()=>{ assert.deepEqual(observe070([{id:'a',v:1},{id:'b',v:2}]).b,{id:'b',v:2}); });\n",
+          "role": "test"
+        }
+      ]
+    },
+    {
+      "repository_id": "observability-08-hearth-record",
+      "source": "DETERMINISTIC_SESSION_A_AUTHORED_FIXTURE",
+      "immutable_revision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65",
+      "file_count": 20,
+      "files": [
+        {
+          "path": "src/case-1.mjs",
+          "content": "// deterministic observability fixture 71\nexport function observe071(index,length){ return index%length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-1.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe071 } from '../src/case-1.mjs';\ntest('visible index_normalization 71',()=>{ assert.equal(observe071(-1,5),4); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-2.mjs",
+          "content": "// deterministic observability fixture 72\nexport function observe072(value,fallback){ return value||fallback; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-2.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe072 } from '../src/case-2.mjs';\ntest('visible nullish_defaulting 72',()=>{ assert.equal(observe072(false,true),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-3.mjs",
+          "content": "// deterministic observability fixture 73\nexport function observe073(value,min,max){ return value>min&&value<max; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-3.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe073 } from '../src/case-3.mjs';\ntest('visible inclusive_boundary 73',()=>{ assert.equal(observe073(71,71,75),true); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-4.mjs",
+          "content": "// deterministic observability fixture 74\nexport function observe074(text){ return text.split('\\n'); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-4.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe074 } from '../src/case-4.mjs';\ntest('visible line_ending_contract 74',()=>{ assert.deepEqual(observe074('a\\r\\nb'),['a','b']); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-5.mjs",
+          "content": "// deterministic observability fixture 75\nexport function observe075(items){ return [...items].sort(); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-5.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe075 } from '../src/case-5.mjs';\ntest('visible numeric_ordering 75',()=>{ assert.deepEqual(observe075([10,2,1]),[1,2,10]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-6.mjs",
+          "content": "// deterministic observability fixture 76\nexport function observe076(items,n){ return items.slice(0,n); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-6.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe076 } from '../src/case-6.mjs';\ntest('visible tail_window 76',()=>{ assert.deepEqual(observe076([1,2,3,4],2),[3,4]); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-7.mjs",
+          "content": "// deterministic observability fixture 77\nexport function observe077(value){ return Number(value); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-7.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe077 } from '../src/case-7.mjs';\ntest('visible finite_number_contract 77',()=>{ assert.equal(observe077('not-a-number'),null); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-8.mjs",
+          "content": "// deterministic observability fixture 78\nexport function observe078(record,key){ return key in record; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-8.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe078 } from '../src/case-8.mjs';\ntest('visible record_ownership 78',()=>{ assert.equal(observe078(Object.create({x:1}),'x'),false); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-9.mjs",
+          "content": "// deterministic observability fixture 79\nexport function observe079(items){ return items.reduce((a,b)=>a+b,0)/items.length; }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-9.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe079 } from '../src/case-9.mjs';\ntest('visible safe_average 79',()=>{ assert.equal(observe079([2,Number.NaN,4]),3); });\n",
+          "role": "test"
+        },
+        {
+          "path": "src/case-10.mjs",
+          "content": "// deterministic observability fixture 80\nexport function observe080(rows){ return Object.fromEntries(rows.map(row=>[row.id,rows[0]])); }\n",
+          "role": "source"
+        },
+        {
+          "path": "test/case-10.visible.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe080 } from '../src/case-10.mjs';\ntest('visible map_last_write 80',()=>{ assert.deepEqual(observe080([{id:'a',v:1},{id:'b',v:2}]).b,{id:'b',v:2}); });\n",
+          "role": "test"
+        }
+      ]
+    }
+  ],
+  "repositoryIdsSha256": "c8532c353a90c289eb26078eed84d5db670308813ea17abb66875902e8c8e5a0",
+  "repositoryRevisionsSha256": "97cd2a356a4129600312e6e597ed2b4ed24455006f018acd977098bdd1ce0274"
+}

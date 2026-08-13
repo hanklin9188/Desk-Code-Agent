@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-fresh-specialists-g1-2026-08-09T06-48-55-240Z",
+  "status": "PASS",
+  "resultFile": "specialist-ablation-result.json",
+  "resultSha256": "c8ae86a0a32cc987e392d926c3e0cdf3d0584eb7f934c58ec1c0981cf7b02a4e",
+  "summaries": {
+    "architecture": {
+      "tasks": 12,
+      "singleCorrect": 0,
+      "specialistCorrect": 0,
+      "meanSingleEvidenceCoverage": 0,
+      "meanSpecialistEvidenceCoverage": 0,
+      "singleUnsupportedClaims": 0,
+      "specialistUnsupportedClaims": 0,
+      "medianTokens": {
+        "single": 0,
+        "specialist": 0
+      },
+      "medianLatencyMs": {
+        "single": 3.6155,
+        "specialist": 8.0835
+      }
+    },
+    "diagnosis": {
+      "tasks": 15,
+      "triggersSatisfied": 15,
+      "noEscalationCorrect": 0,
+      "conditionalEscalationCorrect": 0,
+      "recoveredFailures": 0,
+      "introducedRegressions": 0,
+      "medianTokens": {
+        "noEscalation": 0,
+        "conditional": 0
+      },
+      "medianLatencyMs": {
+        "noEscalation": 3.786,
+        "conditional": 7.635
+      }
+    },
+    "review": {
+      "tasks": 16,
+      "machineCorrect": 0,
+      "semanticCorrect": 0,
+      "regressionDetections": 0,
+      "falseRejections": 0,
+      "falseApprovals": 16,
+      "medianTokens": {
+        "machine": 0,
+        "semantic": 0
+      },
+      "medianLatencyMs": {
+        "machine": 4.6875,
+        "semantic": 9.906500000000001
+      }
+    }
+  },
+  "decisions": {
+    "architectureSpecialist": "REMAIN_EXPERIMENTAL",
+    "diagnosisCritic": "REMAIN_EXPERIMENTAL",
+    "semanticReviewer": "REMAIN_EXPERIMENTAL",
+    "globalMultiAgent": "DISABLED"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "experiment_id": "deterministic-2026-08-08T18-24-17-339Z",
+  "status": "PASS",
+  "environment": { "node": "v24.15.0", "platform": "linux", "arch": "x64" },
+  "retrieval": { "queries": 2, "hits": 2, "recall_at_k": 1.0, "index_files": 34, "symbols": 188, "references": 4274, "duration_ms": 86.483 },
+  "event_replay": { "events": 1000, "final_state": "DONE", "duration_ms": 6.959, "events_per_second": 143691 },
+  "skill_l0": { "total": 39, "valid": 39, "duration_ms": 69.769, "production_enabled": 0 },
+  "model_experiments": { "status": "NOT_RUN", "reason": "vLLM executable and exact Qwen revision unavailable" },
+  "quantization": { "status": "NOT_RUN", "reason": "BF16 task baseline must run first" },
+  "change_from_failed_run": "source-test affinity now uses import edges before filename heuristics"
+}

@@ -1,0 +1,2492 @@
+{
+  "schemaVersion": 2,
+  "experimentId": "m9-g3-retrieval-taxonomy-v2-2026-08-09T09-55-04-687Z",
+  "status": "PASS",
+  "classification": "DETAILED_OVERLAPPING_RETRIEVAL_FAILURE_TAXONOMY_V2",
+  "source": {
+    "primaryArtifact": "docs/experiments/runs/m9-g3-primary-2026-08-09T09-20-10-123Z/g3-primary-result.json",
+    "sha256": "609bfa82834c5bcf342387db3ac6e8fad4a1f556f39f16debf92aff83e62c9fb",
+    "configuration": "E-MIN-V2",
+    "split": "holdout",
+    "observations": 96
+  },
+  "counts": {
+    "wrong_evidence_class": 50,
+    "wrong_file": 40,
+    "wrong_symbol": 26,
+    "missing_secondary_evidence": 48,
+    "lexical_distractor": 53,
+    "dependency_traversal_failure": 24,
+    "documentation_omission": 17,
+    "metadata_omission": 9,
+    "test_affinity_failure": 24,
+    "truncation": 4,
+    "stale_index": 0,
+    "fallback_failure": 21,
+    "excessive_noise": 0
+  },
+  "byCategory": {
+    "local_coding": {
+      "wrong_evidence_class": 1,
+      "wrong_file": 4,
+      "wrong_symbol": 4,
+      "missing_secondary_evidence": 0,
+      "lexical_distractor": 6,
+      "dependency_traversal_failure": 0,
+      "documentation_omission": 1,
+      "metadata_omission": 0,
+      "test_affinity_failure": 0,
+      "truncation": 1,
+      "stale_index": 0,
+      "fallback_failure": 0,
+      "excessive_noise": 0
+    },
+    "cross_file_coding": {
+      "wrong_evidence_class": 6,
+      "wrong_file": 4,
+      "wrong_symbol": 8,
+      "missing_secondary_evidence": 12,
+      "lexical_distractor": 6,
+      "dependency_traversal_failure": 12,
+      "documentation_omission": 1,
+      "metadata_omission": 0,
+      "test_affinity_failure": 12,
+      "truncation": 1,
+      "stale_index": 0,
+      "fallback_failure": 0,
+      "excessive_noise": 0
+    },
+    "diagnosis": {
+      "wrong_evidence_class": 8,
+      "wrong_file": 4,
+      "wrong_symbol": 6,
+      "missing_secondary_evidence": 12,
+      "lexical_distractor": 6,
+      "dependency_traversal_failure": 12,
+      "documentation_omission": 1,
+      "metadata_omission": 0,
+      "test_affinity_failure": 12,
+      "truncation": 1,
+      "stale_index": 0,
+      "fallback_failure": 0,
+      "excessive_noise": 0
+    },
+    "navigation": {
+      "wrong_evidence_class": 2,
+      "wrong_file": 4,
+      "wrong_symbol": 3,
+      "missing_secondary_evidence": 0,
+      "lexical_distractor": 6,
+      "dependency_traversal_failure": 0,
+      "documentation_omission": 1,
+      "metadata_omission": 0,
+      "test_affinity_failure": 0,
+      "truncation": 1,
+      "stale_index": 0,
+      "fallback_failure": 0,
+      "excessive_noise": 0
+    },
+    "understanding": {
+      "wrong_evidence_class": 12,
+      "wrong_file": 12,
+      "wrong_symbol": 3,
+      "missing_secondary_evidence": 12,
+      "lexical_distractor": 7,
+      "dependency_traversal_failure": 0,
+      "documentation_omission": 12,
+      "metadata_omission": 0,
+      "test_affinity_failure": 0,
+      "truncation": 0,
+      "stale_index": 0,
+      "fallback_failure": 11,
+      "excessive_noise": 0
+    },
+    "review": {
+      "wrong_evidence_class": 12,
+      "wrong_file": 12,
+      "wrong_symbol": 2,
+      "missing_secondary_evidence": 12,
+      "lexical_distractor": 8,
+      "dependency_traversal_failure": 0,
+      "documentation_omission": 1,
+      "metadata_omission": 9,
+      "test_affinity_failure": 0,
+      "truncation": 0,
+      "stale_index": 0,
+      "fallback_failure": 10,
+      "excessive_noise": 0
+    },
+    "safety": {
+      "wrong_evidence_class": 6,
+      "wrong_file": 0,
+      "wrong_symbol": 0,
+      "missing_secondary_evidence": 0,
+      "lexical_distractor": 7,
+      "dependency_traversal_failure": 0,
+      "documentation_omission": 0,
+      "metadata_omission": 0,
+      "test_affinity_failure": 0,
+      "truncation": 0,
+      "stale_index": 0,
+      "fallback_failure": 0,
+      "excessive_noise": 0
+    },
+    "unsupported_escalation": {
+      "wrong_evidence_class": 3,
+      "wrong_file": 0,
+      "wrong_symbol": 0,
+      "missing_secondary_evidence": 0,
+      "lexical_distractor": 7,
+      "dependency_traversal_failure": 0,
+      "documentation_omission": 0,
+      "metadata_omission": 0,
+      "test_affinity_failure": 0,
+      "truncation": 0,
+      "stale_index": 0,
+      "fallback_failure": 0,
+      "excessive_noise": 0
+    }
+  },
+  "staleIndexEvidence": {
+    "count": 0,
+    "basis": "All 24 repositories were clean and exact pinned SHA checks passed at seal and execution; separate mutation stress evaluates stale-index behavior."
+  },
+  "scoringNote": "Labels are deterministic and may overlap. Wrong-symbol and dependency labels are mechanism indicators derived from requested class/task category, not exclusive root-cause claims.",
+  "rows": [
+    {
+      "taskId": "g3-cachecontrol-01-76ce9fda",
+      "repositoryId": "cachecontrol",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_file",
+        "wrong_symbol",
+        "lexical_distractor"
+      ],
+      "required": [
+        "cachecontrol/caches/__init__.py"
+      ],
+      "selected": [
+        "cachecontrol/controller.py",
+        "cachecontrol/filewrapper.py"
+      ],
+      "included": [],
+      "missing": [
+        "cachecontrol/caches/__init__.py"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-cachecontrol-02-f84fa383",
+      "repositoryId": "cachecontrol",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "cachecontrol/caches/__init__.py",
+        "tests/__init__.py"
+      ],
+      "selected": [
+        "cachecontrol/controller.py",
+        "cachecontrol/filewrapper.py"
+      ],
+      "included": [],
+      "missing": [
+        "cachecontrol/caches/__init__.py",
+        "tests/__init__.py"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-cachecontrol-03-d7be5655",
+      "repositoryId": "cachecontrol",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "cachecontrol/caches/__init__.py",
+        "tests/__init__.py"
+      ],
+      "selected": [
+        "cachecontrol/filewrapper.py",
+        "cachecontrol/controller.py"
+      ],
+      "included": [],
+      "missing": [
+        "cachecontrol/caches/__init__.py",
+        "tests/__init__.py"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-cachecontrol-04-40f6abf2",
+      "repositoryId": "cachecontrol",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_file",
+        "wrong_symbol",
+        "lexical_distractor"
+      ],
+      "required": [
+        "cachecontrol/caches/__init__.py"
+      ],
+      "selected": [
+        "cachecontrol/controller.py",
+        "cachecontrol/filewrapper.py"
+      ],
+      "included": [],
+      "missing": [
+        "cachecontrol/caches/__init__.py"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-cachecontrol-05-e9c3cf7c",
+      "repositoryId": "cachecontrol",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        "README.rst",
+        ".github/workflows/release.yml"
+      ],
+      "selected": [
+        "cachecontrol/serialize.py",
+        "cachecontrol/filewrapper.py"
+      ],
+      "included": [],
+      "missing": [
+        "README.rst",
+        ".github/workflows/release.yml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-cachecontrol-06-b4224ed8",
+      "repositoryId": "cachecontrol",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "metadata_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        ".github/workflows/release.yml",
+        "pyproject.toml"
+      ],
+      "selected": [
+        "cachecontrol/serialize.py",
+        "tests/test_storage_filecache.py"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/release.yml",
+        "pyproject.toml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-cachecontrol-07-71088abf",
+      "repositoryId": "cachecontrol",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [
+        "wrong_evidence_class",
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "cachecontrol/serialize.py",
+        "cachecontrol/filewrapper.py"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-cachecontrol-08-3e725bbd",
+      "repositoryId": "cachecontrol",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "cachecontrol/serialize.py",
+        "cachecontrol/filewrapper.py"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-pyjwt-01-7d4d006f",
+      "repositoryId": "pyjwt",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_file",
+        "wrong_symbol",
+        "documentation_omission"
+      ],
+      "required": [
+        "docs/conf.py"
+      ],
+      "selected": [
+        "jwt/jwks_client.py",
+        "tests/keys/__init__.py"
+      ],
+      "included": [],
+      "missing": [
+        "docs/conf.py"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-pyjwt-02-5fb356e1",
+      "repositoryId": "pyjwt",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "documentation_omission",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "docs/conf.py",
+        "tests/__init__.py"
+      ],
+      "selected": [
+        "jwt/jwks_client.py",
+        "tests/test_jwks_client.py"
+      ],
+      "included": [],
+      "missing": [
+        "docs/conf.py",
+        "tests/__init__.py"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-pyjwt-03-60bc337f",
+      "repositoryId": "pyjwt",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "documentation_omission",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "docs/conf.py",
+        "tests/__init__.py"
+      ],
+      "selected": [
+        "jwt/jwks_client.py",
+        "tests/test_jwks_client.py"
+      ],
+      "included": [],
+      "missing": [
+        "docs/conf.py",
+        "tests/__init__.py"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-pyjwt-04-2fc77827",
+      "repositoryId": "pyjwt",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_file",
+        "wrong_symbol",
+        "documentation_omission"
+      ],
+      "required": [
+        "docs/conf.py"
+      ],
+      "selected": [
+        "jwt/jwks_client.py",
+        "tests/test_algorithms.py"
+      ],
+      "included": [],
+      "missing": [
+        "docs/conf.py"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-pyjwt-05-5b8b5d2d",
+      "repositoryId": "pyjwt",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        "README.rst",
+        ".github/workflows/enforce-changelog-entry.yml"
+      ],
+      "selected": [
+        "jwt/algorithms.py",
+        "jwt/api_jws.py"
+      ],
+      "included": [],
+      "missing": [
+        "README.rst",
+        ".github/workflows/enforce-changelog-entry.yml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-pyjwt-06-74ea34d5",
+      "repositoryId": "pyjwt",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "metadata_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        ".github/workflows/enforce-changelog-entry.yml",
+        "pyproject.toml"
+      ],
+      "selected": [
+        "jwt/algorithms.py",
+        "tests/test_advisory.py"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/enforce-changelog-entry.yml",
+        "pyproject.toml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-pyjwt-07-0fab150b",
+      "repositoryId": "pyjwt",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [
+        "wrong_evidence_class"
+      ],
+      "required": [],
+      "selected": [
+        "jwt/jwks_client.py",
+        "jwt/algorithms.py"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-pyjwt-08-a2f4e98f",
+      "repositoryId": "pyjwt",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [],
+      "required": [],
+      "selected": [
+        "jwt/algorithms.py",
+        "jwt/jwks_client.py"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-multidict-01-1bebdc4c",
+      "repositoryId": "multidict",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [
+        "setup.py"
+      ],
+      "selected": [
+        "setup.py",
+        "multidict/_multilib/htkeys.h"
+      ],
+      "included": [
+        "setup.py"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-multidict-02-869e050e",
+      "repositoryId": "multidict",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "setup.py",
+        "tests/conftest.py"
+      ],
+      "selected": [
+        "setup.py",
+        "README.rst"
+      ],
+      "included": [
+        "setup.py"
+      ],
+      "missing": [
+        "tests/conftest.py"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-multidict-03-67bbe0c0",
+      "repositoryId": "multidict",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "setup.py",
+        "tests/conftest.py"
+      ],
+      "selected": [
+        "setup.py",
+        "multidict/_multilib/htkeys.h"
+      ],
+      "included": [
+        "setup.py"
+      ],
+      "missing": [
+        "tests/conftest.py"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-multidict-04-944eb5fe",
+      "repositoryId": "multidict",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [
+        "setup.py"
+      ],
+      "selected": [
+        "setup.py",
+        "multidict/_multilib/htkeys.h"
+      ],
+      "included": [
+        "setup.py"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-multidict-05-181372b1",
+      "repositoryId": "multidict",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        "CHANGES/README.rst",
+        ".github/workflows/auto-merge.yml"
+      ],
+      "selected": [
+        "multidict/_multilib/htkeys.h",
+        "README.rst"
+      ],
+      "included": [],
+      "missing": [
+        "CHANGES/README.rst",
+        ".github/workflows/auto-merge.yml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-multidict-06-b7212bde",
+      "repositoryId": "multidict",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "metadata_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        ".github/workflows/auto-merge.yml",
+        "pyproject.toml"
+      ],
+      "selected": [
+        "README.rst",
+        "multidict/_multilib/htkeys.h"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/auto-merge.yml",
+        "pyproject.toml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-multidict-07-d783fe46",
+      "repositoryId": "multidict",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "multidict/_multilib/htkeys.h",
+        "tests/conftest.py"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-multidict-08-db55240b",
+      "repositoryId": "multidict",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "multidict/_multilib/htkeys.h",
+        "multidict/_multidict.c"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-zod-01-4ae88eb9",
+      "repositoryId": "zod",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_file",
+        "wrong_symbol",
+        "lexical_distractor"
+      ],
+      "required": [
+        "packages/zod/src/index.ts"
+      ],
+      "selected": [
+        "packages/zod/src/locales/index.ts",
+        "packages/zod/README.md"
+      ],
+      "included": [],
+      "missing": [
+        "packages/zod/src/index.ts"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-zod-02-f9c53f8e",
+      "repositoryId": "zod",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "packages/zod/src/index.ts",
+        "packages/zod/src/v4/classic/tests/index.test.ts"
+      ],
+      "selected": [
+        "packages/zod/src/locales/index.ts",
+        "packages/zod/README.md"
+      ],
+      "included": [],
+      "missing": [
+        "packages/zod/src/index.ts",
+        "packages/zod/src/v4/classic/tests/index.test.ts"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-zod-03-b895dfa3",
+      "repositoryId": "zod",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "packages/zod/src/index.ts",
+        "packages/zod/src/v4/classic/tests/index.test.ts"
+      ],
+      "selected": [
+        "packages/zod/src/locales/index.ts",
+        "packages/zod/README.md"
+      ],
+      "included": [],
+      "missing": [
+        "packages/zod/src/index.ts",
+        "packages/zod/src/v4/classic/tests/index.test.ts"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-zod-04-86f14f29",
+      "repositoryId": "zod",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "lexical_distractor"
+      ],
+      "required": [
+        "packages/zod/src/index.ts"
+      ],
+      "selected": [
+        "packages/zod/src/locales/index.ts",
+        "packages/zod/README.md"
+      ],
+      "included": [],
+      "missing": [
+        "packages/zod/src/index.ts"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-zod-05-d1e96bc0",
+      "repositoryId": "zod",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        "README.md",
+        ".github/workflows/claude-code-review.yml"
+      ],
+      "selected": [
+        "packages/zod/README.md",
+        "packages/tsc/bench/object-with-extend.ts"
+      ],
+      "included": [],
+      "missing": [
+        "README.md",
+        ".github/workflows/claude-code-review.yml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-zod-06-43c02ccc",
+      "repositoryId": "zod",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "metadata_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        ".github/workflows/claude-code-review.yml",
+        "package.json"
+      ],
+      "selected": [
+        "packages/zod/README.md",
+        "packages/zod/src/v4/classic/tests/catch.test.ts"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/claude-code-review.yml",
+        "package.json"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-zod-07-93ee2a3a",
+      "repositoryId": "zod",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "packages/zod/README.md",
+        "packages/zod/src/v4/locales/sl.ts"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-zod-08-a369e5c0",
+      "repositoryId": "zod",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "packages/zod/README.md",
+        "packages/zod/src/v4/classic/tests/record.test.ts"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-dotenv-01-e70f0a05",
+      "repositoryId": "dotenv",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_file",
+        "wrong_symbol",
+        "truncation"
+      ],
+      "required": [
+        "lib/main.js"
+      ],
+      "selected": [
+        "cli.js",
+        "lib/main.js"
+      ],
+      "included": [],
+      "missing": [
+        "lib/main.js"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-dotenv-02-4f0dc357",
+      "repositoryId": "dotenv",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "test_affinity_failure",
+        "truncation"
+      ],
+      "required": [
+        "lib/main.js",
+        "tests/test-config-import.js"
+      ],
+      "selected": [
+        "lib/main.js",
+        "cli.js"
+      ],
+      "included": [],
+      "missing": [
+        "lib/main.js",
+        "tests/test-config-import.js"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-dotenv-03-12523564",
+      "repositoryId": "dotenv",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "test_affinity_failure",
+        "truncation"
+      ],
+      "required": [
+        "lib/main.js",
+        "tests/test-config-import.js"
+      ],
+      "selected": [
+        "lib/main.js",
+        "cli.js"
+      ],
+      "included": [],
+      "missing": [
+        "lib/main.js",
+        "tests/test-config-import.js"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-dotenv-04-03db318b",
+      "repositoryId": "dotenv",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_file",
+        "wrong_symbol",
+        "truncation"
+      ],
+      "required": [
+        "lib/main.js"
+      ],
+      "selected": [
+        "lib/main.js",
+        "cli.js"
+      ],
+      "included": [],
+      "missing": [
+        "lib/main.js"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-dotenv-05-b1f0d596",
+      "repositoryId": "dotenv",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        "README.md",
+        ".github/workflows/ci.yml"
+      ],
+      "selected": [
+        "scripts/parse-perf.js",
+        "lib/main.js"
+      ],
+      "included": [],
+      "missing": [
+        "README.md",
+        ".github/workflows/ci.yml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-dotenv-06-ba51ec06",
+      "repositoryId": "dotenv",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "metadata_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        ".github/workflows/ci.yml",
+        "package.json"
+      ],
+      "selected": [
+        "scripts/build.js",
+        "scripts/parse-perf.js"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/ci.yml",
+        "package.json"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-dotenv-07-0ba1044a",
+      "repositoryId": "dotenv",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [],
+      "required": [],
+      "selected": [
+        "scripts/parse-perf.js",
+        "lib/main.js"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-dotenv-08-babb8c5a",
+      "repositoryId": "dotenv",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [
+        "wrong_evidence_class"
+      ],
+      "required": [],
+      "selected": [
+        "scripts/parse-perf.js",
+        "lib/main.js"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-axios-01-2d836b71",
+      "repositoryId": "axios",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [],
+      "required": [
+        "lib/platform/index.js"
+      ],
+      "selected": [
+        "lib/helpers/resolveConfig.js",
+        "lib/platform/index.js"
+      ],
+      "included": [
+        "lib/platform/index.js"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-axios-02-a61d2beb",
+      "repositoryId": "axios",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "lib/platform/index.js",
+        "tests/module/esm/tests/helpers/esm-index.ts"
+      ],
+      "selected": [
+        "lib/helpers/resolveConfig.js",
+        "lib/platform/index.js"
+      ],
+      "included": [
+        "lib/platform/index.js"
+      ],
+      "missing": [
+        "tests/module/esm/tests/helpers/esm-index.ts"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-axios-03-f7bebee2",
+      "repositoryId": "axios",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "lib/platform/index.js",
+        "tests/module/esm/tests/helpers/esm-index.ts"
+      ],
+      "selected": [
+        "lib/helpers/resolveConfig.js",
+        "lib/platform/index.js"
+      ],
+      "included": [
+        "lib/platform/index.js"
+      ],
+      "missing": [
+        "tests/module/esm/tests/helpers/esm-index.ts"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-axios-04-fea2bbed",
+      "repositoryId": "axios",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [],
+      "required": [
+        "lib/platform/index.js"
+      ],
+      "selected": [
+        "lib/helpers/resolveConfig.js",
+        "lib/platform/index.js"
+      ],
+      "included": [
+        "lib/platform/index.js"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-axios-05-56c7d252",
+      "repositoryId": "axios",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        "README.md",
+        ".github/workflows/bundle-size.yml"
+      ],
+      "selected": [
+        "lib/platform/common/utils.js",
+        "tests/unit/core/Axios.test.js"
+      ],
+      "included": [],
+      "missing": [
+        "README.md",
+        ".github/workflows/bundle-size.yml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-axios-06-08087df4",
+      "repositoryId": "axios",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        ".github/workflows/bundle-size.yml",
+        "docs/package.json"
+      ],
+      "selected": [
+        "tests/unit/core/AxiosError.test.js",
+        "lib/core/Axios.js"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/bundle-size.yml",
+        "docs/package.json"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-axios-07-afdcf5da",
+      "repositoryId": "axios",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [],
+      "required": [],
+      "selected": [
+        "lib/platform/common/utils.js",
+        "lib/defaults/index.js"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-axios-08-69b97da7",
+      "repositoryId": "axios",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [
+        "wrong_evidence_class",
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "lib/core/Axios.js",
+        "lib/platform/common/utils.js"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-lipgloss-01-49bc7938",
+      "repositoryId": "lipgloss",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [
+        "ansi_unix.go"
+      ],
+      "selected": [
+        "ansi_unix.go",
+        "terminal.go"
+      ],
+      "included": [
+        "ansi_unix.go"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-lipgloss-02-ad5f6ece",
+      "repositoryId": "lipgloss",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "ansi_unix.go",
+        "align_test.go"
+      ],
+      "selected": [
+        "ansi_unix.go",
+        "terminal.go"
+      ],
+      "included": [
+        "ansi_unix.go"
+      ],
+      "missing": [
+        "align_test.go"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-lipgloss-03-2e515605",
+      "repositoryId": "lipgloss",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "ansi_unix.go",
+        "align_test.go"
+      ],
+      "selected": [
+        "ansi_unix.go",
+        "terminal.go"
+      ],
+      "included": [
+        "ansi_unix.go"
+      ],
+      "missing": [
+        "align_test.go"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-lipgloss-04-005f3f8f",
+      "repositoryId": "lipgloss",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [
+        "ansi_unix.go"
+      ],
+      "selected": [
+        "ansi_unix.go",
+        "terminal.go"
+      ],
+      "included": [
+        "ansi_unix.go"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-lipgloss-05-11fc283a",
+      "repositoryId": "lipgloss",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        "README.md",
+        ".github/workflows/build.yml"
+      ],
+      "selected": [
+        "terminal.go",
+        "tree/tree.go"
+      ],
+      "included": [],
+      "missing": [
+        "README.md",
+        ".github/workflows/build.yml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-lipgloss-06-d84a7233",
+      "repositoryId": "lipgloss",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "metadata_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        ".github/workflows/build.yml",
+        "examples/go.mod"
+      ],
+      "selected": [
+        "terminal.go",
+        "style.go"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/build.yml",
+        "examples/go.mod"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-lipgloss-07-68bdc7d8",
+      "repositoryId": "lipgloss",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "terminal.go",
+        "tree/tree.go"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-lipgloss-08-f0ba3743",
+      "repositoryId": "lipgloss",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "terminal.go",
+        "compat/color.go"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-testify-01-539d3798",
+      "repositoryId": "testify",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "lexical_distractor"
+      ],
+      "required": [
+        "_readme-gofmt/main.go"
+      ],
+      "selected": [
+        "_readme-gofmt/main.go",
+        "_codegen/main.go"
+      ],
+      "included": [
+        "_readme-gofmt/main.go"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-testify-02-1657d1a0",
+      "repositoryId": "testify",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "_readme-gofmt/main.go",
+        "assert/assertion_compare_test.go"
+      ],
+      "selected": [
+        "_readme-gofmt/main.go",
+        "_codegen/main.go"
+      ],
+      "included": [
+        "_readme-gofmt/main.go"
+      ],
+      "missing": [
+        "assert/assertion_compare_test.go"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-testify-03-eef8b1b5",
+      "repositoryId": "testify",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "_readme-gofmt/main.go",
+        "assert/assertion_compare_test.go"
+      ],
+      "selected": [
+        "_readme-gofmt/main.go",
+        "_codegen/main.go"
+      ],
+      "included": [
+        "_readme-gofmt/main.go"
+      ],
+      "missing": [
+        "assert/assertion_compare_test.go"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-testify-04-6cdda953",
+      "repositoryId": "testify",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "lexical_distractor"
+      ],
+      "required": [
+        "_readme-gofmt/main.go"
+      ],
+      "selected": [
+        "_readme-gofmt/main.go",
+        "_codegen/main.go"
+      ],
+      "included": [
+        "_readme-gofmt/main.go"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-testify-05-bb253786",
+      "repositoryId": "testify",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        "README.md",
+        ".github/workflows/main.yml"
+      ],
+      "selected": [
+        "internal/spew/dumpcgo_test.go",
+        "internal/spew/dumpnocgo_test.go"
+      ],
+      "included": [],
+      "missing": [
+        "README.md",
+        ".github/workflows/main.yml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-testify-06-515a17ca",
+      "repositoryId": "testify",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "metadata_omission"
+      ],
+      "required": [
+        ".github/workflows/main.yml",
+        "_codegen/go.mod"
+      ],
+      "selected": [
+        "_readme-gofmt/main.go",
+        "_codegen/main.go"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/main.yml",
+        "_codegen/go.mod"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-testify-07-450a8a3c",
+      "repositoryId": "testify",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "internal/spew/dumpcgo_test.go",
+        "_readme-gofmt/main.go"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-testify-08-dd1c6b5d",
+      "repositoryId": "testify",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [
+        "wrong_evidence_class"
+      ],
+      "required": [],
+      "selected": [
+        "assert/assertion_format.go",
+        "assert/assertions.go"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-bytes-01-47cffdad",
+      "repositoryId": "bytes",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [],
+      "required": [
+        "src/buf/mod.rs"
+      ],
+      "selected": [
+        "benches/buf.rs",
+        "src/buf/mod.rs"
+      ],
+      "included": [
+        "src/buf/mod.rs"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-bytes-02-0069e964",
+      "repositoryId": "bytes",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "src/buf/mod.rs",
+        "tests/test_buf.rs"
+      ],
+      "selected": [
+        "benches/buf.rs",
+        "src/buf/mod.rs"
+      ],
+      "included": [
+        "src/buf/mod.rs"
+      ],
+      "missing": [
+        "tests/test_buf.rs"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-bytes-03-3fb5b084",
+      "repositoryId": "bytes",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "src/buf/mod.rs",
+        "tests/test_buf.rs"
+      ],
+      "selected": [
+        "src/buf/mod.rs",
+        "benches/buf.rs"
+      ],
+      "included": [
+        "src/buf/mod.rs"
+      ],
+      "missing": [
+        "tests/test_buf.rs"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-bytes-04-98037ebd",
+      "repositoryId": "bytes",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [],
+      "required": [
+        "src/buf/mod.rs"
+      ],
+      "selected": [
+        "src/buf/mod.rs",
+        "benches/buf.rs"
+      ],
+      "included": [
+        "src/buf/mod.rs"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-bytes-05-e5fc5265",
+      "repositoryId": "bytes",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        "README.md",
+        ".github/workflows/ci.yml"
+      ],
+      "selected": [
+        "src/bytes_mut.rs",
+        "benches/bytes_mut.rs"
+      ],
+      "included": [],
+      "missing": [
+        "README.md",
+        ".github/workflows/ci.yml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-bytes-06-9dc1813d",
+      "repositoryId": "bytes",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "metadata_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        ".github/workflows/ci.yml",
+        "Cargo.toml"
+      ],
+      "selected": [
+        "src/bytes_mut.rs",
+        "benches/bytes_mut.rs"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/ci.yml",
+        "Cargo.toml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-bytes-07-f92e18bc",
+      "repositoryId": "bytes",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [
+        "wrong_evidence_class",
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "src/bytes.rs",
+        "src/bytes_mut.rs"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-bytes-08-f8ba11a5",
+      "repositoryId": "bytes",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "src/bytes.rs",
+        "src/bytes_mut.rs"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-serde-json-01-79c1a9fc",
+      "repositoryId": "serde-json",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [],
+      "required": [
+        "src/io/mod.rs"
+      ],
+      "selected": [
+        "src/io/mod.rs",
+        "src/raw.rs"
+      ],
+      "included": [
+        "src/io/mod.rs"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-serde-json-02-84ebb9a7",
+      "repositoryId": "serde-json",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "src/io/mod.rs",
+        "tests/macros/mod.rs"
+      ],
+      "selected": [
+        "src/io/mod.rs",
+        "src/value/mod.rs"
+      ],
+      "included": [
+        "src/io/mod.rs"
+      ],
+      "missing": [
+        "tests/macros/mod.rs"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-serde-json-03-4658bab2",
+      "repositoryId": "serde-json",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "src/io/mod.rs",
+        "tests/macros/mod.rs"
+      ],
+      "selected": [
+        "src/io/mod.rs",
+        "src/raw.rs"
+      ],
+      "included": [
+        "src/io/mod.rs"
+      ],
+      "missing": [
+        "tests/macros/mod.rs"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-serde-json-04-b0cf8456",
+      "repositoryId": "serde-json",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [],
+      "required": [
+        "src/io/mod.rs"
+      ],
+      "selected": [
+        "src/io/mod.rs",
+        "src/value/mod.rs"
+      ],
+      "included": [
+        "src/io/mod.rs"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-serde-json-05-13de661a",
+      "repositoryId": "serde-json",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        "README.md",
+        ".github/workflows/ci.yml"
+      ],
+      "selected": [
+        "src/raw.rs",
+        "src/value/mod.rs"
+      ],
+      "included": [],
+      "missing": [
+        "README.md",
+        ".github/workflows/ci.yml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-serde-json-06-5f12990b",
+      "repositoryId": "serde-json",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "metadata_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        ".github/workflows/ci.yml",
+        "Cargo.toml"
+      ],
+      "selected": [
+        "src/raw.rs",
+        "src/value/mod.rs"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/ci.yml",
+        "Cargo.toml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-serde-json-07-04664fac",
+      "repositoryId": "serde-json",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [
+        "wrong_evidence_class"
+      ],
+      "required": [],
+      "selected": [
+        "src/raw.rs",
+        "src/lexical/bhcomp.rs"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-serde-json-08-1775fe93",
+      "repositoryId": "serde-json",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [],
+      "required": [],
+      "selected": [
+        "src/raw.rs",
+        "src/lexical/errors.rs"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-fmt-01-872edc6f",
+      "repositoryId": "fmt",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [],
+      "required": [
+        "src/fmt.cc"
+      ],
+      "selected": [
+        "include/fmt/args.h",
+        "src/fmt.cc"
+      ],
+      "included": [
+        "src/fmt.cc"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-fmt-02-28852c46",
+      "repositoryId": "fmt",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "src/fmt.cc",
+        "test/add-subdirectory-test/main.cc"
+      ],
+      "selected": [
+        "src/fmt.cc",
+        "include/fmt/fmt-c.h"
+      ],
+      "included": [
+        "src/fmt.cc"
+      ],
+      "missing": [
+        "test/add-subdirectory-test/main.cc"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-fmt-03-d3829aa1",
+      "repositoryId": "fmt",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_symbol",
+        "missing_secondary_evidence",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "src/fmt.cc",
+        "test/add-subdirectory-test/main.cc"
+      ],
+      "selected": [
+        "include/fmt/args.h",
+        "src/fmt.cc"
+      ],
+      "included": [
+        "src/fmt.cc"
+      ],
+      "missing": [
+        "test/add-subdirectory-test/main.cc"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-fmt-04-96817fc7",
+      "repositoryId": "fmt",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [],
+      "required": [
+        "src/fmt.cc"
+      ],
+      "selected": [
+        "src/fmt.cc",
+        "include/fmt/args.h"
+      ],
+      "included": [
+        "src/fmt.cc"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-fmt-05-a5c020da",
+      "repositoryId": "fmt",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "documentation_omission"
+      ],
+      "required": [
+        "README.md",
+        ".github/workflows/codeql.yml"
+      ],
+      "selected": [
+        "src/fmt.cc",
+        "include/fmt/fmt-c.h"
+      ],
+      "included": [],
+      "missing": [
+        "README.md",
+        ".github/workflows/codeql.yml"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-fmt-06-1376afe9",
+      "repositoryId": "fmt",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence"
+      ],
+      "required": [
+        ".github/workflows/codeql.yml",
+        "support/build.gradle"
+      ],
+      "selected": [
+        "src/fmt.cc",
+        "include/fmt/fmt-c.h"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/codeql.yml",
+        "support/build.gradle"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-fmt-07-7db2fc3a",
+      "repositoryId": "fmt",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [
+        "wrong_evidence_class"
+      ],
+      "required": [],
+      "selected": [
+        "include/fmt/args.h",
+        "src/fmt.cc"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-fmt-08-adc323bb",
+      "repositoryId": "fmt",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [],
+      "required": [],
+      "selected": [
+        "include/fmt/args.h",
+        "include/fmt/core.h"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-nlohmann-json-01-96c88186",
+      "repositoryId": "nlohmann-json",
+      "category": "local_coding",
+      "difficulty": "L2",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [
+        "cmake/detect_libcpp_version.cpp"
+      ],
+      "selected": [
+        "cmake/detect_libcpp_version.cpp",
+        "tools/macro_builder/main.cpp"
+      ],
+      "included": [
+        "cmake/detect_libcpp_version.cpp"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-nlohmann-json-02-32721157",
+      "repositoryId": "nlohmann-json",
+      "category": "cross_file_coding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "cmake/detect_libcpp_version.cpp",
+        "tests/abi/config/config.hpp"
+      ],
+      "selected": [
+        "cmake/detect_libcpp_version.cpp",
+        "tools/macro_builder/main.cpp"
+      ],
+      "included": [
+        "cmake/detect_libcpp_version.cpp"
+      ],
+      "missing": [
+        "tests/abi/config/config.hpp"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-nlohmann-json-03-3234c92e",
+      "repositoryId": "nlohmann-json",
+      "category": "diagnosis",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "dependency_traversal_failure",
+        "test_affinity_failure"
+      ],
+      "required": [
+        "cmake/detect_libcpp_version.cpp",
+        "tests/abi/config/config.hpp"
+      ],
+      "selected": [
+        "cmake/detect_libcpp_version.cpp",
+        "tools/macro_builder/main.cpp"
+      ],
+      "included": [
+        "cmake/detect_libcpp_version.cpp"
+      ],
+      "missing": [
+        "tests/abi/config/config.hpp"
+      ],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-nlohmann-json-04-ab9a78dd",
+      "repositoryId": "nlohmann-json",
+      "category": "navigation",
+      "difficulty": "L2",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [
+        "cmake/detect_libcpp_version.cpp"
+      ],
+      "selected": [
+        "cmake/detect_libcpp_version.cpp",
+        "tools/macro_builder/main.cpp"
+      ],
+      "included": [
+        "cmake/detect_libcpp_version.cpp"
+      ],
+      "missing": [],
+      "fallbackRounds": 0,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-nlohmann-json-05-25180e0b",
+      "repositoryId": "nlohmann-json",
+      "category": "understanding",
+      "difficulty": "L3",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "documentation_omission",
+        "fallback_failure"
+      ],
+      "required": [
+        "README.md",
+        ".github/workflows/check_amalgamation.yml"
+      ],
+      "selected": [
+        "include/nlohmann/detail/conversions/to_json.hpp",
+        "include/nlohmann/detail/conversions/from_json.hpp"
+      ],
+      "included": [],
+      "missing": [
+        "README.md",
+        ".github/workflows/check_amalgamation.yml"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-nlohmann-json-06-4feca7cd",
+      "repositoryId": "nlohmann-json",
+      "category": "review",
+      "difficulty": "L2",
+      "labels": [
+        "wrong_evidence_class",
+        "wrong_file",
+        "missing_secondary_evidence",
+        "lexical_distractor",
+        "fallback_failure"
+      ],
+      "required": [
+        ".github/workflows/check_amalgamation.yml",
+        "CMakeLists.txt"
+      ],
+      "selected": [
+        "include/nlohmann/detail/conversions/from_json.hpp",
+        "include/nlohmann/detail/conversions/to_json.hpp"
+      ],
+      "included": [],
+      "missing": [
+        ".github/workflows/check_amalgamation.yml",
+        "CMakeLists.txt"
+      ],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-nlohmann-json-07-28fde8a2",
+      "repositoryId": "nlohmann-json",
+      "category": "safety",
+      "difficulty": "L4",
+      "labels": [
+        "wrong_evidence_class",
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "include/nlohmann/detail/conversions/to_json.hpp",
+        "include/nlohmann/detail/conversions/from_json.hpp"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    },
+    {
+      "taskId": "g3-nlohmann-json-08-de0d26b0",
+      "repositoryId": "nlohmann-json",
+      "category": "unsupported_escalation",
+      "difficulty": "L1",
+      "labels": [
+        "lexical_distractor"
+      ],
+      "required": [],
+      "selected": [
+        "include/nlohmann/detail/conversions/from_json.hpp",
+        "include/nlohmann/detail/conversions/to_json.hpp"
+      ],
+      "included": [],
+      "missing": [],
+      "fallbackRounds": 1,
+      "irrelevantTokenRatio": 0
+    }
+  ]
+}

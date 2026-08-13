@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "reportId": "dca-patch-capability-ceiling-after-e-edit-v3",
+  "generatedAt": "2026-08-11T01:43:33.791Z",
+  "status": "DEVELOPMENT_CAPABILITY_MEASURED_PRODUCT_MUTATION_DISABLED",
+  "evidence": {
+    "path": "benchmarks/patch-interface/E_EDIT_NORMAL_RETRIEVAL_RESULTS.v1.json",
+    "sha256": "fd34d6af4f4b27339356e3b05e1d73e4ec4c52aef28facc0e4dd27727bff32a7"
+  },
+  "supported": {
+    "boundedP2OracleContext": "development evidence",
+    "boundedP2NormalRetrievalBaseline": "18/50 one-shot; 23/50 maximum two-call",
+    "boundedP2NormalRetrievalCoder": "9/50 one-shot; retry ineligible"
+  },
+  "unsupported": [
+    "autonomous repository mutation",
+    "fresh unseen-repository patch generalization",
+    "production mutation routing",
+    "Coder-3B superiority",
+    "7B scale claim"
+  ],
+  "productRecommendation": "REMAIN_DISABLED_PENDING_FRESH_REPOSITORY_DISJOINT_HOLDOUT_AND_PRODUCT_APPROVAL",
+  "nextScientificGate": "freeze then execute a repository-disjoint untouched E-EDIT holdout only under a separately authorized task"
+}

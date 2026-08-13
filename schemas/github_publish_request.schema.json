@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GitHub Publish Request",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner": {
+      "type": "string",
+      "const": "hanklin91888"
+    },
+    "repository": {
+      "type": "string",
+      "const": "Desk-Code-Agent"
+    },
+    "remote_url": {
+      "type": "string",
+      "const": "https://github.com/hanklin91888/Desk-Code-Agent"
+    },
+    "milestone": {
+      "type": "string",
+      "enum": [
+        "M0",
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6",
+        "M7",
+        "M8"
+      ]
+    },
+    "branch": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "commit_files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "acceptance_passed": {
+      "type": "boolean",
+      "const": true
+    },
+    "secret_scan_passed": {
+      "type": "boolean",
+      "const": true
+    },
+    "human_approval_id": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "request_id",
+    "owner",
+    "repository",
+    "remote_url",
+    "milestone",
+    "branch",
+    "tag",
+    "commit_files",
+    "acceptance_passed",
+    "secret_scan_passed",
+    "human_approval_id"
+  ]
+}

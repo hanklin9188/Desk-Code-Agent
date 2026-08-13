@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "decisionId": "dca-best-7b-bounded-retry-eligibility-v1",
+  "status": "PASS_GATE_APPLIED",
+  "decidedAt": "2026-08-11T14:21:50.112Z",
+  "outcome": "BEST_7B_BOUNDED_RETRY_PROTOCOL_JUSTIFIED_NOT_EXECUTED",
+  "candidate": {
+    "candidateId": "M2",
+    "modelId": "TIGER-Lab/FIM-7B",
+    "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a"
+  },
+  "inputs": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PREREGISTRATION.v1.json",
+      "sha256": "51f983f63719494e8877eb7b24fcbc7a47b0b9fb53d5c1e2bb838961b87246c1"
+    },
+    "result": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/result.json",
+      "sha256": "8cf1bdb5d6cb8e86200d4833ff41b5e89100582406da7239008e7c32fc03f940"
+    },
+    "selection": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_MODEL_SELECTION.v1.json",
+      "sha256": "03fcb625a219bcbc37eec1421583371ca76b3a745f1e938f59ceeff16bdc544c"
+    }
+  },
+  "prerequisite": {
+    "behavioralMinimum29": true,
+    "observed": 29,
+    "actualSafetyViolationsZero": true,
+    "rollbackFailuresZero": true,
+    "eligibleFailedTasks": 66
+  },
+  "boundary": {
+    "newExperimentGenerationRequired": true,
+    "currentTournamentRetryCalls": 0,
+    "hiddenOracleFeedbackForbidden": true,
+    "semanticReviewerForbidden": true,
+    "maximumAdditionalCallPerEligibleTask": 1
+  },
+  "modelCalls": 0
+}

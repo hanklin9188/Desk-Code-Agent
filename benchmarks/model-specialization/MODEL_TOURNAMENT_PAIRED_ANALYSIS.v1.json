@@ -1,0 +1,2339 @@
+{
+  "schemaVersion": 1,
+  "analysisId": "dca-practical-local-model-tournament-paired-analysis-v1",
+  "status": "PASS",
+  "completedAt": "2026-08-11T14:21:50.112Z",
+  "population": 95,
+  "statistics": {
+    "repetitions": 10000,
+    "seed": 20260811,
+    "units": [
+      "task",
+      "repository_cluster"
+    ],
+    "exactMcNemar": true
+  },
+  "inputs": {
+    "sessionC": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_C.v1.json",
+      "sha256": "32ff39c05b5ce6c64b57ac77085df2b5666750a8a5689d3ac801a683bd3ec683"
+    },
+    "referenceResult": {
+      "path": "docs/experiments/runs/e-edit-holdout-p2-20260811T111300Z/result.json",
+      "sha256": "e6eb86b1837525581c134fc0e3cc24ea51e83bfeac7594af76809338b17f797f"
+    },
+    "M1": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m1-v1/result.json",
+      "sha256": "9c096ddb90bb0c66a42e2f1092ccd0d5945bd6f29e7925a610d93eb9432e786e"
+    },
+    "M2": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/result.json",
+      "sha256": "8cf1bdb5d6cb8e86200d4833ff41b5e89100582406da7239008e7c32fc03f940"
+    }
+  },
+  "comparisons": {
+    "m1VsReference": {
+      "metric": "strictBehavioral",
+      "population": 95,
+      "leftLabel": "reference",
+      "rightLabel": "M1",
+      "bothPass": 4,
+      "leftOnly": 19,
+      "rightOnly": 3,
+      "bothFail": 69,
+      "leftSuccesses": 23,
+      "rightSuccesses": 7,
+      "absoluteDifferencePercentagePoints": -16.842105263157894,
+      "statistics": {
+        "repetitions": 10000,
+        "seed": 20260811,
+        "taskPairedBootstrap95PercentCI": [
+          -26.31578947368421,
+          -8.394736842105646
+        ],
+        "repositoryClusterBootstrap95PercentCI": [
+          -26.881720430107528,
+          -7.291666666666667
+        ],
+        "mcnemarExactTwoSidedP": 0.0008554458618164062,
+        "discordantPairs": 22
+      }
+    },
+    "m2VsReference": {
+      "metric": "strictBehavioral",
+      "population": 95,
+      "leftLabel": "reference",
+      "rightLabel": "M2",
+      "bothPass": 15,
+      "leftOnly": 8,
+      "rightOnly": 14,
+      "bothFail": 58,
+      "leftSuccesses": 23,
+      "rightSuccesses": 29,
+      "absoluteDifferencePercentagePoints": 6.315789473684211,
+      "statistics": {
+        "repetitions": 10000,
+        "seed": 20260811,
+        "taskPairedBootstrap95PercentCI": [
+          -3.1578947368421053,
+          15.789473684210526
+        ],
+        "repositoryClusterBootstrap95PercentCI": [
+          0,
+          12.5
+        ],
+        "mcnemarExactTwoSidedP": 0.28627872467041016,
+        "discordantPairs": 22
+      }
+    },
+    "m2VsM1": {
+      "strictBehavioral": {
+        "metric": "strictBehavioral",
+        "population": 95,
+        "leftLabel": "M1",
+        "rightLabel": "M2",
+        "bothPass": 5,
+        "leftOnly": 2,
+        "rightOnly": 24,
+        "bothFail": 64,
+        "leftSuccesses": 7,
+        "rightSuccesses": 29,
+        "absoluteDifferencePercentagePoints": 23.157894736842106,
+        "statistics": {
+          "repetitions": 10000,
+          "seed": 20260811,
+          "taskPairedBootstrap95PercentCI": [
+            13.68421052631579,
+            32.63157894736842
+          ],
+          "repositoryClusterBootstrap95PercentCI": [
+            14.736842105263158,
+            31.25
+          ],
+          "mcnemarExactTwoSidedP": 0.00001049041748046875,
+          "discordantPairs": 26
+        }
+      },
+      "syntax": {
+        "metric": "syntax",
+        "population": 95,
+        "leftLabel": "M1",
+        "rightLabel": "M2",
+        "bothPass": 40,
+        "leftOnly": 3,
+        "rightOnly": 43,
+        "bothFail": 9,
+        "leftSuccesses": 43,
+        "rightSuccesses": 83,
+        "absoluteDifferencePercentagePoints": 42.10526315789474,
+        "statistics": {
+          "repetitions": 10000,
+          "seed": 20260811,
+          "taskPairedBootstrap95PercentCI": [
+            30.526315789473685,
+            52.63157894736842
+          ],
+          "repositoryClusterBootstrap95PercentCI": [
+            32.291666666666664,
+            52.17391304347826
+          ],
+          "mcnemarExactTwoSidedP": 4.6219383875722997e-10,
+          "discordantPairs": 46
+        }
+      },
+      "visible": {
+        "metric": "visible",
+        "population": 95,
+        "leftLabel": "M1",
+        "rightLabel": "M2",
+        "bothPass": 8,
+        "leftOnly": 2,
+        "rightOnly": 27,
+        "bothFail": 58,
+        "leftSuccesses": 10,
+        "rightSuccesses": 35,
+        "absoluteDifferencePercentagePoints": 26.31578947368421,
+        "statistics": {
+          "repetitions": 10000,
+          "seed": 20260811,
+          "taskPairedBootstrap95PercentCI": [
+            16.842105263157894,
+            35.78947368421053
+          ],
+          "repositoryClusterBootstrap95PercentCI": [
+            16.842105263157894,
+            35.416666666666664
+          ],
+          "mcnemarExactTwoSidedP": 0.0000016242265701293945,
+          "discordantPairs": 29
+        }
+      },
+      "hidden": {
+        "metric": "hidden",
+        "population": 95,
+        "leftLabel": "M1",
+        "rightLabel": "M2",
+        "bothPass": 14,
+        "leftOnly": 3,
+        "rightOnly": 40,
+        "bothFail": 38,
+        "leftSuccesses": 17,
+        "rightSuccesses": 54,
+        "absoluteDifferencePercentagePoints": 38.94736842105263,
+        "statistics": {
+          "repetitions": 10000,
+          "seed": 20260811,
+          "taskPairedBootstrap95PercentCI": [
+            28.42105263157895,
+            49.473684210526315
+          ],
+          "repositoryClusterBootstrap95PercentCI": [
+            29.166666666666668,
+            50
+          ],
+          "mcnemarExactTwoSidedP": 3.0213413992896676e-9,
+          "discordantPairs": 43
+        }
+      }
+    }
+  },
+  "failureProfiles": {
+    "reference": {
+      "RETRIEVAL": 5,
+      "ACTION_VALIDATION": 6,
+      "PATCH_CONSTRUCTION": 0,
+      "SYNTAX_TYPE": 17,
+      "VISIBLE_TEST": 34,
+      "HIDDEN_TEST": 10,
+      "SUCCESS": 23,
+      "TOOL_INFRASTRUCTURE": 0,
+      "OTHER": 0
+    },
+    "M1": {
+      "RETRIEVAL": 5,
+      "ACTION_VALIDATION": 1,
+      "PATCH_CONSTRUCTION": 0,
+      "SYNTAX_TYPE": 49,
+      "VISIBLE_TEST": 30,
+      "HIDDEN_TEST": 3,
+      "SUCCESS": 7,
+      "TOOL_INFRASTRUCTURE": 0,
+      "OTHER": 0
+    },
+    "M2": {
+      "RETRIEVAL": 5,
+      "ACTION_VALIDATION": 2,
+      "PATCH_CONSTRUCTION": 0,
+      "SYNTAX_TYPE": 6,
+      "VISIBLE_TEST": 47,
+      "HIDDEN_TEST": 6,
+      "SUCCESS": 29,
+      "TOOL_INFRASTRUCTURE": 0,
+      "OTHER": 0
+    }
+  },
+  "pairedRows": [
+    {
+      "taskId": "holdout-001-dc48039005b1",
+      "repositoryId": "eedit-holdout-01-sable-metrics",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-002-3fe1a9d6c0d0",
+      "repositoryId": "eedit-holdout-01-sable-metrics",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-003-5e3903e649c4",
+      "repositoryId": "eedit-holdout-01-sable-metrics",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-004-53e3a889c55a",
+      "repositoryId": "eedit-holdout-01-sable-metrics",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-005-edee1a90b69e",
+      "repositoryId": "eedit-holdout-01-sable-metrics",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-006-078693d6b3de",
+      "repositoryId": "eedit-holdout-01-sable-metrics",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-007-9dc86fdb3a47",
+      "repositoryId": "eedit-holdout-01-sable-metrics",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-008-950c857777ba",
+      "repositoryId": "eedit-holdout-01-sable-metrics",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-009-836431320440",
+      "repositoryId": "eedit-holdout-02-lumen-router",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-010-76408717dfb8",
+      "repositoryId": "eedit-holdout-02-lumen-router",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-011-1ff9fd2158b4",
+      "repositoryId": "eedit-holdout-02-lumen-router",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-012-3d0cbd287831",
+      "repositoryId": "eedit-holdout-02-lumen-router",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-013-5d557d000b1b",
+      "repositoryId": "eedit-holdout-02-lumen-router",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-014-4daf7e7c16c0",
+      "repositoryId": "eedit-holdout-02-lumen-router",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-015-dd129f14970a",
+      "repositoryId": "eedit-holdout-02-lumen-router",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-016-698e3df29d57",
+      "repositoryId": "eedit-holdout-02-lumen-router",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-017-555ee4ba3638",
+      "repositoryId": "eedit-holdout-03-cedar-ledger",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-018-b1420e9ae053",
+      "repositoryId": "eedit-holdout-03-cedar-ledger",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-019-580af46c94a0",
+      "repositoryId": "eedit-holdout-03-cedar-ledger",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-020-668cf63fd0be",
+      "repositoryId": "eedit-holdout-03-cedar-ledger",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-021-97fb2ee2dff5",
+      "repositoryId": "eedit-holdout-03-cedar-ledger",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-022-5c50a496b617",
+      "repositoryId": "eedit-holdout-03-cedar-ledger",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-023-1180321a83e0",
+      "repositoryId": "eedit-holdout-03-cedar-ledger",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-024-01a82ebef142",
+      "repositoryId": "eedit-holdout-03-cedar-ledger",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-025-aed1a665bc44",
+      "repositoryId": "eedit-holdout-04-quartz-parser",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-026-cb622f953555",
+      "repositoryId": "eedit-holdout-04-quartz-parser",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-027-0bdfebe57bb9",
+      "repositoryId": "eedit-holdout-04-quartz-parser",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-028-1903ecf5ab15",
+      "repositoryId": "eedit-holdout-04-quartz-parser",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-029-e1724514be5e",
+      "repositoryId": "eedit-holdout-04-quartz-parser",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-030-972ec436cbb0",
+      "repositoryId": "eedit-holdout-04-quartz-parser",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-031-4022acd443af",
+      "repositoryId": "eedit-holdout-04-quartz-parser",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-032-7fc6ff887bdc",
+      "repositoryId": "eedit-holdout-04-quartz-parser",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-033-9ef543fc9afe",
+      "repositoryId": "eedit-holdout-05-harbor-cache",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-034-6404daac6c8d",
+      "repositoryId": "eedit-holdout-05-harbor-cache",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-035-eebd0076f0a0",
+      "repositoryId": "eedit-holdout-05-harbor-cache",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-036-b36ffcbc6c61",
+      "repositoryId": "eedit-holdout-05-harbor-cache",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-037-717be2e92482",
+      "repositoryId": "eedit-holdout-05-harbor-cache",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-038-4a28c0299ac1",
+      "repositoryId": "eedit-holdout-05-harbor-cache",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-039-6a107d16b13e",
+      "repositoryId": "eedit-holdout-05-harbor-cache",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-040-b5cd9b69a77d",
+      "repositoryId": "eedit-holdout-05-harbor-cache",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-041-941e5bdca0a3",
+      "repositoryId": "eedit-holdout-06-ember-policy",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-042-ff42691ce02b",
+      "repositoryId": "eedit-holdout-06-ember-policy",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-043-75560a470232",
+      "repositoryId": "eedit-holdout-06-ember-policy",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-044-6b886da44d2c",
+      "repositoryId": "eedit-holdout-06-ember-policy",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-045-b1027dc3f2fa",
+      "repositoryId": "eedit-holdout-06-ember-policy",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-046-2406d1e1c407",
+      "repositoryId": "eedit-holdout-06-ember-policy",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-047-0f8dd7c4fea7",
+      "repositoryId": "eedit-holdout-06-ember-policy",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-048-fd403684528e",
+      "repositoryId": "eedit-holdout-06-ember-policy",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-049-3057d3ce7070",
+      "repositoryId": "eedit-holdout-07-tundra-scheduler",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-050-cef39f7fef3f",
+      "repositoryId": "eedit-holdout-07-tundra-scheduler",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-051-f69bf26131b8",
+      "repositoryId": "eedit-holdout-07-tundra-scheduler",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-052-d47ce7bab6d5",
+      "repositoryId": "eedit-holdout-07-tundra-scheduler",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-053-34ce18abb247",
+      "repositoryId": "eedit-holdout-07-tundra-scheduler",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-054-6c4b44e1b8eb",
+      "repositoryId": "eedit-holdout-07-tundra-scheduler",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-055-bc0963b007f0",
+      "repositoryId": "eedit-holdout-07-tundra-scheduler",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-056-66e32a002f0a",
+      "repositoryId": "eedit-holdout-07-tundra-scheduler",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-057-e7a7874e180f",
+      "repositoryId": "eedit-holdout-08-cobalt-config",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-058-429a3db39441",
+      "repositoryId": "eedit-holdout-08-cobalt-config",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-059-2e9d8048f513",
+      "repositoryId": "eedit-holdout-08-cobalt-config",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-060-499ac6d813e6",
+      "repositoryId": "eedit-holdout-08-cobalt-config",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-061-7372e3bf7f68",
+      "repositoryId": "eedit-holdout-08-cobalt-config",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-062-cbf8503ccfa1",
+      "repositoryId": "eedit-holdout-08-cobalt-config",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-063-1478b1138e5b",
+      "repositoryId": "eedit-holdout-08-cobalt-config",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-064-a7dd1b9eadff",
+      "repositoryId": "eedit-holdout-08-cobalt-config",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-065-1a8ed4c228ed",
+      "repositoryId": "eedit-holdout-09-willow-events",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-066-181f74021ed8",
+      "repositoryId": "eedit-holdout-09-willow-events",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-067-63feab066d52",
+      "repositoryId": "eedit-holdout-09-willow-events",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-068-d2cf079444dc",
+      "repositoryId": "eedit-holdout-09-willow-events",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-069-66ec9e51211b",
+      "repositoryId": "eedit-holdout-09-willow-events",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-070-46d93c900b05",
+      "repositoryId": "eedit-holdout-09-willow-events",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-071-0b4bf43ea722",
+      "repositoryId": "eedit-holdout-09-willow-events",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-072-974cdc048e90",
+      "repositoryId": "eedit-holdout-09-willow-events",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-073-2080df2f7d1f",
+      "repositoryId": "eedit-holdout-10-marble-protocol",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-074-c1dd31c5c507",
+      "repositoryId": "eedit-holdout-10-marble-protocol",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-075-cd9fc970570a",
+      "repositoryId": "eedit-holdout-10-marble-protocol",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-076-3af33fb3f0ee",
+      "repositoryId": "eedit-holdout-10-marble-protocol",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-077-b147995e2fc2",
+      "repositoryId": "eedit-holdout-10-marble-protocol",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-078-3598af9fe400",
+      "repositoryId": "eedit-holdout-10-marble-protocol",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-079-3bfd416fe458",
+      "repositoryId": "eedit-holdout-10-marble-protocol",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-080-26f32f100d8c",
+      "repositoryId": "eedit-holdout-10-marble-protocol",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-081-0ca18edcd640",
+      "repositoryId": "eedit-holdout-11-opal-batches",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-082-7f63731ecb8f",
+      "repositoryId": "eedit-holdout-11-opal-batches",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-083-dc24ea1dd2e3",
+      "repositoryId": "eedit-holdout-11-opal-batches",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-084-834cd7229ae3",
+      "repositoryId": "eedit-holdout-11-opal-batches",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-085-1f6974c2824f",
+      "repositoryId": "eedit-holdout-11-opal-batches",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-086-4bb2bd5d29cd",
+      "repositoryId": "eedit-holdout-11-opal-batches",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-087-169db7fc84ec",
+      "repositoryId": "eedit-holdout-11-opal-batches",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-088-5bb0262d262f",
+      "repositoryId": "eedit-holdout-11-opal-batches",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-089-142a4c40690e",
+      "repositoryId": "eedit-holdout-12-raven-errors",
+      "reference": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-090-5f9d97b92b1f",
+      "repositoryId": "eedit-holdout-12-raven-errors",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-091-1cafd9817ebf",
+      "repositoryId": "eedit-holdout-12-raven-errors",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": true,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-092-627b94d67b56",
+      "repositoryId": "eedit-holdout-12-raven-errors",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      }
+    },
+    {
+      "taskId": "holdout-093-afa120cc8c99",
+      "repositoryId": "eedit-holdout-12-raven-errors",
+      "reference": {
+        "strict": true,
+        "syntax": true,
+        "visible": true,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-094-83590e5fae4c",
+      "repositoryId": "eedit-holdout-12-raven-errors",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": false
+      }
+    },
+    {
+      "taskId": "holdout-095-dc7e7ec8630a",
+      "repositoryId": "eedit-holdout-12-raven-errors",
+      "reference": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      },
+      "M1": {
+        "strict": false,
+        "syntax": false,
+        "visible": false,
+        "hidden": false
+      },
+      "M2": {
+        "strict": false,
+        "syntax": true,
+        "visible": false,
+        "hidden": true
+      }
+    }
+  ],
+  "interpretation": {
+    "M1": "MATERIALLY_WORSE_PRACTICAL_LOCAL_MODEL_EFFECT_NOT_PURE_SCALE",
+    "M2VsReference": "DIRECTIONAL_GAIN_NOT_STATISTICALLY_ESTABLISHED",
+    "M2VsM1": "MATERIAL_FIM_AGENTIC_GAIN",
+    "causalBoundary": "M1 versus M2 is a matched practical 7B comparison supporting a post-training association, not pure causal isolation. Reference comparisons additionally differ in model family, parameter count and BF16 versus FP8 precision."
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "hiddenOracleStored": false
+  },
+  "modelCalls": 0
+}

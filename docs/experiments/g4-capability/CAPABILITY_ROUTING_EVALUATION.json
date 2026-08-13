@@ -1,0 +1,632 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_CONSERVATIVE_ROUTING",
+  "classification": "G4_DEVELOPMENT_ROUTING_EVALUATION_NOT_HOLDOUT",
+  "policy": {
+    "inputs": [
+      "mutation",
+      "repository support",
+      "evidence completeness",
+      "behavior/hidden oracle availability",
+      "file scope",
+      "difficulty",
+      "prior benchmark success for task class"
+    ],
+    "modelSelfConfidenceUsed": false,
+    "thresholds": {
+      "supportedReadOnly": 0.8,
+      "assistedReadOnly": 0.5,
+      "experimentalMutation": 0.5,
+      "assistedMutation": 0.25,
+      "autonomousRequiresOneFileAndVisibleHiddenBehaviorOracle": true
+    }
+  },
+  "aggregate": {
+    "tasks": 72,
+    "byRoute": {
+      "SUPPORTED": {
+        "tasks": 12,
+        "observedSuccesses": 12,
+        "precision": 1
+      },
+      "ASSISTED": {
+        "tasks": 12,
+        "observedSuccesses": 6,
+        "precision": 0.5
+      },
+      "EXPERIMENTAL": {
+        "tasks": 0,
+        "observedSuccesses": 0,
+        "precision": null
+      },
+      "REPORT_ONLY": {
+        "tasks": 48,
+        "observedSuccesses": 2,
+        "precision": 0.041666666666666664
+      }
+    },
+    "actionableTasks": 24,
+    "actionablePrecision": 0.75,
+    "autonomousMutationEnabledTasks": 0,
+    "falseAutonomousMutationRoutes": 0
+  },
+  "rows": [
+    {
+      "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "taskClass": "navigation_with_complete_context",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.5,
+      "route": "ASSISTED"
+    },
+    {
+      "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "taskClass": "diagnosis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0.16666666666666666,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "taskClass": "behavioral_patch",
+      "mutation": true,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-werkzeug-cross_file_plan-500a5a2858",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-ky-cross_file_plan-d30ee6af7e",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-echo-cross_file_plan-73b199d506",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-anyhow-cross_file_plan-c6a9b00d4d",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-zlib-cross_file_plan-bd9d7bfc13",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-gson-cross_file_plan-2dfaf589b1",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-pluggy-cross_file_plan-2b4bc377fc",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-p-queue-cross_file_plan-c71971cf2a",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-viper-cross_file_plan-b7e7f45eb0",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-fd-cross_file_plan-0230809319",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-libexpat-cross_file_plan-0a18bbb855",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-jsoup-cross_file_plan-a2c44eb311",
+      "taskClass": "cross_file_planning",
+      "mutation": false,
+      "observedSuccess": true,
+      "benchmarkRate": 1,
+      "route": "SUPPORTED"
+    },
+    {
+      "taskId": "g4-dev-repo-werkzeug-onboarding_synthesis-ae2727893f",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-werkzeug-contributor_start-f8eda244ae",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-ky-onboarding_synthesis-1f163bd54c",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-ky-contributor_start-ed21a2b50f",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-echo-onboarding_synthesis-dffcfd1b8d",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-echo-contributor_start-1f5be28e50",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-anyhow-onboarding_synthesis-94db5afd82",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-anyhow-contributor_start-2d02a39d40",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-zlib-onboarding_synthesis-3c2ddc2a06",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-zlib-contributor_start-d01181c2eb",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-gson-onboarding_synthesis-5ae4d62e00",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-gson-contributor_start-5ad62be848",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-pluggy-onboarding_synthesis-22aa186e38",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-pluggy-contributor_start-727ba56d66",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-p-queue-onboarding_synthesis-0d54913a8e",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-p-queue-contributor_start-4a1250aa3d",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-viper-onboarding_synthesis-4044ab24aa",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-viper-contributor_start-3214a8971f",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-fd-onboarding_synthesis-7a29b8a00f",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-fd-contributor_start-cd958654af",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-libexpat-onboarding_synthesis-95996c6422",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-libexpat-contributor_start-5d143d8b81",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-jsoup-onboarding_synthesis-50bbd33e44",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    },
+    {
+      "taskId": "g4-dev-repo-jsoup-contributor_start-477f464a16",
+      "taskClass": "onboarding_synthesis",
+      "mutation": false,
+      "observedSuccess": false,
+      "benchmarkRate": 0,
+      "route": "REPORT_ONLY"
+    }
+  ],
+  "conclusion": "Only cross-file structured planning reaches SUPPORTED on current development evidence. Navigation is ASSISTED at 50% with complete source/test context. Diagnosis, onboarding, and all mutation remain REPORT_ONLY; autonomous mutation is disabled."
+}

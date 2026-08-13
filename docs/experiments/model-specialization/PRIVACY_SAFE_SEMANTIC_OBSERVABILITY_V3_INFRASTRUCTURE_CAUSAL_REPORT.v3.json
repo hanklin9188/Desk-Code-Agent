@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 3,
+  "reportId": "dca-privacy-safe-observability-v3-infrastructure-causal-report",
+  "status": "PASS_CAUSE_IDENTIFIED_FROM_DURABLE_HASH_EVIDENCE",
+  "recordedAt": "2026-08-11T21:14:06.931Z",
+  "inputs": {
+    "sessionB": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B.v2.json",
+      "sha256": "aa61f458fe3f039bdc7b732d37cef06dc9d31a41b7e405927ed31c0950c63204"
+    },
+    "partialAbort": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B_PARTIAL_ABORT.v2.json",
+      "sha256": "74bf5552ed0f1465dd35fd392f2fe9f0c2bf867da93dfc926bbe3af86efbb68e"
+    },
+    "abortValidation": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B_ABORT_VALIDATION.v2.json",
+      "sha256": "031a19931bffacfac502fa3407ff4ec6877dd43236f1a30ce4630c56e518704d"
+    },
+    "frozenV2Runner": {
+      "path": "scripts/run_privacy_safe_observability_v2_session_b.ts",
+      "sha256": "b62a77be4da7beaf29eb3cf0d497a1f61c10c5c8b0474a2c55c129597651e006"
+    },
+    "modelRuntime": {
+      "path": "services/model-specialization-runtime/src/index.ts",
+      "sha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee"
+    }
+  },
+  "finding": {
+    "classification": "COMPLETED_RESPONSE_INVALID_JSON_MISCLASSIFIED_AS_CALL_FAILED_PRE_RESPONSE",
+    "recordedErrorSha256": "4d783d06b669184b2cdfcd492cdef614b3d9c0da1e5b362b09624307a5c94ebb",
+    "exactLiteral": "INVALID_JSON",
+    "exactLiteralSha256": "4d783d06b669184b2cdfcd492cdef614b3d9c0da1e5b362b09624307a5c94ebb",
+    "exactHashMatch": true,
+    "mechanism": "SpecializationLiveModel returns rawText plus error=INVALID_JSON for HTTP-success bodies that fail JSON.parse; frozen V2 runner treated every non-null error as pre-response and aborted before total L0/L1 extraction.",
+    "v3Correction": "Only call.error with rawText===null is pre-response; INVALID_JSON with rawText is a completed response and must produce exactly one L0 plus one L1."
+  },
+  "alternatives": {
+    "DISK_ENOSPC": "NOT_SUPPORTED_AS_CALL14_CAUSE_BY_DURABLE_ERROR_IDENTITY",
+    "vllmServerFailure": "NOT_SUPPORTED_BY_RECORDED_ERROR_IDENTITY",
+    "transportFailure": "EXCLUDED_BY_INVALID_JSON_RUNTIME_BRANCH",
+    "temporaryFileFailure": "EXCLUDED_BY_INVALID_JSON_RUNTIME_BRANCH",
+    "repositoryIsolationFailure": "EXCLUDED_BY_INVALID_JSON_RUNTIME_BRANCH",
+    "qualification": "Earlier local ENOSPC occurred while creating disposable repository copies and was remediated before the model run; no durable per-call free-space sample was sealed, so the report does not claim storage could never have contributed indirectly."
+  },
+  "confidence": "HIGH_FOR_DIRECT_CAUSE__BOUNDED_FOR_INDIRECT_STORAGE_CONTRIBUTION",
+  "protectedActions": {
+    "modelCall": false,
+    "vllmStart": false,
+    "historicalMutation": false
+  }
+}

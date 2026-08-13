@@ -1,0 +1,46 @@
+{
+  "experimentId": "m8-ui-performance-2026-08-11T03-21-35-154Z",
+  "status": "PASS",
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "replay": {
+    "inputEvents": 100000,
+    "retainedUiWindow": 2000,
+    "finalState": "DONE",
+    "durationMs": 425.344,
+    "eventsPerSecond": 235104,
+    "droppedTruthEvents": 0
+  },
+  "render": {
+    "samples": 50,
+    "medianMs": 0.886,
+    "p95Ms": 1.628,
+    "reducedMotion": true
+  },
+  "bundle": {
+    "assets": [
+      {
+        "file": "index-BMwJuatR.js",
+        "bytes": 233132
+      },
+      {
+        "file": "index-C5_tpcOa.css",
+        "bytes": 25831
+      }
+    ],
+    "totalBytes": 258963
+  },
+  "accessibility": {
+    "automatedStatus": "PASS",
+    "source": "tests/accessibility.test.tsx",
+    "colorContrast": "MANUAL_REQUIRED",
+    "windowsScreenReader": "NOT_RUN"
+  },
+  "native": {
+    "linuxPackage": "BLOCKED_EXTERNAL",
+    "windowsInstaller": "NOT_RUN"
+  }
+}

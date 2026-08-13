@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "sessionId": "dca-e-edit-holdout-session-a-v1",
+  "completedAt": "2026-08-11T02:45:00.985Z",
+  "status": "PASS",
+  "session": "A",
+  "phases": [
+    "frozen candidate audit",
+    "holdout preregistration v1 invalid arithmetic and append-only v2 supersession",
+    "repository-disjoint holdout construction",
+    "integrity and seal"
+  ],
+  "artifacts": {
+    "preregistration": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PREREGISTRATION.v2.json",
+      "sha256": "5e1d4ece269cd807f625ef7f0c41b1867dce5600f25e4080bfcf02746e4833c5"
+    },
+    "repositories": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+      "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+    },
+    "manifest": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+      "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+    },
+    "oracle": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+      "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+    },
+    "integrity": {
+      "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_INTEGRITY.v1.json",
+      "sha256": "1d965f5d3cfc74f9c3e3a6550d91bd1b759f503d543ebf61eb84a9d97ed242a0"
+    },
+    "seal": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_SEAL.v1.json",
+      "sha256": "d3d1826733b08dfd0d3c96eed6219456608bbc6f10e5f82ecbe8e4e8453bee6c"
+    }
+  },
+  "gate": {
+    "candidateClosure": true,
+    "preregistrationSealed": true,
+    "repositoryDisjointness": true,
+    "taskDisjointness": true,
+    "holdoutIntegrity": true,
+    "taskCount": true,
+    "repositoryCount": true,
+    "hiddenOracleIntegrity": true,
+    "manifestsSealed": true,
+    "zeroModelCalls": true,
+    "holdoutExecutionStarted": false
+  },
+  "nextSession": "B",
+  "mustStop": true
+}

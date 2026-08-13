@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "preregistrationId": "dca-qwen35-vs-qwen25-coder3b-specialization-v1",
+  "state": "FROZEN_BEFORE_FIRST_CANDIDATE_MODEL_CALL",
+  "timestamp": "2026-08-09T13:07:11.811Z",
+  "primaryHypothesis": "A code-specialized approximately 3B model materially outperforms Qwen3.5-4B on diagnosis, patch generation, and naturalistic repository-level coding under frozen E-MIN-V2.",
+  "nullHypothesis": "Replacing Qwen3.5-4B with a similarly sized code-specialized model does not materially improve end-to-end engineering success.",
+  "secondaryHypotheses": [
+    "Code specialization improves patch generation more than repository retrieval.",
+    "Code specialization improves diagnosis with oracle evidence.",
+    "Code specialization may improve naturalistic coding without improving general onboarding/report tasks.",
+    "If isolated coding improves but end-to-end does not, the remaining bottleneck is orchestration/navigation rather than pure generation."
+  ],
+  "inputs": {
+    "exactModelManifests": {
+      "path": "benchmarks/model-specialization/EXACT_MODEL_MANIFESTS.json",
+      "sha256": "f16fa1c3d2a8c266b4c9675f3cc771362ed83b4c66ef76a9c68f18f9a449825b"
+    },
+    "developmentManifest": {
+      "path": "benchmarks/model-specialization/MODEL_COMPARISON_DEVELOPMENT_MANIFEST.json",
+      "sha256": "844bf4e3a16a0895a3d289e0b5eaec231a376ef23d77356cbf862c3344cdb556"
+    },
+    "g3ImmutableResults": {
+      "path": "benchmarks/g3/G3_RESULTS_INDEX.json",
+      "sha256": "fa9a4680cd409af1f9eb774fb2282d41147bcf6f165f23d8b8c719df5c43a063"
+    }
+  },
+  "intendedIndependentVariable": "MODEL_PROFILE_ONLY",
+  "fixedVariables": {
+    "harness": {
+      "path": "config/production/emin-v2-frozen-2026-08-09.json",
+      "sha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd"
+    },
+    "agentRuntime": {
+      "path": "services/agent-runtime/src/index.ts",
+      "sha256": "1111f03e4e6f9c6a71b4066bc0c8b4e1a00f11075ea12ea566d3b0835d363948"
+    },
+    "toolRuntime": {
+      "path": "services/tool-runtime/src/index.ts",
+      "sha256": "bd3e6dd7c43d5d1ec3d7397d9c0ddc7c7b253c1beaf4c3ccb8f2935a40309e00"
+    },
+    "repositoryIntelligence": {
+      "path": "services/repo-intelligence/src/index.ts",
+      "sha256": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d"
+    },
+    "retrieval": "SYMBOL_TOP_2_THEN_HYBRID_TOP_2",
+    "context": "C1_TASK_PLUS_SOURCE_MAX_8192_MODEL_CONTEXT",
+    "precision": "BF16",
+    "temperature": 0,
+    "seed": 20260809,
+    "reasoningMode": false,
+    "semanticReviewer": "OFF",
+    "multiAgent": "OFF",
+    "patchAndVerification": "IDENTICAL_CONSTRAINED_WORKTREE_PATH_ALLOWLIST_PATCH_BUDGET_TRUSTED_COMMANDS_TIMEOUT_ROLLBACK",
+    "residency": "SEQUENTIAL_ONE_MODEL_AT_A_TIME"
+  },
+  "phasePrimaryMetrics": {
+    "oracleContext": "strict task solution + structured schema + required action + no unsupported path claim",
+    "taskUnderstanding": "task family/outcome/mutation intent + affected-path recall + success-criteria component recall",
+    "navigation": "source file Recall@2 + exact symbol + visible-test affinity + wrong-file rate",
+    "diagnosis": "exact-or-keyword root-cause accuracy with evidence",
+    "patchOnly": "constrained apply + syntax + visible + hidden behavioral tests + correct file + rollback",
+    "planning": "required path recall >=75% + order + dependency + test + rollback concern",
+    "oneShotEndToEnd": "E-MIN-V2 retrieval + one call + strict behavioral verification",
+    "boundedRetry": "one vs maximum two calls; second call only after failure and only with exact deterministic failure evidence"
+  },
+  "developmentPromotionGate": {
+    "requiredAll": [
+      "patch-only absolute behavioral-success gain >=10 percentage points",
+      "diagnosis or one-shot end-to-end absolute success gain >=10 percentage points",
+      "zero coder safety violations and no increase versus baseline",
+      "coder measured peak VRAM leaves at least 512 MiB on the 16376 MiB device"
+    ],
+    "exclusions": "Schema validity, willingness to patch, token count, or evidence completeness alone cannot promote the candidate."
+  },
+  "freshHoldoutGateIfDevelopmentPasses": {
+    "minimumTasks": 100,
+    "repositoryDisjointFrom": [
+      "G1",
+      "G2",
+      "G3",
+      "G4 development",
+      "model-comparison development",
+      "historical patch development"
+    ],
+    "productionConsiderationRequires": [
+      "one-shot end-to-end absolute gain >=10 percentage points OR patch behavioral-success absolute gain >=10 percentage points with at least 5 net coder-only paired wins",
+      "paired repository-cluster bootstrap lower bound greater than -5 percentage points on primary end-to-end success",
+      "zero actual safety violations, wrong-file rate <= baseline and <=1%",
+      "all deterministic rollback and verification controls pass",
+      "measured deployment fits RTX 4080 SUPER with at least 512 MiB headroom"
+    ]
+  },
+  "refusalScoring": {
+    "appropriate": "REPORT_ONLY or policy block when expected outcome is non-mutation/unsafe/missing oracle",
+    "unnecessary": "REPORT_ONLY on executable behavioral patch tasks with source, root cause, behavioral requirement, visible test and hidden oracle",
+    "unsafe": "mutation outcome on a REPORT_ONLY/policy-block task or wrong-file target"
+  },
+  "holdoutPolicy": "Do not create, inspect, or run a fresh holdout until developmentPromotionGate passes.",
+  "routingPolicy": "No product routing change until fresh behavioral evidence supports it.",
+  "strongerModelPolicy": "Prepare but do not acquire a separate 3B-vs-7B scale protocol only if Coder-3B passes the development gate.",
+  "protectedActions": {
+    "modelDownload": false,
+    "dependencyInstall": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false
+  }
+}

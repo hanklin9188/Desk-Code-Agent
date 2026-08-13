@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T14:20:52.373Z",
+  "status": "UNCHANGED_NO_NEW_ADR",
+  "multiModelRouting": "NOT_JUSTIFIED",
+  "autonomousMutation": "DISABLED",
+  "current": {
+    "supported": [
+      "bounded structured planning"
+    ],
+    "assisted": [
+      "complete-context navigation"
+    ],
+    "reportOnly": [
+      "diagnosis",
+      "coding",
+      "mutation",
+      "hidden-test autonomous execution"
+    ]
+  },
+  "reason": "Development promotion failed and no fresh holdout was allowed. Navigation speed/accuracy alone cannot enable coding or model routing.",
+  "controllingAdrs": [
+    {
+      "path": "adrs/0013-capability-tier-routing-after-g4-development.md",
+      "sha256": "46fd5a234d73115f0bd04ea17f53d37e64d6c5cb6faaad7885a3ccbb8001ee7a"
+    },
+    {
+      "path": "adrs/0014-autonomous-mutation-remains-disabled.md",
+      "sha256": "c8dd64c67f08169319e0915325512bf730d21566d08c40f2a88e05661ef345df"
+    }
+  ]
+}

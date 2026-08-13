@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 3,
+  "resultId": "dca-privacy-safe-semantic-observability-v3-session-b-result",
+  "status": "PASS",
+  "completedAt": "2026-08-11T21:28:37.699Z",
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_A.v3.json",
+      "sha256": "5e6a60de68bd36602f4f0e8e328ee149e6e1cbcc78483dfc867850b37647bfaf"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PREREGISTRATION.v3.json",
+      "sha256": "edf0ea732bbb235d10e6d898b15089bc4d1f053f54510e99e58bc63b76a42cb9"
+    },
+    "runnerSeal": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_B_RUNNER_SEAL.v3.json",
+      "sha256": "e63d4831dcf3bed2e23b262998ce8211d58a6ad7ec6ba62a45ae648d6baed9e2"
+    },
+    "dryRun": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_B_DRY_RUN.v3.json",
+      "sha256": "03995b923882c0920a93417d42170e28a1be27b73b15a383f6d08bb1bd218954"
+    }
+  },
+  "lineage": {
+    "callEvents": {
+      "path": "docs/experiments/runs/privacy-safe-observability-v3/call-events.jsonl",
+      "sha256": "6afbff03c6c66470f5c5d1ef617a8f988cf81f5e1399c9182327b08e87a04db3",
+      "bytes": 67480,
+      "rows": 160
+    },
+    "checkpoint": {
+      "path": "docs/experiments/runs/privacy-safe-observability-v3/observations.checkpoint.jsonl",
+      "sha256": "881929876122b73f8e3f52e42d1a0b45a355d89f1c685001b371195f44dae8b8",
+      "bytes": 78146,
+      "rows": 80
+    },
+    "uniquePhysicalCalls": 80,
+    "alternatingStartedCompleted": true,
+    "duplicateCalls": 0,
+    "orphanPackets": 0
+  },
+  "summary": {
+    "plannedCalls": 80,
+    "consumedCalls": 80,
+    "completedResponses": 80,
+    "L0Packets": 80,
+    "L1Packets": 80,
+    "sameCallPairs": 80,
+    "retries": 0,
+    "reviewerCalls": 0,
+    "invalidJson": 0,
+    "invalidActions": 0,
+    "malformedOutputs": 4,
+    "actionParseStatus": {
+      "JSON_OBJECT": 80
+    },
+    "actionValidationStatus": {
+      "PASS": 80
+    },
+    "parserFailureCategory": {
+      "NONE": 76,
+      "TREE_SITTER_SYNTAX_ERROR": 4
+    },
+    "execution": {
+      "patchApplied": 72,
+      "syntaxPass": 67,
+      "visiblePass": 38,
+      "hiddenPass": 39,
+      "behavioralSuccess": 36,
+      "safetyViolations": 0,
+      "rollbackFailures": 0,
+      "cleanupFailures": 0
+    }
+  },
+  "storage": {
+    "formula": "max(maxTaskFixtureBytes*8,256MiB)+8GiB+max(16GiB,totalBytes*0.05)",
+    "maximumLiveDisposableIsolations": 1,
+    "observedPeakLiveDisposableIsolations": 1,
+    "minimumFreeBytesAtCallStart": 339312197632,
+    "maximumRequiredFreeBytes": 62913428890,
+    "capacityFailures": 0,
+    "cleanupFailures": 0,
+    "staleIsolations": 0,
+    "remainingIsolations": 0
+  },
+  "privacy": {
+    "leaks": 0,
+    "rawPromptPersisted": false,
+    "rawModelOutputPersisted": false,
+    "rawEditBodyPersisted": false,
+    "rawIdentifiersPersisted": false,
+    "rawLiteralsPersisted": false,
+    "rawParserMessagesPersisted": false,
+    "HMACKeyPersisted": false,
+    "L2": false
+  },
+  "semanticAnalysisPerformed": false,
+  "servingState": {
+    "tournament-start.json": {
+      "sha256": "2a41ee9ae181a80d10c2045dcb950e1cc9c4714f4f27dad6e7ad58489fa228b3",
+      "bytes": 93
+    },
+    "tournament-launch.json": {
+      "sha256": "64c386003392ff33ef6af9f9a0195418bd46c993d19bbcb6c4f943c9bc9d3c61",
+      "bytes": 2062
+    }
+  },
+  "cleanup": {
+    "modelProcesses": 0,
+    "port8000Clear": true,
+    "modelGpuAllocationMiB": 0,
+    "ephemeralStateAbsent": true,
+    "worktrees": 1,
+    "disposableIsolations": 0
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "retry": false,
+    "reviewer": false,
+    "L2": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 3,
+  "packetLevel": "L1",
+  "identity": {
+    "taskId": "observability-064-fc70dc8f7482",
+    "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+    "physicalCallId": "privacy-observability-v3-046-10b70b57-f29d-4142-b240-596c52243028",
+    "requestSha256": "6967f04157a0976020358c6c741ce5ed5f244f58425cc09dffa4c499eaca0482",
+    "actionIdentitySha256": "3643d643869ebf376590927bc59384a652836ca41cf070f9388a28980b4729ad"
+  },
+  "evidence": {
+    "schemaVersion": 2,
+    "level": "L1_STRUCTURED_DERIVED_EDIT_FEATURES",
+    "taskId": "observability-064-fc70dc8f7482",
+    "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+    "physicalCallId": "privacy-observability-v3-046-10b70b57-f29d-4142-b240-596c52243028",
+    "requestSha256": "6967f04157a0976020358c6c741ce5ed5f244f58425cc09dffa4c499eaca0482",
+    "actionIdentitySha256": "3643d643869ebf376590927bc59384a652836ca41cf070f9388a28980b4729ad",
+    "modelResponseStatus": "COMPLETED",
+    "actionParseStatus": "JSON_OBJECT",
+    "actionValidationStatus": "PASS",
+    "replacementPresent": true,
+    "afterSourceParseStatus": "FAIL",
+    "astFeaturesAvailable": false,
+    "parserFailureCategory": "TREE_SITTER_SYNTAX_ERROR",
+    "selectedFile": "src/case-4.mjs",
+    "range": {
+      "startLine": 2,
+      "endLine": 2
+    },
+    "targetSymbol": {
+      "digest": "0951d82952ed2b3d783b8420eeec18aa09eac8001c715800f0bab5aaa5f85f9e",
+      "kind": "function"
+    },
+    "replacementShape": {
+      "bytes": 61,
+      "characters": 61,
+      "lines": 2,
+      "newlines": 1,
+      "whitespaceOnly": false,
+      "indentation": [
+        {
+          "kind": "0",
+          "count": 2
+        }
+      ],
+      "lexicalTokenKinds": [
+        {
+          "kind": "IDENTIFIER",
+          "count": 7
+        }
+      ],
+      "operatorCategories": [
+        {
+          "kind": "?",
+          "count": 1
+        },
+        {
+          "kind": "/",
+          "count": 2
+        }
+      ],
+      "commentTokens": 0,
+      "delimiterBalance": {
+        "parentheses": 0,
+        "brackets": 0,
+        "braces": 0
+      },
+      "identifierDigests": [
+        {
+          "digest": "1c6164a7e9e8f96c8f0e0d5c0166a0be3b2f4d7e1b1ef8000284899a0da3f394",
+          "count": 1
+        },
+        {
+          "digest": "243a228f311d1662490a5ccf623c1c24d79602068edf6941b47ef1e1b27b1fb6",
+          "count": 1
+        },
+        {
+          "digest": "2f15316feac921debbc321839f8fd47a168a6c30dc5700d0e2d8df9242354bb6",
+          "count": 1
+        },
+        {
+          "digest": "40706bade42e49551bdc598d1ec7c9422e3ec25bb18ca813d203fa50cc1a1c20",
+          "count": 2
+        },
+        {
+          "digest": "53be6d5dd9410aabc82f3f2f148f3f0123384ec58500dfd98d3f4811fbc8beb8",
+          "count": 1
+        },
+        {
+          "digest": "ccd017f6014ef76efa7aea95d67b2c55c40c8c7a934d32028f27cf6f9ded6819",
+          "count": 1
+        }
+      ],
+      "literalDigests": []
+    },
+    "astFeatures": null,
+    "canonicalEditSha256": "e135374b72b51eac09458d253da4e6efe7f86c715d983f23309338281f7d2fd8",
+    "hashKeyId": "10b76595429d293bbf0364e08dfbd6a62e71f9a5bc6fcc9d01e51213717c2c92",
+    "verification": {
+      "stage": "SYNTAX_TYPE",
+      "status": "FAIL",
+      "code": "SYNTAX_TYPE_FAILED",
+      "diagnosticSha256": null
+    },
+    "visibleBehavioralEffect": {
+      "status": "NOT_RUN",
+      "category": "NOT_RUN",
+      "diagnosticSha256": null
+    },
+    "privacy": {
+      "rawPromptStored": false,
+      "rawModelOutputStored": false,
+      "rawEditBodyStored": false,
+      "rawIdentifiersStored": false,
+      "rawLiteralsStored": false,
+      "commentsStored": false,
+      "sourceStored": false,
+      "rawParserMessageStored": false,
+      "hashKeyStored": false
+    }
+  }
+}

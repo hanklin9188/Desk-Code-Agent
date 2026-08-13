@@ -1,0 +1,481 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dca://privacy-safe-observability/l1-evidence-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "level",
+    "taskId",
+    "repositoryRevision",
+    "physicalCallId",
+    "selectedFile",
+    "range",
+    "targetSymbol",
+    "replacement",
+    "astNodeChanges",
+    "expressionChanges",
+    "controlFlowChanges",
+    "operatorChanges",
+    "identifierChanges",
+    "literalChanges",
+    "apiCallChanges",
+    "importChanges",
+    "canonicalEditSha256",
+    "hashKeyId",
+    "verification",
+    "visibleBehavioralEffect",
+    "privacy"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "level": {
+      "const": "L1_STRUCTURED_DERIVED_EDIT_FEATURES"
+    },
+    "taskId": {
+      "type": "string"
+    },
+    "repositoryRevision": {
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "physicalCallId": {
+      "type": "string"
+    },
+    "selectedFile": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+$"
+    },
+    "range": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "startLine",
+        "endLine"
+      ],
+      "properties": {
+        "startLine": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "endLine": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "targetSymbol": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "digest",
+            "kind"
+          ],
+          "properties": {
+            "digest": {
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "kind": {
+              "type": "string",
+              "maxLength": 40
+            }
+          }
+        }
+      ]
+    },
+    "replacement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bytes",
+        "characters",
+        "lines"
+      ],
+      "properties": {
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "characters": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lines": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "astNodeChanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "before",
+          "after",
+          "delta"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "before": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "after": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "delta": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "expressionChanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "before",
+          "after",
+          "delta"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "before": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "after": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "delta": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "controlFlowChanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "before",
+          "after",
+          "delta"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "before": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "after": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "delta": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "operatorChanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "before",
+          "after",
+          "delta"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "before": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "after": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "delta": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "identifierChanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "digest",
+          "before",
+          "after",
+          "delta"
+        ],
+        "properties": {
+          "digest": {
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "before": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "after": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "delta": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "literalChanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "digest",
+          "before",
+          "after",
+          "delta",
+          "literalType",
+          "length"
+        ],
+        "properties": {
+          "digest": {
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "before": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "after": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "delta": {
+            "type": "integer"
+          },
+          "literalType": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "length": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "apiCallChanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "digest",
+          "before",
+          "after",
+          "delta"
+        ],
+        "properties": {
+          "digest": {
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "before": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "after": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "delta": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "importChanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "digest",
+          "before",
+          "after",
+          "delta"
+        ],
+        "properties": {
+          "digest": {
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "before": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "after": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "delta": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "canonicalEditSha256": {
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "hashKeyId": {
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stage",
+        "status",
+        "code",
+        "diagnosticSha256"
+      ],
+      "properties": {
+        "stage": {
+          "enum": [
+            "RETRIEVAL",
+            "ACTION_VALIDATION",
+            "PATCH_CONSTRUCTION",
+            "SYNTAX_TYPE",
+            "VISIBLE_TEST",
+            "HIDDEN_TEST",
+            "SUCCESS",
+            "TOOL_INFRASTRUCTURE"
+          ]
+        },
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN"
+          ]
+        },
+        "code": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "diagnosticSha256": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          ]
+        }
+      }
+    },
+    "visibleBehavioralEffect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "category",
+        "diagnosticSha256"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN"
+          ]
+        },
+        "category": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "diagnosticSha256": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          ]
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rawPromptStored",
+        "rawModelOutputStored",
+        "rawEditBodyStored",
+        "rawIdentifiersStored",
+        "rawLiteralsStored",
+        "commentsStored",
+        "sourceStored"
+      ],
+      "properties": {
+        "rawPromptStored": {
+          "const": false
+        },
+        "rawModelOutputStored": {
+          "const": false
+        },
+        "rawEditBodyStored": {
+          "const": false
+        },
+        "rawIdentifiersStored": {
+          "const": false
+        },
+        "rawLiteralsStored": {
+          "const": false
+        },
+        "commentsStored": {
+          "const": false
+        },
+        "sourceStored": {
+          "const": false
+        }
+      }
+    }
+  }
+}

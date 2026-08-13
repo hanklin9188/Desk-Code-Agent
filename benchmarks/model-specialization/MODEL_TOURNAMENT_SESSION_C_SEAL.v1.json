@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "sealId": "dca-practical-local-model-tournament-session-c-seal-v1",
+  "state": "SEALED_BEFORE_FIRST_SESSION_C_PRIMARY_CALL",
+  "classification": "SESSION_C_PRIMARY_EXECUTION_SEAL",
+  "sealedAt": "2026-08-11T13:45:34.290Z",
+  "sessionCPrimaryCallsAtSeal": 0,
+  "inputs": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PREREGISTRATION.v1.json",
+      "sha256": "51f983f63719494e8877eb7b24fcbc7a47b0b9fb53d5c1e2bb838961b87246c1"
+    },
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_A.v1.json",
+      "sha256": "9d6a610829405f146ee36651961273bd25c9d6264a1c54c1e20917e186af7200"
+    },
+    "sessionB": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_B.v1.json",
+      "sha256": "e2d05ad3f5b6b7ff97e37bfd256d94995c1dd5be830a6246454059786f5da833"
+    },
+    "manifest": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+      "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+    },
+    "repositories": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+      "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+    },
+    "oracle": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+      "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+    }
+  },
+  "execution": {
+    "order": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "callsPerCandidate": 95,
+    "totalPrimaryCalls": 285,
+    "oneShot": true,
+    "retry": false,
+    "telemetryNonPrimaryCallsPerCandidate": 1,
+    "telemetrySemantics": "five loaded-idle samples before standardized stream; 50ms polling from first CALL_INTENT through final CALL_COMPLETED; peak=max inference-phase samples; cleanup measured separately"
+  },
+  "candidates": [
+    {
+      "candidateId": "M1",
+      "modelId": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+      "acquisition": {
+        "path": "docs/experiments/model-specialization/tournament-session-b/M1_ACQUISITION.v1.json",
+        "sha256": "69ed9e00b59f030c5fd829145a0ae09e4124437fd67c42c973fa9e70f66c9cf1"
+      },
+      "semanticIntentsSha256": "5abe5b15a1efa9bbf425dd0933b8c2470d63ef9e628bb3f0674a90cec774b685",
+      "plannedCalls": 95,
+      "runDirectory": "docs/experiments/runs/model-tournament-session-c-m1-v1",
+      "emptyLedgers": {
+        "call-events.jsonl": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m1-v1/call-events.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "observations.checkpoint.jsonl": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m1-v1/observations.checkpoint.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    },
+    {
+      "candidateId": "M2",
+      "modelId": "TIGER-Lab/FIM-7B",
+      "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+      "acquisition": {
+        "path": "docs/experiments/model-specialization/tournament-session-b/M2_ACQUISITION.v1.json",
+        "sha256": "cf8e77a5bf0fe8828c1f8deeacc9c87c995a05546efde46341eeccee29998fb6"
+      },
+      "semanticIntentsSha256": "5abe5b15a1efa9bbf425dd0933b8c2470d63ef9e628bb3f0674a90cec774b685",
+      "plannedCalls": 95,
+      "runDirectory": "docs/experiments/runs/model-tournament-session-c-m2-v1",
+      "emptyLedgers": {
+        "call-events.jsonl": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/call-events.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "observations.checkpoint.jsonl": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    },
+    {
+      "candidateId": "M3",
+      "modelId": "SWE-bench/SWE-agent-LM-7B",
+      "revision": "a44fce0216647696a7437126e82fc1eaa34008d7",
+      "acquisition": {
+        "path": "docs/experiments/model-specialization/tournament-session-b/M3_ACQUISITION.v1.json",
+        "sha256": "f2e92741c5f3f5f9b8f23356e4fdcef3290839f19c5769ebf1c36a1eef35fedc"
+      },
+      "semanticIntentsSha256": "5abe5b15a1efa9bbf425dd0933b8c2470d63ef9e628bb3f0674a90cec774b685",
+      "plannedCalls": 95,
+      "runDirectory": "docs/experiments/runs/model-tournament-session-c-m3-v1",
+      "emptyLedgers": {
+        "call-events.jsonl": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m3-v1/call-events.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "observations.checkpoint.jsonl": {
+          "path": "docs/experiments/runs/model-tournament-session-c-m3-v1/observations.checkpoint.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    }
+  ],
+  "sourceClosure": {
+    "package-lock.json": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+    "package.json": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+    "scripts/launch_model_profile.py": "1053d094c2e7c6d5558c8e992c7b9806ce995bee34eac077840e56f98af418c7",
+    "scripts/launch_model_tournament_candidate.py": "07ee838e78c19ee2df839c6943300d9b49c7153d8a67149524ed5c13dc3a47f3",
+    "scripts/model_serving_attestation.ts": "c2a589d2ad82c28923c2de8b0de6070cead075e91a061f2998c0ebdde0c50702",
+    "scripts/preregister_practical_local_model_tournament.ts": "d6d570d901c763f6c725c605b98e0ac7e2220883fb0a090f02a386c617c5cd4e",
+    "scripts/run_e_edit_holdout.ts": "c9dea2c04829d8c460eed65b0d7c237528398e2df651e406432ee7784579cb69",
+    "scripts/run_model_tournament_session_c.ts": "5288c049824f63d8a31f602ca0f572785e934170028653c06baca881351e8db6",
+    "scripts/start_model_profile.sh": "298e0446ee178e405af8d4fd8ce346fb75ab506931cba777eb52d0b54b5c3037",
+    "scripts/start_model_tournament_candidate.sh": "afe879bbc0dd831f673b05a9d96f3cd299f44b606a15f0e7605765c5fc553c45",
+    "services/g3-benchmark-runtime/src/index.ts": "edcbc59ac3164da338289f9ae6499074a51a8e92625e189d722a9162a34b6478",
+    "services/g3-evaluation-runtime/src/index.ts": "02ebfd6a7914cbe35c49048c182236d578cf56a1ddeb40ff8a4b9ac141affad2",
+    "services/model-tournament-runtime/src/index.ts": "a630c4fbd13686ab1bb4a9434c68e1fc657d182b25d678785e2352c06f8f03be",
+    "services/patch-interface-runtime/src/index.ts": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+    "services/repo-intelligence/src/index.ts": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d",
+    "services/task-aware-retrieval/src/index.ts": "a6aca66c4758d7b35126dc4bb3c53a6ebd38bf17ec3006d8f5b1bc40fa3d18eb",
+    "services/tool-runtime/src/index.ts": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21"
+  },
+  "privacy": {
+    "rawPromptsPersisted": false,
+    "rawModelOutputsPersisted": false,
+    "rawPatchesPersisted": false,
+    "hiddenOracleModelVisible": false
+  },
+  "protectedActions": {
+    "additionalModelDownload": false,
+    "dependencyInstall": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

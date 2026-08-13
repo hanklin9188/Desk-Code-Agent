@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T13:31:19.534Z",
+  "status": "INCONCLUSIVE_CANDIDATE_BLOCKED_APPROVAL",
+  "decision": "D_INCONCLUSIVE",
+  "preparation": {
+    "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREPARATION_INDEX.json",
+    "sha256": "84fa36a7ed4e6a13d3865849d085f22c15b867c09fe66a76c4b92eeca3dcf49f"
+  },
+  "baseline": {
+    "development": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "smoke": {
+      "path": "docs/experiments/model-specialization/BASELINE_MODEL_SMOKE_VALIDATION.v2.json",
+      "sha256": "fb90ef42bf46137dc3c4edd04ecea73101b8108c124fbbc1534ad6716375d98d"
+    },
+    "cleanup": {
+      "path": "docs/experiments/model-specialization/BASELINE_MODEL_SHUTDOWN_CLEANUP.v2.json",
+      "sha256": "1912e38ef113682422f7dea1f07fc84fd704381accebc80aa55a31e4788eaad3"
+    }
+  },
+  "candidate": {
+    "smoke": {
+      "path": "docs/experiments/model-specialization/CODER_MODEL_SMOKE_VALIDATION.json",
+      "sha256": "a59e4546c2f8c850fccc05150756bf3c5a64c638eb3925f0f5aba61b457592a0"
+    },
+    "development": "NOT_RUN_BLOCKED_APPROVAL",
+    "modelCalls": 0
+  },
+  "comparisons": {
+    "oracleComparison": {
+      "path": "docs/experiments/model-specialization/ORACLE_CONTEXT_COMPARISON.json",
+      "sha256": "2efa59340a2b0e057c2420ce68e9e814efbea70ce65410ed0df3dc9a696576f0"
+    },
+    "taskComparison": {
+      "path": "docs/experiments/model-specialization/TASK_UNDERSTANDING_COMPARISON.json",
+      "sha256": "2dc12219bf70ae4af73c834b9e850b1af391eaaeb5a31065f34f278a02a16bf6"
+    },
+    "navigationComparison": {
+      "path": "docs/experiments/model-specialization/NAVIGATION_COMPARISON.json",
+      "sha256": "f857774ff6779426e20472b48c9dab88eea2aab5ec84b37bafe70830ce14a3ff"
+    },
+    "diagnosisComparison": {
+      "path": "docs/experiments/model-specialization/DIAGNOSIS_COMPARISON.json",
+      "sha256": "e19332af5a2e306d00e269360ba20f52858ac943d1bc8f9790c22543d3f85a4d"
+    },
+    "patchComparison": {
+      "path": "docs/experiments/model-specialization/PATCH_ONLY_COMPARISON.json",
+      "sha256": "0e19ea0c4bf8693319bed1f25b98da992821dea66cc99f18692503bee135cfda"
+    },
+    "planningComparison": {
+      "path": "docs/experiments/model-specialization/PLANNING_COMPARISON.json",
+      "sha256": "78f4a6895856775f4d7b9c32bb6f5c1a3f84c8fe30cd42084ec29af6b48243d9"
+    },
+    "oneShotComparison": {
+      "path": "docs/experiments/model-specialization/ONE_SHOT_END_TO_END_COMPARISON.json",
+      "sha256": "5c0dfb356eb393932e2e15e9dedacdd50370aff23aa5c01a1b5c1019cc597caa"
+    },
+    "retryComparison": {
+      "path": "docs/experiments/model-specialization/RETRY_DEPTH_COMPARISON.json",
+      "sha256": "e350bdc17b3327c5837c9390867871caf12a53899bd52754c9748a3bb6bbecf8"
+    },
+    "refusal": {
+      "path": "docs/experiments/model-specialization/REFUSAL_BEHAVIOR_ANALYSIS.json",
+      "sha256": "f0af6f10bce11a75874e87893a9ff68b5144d045423a14fee65b6a2347dfd22f"
+    },
+    "structured": {
+      "path": "docs/experiments/model-specialization/STRUCTURED_OUTPUT_ROBUSTNESS_REPORT.json",
+      "sha256": "3d016e61bcaaf2dc5b99ebc74f7a7907015f7cef42e7ad634bd51b6e8d2d5be4"
+    },
+    "safety": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_SAFETY_REPORT.json",
+      "sha256": "794184eaf10fed062cd546d905499e9cc4cfd25fa3e1b9fe3db8f2748ea56a93"
+    },
+    "performance": {
+      "path": "docs/experiments/model-specialization/VRAM_LATENCY_REPORT.json",
+      "sha256": "436e5102ec7cc73db370826673d2bccf9ff73162e686e07fd9e235dd49b21d0b"
+    },
+    "specialization": {
+      "path": "docs/experiments/model-specialization/SPECIALIZATION_EFFECT_REPORT.json",
+      "sha256": "2112201b73eb359141065a863d408c5d91f8035791650dcca046b59190e6371a"
+    },
+    "matrix": {
+      "path": "docs/experiments/model-specialization/MODEL_CAPABILITY_MATRIX.json",
+      "sha256": "778151f625d74dd0b036001c1d098115d9bd11598de65dbfecdba6a168c642da"
+    }
+  },
+  "decisions": {
+    "holdout": {
+      "path": "docs/experiments/model-specialization/FRESH_HOLDOUT_DECISION.json",
+      "sha256": "2e00bae1d0e56e1f750cb905c1404410ff057e10cbc5e1a1b7c84cd8d49eec25"
+    },
+    "routing": {
+      "path": "docs/experiments/model-specialization/PRODUCT_ROUTING_DECISION.json",
+      "sha256": "000cec8ba018191090228fd2c55ea628c56aeec69909785a507c9364dacab32d"
+    },
+    "stronger": {
+      "path": "docs/experiments/model-specialization/CODER_7B_SCALE_EXPERIMENT_DECISION.json",
+      "sha256": "56411088335fbc25ef71b45ee1c0c74517e16430dae5f07f548ecf928e25cf28"
+    }
+  },
+  "historical": {
+    "path": "docs/experiments/model-specialization/HISTORICAL_AND_BEHAVIORAL_PATCH_CONTEXT.json",
+    "sha256": "e7b1b8d0f41718fde569646b120d7c529106610a6da1185ed75e6f2cf9c81d04"
+  },
+  "final": {
+    "json": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FINAL_REPORT.json",
+      "sha256": "1c9af7da4eab5f6949c7c3c2ae361816da35f985e95663023f3370ba64d8613a"
+    },
+    "markdown": {
+      "path": "docs/experiments/model-specialization/2026-08-09-controlled-model-specialization.md",
+      "sha256": "e49f29ac607ddbe5c3445e54415308618fb28b38660dde779b3f33450b31c014"
+    }
+  },
+  "immutableInputs": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "exactModels": {
+      "path": "benchmarks/model-specialization/EXACT_MODEL_MANIFESTS.json",
+      "sha256": "f16fa1c3d2a8c266b4c9675f3cc771362ed83b4c66ef76a9c68f18f9a449825b"
+    },
+    "acquisition": {
+      "path": "benchmarks/model-specialization/MODEL_ACQUISITION_STATUS.json",
+      "sha256": "87794df8b56c11015fd1bb6d6d8c7701e713e1fbf05c2fbf74c8643cb63f9f08"
+    },
+    "g3": {
+      "path": "benchmarks/g3/G3_RESULTS_INDEX.json",
+      "sha256": "fa9a4680cd409af1f9eb774fb2282d41147bcf6f165f23d8b8c719df5c43a063"
+    },
+    "g4": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_RESULTS_INDEX.json",
+      "sha256": "79d70211fded745d760c50f6bfe95ac5463cd41b119433156d4ba3d9f7ee253f"
+    },
+    "releaseGate": {
+      "path": "artifacts/release/release-gate.json",
+      "sha256": "c734e9faa1ea500d5a49ed6910402ef857c61e8c426ef4a7021dc9fbd2e4dfbb"
+    }
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "dependencyInstall": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false
+  }
+}

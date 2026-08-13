@@ -1,0 +1,11 @@
+{
+  "experiment_id": "deterministic-2026-08-08T18-23-51-982Z",
+  "status": "FAIL",
+  "environment": { "node": "v24.15.0", "platform": "linux", "arch": "x64" },
+  "retrieval": { "queries": 2, "hits": 1, "recall_at_k": 0.5, "index_files": 34, "symbols": 188, "references": 4245, "duration_ms": 120.158 },
+  "event_replay": { "events": 1000, "final_state": "DONE", "duration_ms": 6.594, "events_per_second": 151649 },
+  "skill_l0": { "total": 39, "valid": 39, "duration_ms": 77.286, "production_enabled": 0 },
+  "model_experiments": { "status": "NOT_RUN", "reason": "vLLM executable and exact Qwen revision unavailable" },
+  "quantization": { "status": "NOT_RUN", "reason": "BF16 task baseline must run first" },
+  "failure_taxonomy": { "retrieval_affinity": "index.ts source mapping ignored recorded import edges" }
+}

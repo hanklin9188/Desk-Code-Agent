@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "buildId": "dca-w3-windows-package-build-v1",
+  "status": "PASS_LOCAL_UNSIGNED",
+  "sourceIdentity": "889efaa7fadb222073fa7e0ca5be735ada47fe4c357ebe2fd5373cb0b1b421bb",
+  "configuration": {
+    "productName": "Desk Code Agent",
+    "identifier": "com.deskcodeagent.desktop",
+    "version": "0.1.0",
+    "architecture": "x86_64",
+    "targets": ["msi", "nsis"],
+    "icon": "apps/desktop/src-tauri/icons/icon.ico",
+    "executable": "desk-code-agent.exe",
+    "bundleResources": "TAURI_EMBEDDED_FRONTEND_AND_CANONICAL_ARTIFACT_PROJECTION",
+    "outputDirectory": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508\\apps\\desktop\\src-tauri\\target\\release\\bundle"
+  },
+  "toolchain": {
+    "node": "24.14.0",
+    "npm": "11.12.1",
+    "rust": "1.97.1-x86_64-pc-windows-msvc",
+    "cargo": "1.97.1",
+    "visualStudio": "18.8.12023.21",
+    "windowsSdk": "10.0.26100.0",
+    "webView2": "150.0.4078.48",
+    "tauriCli": "2.11.4"
+  },
+  "command": "tauri build --config apps/desktop/src-tauri/tauri.conf.json",
+  "dependencyPolicy": "EXISTING_LOCKFILES_UNCHANGED",
+  "artifacts": [
+    {
+      "format": "MSI",
+      "filename": "Desk Code Agent_0.1.0_x64_en-US.msi",
+      "retainedPath": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508\\.qa-logs\\w3-first-build\\Desk Code Agent_0.1.0_x64_en-US.msi",
+      "bytes": 1912832,
+      "sha256": "d91f4a516cea760114b380758a5c9a9e48ecd88db86fde262b2aac4e1975bfcf",
+      "signed": false
+    },
+    {
+      "format": "NSIS",
+      "filename": "Desk Code Agent_0.1.0_x64-setup.exe",
+      "retainedPath": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508\\.qa-logs\\w3-first-build\\Desk Code Agent_0.1.0_x64-setup.exe",
+      "bytes": 1162951,
+      "sha256": "ee6877d02e20c346aa7446430ea3366eeaf15d85473c0f8f15dc196e3b9a89f0",
+      "signed": false,
+      "lifecycleTested": true
+    }
+  ],
+  "repeatBuild": {
+    "commandResult": "PASS_SECOND_COMPLETE_MSI_AND_NSIS_BUILD",
+    "dependencyDownloadsOnRepeat": 0,
+    "byteIdentical": false,
+    "claimBoundary": "The locked build process reproduces valid artifacts; timestamped installer bytes are not claimed reproducible. Canonical QA artifacts are pinned by SHA-256."
+  },
+  "buildLogs": {
+    "canonicalSha256": "ffc43c5b4281e07c04a566819178e42e3a5cfa304761beee5a7c8be414f5085d",
+    "repeatSha256": "c619ac07ae2b58feb239b7617b83e175d79024a245791717de3661f9edb25219"
+  }
+}

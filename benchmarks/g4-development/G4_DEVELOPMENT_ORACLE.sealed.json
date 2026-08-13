@@ -1,0 +1,3661 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "dca-g4-development-v1",
+  "visibility": "HIDDEN_FROM_MODEL_EXCEPT_EXPLICIT_ORACLE_CONDITIONS",
+  "manifestSha256": "5290f4382f28d0c50f07c16690d2592a82fda726bb60fa8778165870abcb9887",
+  "rows": [
+    {
+      "task_id": "g4-dev-repo-werkzeug-onboarding_synthesis-e2353b4095",
+      "required_evidence_paths": [
+        "README.md",
+        "pyproject.toml",
+        "LICENSE.txt"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-werkzeug-ambiguous_action_location-0e6057fed3",
+      "required_evidence_paths": [
+        "src/werkzeug/__init__.py",
+        "src/werkzeug/datastructures/__init__.py",
+        "tests/sansio/__init__.py"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-werkzeug-cross_file_plan-8ffcc2c369",
+      "required_evidence_paths": [
+        "src/werkzeug/__init__.py",
+        "src/werkzeug/datastructures/__init__.py",
+        "tests/sansio/__init__.py",
+        ".github/workflows/lock.yaml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-werkzeug-diagnosis_workflow-d3844d0ccc",
+      "required_evidence_paths": [
+        "src/werkzeug/datastructures/__init__.py",
+        "tests/sansio/__init__.py",
+        ".github/workflows/lock.yaml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-werkzeug-hidden_test_strategy-8bd83ad65a",
+      "required_evidence_paths": [
+        "src/werkzeug/datastructures/__init__.py",
+        "tests/sansio/__init__.py"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-werkzeug-dependency_boundary-464cf5799e",
+      "required_evidence_paths": [
+        "pyproject.toml",
+        ".github/workflows/lock.yaml",
+        "src/werkzeug/__init__.py"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-werkzeug-contributor_start-7ab0b3f836",
+      "required_evidence_paths": [
+        "README.md",
+        "tests/sansio/__init__.py",
+        ".github/workflows/lock.yaml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-werkzeug-implementation_contract-46cf5a3546",
+      "required_evidence_paths": [
+        "src/werkzeug/datastructures/__init__.py",
+        "tests/sansio/__init__.py",
+        "pyproject.toml"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-ky-onboarding_synthesis-9f545842c1",
+      "required_evidence_paths": [
+        "readme.md",
+        "package.json",
+        "license"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-ky-ambiguous_action_location-0d73b5bf55",
+      "required_evidence_paths": [
+        "source/index.ts",
+        "source/core/constants.ts",
+        "test/base-url.ts"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-ky-cross_file_plan-e3650fb7b1",
+      "required_evidence_paths": [
+        "source/index.ts",
+        "source/core/constants.ts",
+        "test/base-url.ts",
+        ".github/workflows/main.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-ky-diagnosis_workflow-ca3293deb2",
+      "required_evidence_paths": [
+        "source/core/constants.ts",
+        "test/base-url.ts",
+        ".github/workflows/main.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-ky-hidden_test_strategy-9c4eafab29",
+      "required_evidence_paths": [
+        "source/core/constants.ts",
+        "test/base-url.ts"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-ky-dependency_boundary-20c458b959",
+      "required_evidence_paths": [
+        "package.json",
+        ".github/workflows/main.yml",
+        "source/index.ts"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-ky-contributor_start-bd12230a4c",
+      "required_evidence_paths": [
+        "readme.md",
+        "test/base-url.ts",
+        ".github/workflows/main.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-ky-implementation_contract-2d794c63a5",
+      "required_evidence_paths": [
+        "source/core/constants.ts",
+        "test/base-url.ts",
+        "package.json"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-echo-onboarding_synthesis-bed5fb84c2",
+      "required_evidence_paths": [
+        "README.md",
+        "go.mod",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-echo-ambiguous_action_location-a31f6e1fd5",
+      "required_evidence_paths": [
+        "server.go",
+        "bind.go",
+        "bind_cache_test.go"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-echo-cross_file_plan-b1a0a8cbbe",
+      "required_evidence_paths": [
+        "server.go",
+        "bind.go",
+        "bind_cache_test.go",
+        ".github/workflows/checks.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-echo-diagnosis_workflow-f72af9ee86",
+      "required_evidence_paths": [
+        "bind.go",
+        "bind_cache_test.go",
+        ".github/workflows/checks.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-echo-hidden_test_strategy-10f4b3c2e0",
+      "required_evidence_paths": [
+        "bind.go",
+        "bind_cache_test.go"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-echo-dependency_boundary-ee6ecd92ae",
+      "required_evidence_paths": [
+        "go.mod",
+        ".github/workflows/checks.yml",
+        "server.go"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-echo-contributor_start-8a66b343be",
+      "required_evidence_paths": [
+        "README.md",
+        "bind_cache_test.go",
+        ".github/workflows/checks.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-echo-implementation_contract-7fb4369d2a",
+      "required_evidence_paths": [
+        "bind.go",
+        "bind_cache_test.go",
+        "go.mod"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-anyhow-onboarding_synthesis-dfe62379da",
+      "required_evidence_paths": [
+        "README.md",
+        "Cargo.toml",
+        "LICENSE-APACHE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-anyhow-ambiguous_action_location-f76d63f2cc",
+      "required_evidence_paths": [
+        "src/lib.rs",
+        "src/backtrace.rs",
+        "tests/test_backtrace.rs"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-anyhow-cross_file_plan-4930fe50bd",
+      "required_evidence_paths": [
+        "src/lib.rs",
+        "src/backtrace.rs",
+        "tests/test_backtrace.rs",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-anyhow-diagnosis_workflow-be8c497425",
+      "required_evidence_paths": [
+        "src/backtrace.rs",
+        "tests/test_backtrace.rs",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-anyhow-hidden_test_strategy-8685cc3c22",
+      "required_evidence_paths": [
+        "src/backtrace.rs",
+        "tests/test_backtrace.rs"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-anyhow-dependency_boundary-205f25d211",
+      "required_evidence_paths": [
+        "Cargo.toml",
+        ".github/workflows/ci.yml",
+        "src/lib.rs"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-anyhow-contributor_start-8d032d6ca6",
+      "required_evidence_paths": [
+        "README.md",
+        "tests/test_backtrace.rs",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-anyhow-implementation_contract-cdf304e426",
+      "required_evidence_paths": [
+        "src/backtrace.rs",
+        "tests/test_backtrace.rs",
+        "Cargo.toml"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zlib-onboarding_synthesis-43d9e5e746",
+      "required_evidence_paths": [
+        "README",
+        "CMakeLists.txt",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zlib-ambiguous_action_location-5d9f43f8ad",
+      "required_evidence_paths": [
+        "adler32.c",
+        "compress.c",
+        "contrib/blast/blast-test.c"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zlib-cross_file_plan-7fc4ca82d6",
+      "required_evidence_paths": [
+        "adler32.c",
+        "compress.c",
+        "contrib/blast/blast-test.c",
+        ".github/workflows/c-std.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zlib-diagnosis_workflow-7a6517a528",
+      "required_evidence_paths": [
+        "compress.c",
+        "contrib/blast/blast-test.c",
+        ".github/workflows/c-std.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zlib-hidden_test_strategy-1edd753077",
+      "required_evidence_paths": [
+        "compress.c",
+        "contrib/blast/blast-test.c"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zlib-dependency_boundary-e9fb382cd2",
+      "required_evidence_paths": [
+        "CMakeLists.txt",
+        ".github/workflows/c-std.yml",
+        "adler32.c"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zlib-contributor_start-a8512dad22",
+      "required_evidence_paths": [
+        "README",
+        "contrib/blast/blast-test.c",
+        ".github/workflows/c-std.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zlib-implementation_contract-fd2fd8bf8d",
+      "required_evidence_paths": [
+        "compress.c",
+        "contrib/blast/blast-test.c",
+        "CMakeLists.txt"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-gson-onboarding_synthesis-2ae1e2ad21",
+      "required_evidence_paths": [
+        "README.md",
+        "extras/pom.xml",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-gson-ambiguous_action_location-25562f7483",
+      "required_evidence_paths": [
+        "gson/src/main/java/module-info.java",
+        "gson/src/main/java/com/google/gson/ExclusionStrategy.java",
+        "gson/src/test/java/com/google/gson/ExposeAnnotationExclusionStrategyTest.java"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-gson-cross_file_plan-41675107ca",
+      "required_evidence_paths": [
+        "gson/src/main/java/module-info.java",
+        "gson/src/main/java/com/google/gson/ExclusionStrategy.java",
+        "gson/src/test/java/com/google/gson/ExposeAnnotationExclusionStrategyTest.java",
+        ".github/workflows/build.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-gson-diagnosis_workflow-a473179c24",
+      "required_evidence_paths": [
+        "gson/src/main/java/com/google/gson/ExclusionStrategy.java",
+        "gson/src/test/java/com/google/gson/ExposeAnnotationExclusionStrategyTest.java",
+        ".github/workflows/build.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-gson-hidden_test_strategy-3e5323c85f",
+      "required_evidence_paths": [
+        "gson/src/main/java/com/google/gson/ExclusionStrategy.java",
+        "gson/src/test/java/com/google/gson/ExposeAnnotationExclusionStrategyTest.java"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-gson-dependency_boundary-149d0f0a11",
+      "required_evidence_paths": [
+        "extras/pom.xml",
+        ".github/workflows/build.yml",
+        "gson/src/main/java/module-info.java"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-gson-contributor_start-72310bd23a",
+      "required_evidence_paths": [
+        "README.md",
+        "gson/src/test/java/com/google/gson/ExposeAnnotationExclusionStrategyTest.java",
+        ".github/workflows/build.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-gson-implementation_contract-532f7a8945",
+      "required_evidence_paths": [
+        "gson/src/main/java/com/google/gson/ExclusionStrategy.java",
+        "gson/src/test/java/com/google/gson/ExposeAnnotationExclusionStrategyTest.java",
+        "extras/pom.xml"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pluggy-onboarding_synthesis-75c87ea7a1",
+      "required_evidence_paths": [
+        "README.rst",
+        "pyproject.toml",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pluggy-ambiguous_action_location-971e50bc70",
+      "required_evidence_paths": [
+        "src/pluggy/__init__.py",
+        "src/pluggy/_callers.py",
+        "testing/conftest.py"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pluggy-cross_file_plan-1a56763ace",
+      "required_evidence_paths": [
+        "src/pluggy/__init__.py",
+        "src/pluggy/_callers.py",
+        "testing/conftest.py",
+        ".github/workflows/deploy.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pluggy-diagnosis_workflow-95b587b638",
+      "required_evidence_paths": [
+        "src/pluggy/_callers.py",
+        "testing/conftest.py",
+        ".github/workflows/deploy.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pluggy-hidden_test_strategy-c75c95af0f",
+      "required_evidence_paths": [
+        "src/pluggy/_callers.py",
+        "testing/conftest.py"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pluggy-dependency_boundary-82e6900fc4",
+      "required_evidence_paths": [
+        "pyproject.toml",
+        ".github/workflows/deploy.yml",
+        "src/pluggy/__init__.py"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pluggy-contributor_start-961904d5c5",
+      "required_evidence_paths": [
+        "README.rst",
+        "testing/conftest.py",
+        ".github/workflows/deploy.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pluggy-implementation_contract-2ea4c5563b",
+      "required_evidence_paths": [
+        "src/pluggy/_callers.py",
+        "testing/conftest.py",
+        "pyproject.toml"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-p-queue-onboarding_synthesis-183d430daf",
+      "required_evidence_paths": [
+        "readme.md",
+        "package.json",
+        "license"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-p-queue-ambiguous_action_location-168b68c13a",
+      "required_evidence_paths": [
+        "source/index.ts",
+        "source/lower-bound.ts",
+        "test/advanced.ts"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-p-queue-cross_file_plan-4090aaf13a",
+      "required_evidence_paths": [
+        "source/index.ts",
+        "source/lower-bound.ts",
+        "test/advanced.ts",
+        ".github/workflows/main.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-p-queue-diagnosis_workflow-0e8f6189dc",
+      "required_evidence_paths": [
+        "source/lower-bound.ts",
+        "test/advanced.ts",
+        ".github/workflows/main.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-p-queue-hidden_test_strategy-8f9f9e5afc",
+      "required_evidence_paths": [
+        "source/lower-bound.ts",
+        "test/advanced.ts"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-p-queue-dependency_boundary-bb0e6bf71c",
+      "required_evidence_paths": [
+        "package.json",
+        ".github/workflows/main.yml",
+        "source/index.ts"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-p-queue-contributor_start-324b5662f0",
+      "required_evidence_paths": [
+        "readme.md",
+        "test/advanced.ts",
+        ".github/workflows/main.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-p-queue-implementation_contract-a0044b0368",
+      "required_evidence_paths": [
+        "source/lower-bound.ts",
+        "test/advanced.ts",
+        "package.json"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-viper-onboarding_synthesis-2f72138e5d",
+      "required_evidence_paths": [
+        "README.md",
+        "go.mod",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-viper-ambiguous_action_location-0d77172dde",
+      "required_evidence_paths": [
+        "encoding.go",
+        "errors.go",
+        "encoding_test.go"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-viper-cross_file_plan-4bdef088d5",
+      "required_evidence_paths": [
+        "encoding.go",
+        "errors.go",
+        "encoding_test.go",
+        ".github/workflows/checks.yaml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-viper-diagnosis_workflow-d439ee06a5",
+      "required_evidence_paths": [
+        "errors.go",
+        "encoding_test.go",
+        ".github/workflows/checks.yaml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-viper-hidden_test_strategy-f85948181d",
+      "required_evidence_paths": [
+        "errors.go",
+        "encoding_test.go"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-viper-dependency_boundary-8136b556d9",
+      "required_evidence_paths": [
+        "go.mod",
+        ".github/workflows/checks.yaml",
+        "encoding.go"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-viper-contributor_start-c781d392e3",
+      "required_evidence_paths": [
+        "README.md",
+        "encoding_test.go",
+        ".github/workflows/checks.yaml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-viper-implementation_contract-840015909b",
+      "required_evidence_paths": [
+        "errors.go",
+        "encoding_test.go",
+        "go.mod"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fd-onboarding_synthesis-86b67d4a87",
+      "required_evidence_paths": [
+        "README.md",
+        "Cargo.toml",
+        "LICENSE-APACHE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fd-ambiguous_action_location-1b1a00c8fd",
+      "required_evidence_paths": [
+        "src/main.rs",
+        "src/exec/mod.rs",
+        "tests/testenv/mod.rs"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fd-cross_file_plan-3b3efc94cd",
+      "required_evidence_paths": [
+        "src/main.rs",
+        "src/exec/mod.rs",
+        "tests/testenv/mod.rs",
+        ".github/workflows/CICD.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fd-diagnosis_workflow-fd828d052a",
+      "required_evidence_paths": [
+        "src/exec/mod.rs",
+        "tests/testenv/mod.rs",
+        ".github/workflows/CICD.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fd-hidden_test_strategy-d2ed9caba8",
+      "required_evidence_paths": [
+        "src/exec/mod.rs",
+        "tests/testenv/mod.rs"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fd-dependency_boundary-4604401263",
+      "required_evidence_paths": [
+        "Cargo.toml",
+        ".github/workflows/CICD.yml",
+        "src/main.rs"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fd-contributor_start-6912b4f369",
+      "required_evidence_paths": [
+        "README.md",
+        "tests/testenv/mod.rs",
+        ".github/workflows/CICD.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fd-implementation_contract-d90b855ad1",
+      "required_evidence_paths": [
+        "src/exec/mod.rs",
+        "tests/testenv/mod.rs",
+        "Cargo.toml"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-libexpat-onboarding_synthesis-769503a9dd",
+      "required_evidence_paths": [
+        "README.md",
+        "expat/CMakeLists.txt",
+        "COPYING"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-libexpat-ambiguous_action_location-722d12a722",
+      "required_evidence_paths": [
+        "expat/lib/ascii.h",
+        "expat/lib/asciitab.h",
+        "expat/tests/acc_tests.c"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-libexpat-cross_file_plan-064ed9ef18",
+      "required_evidence_paths": [
+        "expat/lib/ascii.h",
+        "expat/lib/asciitab.h",
+        "expat/tests/acc_tests.c",
+        ".github/workflows/autotools-cmake.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-libexpat-diagnosis_workflow-a491ccf0dd",
+      "required_evidence_paths": [
+        "expat/lib/asciitab.h",
+        "expat/tests/acc_tests.c",
+        ".github/workflows/autotools-cmake.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-libexpat-hidden_test_strategy-fbd1a09767",
+      "required_evidence_paths": [
+        "expat/lib/asciitab.h",
+        "expat/tests/acc_tests.c"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-libexpat-dependency_boundary-1125004051",
+      "required_evidence_paths": [
+        "expat/CMakeLists.txt",
+        ".github/workflows/autotools-cmake.yml",
+        "expat/lib/ascii.h"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-libexpat-contributor_start-fbf004af3c",
+      "required_evidence_paths": [
+        "README.md",
+        "expat/tests/acc_tests.c",
+        ".github/workflows/autotools-cmake.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-libexpat-implementation_contract-fbb737f3bb",
+      "required_evidence_paths": [
+        "expat/lib/asciitab.h",
+        "expat/tests/acc_tests.c",
+        "expat/CMakeLists.txt"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-jsoup-onboarding_synthesis-13fc7df324",
+      "required_evidence_paths": [
+        "README.md",
+        "pom.xml",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-jsoup-ambiguous_action_location-b455dcaa27",
+      "required_evidence_paths": [
+        "src/main/java11/module-info.java",
+        "src/main/java/org/jsoup/Connection.java",
+        "src/test/java/org/jsoup/helper/HttpConnectionTest.java"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-jsoup-cross_file_plan-80557643b0",
+      "required_evidence_paths": [
+        "src/main/java11/module-info.java",
+        "src/main/java/org/jsoup/Connection.java",
+        "src/test/java/org/jsoup/helper/HttpConnectionTest.java",
+        ".github/workflows/build.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-jsoup-diagnosis_workflow-268f971085",
+      "required_evidence_paths": [
+        "src/main/java/org/jsoup/Connection.java",
+        "src/test/java/org/jsoup/helper/HttpConnectionTest.java",
+        ".github/workflows/build.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-jsoup-hidden_test_strategy-8182184d0e",
+      "required_evidence_paths": [
+        "src/main/java/org/jsoup/Connection.java",
+        "src/test/java/org/jsoup/helper/HttpConnectionTest.java"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-jsoup-dependency_boundary-f70b1289eb",
+      "required_evidence_paths": [
+        "pom.xml",
+        ".github/workflows/build.yml",
+        "src/main/java11/module-info.java"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-jsoup-contributor_start-2e7f6e776e",
+      "required_evidence_paths": [
+        "README.md",
+        "src/test/java/org/jsoup/helper/HttpConnectionTest.java",
+        ".github/workflows/build.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-jsoup-implementation_contract-d7f788c41c",
+      "required_evidence_paths": [
+        "src/main/java/org/jsoup/Connection.java",
+        "src/test/java/org/jsoup/helper/HttpConnectionTest.java",
+        "pom.xml"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-cachecontrol-onboarding_synthesis-46c53bbde4",
+      "required_evidence_paths": [
+        "README.rst",
+        "pyproject.toml",
+        "LICENSE.txt"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-cachecontrol-ambiguous_action_location-6f762d3eb2",
+      "required_evidence_paths": [
+        "cachecontrol/__init__.py",
+        "cachecontrol/caches/__init__.py",
+        "tests/__init__.py"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-cachecontrol-cross_file_plan-597c1a251c",
+      "required_evidence_paths": [
+        "cachecontrol/__init__.py",
+        "cachecontrol/caches/__init__.py",
+        "tests/__init__.py",
+        ".github/workflows/release.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-cachecontrol-diagnosis_workflow-2e7ec25dba",
+      "required_evidence_paths": [
+        "cachecontrol/caches/__init__.py",
+        "tests/__init__.py",
+        ".github/workflows/release.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-cachecontrol-hidden_test_strategy-06ad1026b3",
+      "required_evidence_paths": [
+        "cachecontrol/caches/__init__.py",
+        "tests/__init__.py"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-cachecontrol-dependency_boundary-f9a7bae0ec",
+      "required_evidence_paths": [
+        "pyproject.toml",
+        ".github/workflows/release.yml",
+        "cachecontrol/__init__.py"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-cachecontrol-contributor_start-2bbb877149",
+      "required_evidence_paths": [
+        "README.rst",
+        "tests/__init__.py",
+        ".github/workflows/release.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-cachecontrol-implementation_contract-a03267a6a1",
+      "required_evidence_paths": [
+        "cachecontrol/caches/__init__.py",
+        "tests/__init__.py",
+        "pyproject.toml"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pyjwt-onboarding_synthesis-c004439597",
+      "required_evidence_paths": [
+        "README.rst",
+        "pyproject.toml",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pyjwt-ambiguous_action_location-a5ea3b43a6",
+      "required_evidence_paths": [
+        "jwt/__init__.py",
+        "docs/conf.py",
+        "tests/__init__.py"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pyjwt-cross_file_plan-b9acfb05bb",
+      "required_evidence_paths": [
+        "jwt/__init__.py",
+        "docs/conf.py",
+        "tests/__init__.py",
+        ".github/workflows/enforce-changelog-entry.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pyjwt-diagnosis_workflow-f63c86b582",
+      "required_evidence_paths": [
+        "docs/conf.py",
+        "tests/__init__.py",
+        ".github/workflows/enforce-changelog-entry.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pyjwt-hidden_test_strategy-4c5256f48a",
+      "required_evidence_paths": [
+        "docs/conf.py",
+        "tests/__init__.py"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pyjwt-dependency_boundary-63c38a88c4",
+      "required_evidence_paths": [
+        "pyproject.toml",
+        ".github/workflows/enforce-changelog-entry.yml",
+        "jwt/__init__.py"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pyjwt-contributor_start-89b6cc5e07",
+      "required_evidence_paths": [
+        "README.rst",
+        "tests/__init__.py",
+        ".github/workflows/enforce-changelog-entry.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-pyjwt-implementation_contract-c6bf9dcfa6",
+      "required_evidence_paths": [
+        "docs/conf.py",
+        "tests/__init__.py",
+        "pyproject.toml"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-multidict-onboarding_synthesis-a9daf2bc6d",
+      "required_evidence_paths": [
+        "CHANGES/README.rst",
+        "pyproject.toml",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-multidict-ambiguous_action_location-59f957388b",
+      "required_evidence_paths": [
+        "multidict/__init__.py",
+        "setup.py",
+        "tests/conftest.py"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-multidict-cross_file_plan-5481e34dfe",
+      "required_evidence_paths": [
+        "multidict/__init__.py",
+        "setup.py",
+        "tests/conftest.py",
+        ".github/workflows/auto-merge.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-multidict-diagnosis_workflow-8bf2e7488b",
+      "required_evidence_paths": [
+        "setup.py",
+        "tests/conftest.py",
+        ".github/workflows/auto-merge.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-multidict-hidden_test_strategy-48c5d316b9",
+      "required_evidence_paths": [
+        "setup.py",
+        "tests/conftest.py"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-multidict-dependency_boundary-525e2e7f14",
+      "required_evidence_paths": [
+        "pyproject.toml",
+        ".github/workflows/auto-merge.yml",
+        "multidict/__init__.py"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-multidict-contributor_start-a9fdac22d0",
+      "required_evidence_paths": [
+        "CHANGES/README.rst",
+        "tests/conftest.py",
+        ".github/workflows/auto-merge.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-multidict-implementation_contract-e0598c1ca2",
+      "required_evidence_paths": [
+        "setup.py",
+        "tests/conftest.py",
+        "pyproject.toml"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zod-onboarding_synthesis-cb9c24ff60",
+      "required_evidence_paths": [
+        "README.md",
+        "package.json",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zod-ambiguous_action_location-bdbe020731",
+      "required_evidence_paths": [
+        "packages/resolution/src/index.ts",
+        "packages/zod/src/index.ts",
+        "packages/zod/src/v4/classic/tests/index.test.ts"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zod-cross_file_plan-b0e735bd1b",
+      "required_evidence_paths": [
+        "packages/resolution/src/index.ts",
+        "packages/zod/src/index.ts",
+        "packages/zod/src/v4/classic/tests/index.test.ts",
+        ".github/workflows/claude-code-review.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zod-diagnosis_workflow-25250704c5",
+      "required_evidence_paths": [
+        "packages/zod/src/index.ts",
+        "packages/zod/src/v4/classic/tests/index.test.ts",
+        ".github/workflows/claude-code-review.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zod-hidden_test_strategy-ae884608b1",
+      "required_evidence_paths": [
+        "packages/zod/src/index.ts",
+        "packages/zod/src/v4/classic/tests/index.test.ts"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zod-dependency_boundary-6ff5d68cd2",
+      "required_evidence_paths": [
+        "package.json",
+        ".github/workflows/claude-code-review.yml",
+        "packages/resolution/src/index.ts"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zod-contributor_start-46d99136a6",
+      "required_evidence_paths": [
+        "README.md",
+        "packages/zod/src/v4/classic/tests/index.test.ts",
+        ".github/workflows/claude-code-review.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-zod-implementation_contract-6bc0b5256f",
+      "required_evidence_paths": [
+        "packages/zod/src/index.ts",
+        "packages/zod/src/v4/classic/tests/index.test.ts",
+        "package.json"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-dotenv-onboarding_synthesis-044bb7cbb6",
+      "required_evidence_paths": [
+        "README.md",
+        "package.json",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-dotenv-ambiguous_action_location-01ee33cc83",
+      "required_evidence_paths": [
+        "lib/main.d.ts",
+        "lib/main.js",
+        "tests/test-config-import.js"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-dotenv-cross_file_plan-027eeaa2c4",
+      "required_evidence_paths": [
+        "lib/main.d.ts",
+        "lib/main.js",
+        "tests/test-config-import.js",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-dotenv-diagnosis_workflow-34a1db3405",
+      "required_evidence_paths": [
+        "lib/main.js",
+        "tests/test-config-import.js",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-dotenv-hidden_test_strategy-39b10d779c",
+      "required_evidence_paths": [
+        "lib/main.js",
+        "tests/test-config-import.js"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-dotenv-dependency_boundary-caf8e02ea3",
+      "required_evidence_paths": [
+        "package.json",
+        ".github/workflows/ci.yml",
+        "lib/main.d.ts"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-dotenv-contributor_start-54b4a3ef50",
+      "required_evidence_paths": [
+        "README.md",
+        "tests/test-config-import.js",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-dotenv-implementation_contract-dd46aea671",
+      "required_evidence_paths": [
+        "lib/main.js",
+        "tests/test-config-import.js",
+        "package.json"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-axios-onboarding_synthesis-53348a0f1a",
+      "required_evidence_paths": [
+        "README.md",
+        "docs/package.json",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-axios-ambiguous_action_location-2506b7d9da",
+      "required_evidence_paths": [
+        "lib/defaults/index.js",
+        "lib/platform/index.js",
+        "tests/module/esm/tests/helpers/esm-index.ts"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-axios-cross_file_plan-719a6cbea2",
+      "required_evidence_paths": [
+        "lib/defaults/index.js",
+        "lib/platform/index.js",
+        "tests/module/esm/tests/helpers/esm-index.ts",
+        ".github/workflows/bundle-size.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-axios-diagnosis_workflow-f410d9727e",
+      "required_evidence_paths": [
+        "lib/platform/index.js",
+        "tests/module/esm/tests/helpers/esm-index.ts",
+        ".github/workflows/bundle-size.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-axios-hidden_test_strategy-16a4402eb3",
+      "required_evidence_paths": [
+        "lib/platform/index.js",
+        "tests/module/esm/tests/helpers/esm-index.ts"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-axios-dependency_boundary-ec14fcc337",
+      "required_evidence_paths": [
+        "docs/package.json",
+        ".github/workflows/bundle-size.yml",
+        "lib/defaults/index.js"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-axios-contributor_start-b091e292a3",
+      "required_evidence_paths": [
+        "README.md",
+        "tests/module/esm/tests/helpers/esm-index.ts",
+        ".github/workflows/bundle-size.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-axios-implementation_contract-a737005059",
+      "required_evidence_paths": [
+        "lib/platform/index.js",
+        "tests/module/esm/tests/helpers/esm-index.ts",
+        "docs/package.json"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-lipgloss-onboarding_synthesis-eb639c6867",
+      "required_evidence_paths": [
+        "README.md",
+        "examples/go.mod",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-lipgloss-ambiguous_action_location-c077774757",
+      "required_evidence_paths": [
+        "align.go",
+        "ansi_unix.go",
+        "align_test.go"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-lipgloss-cross_file_plan-54f25deba0",
+      "required_evidence_paths": [
+        "align.go",
+        "ansi_unix.go",
+        "align_test.go",
+        ".github/workflows/build.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-lipgloss-diagnosis_workflow-9f38dd9ee8",
+      "required_evidence_paths": [
+        "ansi_unix.go",
+        "align_test.go",
+        ".github/workflows/build.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-lipgloss-hidden_test_strategy-949fc0bb65",
+      "required_evidence_paths": [
+        "ansi_unix.go",
+        "align_test.go"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-lipgloss-dependency_boundary-515927f096",
+      "required_evidence_paths": [
+        "examples/go.mod",
+        ".github/workflows/build.yml",
+        "align.go"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-lipgloss-contributor_start-6edd2b566c",
+      "required_evidence_paths": [
+        "README.md",
+        "align_test.go",
+        ".github/workflows/build.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-lipgloss-implementation_contract-a22d1c44ce",
+      "required_evidence_paths": [
+        "ansi_unix.go",
+        "align_test.go",
+        "examples/go.mod"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-testify-onboarding_synthesis-c232b32232",
+      "required_evidence_paths": [
+        "README.md",
+        "_codegen/go.mod",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-testify-ambiguous_action_location-b7899e2f26",
+      "required_evidence_paths": [
+        "_codegen/main.go",
+        "_readme-gofmt/main.go",
+        "assert/assertion_compare_test.go"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-testify-cross_file_plan-13560768b6",
+      "required_evidence_paths": [
+        "_codegen/main.go",
+        "_readme-gofmt/main.go",
+        "assert/assertion_compare_test.go",
+        ".github/workflows/main.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-testify-diagnosis_workflow-c3df516c85",
+      "required_evidence_paths": [
+        "_readme-gofmt/main.go",
+        "assert/assertion_compare_test.go",
+        ".github/workflows/main.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-testify-hidden_test_strategy-2059344b70",
+      "required_evidence_paths": [
+        "_readme-gofmt/main.go",
+        "assert/assertion_compare_test.go"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-testify-dependency_boundary-94153902c7",
+      "required_evidence_paths": [
+        "_codegen/go.mod",
+        ".github/workflows/main.yml",
+        "_codegen/main.go"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-testify-contributor_start-149a019234",
+      "required_evidence_paths": [
+        "README.md",
+        "assert/assertion_compare_test.go",
+        ".github/workflows/main.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-testify-implementation_contract-494b30809f",
+      "required_evidence_paths": [
+        "_readme-gofmt/main.go",
+        "assert/assertion_compare_test.go",
+        "_codegen/go.mod"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-bytes-onboarding_synthesis-c96b65609b",
+      "required_evidence_paths": [
+        "README.md",
+        "Cargo.toml",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-bytes-ambiguous_action_location-cd76913f44",
+      "required_evidence_paths": [
+        "src/lib.rs",
+        "src/buf/mod.rs",
+        "tests/test_buf.rs"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-bytes-cross_file_plan-f964334d87",
+      "required_evidence_paths": [
+        "src/lib.rs",
+        "src/buf/mod.rs",
+        "tests/test_buf.rs",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-bytes-diagnosis_workflow-b26daa9cda",
+      "required_evidence_paths": [
+        "src/buf/mod.rs",
+        "tests/test_buf.rs",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-bytes-hidden_test_strategy-199fc0e509",
+      "required_evidence_paths": [
+        "src/buf/mod.rs",
+        "tests/test_buf.rs"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-bytes-dependency_boundary-74b19d105c",
+      "required_evidence_paths": [
+        "Cargo.toml",
+        ".github/workflows/ci.yml",
+        "src/lib.rs"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-bytes-contributor_start-801ed21968",
+      "required_evidence_paths": [
+        "README.md",
+        "tests/test_buf.rs",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-bytes-implementation_contract-acd74e571a",
+      "required_evidence_paths": [
+        "src/buf/mod.rs",
+        "tests/test_buf.rs",
+        "Cargo.toml"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-serde-json-onboarding_synthesis-24ed7f26a1",
+      "required_evidence_paths": [
+        "README.md",
+        "Cargo.toml",
+        "LICENSE-APACHE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-serde-json-ambiguous_action_location-50068af2c0",
+      "required_evidence_paths": [
+        "src/lib.rs",
+        "src/io/mod.rs",
+        "tests/macros/mod.rs"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-serde-json-cross_file_plan-70a17b7b3a",
+      "required_evidence_paths": [
+        "src/lib.rs",
+        "src/io/mod.rs",
+        "tests/macros/mod.rs",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-serde-json-diagnosis_workflow-18ef2bb395",
+      "required_evidence_paths": [
+        "src/io/mod.rs",
+        "tests/macros/mod.rs",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-serde-json-hidden_test_strategy-3e0b01e331",
+      "required_evidence_paths": [
+        "src/io/mod.rs",
+        "tests/macros/mod.rs"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-serde-json-dependency_boundary-97f8221b77",
+      "required_evidence_paths": [
+        "Cargo.toml",
+        ".github/workflows/ci.yml",
+        "src/lib.rs"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-serde-json-contributor_start-b8d5043c45",
+      "required_evidence_paths": [
+        "README.md",
+        "tests/macros/mod.rs",
+        ".github/workflows/ci.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-serde-json-implementation_contract-48e4f5731d",
+      "required_evidence_paths": [
+        "src/io/mod.rs",
+        "tests/macros/mod.rs",
+        "Cargo.toml"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fmt-onboarding_synthesis-b925500b6b",
+      "required_evidence_paths": [
+        "README.md",
+        "support/build.gradle",
+        "LICENSE"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fmt-ambiguous_action_location-1803feb3f9",
+      "required_evidence_paths": [
+        "src/fmt-c.cc",
+        "src/fmt.cc",
+        "test/add-subdirectory-test/main.cc"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fmt-cross_file_plan-106c1d113b",
+      "required_evidence_paths": [
+        "src/fmt-c.cc",
+        "src/fmt.cc",
+        "test/add-subdirectory-test/main.cc",
+        ".github/workflows/codeql.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fmt-diagnosis_workflow-582d5fccaa",
+      "required_evidence_paths": [
+        "src/fmt.cc",
+        "test/add-subdirectory-test/main.cc",
+        ".github/workflows/codeql.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fmt-hidden_test_strategy-2d9d7acd79",
+      "required_evidence_paths": [
+        "src/fmt.cc",
+        "test/add-subdirectory-test/main.cc"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fmt-dependency_boundary-85f0de0773",
+      "required_evidence_paths": [
+        "support/build.gradle",
+        ".github/workflows/codeql.yml",
+        "src/fmt-c.cc"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fmt-contributor_start-2dd156c888",
+      "required_evidence_paths": [
+        "README.md",
+        "test/add-subdirectory-test/main.cc",
+        ".github/workflows/codeql.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-fmt-implementation_contract-1a5ccd7212",
+      "required_evidence_paths": [
+        "src/fmt.cc",
+        "test/add-subdirectory-test/main.cc",
+        "support/build.gradle"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-nlohmann-json-onboarding_synthesis-caa28b856c",
+      "required_evidence_paths": [
+        "README.md",
+        "CMakeLists.txt",
+        "LICENSE.MIT"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "project_purpose",
+        "install_procedure",
+        "license",
+        "evidence"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-nlohmann-json-ambiguous_action_location-11179894ff",
+      "required_evidence_paths": [
+        "tools/macro_builder/main.cpp",
+        "cmake/detect_libcpp_version.cpp",
+        "tests/abi/config/config.hpp"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-nlohmann-json-cross_file_plan-ecf2426916",
+      "required_evidence_paths": [
+        "tools/macro_builder/main.cpp",
+        "cmake/detect_libcpp_version.cpp",
+        "tests/abi/config/config.hpp",
+        ".github/workflows/check_amalgamation.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "affected_files",
+        "change_order",
+        "dependencies",
+        "required_tests"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-nlohmann-json-diagnosis_workflow-99acd9de95",
+      "required_evidence_paths": [
+        "cmake/detect_libcpp_version.cpp",
+        "tests/abi/config/config.hpp",
+        ".github/workflows/check_amalgamation.yml"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "root_cause_hypothesis",
+        "rank",
+        "evidence",
+        "falsifier"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-nlohmann-json-hidden_test_strategy-9fce0bf420",
+      "required_evidence_paths": [
+        "cmake/detect_libcpp_version.cpp",
+        "tests/abi/config/config.hpp"
+      ],
+      "expected_outcome": "REPORT_ONLY",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-nlohmann-json-dependency_boundary-bf8f59cbf1",
+      "required_evidence_paths": [
+        "CMakeLists.txt",
+        ".github/workflows/check_amalgamation.yml",
+        "tools/macro_builder/main.cpp"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-nlohmann-json-contributor_start-01018130a2",
+      "required_evidence_paths": [
+        "README.md",
+        "tests/abi/config/config.hpp",
+        ".github/workflows/check_amalgamation.yml"
+      ],
+      "expected_outcome": "ANSWER",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-repo-nlohmann-json-implementation_contract-e81012690b",
+      "required_evidence_paths": [
+        "cmake/detect_libcpp_version.cpp",
+        "tests/abi/config/config.hpp",
+        "CMakeLists.txt"
+      ],
+      "expected_outcome": "PATCH_PROPOSAL",
+      "expected_components": [
+        "evidence",
+        "bounded_action",
+        "uncertainty"
+      ],
+      "behavior_oracle": "NOT_APPLICABLE_READ_ONLY_TASK"
+    },
+    {
+      "task_id": "g4-dev-patch-01-clamp-upper-22a960150c",
+      "exact_relevant_file": "src/clamp-upper.mjs",
+      "exact_relevant_symbol": "clamp",
+      "root_cause": "the implementation applies only the lower bound",
+      "behavioral_requirement": "return min for values below min, max for values above max, otherwise value",
+      "fixed_source_sha256": "f8423c430bf2694c565429257c78fd6df1428b8858ca41623b11aacc07af10c2",
+      "reference_fixed_source": "export function clamp(value, min, max) { return Math.min(max, Math.max(min, value)); }\n",
+      "hidden_files": [
+        {
+          "path": "test/clamp-upper.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { clamp } from '../src/clamp-upper.mjs';\ntest('hidden behavior',()=>{ assert.equal(clamp(-2, 0, 5), 0); assert.equal(clamp(5, 0, 5), 5); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/clamp-upper.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-02-median-even-c9e43e600c",
+      "exact_relevant_file": "src/median-even.mjs",
+      "exact_relevant_symbol": "median",
+      "root_cause": "even-length inputs select the upper middle element instead of averaging both middle elements",
+      "behavioral_requirement": "odd median is middle; even median is average of two middle values; do not mutate input",
+      "fixed_source_sha256": "2f154b86fc19a9515582bdb53a5dcdcb38facdbbc73cabd8036c31c08b89c9d4",
+      "reference_fixed_source": "export function median(values) { const v=[...values].sort((a,b)=>a-b); const m=Math.floor(v.length/2); return v.length%2 ? v[m] : (v[m-1]+v[m])/2; }\n",
+      "hidden_files": [
+        {
+          "path": "test/median-even.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { median } from '../src/median-even.mjs';\ntest('hidden behavior',()=>{ const x=[9,1]; assert.equal(median(x),5); assert.deepEqual(x,[9,1]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/median-even.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-03-stable-unique-7f2ba69a32",
+      "exact_relevant_file": "src/stable-unique.mjs",
+      "exact_relevant_symbol": "unique",
+      "root_cause": "an unnecessary sort destroys first-occurrence order",
+      "behavioral_requirement": "deduplicate using SameValueZero semantics while retaining encounter order",
+      "fixed_source_sha256": "3bf0213944897e135f69dc7b353cecd9e1ac288427607fe172c4d823d027c5f6",
+      "reference_fixed_source": "export function unique(values) { return [...new Set(values)]; }\n",
+      "hidden_files": [
+        {
+          "path": "test/stable-unique.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { unique } from '../src/stable-unique.mjs';\ntest('hidden behavior',()=>{ assert.deepEqual(unique([3,1,3,2]), [3,1,2]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/stable-unique.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-04-chunk-tail-f788b68398",
+      "exact_relevant_file": "src/chunk-tail.mjs",
+      "exact_relevant_symbol": "chunk",
+      "root_cause": "the loop excludes a partial tail and accepts an invalid step",
+      "behavioral_requirement": "partition all items; final group may be short; positive integer size required",
+      "fixed_source_sha256": "1048c09a4e7b998f9f9d893e35a2e1fad9e950a98b9f159cfbd90df6b7145639",
+      "reference_fixed_source": "export function chunk(values,size){ if(!Number.isInteger(size)||size<=0) throw new RangeError('size'); const out=[]; for(let i=0;i<values.length;i+=size) out.push(values.slice(i,i+size)); return out; }\n",
+      "hidden_files": [
+        {
+          "path": "test/chunk-tail.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { chunk } from '../src/chunk-tail.mjs';\ntest('hidden behavior',()=>{ assert.throws(()=>chunk([1],0),RangeError); assert.deepEqual(chunk([],2),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/chunk-tail.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-05-palindrome-normalize-88242a5ad0",
+      "exact_relevant_file": "src/palindrome-normalize.mjs",
+      "exact_relevant_symbol": "isPalindrome",
+      "root_cause": "comparison uses raw text without normalization",
+      "behavioral_requirement": "compare lowercase ASCII alphanumeric characters only",
+      "fixed_source_sha256": "615100916d6e6633c093694c81cfeab27bd77f212636e16ad94eef9621e0b675",
+      "reference_fixed_source": "export function isPalindrome(text){ const value=text.toLowerCase().replace(/[^a-z0-9]/g,''); return value === [...value].reverse().join(''); }\n",
+      "hidden_files": [
+        {
+          "path": "test/palindrome-normalize.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { isPalindrome } from '../src/palindrome-normalize.mjs';\ntest('hidden behavior',()=>{ assert.equal(isPalindrome('A man, a plan, a canal: Panama!'),true); assert.equal(isPalindrome('codex'),false); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/palindrome-normalize.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-06-parse-port-ad5ac0888e",
+      "exact_relevant_file": "src/parse-port.mjs",
+      "exact_relevant_symbol": "parsePort",
+      "root_cause": "parseInt accepts partial strings and no range check exists",
+      "behavioral_requirement": "return integer 1..65535 for digits-only strings, otherwise null",
+      "fixed_source_sha256": "ad87326648a60c80560b900a059a40f58bfc43dd36d5323c0d7cfd4ab157ba3c",
+      "reference_fixed_source": "export function parsePort(value){ if(!/^[0-9]+$/.test(value)) return null; const n=Number(value); return n>=1&&n<=65535 ? n : null; }\n",
+      "hidden_files": [
+        {
+          "path": "test/parse-port.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parsePort } from '../src/parse-port.mjs';\ntest('hidden behavior',()=>{ assert.equal(parsePort('0'),null); assert.equal(parsePort('65536'),null); assert.equal(parsePort('443'),443); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-port.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-07-retry-delay-f28cd7bb82",
+      "exact_relevant_file": "src/retry-delay.mjs",
+      "exact_relevant_symbol": "retryDelay",
+      "root_cause": "delay is linear and returns zero for the first attempt",
+      "behavioral_requirement": "min(cap, base times two to the zero-based attempt)",
+      "fixed_source_sha256": "404b0721f4a687c8c5e2544a2c57f860bcc6aa62639985022564a52441791366",
+      "reference_fixed_source": "export function retryDelay(attempt,base,cap){ return Math.min(cap, base*(2**attempt)); }\n",
+      "hidden_files": [
+        {
+          "path": "test/retry-delay.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { retryDelay } from '../src/retry-delay.mjs';\ntest('hidden behavior',()=>{ assert.equal(retryDelay(5,100,1000),1000); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/retry-delay.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-08-join-url-3f1e897502",
+      "exact_relevant_file": "src/join-url.mjs",
+      "exact_relevant_symbol": "joinUrl",
+      "root_cause": "global slash collapsing corrupts the URL scheme and does not isolate the join boundary",
+      "behavioral_requirement": "preserve scheme and normalize only trailing/leading boundary slashes",
+      "fixed_source_sha256": "df11f92a58f77e6047b2a23e8e60b65cfd293cd4b61da7b0f7c2f042fb664412",
+      "reference_fixed_source": "export function joinUrl(base,part){ return `${base.replace(/\\/+$/,'')}/${part.replace(/^\\/+/,'')}`; }\n",
+      "hidden_files": [
+        {
+          "path": "test/join-url.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { joinUrl } from '../src/join-url.mjs';\ntest('hidden behavior',()=>{ assert.equal(joinUrl('http://x.test','b'),'http://x.test/b'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/join-url.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-09-escape-regexp-28050a5150",
+      "exact_relevant_file": "src/escape-regexp.mjs",
+      "exact_relevant_symbol": "escapeRegExp",
+      "root_cause": "the character class omits several regex metacharacters",
+      "behavioral_requirement": "escape . * + ? ^ $ { } ( ) | [ ] and backslash",
+      "fixed_source_sha256": "9cd1122d84015f93885888b00991c4ae1125c37f86d819313e6b501571a5a832",
+      "reference_fixed_source": "export function escapeRegExp(value){ return value.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\$&'); }\n",
+      "hidden_files": [
+        {
+          "path": "test/escape-regexp.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { escapeRegExp } from '../src/escape-regexp.mjs';\ntest('hidden behavior',()=>{ assert.equal(new RegExp(`^${escapeRegExp('[a](b)?')}$`).test('[a](b)?'),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/escape-regexp.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-10-group-by-08119c6a3c",
+      "exact_relevant_file": "src/group-by.mjs",
+      "exact_relevant_symbol": "groupBy",
+      "root_cause": "each assignment overwrites the existing group",
+      "behavioral_requirement": "append values to groups in encounter order",
+      "fixed_source_sha256": "b94eeabe5fb31c401856bbcf3da40d9f3fbe94ee6ddd9ad32bb87c81df3d45ed",
+      "reference_fixed_source": "export function groupBy(values,key){ const out={}; for(const value of values) (out[key(value)]??=[]).push(value); return out; }\n",
+      "hidden_files": [
+        {
+          "path": "test/group-by.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { groupBy } from '../src/group-by.mjs';\ntest('hidden behavior',()=>{ assert.deepEqual(groupBy([],x=>x),{}); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/group-by.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-11-inclusive-range-17077d5120",
+      "exact_relevant_file": "src/inclusive-range.mjs",
+      "exact_relevant_symbol": "sumRange",
+      "root_cause": "the loop excludes the inclusive endpoint",
+      "behavioral_requirement": "sum start through end inclusive when start <= end",
+      "fixed_source_sha256": "eab7da64a262b1f5912b22349ad293914e6236ec26d8da535a41e20e5f2b074b",
+      "reference_fixed_source": "export function sumRange(start,end){ let sum=0; for(let i=start;i<=end;i++) sum+=i; return sum; }\n",
+      "hidden_files": [
+        {
+          "path": "test/inclusive-range.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { sumRange } from '../src/inclusive-range.mjs';\ntest('hidden behavior',()=>{ assert.equal(sumRange(4,4),4); assert.equal(sumRange(5,3),0); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/inclusive-range.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-12-truncate-ellipsis-cc04bce5cc",
+      "exact_relevant_file": "src/truncate-ellipsis.mjs",
+      "exact_relevant_symbol": "truncate",
+      "root_cause": "ellipsis is appended after taking the full width",
+      "behavioral_requirement": "result length never exceeds width; ellipsis occupies one character",
+      "fixed_source_sha256": "c45f8dd63d995d54a9e671ef90a2b70bfaf443ea99a136622da28e6339b08fdf",
+      "reference_fixed_source": "export function truncate(text,width){ if(text.length<=width) return text; if(width<=0) return ''; if(width===1) return '…'; return text.slice(0,width-1)+'…'; }\n",
+      "hidden_files": [
+        {
+          "path": "test/truncate-ellipsis.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { truncate } from '../src/truncate-ellipsis.mjs';\ntest('hidden behavior',()=>{ assert.equal(truncate('abc',3),'abc'); assert.equal(truncate('abc',1),'…'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/truncate-ellipsis.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-13-normalize-path-eb5b6f6f30",
+      "exact_relevant_file": "src/normalize-path.mjs",
+      "exact_relevant_symbol": "normalizePath",
+      "root_cause": "filtering empty segments discards whether the path was rooted",
+      "behavioral_requirement": "collapse repeated separators and preserve leading root state",
+      "fixed_source_sha256": "7b14a46f78166fe2ec7c93c8770d1006888301a645107e8091e1bf9c40edefe5",
+      "reference_fixed_source": "export function normalizePath(value){ const rooted=value.startsWith('/'); const body=value.split('/').filter(Boolean).join('/'); return rooted ? '/'+body : body; }\n",
+      "hidden_files": [
+        {
+          "path": "test/normalize-path.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizePath } from '../src/normalize-path.mjs';\ntest('hidden behavior',()=>{ assert.equal(normalizePath('a///b'),'a/b'); assert.equal(normalizePath('/'),'/'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/normalize-path.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-14-parse-bool-2c0579db7d",
+      "exact_relevant_file": "src/parse-bool.mjs",
+      "exact_relevant_symbol": "parseBool",
+      "root_cause": "string truthiness makes every non-empty value true",
+      "behavioral_requirement": "true/false case-insensitive only; invalid values yield null",
+      "fixed_source_sha256": "2a3bacc7ab01c96cdb82b927af27b9617389699c779d14054c65dc8122f64cc2",
+      "reference_fixed_source": "export function parseBool(value){ const v=value.toLowerCase(); return v==='true' ? true : v==='false' ? false : null; }\n",
+      "hidden_files": [
+        {
+          "path": "test/parse-bool.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseBool } from '../src/parse-bool.mjs';\ntest('hidden behavior',()=>{ assert.equal(parseBool('0'),null); assert.equal(parseBool(''),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-bool.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-15-format-bytes-a6c8de8df9",
+      "exact_relevant_file": "src/format-bytes.mjs",
+      "exact_relevant_symbol": "formatBytes",
+      "root_cause": "the implementation always uses decimal KB and mishandles sub-unit values",
+      "behavioral_requirement": "bytes below 1024 use B; otherwise binary KiB rounded to one decimal",
+      "fixed_source_sha256": "d226b5bb4ec0d6bef5c7de531b4f19c2f60032150c91b5e5dd20bef9565649d0",
+      "reference_fixed_source": "export function formatBytes(n){ if(n<1024) return `${n} B`; const value=n/1024; return `${Number(value.toFixed(1))} KiB`; }\n",
+      "hidden_files": [
+        {
+          "path": "test/format-bytes.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { formatBytes } from '../src/format-bytes.mjs';\ntest('hidden behavior',()=>{ assert.equal(formatBytes(512),'512 B'); assert.equal(formatBytes(1536),'1.5 KiB'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/format-bytes.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-16-intersection-multiplicity-faf884c676",
+      "exact_relevant_file": "src/intersection-multiplicity.mjs",
+      "exact_relevant_symbol": "intersection",
+      "root_cause": "filter preserves duplicate members from the left input",
+      "behavioral_requirement": "unique intersection in first-left-occurrence order",
+      "fixed_source_sha256": "b02cd5dc256f6c2553aae2280ec559d93fe2c1c83dab92743d596a336f154555",
+      "reference_fixed_source": "export function intersection(left,right){ const r=new Set(right); return [...new Set(left)].filter(x=>r.has(x)); }\n",
+      "hidden_files": [
+        {
+          "path": "test/intersection-multiplicity.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { intersection } from '../src/intersection-multiplicity.mjs';\ntest('hidden behavior',()=>{ assert.deepEqual(intersection([3,2,1],[2,3]),[3,2]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/intersection-multiplicity.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-17-decode-query-49c4ce2d23",
+      "exact_relevant_file": "src/decode-query.mjs",
+      "exact_relevant_symbol": "decodeQuery",
+      "root_cause": "application/x-www-form-urlencoded plus-space semantics are omitted",
+      "behavioral_requirement": "replace plus with space, then percent-decode",
+      "fixed_source_sha256": "5244ffc88815b7230d72b2d7ee6c08adf6fba32842e5da3cc0495e037bea5132",
+      "reference_fixed_source": "export function decodeQuery(value){ return decodeURIComponent(value.replace(/\\+/g,' ')); }\n",
+      "hidden_files": [
+        {
+          "path": "test/decode-query.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { decodeQuery } from '../src/decode-query.mjs';\ntest('hidden behavior',()=>{ assert.equal(decodeQuery('a%2Bb'),'a+b'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/decode-query.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-18-title-case-7d5fa73699",
+      "exact_relevant_file": "src/title-case.mjs",
+      "exact_relevant_symbol": "titleCase",
+      "root_cause": "literal-space splitting creates empty words and preserves inconsistent casing",
+      "behavioral_requirement": "trim, split all whitespace, capitalize first and lowercase remainder",
+      "fixed_source_sha256": "148738ea70f9ae1e5ab4178953fada314b4a91e1afd5153ab21e453ca414d325",
+      "reference_fixed_source": "export function titleCase(value){ return value.trim().split(/\\s+/).filter(Boolean).map(x=>x[0].toUpperCase()+x.slice(1).toLowerCase()).join(' '); }\n",
+      "hidden_files": [
+        {
+          "path": "test/title-case.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { titleCase } from '../src/title-case.mjs';\ntest('hidden behavior',()=>{ assert.equal(titleCase('  two\\twords '),'Two Words'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/title-case.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-19-safe-divide-adb4cec2f5",
+      "exact_relevant_file": "src/safe-divide.mjs",
+      "exact_relevant_symbol": "safeDivide",
+      "root_cause": "truthiness rejects a valid zero numerator",
+      "behavioral_requirement": "only a zero denominator is invalid",
+      "fixed_source_sha256": "2b4fe7faaa642087c2ecb5a8ebd02dd883eb6adf5e144874e96161c4dcc9ae67",
+      "reference_fixed_source": "export function safeDivide(a,b){ return b===0 ? null : a/b; }\n",
+      "hidden_files": [
+        {
+          "path": "test/safe-divide.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { safeDivide } from '../src/safe-divide.mjs';\ntest('hidden behavior',()=>{ assert.equal(safeDivide(-6,3),-2); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/safe-divide.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-20-rotate-array-dad22ed2bf",
+      "exact_relevant_file": "src/rotate-array.mjs",
+      "exact_relevant_symbol": "rotate",
+      "root_cause": "distance is not normalized and empty/negative cases are mishandled",
+      "behavioral_requirement": "normalize integer distance modulo length; negative means left; do not mutate",
+      "fixed_source_sha256": "34c37662110ad8ee2c14a3d1fc4c4a6e2999ab2d7330530b95e51bb2a0161417",
+      "reference_fixed_source": "export function rotate(values,n){ if(!values.length) return []; const k=((n%values.length)+values.length)%values.length; return k===0 ? [...values] : values.slice(-k).concat(values.slice(0,-k)); }\n",
+      "hidden_files": [
+        {
+          "path": "test/rotate-array.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rotate } from '../src/rotate-array.mjs';\ntest('hidden behavior',()=>{ const x=[1,2,3]; assert.deepEqual(rotate(x,-1),[2,3,1]); assert.deepEqual(x,[1,2,3]); assert.deepEqual(rotate([],2),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/rotate-array.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-21-binary-search-82bb53abb6",
+      "exact_relevant_file": "src/binary-search.mjs",
+      "exact_relevant_symbol": "binarySearch",
+      "root_cause": "lower-bound loop dereferences an empty array and obscures exact-match termination",
+      "behavioral_requirement": "standard exact binary search with inclusive bounds",
+      "fixed_source_sha256": "0b7a339c99de7c51e1276081d9f4678b603b3466bf906adf7dd585d57e90fdf5",
+      "reference_fixed_source": "export function binarySearch(values,target){ let lo=0,hi=values.length-1; while(lo<=hi){ const m=(lo+hi)>>1; if(values[m]===target)return m; if(values[m]<target)lo=m+1;else hi=m-1; } return -1; }\n",
+      "hidden_files": [
+        {
+          "path": "test/binary-search.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { binarySearch } from '../src/binary-search.mjs';\ntest('hidden behavior',()=>{ assert.equal(binarySearch([],1),-1); assert.equal(binarySearch([2],2),0); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/binary-search.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-22-merge-headers-a00d816d2c",
+      "exact_relevant_file": "src/merge-headers.mjs",
+      "exact_relevant_symbol": "mergeHeaders",
+      "root_cause": "object spread treats header names as case-sensitive",
+      "behavioral_requirement": "later case-insensitive key wins and supplies retained casing",
+      "fixed_source_sha256": "b3ad42c8697824d5821cc7f3faf8c25245d65ca0e7534214caf2845b64191877",
+      "reference_fixed_source": "export function mergeHeaders(left,right){ const out={}; for(const [k,v] of [...Object.entries(left),...Object.entries(right)]){ const prior=Object.keys(out).find(x=>x.toLowerCase()===k.toLowerCase()); if(prior) delete out[prior]; out[k]=v; } return out; }\n",
+      "hidden_files": [
+        {
+          "path": "test/merge-headers.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { mergeHeaders } from '../src/merge-headers.mjs';\ntest('hidden behavior',()=>{ assert.deepEqual(mergeHeaders({Accept:'x'},{Other:'y'}),{Accept:'x',Other:'y'}); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/merge-headers.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-23-min-max-0549fce5c4",
+      "exact_relevant_file": "src/min-max.mjs",
+      "exact_relevant_symbol": "minMax",
+      "root_cause": "zero is injected into maximum calculation",
+      "behavioral_requirement": "extrema come only from inputs; empty yields null",
+      "fixed_source_sha256": "29c38913e10a8c849cd50287bba30c0af52c186508cc19c75c2c2cc5a2283f96",
+      "reference_fixed_source": "export function minMax(values){ if(!values.length)return null; return {min:Math.min(...values),max:Math.max(...values)}; }\n",
+      "hidden_files": [
+        {
+          "path": "test/min-max.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { minMax } from '../src/min-max.mjs';\ntest('hidden behavior',()=>{ assert.equal(minMax([]),null); assert.deepEqual(minMax([3]),{min:3,max:3}); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/min-max.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-24-count-words-b7f579a19d",
+      "exact_relevant_file": "src/count-words.mjs",
+      "exact_relevant_symbol": "countWords",
+      "root_cause": "literal-space splitting counts empty tokens and ignores other whitespace",
+      "behavioral_requirement": "trim and count non-empty runs separated by any whitespace",
+      "fixed_source_sha256": "b2f21be797ac22c73ee8150b7fdc404a56994928f39b29f3531a4b3bf75c61ea",
+      "reference_fixed_source": "export function countWords(text){ const value=text.trim(); return value ? value.split(/\\s+/).length : 0; }\n",
+      "hidden_files": [
+        {
+          "path": "test/count-words.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { countWords } from '../src/count-words.mjs';\ntest('hidden behavior',()=>{ assert.equal(countWords('   '),0); assert.equal(countWords('one'),1); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/count-words.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "g4-dev-patch-25-has-own-a492b62895",
+      "exact_relevant_file": "src/has-own.mjs",
+      "exact_relevant_symbol": "hasOwn",
+      "root_cause": "calling an instance method is unsafe when shadowed or absent",
+      "behavioral_requirement": "use the intrinsic hasOwnProperty with call",
+      "fixed_source_sha256": "88042e5f070846294e2c50503590455d8c17cc32a92c4670a4458e2368deb585",
+      "reference_fixed_source": "export function hasOwn(value,key){ return Object.prototype.hasOwnProperty.call(value,key); }\n",
+      "hidden_files": [
+        {
+          "path": "test/has-own.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { hasOwn } from '../src/has-own.mjs';\ntest('hidden behavior',()=>{ assert.equal(hasOwn({hasOwnProperty:false,a:1},'a'),true); assert.equal(hasOwn(Object.create({a:1}),'a'),false); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/has-own.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ]
+    }
+  ],
+  "oraclePayloadSha256": "a23b1e036bc811c2c8e7863348515c7342f382fd188cce8cb947a390288c24c4"
+}

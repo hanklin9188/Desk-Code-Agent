@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "classification": "APPEND_ONLY_PRECALL_INFRASTRUCTURE_CORRECTION",
+  "historicalRunner": {
+    "path": "scripts/run_code_formation_constraint_experiment.ts",
+    "sha256": "f2b6a46705a11f1e07439c6a20fd7c0ae6779e2d4f9d759819d86e7088fa1570",
+    "state": "SUPERSEDED_PRECALL_INFRASTRUCTURE_ONLY"
+  },
+  "correctedRunner": {
+    "path": "scripts/run_code_formation_constraint_experiment.ts",
+    "sha256": "4ab314e6429f96150e5c46b4ac88162ea2934fa56390b9ae023b501dd52d21ac"
+  },
+  "exactChange": "Resolve CONTROL from prereg.control.systemPrompt and TREATMENT from the frozen control prompt plus prereg.treatment.suffix through the shared zero-call request materializer; require corrected readiness/source closure before execution.",
+  "unchangedArtifactHashes": {
+    "preregistration": "41c24a0c8eacdbc57636e942ef0c4c78047dbc899bdaed83e83a2d421466a926",
+    "manifest": "33d8f1be7395caa50c0f2938785a8e01cde12d6ff1218ed15c9a11a7ccb98093",
+    "repositories": "e9ea68767941aa35ba0df54f539e9df4a6381305c3c274e2ff9193dce2f19ea8",
+    "oracle": "c4184b66413ce6df403b52db6b42edb0f6d8e9c20b8291160f88872d6f27bb0c"
+  },
+  "fieldAudit": {
+    "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_PREREG_FIELD_ACCESS_AUDIT.v1.json",
+    "sha256": "940559b89ec496104f0a94f28afd70c57082bb4adaa49652e14d769a6129e94a",
+    "bytes": 1354
+  },
+  "requestIntentPreflight": {
+    "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_REQUEST_INTENTS_PREFLIGHT.v1.json",
+    "sha256": "097252ecd106741925de46057eb987f05387b64ab437921d7dce0e88636ee798",
+    "bytes": 47213
+  },
+  "correctedSourceClosure": {
+    "entries": [
+      {
+        "path": "scripts/run_code_formation_constraint_experiment.ts",
+        "sha256": "4ab314e6429f96150e5c46b4ac88162ea2934fa56390b9ae023b501dd52d21ac"
+      },
+      {
+        "path": "services/code-formation-experiment/src/index.ts",
+        "sha256": "24657fd43cd703827bd54757a6e6c3fedf1d59c6fffb9eb530d88a3710a915f3"
+      },
+      {
+        "path": "services/code-formation-constraint/src/index.ts",
+        "sha256": "fb3e89e452c92b7b5e3f620cc92bc708c5bacd8b5e196e3d81d9e2c175bb5bf7"
+      },
+      {
+        "path": "services/patch-interface-runtime/src/index.ts",
+        "sha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508"
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21"
+      },
+      {
+        "path": "services/model-specialization-runtime/src/index.ts",
+        "sha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee"
+      },
+      {
+        "path": "tests/code-formation-experiment-runner.test.ts",
+        "sha256": "1082e1efd5d3c0deab296d194f1a3245d88718c673397deb4f3e62006388c9b6"
+      }
+    ]
+  }
+}

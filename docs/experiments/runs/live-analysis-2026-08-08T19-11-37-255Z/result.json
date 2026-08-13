@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "run_id": "live-analysis-2026-08-08T19-11-37-255Z",
+  "status": "PASS",
+  "timestamp": "2026-08-08T19:11:37.255Z",
+  "model": {
+    "repository": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16"
+  },
+  "deterministic_evidence": {
+    "repository": "desk-code-agent-v2",
+    "file_count": 243,
+    "languages": [
+      {
+        "language": "md",
+        "files": 131
+      },
+      {
+        "language": "json",
+        "files": 43
+      },
+      {
+        "language": "ts",
+        "files": 29
+      },
+      {
+        "language": "yaml",
+        "files": 12
+      },
+      {
+        "language": "tsx",
+        "files": 6
+      },
+      {
+        "language": "toml",
+        "files": 3
+      },
+      {
+        "language": "rs",
+        "files": 3
+      },
+      {
+        "language": "jsonl",
+        "files": 3
+      },
+      {
+        "language": "sh",
+        "files": 3
+      },
+      {
+        "language": "other",
+        "files": 2
+      },
+      {
+        "language": "html",
+        "files": 2
+      },
+      {
+        "language": "py",
+        "files": 2
+      },
+      {
+        "language": "tsbuildinfo",
+        "files": 2
+      },
+      {
+        "language": "css",
+        "files": 1
+      },
+      {
+        "language": "lock",
+        "files": 1
+      }
+    ],
+    "manifests": [
+      "apps/desktop/src-tauri/Cargo.toml",
+      "package.json",
+      "runtime/model/pyproject.toml"
+    ],
+    "commands": [
+      "npm test",
+      "npm run typecheck",
+      "npm run build"
+    ]
+  },
+  "model_inference": {
+    "purpose": "To create a structured JSON output describing the repository, architecture, reading order, and claims based on the provided untrusted evidence.",
+    "architectureSummary": "The Desk Code Agent v2 is a local multi-agent software engineering workspace operating around six maturity levels from model/runtime locks (M2) to skill runtime validation (M6). It relies on scalar skills (39 total) and maintains a design pack of 169 files across Agent and Bash layers.",
+    "readingOrder": [
+      "AGENTS.md",
+      "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "CONTEXT.md",
+      "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "GITHUB_SYNC_POLICY.md"
+    ],
+    "claims": [
+      {
+        "text": "The repo contains 243 files across 14 languages with 131 markdown files.",
+        "evidenceIds": [
+          "evidence_aae52db423"
+        ],
+        "confidence": 0.95,
+        "source": "MODEL_INFERENCE"
+      },
+      {
+        "text": "The project maintains 39 skills split between development (11) and runtime (28).",
+        "evidenceIds": [
+          "evidence_e8441d973e"
+        ],
+        "confidence": 0.9,
+        "source": "MODEL_INFERENCE"
+      },
+      {
+        "text": "Successive maturity stages are defined from model/runtime lock (M2) to skill runtime (M6).",
+        "evidenceIds": [
+          "evidence_0d73b43389"
+        ],
+        "confidence": 0.92,
+        "source": "MODEL_INFERENCE"
+      }
+    ]
+  },
+  "evidence_ledger": [
+    {
+      "id": "evidence_aae52db423",
+      "path": "AGENTS.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "d0538d9dc4105dae852e48edceda55b94ccd48ad2c3585ffed394809b538551f",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence_a76683715d",
+      "path": "CONTEXT.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "9775d57677541db0e97aa01558433f8113c74ad5c9bbfbcbe0a7284b472651bb",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence_54cf4aaa99",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence_b1067888ee",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 1,
+      "endLine": 3,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence_c0f0139979",
+      "path": "AGENTS.md",
+      "startLine": 40,
+      "endLine": 44,
+      "hash": "d0538d9dc4105dae852e48edceda55b94ccd48ad2c3585ffed394809b538551f",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence_c14517e5e2",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 119,
+      "endLine": 123,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence_69c67cd7f4",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 119,
+      "endLine": 123,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence_0d73b43389",
+      "path": "GITHUB_SYNC_POLICY.md",
+      "startLine": 73,
+      "endLine": 77,
+      "hash": "46e8c2f5f73fed1a031451e6236c01f1d28d5656219d411a2679b64aebf658e3",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence_809de4ef82",
+      "path": "DESK_CODE_AGENT_MASTER_DESIGN.md",
+      "startLine": 1535,
+      "endLine": 1539,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence_942822fe67",
+      "path": "DESK_CODE_AGENT_V2_MASTER_DESIGN.md",
+      "startLine": 1535,
+      "endLine": 1539,
+      "hash": "3de4312273b0cdb14409a8752ef53cea5d9a7694d640b37b42302e3f38a78484",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence_722de175d1",
+      "path": "GITHUB_SYNC_POLICY.md",
+      "startLine": 50,
+      "endLine": 54,
+      "hash": "46e8c2f5f73fed1a031451e6236c01f1d28d5656219d411a2679b64aebf658e3",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence_e8441d973e",
+      "path": "MANIFEST.json",
+      "startLine": 26,
+      "endLine": 30,
+      "hash": "023336a1bd48236c99bc323099aeac91ea2371cec0445a0158610fa42e033104",
+      "confidence": 0.9
+    }
+  ],
+  "validation": {
+    "claim_count": 3,
+    "cited_claim_count": 3,
+    "citation_coverage": 1,
+    "unknown_citations": 0,
+    "unsupported_claims_presented_as_deterministic": 0
+  },
+  "telemetry": {
+    "promptTokens": 2278,
+    "completionTokens": 380,
+    "latencyMs": 5810.606377
+  },
+  "privacy": {
+    "prompt_stored": false,
+    "evidence_excerpts_stored": false,
+    "api_key_stored": false
+  }
+}

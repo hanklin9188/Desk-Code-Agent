@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "reportId": "dca-semantic-failure-decomposition-final-report-v1",
+  "status": "PASS_INTERPRETATION_COMPLETE",
+  "generatedAt": "2026-08-11T19:30:44.295Z",
+  "immutableInputs": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_PREREGISTRATION.v1.json",
+      "sha256": "6851a9a2a2fd25757413f71c0b331e5899a397c1928b59259f3cc6606123ed47"
+    },
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_SESSION_A.v1.json",
+      "sha256": "368ba02473ef7baf09f7c3927b969c579c1848c8c362c2be12f27cacd36535eb"
+    },
+    "sessionB": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_SESSION_B.v1.json",
+      "sha256": "7dea90719a08855d18145530e5cc84b281ce1cc0ab7777845a8210d6a7ee88d0"
+    },
+    "priorResultsIndex": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_DECOMPOSITION_RESULTS_INDEX.v1.json",
+      "sha256": "f0f020501898aed91c64c6f2c8d8ffd71dc8ec437e975546b9fc6bdd90edb978"
+    },
+    "classificationMatrix": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_CLASSIFICATION_MATRIX.v1.json",
+      "sha256": "8d8a176212956b07fc13139f3517a1a8d8c7cad03a7ba836ccfe43ff8c0de1de"
+    },
+    "successControls": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_SUCCESS_CONTROLS.v1.json",
+      "sha256": "9e7647a0d26dbdcd795bf266f3db616fb0f828ee7ebfa16ca2ce2177aa871175"
+    },
+    "evidenceSufficiency": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_EVIDENCE_SUFFICIENCY.v1.json",
+      "sha256": "4d1bb985971349d2fc0bcd285a0f5c97e784f4862b8500c1e70dcd9e97c40079"
+    },
+    "successFailureComparison": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_SUCCESS_FAILURE_COMPARISON.v1.json",
+      "sha256": "2d0e7bea4d2557fdd472336099ed9c46d220d4a5d994a86ac178d360449d7b77"
+    },
+    "retryByCategory": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_RETRY_BY_CATEGORY.v1.json",
+      "sha256": "8030cd8914240602fbe1a0a6c0507a9a7db40a44db5fd3f56193f1f969a394e1"
+    },
+    "t14Observability": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_T14_OBSERVABILITY.v1.json",
+      "sha256": "66c0d303631044d34c74a79f6fbaaa3dfc9b7f3353482140ce2db2c1a9839cee"
+    },
+    "priorCapabilityCeiling": {
+      "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v6.json",
+      "sha256": "920700a606ccbaa6fe15476c808f11a4a0275d3870ef74f9c6a838c428aad59f"
+    }
+  },
+  "artifacts": {
+    "gateDecision": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_GATE_DECISION.v1.json",
+      "sha256": "a2466306cb619858d23078abf905c40b214730001165384591db4f8759b01a74"
+    },
+    "observabilityCeiling": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_OBSERVABILITY_CEILING.v1.json",
+      "sha256": "a8ecb303739a426ed93bbdebe71f48d15db59648c7cd3f821dd366a826071c6b"
+    },
+    "protocol": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PROTOCOL.v1.json",
+      "sha256": "8a8c5d9852eaeb05577c990b195921e44fdc4dddb235a83b816ba468eecfd643"
+    },
+    "productDecision": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_PRODUCT_DECISION.v1.json",
+      "sha256": "e022e162465ffb319b500e13a89362cfc356865e3e821f33f05a6d85d111e6c1"
+    },
+    "capabilityCeiling": {
+      "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v7.json",
+      "sha256": "36f315a0aedb7580f9469a941f0162481e131d87544b6d4d791b4df767f81b68"
+    }
+  },
+  "quantified": {
+    "failures": 66,
+    "controls": 29,
+    "total": 95,
+    "supportedSpecificPrimary": {
+      "count": 13,
+      "percent": 19.696969696969695
+    },
+    "supportedProgramSemanticT1ToT9": {
+      "count": 0,
+      "percent": 0
+    },
+    "ambiguousT14": {
+      "count": 53,
+      "percent": 80.3030303030303
+    },
+    "confidence": {
+      "HIGH": 13,
+      "MEDIUM": 0,
+      "LOW": 53
+    },
+    "evidenceSufficiencyFailures": {
+      "SUFFICIENT": 0,
+      "PARTIALLY_SUFFICIENT": 61,
+      "MISSING_REQUIRED_EVIDENCE": 5
+    },
+    "evidenceSufficiencyControls": {
+      "SUFFICIENT": 0,
+      "PARTIALLY_SUFFICIENT": 29,
+      "MISSING_REQUIRED_EVIDENCE": 0
+    },
+    "objectiveReferenceScope": {
+      "SINGLE_RANGE": 95,
+      "interpretation": "Reference repair representability only; actual model mutation scope was not persisted."
+    },
+    "reasoningHorizon": {
+      "LOCAL": {
+        "failures": 32,
+        "controls": 11,
+        "combined": 43,
+        "descriptiveSuccessPercent": 25.58139534883721
+      },
+      "CROSS_FILE": {
+        "failures": 13,
+        "controls": 7,
+        "combined": 20,
+        "descriptiveSuccessPercent": 35
+      },
+      "STATEFUL_OR_API_LEVEL": {
+        "failures": 21,
+        "controls": 11,
+        "combined": 32,
+        "descriptiveSuccessPercent": 34.375
+      }
+    },
+    "t14LimitationReasons": {
+      "RAW_EDIT_CONTENT_NOT_PERSISTED": 53,
+      "FAILURE_STAGE_NON_IDENTIFYING": 53,
+      "REQUIRED_STRUCTURED_MUTATION_METADATA_ABSENT": 0,
+      "MULTIPLE_SEMANTIC_CAUSES_EQUIVALENTLY_PLAUSIBLE": 0,
+      "OTHER_INSUFFICIENT_OBSERVABLE_EVIDENCE": 0
+    }
+  },
+  "questions": {
+    "Q1": "No. T14/LOW is 53/66 and supported T1-T9 coverage is 0/66.",
+    "Q2": "No. Retrieval is directly supported for 5/66 and G1 fails.",
+    "Q3": "No. P2 action/representation is directly supported for 2/66.",
+    "Q4": "No. Syntax/code formation is 6/66 and fails the unique-largest G4 rule.",
+    "Q5": "No. Model semantic capacity is neither conclusively dominant nor proven adequate because semantic edit evidence is unavailable.",
+    "Q6": "No single intervention among G1-G4 is supported by the available historical evidence, and semantic observability is insufficient for a more specific causal intervention."
+  },
+  "retry": {
+    "decision": "RETRY_NO_MATERIAL_GAIN",
+    "T11Recovered": 0,
+    "T12Recovered": 0,
+    "T13Recovered": 0,
+    "T14Recovered": 1,
+    "limitation": "Repeated T14 edits do not identify the repeated semantic cause."
+  },
+  "selectedNextExperiment": "PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_EXPERIMENT",
+  "selectedExperimentCount": 1,
+  "targetModelCalls": 0
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "validationId": "dca-code-formation-control-recovery-session-a-validation-v1",
+  "status": "PASS_ZERO_CALL_COMPLETE_VALIDATION",
+  "validatedAt": "2026-08-12T07:51:59+08:00",
+  "sessionA": {
+    "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_A.v1.json",
+    "sha256": "8164cd8ee020bf5dccba2e0fb458e6c2d5138db8458c8255252ca46ade2bfa9d"
+  },
+  "checks": {
+    "strictTypeScript": "PASS",
+    "projectTypecheck": "PASS",
+    "completeTests": "PASS_188_OF_188",
+    "productionBuild": "PASS",
+    "designValidation": "PASS_0_WARNINGS_0_ERRORS",
+    "artifactChecksums": "PASS",
+    "sourceClosure": "PASS",
+    "historicalLineage": "PASS",
+    "freshPopulationOverlap": "PASS_ZERO",
+    "requestIntentMaterialization": "PASS_80_OF_80",
+    "privacySecretScan": "PASS",
+    "futureLedgersEmpty": "PASS_3_OF_3",
+    "runnerZeroCallPreflight": "PASS"
+  },
+  "runtime": {
+    "targetModelCalls": 0,
+    "fimVllmStarts": 0,
+    "port8000Listeners": 0,
+    "gpuComputeProcesses": 0,
+    "rawModelOutputsPersisted": 0,
+    "rawEditBodiesPersisted": 0,
+    "L2": false
+  },
+  "commands": [
+    "npx tsc --ignoreConfig --types node --noEmit --strict --module ESNext --moduleResolution Bundler --target ES2022 --skipLibCheck scripts/freeze_code_formation_control_recovery_session_a.ts scripts/run_code_formation_control_recovery.ts services/code-formation-control-recovery/src/index.ts tests/code-formation-control-recovery.test.ts",
+    "npm run check",
+    "npm run benchmark:code-formation-recovery:validate"
+  ],
+  "sessionBStarted": false
+}

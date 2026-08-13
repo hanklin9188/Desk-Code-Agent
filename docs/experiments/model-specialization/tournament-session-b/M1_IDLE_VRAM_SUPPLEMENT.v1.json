@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "supplementId": "dca-practical-local-model-tournament-m1-idle-vram-supplement-v1",
+  "status": "PASS_NO_INFERENCE_CALLS",
+  "classification": "SESSION_B_TELEMETRY_INSTRUMENTATION_CORRECTION",
+  "completedAt": "2026-08-11T05:16:02.554Z",
+  "candidateId": "M1",
+  "reason": "M1_SMOKE_V1_SELECTED_FIRST_NONZERO_LOAD_SAMPLE_INSTEAD_OF_POST_SMOKE_IDLE_SAMPLE",
+  "modelEndpointCalls": 0,
+  "loadTimeMs": 29090.4599609375,
+  "idleVramMiBSamples": [
+    13466,
+    13466,
+    13466,
+    13466,
+    13466
+  ],
+  "idleVramMiBMedian": 13466,
+  "sourceSmoke": {
+    "path": "docs/experiments/model-specialization/tournament-session-b/M1_SMOKE.v1.json",
+    "sha256": "17ed5e3377cf478ab9097955456acfb526eb2362446e955dfbf4a969c94dfd34"
+  },
+  "protectedActions": {
+    "primaryHoldoutCalls": false,
+    "otherModelDownload": false,
+    "precisionFallback": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

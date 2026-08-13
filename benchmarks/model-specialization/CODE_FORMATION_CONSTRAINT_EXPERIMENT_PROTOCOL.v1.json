@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "protocolId": "dca-code-formation-constraint-experiment-v1",
+  "state": "PREPARED_NOT_EXECUTED",
+  "preparedAt": "2026-08-11T22:34:47.308Z",
+  "selectionEvidence": {
+    "source": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_PAIRED_OBSERVABILITY_REPORT.v3.json",
+      "sha256": "4598bb72fcdd7e03007e27efe32ec368f10220c3f097b860c2c9a1f821e34d0c",
+      "bytes": 24329
+    },
+    "dominantSupportedFamily": "T13_SYNTAX_CODE_FORMATION",
+    "count": 13,
+    "gateRule": "Select only if T13 is the unique largest primary family and exceeds every other gate-family count, and semantic interpretation cannot be reliably evaluated for those rows."
+  },
+  "hypothesis": "A deterministic syntax-aware formation constraint applied before execution reduces first-authoritative syntax/type failures without increasing wrong-file edits or semantic regressions.",
+  "independentVariable": [
+    "CURRENT_P2_MINIMAL_BASELINE",
+    "P2_MINIMAL_PLUS_DETERMINISTIC_SYNTAX_FORMATION_CONSTRAINT"
+  ],
+  "fixedVariables": [
+    "same base model and revision",
+    "same precision and serving backend",
+    "same context packaging",
+    "same retrieval",
+    "temperature zero",
+    "one physical call per task",
+    "no semantic retry",
+    "equal fresh repository-disjoint tasks"
+  ],
+  "requiredFreshPopulation": "NEW_REPOSITORY_DISJOINT_TASKS_WITH_PRESEALED_ORACLES",
+  "metrics": [
+    "strict task success",
+    "syntax/type first failures",
+    "hidden-test success",
+    "wrong-file edits",
+    "action validity",
+    "latency",
+    "throughput",
+    "peak VRAM",
+    "constraint rejection count"
+  ],
+  "gates": {
+    "syntaxFailureReductionAbsoluteMinimum": 0.15,
+    "strictSuccessNonInferiorityMargin": 0.03,
+    "wrongFileEditsMaximum": 0,
+    "safetyViolationsMaximum": 0
+  },
+  "protectedBoundaries": {
+    "executeNow": false,
+    "modelCallsNow": 0,
+    "retries": false,
+    "modelDownload": false,
+    "mutationPromotion": false,
+    "L2": false
+  },
+  "status": "AWAIT_SEPARATE_AUTHORIZATION_AND_FRESH_TASK_FREEZE"
+}

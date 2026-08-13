@@ -1,0 +1,1908 @@
+{
+  "experimentId": "m6-l1-l2-2026-08-09T01-13-06-538Z",
+  "status": "PASS",
+  "hypothesis": "Nine high-impact Runtime Skill candidates pass non-empty isolated behavior matrices and a real cross-runtime workflow without premature production promotion.",
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpuCount": 16
+  },
+  "candidateManifestHash": "132d3d66c653ed514c5be693ae998a857d917b7de082cfc65f88989d230f57a8",
+  "skillCountL0": 39,
+  "candidateCount": 9,
+  "l1": [
+    {
+      "skill_id": "R01",
+      "reason": "Task Contract is the immutable entry boundary",
+      "skillId": "R01",
+      "status": "PASS",
+      "total": 17,
+      "passed": 17,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "repeatability": 1,
+      "categoryCounts": {
+        "normal": 5,
+        "boundary": 3,
+        "failure": 4,
+        "adversarial": 3,
+        "cancellation_timeout": 1,
+        "stale_artifact": 1
+      },
+      "results": [
+        {
+          "id": "normal-0",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.4994460000000345
+        },
+        {
+          "id": "normal-1",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.03263099999998076
+        },
+        {
+          "id": "normal-2",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.01228299999996807
+        },
+        {
+          "id": "normal-3",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.008756000000005315
+        },
+        {
+          "id": "normal-4",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.05223799999998846
+        },
+        {
+          "id": "boundary-0",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.01770299999998315
+        },
+        {
+          "id": "boundary-1",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.01682099999999309
+        },
+        {
+          "id": "boundary-2",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.010048999999980879
+        },
+        {
+          "id": "failure-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0679670000000101
+        },
+        {
+          "id": "failure-1",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.04615599999999631
+        },
+        {
+          "id": "failure-2",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.019917999999961467
+        },
+        {
+          "id": "adversarial-0",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0076139999999895736
+        },
+        {
+          "id": "adversarial-1",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.003686999999956697
+        },
+        {
+          "id": "adversarial-2",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.00324599999999009
+        },
+        {
+          "id": "cancellation_timeout-0",
+          "category": "cancellation_timeout",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 37.973816
+        },
+        {
+          "id": "stale_artifact-0",
+          "category": "stale_artifact",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.30790700000000015
+        },
+        {
+          "id": "malformed-schema-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.043190999999978885
+        }
+      ],
+      "reasons": [],
+      "validOutputRate": 1,
+      "toolValidity": 1,
+      "timeoutBehavior": true,
+      "budgetCompliance": true
+    },
+    {
+      "skill_id": "R04",
+      "reason": "Feasibility Gate prevents unsafe or unbounded execution",
+      "skillId": "R04",
+      "status": "PASS",
+      "total": 17,
+      "passed": 17,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "repeatability": 1,
+      "categoryCounts": {
+        "normal": 5,
+        "boundary": 3,
+        "failure": 4,
+        "adversarial": 3,
+        "cancellation_timeout": 1,
+        "stale_artifact": 1
+      },
+      "results": [
+        {
+          "id": "normal-0",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.06627400000002126
+        },
+        {
+          "id": "normal-1",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.008244999999988067
+        },
+        {
+          "id": "normal-2",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0032659999999964384
+        },
+        {
+          "id": "normal-3",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0025739999999814245
+        },
+        {
+          "id": "normal-4",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.004157999999961248
+        },
+        {
+          "id": "boundary-0",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.005110000000001946
+        },
+        {
+          "id": "boundary-1",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0034659999999462343
+        },
+        {
+          "id": "boundary-2",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0032359999999584943
+        },
+        {
+          "id": "failure-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.006092000000023745
+        },
+        {
+          "id": "failure-1",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0027659999999514184
+        },
+        {
+          "id": "failure-2",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0024139999999874817
+        },
+        {
+          "id": "adversarial-0",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0023850000000038563
+        },
+        {
+          "id": "adversarial-1",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.002154000000018641
+        },
+        {
+          "id": "adversarial-2",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0024139999999874817
+        },
+        {
+          "id": "cancellation_timeout-0",
+          "category": "cancellation_timeout",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 36.449202999999954
+        },
+        {
+          "id": "stale_artifact-0",
+          "category": "stale_artifact",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.043632000000002336
+        },
+        {
+          "id": "malformed-schema-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.021169999999983702
+        }
+      ],
+      "reasons": [],
+      "validOutputRate": 1,
+      "toolValidity": 1,
+      "timeoutBehavior": true,
+      "budgetCompliance": true
+    },
+    {
+      "skill_id": "R08",
+      "reason": "Evidence Retrieval controls grounding quality",
+      "skillId": "R08",
+      "status": "PASS",
+      "total": 17,
+      "passed": 17,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "repeatability": 1,
+      "categoryCounts": {
+        "normal": 5,
+        "boundary": 3,
+        "failure": 4,
+        "adversarial": 3,
+        "cancellation_timeout": 1,
+        "stale_artifact": 1
+      },
+      "results": [
+        {
+          "id": "normal-0",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 8.584639000000038
+        },
+        {
+          "id": "normal-1",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 6.717248999999981
+        },
+        {
+          "id": "normal-2",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 7.561130999999989
+        },
+        {
+          "id": "normal-3",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 6.17628499999995
+        },
+        {
+          "id": "normal-4",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 7.0683819999999855
+        },
+        {
+          "id": "boundary-0",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 5.52138199999996
+        },
+        {
+          "id": "boundary-1",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 6.371632999999974
+        },
+        {
+          "id": "boundary-2",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 6.804876999999976
+        },
+        {
+          "id": "failure-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 6.337230999999974
+        },
+        {
+          "id": "failure-1",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 7.744788999999969
+        },
+        {
+          "id": "failure-2",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 6.698358999999982
+        },
+        {
+          "id": "adversarial-0",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 7.702310000000011
+        },
+        {
+          "id": "adversarial-1",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 6.460879999999975
+        },
+        {
+          "id": "adversarial-2",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 8.13273700000002
+        },
+        {
+          "id": "cancellation_timeout-0",
+          "category": "cancellation_timeout",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 34.52282100000002
+        },
+        {
+          "id": "stale_artifact-0",
+          "category": "stale_artifact",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 30.291809000000057
+        },
+        {
+          "id": "malformed-schema-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.059942999999975655
+        }
+      ],
+      "reasons": [],
+      "validOutputRate": 1,
+      "toolValidity": 1,
+      "timeoutBehavior": true,
+      "budgetCompliance": true
+    },
+    {
+      "skill_id": "R09",
+      "reason": "Context Packaging controls trust and token budgets",
+      "skillId": "R09",
+      "status": "PASS",
+      "total": 17,
+      "passed": 17,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "repeatability": 1,
+      "categoryCounts": {
+        "normal": 5,
+        "boundary": 3,
+        "failure": 4,
+        "adversarial": 3,
+        "cancellation_timeout": 1,
+        "stale_artifact": 1
+      },
+      "results": [
+        {
+          "id": "normal-0",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.2690539999999828
+        },
+        {
+          "id": "normal-1",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.016952000000060252
+        },
+        {
+          "id": "normal-2",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.05515300000001844
+        },
+        {
+          "id": "normal-3",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.05422199999998156
+        },
+        {
+          "id": "normal-4",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.011612000000013722
+        },
+        {
+          "id": "boundary-0",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.022351999999955297
+        },
+        {
+          "id": "boundary-1",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.010279999999966094
+        },
+        {
+          "id": "boundary-2",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.007633999999939078
+        },
+        {
+          "id": "failure-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.05664600000000064
+        },
+        {
+          "id": "failure-1",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.013987000000042826
+        },
+        {
+          "id": "failure-2",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.013525000000072396
+        },
+        {
+          "id": "adversarial-0",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.01555899999993926
+        },
+        {
+          "id": "adversarial-1",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.006793000000016036
+        },
+        {
+          "id": "adversarial-2",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.007362999999941167
+        },
+        {
+          "id": "cancellation_timeout-0",
+          "category": "cancellation_timeout",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 36.06161600000007
+        },
+        {
+          "id": "stale_artifact-0",
+          "category": "stale_artifact",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.2368940000000066
+        },
+        {
+          "id": "malformed-schema-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.1437989999999445
+        }
+      ],
+      "reasons": [],
+      "validOutputRate": 1,
+      "toolValidity": 1,
+      "timeoutBehavior": true,
+      "budgetCompliance": true
+    },
+    {
+      "skill_id": "R17",
+      "reason": "Bug Reproduction prevents unsupported edits",
+      "skillId": "R17",
+      "status": "PASS",
+      "total": 17,
+      "passed": 17,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "repeatability": 1,
+      "categoryCounts": {
+        "normal": 5,
+        "boundary": 3,
+        "failure": 4,
+        "adversarial": 3,
+        "cancellation_timeout": 1,
+        "stale_artifact": 1
+      },
+      "results": [
+        {
+          "id": "normal-0",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 42.17209199999991
+        },
+        {
+          "id": "normal-1",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 44.506051999999954
+        },
+        {
+          "id": "normal-2",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 40.776672000000076
+        },
+        {
+          "id": "normal-3",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 40.51038100000005
+        },
+        {
+          "id": "normal-4",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 43.13127799999995
+        },
+        {
+          "id": "boundary-0",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 35.71237499999995
+        },
+        {
+          "id": "boundary-1",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 41.30147199999999
+        },
+        {
+          "id": "boundary-2",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 42.00477799999999
+        },
+        {
+          "id": "failure-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 38.729870000000005
+        },
+        {
+          "id": "failure-1",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 37.79187399999978
+        },
+        {
+          "id": "failure-2",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 36.41161800000009
+        },
+        {
+          "id": "adversarial-0",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 36.68682199999989
+        },
+        {
+          "id": "adversarial-1",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 40.467488
+        },
+        {
+          "id": "adversarial-2",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 40.47407599999997
+        },
+        {
+          "id": "cancellation_timeout-0",
+          "category": "cancellation_timeout",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 35.91625699999986
+        },
+        {
+          "id": "stale_artifact-0",
+          "category": "stale_artifact",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 31.83722899999998
+        },
+        {
+          "id": "malformed-schema-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 32.474987000000056
+        }
+      ],
+      "reasons": [],
+      "validOutputRate": 1,
+      "toolValidity": 1,
+      "timeoutBehavior": true,
+      "budgetCompliance": true
+    },
+    {
+      "skill_id": "R18",
+      "reason": "Diagnosis Hypotheses prevent guess-first patching",
+      "skillId": "R18",
+      "status": "PASS",
+      "total": 17,
+      "passed": 17,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "repeatability": 1,
+      "categoryCounts": {
+        "normal": 5,
+        "boundary": 3,
+        "failure": 4,
+        "adversarial": 3,
+        "cancellation_timeout": 1,
+        "stale_artifact": 1
+      },
+      "results": [
+        {
+          "id": "normal-0",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.3602549999998246
+        },
+        {
+          "id": "normal-1",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.08948799999984658
+        },
+        {
+          "id": "normal-2",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.03434500000003027
+        },
+        {
+          "id": "normal-3",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.046287000000120315
+        },
+        {
+          "id": "normal-4",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.07941900000014357
+        },
+        {
+          "id": "boundary-0",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.05661600000007638
+        },
+        {
+          "id": "boundary-1",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.030205999999907363
+        },
+        {
+          "id": "boundary-2",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.009197999999969397
+        },
+        {
+          "id": "failure-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.07740499999999884
+        },
+        {
+          "id": "failure-1",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.024556000000075073
+        },
+        {
+          "id": "failure-2",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.04186899999990601
+        },
+        {
+          "id": "adversarial-0",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.09761299999991024
+        },
+        {
+          "id": "adversarial-1",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.05080499999985477
+        },
+        {
+          "id": "adversarial-2",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.035395999999991545
+        },
+        {
+          "id": "cancellation_timeout-0",
+          "category": "cancellation_timeout",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 35.750093000000106
+        },
+        {
+          "id": "stale_artifact-0",
+          "category": "stale_artifact",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.2522320000000491
+        },
+        {
+          "id": "malformed-schema-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.03918399999997746
+        }
+      ],
+      "reasons": [],
+      "validOutputRate": 1,
+      "toolValidity": 1,
+      "timeoutBehavior": true,
+      "budgetCompliance": true
+    },
+    {
+      "skill_id": "R21",
+      "reason": "Deterministic Verification owns machine truth",
+      "skillId": "R21",
+      "status": "PASS",
+      "total": 17,
+      "passed": 17,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "repeatability": 1,
+      "categoryCounts": {
+        "normal": 5,
+        "boundary": 3,
+        "failure": 4,
+        "adversarial": 3,
+        "cancellation_timeout": 1,
+        "stale_artifact": 1
+      },
+      "results": [
+        {
+          "id": "normal-0",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 34.2229420000001
+        },
+        {
+          "id": "normal-1",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 34.919306000000006
+        },
+        {
+          "id": "normal-2",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 32.70759399999997
+        },
+        {
+          "id": "normal-3",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 32.85850000000005
+        },
+        {
+          "id": "normal-4",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 33.497975
+        },
+        {
+          "id": "boundary-0",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 33.55532100000005
+        },
+        {
+          "id": "boundary-1",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.06118500000002314
+        },
+        {
+          "id": "boundary-2",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 32.49860699999999
+        },
+        {
+          "id": "failure-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.14907900000002883
+        },
+        {
+          "id": "failure-1",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0360169999999016
+        },
+        {
+          "id": "failure-2",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.027391999999963446
+        },
+        {
+          "id": "adversarial-0",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.006401999999980035
+        },
+        {
+          "id": "adversarial-1",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0040169999999761785
+        },
+        {
+          "id": "adversarial-2",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.004468000000088068
+        },
+        {
+          "id": "cancellation_timeout-0",
+          "category": "cancellation_timeout",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 35.03055500000005
+        },
+        {
+          "id": "stale_artifact-0",
+          "category": "stale_artifact",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.054020999999920605
+        },
+        {
+          "id": "malformed-schema-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0891070000000127
+        }
+      ],
+      "reasons": [],
+      "validOutputRate": 1,
+      "toolValidity": 1,
+      "timeoutBehavior": true,
+      "budgetCompliance": true
+    },
+    {
+      "skill_id": "R22",
+      "reason": "Dual-Axis Review separates spec and standards",
+      "skillId": "R22",
+      "status": "PASS",
+      "total": 17,
+      "passed": 17,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "repeatability": 1,
+      "categoryCounts": {
+        "normal": 5,
+        "boundary": 3,
+        "failure": 4,
+        "adversarial": 3,
+        "cancellation_timeout": 1,
+        "stale_artifact": 1
+      },
+      "results": [
+        {
+          "id": "normal-0",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.12514499999997497
+        },
+        {
+          "id": "normal-1",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.006221000000095955
+        },
+        {
+          "id": "normal-2",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.004478999999946609
+        },
+        {
+          "id": "normal-3",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0036569999999755964
+        },
+        {
+          "id": "normal-4",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.008585999999922933
+        },
+        {
+          "id": "boundary-0",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.008446000000049025
+        },
+        {
+          "id": "boundary-1",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0034570000000258005
+        },
+        {
+          "id": "boundary-2",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.002624999999852662
+        },
+        {
+          "id": "failure-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.027992000000040207
+        },
+        {
+          "id": "failure-1",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0029560000000401487
+        },
+        {
+          "id": "failure-2",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0032559999999648426
+        },
+        {
+          "id": "adversarial-0",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.04060599999979786
+        },
+        {
+          "id": "adversarial-1",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.024847000000136177
+        },
+        {
+          "id": "adversarial-2",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.02412499999991269
+        },
+        {
+          "id": "cancellation_timeout-0",
+          "category": "cancellation_timeout",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 36.25204299999996
+        },
+        {
+          "id": "stale_artifact-0",
+          "category": "stale_artifact",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.06191599999988284
+        },
+        {
+          "id": "malformed-schema-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.011512000000038825
+        }
+      ],
+      "reasons": [],
+      "validOutputRate": 1,
+      "toolValidity": 1,
+      "timeoutBehavior": true,
+      "budgetCompliance": true
+    },
+    {
+      "skill_id": "R26",
+      "reason": "Untrusted Content Defense protects authority boundaries",
+      "skillId": "R26",
+      "status": "PASS",
+      "total": 17,
+      "passed": 17,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "repeatability": 1,
+      "categoryCounts": {
+        "normal": 5,
+        "boundary": 3,
+        "failure": 4,
+        "adversarial": 3,
+        "cancellation_timeout": 1,
+        "stale_artifact": 1
+      },
+      "results": [
+        {
+          "id": "normal-0",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.3543939999999566
+        },
+        {
+          "id": "normal-1",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.015157999999928506
+        },
+        {
+          "id": "normal-2",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.006041000000095664
+        },
+        {
+          "id": "normal-3",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.004568000000062966
+        },
+        {
+          "id": "normal-4",
+          "category": "normal",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.051416999999901236
+        },
+        {
+          "id": "boundary-0",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.015529000000015003
+        },
+        {
+          "id": "boundary-1",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.09454699999992044
+        },
+        {
+          "id": "boundary-2",
+          "category": "boundary",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.01875500000005559
+        },
+        {
+          "id": "failure-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.02366499999993721
+        },
+        {
+          "id": "failure-1",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.005279999999856955
+        },
+        {
+          "id": "failure-2",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.003647000000000844
+        },
+        {
+          "id": "adversarial-0",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.004277999999885651
+        },
+        {
+          "id": "adversarial-1",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.0034860000000662694
+        },
+        {
+          "id": "adversarial-2",
+          "category": "adversarial",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.004638999999997395
+        },
+        {
+          "id": "cancellation_timeout-0",
+          "category": "cancellation_timeout",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 35.42628100000002
+        },
+        {
+          "id": "stale_artifact-0",
+          "category": "stale_artifact",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.04118700000003628
+        },
+        {
+          "id": "malformed-schema-0",
+          "category": "failure",
+          "passed": true,
+          "schemaValid": true,
+          "safetyViolations": 0,
+          "repeatable": true,
+          "timedOut": false,
+          "durationMs": 0.00824600000009923
+        }
+      ],
+      "reasons": [],
+      "validOutputRate": 1,
+      "toolValidity": 1,
+      "timeoutBehavior": true,
+      "budgetCompliance": true
+    }
+  ],
+  "l2": {
+    "status": "PASS",
+    "checks": {
+      "registryWorkflow": true,
+      "agentToSkill": true,
+      "skillToTool": true,
+      "toolToArtifact": true,
+      "artifactToNextSkill": true,
+      "runtimeToEventStream": true,
+      "eventStreamToUiState": true,
+      "invalidStateRejected": true,
+      "cancellationPropagation": true,
+      "staleArtifactRejected": true,
+      "rollback": true,
+      "permissionIsolation": true,
+      "budgetEnforcement": true,
+      "contextBudget": true,
+      "indexArtifact": true
+    },
+    "registryReport": {
+      "status": "PASS",
+      "steps": [
+        {
+          "skillId": "R01",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R02",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R03",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R04",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R05",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R06",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R07",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R08",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R09",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R17",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R18",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R19",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R20",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R21",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R22",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        },
+        {
+          "skillId": "R24",
+          "allowed": true,
+          "reason": "Skill contract, role, edge and budgets accepted"
+        }
+      ],
+      "reasons": []
+    },
+    "eventCount": 26,
+    "finalProjection": {
+      "state": "DONE",
+      "progress": 100,
+      "evidence": 1,
+      "verification": 1
+    }
+  },
+  "admission": {
+    "l3Status": "NOT_RUN",
+    "productionEnabled": 0,
+    "decision": "HOLD_PENDING_L3"
+  },
+  "summary": {
+    "l1Passed": 9,
+    "l1Total": 9,
+    "fixturesPerCandidate": 17,
+    "totalFixtureExecutionsIncludingRepeat": 306,
+    "l2Status": "PASS",
+    "safetyViolations": 0,
+    "durationMs": 1588.898
+  },
+  "failures": []
+}

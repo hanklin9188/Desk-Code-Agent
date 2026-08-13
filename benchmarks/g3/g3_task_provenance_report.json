@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "suite_id": "dca-naturalistic-open-ended-g3",
+  "preregistration_sha256": "17380638021a09b24ac64b53ebb2090bef6b313943e0e7c90f1101eab99a6200",
+  "repository_manifest_sha256": "58498365b68d90fe9759c9fbd3ae27c061796f4ca41de879e5cba7495ed4d806",
+  "task_manifest_sha256": "1fdec92ef07a5c821b6308d1853d436d4325a1014862644902bfa2a8ac80dd45",
+  "oracle_sha256": "e5748cfd9f1941624372fa5ad5a8f657140fe017d382e4eb705ca6b9b07c91b1",
+  "repositories": [
+    {
+      "id": "werkzeug",
+      "commit": "b24c8ec7b05729276c75a05507eeaec4ed04dda8",
+      "split": "development"
+    },
+    {
+      "id": "ky",
+      "commit": "3419113b48e034fdcf8fa6bd3be3da7b3d0d758f",
+      "split": "development"
+    },
+    {
+      "id": "echo",
+      "commit": "05489dc1730161df26b72d1ae2a3ba6fb8178fc7",
+      "split": "development"
+    },
+    {
+      "id": "anyhow",
+      "commit": "bf3ed9149f4334c984c1ad252b534107b307078c",
+      "split": "development"
+    },
+    {
+      "id": "zlib",
+      "commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "split": "development"
+    },
+    {
+      "id": "gson",
+      "commit": "9835b6f90192f79cdf5300c528fc6212455fb6c1",
+      "split": "development"
+    },
+    {
+      "id": "pluggy",
+      "commit": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "split": "validation"
+    },
+    {
+      "id": "p-queue",
+      "commit": "180ab9e25cd10b6f548767d7176076b50d25e188",
+      "split": "validation"
+    },
+    {
+      "id": "viper",
+      "commit": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+      "split": "validation"
+    },
+    {
+      "id": "fd",
+      "commit": "ee20f426ddf338ac7ead5c5f00ea49258005caaf",
+      "split": "validation"
+    },
+    {
+      "id": "libexpat",
+      "commit": "dfdbaadf8ce1946ed315b0bbed1b976ba20e5436",
+      "split": "validation"
+    },
+    {
+      "id": "jsoup",
+      "commit": "90673664ac4b1e56d8fc1709a95d9df7150bc355",
+      "split": "validation"
+    },
+    {
+      "id": "cachecontrol",
+      "commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout"
+    },
+    {
+      "id": "pyjwt",
+      "commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout"
+    },
+    {
+      "id": "multidict",
+      "commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout"
+    },
+    {
+      "id": "zod",
+      "commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout"
+    },
+    {
+      "id": "dotenv",
+      "commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout"
+    },
+    {
+      "id": "axios",
+      "commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout"
+    },
+    {
+      "id": "lipgloss",
+      "commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout"
+    },
+    {
+      "id": "testify",
+      "commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout"
+    },
+    {
+      "id": "bytes",
+      "commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout"
+    },
+    {
+      "id": "serde-json",
+      "commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout"
+    },
+    {
+      "id": "fmt",
+      "commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout"
+    },
+    {
+      "id": "nlohmann-json",
+      "commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout"
+    }
+  ],
+  "primary_task_sources": {
+    "semantic mutation pattern grounded in an active source artifact": 24,
+    "source-test affinity task grounded in pinned repository files": 24,
+    "natural failing-check diagnosis pattern without fabricated execution output": 24,
+    "new-contributor code navigation question": 24,
+    "real-repository onboarding question": 24,
+    "dependency/build metadata consistency review": 24,
+    "prompt-injection and credential-exfiltration safety scenario": 24,
+    "release-side-effect approval scenario": 24
+  },
+  "long_horizon_source": "multi-stage workflow composed only from pinned repository and policy evidence",
+  "patch_source": "small non-merge historical public commits from pinned-depth local clones; commit hash and exact parent/fix content sealed separately",
+  "exclusions": [
+    "all G1/G2 repositories",
+    "all retrieval-v3 development repositories",
+    "generated answer options",
+    "unverifiable floating HEAD content"
+  ]
+}

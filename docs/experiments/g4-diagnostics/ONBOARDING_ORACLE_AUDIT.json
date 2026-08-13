@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "status": "ORACLE_MISMATCH_CONFIRMED_STRICT_RESULT_PRESERVED",
+  "exactScorer": {
+    "requiredStatus": "ANSWER",
+    "evidencePathComparison": "EXACT_STRING_IDENTITY",
+    "requiredEvidenceAllOf": true,
+    "unsupportedKnownPathCheck": "EXACT_STRING_IDENTITY",
+    "targetPathsMustBeEmpty": true
+  },
+  "finding": {
+    "allResponsesFailedStatusContract": 576,
+    "observations": 576,
+    "locationQualifiedCitationsMisclassifiedUnsupported": 102,
+    "semanticAnswerScoring": "ABSENT",
+    "allOrNothing": true
+  },
+  "conclusion": "The 0/96 holdout binary result is preserved. It combines genuine status/task-contract failures with exact-path citation strictness and does not measure semantic onboarding completeness.",
+  "sourceHashes": {
+    "primary": {
+      "path": "docs/experiments/runs/m9-g3-primary-2026-08-09T09-20-10-123Z/g3-primary-result.json",
+      "sha256": "609bfa82834c5bcf342387db3ac6e8fad4a1f556f39f16debf92aff83e62c9fb"
+    },
+    "longHorizon": {
+      "path": "docs/experiments/runs/m9-g3-long-horizon-2026-08-09T09-47-25-429Z/long-horizon-result.json",
+      "sha256": "17f076cea3e05a374c9c0ba7efdbb3c8b67eb5846eb3ab3836707ada771b879c"
+    },
+    "historicalPatch": {
+      "path": "docs/experiments/runs/m9-g3-real-patch-2026-08-09T09-59-19-019Z/g3-real-patch-result.json",
+      "sha256": "0b5f0061ac69125cf13534e70bc7df05db9563e05fc7a9144ba83a43442cbe65"
+    },
+    "onboarding": {
+      "path": "docs/experiments/runs/m9-g3-onboarding-2026-08-09T10-49-13-597Z/real-repository-onboarding-result.json",
+      "sha256": "0732c0869f6d972e935fbcd65ab2cfd41c675d16b7d2a817b7723ff9c85665cb"
+    },
+    "onboardingManifest": {
+      "path": "benchmarks/g3/g3_onboarding_manifest.json",
+      "sha256": "08693d687a5958de570aee11982646511e925f03e3450a8d94c2b0588e9c1561"
+    },
+    "patchManifest": {
+      "path": "benchmarks/g3/g3_real_patch_manifest.json",
+      "sha256": "3222597b156e11645d761dc59e4c92f32ab766a6e500b2f5980836384bedd662"
+    },
+    "patchOracle": {
+      "path": "benchmarks/g3/g3_real_patch_oracle.sealed.json",
+      "sha256": "0653741b1bfb01c21871daba64fcb86c10f4ff201310f2d0c4bee453051b6598"
+    },
+    "resultsIndex": {
+      "path": "benchmarks/g3/G3_RESULTS_INDEX.json",
+      "sha256": "fa9a4680cd409af1f9eb774fb2282d41147bcf6f165f23d8b8c719df5c43a063"
+    }
+  }
+}

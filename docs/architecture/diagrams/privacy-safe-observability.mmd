@@ -1,0 +1,14 @@
+flowchart LR
+  classDef transient fill:#292342,stroke:#b59cff,color:#f3f6fb
+  classDef safe fill:#13291f,stroke:#69d59c,color:#f3f6fb
+  classDef discard fill:#351c25,stroke:#ef858d,color:#f3f6fb
+
+  ME[Model / edit execution]:::transient --> TA[Transient action]:::transient
+  TA --> L0[L0 structural metadata<br/>stage · status · counts]:::safe
+  TA --> FX[Local structured extractor]:::safe
+  FX --> L1[L1 privacy-safe features<br/>AST families · operators · ranges]:::safe
+  TA --> D[Raw content discarded<br/>output · edit body · literals]:::discard
+  L0 --> SD[Paired semantic diagnosis]:::safe
+  L1 --> SD
+  D -. zero retention .-> SD
+

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_PRIMARY_EVIDENCE_COLLECTION",
+  "experimentId": "CODE_FORMATION_CONSTRAINT_EXPERIMENT",
+  "interpretationPerformed": false,
+  "population": {
+    "tasks": 40,
+    "pairs": 40
+  },
+  "accounting": {
+    "plannedCalls": 80,
+    "actualCalls": 80,
+    "controlCalls": 40,
+    "treatmentCalls": 40,
+    "uniqueCallIds": 80,
+    "retries": 0,
+    "duplicates": 0,
+    "reviewers": 0
+  },
+  "control": {
+    "observations": 40,
+    "validAction": 0,
+    "patchConstruction": 0,
+    "syntaxPass": 0,
+    "visiblePass": 0,
+    "hiddenPass": 0,
+    "strictBehavioralPass": 0,
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0,
+    "constraintRejections": 0,
+    "failureStages": {
+      "MODEL_FAILURE": 40
+    },
+    "tokens": {
+      "prompt": 7592,
+      "completion": 3731,
+      "total": 11323
+    },
+    "latency": {
+      "totalMs": 50919.711898000016,
+      "meanMs": 1272.9927974500004,
+      "p50Ms": 1291.397834000003,
+      "p95Ms": 1314.4559230000013
+    },
+    "completionThroughputTokensPerSecond": 73.27221346958451
+  },
+  "treatment": {
+    "observations": 40,
+    "validAction": 0,
+    "patchConstruction": 0,
+    "syntaxPass": 0,
+    "visiblePass": 0,
+    "hiddenPass": 0,
+    "strictBehavioralPass": 0,
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0,
+    "constraintRejections": 40,
+    "failureStages": {
+      "MODEL_FAILURE": 40
+    },
+    "tokens": {
+      "prompt": 11192,
+      "completion": 3465,
+      "total": 14657
+    },
+    "latency": {
+      "totalMs": 47047.63303699999,
+      "meanMs": 1176.190825925,
+      "p50Ms": 1274.6006919999927,
+      "p95Ms": 1315.9607680000045
+    },
+    "completionThroughputTokensPerSecond": 73.6487635259992
+  },
+  "overallTelemetry": {
+    "promptTokens": 18784,
+    "completionTokens": 7196,
+    "totalTokens": 25980,
+    "totalLatencyMs": 97967.344935,
+    "meanLatencyMs": 1224.5918116875,
+    "peakVramMiB": 13506
+  },
+  "safety": {
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0
+  },
+  "privacy": {
+    "rawOutputsStored": 0,
+    "rawEditBodiesStored": 0,
+    "L2Records": 0,
+    "permittedL1Records": 0
+  },
+  "lineage": {
+    "events": {
+      "path": "docs/experiments/runs/code-formation-constraint-v1/call-events.jsonl",
+      "sha256": "60f80bf07a4e40dd929f9b67c45ae10d1c61167ef8796c980927568e760c89bf",
+      "bytes": 38704
+    },
+    "observations": {
+      "path": "docs/experiments/runs/code-formation-constraint-v1/paired-observations.jsonl",
+      "sha256": "aa668dd8c57f7084a0037d30424ad32deb85328b5c836732329e104b8e043c02",
+      "bytes": 56027
+    },
+    "runnerComplete": {
+      "path": "docs/experiments/runs/code-formation-constraint-v1/SESSION_B_COMPLETE.json",
+      "sha256": "58fe9a4c85aed1924d457d71b39c861b2d219d1e178f965b112c94eb9524e639",
+      "bytes": 137
+    },
+    "readiness": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_SESSION_B_CORRECTED_READINESS.v1.json",
+      "sha256": "32094a664dda27b4b8cc8d7530fc5b38e8f4a5a5e0c66cd3d9df6743c38f4b39"
+    }
+  }
+}

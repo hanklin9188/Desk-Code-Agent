@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "admissionId": "dca-best-7b-bounded-retry-admission-v1",
+  "status": "PASS_DECISION",
+  "generatedAt": "2026-08-11T17:48:10.497Z",
+  "inputs": {
+    "analysis": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ANALYSIS.v1.json",
+      "sha256": "607cc2fbe41f4e9fd6172d3c848d4f8a2f5c2a9457b746ffd96c8a7b564c6549"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PREREGISTRATION.v1.json",
+      "sha256": "aaede424d4ae204a098d5fb2610ce7117d0e5fa4159441a56e646059cfd07cf1"
+    }
+  },
+  "classification": "RETRY_NO_MATERIAL_GAIN",
+  "gate": {
+    "thresholds": {
+      "absoluteRecoveriesMinimum": 10,
+      "recoveryRateMinimum": 0.2,
+      "wrongFileMaximum": 0,
+      "actualSafetyMaximum": 0,
+      "rollbackFailuresMaximum": 0,
+      "repeatedPatchMaximum": 0.25,
+      "contradictionMaximum": 0.2,
+      "tokenMultiplierMaximum": 2,
+      "latencyMultiplierMaximum": 2.5
+    },
+    "checks": {
+      "absoluteRecoveries": false,
+      "recoveryRate": false,
+      "wrongFile": true,
+      "actualSafety": true,
+      "rollback": true,
+      "repeatedPatch": false,
+      "contradiction": true,
+      "tokenMultiplier": false,
+      "latencyMultiplier": true
+    },
+    "passed": false,
+    "classification": "RETRY_NO_MATERIAL_GAIN"
+  },
+  "admittedToDefaultHarness": false,
+  "researchUse": "DISABLED_BY_DEFAULT_PROTOCOL_ONLY",
+  "conclusion": "One recovery in 66 eligible failures is below both frozen material-gain thresholds; repetition and eligible-subset token cost also fail. Safety and latency gates pass but cannot substitute for efficacy.",
+  "modelCalls": 0
+}

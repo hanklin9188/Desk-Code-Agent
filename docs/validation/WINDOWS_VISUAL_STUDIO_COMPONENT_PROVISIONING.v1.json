@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "provisioningId": "dca-w1-msvc-desktop-component-20260812",
+  "status": "PASS_APPROVED_COMPONENT_INSTALLED",
+  "visualStudio": {
+    "instanceId": "6ece9556",
+    "displayName": "Visual Studio Community 2026",
+    "installationPath": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community",
+    "installationVersion": "18.8.12023.21"
+  },
+  "request": {
+    "componentId": "Microsoft.VisualStudio.Component.VC.Tools.x86.x64",
+    "installerMode": "modify --passive --norestart",
+    "elevatedThroughOfficialInstaller": true,
+    "unrelatedWorkloadsRequested": 0
+  },
+  "result": {
+    "exitCode": 0,
+    "durationMs": 60585,
+    "selectedPackageCountBefore": 28,
+    "selectedPackageCountAfter": 29,
+    "selectedPackagesAdded": ["Microsoft.VisualStudio.Component.VC.Tools.x86.x64"],
+    "selectedPackagesRemoved": [],
+    "unauthorizedIndependentComponentsAdded": 0
+  },
+  "toolchain": {
+    "msvcToolset": "14.51.36231",
+    "clVersion": "19.51.36252.0",
+    "linkVersion": "14.51.36252.0",
+    "desktopX64LibraryPathResolvedByVsDevCmd": true,
+    "windowsSdkLibrariesResolvedByVsDevCmd": true,
+    "manualLibraryPathInjection": false,
+    "msvcrtLib": {
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\lib\\x64\\msvcrt.lib",
+      "bytes": 8229242,
+      "sha256": "fa263b227e11dc8510b73b5341351f1947625411c8b6842901322742f70941fb"
+    }
+  },
+  "retainedLogs": [
+    {"path": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508\\.qa-logs\\vs-installer\\dd_setup_20260812154651.log", "sha256": "302ec0e3271d746098d6a9766e99ffa779df589ea5cdf8dd7707e8190ddd7746"},
+    {"path": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508\\.qa-logs\\vs-installer\\dd_installer_20260812154642.log", "sha256": "1a511c133080a6513e8677d5c3fa85a8b9b528ff391a5da3c566995dac37de81"},
+    {"path": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508\\.qa-logs\\vs-installer\\dd_installer_elevated_20260812154642.log", "sha256": "92b9b8180b667b301ea100560657a2f0a3ab5d0a50147353b591bcc17543be96"}
+  ]
+}

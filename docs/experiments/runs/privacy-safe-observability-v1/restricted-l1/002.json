@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "packetLevel": "L1",
+  "requestSha256": "fe409c037207be03aba90a62bfd8c9e111378abbd7a1a6659a5596f9813e6203",
+  "actionIdentitySha256": "9952e1d79f70f526b28702514a0214f735402f2466715963ec186db5cc361f7b",
+  "evidence": {
+    "schemaVersion": 1,
+    "level": "L1_STRUCTURED_DERIVED_EDIT_FEATURES",
+    "taskId": "observability-003-1d3d81482701",
+    "repositoryRevision": "sha256:6f1ef98cda52259b29d2af6245eab3f665892981f240830da5c5f16469e55ee7",
+    "physicalCallId": "privacy-observability-003-aff97f19-ab6b-4a2c-907c-fd6c8d911eb0",
+    "selectedFile": "src/case-3.mjs",
+    "range": {
+      "startLine": 2,
+      "endLine": 2
+    },
+    "targetSymbol": null,
+    "replacement": {
+      "bytes": 159,
+      "characters": 159,
+      "lines": 5
+    },
+    "astNodeChanges": [
+      {
+        "kind": "arguments",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "kind": "arrow_function",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "kind": "binary_expression",
+        "before": 3,
+        "after": 0,
+        "delta": -3
+      },
+      {
+        "kind": "call_expression",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "kind": "function_declaration",
+        "before": 1,
+        "after": 0,
+        "delta": -1
+      },
+      {
+        "kind": "identifier",
+        "before": 8,
+        "after": 5,
+        "delta": -3
+      },
+      {
+        "kind": "import_clause",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "kind": "import_specifier",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "kind": "import_statement",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "kind": "lexical_declaration",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "kind": "named_imports",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "kind": "required_parameter",
+        "before": 3,
+        "after": 1,
+        "delta": -2
+      },
+      {
+        "kind": "string",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "kind": "string_fragment",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "kind": "variable_declarator",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      }
+    ],
+    "expressionChanges": [
+      {
+        "kind": "binary_expression",
+        "before": 3,
+        "after": 0,
+        "delta": -3
+      },
+      {
+        "kind": "call_expression",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      }
+    ],
+    "controlFlowChanges": [],
+    "operatorChanges": [
+      {
+        "kind": "&&",
+        "before": 1,
+        "after": 0,
+        "delta": -1
+      },
+      {
+        "kind": "-",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "kind": "/",
+        "before": 2,
+        "after": 3,
+        "delta": 1
+      },
+      {
+        "kind": "<",
+        "before": 1,
+        "after": 0,
+        "delta": -1
+      },
+      {
+        "kind": "=>",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      }
+    ],
+    "identifierChanges": [
+      {
+        "digest": "04d6f2d31015e4ab9c2573c0f1523333986547a7490ccd7cef2628084b85ae72",
+        "before": 0,
+        "after": 2,
+        "delta": 2
+      },
+      {
+        "digest": "63121a978dde5e0737ed4be1693133ce7d01c8a06d771ccab9d9810a38d0e99c",
+        "before": 2,
+        "after": 0,
+        "delta": -2
+      },
+      {
+        "digest": "6a3b4524dee0a8e35958223bac5ad8cef938570af73015c04dd19483f3f7aec4",
+        "before": 0,
+        "after": 2,
+        "delta": 2
+      },
+      {
+        "digest": "ac4eb26de704dde73b895e29cc898deac12901902e69cf85558755fb9371ea1b",
+        "before": 2,
+        "after": 0,
+        "delta": -2
+      },
+      {
+        "digest": "b7e3e30578ccdaea26d2fb709dc10d7d024232ff7312172ae6277cde16873d61",
+        "before": 3,
+        "after": 0,
+        "delta": -3
+      },
+      {
+        "digest": "de0ef87a002fe4b17ec8ab1d763c169e621268c07b0f49977279d0bdfd0383fa",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      },
+      {
+        "digest": "f11a4fac07682f1983149ab67ca0033765bd443259671ce63f7a051b7c206850",
+        "before": 1,
+        "after": 0,
+        "delta": -1
+      }
+    ],
+    "literalChanges": [
+      {
+        "digest": "9a50159fb481a5ec190b4ae3e01999ec821238670e4b7719ab53e2beed06665a",
+        "literalType": "string",
+        "length": 16,
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      }
+    ],
+    "apiCallChanges": [
+      {
+        "digest": "74a20c3deb61985597a28b969f14437281ec3c8f9edee188b87a12b7bbc99e78",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      }
+    ],
+    "importChanges": [
+      {
+        "digest": "ba39a1edc5aa94d9fb38ad6724654291f9165485310c25b360fa7332d5922946",
+        "before": 0,
+        "after": 1,
+        "delta": 1
+      }
+    ],
+    "canonicalEditSha256": "08e25496a60a35a0e9b5b4726fda54a63d2f7f8b34d6a834d7aa4c744c3b7d78",
+    "hashKeyId": "c79cf8ff23bab10f247c660a6db0907bf9e80af8400c36becf649338d5ebfbfb",
+    "verification": {
+      "stage": "RETRIEVAL",
+      "status": "FAIL",
+      "code": "RETRIEVAL_FAILED",
+      "diagnosticSha256": null
+    },
+    "visibleBehavioralEffect": {
+      "status": "FAIL",
+      "category": "BEHAVIOR_MISMATCH",
+      "diagnosticSha256": null
+    },
+    "privacy": {
+      "rawPromptStored": false,
+      "rawModelOutputStored": false,
+      "rawEditBodyStored": false,
+      "rawIdentifiersStored": false,
+      "rawLiteralsStored": false,
+      "commentsStored": false,
+      "sourceStored": false
+    }
+  }
+}

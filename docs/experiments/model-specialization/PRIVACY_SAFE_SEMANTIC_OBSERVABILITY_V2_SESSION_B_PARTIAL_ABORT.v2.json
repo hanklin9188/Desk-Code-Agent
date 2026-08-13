@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "abortId": "dca-privacy-safe-semantic-observability-v2-session-b-partial-abort",
+  "status": "ABORTED_FAIL_CLOSED_AFTER_CONSUMED_CALL",
+  "classification": "RUNNER_REPORTED_PRE_RESPONSE_TRANSPORT_FAILURE_NO_RETRY",
+  "recordedAt": "2026-08-11T20:48:11.222Z",
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_A.v2.json",
+      "sha256": "c4bae265ebdac2f658a94e1032628df350810c58ba47e10dceb6e75164f7c77d"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PREREGISTRATION.v2.json",
+      "sha256": "10a830c2f24aac861de17df007c38cfb577df26136fcd1aa6c778b38e503e407"
+    },
+    "runnerSeal": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B_RUNNER_SEAL.v2.json",
+      "sha256": "776b542a866198969a3bd71aedc3d6a46b11eaa8ab9aef37f300d2d46dec98a9"
+    },
+    "dryRun": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B_DRY_RUN.v2.json",
+      "sha256": "0d365cbf32e608e76981c09d5e8a34473ed69f6cd1f49e3f7a22c16b99fcd4b6"
+    }
+  },
+  "reason": {
+    "code": "MODEL_RUNTIME_CALL_ERROR_REPORTED_AS_PRE_RESPONSE",
+    "errorSha256": "4d783d06b669184b2cdfcd492cdef614b3d9c0da1e5b362b09624307a5c94ebb",
+    "rawErrorStored": false,
+    "rawOutputAvailable": false,
+    "hotPatchPerformed": false
+  },
+  "accounting": {
+    "plannedPhysicalCalls": 80,
+    "consumedPhysicalCalls": 14,
+    "completedResponses": 13,
+    "completeL0L1Pairs": 13,
+    "failedBeforePacketGeneration": 1,
+    "uncalledTasks": 66,
+    "retries": 0,
+    "reviewerCalls": 0,
+    "SessionBComplete": false,
+    "SessionBPass": false
+  },
+  "lineage": {
+    "callEvents": {
+      "path": "docs/experiments/runs/privacy-safe-observability-v2/call-events.jsonl",
+      "sha256": "9596bd083bfe1d49dba28c5111d7137f4d1a57b6af63f1d61235c4b71c681b95",
+      "rows": 28
+    },
+    "checkpoint": {
+      "path": "docs/experiments/runs/privacy-safe-observability-v2/observations.checkpoint.jsonl",
+      "sha256": "6ac876eb72e3081114ae4615e3cb4c1ea42fe5f5e96b2617c14bf168cccea286",
+      "rows": 13
+    },
+    "lastEvent": {
+      "event": "CALL_FAILED_PRE_RESPONSE",
+      "index": 13,
+      "taskIdSha256": "dd5e8252c83200bae8464ee11fcb12c1179076c66c449a48a466c4d1aeeddca2",
+      "physicalCallIdSha256": "e4e7e30c1b7581733322aa646c31e7f0dff97a39a7a896e4ce4ce82e1f8e9270"
+    },
+    "L0Packets": 13,
+    "L1Packets": 13,
+    "sameCallPairsValidated": 13
+  },
+  "privacy": {
+    "rawModelOutputsPersisted": 0,
+    "rawEditBodiesPersisted": 0,
+    "rawIdentifiersPersisted": 0,
+    "rawLiteralsPersisted": 0,
+    "rawParserMessagesPersisted": 0,
+    "HMACKeyMaterialPersisted": false,
+    "leaks": 0,
+    "L2": false,
+    "semanticClassificationPerformed": false
+  },
+  "safety": {
+    "violations": 0,
+    "rollbackFailures": 0,
+    "packetSchemaFailures": 0
+  },
+  "cleanup": {
+    "modelProcesses": 0,
+    "port8000Clear": true,
+    "modelGpuAllocationMiB": 0,
+    "ephemeralApiKeyAbsent": true,
+    "HMACKeyAbsent": true,
+    "servingStateRemoved": true,
+    "states": {
+      "tournament-start.json": {
+        "sha256": "8122d49294ea9445d649de37e6c14a0dafb0b739d014eaa9d3d99f2cf4822776",
+        "bytes": 93
+      },
+      "tournament-launch.json": {
+        "sha256": "08810e86974143c3f81fa81d0aeaa1674899ad2525c8bb54dd8aa2be78b902b5",
+        "bytes": 2063
+      }
+    }
+  },
+  "decision": {
+    "generationPermanentlyClosed": true,
+    "resumeSameGeneration": false,
+    "retryFailedCall": false,
+    "continueRemainingTasks": false,
+    "SessionCReady": false,
+    "nextAction": "NEW_APPEND_ONLY_RECOVERY_DECISION_REQUIRED"
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "retry": false,
+    "reviewer": false,
+    "L2": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

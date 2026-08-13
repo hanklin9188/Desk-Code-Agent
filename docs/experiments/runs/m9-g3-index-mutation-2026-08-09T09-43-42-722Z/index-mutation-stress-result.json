@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 2,
+  "experimentId": "m9-g3-index-mutation-2026-08-09T09-43-42-722Z",
+  "status": "PASS",
+  "cycles": 100,
+  "supersedesRejectedFixtureRun": "m9-g3-index-mutation-2026-08-09T09-43-02-648Z",
+  "authoringCorrection": "Revision 1 renamed the source while intentionally leaving the test import stale, then incorrectly expected source-test affinity. Revision 2 updates the test import with each rename; the immutable negative run remains preserved.",
+  "operations": [
+    "edit",
+    "rename",
+    "delete/recreate",
+    "branch switch",
+    "rollback to main",
+    "incremental index"
+  ],
+  "summary": {
+    "failures": 0,
+    "staleEvidenceInvalidated": 33,
+    "finalIndex": {
+      "repoSha": "cycle-final",
+      "files": 3,
+      "symbols": 3,
+      "references": 8,
+      "imports": 2,
+      "dependencies": 2,
+      "parserLanguages": [
+        "typescript"
+      ],
+      "reparsedFiles": 0,
+      "reusedFiles": 3,
+      "deletedFiles": 0,
+      "renamedFiles": 0,
+      "cacheHitRatio": 1,
+      "cacheIntegrity": "PASS",
+      "generatedAt": "2026-08-09T09:43:43.944Z"
+    },
+    "peakRssMiB": 101.48,
+    "rssGrowthMiB": 12.53,
+    "finalDatabaseBytes": 53248,
+    "orphanDefinitionRecords": 0,
+    "sourceTestAffinityFailures": 0
+  },
+  "samples": [
+    {
+      "cycle": 1,
+      "manifest": {
+        "repoSha": "cycle-1",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:42.808Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 95.12,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 10,
+      "manifest": {
+        "repoSha": "cycle-10",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 2,
+        "reusedFiles": 1,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.3333333333333333,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:42.900Z"
+      },
+      "definitionPath": "src/renamed.ts",
+      "tests": 1,
+      "rssMiB": 97.33,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 20,
+      "manifest": {
+        "repoSha": "cycle-20",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 2,
+        "reusedFiles": 1,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.3333333333333333,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:43.009Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 98.88,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 30,
+      "manifest": {
+        "repoSha": "cycle-30",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:43.131Z"
+      },
+      "definitionPath": "src/renamed.ts",
+      "tests": 1,
+      "rssMiB": 100.53,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 40,
+      "manifest": {
+        "repoSha": "cycle-40",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 2,
+        "reusedFiles": 1,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.3333333333333333,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:43.231Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 100.58,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 50,
+      "manifest": {
+        "repoSha": "cycle-50",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 2,
+        "reusedFiles": 1,
+        "deletedFiles": 0,
+        "renamedFiles": 1,
+        "cacheHitRatio": 0.3333333333333333,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:43.359Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 100.91,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 60,
+      "manifest": {
+        "repoSha": "cycle-60",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:43.478Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 101.02,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 70,
+      "manifest": {
+        "repoSha": "cycle-70",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 2,
+        "reusedFiles": 1,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.3333333333333333,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:43.583Z"
+      },
+      "definitionPath": "src/renamed.ts",
+      "tests": 1,
+      "rssMiB": 101.33,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 80,
+      "manifest": {
+        "repoSha": "cycle-80",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 2,
+        "reusedFiles": 1,
+        "deletedFiles": 1,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.3333333333333333,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:43.711Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 101.35,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 90,
+      "manifest": {
+        "repoSha": "cycle-90",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 1,
+        "reusedFiles": 2,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 0.6666666666666666,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:43.820Z"
+      },
+      "definitionPath": "src/renamed.ts",
+      "tests": 1,
+      "rssMiB": 101.48,
+      "databaseBytes": 53248
+    },
+    {
+      "cycle": 100,
+      "manifest": {
+        "repoSha": "cycle-100",
+        "files": 3,
+        "symbols": 3,
+        "references": 8,
+        "imports": 2,
+        "dependencies": 2,
+        "parserLanguages": [
+          "typescript"
+        ],
+        "reparsedFiles": 0,
+        "reusedFiles": 3,
+        "deletedFiles": 0,
+        "renamedFiles": 0,
+        "cacheHitRatio": 1,
+        "cacheIntegrity": "PASS",
+        "generatedAt": "2026-08-09T09:43:43.936Z"
+      },
+      "definitionPath": "src/core.ts",
+      "tests": 1,
+      "rssMiB": 101.48,
+      "databaseBytes": 53248
+    }
+  ],
+  "failures": []
+}

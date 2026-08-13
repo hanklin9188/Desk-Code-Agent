@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 2,
+  "policyId": "dca-v0.1.0-release-artifact-policy-v2",
+  "version": "0.1.0",
+  "status": "PASS_OWNER_AUTHORIZED_PUBLICATION",
+  "sourceRepository": {
+    "status": "READY_APACHE_2_0",
+    "target": "github.com/hanklin91888/Desk-Code-Agent",
+    "visibility": "PUBLIC",
+    "rootLicense": "Apache-2.0",
+    "rootNotice": "ROOT_NOTICE_NOT_REQUIRED_BY_CURRENT_AUDIT"
+  },
+  "unsignedWindows": {
+    "status": "READY_OWNER_AUTHORIZED_UNSIGNED_RELEASE",
+    "technicalQa": "PASS",
+    "binaryDistributionLicenseGate": "PASS_UNRESOLVED_DISTRIBUTED_LICENSE_BLOCKERS_ZERO",
+    "msi": {
+      "filename": "Desk Code Agent_0.1.0_x64_en-US.msi",
+      "sha256": "d91f4a516cea760114b380758a5c9a9e48ecd88db86fde262b2aac4e1975bfcf"
+    },
+    "nsis": {
+      "filename": "Desk Code Agent_0.1.0_x64-setup.exe",
+      "sha256": "ee6877d02e20c346aa7446430ea3366eeaf15d85473c0f8f15dc196e3b9a89f0"
+    },
+    "warningRequired": "Windows v0.1.0 installers are unsigned. Windows may show a trust or reputation warning."
+  },
+  "signedWindows": {
+    "status": "DEFERRED_SIGNING_CREDENTIALS",
+    "trustedProjectCredentialFound": false,
+    "selfSignedProductionCertificateAllowed": false,
+    "releaseBlocked": false
+  },
+  "accessibility": {
+    "status": "NARRATOR_SPOKEN_OUTPUT_DEFERRED",
+    "certificationClaim": false,
+    "releaseBlocked": false
+  },
+  "storage": {
+    "installerBinariesInGitSourceHistory": false,
+    "installerBinariesAsGitHubReleaseAssets": true,
+    "modelWeightsAllowed": false,
+    "localQaLogsAllowed": false
+  },
+  "authorization": {
+    "sourcePublication": true,
+    "initialCommit": true,
+    "mainPush": true,
+    "tagV0_1_0": true,
+    "githubRelease": true,
+    "unsignedInstallerUpload": true
+  }
+}

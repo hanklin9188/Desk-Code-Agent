@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 3,
+  "packetLevel": "L1",
+  "identity": {
+    "taskId": "observability-032-9b5893b7b4f0",
+    "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+    "physicalCallId": "privacy-observability-v3-014-7079ab12-d2e4-475e-8106-7426b61bc63a",
+    "requestSha256": "7076680b1bd65edfc83aa92f04a3d14b07346954bfd745cc8840bf359f60e43d",
+    "actionIdentitySha256": "8a8299af12b483b602d83f347dcbeda75886f227c67b016cbc143cc0448266cb"
+  },
+  "evidence": {
+    "schemaVersion": 2,
+    "level": "L1_STRUCTURED_DERIVED_EDIT_FEATURES",
+    "taskId": "observability-032-9b5893b7b4f0",
+    "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+    "physicalCallId": "privacy-observability-v3-014-7079ab12-d2e4-475e-8106-7426b61bc63a",
+    "requestSha256": "7076680b1bd65edfc83aa92f04a3d14b07346954bfd745cc8840bf359f60e43d",
+    "actionIdentitySha256": "8a8299af12b483b602d83f347dcbeda75886f227c67b016cbc143cc0448266cb",
+    "modelResponseStatus": "COMPLETED",
+    "actionParseStatus": "JSON_OBJECT",
+    "actionValidationStatus": "PASS",
+    "replacementPresent": true,
+    "afterSourceParseStatus": "PASS",
+    "astFeaturesAvailable": true,
+    "parserFailureCategory": "NONE",
+    "selectedFile": "src/case-2.mjs",
+    "range": {
+      "startLine": 2,
+      "endLine": 2
+    },
+    "targetSymbol": {
+      "digest": "cf9a2de2eba99c5ec112df25732dc6233a9363b226f319a845314de3c7d14f49",
+      "kind": "function"
+    },
+    "replacementShape": {
+      "bytes": 132,
+      "characters": 132,
+      "lines": 3,
+      "newlines": 2,
+      "whitespaceOnly": false,
+      "indentation": [
+        {
+          "kind": "0",
+          "count": 2
+        },
+        {
+          "kind": "2",
+          "count": 1
+        }
+      ],
+      "lexicalTokenKinds": [
+        {
+          "kind": "IDENTIFIER",
+          "count": 12
+        },
+        {
+          "kind": "NULL",
+          "count": 1
+        }
+      ],
+      "operatorCategories": [
+        {
+          "kind": "?",
+          "count": 1
+        },
+        {
+          "kind": "==",
+          "count": 2
+        },
+        {
+          "kind": "===",
+          "count": 2
+        },
+        {
+          "kind": "||",
+          "count": 1
+        }
+      ],
+      "commentTokens": 0,
+      "delimiterBalance": {
+        "parentheses": 0,
+        "brackets": 0,
+        "braces": 0
+      },
+      "identifierDigests": [
+        {
+          "digest": "1c6164a7e9e8f96c8f0e0d5c0166a0be3b2f4d7e1b1ef8000284899a0da3f394",
+          "count": 1
+        },
+        {
+          "digest": "43b23829a19c4f8657cc6a41517220742a0d665ecbd1fb7197001e1c432c4980",
+          "count": 1
+        },
+        {
+          "digest": "53be6d5dd9410aabc82f3f2f148f3f0123384ec58500dfd98d3f4811fbc8beb8",
+          "count": 1
+        },
+        {
+          "digest": "701997924fce1f4eae7d3655656ab58d3fe8548cdc4e884a1fbbf6bea78f115c",
+          "count": 1
+        },
+        {
+          "digest": "8c5579602038dd2b72ffbd9083623f93dde2e8555de1db0b6aa5418e44faa17d",
+          "count": 1
+        },
+        {
+          "digest": "b2b2df82f34b8fe45472e6adf4aad9ee5fdef3ad7fe1c6bea17b1ebf65bedbcb",
+          "count": 2
+        },
+        {
+          "digest": "ccd017f6014ef76efa7aea95d67b2c55c40c8c7a934d32028f27cf6f9ded6819",
+          "count": 1
+        },
+        {
+          "digest": "fc10d56842f4c7620a9f8730b2b04ab2f95a108aeaddf1b9962cbf76cc185509",
+          "count": 4
+        }
+      ],
+      "literalDigests": [
+        {
+          "digest": "50028973f6f6f98ed02d4a742479056156dec303bd31ce95b6d98dd6129a0534",
+          "count": 1
+        }
+      ]
+    },
+    "astFeatures": {
+      "astNodeChanges": [
+        {
+          "kind": "binary_expression",
+          "before": 1,
+          "after": 3,
+          "delta": 2
+        },
+        {
+          "kind": "identifier",
+          "before": 5,
+          "after": 7,
+          "delta": 2
+        },
+        {
+          "kind": "null",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "ternary_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "undefined",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "expressionChanges": [
+        {
+          "kind": "binary_expression",
+          "before": 1,
+          "after": 3,
+          "delta": 2
+        },
+        {
+          "kind": "ternary_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "controlFlowChanges": [],
+      "operatorChanges": [
+        {
+          "kind": "==",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "kind": "===",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "kind": "?",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "identifierChanges": [
+        {
+          "digest": "7759ee831876f0b26f439bc55fdb2f35f7887ae6690a763098b12614a239c45e",
+          "before": 1,
+          "after": 0,
+          "delta": -1
+        },
+        {
+          "digest": "8c5579602038dd2b72ffbd9083623f93dde2e8555de1db0b6aa5418e44faa17d",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "digest": "b2b2df82f34b8fe45472e6adf4aad9ee5fdef3ad7fe1c6bea17b1ebf65bedbcb",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "digest": "dd717364a30085a64c243b73bb2d72c24642e13df00c7ddee66a43752532c1f3",
+          "before": 2,
+          "after": 0,
+          "delta": -2
+        },
+        {
+          "digest": "fc10d56842f4c7620a9f8730b2b04ab2f95a108aeaddf1b9962cbf76cc185509",
+          "before": 2,
+          "after": 4,
+          "delta": 2
+        }
+      ],
+      "literalChanges": [
+        {
+          "digest": "50028973f6f6f98ed02d4a742479056156dec303bd31ce95b6d98dd6129a0534",
+          "literalType": "null",
+          "length": 4,
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "apiCallChanges": [],
+      "importChanges": []
+    },
+    "canonicalEditSha256": "13753b5ad40dbeceb8de32b2c3d6baa333aaa378185d9175e236167121ec9a05",
+    "hashKeyId": "10b76595429d293bbf0364e08dfbd6a62e71f9a5bc6fcc9d01e51213717c2c92",
+    "verification": {
+      "stage": "VISIBLE_TEST",
+      "status": "FAIL",
+      "code": "VISIBLE_TEST_FAILED",
+      "diagnosticSha256": null
+    },
+    "visibleBehavioralEffect": {
+      "status": "FAIL",
+      "category": "BEHAVIOR_MISMATCH",
+      "diagnosticSha256": null
+    },
+    "privacy": {
+      "rawPromptStored": false,
+      "rawModelOutputStored": false,
+      "rawEditBodyStored": false,
+      "rawIdentifiersStored": false,
+      "rawLiteralsStored": false,
+      "commentsStored": false,
+      "sourceStored": false,
+      "rawParserMessageStored": false,
+      "hashKeyStored": false
+    }
+  }
+}

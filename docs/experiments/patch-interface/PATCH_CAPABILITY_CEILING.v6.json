@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 6,
+  "reportId": "dca-patch-capability-ceiling-v6",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T17:48:10.497Z",
+  "supersedes": {
+    "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v5.json",
+    "sha256": "9d725bead6117aeef29393a19b9e07060cf1a04053f0c35aea78b62a694a06e7",
+    "reason": "Append-only bounded-retry Session-C ceiling analysis"
+  },
+  "immutableEvidence": {
+    "sessionC": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_C.v1.json",
+      "sha256": "32ff39c05b5ce6c64b57ac77085df2b5666750a8a5689d3ac801a683bd3ec683"
+    },
+    "pairedAnalysis": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_PAIRED_ANALYSIS.v1.json",
+      "sha256": "1c7a6746196ce94d4a06408532c2b050d27de7ad8b08fc428c1d0f160f7118a9"
+    },
+    "modelSelection": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_MODEL_SELECTION.v1.json",
+      "sha256": "03fcb625a219bcbc37eec1421583371ca76b3a745f1e938f59ceeff16bdc544c"
+    },
+    "productDecision": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_PRODUCT_DECISION.v1.json",
+      "sha256": "28dd461cae05e001b712e1c3198fecd0702ef3eb0bb6b916b880785eae80ef13"
+    },
+    "boundedRetryAnalysis": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ANALYSIS.v1.json",
+      "sha256": "607cc2fbe41f4e9fd6172d3c848d4f8a2f5c2a9457b746ffd96c8a7b564c6549"
+    },
+    "retryAdmission": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_ADMISSION.v1.json",
+      "sha256": "ece52ae58b7328e73929f2325d07571f6a36931954661ab1bd18421dca671d73"
+    }
+  },
+  "observedCeiling": {
+    "actionInterface": "E-EDIT P2 remains effectively solved at 89-92 valid actions among scored models",
+    "retrieval": "90/95 exact-source selection/inclusion remains a secondary fixed limitation",
+    "dominant": "VISIBLE_BEHAVIOR_REASONING",
+    "supportingFailureShift": {
+      "reference": {
+        "RETRIEVAL": 5,
+        "ACTION_VALIDATION": 6,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 17,
+        "VISIBLE_TEST": 34,
+        "HIDDEN_TEST": 10,
+        "SUCCESS": 23,
+        "TOOL_INFRASTRUCTURE": 0,
+        "OTHER": 0
+      },
+      "M1": {
+        "RETRIEVAL": 5,
+        "ACTION_VALIDATION": 1,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 49,
+        "VISIBLE_TEST": 30,
+        "HIDDEN_TEST": 3,
+        "SUCCESS": 7,
+        "TOOL_INFRASTRUCTURE": 0,
+        "OTHER": 0
+      },
+      "M2": {
+        "RETRIEVAL": 5,
+        "ACTION_VALIDATION": 2,
+        "PATCH_CONSTRUCTION": 0,
+        "SYNTAX_TYPE": 6,
+        "VISIBLE_TEST": 47,
+        "HIDDEN_TEST": 6,
+        "SUCCESS": 29,
+        "TOOL_INFRASTRUCTURE": 0,
+        "OTHER": 0
+      }
+    },
+    "precisionCaveat": "Reference is BF16; 7B candidates are online FP8 W8A8",
+    "boundedRetry": {
+      "maximumTwoCall": "30/95",
+      "recovery": "1/66",
+      "repeatedEdit": "42/66",
+      "sameFailureStage": "55/66",
+      "conclusion": "A second deterministic-feedback call did not materially move the measured ceiling."
+    }
+  },
+  "conclusion": "E-EDIT P2 removes most action-interface friction, but behavioral semantic reasoning remains the dominant measured ceiling. One bounded feedback retry recovered only one task and mostly repeated or preserved failed hypotheses.",
+  "productRecommendation": "KEEP_MUTATION_DISABLED",
+  "nextScientificExperiment": {
+    "path": "benchmarks/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_PROTOCOL.v1.json",
+    "sha256": "0c0806e564a3fe5da3fa6fa77de694c38ff635396b1afa91b3065f1511833823"
+  }
+}

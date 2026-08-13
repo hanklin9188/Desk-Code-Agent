@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "preflightId": "dca-privacy-safe-observability-privacy-preflight-v1",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T19:51:54.832Z",
+  "canaries": {
+    "cases": 3,
+    "rows": [
+      {
+        "label": "credentials",
+        "inputSha256": "4d1126d80c62bd5ccaf0c5d63264fd11617ba5fbd280e947ce998964a0c5da91",
+        "featureSha256": "1aa51187292e660f8de41abfdf430cd4bd48f9e7c43a5657337e84c48e7d89e1",
+        "serializedBytes": 2277,
+        "verbatimLeakCount": 0,
+        "rawInputStored": false
+      },
+      {
+        "label": "identity",
+        "inputSha256": "22affd9b6c931ee90dad8c69fd9a204f9298618ded65d12646a8b2fc6f055616",
+        "featureSha256": "080b5bee44d8e404550f297e3655b6737a249a81e3c93839fed3c520f9749388",
+        "serializedBytes": 2182,
+        "verbatimLeakCount": 0,
+        "rawInputStored": false
+      },
+      {
+        "label": "path-comment",
+        "inputSha256": "ac2012cc28df0f11e6fe59aa374b541795c4a0edea037f82b8f6355ecfe4de4c",
+        "featureSha256": "413bc77f20e81dab8a6c8c87c4456196d6777dfd7a2a2dac9f4d290607d8c18c",
+        "serializedBytes": 2074,
+        "verbatimLeakCount": 0,
+        "rawInputStored": false
+      }
+    ],
+    "forbiddenVerbatimLeaks": 0,
+    "exceptionsContainRawInput": false,
+    "stdoutContainsRawInput": false,
+    "stderrContainsRawInput": false,
+    "sidecarsContainRawInput": false
+  },
+  "determinism": {
+    "repetitions": 2,
+    "byteIdentical": true,
+    "featureSha256": "0b58db2569cccdc187dd92baeb1485c9da249b7a0b69e7f5c3c17d8d32404ca1"
+  },
+  "oraclePreflight": {
+    "tasks": 80,
+    "syntaxPasses": 80,
+    "visiblePasses": 80,
+    "hiddenPasses": 80
+  },
+  "privacy": {
+    "rawModelOutputPersisted": false,
+    "rawEditBodyPersisted": false,
+    "rawIdentifierPersisted": false,
+    "rawLiteralPersisted": false,
+    "sourceRepersisted": false,
+    "L2Used": false
+  },
+  "targetModelCalls": 0
+}

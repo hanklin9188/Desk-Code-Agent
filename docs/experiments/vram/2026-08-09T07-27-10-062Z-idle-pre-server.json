@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "label": "idle-pre-server",
+  "status": "PASS",
+  "startedAt": "2026-08-09T07:27:09.911Z",
+  "completedAt": "2026-08-09T07:27:10.061Z",
+  "durationMs": 149.497,
+  "intervalMs": 100,
+  "samples": 1,
+  "primarySource": "NVIDIA_SMI_DEVICE_MEMORY",
+  "independentSource": "NVML_DEVICE_MEMORY",
+  "primaryPeakMiB": 0,
+  "independentPeakMiB": 331,
+  "primaryMinimumMiB": 0,
+  "independentMinimumMiB": 331,
+  "readings": [
+    {
+      "schemaVersion": 1,
+      "primary": {
+        "source": "NVIDIA_SMI_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 0,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T07:27:10.060Z",
+        "valid": true,
+        "note": null
+      },
+      "independent": {
+        "source": "NVML_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 331,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T07:27:10.061Z",
+        "valid": true,
+        "note": "NVML may include WSL/driver-reserved memory that nvidia-smi presentation excludes; compare loaded/workload deltas as well as absolute values."
+      },
+      "absoluteDifferenceMiB": 331,
+      "totalDifferenceMiB": 0,
+      "valid": true
+    }
+  ]
+}

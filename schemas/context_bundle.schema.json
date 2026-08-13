@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Context Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "context_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "token_estimate": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "required": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "evidence_ids",
+          "token_estimate",
+          "required"
+        ]
+      }
+    },
+    "total_token_estimate": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "hard_limit": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "omitted_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "context_id",
+    "task_id",
+    "role",
+    "sections",
+    "total_token_estimate",
+    "hard_limit",
+    "omitted_evidence_ids"
+  ]
+}

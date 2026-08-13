@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "smokeId": "dca-practical-local-model-tournament-m3-smoke-v1",
+  "status": "PASS_RUNTIME_PENDING_SHUTDOWN_CLEANUP",
+  "classification": "SESSION_B_NON_PRIMARY_SMOKE",
+  "completedAt": "2026-08-11T05:30:10.756Z",
+  "candidate": {
+    "candidateId": "M3",
+    "modelId": "SWE-bench/SWE-agent-LM-7B",
+    "revision": "a44fce0216647696a7437126e82fc1eaa34008d7",
+    "sourcePrecision": "BF16",
+    "runtimePrecision": "FP8_PER_TENSOR_W8A8"
+  },
+  "inputs": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PREREGISTRATION.v1.json",
+      "sha256": "51f983f63719494e8877eb7b24fcbc7a47b0b9fb53d5c1e2bb838961b87246c1"
+    },
+    "candidateManifest": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_CANDIDATE_MANIFEST.v1.json",
+      "sha256": "0ff04ada4842631ca3973b380667daa9b58f592c1b090e18b6903beb553066e1"
+    },
+    "acquisition": {
+      "path": "docs/experiments/model-specialization/tournament-session-b/M3_ACQUISITION.v1.json",
+      "sha256": "f2e92741c5f3f5f9b8f23356e4fdcef3290839f19c5769ebf1c36a1eef35fedc"
+    }
+  },
+  "fairness": {
+    "requestIntentsSha256": "c314e57a5a1cd66c6e699c61988e3432f136f379a6b52071141947c21229e23c",
+    "modelSemanticFieldsExcludedFromDigest": [
+      "modelId"
+    ],
+    "candidateSpecificPrompt": false,
+    "candidateSpecificDecoding": false,
+    "generationConfig": "vllm",
+    "temperature": 0,
+    "seed": 20260809,
+    "maxModelLen": 8192,
+    "gpuMemoryUtilization": 0.82,
+    "maxNumSequences": 1,
+    "profile": "fp8_per_tensor"
+  },
+  "checks": {
+    "modelIdentity": "PASS",
+    "p2JsonSchema": "PASS",
+    "p2ActionClassification": "UNSAFE_EDIT",
+    "streaming": "PASS",
+    "timeout": "PASS",
+    "cancellation": "PASS",
+    "sequential": "PASS",
+    "queue": "PASS",
+    "utf8": "PASS",
+    "contextCap": "PASS",
+    "malformedParserDeterministic": "PASS",
+    "shutdownCleanup": "PENDING"
+  },
+  "telemetry": {
+    "loadTimeMs": 47180.585693359375,
+    "idleVramMiB": 12696,
+    "peakVramMiB": 12696,
+    "ttftMs": 28.714441000003717,
+    "streamLatencyMs": 865.0381940000007,
+    "generationThroughputTokensPerSecond": 76.52538836834906,
+    "queueLatencyMs": 218.84828800000105,
+    "endpointRequests": 10,
+    "completedStructuredSmokeCalls": 6,
+    "promptTokens": 537,
+    "completionTokens": 151
+  },
+  "launchAttestation": {
+    "sha256": "1df090b86dc5894cbb8f3b18a679876ecec157036de1cfdfaf698b3d1712de03",
+    "sanitizedArgsSha256": "4c9c1a0dec7a8491201e5483e55cd09d2222e065da9c09473eb75493dc7967e4"
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "apiKeyStored": false
+  },
+  "protectedActions": {
+    "primaryHoldoutCalls": false,
+    "otherModelDownload": false,
+    "quantizedSnapshotDownload": false,
+    "dependencyInstall": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

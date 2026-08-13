@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Finding",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "finding_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "ARCHITECTURE",
+        "QUALITY",
+        "TESTING",
+        "SECURITY",
+        "PERFORMANCE",
+        "BUG",
+        "REVIEW",
+        "TECHNICAL_DEBT"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "P0",
+        "P1",
+        "P2",
+        "P3",
+        "INFO"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "LIKELY",
+        "HYPOTHESIS",
+        "FIXED",
+        "VERIFIED",
+        "REPORT_ONLY",
+        "UNRESOLVED",
+        "BLOCKED"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "impact": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recommendation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effort": {
+      "type": "string",
+      "enum": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    }
+  },
+  "required": [
+    "finding_id",
+    "task_id",
+    "category",
+    "title",
+    "description",
+    "severity",
+    "status",
+    "confidence",
+    "evidence_ids",
+    "impact",
+    "recommendation",
+    "effort"
+  ]
+}

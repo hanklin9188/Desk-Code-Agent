@@ -1,0 +1,1147 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-fresh-specialists-g1-2026-08-09T06-48-55-240Z",
+  "classification": "FRESH_SPECIALIST_ABLATIONS_GENERATION_1",
+  "status": "PASS",
+  "candidateSha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+  "holdoutSealSha256": "40edbccaffdbb22022633cbb97d5a8c1eda45012596ecac0b77df14f3ab3616e",
+  "environment": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "vllm": "0.26.0",
+    "precision": "bfloat16",
+    "temperature": 0,
+    "seed": 20260809,
+    "thinking": false,
+    "sharedModelInstance": true,
+    "logicalRolesSequential": true
+  },
+  "hypothesis": "Specialists should remain disabled globally and activate only if a preregistered task class shows enough recovery to justify its additional inference cost.",
+  "summaries": {
+    "architecture": {
+      "tasks": 12,
+      "singleCorrect": 0,
+      "specialistCorrect": 0,
+      "meanSingleEvidenceCoverage": 0,
+      "meanSpecialistEvidenceCoverage": 0,
+      "singleUnsupportedClaims": 0,
+      "specialistUnsupportedClaims": 0,
+      "medianTokens": {
+        "single": 0,
+        "specialist": 0
+      },
+      "medianLatencyMs": {
+        "single": 3.6155,
+        "specialist": 8.0835
+      }
+    },
+    "diagnosis": {
+      "tasks": 15,
+      "triggersSatisfied": 15,
+      "noEscalationCorrect": 0,
+      "conditionalEscalationCorrect": 0,
+      "recoveredFailures": 0,
+      "introducedRegressions": 0,
+      "medianTokens": {
+        "noEscalation": 0,
+        "conditional": 0
+      },
+      "medianLatencyMs": {
+        "noEscalation": 3.786,
+        "conditional": 7.635
+      }
+    },
+    "review": {
+      "tasks": 16,
+      "machineCorrect": 0,
+      "semanticCorrect": 0,
+      "regressionDetections": 0,
+      "falseRejections": 0,
+      "falseApprovals": 16,
+      "medianTokens": {
+        "machine": 0,
+        "semantic": 0
+      },
+      "medianLatencyMs": {
+        "machine": 4.6875,
+        "semantic": 9.906500000000001
+      }
+    }
+  },
+  "decisions": {
+    "architectureSpecialist": "REMAIN_EXPERIMENTAL",
+    "diagnosisCritic": "REMAIN_EXPERIMENTAL",
+    "semanticReviewer": "REMAIN_EXPERIMENTAL",
+    "globalMultiAgent": "DISABLED"
+  },
+  "observations": {
+    "architecture": [
+      {
+        "taskId": "holdout-g1-analysis-112-lotus-registry",
+        "difficulty": "L1",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 35.197,
+        "specialistLatencyMs": 11.399,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-121-river-claims",
+        "difficulty": "L3",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 4.013,
+        "specialistLatencyMs": 9.346,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-118-harbor-auth",
+        "difficulty": "L3",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 5.734,
+        "specialistLatencyMs": 10.266,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-126-river-claims",
+        "difficulty": "L4",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 5.692,
+        "specialistLatencyMs": 8.105,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-119-birch-payments",
+        "difficulty": "L4",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 3.518,
+        "specialistLatencyMs": 8.444,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-113-harbor-auth",
+        "difficulty": "L3",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 3.385,
+        "specialistLatencyMs": 8.062,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-117-lotus-registry",
+        "difficulty": "L3",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 3.639,
+        "specialistLatencyMs": 6.469,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-116-river-claims",
+        "difficulty": "L2",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 3.592,
+        "specialistLatencyMs": 7.639,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-125-violet-tasks",
+        "difficulty": "L3",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 2.972,
+        "specialistLatencyMs": 7.738,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-124-birch-payments",
+        "difficulty": "L3",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 3.407,
+        "specialistLatencyMs": 6.575,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-114-birch-payments",
+        "difficulty": "L2",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 4.155,
+        "specialistLatencyMs": 7.256,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-analysis-122-lotus-registry",
+        "difficulty": "L3",
+        "singleCorrect": false,
+        "specialistCorrect": false,
+        "singleSchemaValid": false,
+        "specialistSchemaValid": false,
+        "singleEvidenceCoverage": 0,
+        "specialistEvidenceCoverage": 0,
+        "singleUnsupportedClaims": 0,
+        "specialistUnsupportedClaims": 0,
+        "singleTokens": 0,
+        "specialistTokens": 0,
+        "singleLatencyMs": 3.176,
+        "specialistLatencyMs": 8.563,
+        "modelCalls": {
+          "single": 1,
+          "specialist": 2
+        },
+        "outputHashes": {
+          "single": null,
+          "mapper": null,
+          "specialist": null
+        }
+      }
+    ],
+    "diagnosis": [
+      {
+        "taskId": "holdout-g1-diagnosis-069-zephyr-profile",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 4.13,
+        "conditionalLatencyMs": 7.601,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-049-zephyr-profile",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 4.165,
+        "conditionalLatencyMs": 8.234,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-060-thistle-proxy",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 3.538,
+        "conditionalLatencyMs": 6.62,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-061-prairie-cache",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 4.146,
+        "conditionalLatencyMs": 8.333,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-051-prairie-cache",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 3.076,
+        "conditionalLatencyMs": 6.048,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-068-fjord-billing",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 4.102,
+        "conditionalLatencyMs": 8.449,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-052-jigsaw-rules",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 3.795,
+        "conditionalLatencyMs": 7.635,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-047-jigsaw-rules",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 3.923,
+        "conditionalLatencyMs": 7.8,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-048-fjord-billing",
+        "difficulty": "L4",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 3.49,
+        "conditionalLatencyMs": 6.466,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-064-zephyr-profile",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 2.989,
+        "conditionalLatencyMs": 7.911,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-054-zephyr-profile",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 3.739,
+        "conditionalLatencyMs": 7.211,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-046-prairie-cache",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 3.786,
+        "conditionalLatencyMs": 8.186,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-050-thistle-proxy",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 3.305,
+        "conditionalLatencyMs": 6.72,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-056-prairie-cache",
+        "difficulty": "L3",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 3.877,
+        "conditionalLatencyMs": 8.162,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-diagnosis-070-thistle-proxy",
+        "difficulty": "L4",
+        "triggerSatisfied": true,
+        "triggerReasons": [
+          "a bounded patch attempt failed",
+          "evidence conflicts",
+          "diagnosis confidence is below 0.5"
+        ],
+        "noEscalationCorrect": false,
+        "conditionalEscalationCorrect": false,
+        "recoveredFailure": false,
+        "introducedRegression": false,
+        "noEscalationTokens": 0,
+        "conditionalTokens": 0,
+        "noEscalationLatencyMs": 3.748,
+        "conditionalLatencyMs": 7.385,
+        "modelCalls": {
+          "noEscalation": 1,
+          "conditional": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "initial": null,
+          "critic": null
+        }
+      }
+    ],
+    "review": [
+      {
+        "taskId": "holdout-g1-review-101-prairie-cache",
+        "subcategory": "standards_failure_correct_behavior",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 3.851,
+        "semanticLatencyMs": 9.896,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-098-fjord-billing",
+        "subcategory": "scope_creep",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 4.155,
+        "semanticLatencyMs": 8.115,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-104-zephyr-profile",
+        "subcategory": "spec_failure_clean_code",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 4.354,
+        "semanticLatencyMs": 7.542,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-100-thistle-proxy",
+        "subcategory": "spec_failure_clean_code",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 3.341,
+        "semanticLatencyMs": 7.604,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-102-jigsaw-rules",
+        "subcategory": "scope_creep",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 5.944,
+        "semanticLatencyMs": 9.917,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-108-fjord-billing",
+        "subcategory": "spec_failure_clean_code",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 4.787,
+        "semanticLatencyMs": 11.819,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-103-fjord-billing",
+        "subcategory": "hidden_regression",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 4.85,
+        "semanticLatencyMs": 10.357,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-106-prairie-cache",
+        "subcategory": "scope_creep",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 6.21,
+        "semanticLatencyMs": 11.01,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-107-jigsaw-rules",
+        "subcategory": "hidden_regression",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 7.8,
+        "semanticLatencyMs": 12.496,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-096-prairie-cache",
+        "subcategory": "spec_failure_clean_code",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 5.166,
+        "semanticLatencyMs": 11.976,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-111-prairie-cache",
+        "subcategory": "hidden_regression",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 4.509,
+        "semanticLatencyMs": 11.558,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-099-zephyr-profile",
+        "subcategory": "hidden_regression",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 4.588,
+        "semanticLatencyMs": 8.464,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-105-thistle-proxy",
+        "subcategory": "standards_failure_correct_behavior",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 5.653,
+        "semanticLatencyMs": 10.494,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-097-jigsaw-rules",
+        "subcategory": "standards_failure_correct_behavior",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 3.404,
+        "semanticLatencyMs": 7.439,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-109-zephyr-profile",
+        "subcategory": "standards_failure_correct_behavior",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 5.947,
+        "semanticLatencyMs": 9.604,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      },
+      {
+        "taskId": "holdout-g1-review-110-thistle-proxy",
+        "subcategory": "scope_creep",
+        "machineCorrect": false,
+        "semanticCorrect": false,
+        "regressionDetected": false,
+        "falseRejection": false,
+        "falseApproval": true,
+        "machineTokens": 0,
+        "semanticTokens": 0,
+        "machineLatencyMs": 3.279,
+        "semanticLatencyMs": 7.833,
+        "modelCalls": {
+          "machine": 1,
+          "semantic": 2
+        },
+        "schemaValid": false,
+        "outputHashes": {
+          "machine": null,
+          "reviewer": null
+        }
+      }
+    ]
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawModelOutputsStored": false,
+    "apiKeyStored": false
+  }
+}

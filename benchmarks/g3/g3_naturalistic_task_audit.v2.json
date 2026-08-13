@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "suite_id": "dca-naturalistic-open-ended-g3",
+  "authoring_revision": 2,
+  "repositories": 24,
+  "primary_tasks": 192,
+  "long_horizon_tasks": 36,
+  "historical_patch_tasks": 60,
+  "prompt_families": 8,
+  "maximum_pairwise_prompt_token_jaccard": 0.8621,
+  "sources": {
+    "pinned_repository_artifact_tasks": 144,
+    "policy_scenarios": 48,
+    "historical_public_commits": 60,
+    "multi_stage_workflows": 36
+  },
+  "limitations": [
+    "Primary coding tasks score bounded target/evidence/plan correctness; executable changes are evaluated in the separate historical-patch corpus.",
+    "Historical commit subjects are natural project artifacts but not curated issue bodies.",
+    "A parser is mandatory for patch PASS; unavailable full upstream tests remain explicit NOT_RUN."
+  ],
+  "conclusion": "PASS_WITH_DISCLOSED_SOURCE_MIX_AND_TEMPLATE_DIVERSITY"
+}

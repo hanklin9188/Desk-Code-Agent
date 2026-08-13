@@ -1,0 +1,278 @@
+schema_version: 1
+product: Desk Code Agent
+version: 0.2.0-design
+development_skills:
+- id: D01
+  name: Discovery and Domain Alignment
+  slug: discovery-domain-alignment
+  owner: Product Lead / Orchestrator
+  risk: low
+  llm_calls: 3
+  context: 12000
+- id: D02
+  name: Implementation Spec Synthesis
+  slug: implementation-spec-synthesis
+  owner: Product Lead / Architect
+  risk: low
+  llm_calls: 2
+  context: 16000
+- id: D03
+  name: Decision Prototype
+  slug: decision-prototype
+  owner: UX Lead / Architect
+  risk: low
+  llm_calls: 3
+  context: 12000
+- id: D04
+  name: Implementation Orchestration
+  slug: implementation-orchestration
+  owner: Engineering Lead
+  risk: medium
+  llm_calls: 6
+  context: 16000
+- id: D05
+  name: Red-Green Verification
+  slug: red-green-verification
+  owner: Engineer / Verification Lead
+  risk: medium
+  llm_calls: 4
+  context: 10000
+- id: D06
+  name: Disciplined Diagnosis
+  slug: disciplined-diagnosis
+  owner: Debug Lead
+  risk: medium
+  llm_calls: 7
+  context: 14000
+- id: D07
+  name: Dual-Axis Review
+  slug: dual-axis-review
+  owner: Review Lead
+  risk: medium
+  llm_calls: 3
+  context: 14000
+- id: D08
+  name: Deep Module and Tool Surface Design
+  slug: deep-module-tool-surface
+  owner: Architect
+  risk: low
+  llm_calls: 3
+  context: 12000
+- id: D09
+  name: Agent Document Authoring
+  slug: agent-document-authoring
+  owner: Agent Platform Lead
+  risk: low
+  llm_calls: 2
+  context: 12000
+- id: D10
+  name: Architecture Deepening Survey
+  slug: architecture-deepening-survey
+  owner: Architect / Repo Analyst
+  risk: low
+  llm_calls: 5
+  context: 16000
+- id: D11
+  name: Milestone Handoff and GitHub Checkpoint
+  slug: milestone-handoff-github-checkpoint
+  owner: Release Lead
+  risk: high
+  llm_calls: 2
+  context: 10000
+runtime_skills:
+- id: R01
+  name: Task Contract
+  slug: task-contract
+  owner: Orchestrator
+  risk: low
+  llm_calls: 1
+  context: 6000
+- id: R02
+  name: Deterministic Task Routing
+  slug: deterministic-task-routing
+  owner: Orchestrator
+  risk: low
+  llm_calls: 0
+  context: 0
+- id: R03
+  name: Bounded Subtask Planning
+  slug: bounded-subtask-planning
+  owner: Orchestrator
+  risk: medium
+  llm_calls: 1
+  context: 7000
+- id: R04
+  name: Feasibility Gate
+  slug: feasibility-gate
+  owner: Orchestrator
+  risk: high
+  llm_calls: 1
+  context: 6000
+- id: R05
+  name: Workspace Acquisition
+  slug: workspace-acquisition
+  owner: Orchestrator
+  risk: high
+  llm_calls: 0
+  context: 0
+- id: R06
+  name: Repository Fingerprint
+  slug: repository-fingerprint
+  owner: Repo Analyst
+  risk: low
+  llm_calls: 0
+  context: 0
+- id: R07
+  name: Codebase Map
+  slug: codebase-map
+  owner: Repo Analyst
+  risk: low
+  llm_calls: 0
+  context: 0
+- id: R08
+  name: Evidence Retrieval
+  slug: evidence-retrieval
+  owner: Repo Analyst
+  risk: low
+  llm_calls: 1
+  context: 5000
+- id: R09
+  name: Context Budget and Packaging
+  slug: context-budget-packaging
+  owner: Orchestrator
+  risk: low
+  llm_calls: 0
+  context: 0
+- id: R10
+  name: Repository Overview
+  slug: repository-overview
+  owner: Repo Analyst
+  risk: low
+  llm_calls: 1
+  context: 8000
+- id: R11
+  name: Architecture Analysis
+  slug: architecture-analysis
+  owner: Repo Analyst
+  risk: low
+  llm_calls: 3
+  context: 12000
+- id: R12
+  name: Code Quality Analysis
+  slug: code-quality-analysis
+  owner: Repo Analyst
+  risk: low
+  llm_calls: 2
+  context: 10000
+- id: R13
+  name: Testing Analysis
+  slug: testing-analysis
+  owner: Repo Analyst
+  risk: low
+  llm_calls: 2
+  context: 9000
+- id: R14
+  name: Security and Risk Analysis
+  slug: security-risk-analysis
+  owner: Repo Analyst
+  risk: high
+  llm_calls: 2
+  context: 9000
+- id: R15
+  name: Performance Hypothesis Analysis
+  slug: performance-hypothesis-analysis
+  owner: Repo Analyst
+  risk: low
+  llm_calls: 2
+  context: 8000
+- id: R16
+  name: Onboarding Synthesis
+  slug: onboarding-synthesis
+  owner: Reporter
+  risk: low
+  llm_calls: 2
+  context: 12000
+- id: R17
+  name: Bug Reproduction Loop
+  slug: bug-reproduction-loop
+  owner: Coder
+  risk: medium
+  llm_calls: 2
+  context: 8000
+- id: R18
+  name: Diagnosis Hypotheses
+  slug: diagnosis-hypotheses
+  owner: Coder
+  risk: medium
+  llm_calls: 2
+  context: 10000
+- id: R19
+  name: Patch Planning
+  slug: patch-planning
+  owner: Coder
+  risk: medium
+  llm_calls: 1
+  context: 8000
+- id: R20
+  name: Patch Generation
+  slug: patch-generation
+  owner: Coder
+  risk: high
+  llm_calls: 3
+  context: 12000
+- id: R21
+  name: Deterministic Verification
+  slug: deterministic-verification
+  owner: Runtime
+  risk: high
+  llm_calls: 0
+  context: 0
+- id: R22
+  name: Dual-Axis Semantic Review
+  slug: dual-axis-semantic-review
+  owner: Reviewer
+  risk: medium
+  llm_calls: 2
+  context: 10000
+- id: R23
+  name: Documentation Update
+  slug: documentation-update
+  owner: Coder / Reporter
+  risk: medium
+  llm_calls: 1
+  context: 7000
+- id: R24
+  name: Report Synthesis
+  slug: report-synthesis
+  owner: Reporter
+  risk: low
+  llm_calls: 2
+  context: 14000
+- id: R25
+  name: Approval and Rollback
+  slug: approval-rollback
+  owner: Orchestrator
+  risk: high
+  llm_calls: 0
+  context: 0
+- id: R26
+  name: Untrusted Content Defense
+  slug: untrusted-content-defense
+  owner: Runtime Security
+  risk: high
+  llm_calls: 0
+  context: 0
+- id: R27
+  name: GitHub Delivery
+  slug: github-delivery
+  owner: Release Lead
+  risk: critical
+  llm_calls: 1
+  context: 6000
+- id: R28
+  name: Telemetry and Trace
+  slug: telemetry-trace
+  owner: Runtime
+  risk: low
+  llm_calls: 0
+  context: 0

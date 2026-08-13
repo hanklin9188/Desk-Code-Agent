@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "sessionId": "dca-best-7b-bounded-retry-session-b-v1",
+  "session": "B",
+  "status": "PASS",
+  "classification": "BOUNDED_SECOND_CALL_EXECUTION_COMPLETE_NO_DECISION",
+  "completedAt": "2026-08-11T16:22:29.721Z",
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_A.v1.json",
+      "sha256": "fd81c875019ba4ef903185bb6b96faf94d99b202dea5b33fb626405947ec9c08"
+    },
+    "preflight": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_SESSION_B_PREFLIGHT.v1.json",
+      "sha256": "85fc839cc0e22f80839470de7dbe23dec5e2d1e29fd38ae8b428d478c19ede90"
+    },
+    "eligibility": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ELIGIBILITY_MANIFEST.v1.json",
+      "sha256": "0eb3a573d5e2401d14c4793f730521f91f2e5ff93bf1dc0e102aa2bad66df6a0"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PREREGISTRATION.v1.json",
+      "sha256": "aaede424d4ae204a098d5fb2610ce7117d0e5fa4159441a56e646059cfd07cf1"
+    },
+    "result": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/result.json",
+      "sha256": "fe46972b7d06a293f2c49a674391990e9e629d31d07f70395b7875cc480cb01b"
+    },
+    "cleanup": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/cleanup.json",
+      "sha256": "10a04e5d863be2a6bbc8c23f5fc74ce806628910d8e7968d6bb95ec18a366afa"
+    },
+    "telemetrySupplement": {
+      "path": "docs/experiments/runs/best-7b-bounded-retry-m2-v1/telemetry-supplement.v1.json",
+      "sha256": "ea482fb47d77ad78a9e455e008c971f6946cf76ca2ee5690898d6ffb46b3e1d0"
+    }
+  },
+  "frozenEligibility": {
+    "total": 66,
+    "evidenceClasses": {
+      "ACTION_VALIDATION": 2,
+      "HIDDEN_TEST": 6,
+      "RETRIEVAL": 5,
+      "SYNTAX_TYPE": 6,
+      "VISIBLE_TEST": 47
+    }
+  },
+  "execution": {
+    "physicalRetryCalls": 66,
+    "callEvents": 198,
+    "outcomes": {
+      "RECOVERED": 1,
+      "FAILED_DIFFERENT": 12,
+      "REPEATED_EDIT": 42,
+      "CONTRADICTION": 4,
+      "MALFORMED": 3,
+      "SAFETY_REJECTED": 4,
+      "INFRASTRUCTURE_FAILURE": 0
+    },
+    "transitions": {
+      "VISIBLE_TEST → VISIBLE_TEST": 44,
+      "HIDDEN_TEST → HIDDEN_TEST": 6,
+      "ACTION_VALIDATION → ACTION_VALIDATION": 1,
+      "SYNTAX_TYPE → SYNTAX_TYPE": 4,
+      "SYNTAX_TYPE → VISIBLE_TEST": 1,
+      "ACTION_VALIDATION → HIDDEN_TEST": 1,
+      "VISIBLE_TEST → SYNTAX_TYPE": 1,
+      "RETRIEVAL → ACTION_VALIDATION": 4,
+      "VISIBLE_TEST → SUCCESS": 1,
+      "VISIBLE_TEST → ACTION_VALIDATION": 1,
+      "RETRIEVAL → VISIBLE_TEST": 1,
+      "SYNTAX_TYPE → ACTION_VALIDATION": 1
+    },
+    "thirdCalls": 0,
+    "duplicateCalls": 0,
+    "silentRetries": 0,
+    "reviewerCalls": 0
+  },
+  "safety": {
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0
+  },
+  "cost": {
+    "totalPromptTokens": 35877,
+    "totalCompletionTokens": 4485,
+    "totalLatencyMs": 63193.953714,
+    "telemetry": {
+      "loadTimeMs": "NOT_MEASURED",
+      "loadedIdleVramMiB": "NOT_MEASURED",
+      "inferencePeakVramMiB": "NOT_MEASURED",
+      "ttftMs": "NOT_MEASURED",
+      "perCallEndToEndLatencyMs": "MEASURED",
+      "perCallTokenCounts": "MEASURED",
+      "perCallDerivedThroughput": "MEASURED"
+    }
+  },
+  "lineage": {
+    "eligibleTasks": 66,
+    "checkpointRows": 66,
+    "eventRows": 198,
+    "uniqueTasks": 66,
+    "everyCallIntentStartedCompleted": true,
+    "sourceClosureAtExecution": "PASS",
+    "historicalFirstAttemptsUnchanged": true
+  },
+  "validation": {
+    "strictTypeScript": "PASS",
+    "projectTypecheck": "PASS",
+    "completeTests": "PASS",
+    "boundedRetryTests": "PASS",
+    "designValidation": "PASS",
+    "securityRegression": "PASS",
+    "secretScan": "PASS",
+    "artifactSidecars": "PASS",
+    "sourceClosure": "PASS",
+    "experimentLineage": "PASS",
+    "modelWeightGitExclusion": "PASS",
+    "worktreeCleanup": "PASS"
+  },
+  "cleanup": {
+    "modelProcessCount": 0,
+    "port8000Clear": true,
+    "gpuMemoryMiB": 0,
+    "ephemeralApiKeyAbsent": true,
+    "servingStateRemoved": true,
+    "orphanWorktrees": 0
+  },
+  "decisions": {
+    "modelPromotion": "NOT_EVALUATED_SESSION_C_ONLY",
+    "productMutation": "UNCHANGED_KEEP_MUTATION_DISABLED",
+    "retryValue": "NOT_EVALUATED_SESSION_C_ONLY"
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "rawPatchesStored": false,
+    "hiddenOracleStored": false,
+    "referenceFixStored": false
+  },
+  "finalizer": {
+    "path": "scripts/finalize_best_7b_bounded_retry_session_b.ts",
+    "sha256": "77cc86222753c7984c8f291415e517a8def083304e8ea7b94fd004e89a6c7cad"
+  },
+  "protectedActions": {
+    "additionalModelDownload": false,
+    "otherModel": false,
+    "thirdCall": false,
+    "reviewerCall": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  },
+  "nextSession": "SESSION_C_READY_SEPARATE_INVOCATION_REQUIRED"
+}

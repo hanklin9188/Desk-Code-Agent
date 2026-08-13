@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "protocolId": "dca-semantic-failure-decomposition-protocol-v1",
+  "status": "PREPARED_NOT_EXECUTED",
+  "classification": "NEXT_SCIENTIFIC_EXPERIMENT_PROTOCOL_ONLY",
+  "preparedAt": "2026-08-11T17:48:10.497Z",
+  "synthesis": {
+    "skill_id": "D02",
+    "skill_version": "0.2.0",
+    "run_id": "dd5a0e0a-011d-4029-a2eb-9d6cfb93586e",
+    "status": "PASS",
+    "input_artifact_hashes": [
+      "607cc2fbe41f4e9fd6172d3c848d4f8a2f5c2a9457b746ffd96c8a7b564c6549",
+      "ece52ae58b7328e73929f2325d07571f6a36931954661ab1bd18421dca671d73",
+      "921b55529ce28cca8d975bc9144bc473523750aa1f9eea9fe4b88d2b8ea9abf8"
+    ],
+    "evidence_ids": [
+      "dca-best-7b-bounded-retry-analysis-v1"
+    ],
+    "warnings": [
+      "Existing hash-only persistence is insufficient for retrospective semantic labels; a future authorized run must classify transient trusted artifacts before disposal."
+    ],
+    "errors": [],
+    "metrics": {
+      "modelCalls": 0
+    }
+  },
+  "inputs": {
+    "analysis": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ANALYSIS.v1.json",
+      "sha256": "607cc2fbe41f4e9fd6172d3c848d4f8a2f5c2a9457b746ffd96c8a7b564c6549"
+    },
+    "admission": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_ADMISSION.v1.json",
+      "sha256": "ece52ae58b7328e73929f2325d07571f6a36931954661ab1bd18421dca671d73"
+    },
+    "productDecision": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_PRODUCT_DECISION.v1.json",
+      "sha256": "921b55529ce28cca8d975bc9144bc473523750aa1f9eea9fe4b88d2b8ea9abf8"
+    }
+  },
+  "problemStatement": "E-EDIT P2 removed most action-interface friction, yet FIM-7B remains limited by visible behavioral failures and a bounded retry mostly repeats failed edits. The unresolved uncertainty is the deterministic semantic cause of accepted-but-failing patches.",
+  "hypothesis": "A preregistered deterministic decomposition will show that behavioral reasoning categories, rather than interface validity or missing exact-source retrieval alone, explain most residual FIM-7B failures.",
+  "independentVariable": "NONE_OBSERVATIONAL_DECOMPOSITION",
+  "fixed": {
+    "model": "TIGER-Lab/FIM-7B@5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+    "precision": "FP8_PER_TENSOR_W8A8",
+    "interface": "E_EDIT_P2",
+    "context": "C1",
+    "harness": "E_MIN_V2",
+    "decoding": "FROZEN_TOURNAMENT_PROFILE",
+    "taskPopulation": "DISCLOSED_95_TASK_SCREENING_SET",
+    "retries": 0
+  },
+  "categories": [
+    "INCORRECT_CONDITION_BRANCH_LOGIC",
+    "WRONG_API_ASSUMPTION",
+    "WRONG_DATA_FLOW_REASONING",
+    "INCOMPLETE_PATCH_SCOPE",
+    "MISSING_CROSS_FILE_DEPENDENCY",
+    "INCORRECT_EXCEPTION_SEMANTICS",
+    "INCORRECT_STATE_MUTATION",
+    "OFF_BY_ONE_BOUNDARY",
+    "TEST_MISUNDERSTANDING",
+    "OVER_LOCALIZED_EDIT",
+    "SOURCE_TEST_CONTRACT_MISMATCH",
+    "OTHER_EVIDENCE_GROUNDED"
+  ],
+  "procedure": [
+    "Freeze mutually exclusive category precedence and exact deterministic rules before inspection",
+    "Use trusted source/test/diff/verifier artifacts transiently; never use model inference for labels",
+    "Two independent rule applications plus deterministic adjudication for disagreements",
+    "Report counts by first failure stage, repository and task category",
+    "Dispose raw transient model material under the existing privacy contract after bounded evidence hashes and labels are sealed"
+  ],
+  "testingSeams": [
+    "category rule completeness and mutual exclusion",
+    "fixture-level deterministic replay",
+    "inter-rater/rule agreement",
+    "source/test/diff hash binding",
+    "hidden-oracle non-leakage",
+    "zero mutation and zero model-call accounting"
+  ],
+  "acceptanceCriteria": {
+    "coverage": "100% of registered residual failures receive exactly one category or explicit INSUFFICIENT_EVIDENCE",
+    "safetyViolations": 0,
+    "wrongFileMutations": 0,
+    "hiddenOracleLeaks": 0,
+    "modelCalls": 0,
+    "productPromotionAllowed": false
+  },
+  "outOfScope": [
+    "model calls",
+    "retry",
+    "repair",
+    "prompt tuning",
+    "context changes",
+    "precision changes",
+    "new holdout",
+    "product promotion"
+  ],
+  "executionAuthorized": false,
+  "modelCalls": 0
+}

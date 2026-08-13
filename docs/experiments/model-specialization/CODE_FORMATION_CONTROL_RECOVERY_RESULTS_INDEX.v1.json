@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "CODE_FORMATION_CONTROL_RECOVERY_GENERATION",
+  "state": "SESSION_A_COMPLETE_ZERO_CALL_FROZEN",
+  "sessions": {
+    "A": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_A.v1.json",
+      "sha256": "8164cd8ee020bf5dccba2e0fb458e6c2d5138db8458c8255252ca46ade2bfa9d",
+      "bytes": 4320
+    },
+    "B": null,
+    "C": null
+  },
+  "artifacts": {
+    "protocol": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_GENERATION_PROTOCOL.v1.json",
+      "sha256": "fec8bf25db741a7b142ebf851a2f87515e3de4c0a1eb6dabcf9aca8575e4dec6"
+    },
+    "manifest": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_TASK_MANIFEST.v1.json",
+      "sha256": "b37b399128411ac0de241db5cd9eb167e526aaf560af0aec976e81126f1127e7",
+      "bytes": 25164
+    },
+    "repositories": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_REPOSITORIES.v1.json",
+      "sha256": "a8c417f2cccc3e7ced8e84354e040214045ae73bcac82974c325ddf4f5b5e86e",
+      "bytes": 30958
+    },
+    "oracle": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_ORACLE.v1.sealed.json",
+      "sha256": "4d1a0c01e520c73245aab3ac073036c194a0006e706a195d246c6516a8c0957c",
+      "bytes": 37195
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_PREREGISTRATION.v1.json",
+      "sha256": "bc0b40b867f195d9eead6da9e09d59a7b61a947dfd6b46794574184c1b834cfd",
+      "bytes": 13904
+    },
+    "intents": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_REQUEST_INTENT_EQUIVALENCE.v1.json",
+      "sha256": "be9407648656b064188e816b421f9ca303b88702b2742989e7a06d1b4bb526fe",
+      "bytes": 110740
+    },
+    "telemetry": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_PARSER_TELEMETRY_VALIDATION.v1.json",
+      "sha256": "70495b7cbaa25cec78a2e44f211883474067314de165fc913529ad90232b0272",
+      "bytes": 5771
+    },
+    "seal": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RUNNER_SEAL.v1.json",
+      "sha256": "6ef0e72de5efc847e4bdcb1d397c0a87657567fcf2a14f08b8e5e363e0888dcb",
+      "bytes": 4466
+    }
+  },
+  "productStatus": "KEEP_MUTATION_DISABLED",
+  "next": "SESSION_B_REQUIRES_SEPARATE_INVOCATION"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "auditId": "dca-w3-license-distribution-audit-v1",
+  "status": "BLOCKED_PUBLIC_DISTRIBUTION_OWNER_AND_METADATA_DECISIONS",
+  "rootLicense": "ROOT_LICENSE_DECISION_REQUIRED",
+  "rootLicenseSelectedByW3": false,
+  "thirdPartyNotices": "PRESENT_REQUIRES_PINNED_AUTHORITATIVE_TEXT_BEFORE_DISTRIBUTION",
+  "dependencyInventory": {
+    "path": "artifacts/release/license-inventory.json",
+    "components": 840,
+    "resolved": 701,
+    "noAssertion": 139,
+    "status": "BLOCKED_EXTERNAL"
+  },
+  "sbom": {
+    "path": "artifacts/release/sbom.spdx.json",
+    "components": 840,
+    "status": "PASS_EXISTING_LOCAL_PREPARATION"
+  },
+  "bundledAssets": {
+    "fonts": "SYSTEM_FONT_STACK_NO_FONT_FILES_BUNDLED",
+    "icon": "PROJECT_GENERATED_ICON_PRESENT",
+    "media": "REPOSITORY_PRESENTATION_ASSETS_NOT_INSTALLER_PAYLOAD",
+    "modelWeights": "NOT_BUNDLED",
+    "modelRuntime": "REFERENCED_AS_SEPARATE_LOCAL_REQUIREMENT"
+  },
+  "distributionDecision": "BLOCKED_UNTIL_OWNER_ROOT_LICENSE_AND_REMAINING_NOASSERTION_METADATA_RESOLUTION",
+  "signing": "SIGNING_NOT_PERFORMED_REQUIRES_OWNER_APPROVAL_OR_CREDENTIALS",
+  "accessibilityDebt": "DEFERRED_NONBLOCKING_PUBLIC_RELEASE_ACCESSIBILITY_QA"
+}

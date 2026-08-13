@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "resultId": "dca-practical-local-model-tournament-session-c-m2-v1",
+  "status": "COMPLETE_PRIMARY_PENDING_CLEANUP",
+  "classification": "SESSION_C_DISCLOSED_PRIMARY_SCREENING",
+  "completedAt": "2026-08-11T13:50:43.716Z",
+  "candidate": {
+    "candidateId": "M2",
+    "modelId": "TIGER-Lab/FIM-7B",
+    "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+    "sourcePrecision": "BF16",
+    "runtimePrecision": "FP8_PER_TENSOR_W8A8"
+  },
+  "inputs": {
+    "seal": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_SESSION_C_SEAL.v1.json",
+      "sha256": "e7d3d76a74342423f67b538f34e19276d1b0fbdecc6541269897919d585fa50c"
+    },
+    "acquisition": {
+      "path": "docs/experiments/model-specialization/tournament-session-b/M2_ACQUISITION.v1.json",
+      "sha256": "cf8e77a5bf0fe8828c1f8deeacc9c87c995a05546efde46341eeccee29998fb6"
+    }
+  },
+  "summary": {
+    "mutationTasks": 95,
+    "policyTasks": 25,
+    "primaryModelCalls": 95,
+    "telemetryNonPrimaryCalls": 1,
+    "exactSourceSelected": 90,
+    "exactSourceIncluded": 90,
+    "retrievalMisses": 5,
+    "validActions": 89,
+    "actionValidationFailures": 2,
+    "patchConstructionPasses": 89,
+    "patchApplyPasses": 89,
+    "syntaxPasses": 83,
+    "visibleTestPasses": 35,
+    "hiddenTestPasses": 54,
+    "behavioralSuccesses": 29,
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0,
+    "reportOnly": 0,
+    "malformedOutputs": 0,
+    "emptyOutputs": 0,
+    "timeouts": 0,
+    "cancelled": 0,
+    "transportFailures": 0,
+    "totalPromptTokens": 18140,
+    "totalCompletionTokens": 6120,
+    "medianLatencyMs": 798.5549269999974,
+    "p95LatencyMs": 1495.5199550000034
+  },
+  "telemetry": {
+    "measurementSemantics": "five loaded-idle samples before standardized stream; 50ms polling from first CALL_INTENT through final CALL_COMPLETED; peak=max inference-phase samples; cleanup measured separately",
+    "loadTimeMs": 35797.28515625,
+    "loadedIdleVramMiB": 13466,
+    "loadedIdleSamples": 5,
+    "inferencePeakVramMiB": 13492,
+    "inferenceSamples": 1236,
+    "invariantPass": true,
+    "ttftMs": 257.97709499999837,
+    "generationThroughputTokensPerSecond": 76.51526820093567,
+    "telemetryStreamLatencyMs": 1094.4114629999967,
+    "perTaskLatencyPersisted": true,
+    "status": "PASS"
+  },
+  "serving": {
+    "launchSha256": "11cb3984b5a5f017556da5d4b45a99fbec68b6dc9fe2a8a4a50fa61d105fe8cf",
+    "readySha256": "fa99a9c69929dfe28c178575823dda8bef7baba714af5dcf44cec0e7726ece1b",
+    "finalIdentity": "PASS"
+  },
+  "artifacts": {
+    "checkpoint": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+      "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a",
+      "rows": 95
+    },
+    "callEvents": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/call-events.jsonl",
+      "sha256": "2b73cfd9abdbeb1da9f2e56258a184d5321c012ad6781b3a56bf602ad70c6188",
+      "rows": 285
+    },
+    "observationsFinal": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.final.json",
+      "sha256": "ba4bc6481f3bb1d8907fc559bb34e5d768e6230ec0a0580ce88ae2d5e4814080"
+    }
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "rawPatchesStored": false,
+    "hiddenOracleStored": false
+  },
+  "protectedActions": {
+    "additionalModelDownload": false,
+    "retry": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

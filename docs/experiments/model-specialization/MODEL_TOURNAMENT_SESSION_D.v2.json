@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 2,
+  "sessionId": "dca-practical-local-model-tournament-session-d-v2",
+  "session": "D",
+  "status": "PASS",
+  "classification": "ZERO_CALL_FINAL_ANALYSIS_DECISION_AND_REGRESSION_PASS",
+  "completedAt": "2026-08-11T14:26:25.446Z",
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_A.v1.json",
+      "sha256": "9d6a610829405f146ee36651961273bd25c9d6264a1c54c1e20917e186af7200"
+    },
+    "sessionB": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_B.v1.json",
+      "sha256": "e2d05ad3f5b6b7ff97e37bfd256d94995c1dd5be830a6246454059786f5da833"
+    },
+    "sessionC": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_C.v1.json",
+      "sha256": "32ff39c05b5ce6c64b57ac77085df2b5666750a8a5689d3ac801a683bd3ec683"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PREREGISTRATION.v1.json",
+      "sha256": "51f983f63719494e8877eb7b24fcbc7a47b0b9fb53d5c1e2bb838961b87246c1"
+    },
+    "candidateManifest": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_CANDIDATE_MANIFEST.v1.json",
+      "sha256": "0ff04ada4842631ca3973b380667daa9b58f592c1b090e18b6903beb553066e1"
+    },
+    "feasibility": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_FEASIBILITY.v1.json",
+      "sha256": "141a0aa14d6190286121bf8fb0fb676279b7f6b09c966fbb4f98fa725d7531c7"
+    },
+    "referenceHoldout": {
+      "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_RESULTS_INDEX.v1.json",
+      "sha256": "a0db8f1054469f7a5118be72582c8337adae739d614cfded1d28fc6d266b7eb8"
+    }
+  },
+  "lineage": {
+    "M1PrimaryCalls": 95,
+    "M2PrimaryCalls": 95,
+    "M3PrimaryCalls": 95,
+    "totalPrimaryCalls": 285,
+    "telemetryCalls": 3,
+    "eventRows": 855,
+    "retryCalls": 0,
+    "reviewerCalls": 0,
+    "duplicateObservations": 0,
+    "silentRetries": 0,
+    "sessionDModelCalls": 0
+  },
+  "phases": {
+    "lineageValidation": "PASS",
+    "M1VsReference": "PASS",
+    "M2VsReference": "PASS",
+    "M2VsM1": "PASS",
+    "failureShift": "PASS",
+    "M3Exclusion": "PASS",
+    "performance": "PASS",
+    "deployment": "PASS",
+    "provenance": "PASS_WITH_M2_CAVEAT",
+    "modelSelection": "NO_MODEL_PROMOTED",
+    "productMutation": "KEEP_MUTATION_DISABLED",
+    "retryEligibility": "BEST_7B_BOUNDED_RETRY_PROTOCOL_JUSTIFIED_NOT_EXECUTED",
+    "nextExperiment": "PROTOCOL_ONLY_NOT_STARTED",
+    "finalRegression": "PASS",
+    "durableStateUpdate": "PASS",
+    "sessionDComplete": true
+  },
+  "artifacts": {
+    "pairedAnalysis": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_PAIRED_ANALYSIS.v1.json",
+      "sha256": "1c7a6746196ce94d4a06408532c2b050d27de7ad8b08fc428c1d0f160f7118a9"
+    },
+    "capabilityMatrix": {
+      "path": "docs/experiments/model-specialization/MODEL_CAPABILITY_MATRIX.v5.json",
+      "sha256": "9a75a8dea90d4f3f71902fa962864c4978139a2c7da2ac41ee56da78cacbe26a"
+    },
+    "modelSelection": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_MODEL_SELECTION.v1.json",
+      "sha256": "03fcb625a219bcbc37eec1421583371ca76b3a745f1e938f59ceeff16bdc544c"
+    },
+    "productDecision": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_PRODUCT_DECISION.v1.json",
+      "sha256": "28dd461cae05e001b712e1c3198fecd0702ef3eb0bb6b916b880785eae80ef13"
+    },
+    "capabilityCeiling": {
+      "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v5.json",
+      "sha256": "9d725bead6117aeef29393a19b9e07060cf1a04053f0c35aea78b62a694a06e7"
+    },
+    "m3Infrastructure": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_M3_INFRASTRUCTURE.v1.json",
+      "sha256": "029e1aa6b69c7eed3eeaa4e5e1559ea7d084c64a889afd1b67f7bd6e9dffba98"
+    },
+    "retryEligibility": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_RETRY_ELIGIBILITY.v1.json",
+      "sha256": "c88e39e24f0b08b95cdab8bded29c2b9e19e6a9490f891617e177aedd325f728"
+    },
+    "nextExperimentProtocol": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PROTOCOL.v1.json",
+      "sha256": "228ca9e5d8a836c40f345db2f7d39a415d6e4a1cc1d9bfa7af62b9fcfdfe51b3"
+    },
+    "finalReport": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_FINAL_REPORT.v1.json",
+      "sha256": "831b64711f996ca0b186231a473309f19b9dc5e6c930d3c1573e7cf90ddd65bf"
+    },
+    "validation": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_D_VALIDATION.v1.json",
+      "sha256": "24c44cbd9e75c96248ae7582c9e1e06b8fcf4a82b8f4f8fab624e510e53b86bc"
+    },
+    "releaseGateSupplement": {
+      "path": "artifacts/release/model-tournament-release-gate-supplement.v1.json",
+      "sha256": "0b633eee5ed3ab6d1dbf47186fc63b61589f311b6c64cafe136b12bac08c3c9f"
+    }
+  },
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "services/model-tournament-analysis/src/index.ts",
+        "sha256": "c5154d4c6012f0d0100b722a39659aae7edbc39ec0188c56211879a3c90a104b",
+        "bytes": 5386
+      },
+      {
+        "path": "scripts/finalize_model_tournament_session_d.ts",
+        "sha256": "83dc3759e82590cce40cf407fd3ae03cbfa7e5095a9bc25cd1936384f73c70a9",
+        "bytes": 29729
+      },
+      {
+        "path": "scripts/finalize_model_tournament_session_d_v2.ts",
+        "sha256": "ad755fe0d33b6cbd1b352b53e5a38861d216277b9a45fc02fcbca25d5dd2362f",
+        "bytes": 11467
+      },
+      {
+        "path": "tests/model-tournament-analysis.test.ts",
+        "sha256": "e113d6fe4e67b738f7989a559c04ba619c84b9c09143118bc60ac0e1eacadb3c",
+        "bytes": 2338
+      },
+      {
+        "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_FINAL_REPORT.v1.md",
+        "sha256": "5e20e04d0a60f792a975d8e7a7dd075dac37e5a3a8fa60970aa59f522c40dd9d",
+        "bytes": 7828
+      },
+      {
+        "path": "docs/validation/2026-08-11-practical-local-model-tournament-session-d.md",
+        "sha256": "7b080362d7ba1e5336347fcfe8b96191aefeb801f56b43a8ba5957496ab48f19",
+        "bytes": 1581
+      },
+      {
+        "path": "adrs/0016-no-model-promoted-after-practical-7b-tournament.md",
+        "sha256": "82f0ae16abd5f630b2eca56f3390d67dc634b15936fed8c8fcade979b853bc6d",
+        "bytes": 3129
+      },
+      {
+        "path": "docs/exec-plans/active/MASTER_EXECUTION_PLAN.md",
+        "sha256": "5aeb457f4e37f4a81a2c2fb43dd775e7e35768187ce8c097ab7f25e0568ff477",
+        "bytes": 38294
+      },
+      {
+        "path": "CONTEXT.md",
+        "sha256": "a444b61f7144de3c5657a6d215e62c28a28a98fb8d6d89b01bda50e60970707f",
+        "bytes": 14454
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      }
+    ],
+    "sha256": "1e677ec82c25a34572fd85f0c9ee8aee73b64a25bcedca3a566916cc4bfd6904"
+  },
+  "cleanup": {
+    "modelProcessCount": 0,
+    "port8000Clear": true,
+    "gpuMemoryMiB": 0,
+    "ephemeralApiKeyAndStateAbsent": true,
+    "newPrimaryCalls": 0,
+    "worktrees": 1,
+    "temporaryDirectories": 0
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "rawPatchesStored": false,
+    "hiddenOracleStored": false,
+    "apiKeysStored": false
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "modelRerun": false,
+    "retry": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  },
+  "supersedes": {
+    "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_D.v1.json",
+    "sha256": "d8b9515a6ee3d09e8397eb3bf4bc711d962aec6f013a6019778e32c11ebebbd2",
+    "reason": "Append-only completion of the post-publication final regression gate; scientific results and decisions unchanged",
+    "modelCallsAdded": 0
+  }
+}

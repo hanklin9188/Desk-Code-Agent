@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "decisionId": "dca-practical-local-model-tournament-product-decision-v1",
+  "status": "PASS_GATE_APPLIED",
+  "decidedAt": "2026-08-11T14:21:50.112Z",
+  "outcome": "KEEP_MUTATION_DISABLED",
+  "inputs": {
+    "priorDecision": {
+      "path": "docs/experiments/patch-interface/E_EDIT_PRODUCT_DECISION.v1.json",
+      "sha256": "1d945242f7b6e6b4050d229a68c1cff8e2d8dd37eb71be19246f0eaa6bcd064c"
+    },
+    "modelSelection": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_MODEL_SELECTION.v1.json",
+      "sha256": "03fcb625a219bcbc37eec1421583371ca76b3a745f1e938f59ceeff16bdc544c"
+    },
+    "analysis": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_PAIRED_ANALYSIS.v1.json",
+      "sha256": "1c7a6746196ce94d4a06408532c2b050d27de7ad8b08fc428c1d0f160f7118a9"
+    }
+  },
+  "rejectedOutcomes": {
+    "ASSISTED_PATCH_SUGGESTION_CANDIDATE": "M2 reaches the floor but lacks the full paired/product/new-holdout evidence required to change product state",
+    "EXPERIMENTAL_BOUNDED_MUTATION_CANDIDATE": "No admitted task class and strict success below research/product thresholds",
+    "AUTONOMOUS_PATCH_CANDIDATE": "No candidate reaches 57/95"
+  },
+  "eEditStatus": "RESEARCH_ONLY_MUTATION_INTERFACE",
+  "deterministicSafetyAndVerificationRemainEnabled": true,
+  "productMutationEnabled": false,
+  "modelCalls": 0
+}

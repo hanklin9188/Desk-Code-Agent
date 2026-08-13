@@ -1,0 +1,1013 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m10-g3-license-resolution-2026-08-09T09-45-52-305Z",
+  "status": "PASS_CLASSIFIED_NO_GUESSES",
+  "policy": "AUTHORITATIVE_LOCAL_METADATA_ONLY; no network lookup; no inferred license; no owner decision made",
+  "sourceInventory": {
+    "path": "artifacts/release/license-inventory.json",
+    "sha256": "3b962a6202568b5cfeec3fc74284f5519a1c479ec5368a9ed4fff49c8aad9627",
+    "totalComponents": 840,
+    "resolvedBeforeThisAudit": 701,
+    "carriedForwardNoAssertion": 139
+  },
+  "counts": {
+    "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA": 136,
+    "C_AMBIGUOUS_MANUAL_LEGAL_REVIEW": 2,
+    "A_RESOLVABLE_LOCALLY": 1
+  },
+  "classifications": [
+    {
+      "ecosystem": "cargo",
+      "name": "android_system_properties",
+      "version": "0.1.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "atomic-waker",
+      "version": "1.1.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "base64",
+      "version": "0.21.7",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "block2",
+      "version": "0.6.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "bumpalo",
+      "version": "3.20.3",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "bytemuck",
+      "version": "1.25.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "cesu8",
+      "version": "1.1.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "combine",
+      "version": "4.6.7",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "core-foundation-sys",
+      "version": "0.8.7",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "core-foundation",
+      "version": "0.10.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "core-graphics-types",
+      "version": "0.2.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "core-graphics",
+      "version": "0.25.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "desk-code-agent",
+      "version": "0.1.0",
+      "class": "C_AMBIGUOUS_MANUAL_LEGAL_REVIEW",
+      "reason": "First-party root component has no owner-selected license; the agent must not choose one."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "dispatch2",
+      "version": "0.3.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "embed_plist",
+      "version": "1.2.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "foreign-types-macros",
+      "version": "0.2.4",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "foreign-types-shared",
+      "version": "0.3.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "foreign-types",
+      "version": "0.5.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "getrandom",
+      "version": "0.2.17",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "http-body-util",
+      "version": "0.1.4",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "http-body",
+      "version": "1.1.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "httparse",
+      "version": "1.10.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "hyper-util",
+      "version": "0.1.20",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "hyper",
+      "version": "1.11.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "iana-time-zone-haiku",
+      "version": "0.1.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "ipnet",
+      "version": "2.12.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "jni-sys-macros",
+      "version": "0.4.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "jni-sys",
+      "version": "0.3.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "jni-sys",
+      "version": "0.4.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "jni",
+      "version": "0.21.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "js-sys",
+      "version": "0.3.104",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "libredox",
+      "version": "0.1.19",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "ndk-sys",
+      "version": "0.6.0+11769913",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "ndk",
+      "version": "0.9.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "num_enum_derive",
+      "version": "0.7.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "num_enum",
+      "version": "0.7.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-app-kit",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-cloud-kit",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-core-data",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-core-foundation",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-core-graphics",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-core-image",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-core-location",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-core-text",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-encode",
+      "version": "4.1.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-exception-helper",
+      "version": "0.1.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-foundation",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-io-surface",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-quartz-core",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-ui-kit",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-user-notifications",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2-web-kit",
+      "version": "0.3.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "objc2",
+      "version": "0.6.4",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "proc-macro-crate",
+      "version": "3.5.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "r-efi",
+      "version": "5.3.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "r-efi",
+      "version": "6.0.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "redox_syscall",
+      "version": "0.5.18",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "redox_users",
+      "version": "0.5.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "reqwest",
+      "version": "0.13.4",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "rustversion",
+      "version": "1.0.23",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "softbuffer",
+      "version": "0.4.8",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "swift-rs",
+      "version": "1.0.7",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "sync_wrapper",
+      "version": "1.0.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "tao-macros",
+      "version": "0.1.4",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "tokio-util",
+      "version": "0.7.19",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "toml_edit",
+      "version": "0.25.13+spec-1.1.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "tower-http",
+      "version": "0.6.11",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "tower-layer",
+      "version": "0.3.3",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "tower-service",
+      "version": "0.3.3",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "tower",
+      "version": "0.5.3",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "tracing-core",
+      "version": "0.1.36",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "tracing",
+      "version": "0.1.44",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "try-lock",
+      "version": "0.2.5",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "vswhom-sys",
+      "version": "0.1.3",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "vswhom",
+      "version": "0.1.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "want",
+      "version": "0.3.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "wasi",
+      "version": "0.11.1+wasi-snapshot-preview1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "wasip2",
+      "version": "1.0.4+wasi-0.2.12",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "wasm-bindgen-futures",
+      "version": "0.4.77",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.127",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.127",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.127",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "wasm-bindgen",
+      "version": "0.2.127",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "wasm-streams",
+      "version": "0.5.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "web-sys",
+      "version": "0.3.104",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "webview2-com-macros",
+      "version": "0.8.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "webview2-com-sys",
+      "version": "0.38.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "webview2-com",
+      "version": "0.38.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "winapi-i686-pc-windows-gnu",
+      "version": "0.4.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "winapi-util",
+      "version": "0.1.11",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "winapi-x86_64-pc-windows-gnu",
+      "version": "0.4.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "winapi",
+      "version": "0.3.9",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "window-vibrancy",
+      "version": "0.6.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_aarch64_gnullvm",
+      "version": "0.42.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_aarch64_gnullvm",
+      "version": "0.52.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_aarch64_msvc",
+      "version": "0.42.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_aarch64_msvc",
+      "version": "0.52.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_i686_gnu",
+      "version": "0.42.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_i686_gnu",
+      "version": "0.52.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_i686_gnullvm",
+      "version": "0.52.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_i686_msvc",
+      "version": "0.42.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_i686_msvc",
+      "version": "0.52.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_x86_64_gnu",
+      "version": "0.42.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_x86_64_gnu",
+      "version": "0.52.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_x86_64_gnullvm",
+      "version": "0.42.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_x86_64_gnullvm",
+      "version": "0.52.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_x86_64_msvc",
+      "version": "0.42.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows_x86_64_msvc",
+      "version": "0.52.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-collections",
+      "version": "0.2.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-core",
+      "version": "0.61.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-core",
+      "version": "0.62.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-future",
+      "version": "0.2.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-implement",
+      "version": "0.60.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-interface",
+      "version": "0.59.3",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-link",
+      "version": "0.1.3",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-link",
+      "version": "0.2.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-numerics",
+      "version": "0.2.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-result",
+      "version": "0.3.4",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-result",
+      "version": "0.4.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-strings",
+      "version": "0.4.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-strings",
+      "version": "0.5.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-sys",
+      "version": "0.45.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-sys",
+      "version": "0.59.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-sys",
+      "version": "0.61.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-targets",
+      "version": "0.42.2",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-targets",
+      "version": "0.52.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-threading",
+      "version": "0.1.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows-version",
+      "version": "0.1.7",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "windows",
+      "version": "0.61.3",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "winreg",
+      "version": "0.55.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "wit-bindgen",
+      "version": "0.57.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "colorama",
+      "version": "0.4.6",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "cuda-toolkit",
+      "version": "13.0.2",
+      "class": "A_RESOLVABLE_LOCALLY",
+      "reason": "Authoritative installed manifest exists but earlier inventory parser did not classify it; manual metadata parsing is required before changing SPDX."
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "desk-code-agent-model-runtime",
+      "version": "0.1.0",
+      "class": "C_AMBIGUOUS_MANUAL_LEGAL_REVIEW",
+      "reason": "First-party root component has no owner-selected license; the agent must not choose one."
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "nvidia-cuda-nvrtc",
+      "version": "13.3.33",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "nvidia-cuda-runtime",
+      "version": "13.3.29",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "pywin32",
+      "version": "312",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "triton",
+      "version": "3.7.1",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "win32-setctime",
+      "version": "1.2.0",
+      "class": "B_REQUIRES_AUTHORITATIVE_EXTERNAL_METADATA",
+      "reason": "Lock entry exists, but the platform-specific package/crate metadata and license payload are absent from local caches."
+    }
+  ],
+  "rootLicenseOptionsInformationalOnly": [
+    {
+      "option": "Apache-2.0",
+      "tradeoff": "Permissive with explicit patent grant and notice obligations; broadly compatible with the present Apache/MIT-heavy dependency set."
+    },
+    {
+      "option": "MIT",
+      "tradeoff": "Short permissive terms and simple attribution; lacks Apache-2.0's express patent-license language."
+    },
+    {
+      "option": "Apache-2.0 OR MIT",
+      "tradeoff": "Common ecosystem-friendly dual choice but increases notice and owner-governance work."
+    },
+    {
+      "option": "Proprietary internal-only",
+      "tradeoff": "Can fit non-distributed internal use, but does not resolve third-party notices and is not an open-source grant."
+    }
+  ],
+  "legalDisclaimer": "Informational inventory comparison only; not legal advice. Root license selection requires the project owner and legal review.",
+  "distributionDecision": "BLOCKED_ROOT_LICENSE_AND_AUTHORITATIVE_METADATA"
+}

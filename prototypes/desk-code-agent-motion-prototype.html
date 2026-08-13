@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Desk Code Agent — Motion Prototype</title>
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0d1118;--panel:#121824;--panel2:#171f2d;--line:#263244;--text:#edf3fb;--muted:#94a3b8;
+  --accent:#6ea8fe;--success:#54d89b;--warn:#f3c76b;--danger:#ff7d86;--radius:14px;
+  --fast:160ms;--normal:230ms;--slow:360ms;
+}
+*{box-sizing:border-box} html,body{height:100%;margin:0}
+body{font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:
+radial-gradient(900px 500px at 50% -20%,rgba(75,130,255,.16),transparent 70%),var(--bg);color:var(--text);overflow:hidden}
+button{font:inherit;color:inherit}
+.app{height:100%;display:grid;grid-template-rows:48px 1fr 66px}
+.top{display:flex;align-items:center;gap:12px;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(13,17,24,.88);backdrop-filter:blur(16px)}
+.brand{font-weight:700;letter-spacing:.1px}.dot{width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 0 5px rgba(84,216,155,.10)}
+.repo{color:var(--muted);padding-left:8px;border-left:1px solid var(--line)}
+.spacer{flex:1}.pill{display:flex;gap:7px;align-items:center;border:1px solid var(--line);background:var(--panel);padding:6px 10px;border-radius:999px;color:var(--muted)}
+.pill strong{color:var(--text);font-weight:600}
+.shell{min-height:0;display:grid;grid-template-columns:270px minmax(540px,1fr) 330px}
+.sidebar,.inspector{min-width:0;background:rgba(18,24,36,.84);backdrop-filter:blur(14px)}
+.sidebar{border-right:1px solid var(--line)}.inspector{border-left:1px solid var(--line)}
+.section-title{height:42px;padding:0 14px;display:flex;align-items:center;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--line)}
+.tree{padding:10px}.tree-row{display:flex;align-items:center;gap:8px;height:32px;padding:0 9px;border-radius:8px;color:#c9d5e5}
+.tree-row:hover,.tree-row.active{background:rgba(110,168,254,.09);color:white}.folder{color:var(--accent)}.indent{padding-left:26px}
+.nav{padding:8px 10px;border-top:1px solid var(--line);margin-top:8px}.nav button{width:100%;display:flex;justify-content:space-between;border:0;background:transparent;padding:9px;border-radius:8px;color:var(--muted);cursor:pointer}
+.nav button:hover,.nav button.active{background:var(--panel2);color:var(--text)}.count{font-size:11px;border:1px solid var(--line);border-radius:99px;padding:1px 7px}
+.workspace{min-width:0;min-height:0;display:grid;grid-template-rows:44px 1fr;background:rgba(10,14,21,.45)}
+.tabs{display:flex;align-items:center;gap:4px;padding:0 10px;border-bottom:1px solid var(--line)}
+.tabs button{position:relative;border:0;background:transparent;color:var(--muted);height:100%;padding:0 12px;cursor:pointer}
+.tabs button.active{color:var(--text)}.tabs button.active:after{content:"";position:absolute;left:10px;right:10px;bottom:0;height:2px;background:var(--accent);border-radius:2px}
+.view{min-height:0;overflow:auto;padding:18px}.view[hidden]{display:none}
+.card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(23,31,45,.96),rgba(18,24,36,.96));border-radius:var(--radius);box-shadow:0 14px 50px rgba(0,0,0,.16)}
+.flow-card{min-height:470px;position:relative;overflow:hidden}.flow-head{display:flex;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+.flow-head h2{font-size:14px;margin:0}.flow-head span{color:var(--muted);margin-left:8px}.flow-head .spacer{flex:1}
+.flow{position:relative;height:410px}.edge{position:absolute;height:1px;background:var(--line);transform-origin:0 50%}
+.edge.active{background:linear-gradient(90deg,var(--line),rgba(110,168,254,.65),var(--line));background-size:180% 100%;animation:edge 1.2s linear infinite}
+.edge.active:after{content:"";position:absolute;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent);animation:travel 1.1s ease-in-out infinite}
+@keyframes edge{to{background-position:-180% 0}} @keyframes travel{from{left:0}to{left:calc(100% - 7px)}}
+.node{position:absolute;width:142px;min-height:72px;padding:11px 12px;border:1px solid var(--line);background:var(--panel);border-radius:13px;transition:transform var(--normal),border-color var(--normal),box-shadow var(--normal),opacity var(--normal)}
+.node .label{font-weight:650}.node .sub{font-size:12px;color:var(--muted);margin-top:5px}.node .status{position:absolute;right:9px;top:9px;width:9px;height:9px;border-radius:50%;background:#4b5563}
+.node.active{border-color:rgba(110,168,254,.7);box-shadow:0 0 0 5px rgba(110,168,254,.07),0 14px 32px rgba(0,0,0,.22);animation:breathe 2s ease-in-out infinite}
+.node.active .status{background:var(--accent);box-shadow:0 0 12px rgba(110,168,254,.85)}
+.node.done .status{background:var(--success)}.node.fail{border-color:rgba(255,125,134,.7);animation:nudge .18s ease-in-out}.node.fail .status{background:var(--danger)}
+@keyframes breathe{50%{transform:scale(1.018)}}@keyframes nudge{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+.n-orch{left:50%;top:24px;transform:translateX(-50%)}.n-analyst{left:14%;top:172px}.n-coder{left:50%;top:172px;transform:translateX(-50%)}.n-verify{right:14%;top:172px}.n-review{left:50%;top:316px;transform:translateX(-50%)}
+.e1{left:50%;top:98px;width:184px;transform:rotate(140deg)}.e2{left:50%;top:98px;width:120px;transform:rotate(90deg)}.e3{left:50%;top:98px;width:184px;transform:rotate(40deg)}.e4{left:calc(50% + 70px);top:208px;width:180px;transform:rotate(0deg)}.e5{left:calc(50% + 70px);top:244px;width:167px;transform:rotate(132deg)}.e6{left:50%;top:244px;width:72px;transform:rotate(90deg)}
+.legend{display:flex;gap:14px;color:var(--muted);font-size:12px}.legend i{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:5px}
+.inspector-body{padding:12px}.kv{display:grid;grid-template-columns:94px 1fr;gap:8px;padding:9px 2px;border-bottom:1px solid rgba(38,50,68,.7)}.kv span:first-child{color:var(--muted)}
+.evidence{margin-top:14px}.ev{padding:10px;border:1px solid var(--line);border-radius:9px;margin-top:8px;background:rgba(23,31,45,.7)}.ev b{display:block;font-size:12px}.ev small{color:var(--muted)}
+.progress{height:7px;background:#263244;border-radius:99px;overflow:hidden;margin-top:8px}.progress>i{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--accent),#8bc6ff);transition:width .45s ease}
+.steps{display:grid;gap:9px;margin-top:14px}.step{display:flex;align-items:center;gap:9px;color:var(--muted)}.step i{display:grid;place-items:center;width:20px;height:20px;border:1px solid var(--line);border-radius:50%;font-style:normal;font-size:11px}
+.step.done{color:var(--text)}.step.done i{background:rgba(84,216,155,.14);border-color:rgba(84,216,155,.4);color:var(--success)}.step.active{color:var(--text)}.step.active i{border-color:var(--accent);color:var(--accent)}
+.composer{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:10px 14px;border-top:1px solid var(--line);background:rgba(13,17,24,.92)}
+.prompt{height:44px;border:1px solid var(--line);background:var(--panel);border-radius:12px;display:flex;align-items:center;padding:0 14px;color:#cad6e6}.prompt span{color:var(--muted)}
+.actions{display:flex;gap:8px}.btn{height:38px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);padding:0 14px;cursor:pointer;transition:transform var(--fast),background var(--fast)}
+.btn:hover{background:#202b3c}.btn:active{transform:scale(.98)}.btn.primary{background:var(--accent);border-color:transparent;color:#07101d;font-weight:700}
+.diff{font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;padding:14px;white-space:pre-wrap}.plus{color:#92e6ba;background:rgba(84,216,155,.07)}.minus{color:#ff9ca4;background:rgba(255,125,134,.07)}
+.report-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.metric{padding:16px}.metric b{font-size:22px}.metric small{display:block;color:var(--muted);margin-top:4px}
+.reduced *{animation:none!important;scroll-behavior:auto!important;transition-duration:80ms!important}.reduced .edge.active:after{display:none}
+@media(max-width:1100px){.shell{grid-template-columns:230px 1fr}.inspector{display:none}.n-analyst{left:8%}.n-verify{right:8%}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+<header class="top">
+  <div class="dot"></div><div class="brand">Desk Code Agent</div>
+  <div class="repo">sample-parser · main @ 1a2b3c</div><div class="spacer"></div>
+  <div class="pill"><strong>Qwen3.5-4B</strong> Local</div>
+  <div class="pill">VRAM <strong id="vram">8.4 / 16 GB</strong></div>
+  <div class="pill"><strong id="tps">38.2</strong> tok/s</div>
+</header>
+<main class="shell">
+<aside class="sidebar">
+ <div class="section-title">Repository</div>
+ <div class="tree">
+  <div class="tree-row active"><span class="folder">▾</span> sample-parser</div>
+  <div class="tree-row indent"><span class="folder">▾</span> src</div>
+  <div class="tree-row indent">⌁ parser.ts</div><div class="tree-row indent">⌁ config.ts</div>
+  <div class="tree-row indent"><span class="folder">▾</span> tests</div><div class="tree-row indent">⌁ parser.test.ts</div>
+  <div class="tree-row">◇ README.md</div>
+ </div>
+ <div class="nav">
+  <button class="active">Files <span class="count">214</span></button>
+  <button>Symbols <span class="count">1,842</span></button>
+  <button>Tests <span class="count">486</span></button>
+  <button>Findings <span class="count">5</span></button>
+ </div>
+</aside>
+<section class="workspace">
+ <nav class="tabs">
+  <button data-view="flow" class="active">Agent Flow</button><button data-view="diff">Diff</button><button data-view="verify">Verify</button><button data-view="report">Report</button>
+ </nav>
+ <div class="view" id="flow">
+  <div class="card flow-card">
+   <div class="flow-head"><h2>Bounded execution</h2><span id="phase">Ready to run</span><div class="spacer"></div>
+    <div class="legend"><span><i style="background:var(--accent)"></i>active</span><span><i style="background:var(--success)"></i>done</span></div>
+   </div>
+   <div class="flow">
+    <div class="edge e1" data-edge="0"></div><div class="edge e2" data-edge="1"></div><div class="edge e3" data-edge="2"></div><div class="edge e4" data-edge="3"></div><div class="edge e5" data-edge="4"></div><div class="edge e6" data-edge="5"></div>
+    <div class="node n-orch" data-node="0"><span class="status"></span><div class="label">Orchestrator</div><div class="sub">R01 · Task Contract</div></div>
+    <div class="node n-analyst" data-node="1"><span class="status"></span><div class="label">Repo Analyst</div><div class="sub">R08 · Evidence</div></div>
+    <div class="node n-coder" data-node="2"><span class="status"></span><div class="label">Coder</div><div class="sub">R17 · Reproduce</div></div>
+    <div class="node n-verify" data-node="3"><span class="status"></span><div class="label">Verification</div><div class="sub">R21 · Machine truth</div></div>
+    <div class="node n-review" data-node="4"><span class="status"></span><div class="label">Reviewer</div><div class="sub">R22 · Dual axis</div></div>
+   </div>
+  </div>
+ </div>
+ <div class="view" id="diff" hidden>
+  <div class="card diff"><span>parser.ts</span>
+<span class="minus">- return config.value;</span>
+<span class="plus">+ return config?.value ?? defaultValue;</span>
+
+Reason: H2 — empty configuration returns undefined.
+Requirement: SC-2
+Evidence: E17, E21
+  </div>
+ </div>
+ <div class="view" id="verify" hidden>
+  <div class="card" style="padding:18px"><h3 style="margin-top:0">Verification stages</h3>
+   <div class="steps" id="bigsteps"></div>
+  </div>
+ </div>
+ <div class="view" id="report" hidden>
+  <div class="report-grid">
+   <div class="card metric"><b>1</b><small>file changed</small></div><div class="card metric"><b>486/486</b><small>tests passed</small></div><div class="card metric"><b>4</b><small>LLM calls</small></div>
+  </div>
+  <div class="card" style="padding:18px;margin-top:12px"><h3>Verified outcome</h3><p>The empty-configuration path is now guarded at the public parser seam. Targeted, related and full tests passed; Spec and Standards reviews approved the bounded patch.</p></div>
+ </div>
+</section>
+<aside class="inspector">
+ <div class="section-title">Inspector</div>
+ <div class="inspector-body">
+  <div class="kv"><span>Current</span><b id="current">Idle</b></div><div class="kv"><span>Skill</span><b id="skill">—</b></div><div class="kv"><span>Budget</span><b id="budget">0 / 8 calls</b></div>
+  <div class="evidence"><div style="display:flex"><b>Evidence</b><div class="spacer"></div><span id="evcount">0 items</span></div>
+   <div class="ev"><b>src/parser.ts · 41–78</b><small>Symbol definition · exact range</small></div>
+   <div class="ev"><b>tests/parser.test.ts · 12–44</b><small>Behavior seam · targeted oracle</small></div>
+  </div>
+  <div style="margin-top:16px"><b>Run progress</b><div class="progress"><i id="bar"></i></div></div>
+  <div class="steps" id="steps"></div>
+ </div>
+</aside>
+</main>
+<footer class="composer">
+ <div class="prompt">Analyze the failing parser test, find the cause, and safely fix it.<span>&nbsp; · local only · worktree</span></div>
+ <div class="actions"><button class="btn" id="motion">Reduced motion</button><button class="btn primary" id="run">Run demo</button></div>
+</footer>
+</div>
+<script>
+const stages=[
+ {phase:"Contracting task",node:0,edge:null,skill:"R01 Task Contract",ev:0,progress:8},
+ {phase:"Retrieving bounded evidence",node:1,edge:0,skill:"R08 Evidence Retrieval",ev:2,progress:25},
+ {phase:"Building red-capable reproduction",node:2,edge:1,skill:"R17 Bug Reproduction",ev:4,progress:42},
+ {phase:"Testing ranked hypothesis H2",node:2,edge:1,skill:"R18 Diagnosis",ev:6,progress:55},
+ {phase:"Generating minimal patch",node:2,edge:3,skill:"R20 Patch Generation",ev:7,progress:66},
+ {phase:"Targeted verification",node:3,edge:3,skill:"R21 Verification",ev:8,progress:76},
+ {phase:"Full suite 486 / 486",node:3,edge:4,skill:"R21 Verification",ev:8,progress:86},
+ {phase:"Spec and Standards review",node:4,edge:5,skill:"R22 Dual-Axis Review",ev:8,progress:95},
+ {phase:"Completed · verified",node:null,edge:null,skill:"R24 Report",ev:8,progress:100}
+];
+const labels=["Contract","Evidence","Reproduce","Patch","Targeted","Full","Review","Report"];
+const app=document.querySelector("#app"),nodes=[...document.querySelectorAll(".node")],edges=[...document.querySelectorAll(".edge")];
+const phase=document.querySelector("#phase"),current=document.querySelector("#current"),skill=document.querySelector("#skill"),budget=document.querySelector("#budget"),bar=document.querySelector("#bar"),ev=document.querySelector("#evcount");
+const steps=document.querySelector("#steps"),big=document.querySelector("#bigsteps");
+function renderSteps(active){[steps,big].forEach(el=>{el.innerHTML=labels.map((x,i)=>`<div class="step ${i<active?"done":i===active?"active":""}"><i>${i<active?"✓":i+1}</i>${x}</div>`).join("")})}
+renderSteps(-1);
+let timer=null,index=0;
+function reset(){clearInterval(timer);index=0;nodes.forEach(n=>n.className=n.className.replace(/\s(active|done|fail)/g,""));edges.forEach(e=>e.classList.remove("active"));phase.textContent="Ready to run";current.textContent="Idle";skill.textContent="—";budget.textContent="0 / 8 calls";bar.style.width="0";ev.textContent="0 items";renderSteps(-1);document.querySelector("#run").textContent="Run demo"}
+function tick(){
+ const s=stages[index];nodes.forEach((n,i)=>{n.classList.remove("active"); if(s.node!==null&&i<s.node)n.classList.add("done")});
+ edges.forEach(e=>e.classList.remove("active")); if(s.node!==null)nodes[s.node].classList.add("active"); if(s.edge!==null)edges[s.edge].classList.add("active");
+ phase.textContent=s.phase;current.textContent=s.node===null?"Completed":nodes[s.node].querySelector(".label").textContent;skill.textContent=s.skill;budget.textContent=Math.min(index+1,8)+" / 8 calls";bar.style.width=s.progress+"%";ev.textContent=s.ev+" items";renderSteps(Math.min(index,7));
+ index++; if(index>=stages.length){clearInterval(timer);nodes.forEach(n=>{n.classList.remove("active");n.classList.add("done")});document.querySelector("#run").textContent="Replay"}
+}
+document.querySelector("#run").onclick=()=>{reset();document.querySelector("#run").textContent="Running…";tick();timer=setInterval(tick,1050)}
+document.querySelector("#motion").onclick=()=>{app.classList.toggle("reduced");document.querySelector("#motion").textContent=app.classList.contains("reduced")?"Motion: reduced":"Reduced motion"}
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.querySelectorAll(".view").forEach(v=>v.hidden=v.id!==b.dataset.view)})
+</script>
+</body>
+</html>

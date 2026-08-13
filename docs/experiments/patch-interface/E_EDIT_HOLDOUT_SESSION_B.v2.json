@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 2,
+  "sessionId": "dca-e-edit-untouched-holdout-session-b-v2",
+  "session": "B",
+  "status": "PASS",
+  "completedAt": "2026-08-11T03:14:15.580Z",
+  "supersedes": {
+    "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_SESSION_B.v1.json",
+    "status": "SUPERSEDED_TO_BIND_COMPLETE_PAIRED_V2_METRICS",
+    "modelCallsAdded": 0
+  },
+  "phases": {
+    "baselineOneShot": "PASS_95_CALLS",
+    "eEditOneShot": "PASS_95_CALLS",
+    "pairedAnalysis": "PASS",
+    "oneShotGate": "E_EDIT_HOLDOUT_GATE_FAIL",
+    "retry": "NOT_ELIGIBLE_ZERO_CALLS",
+    "retryGate": "NOT_APPLICABLE",
+    "cleanup": "PASS"
+  },
+  "artifacts": {
+    "baseline": {
+      "path": "docs/experiments/runs/e-edit-holdout-baseline-20260811T110600Z/result.json",
+      "sha256": "8358b36d6bebd8b5a5322497698e7679552f5018c9825ee83febcb060b51323e"
+    },
+    "eEdit": {
+      "path": "docs/experiments/runs/e-edit-holdout-p2-20260811T111300Z/result.json",
+      "sha256": "e6eb86b1837525581c134fc0e3cc24ea51e83bfeac7594af76809338b17f797f"
+    },
+    "retry": {
+      "path": "docs/experiments/runs/e-edit-holdout-retry-v1/result.json",
+      "sha256": "b317464943c2c9623353143a42539208bf4706ff9e65720b63b81c0bb6c63592"
+    },
+    "paired": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PAIRED_RESULTS.v2.json",
+      "sha256": "9564d1c970c08fe2654c62b41ec0fb8d71f6c10d4e803338891fd76effef1f20"
+    },
+    "promotion": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PROMOTION_DECISION.v2.json",
+      "sha256": "816d457d295654806b6aac3d35bb710c83c6fceca8e22920a58f7774b788be22"
+    },
+    "baselineLifecycle": {
+      "path": "docs/experiments/runs/e-edit-holdout-baseline-20260811T110600Z/lifecycle.json",
+      "sha256": "646ef54e1e4a6eeed3e72bee7943555469ddefaca350d20f42e1b8c99b42fa28"
+    },
+    "eEditLifecycle": {
+      "path": "docs/experiments/runs/e-edit-holdout-p2-20260811T111300Z/lifecycle.json",
+      "sha256": "dc52fafcb0015ff00208f884a74e68df9e80db917598f2497b4b5ad134fa9f4c"
+    }
+  },
+  "lineage": {
+    "historicalPhysicalCalls": 979,
+    "sessionBPhysicalCalls": 190,
+    "baselineCalls": 95,
+    "eEditCalls": 95,
+    "retryCalls": 0,
+    "totalPhysicalCalls": 1169,
+    "duplicatePhysicalCalls": 0,
+    "silentRetries": 0
+  },
+  "cleanup": {
+    "modelProcessAbsent": true,
+    "port8000Clear": true,
+    "gpuMemoryMiB": 0,
+    "ephemeralApiKeyAbsent": true,
+    "orphanWorktreesAbsent": true,
+    "runtimeStateAbsent": true
+  },
+  "gate": {
+    "resultsSealed": true,
+    "physicalCallLineageSealed": true,
+    "lifecycleEvidenceSealed": true,
+    "sessionBPass": true,
+    "sessionCStarted": false
+  },
+  "nextSession": "C",
+  "mustStop": true,
+  "protectedActions": {
+    "modelDownload": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false
+  }
+}

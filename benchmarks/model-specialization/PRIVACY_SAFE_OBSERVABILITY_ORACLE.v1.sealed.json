@@ -1,0 +1,3131 @@
+{
+  "schemaVersion": 1,
+  "oracleId": "dca-privacy-safe-observability-oracle-v1",
+  "state": "SEALED_MODEL_HIDDEN",
+  "visibility": "NEVER_INCLUDE_ORACLE_FIELDS_IN_MODEL_REQUEST",
+  "authoredAt": "2026-08-11T19:51:54.832Z",
+  "taskIdsSha256": "f090b8d04d9961901f670a064c02f795ccc0055ca232e5cfc9e98e878fa641c1",
+  "rows": [
+    {
+      "task_id": "observability-001-acdea14a8297",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-1.mjs",
+      "exact_relevant_symbol": "observe001",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "62d631710e32f1a2f16140239841968a637c5b682d5d4c554af6b45ed4b3d6af",
+      "reference_fixed_source": "// deterministic observability fixture 1\nexport function observe001(index,length){ return ((index%length)+length)%length; }\n",
+      "reference_fixed_source_sha256": "2cde1d85b51e9ec3de1298517053e68e8dfb1c4bc6080e1099002749ebe980d6",
+      "behavioral_requirement": "normalize negative indexes into the collection bounds",
+      "hidden_files": [
+        {
+          "path": "test/case-1.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe001 } from '../src/case-1.mjs';\ntest('hidden index_normalization 1',()=>{ assert.equal(observe001(-6,5),4); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-002-37ac4068573c",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-2.mjs",
+      "exact_relevant_symbol": "observe002",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "3e3f785caee01fcac12d9d086ac0b820405bf45cdb2b4ec2ec16aba0a5c87dce",
+      "reference_fixed_source": "// deterministic observability fixture 2\nexport function observe002(value,fallback){ return value??fallback; }\n",
+      "reference_fixed_source_sha256": "1849276171c9499d2f11275daba55b32b5d0fd8bb991600efa218c6aab98f19b",
+      "behavioral_requirement": "preserve valid false and zero values while defaulting only nullish input",
+      "hidden_files": [
+        {
+          "path": "test/case-2.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe002 } from '../src/case-2.mjs';\ntest('hidden nullish_defaulting 2',()=>{ assert.equal(observe002(0,9),0); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-003-1d3d81482701",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-3.mjs",
+      "exact_relevant_symbol": "observe003",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "981614d5051cb3c221a3728059c09cb44fcd7177b01364d5c84e104f493e1894",
+      "reference_fixed_source": "// deterministic observability fixture 3\nexport function observe003(value,min,max){ return value>=min&&value<=max; }\n",
+      "reference_fixed_source_sha256": "1ae27d737b41bfe74b3b9e6d04418046fc1897e3fbc2d077840419a5aa44d075",
+      "behavioral_requirement": "accept both inclusive boundaries of the registered interval",
+      "hidden_files": [
+        {
+          "path": "test/case-3.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe003 } from '../src/case-3.mjs';\ntest('hidden inclusive_boundary 3',()=>{ assert.equal(observe003(26,22,26),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-004-bd57620d0051",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-4.mjs",
+      "exact_relevant_symbol": "observe004",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "674450da75969660d4efadf0019f177c893e06c40b34704fa996181a2d639830",
+      "reference_fixed_source": "// deterministic observability fixture 4\nexport function observe004(text){ return text.split(/\\r?\\n/); }\n",
+      "reference_fixed_source_sha256": "9a2879615d3bd2b4a77699f235ac9dedfeb2a5ac39b14e9a2cf9ccf66e15e5d7",
+      "behavioral_requirement": "split both LF and CRLF records without retaining carriage returns",
+      "hidden_files": [
+        {
+          "path": "test/case-4.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe004 } from '../src/case-4.mjs';\ntest('hidden line_ending_contract 4',()=>{ assert.deepEqual(observe004('a\\nb'),['a','b']); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-005-6b6b50ae140e",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-5.mjs",
+      "exact_relevant_symbol": "observe005",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "0182df47af68579e3c8d01b9f2716e5c5e0fd8e2a3e81e023273318892f45868",
+      "reference_fixed_source": "// deterministic observability fixture 5\nexport function observe005(items){ return [...items].sort((a,b)=>a-b); }\n",
+      "reference_fixed_source_sha256": "d66c7a3a20afd72e1ff66a8b7673c6a9e26461ce0affa83b8e22a0ce9ba84475",
+      "behavioral_requirement": "sort numeric measurements in ascending numeric order without mutating the input",
+      "hidden_files": [
+        {
+          "path": "test/case-5.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe005 } from '../src/case-5.mjs';\ntest('hidden numeric_ordering 5',()=>{ assert.deepEqual(observe005([-1,-10,3]),[-10,-1,3]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-006-a9d90f5811b0",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-6.mjs",
+      "exact_relevant_symbol": "observe006",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "7bbde055616783f65121ab15e8f78521ef677813be765de24cb2c2d41669266e",
+      "reference_fixed_source": "// deterministic observability fixture 6\nexport function observe006(items,n){ return n<=0?[]:items.slice(-n); }\n",
+      "reference_fixed_source_sha256": "69ff134872592b26faf16d17946205df25e77ad31d6f0b4f358641e4c124b446",
+      "behavioral_requirement": "return the final N items and return an empty list for nonpositive N",
+      "hidden_files": [
+        {
+          "path": "test/case-6.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe006 } from '../src/case-6.mjs';\ntest('hidden tail_window 6',()=>{ assert.deepEqual(observe006([1,2],0),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-007-b0f31cab95e1",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-7.mjs",
+      "exact_relevant_symbol": "observe007",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "ea109cd495fb365854dad5afc8068b49d5490a01b0af54d8db8134155ce50331",
+      "reference_fixed_source": "// deterministic observability fixture 7\nexport function observe007(value){ const parsed=Number(value); return Number.isFinite(parsed)?parsed:null; }\n",
+      "reference_fixed_source_sha256": "cc0a55fe487789d73801395c06d5cd1410bf0789a55589fd7b22d51ba1f93a6e",
+      "behavioral_requirement": "return null for non-finite numeric input and the parsed number otherwise",
+      "hidden_files": [
+        {
+          "path": "test/case-7.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe007 } from '../src/case-7.mjs';\ntest('hidden finite_number_contract 7',()=>{ assert.equal(observe007('Infinity'),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-008-99943676613f",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-8.mjs",
+      "exact_relevant_symbol": "observe008",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "35c000cc56ed7a6a860ede25900fe270e99724546c6ea1c0d62fe8dc41a441e6",
+      "reference_fixed_source": "// deterministic observability fixture 8\nexport function observe008(record,key){ return Object.prototype.hasOwnProperty.call(record,key); }\n",
+      "reference_fixed_source_sha256": "e10ade0b7819531eb4d2632692b3041351548012b77db86e587c49d44b9a950c",
+      "behavioral_requirement": "read only own properties and ignore prototype-chain values",
+      "hidden_files": [
+        {
+          "path": "test/case-8.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe008 } from '../src/case-8.mjs';\ntest('hidden record_ownership 8',()=>{ assert.equal(observe008({x:1},'x'),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-009-95b039a4cb41",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-9.mjs",
+      "exact_relevant_symbol": "observe009",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "3aa426d172f89231ceb701dff5bdd790ccd6862844a4ab8df073f3274c2406b3",
+      "reference_fixed_source": "// deterministic observability fixture 9\nexport function observe009(items){ const valid=items.filter(Number.isFinite); return valid.length?valid.reduce((a,b)=>a+b,0)/valid.length:null; }\n",
+      "reference_fixed_source_sha256": "7d881f34698ea5303129f7930211e837d35658edb4b55637472298ac045fdf75",
+      "behavioral_requirement": "average only finite numeric values and return null when none remain",
+      "hidden_files": [
+        {
+          "path": "test/case-9.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe009 } from '../src/case-9.mjs';\ntest('hidden safe_average 9',()=>{ assert.equal(observe009([Number.NaN]),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-010-89a6b5e32c93",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-10.mjs",
+      "exact_relevant_symbol": "observe010",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "21d8138bd2b89d0a648928dcbe4479c5a515c523222f1c4ed3221b1e7491bf00",
+      "reference_fixed_source": "// deterministic observability fixture 10\nexport function observe010(rows){ return Object.fromEntries(rows.map(row=>[row.id,row])); }\n",
+      "reference_fixed_source_sha256": "dd925a89cfa7f5c8e11e5cfe2915eff8d18b479fe14e2be89fbe922d1998d32a",
+      "behavioral_requirement": "index rows by id with the final row winning on duplicate ids",
+      "hidden_files": [
+        {
+          "path": "test/case-10.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe010 } from '../src/case-10.mjs';\ntest('hidden map_last_write 10',()=>{ assert.equal(observe010([{id:'a',v:1},{id:'a',v:3}]).a.v,3); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-011-804e1a4f3211",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-1.mjs",
+      "exact_relevant_symbol": "observe011",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "e145913cf6f4033181ad2f650056a8c54c296f95255b9a083ae39584d0933422",
+      "reference_fixed_source": "// deterministic observability fixture 11\nexport function observe011(index,length){ return ((index%length)+length)%length; }\n",
+      "reference_fixed_source_sha256": "0233e3f39f5f5a3c890b991b21cb25c060895528ab42e1926fc0613755285975",
+      "behavioral_requirement": "normalize negative indexes into the collection bounds",
+      "hidden_files": [
+        {
+          "path": "test/case-1.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe011 } from '../src/case-1.mjs';\ntest('hidden index_normalization 11',()=>{ assert.equal(observe011(-6,5),4); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-012-79f936c50e68",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-2.mjs",
+      "exact_relevant_symbol": "observe012",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "eeb8a0b6ed5860d5d62e5a1a923fc77d6eaefd16a736246cc41e99de59945988",
+      "reference_fixed_source": "// deterministic observability fixture 12\nexport function observe012(value,fallback){ return value??fallback; }\n",
+      "reference_fixed_source_sha256": "ee1dce27ce702432bf96282e04e957fdce15d617e5feda22eb4e05a0600a6797",
+      "behavioral_requirement": "preserve valid false and zero values while defaulting only nullish input",
+      "hidden_files": [
+        {
+          "path": "test/case-2.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe012 } from '../src/case-2.mjs';\ntest('hidden nullish_defaulting 12',()=>{ assert.equal(observe012(0,9),0); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-013-2881788c7a53",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-3.mjs",
+      "exact_relevant_symbol": "observe013",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "4f6b5b0161f16cd67c272916a73c1f12fd71142cef521474a613fb12cb5b7b67",
+      "reference_fixed_source": "// deterministic observability fixture 13\nexport function observe013(value,min,max){ return value>=min&&value<=max; }\n",
+      "reference_fixed_source_sha256": "99fafded496836e0eb64aed5a7c7d49b0b081e77444a8c9ed34b5cf22753b4b8",
+      "behavioral_requirement": "accept both inclusive boundaries of the registered interval",
+      "hidden_files": [
+        {
+          "path": "test/case-3.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe013 } from '../src/case-3.mjs';\ntest('hidden inclusive_boundary 13',()=>{ assert.equal(observe013(33,29,33),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-014-83378757da65",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-4.mjs",
+      "exact_relevant_symbol": "observe014",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "58283902e8945aa638fb48a1450916775f2df79aadba99916989bc0c12405d48",
+      "reference_fixed_source": "// deterministic observability fixture 14\nexport function observe014(text){ return text.split(/\\r?\\n/); }\n",
+      "reference_fixed_source_sha256": "2f6fdca57d244b9cfe4744123b2d554787b9b0804ce8c113e3868a5728cb804a",
+      "behavioral_requirement": "split both LF and CRLF records without retaining carriage returns",
+      "hidden_files": [
+        {
+          "path": "test/case-4.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe014 } from '../src/case-4.mjs';\ntest('hidden line_ending_contract 14',()=>{ assert.deepEqual(observe014('a\\nb'),['a','b']); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-015-cfd1d34f40a4",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-5.mjs",
+      "exact_relevant_symbol": "observe015",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "9ac004576fea2fcb223d3d365976401c620c6f2e30f2c4d42a4f465fd0fc94a6",
+      "reference_fixed_source": "// deterministic observability fixture 15\nexport function observe015(items){ return [...items].sort((a,b)=>a-b); }\n",
+      "reference_fixed_source_sha256": "b864e90c59bae430133ce1e0fee6f1ecdea8c987b423ad32467616d14b51f487",
+      "behavioral_requirement": "sort numeric measurements in ascending numeric order without mutating the input",
+      "hidden_files": [
+        {
+          "path": "test/case-5.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe015 } from '../src/case-5.mjs';\ntest('hidden numeric_ordering 15',()=>{ assert.deepEqual(observe015([-1,-10,3]),[-10,-1,3]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-016-0cb46f31855d",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-6.mjs",
+      "exact_relevant_symbol": "observe016",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "de4fd186af93b4cc03dfaf395005ad57d5f88b20177b8e363dc827fee93430a6",
+      "reference_fixed_source": "// deterministic observability fixture 16\nexport function observe016(items,n){ return n<=0?[]:items.slice(-n); }\n",
+      "reference_fixed_source_sha256": "5509f5d372c8ef493c3a3a0c304c43dcd043d05d2d44017b1a6458596cb16fd1",
+      "behavioral_requirement": "return the final N items and return an empty list for nonpositive N",
+      "hidden_files": [
+        {
+          "path": "test/case-6.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe016 } from '../src/case-6.mjs';\ntest('hidden tail_window 16',()=>{ assert.deepEqual(observe016([1,2],0),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-017-32b6628ca8a7",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-7.mjs",
+      "exact_relevant_symbol": "observe017",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "b020d3a9f39b1bc2abf27fa6ad80d6797cae20a2117c334c2f2610f0df9d28e9",
+      "reference_fixed_source": "// deterministic observability fixture 17\nexport function observe017(value){ const parsed=Number(value); return Number.isFinite(parsed)?parsed:null; }\n",
+      "reference_fixed_source_sha256": "fab50402954d5976973273b24928951759db361ad916b3f10abe0310c942f292",
+      "behavioral_requirement": "return null for non-finite numeric input and the parsed number otherwise",
+      "hidden_files": [
+        {
+          "path": "test/case-7.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe017 } from '../src/case-7.mjs';\ntest('hidden finite_number_contract 17',()=>{ assert.equal(observe017('Infinity'),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-018-65615fc5a626",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-8.mjs",
+      "exact_relevant_symbol": "observe018",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "821c238e3d5f97185a0a491e33bb6a52711a77d8dc17d88f091f47c6495aad39",
+      "reference_fixed_source": "// deterministic observability fixture 18\nexport function observe018(record,key){ return Object.prototype.hasOwnProperty.call(record,key); }\n",
+      "reference_fixed_source_sha256": "a342ae0010ed7c8d118ee112a0d0816cf433d2239c83f61938c05f84a7983e01",
+      "behavioral_requirement": "read only own properties and ignore prototype-chain values",
+      "hidden_files": [
+        {
+          "path": "test/case-8.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe018 } from '../src/case-8.mjs';\ntest('hidden record_ownership 18',()=>{ assert.equal(observe018({x:1},'x'),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-019-31a673e8d046",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-9.mjs",
+      "exact_relevant_symbol": "observe019",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "9092081fedc207b998f6f80f34ea6be7b3515b13ac52cf7f191c36bb87aaa0d8",
+      "reference_fixed_source": "// deterministic observability fixture 19\nexport function observe019(items){ const valid=items.filter(Number.isFinite); return valid.length?valid.reduce((a,b)=>a+b,0)/valid.length:null; }\n",
+      "reference_fixed_source_sha256": "96c0f849e37f69d493239165695a51ec72631514a5efad2b102dcc7d24708b07",
+      "behavioral_requirement": "average only finite numeric values and return null when none remain",
+      "hidden_files": [
+        {
+          "path": "test/case-9.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe019 } from '../src/case-9.mjs';\ntest('hidden safe_average 19',()=>{ assert.equal(observe019([Number.NaN]),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-020-db7bd01827a1",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-10.mjs",
+      "exact_relevant_symbol": "observe020",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "b8eeea37de540cdc78ae4a71166006c86fe29782d401c096880032a3c7cfc5e0",
+      "reference_fixed_source": "// deterministic observability fixture 20\nexport function observe020(rows){ return Object.fromEntries(rows.map(row=>[row.id,row])); }\n",
+      "reference_fixed_source_sha256": "c807597a0a79ea35828578e3bf2a603e66777a2091f90c3f3874bd317fc2d96d",
+      "behavioral_requirement": "index rows by id with the final row winning on duplicate ids",
+      "hidden_files": [
+        {
+          "path": "test/case-10.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe020 } from '../src/case-10.mjs';\ntest('hidden map_last_write 20',()=>{ assert.equal(observe020([{id:'a',v:1},{id:'a',v:3}]).a.v,3); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-021-e65381953077",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-1.mjs",
+      "exact_relevant_symbol": "observe021",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "5b26444868dffa00d7199ac008ed0e3a7fb0153981d16c6cac123ef503f52757",
+      "reference_fixed_source": "// deterministic observability fixture 21\nexport function observe021(index,length){ return ((index%length)+length)%length; }\n",
+      "reference_fixed_source_sha256": "a20aa57c0d0286163bb043cd57557a17aa73ed3a531055f18ea644d3c2761311",
+      "behavioral_requirement": "normalize negative indexes into the collection bounds",
+      "hidden_files": [
+        {
+          "path": "test/case-1.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe021 } from '../src/case-1.mjs';\ntest('hidden index_normalization 21',()=>{ assert.equal(observe021(-6,5),4); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-022-a60d51bf2ad2",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-2.mjs",
+      "exact_relevant_symbol": "observe022",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "49f0fe16542297ba2ea9d314e1ef9649e428e5f9307f89a2420b47b8b8eef603",
+      "reference_fixed_source": "// deterministic observability fixture 22\nexport function observe022(value,fallback){ return value??fallback; }\n",
+      "reference_fixed_source_sha256": "1049599620ac6d0ed2547d4a3f6091698f2d3db213a94bf1788f7b0f6e787d73",
+      "behavioral_requirement": "preserve valid false and zero values while defaulting only nullish input",
+      "hidden_files": [
+        {
+          "path": "test/case-2.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe022 } from '../src/case-2.mjs';\ntest('hidden nullish_defaulting 22',()=>{ assert.equal(observe022(0,9),0); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-023-147b5330e688",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-3.mjs",
+      "exact_relevant_symbol": "observe023",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "a4c801c8f93e3d87eb0c9946d90053987f545416bd5e299f576becbee5d1f4f1",
+      "reference_fixed_source": "// deterministic observability fixture 23\nexport function observe023(value,min,max){ return value>=min&&value<=max; }\n",
+      "reference_fixed_source_sha256": "5331815465069f72fa3c1503147fd6baac71cdd078c714292b8b3624c78a448d",
+      "behavioral_requirement": "accept both inclusive boundaries of the registered interval",
+      "hidden_files": [
+        {
+          "path": "test/case-3.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe023 } from '../src/case-3.mjs';\ntest('hidden inclusive_boundary 23',()=>{ assert.equal(observe023(40,36,40),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-024-bd3dc0ee3098",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-4.mjs",
+      "exact_relevant_symbol": "observe024",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "e9a7157f3d0fcd8e0914b21de347d5cee41d10b78e7c01c07739cbcfe102401c",
+      "reference_fixed_source": "// deterministic observability fixture 24\nexport function observe024(text){ return text.split(/\\r?\\n/); }\n",
+      "reference_fixed_source_sha256": "f17a59957e3ea093200b96570de9e9fc444c216c7a1e7d194fa9b24903028894",
+      "behavioral_requirement": "split both LF and CRLF records without retaining carriage returns",
+      "hidden_files": [
+        {
+          "path": "test/case-4.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe024 } from '../src/case-4.mjs';\ntest('hidden line_ending_contract 24',()=>{ assert.deepEqual(observe024('a\\nb'),['a','b']); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-025-e96dd6b931ca",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-5.mjs",
+      "exact_relevant_symbol": "observe025",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "5e34ffc25f28dee1453ef3daa194272be4705426369f45e67097ccd23a297d7d",
+      "reference_fixed_source": "// deterministic observability fixture 25\nexport function observe025(items){ return [...items].sort((a,b)=>a-b); }\n",
+      "reference_fixed_source_sha256": "15461fdf3baee39cfd7c5ed0b6bf3d299b9dabac5cd0480d4e9105e067a104b5",
+      "behavioral_requirement": "sort numeric measurements in ascending numeric order without mutating the input",
+      "hidden_files": [
+        {
+          "path": "test/case-5.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe025 } from '../src/case-5.mjs';\ntest('hidden numeric_ordering 25',()=>{ assert.deepEqual(observe025([-1,-10,3]),[-10,-1,3]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-026-3b314deac0e0",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-6.mjs",
+      "exact_relevant_symbol": "observe026",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "eb0c33b80c912518bf88b8d6d6aa057f3b76f625199fc418c4bb30a3949390d0",
+      "reference_fixed_source": "// deterministic observability fixture 26\nexport function observe026(items,n){ return n<=0?[]:items.slice(-n); }\n",
+      "reference_fixed_source_sha256": "0f20bad96f5fbe4d6d07aaf086f5cc79881c096d0540ea939767703ac6f7281a",
+      "behavioral_requirement": "return the final N items and return an empty list for nonpositive N",
+      "hidden_files": [
+        {
+          "path": "test/case-6.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe026 } from '../src/case-6.mjs';\ntest('hidden tail_window 26',()=>{ assert.deepEqual(observe026([1,2],0),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-027-bb732140f54c",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-7.mjs",
+      "exact_relevant_symbol": "observe027",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "6a34c66203b04abb877a6f241884e4ef65dcbaf117d9237b703e1f3e7437d7e4",
+      "reference_fixed_source": "// deterministic observability fixture 27\nexport function observe027(value){ const parsed=Number(value); return Number.isFinite(parsed)?parsed:null; }\n",
+      "reference_fixed_source_sha256": "aada6cdd72ba474aff6a79eaac086fed8eedfb3113d11b5b71cdb73f105403ea",
+      "behavioral_requirement": "return null for non-finite numeric input and the parsed number otherwise",
+      "hidden_files": [
+        {
+          "path": "test/case-7.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe027 } from '../src/case-7.mjs';\ntest('hidden finite_number_contract 27',()=>{ assert.equal(observe027('Infinity'),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-028-5f8bb831b102",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-8.mjs",
+      "exact_relevant_symbol": "observe028",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "25fc7c091ae32ecb8151959424df854751fb54865cbdd400a196bf4dc7a27242",
+      "reference_fixed_source": "// deterministic observability fixture 28\nexport function observe028(record,key){ return Object.prototype.hasOwnProperty.call(record,key); }\n",
+      "reference_fixed_source_sha256": "597c0842365d21783ee53ae97ef15c9954043580ea1f3925e0f27bd1e191ff45",
+      "behavioral_requirement": "read only own properties and ignore prototype-chain values",
+      "hidden_files": [
+        {
+          "path": "test/case-8.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe028 } from '../src/case-8.mjs';\ntest('hidden record_ownership 28',()=>{ assert.equal(observe028({x:1},'x'),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-029-9774d005afb1",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-9.mjs",
+      "exact_relevant_symbol": "observe029",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "5d42617f9e797bd3d5d0229aa88acade432fafd4c5feca038b6775c1d4478496",
+      "reference_fixed_source": "// deterministic observability fixture 29\nexport function observe029(items){ const valid=items.filter(Number.isFinite); return valid.length?valid.reduce((a,b)=>a+b,0)/valid.length:null; }\n",
+      "reference_fixed_source_sha256": "3b70c47ebf87e5549610201e698c1d9ebb12112a39f2ef2d60f7a9bfd8bba186",
+      "behavioral_requirement": "average only finite numeric values and return null when none remain",
+      "hidden_files": [
+        {
+          "path": "test/case-9.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe029 } from '../src/case-9.mjs';\ntest('hidden safe_average 29',()=>{ assert.equal(observe029([Number.NaN]),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-030-a4e5b8b42b10",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-10.mjs",
+      "exact_relevant_symbol": "observe030",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "03242bb67fd43029979367bf02ed4128f3860c1a0e1dc852524d20697f903815",
+      "reference_fixed_source": "// deterministic observability fixture 30\nexport function observe030(rows){ return Object.fromEntries(rows.map(row=>[row.id,row])); }\n",
+      "reference_fixed_source_sha256": "f4e03b2fa709cab384330f42d5657aa5ac08184f4a212da8f182c9a4ab774db1",
+      "behavioral_requirement": "index rows by id with the final row winning on duplicate ids",
+      "hidden_files": [
+        {
+          "path": "test/case-10.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe030 } from '../src/case-10.mjs';\ntest('hidden map_last_write 30',()=>{ assert.equal(observe030([{id:'a',v:1},{id:'a',v:3}]).a.v,3); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-031-81d52418dfbc",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-1.mjs",
+      "exact_relevant_symbol": "observe031",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "157fb5eac1cc8588094745b7dcaf6c039766ba14aa6988d153b426e653fbb4c0",
+      "reference_fixed_source": "// deterministic observability fixture 31\nexport function observe031(index,length){ return ((index%length)+length)%length; }\n",
+      "reference_fixed_source_sha256": "9578cf6ade4a0e127d27c4275f27fa7ab2bfd05dc2299778770effa65029c5ce",
+      "behavioral_requirement": "normalize negative indexes into the collection bounds",
+      "hidden_files": [
+        {
+          "path": "test/case-1.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe031 } from '../src/case-1.mjs';\ntest('hidden index_normalization 31',()=>{ assert.equal(observe031(-6,5),4); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-032-9b5893b7b4f0",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-2.mjs",
+      "exact_relevant_symbol": "observe032",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "dba43f3fb4e71a1b392c8e05bf997622968083df1ceaad2d02c80f1c77f6cfd4",
+      "reference_fixed_source": "// deterministic observability fixture 32\nexport function observe032(value,fallback){ return value??fallback; }\n",
+      "reference_fixed_source_sha256": "fb04582d5fa616889bc6d874d677b64e642cd30d0e8d2487fd5a62797ef4f097",
+      "behavioral_requirement": "preserve valid false and zero values while defaulting only nullish input",
+      "hidden_files": [
+        {
+          "path": "test/case-2.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe032 } from '../src/case-2.mjs';\ntest('hidden nullish_defaulting 32',()=>{ assert.equal(observe032(0,9),0); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-033-4dced884ffe6",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-3.mjs",
+      "exact_relevant_symbol": "observe033",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "a0e808b704724c7da47b16ddc7d4e2d2bac70340ff7426e72df36629c7eaef7d",
+      "reference_fixed_source": "// deterministic observability fixture 33\nexport function observe033(value,min,max){ return value>=min&&value<=max; }\n",
+      "reference_fixed_source_sha256": "dce7aeaec7c1954faeaaa7c9d06d8dd8c742753505f92c199d99ae806bdddd7b",
+      "behavioral_requirement": "accept both inclusive boundaries of the registered interval",
+      "hidden_files": [
+        {
+          "path": "test/case-3.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe033 } from '../src/case-3.mjs';\ntest('hidden inclusive_boundary 33',()=>{ assert.equal(observe033(47,43,47),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-034-e3a34939d583",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-4.mjs",
+      "exact_relevant_symbol": "observe034",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "4fe0c5a3b58e23cc309967291a118d107c9b1eef8aace59ecaa0f0d171aa73e3",
+      "reference_fixed_source": "// deterministic observability fixture 34\nexport function observe034(text){ return text.split(/\\r?\\n/); }\n",
+      "reference_fixed_source_sha256": "a14b7a9e6f831476d38c18902e13669b17ae9766394d3b48abf3e8dc482638e5",
+      "behavioral_requirement": "split both LF and CRLF records without retaining carriage returns",
+      "hidden_files": [
+        {
+          "path": "test/case-4.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe034 } from '../src/case-4.mjs';\ntest('hidden line_ending_contract 34',()=>{ assert.deepEqual(observe034('a\\nb'),['a','b']); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-035-8b9eb4357dad",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-5.mjs",
+      "exact_relevant_symbol": "observe035",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "9c45ed3759f739bec1bc546e11558a75ed12d6c937cafa7884154bae781e6ad2",
+      "reference_fixed_source": "// deterministic observability fixture 35\nexport function observe035(items){ return [...items].sort((a,b)=>a-b); }\n",
+      "reference_fixed_source_sha256": "b7f033ce291e1e3953b759dda5d022c3b84198e975f7887137eb981910ff7ca1",
+      "behavioral_requirement": "sort numeric measurements in ascending numeric order without mutating the input",
+      "hidden_files": [
+        {
+          "path": "test/case-5.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe035 } from '../src/case-5.mjs';\ntest('hidden numeric_ordering 35',()=>{ assert.deepEqual(observe035([-1,-10,3]),[-10,-1,3]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-036-d1eb1f5d3607",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-6.mjs",
+      "exact_relevant_symbol": "observe036",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "cbb0547eb57cea38b4aeb1694498fe2744671132cb9fa0334d774543d49b0b82",
+      "reference_fixed_source": "// deterministic observability fixture 36\nexport function observe036(items,n){ return n<=0?[]:items.slice(-n); }\n",
+      "reference_fixed_source_sha256": "230e318fc23b1beb6f2dfa59ff29f6942387c236191529b952671713f5e3bb74",
+      "behavioral_requirement": "return the final N items and return an empty list for nonpositive N",
+      "hidden_files": [
+        {
+          "path": "test/case-6.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe036 } from '../src/case-6.mjs';\ntest('hidden tail_window 36',()=>{ assert.deepEqual(observe036([1,2],0),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-037-c3b0023ba8ae",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-7.mjs",
+      "exact_relevant_symbol": "observe037",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "0f8fcb699c93cecbd9fa98925ee71fa4aae0f07bfbd4c341d400a5b5a1d7218c",
+      "reference_fixed_source": "// deterministic observability fixture 37\nexport function observe037(value){ const parsed=Number(value); return Number.isFinite(parsed)?parsed:null; }\n",
+      "reference_fixed_source_sha256": "0fe6602f9d46c9ae738c3b68b6a5aa47c3154ff1740c9d7b82e96767083f0589",
+      "behavioral_requirement": "return null for non-finite numeric input and the parsed number otherwise",
+      "hidden_files": [
+        {
+          "path": "test/case-7.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe037 } from '../src/case-7.mjs';\ntest('hidden finite_number_contract 37',()=>{ assert.equal(observe037('Infinity'),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-038-bfcc45d9a4be",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-8.mjs",
+      "exact_relevant_symbol": "observe038",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "a00d1f187eac3e59b28e8d60c6d31f5c22dbdbc61af403a9b2eb8bcaf954a091",
+      "reference_fixed_source": "// deterministic observability fixture 38\nexport function observe038(record,key){ return Object.prototype.hasOwnProperty.call(record,key); }\n",
+      "reference_fixed_source_sha256": "0227a9e80ef4a70095506fd4cd49a530fe67748f3fae6f1a30c02dc1d6580cff",
+      "behavioral_requirement": "read only own properties and ignore prototype-chain values",
+      "hidden_files": [
+        {
+          "path": "test/case-8.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe038 } from '../src/case-8.mjs';\ntest('hidden record_ownership 38',()=>{ assert.equal(observe038({x:1},'x'),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-039-536bf0f91e73",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-9.mjs",
+      "exact_relevant_symbol": "observe039",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "2d77a370e4ae7ee70556e55d59386d2c879668e007c71ca83f49222b4272058b",
+      "reference_fixed_source": "// deterministic observability fixture 39\nexport function observe039(items){ const valid=items.filter(Number.isFinite); return valid.length?valid.reduce((a,b)=>a+b,0)/valid.length:null; }\n",
+      "reference_fixed_source_sha256": "dda7449057194edfbd6f513741394381284ac8540ae13756cf188de16efe6cd6",
+      "behavioral_requirement": "average only finite numeric values and return null when none remain",
+      "hidden_files": [
+        {
+          "path": "test/case-9.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe039 } from '../src/case-9.mjs';\ntest('hidden safe_average 39',()=>{ assert.equal(observe039([Number.NaN]),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-040-6b51847cb81b",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-10.mjs",
+      "exact_relevant_symbol": "observe040",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "fe8607be9d8b22de7ac910c0cd92a894a161b3c838f4d53bfdfae9c7113435b9",
+      "reference_fixed_source": "// deterministic observability fixture 40\nexport function observe040(rows){ return Object.fromEntries(rows.map(row=>[row.id,row])); }\n",
+      "reference_fixed_source_sha256": "e3dd64b9f321c571686bf4b24f91de4c037991c306607e363383320e79b4faac",
+      "behavioral_requirement": "index rows by id with the final row winning on duplicate ids",
+      "hidden_files": [
+        {
+          "path": "test/case-10.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe040 } from '../src/case-10.mjs';\ntest('hidden map_last_write 40',()=>{ assert.equal(observe040([{id:'a',v:1},{id:'a',v:3}]).a.v,3); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-041-725aade32f52",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-1.mjs",
+      "exact_relevant_symbol": "observe041",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "b347e166154b42c1a8df26466356b5abcb16078f659ac4ff5c2b333435710c30",
+      "reference_fixed_source": "// deterministic observability fixture 41\nexport function observe041(index,length){ return ((index%length)+length)%length; }\n",
+      "reference_fixed_source_sha256": "c658584f69d805476ac9bdbee1be34ac31f4bc9ceae04f799d2422889b3c9cef",
+      "behavioral_requirement": "normalize negative indexes into the collection bounds",
+      "hidden_files": [
+        {
+          "path": "test/case-1.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe041 } from '../src/case-1.mjs';\ntest('hidden index_normalization 41',()=>{ assert.equal(observe041(-6,5),4); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-042-6364a4725fd3",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-2.mjs",
+      "exact_relevant_symbol": "observe042",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "2a1366cec58e0525f92aa05934e898fcd6b26600e4ddf1a291712477379d6d77",
+      "reference_fixed_source": "// deterministic observability fixture 42\nexport function observe042(value,fallback){ return value??fallback; }\n",
+      "reference_fixed_source_sha256": "70807bd712ae0e3db06658934890c0856a0ac6e3e6299a68369da7baf76e4ad2",
+      "behavioral_requirement": "preserve valid false and zero values while defaulting only nullish input",
+      "hidden_files": [
+        {
+          "path": "test/case-2.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe042 } from '../src/case-2.mjs';\ntest('hidden nullish_defaulting 42',()=>{ assert.equal(observe042(0,9),0); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-043-7b78017d6730",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-3.mjs",
+      "exact_relevant_symbol": "observe043",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "7efd59a164176f8a6a7d50629cbceda2f9bb274bac9a15a988b0a45ad5f2fcbf",
+      "reference_fixed_source": "// deterministic observability fixture 43\nexport function observe043(value,min,max){ return value>=min&&value<=max; }\n",
+      "reference_fixed_source_sha256": "11d2c27536b96030cb03ae965e30511db34e7532d90784ef11ca4f3c1781a47d",
+      "behavioral_requirement": "accept both inclusive boundaries of the registered interval",
+      "hidden_files": [
+        {
+          "path": "test/case-3.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe043 } from '../src/case-3.mjs';\ntest('hidden inclusive_boundary 43',()=>{ assert.equal(observe043(54,50,54),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-044-48803af19af2",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-4.mjs",
+      "exact_relevant_symbol": "observe044",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "78cd3603315c48a29ff702b4db563631a752983c6a08ec3713e59ec18886579b",
+      "reference_fixed_source": "// deterministic observability fixture 44\nexport function observe044(text){ return text.split(/\\r?\\n/); }\n",
+      "reference_fixed_source_sha256": "a75daaae33ef496a661806ea6ba3ea618ee70a1d318e459f67555889b2c66e30",
+      "behavioral_requirement": "split both LF and CRLF records without retaining carriage returns",
+      "hidden_files": [
+        {
+          "path": "test/case-4.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe044 } from '../src/case-4.mjs';\ntest('hidden line_ending_contract 44',()=>{ assert.deepEqual(observe044('a\\nb'),['a','b']); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-045-4290a4816e53",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-5.mjs",
+      "exact_relevant_symbol": "observe045",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "744323f687364d1447bafe9c7e0aa0368ff2eda4b6a707b9f27494ccee588d66",
+      "reference_fixed_source": "// deterministic observability fixture 45\nexport function observe045(items){ return [...items].sort((a,b)=>a-b); }\n",
+      "reference_fixed_source_sha256": "cb9a487a7ef10873af4fa07efa6f6053cbff033c2bad0ad838ac460755ac691f",
+      "behavioral_requirement": "sort numeric measurements in ascending numeric order without mutating the input",
+      "hidden_files": [
+        {
+          "path": "test/case-5.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe045 } from '../src/case-5.mjs';\ntest('hidden numeric_ordering 45',()=>{ assert.deepEqual(observe045([-1,-10,3]),[-10,-1,3]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-046-2a37664831db",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-6.mjs",
+      "exact_relevant_symbol": "observe046",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "16a49b92cc65f13fcf432b319372973085c4aca9e76b7ce31585c9c1c8c31e61",
+      "reference_fixed_source": "// deterministic observability fixture 46\nexport function observe046(items,n){ return n<=0?[]:items.slice(-n); }\n",
+      "reference_fixed_source_sha256": "36d257d65690a4473f597097046ca114cd2082ac864f8e9870b54b814131ac25",
+      "behavioral_requirement": "return the final N items and return an empty list for nonpositive N",
+      "hidden_files": [
+        {
+          "path": "test/case-6.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe046 } from '../src/case-6.mjs';\ntest('hidden tail_window 46',()=>{ assert.deepEqual(observe046([1,2],0),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-047-18459c11f1ea",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-7.mjs",
+      "exact_relevant_symbol": "observe047",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "79c85da153069db6b085cbb1bc25eeaf1afae04c7f66934f6267f09cf7a8f65e",
+      "reference_fixed_source": "// deterministic observability fixture 47\nexport function observe047(value){ const parsed=Number(value); return Number.isFinite(parsed)?parsed:null; }\n",
+      "reference_fixed_source_sha256": "32afb825b050e5a96ea92d5ea86f9b5f531947cd76aef36ce9f6f3a4aafc9dc3",
+      "behavioral_requirement": "return null for non-finite numeric input and the parsed number otherwise",
+      "hidden_files": [
+        {
+          "path": "test/case-7.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe047 } from '../src/case-7.mjs';\ntest('hidden finite_number_contract 47',()=>{ assert.equal(observe047('Infinity'),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-048-97af7f20b32a",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-8.mjs",
+      "exact_relevant_symbol": "observe048",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "2825fa437c863dc8b61d673b7add2b931dabd76d3fa3adc858ca39773298ea01",
+      "reference_fixed_source": "// deterministic observability fixture 48\nexport function observe048(record,key){ return Object.prototype.hasOwnProperty.call(record,key); }\n",
+      "reference_fixed_source_sha256": "867e1fcdb7e829e38e0c0c37b8c1b25c608275a03dadfe03e79cd0f8f02460d3",
+      "behavioral_requirement": "read only own properties and ignore prototype-chain values",
+      "hidden_files": [
+        {
+          "path": "test/case-8.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe048 } from '../src/case-8.mjs';\ntest('hidden record_ownership 48',()=>{ assert.equal(observe048({x:1},'x'),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-049-b54a588e12b6",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-9.mjs",
+      "exact_relevant_symbol": "observe049",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "9c1186433cfd5de4632f5b4bad6a6f5fe06fb14fadafaa226f667fdd2056dd2c",
+      "reference_fixed_source": "// deterministic observability fixture 49\nexport function observe049(items){ const valid=items.filter(Number.isFinite); return valid.length?valid.reduce((a,b)=>a+b,0)/valid.length:null; }\n",
+      "reference_fixed_source_sha256": "0d84b914d8e93efe22d1d38e4f20c77b0f7b1b5d0c84d10967d4ca45b8e806f5",
+      "behavioral_requirement": "average only finite numeric values and return null when none remain",
+      "hidden_files": [
+        {
+          "path": "test/case-9.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe049 } from '../src/case-9.mjs';\ntest('hidden safe_average 49',()=>{ assert.equal(observe049([Number.NaN]),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-050-174077bd69d6",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-10.mjs",
+      "exact_relevant_symbol": "observe050",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "b3714b99ce09ac5d2386cd53c1e925f918d3538c4e982b1ab85c7d85804f119d",
+      "reference_fixed_source": "// deterministic observability fixture 50\nexport function observe050(rows){ return Object.fromEntries(rows.map(row=>[row.id,row])); }\n",
+      "reference_fixed_source_sha256": "ff848a7b9f4389bcacfa8ff6044dc6a633d0411fa53cd72873835d21f3e2efec",
+      "behavioral_requirement": "index rows by id with the final row winning on duplicate ids",
+      "hidden_files": [
+        {
+          "path": "test/case-10.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe050 } from '../src/case-10.mjs';\ntest('hidden map_last_write 50',()=>{ assert.equal(observe050([{id:'a',v:1},{id:'a',v:3}]).a.v,3); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-051-c58ddebf7726",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-1.mjs",
+      "exact_relevant_symbol": "observe051",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "7f88cb07083ee5aa9e52bb706f4c19ad7bac9c946fc6170ea1d46c21bef7582f",
+      "reference_fixed_source": "// deterministic observability fixture 51\nexport function observe051(index,length){ return ((index%length)+length)%length; }\n",
+      "reference_fixed_source_sha256": "abe6155232cd3257a23fd0b23649106874adc219042916f21d94764968b3405b",
+      "behavioral_requirement": "normalize negative indexes into the collection bounds",
+      "hidden_files": [
+        {
+          "path": "test/case-1.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe051 } from '../src/case-1.mjs';\ntest('hidden index_normalization 51',()=>{ assert.equal(observe051(-6,5),4); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-052-14351bb8fbfb",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-2.mjs",
+      "exact_relevant_symbol": "observe052",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "62cc359efbe33da562d14db1b1654c92716984827d1c4320f9bdb19bf8e4614e",
+      "reference_fixed_source": "// deterministic observability fixture 52\nexport function observe052(value,fallback){ return value??fallback; }\n",
+      "reference_fixed_source_sha256": "a86cfc981094ff6eae272ddbf3a049107465b9d58c31554c9df69453c84473a3",
+      "behavioral_requirement": "preserve valid false and zero values while defaulting only nullish input",
+      "hidden_files": [
+        {
+          "path": "test/case-2.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe052 } from '../src/case-2.mjs';\ntest('hidden nullish_defaulting 52',()=>{ assert.equal(observe052(0,9),0); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-053-8b08911482dd",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-3.mjs",
+      "exact_relevant_symbol": "observe053",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "4ec7147ec8e5872917814f11348c7d8d66fc56bc88d0c9dc07f542afd5e9082e",
+      "reference_fixed_source": "// deterministic observability fixture 53\nexport function observe053(value,min,max){ return value>=min&&value<=max; }\n",
+      "reference_fixed_source_sha256": "44cb9052abbaf8a16fe1a2c1925379efc6b7b9c9588f138da6b6f5d60713ea06",
+      "behavioral_requirement": "accept both inclusive boundaries of the registered interval",
+      "hidden_files": [
+        {
+          "path": "test/case-3.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe053 } from '../src/case-3.mjs';\ntest('hidden inclusive_boundary 53',()=>{ assert.equal(observe053(61,57,61),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-054-c945021f60cd",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-4.mjs",
+      "exact_relevant_symbol": "observe054",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "aa01214bb653507b366bc97dd07c4b20c6dd537df747bb46fc7f246d5414245d",
+      "reference_fixed_source": "// deterministic observability fixture 54\nexport function observe054(text){ return text.split(/\\r?\\n/); }\n",
+      "reference_fixed_source_sha256": "599c423d5e0cac5432a13f36b243448124f15d03ed9760d7220d1d3073e450fc",
+      "behavioral_requirement": "split both LF and CRLF records without retaining carriage returns",
+      "hidden_files": [
+        {
+          "path": "test/case-4.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe054 } from '../src/case-4.mjs';\ntest('hidden line_ending_contract 54',()=>{ assert.deepEqual(observe054('a\\nb'),['a','b']); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-055-9d51671afa66",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-5.mjs",
+      "exact_relevant_symbol": "observe055",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "470f79daa62004163219081e1bb273fbb9e61e901c11090abe2b0c486b23de0e",
+      "reference_fixed_source": "// deterministic observability fixture 55\nexport function observe055(items){ return [...items].sort((a,b)=>a-b); }\n",
+      "reference_fixed_source_sha256": "252327e32a70d8d7e1a724cc677c38330a8dc9774b2581b0399214ab0bb261d1",
+      "behavioral_requirement": "sort numeric measurements in ascending numeric order without mutating the input",
+      "hidden_files": [
+        {
+          "path": "test/case-5.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe055 } from '../src/case-5.mjs';\ntest('hidden numeric_ordering 55',()=>{ assert.deepEqual(observe055([-1,-10,3]),[-10,-1,3]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-056-2f5190d49744",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-6.mjs",
+      "exact_relevant_symbol": "observe056",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "b5f19cede99b270d690b15aa8bcd7ca2500473746d9893b6d811453e3994a20e",
+      "reference_fixed_source": "// deterministic observability fixture 56\nexport function observe056(items,n){ return n<=0?[]:items.slice(-n); }\n",
+      "reference_fixed_source_sha256": "c38b676f91fb7f4a491590b20e570ac47e5a11810246bd9f0f08db0f953fde72",
+      "behavioral_requirement": "return the final N items and return an empty list for nonpositive N",
+      "hidden_files": [
+        {
+          "path": "test/case-6.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe056 } from '../src/case-6.mjs';\ntest('hidden tail_window 56',()=>{ assert.deepEqual(observe056([1,2],0),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-057-f1cdafd46667",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-7.mjs",
+      "exact_relevant_symbol": "observe057",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "87d117b6e50afc84d33cd44de472c3fe9c521c86320c636a470d414cc1257980",
+      "reference_fixed_source": "// deterministic observability fixture 57\nexport function observe057(value){ const parsed=Number(value); return Number.isFinite(parsed)?parsed:null; }\n",
+      "reference_fixed_source_sha256": "7963d8eb1d649e171a7749944f941e6b804742ef6e23766b88d3e4ee3f2db192",
+      "behavioral_requirement": "return null for non-finite numeric input and the parsed number otherwise",
+      "hidden_files": [
+        {
+          "path": "test/case-7.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe057 } from '../src/case-7.mjs';\ntest('hidden finite_number_contract 57',()=>{ assert.equal(observe057('Infinity'),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-058-8b0b45f914ed",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-8.mjs",
+      "exact_relevant_symbol": "observe058",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "da34aa61a68e113d579e596a389b450cc3d5ad06d9bb9c9f56ece2844855c7b4",
+      "reference_fixed_source": "// deterministic observability fixture 58\nexport function observe058(record,key){ return Object.prototype.hasOwnProperty.call(record,key); }\n",
+      "reference_fixed_source_sha256": "2f901498900a25e911590016f47f534d3b935694931c9f20e71805847a51853a",
+      "behavioral_requirement": "read only own properties and ignore prototype-chain values",
+      "hidden_files": [
+        {
+          "path": "test/case-8.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe058 } from '../src/case-8.mjs';\ntest('hidden record_ownership 58',()=>{ assert.equal(observe058({x:1},'x'),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-059-1640a8820419",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-9.mjs",
+      "exact_relevant_symbol": "observe059",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "b4d59ce6438517193bae9098cbb5f48e64dd8790f13dfc0665467d9e65b794f6",
+      "reference_fixed_source": "// deterministic observability fixture 59\nexport function observe059(items){ const valid=items.filter(Number.isFinite); return valid.length?valid.reduce((a,b)=>a+b,0)/valid.length:null; }\n",
+      "reference_fixed_source_sha256": "9381878da8e563be0cf4cc0a8936020fe6188cc69d009956970a1bda103efaf9",
+      "behavioral_requirement": "average only finite numeric values and return null when none remain",
+      "hidden_files": [
+        {
+          "path": "test/case-9.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe059 } from '../src/case-9.mjs';\ntest('hidden safe_average 59',()=>{ assert.equal(observe059([Number.NaN]),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-060-4ed5b0cfc016",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-10.mjs",
+      "exact_relevant_symbol": "observe060",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "bb4e791bec5407b8a1a0d1e48462263dac2ea3cf4ec9d57109d5968f8db340d1",
+      "reference_fixed_source": "// deterministic observability fixture 60\nexport function observe060(rows){ return Object.fromEntries(rows.map(row=>[row.id,row])); }\n",
+      "reference_fixed_source_sha256": "76f3a85e914f5d008b173118d7a672cae75500fe66f3629abc13dce2e2659329",
+      "behavioral_requirement": "index rows by id with the final row winning on duplicate ids",
+      "hidden_files": [
+        {
+          "path": "test/case-10.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe060 } from '../src/case-10.mjs';\ntest('hidden map_last_write 60',()=>{ assert.equal(observe060([{id:'a',v:1},{id:'a',v:3}]).a.v,3); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-061-f370e35f0d7e",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-1.mjs",
+      "exact_relevant_symbol": "observe061",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "30476fdbb0e3c84e2dd5e285285b21caaf5adb1f68aef624452c963acfd3ae5e",
+      "reference_fixed_source": "// deterministic observability fixture 61\nexport function observe061(index,length){ return ((index%length)+length)%length; }\n",
+      "reference_fixed_source_sha256": "53a1a30347cf3e78bb9a50fca69b03d59965f3a1fed3fc24a074b3764c4a0465",
+      "behavioral_requirement": "normalize negative indexes into the collection bounds",
+      "hidden_files": [
+        {
+          "path": "test/case-1.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe061 } from '../src/case-1.mjs';\ntest('hidden index_normalization 61',()=>{ assert.equal(observe061(-6,5),4); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-062-42779a10b3cd",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-2.mjs",
+      "exact_relevant_symbol": "observe062",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "731eea80875ddeaf17ab0f431faaba0c380cd874a88deca6217f31c6221d03ff",
+      "reference_fixed_source": "// deterministic observability fixture 62\nexport function observe062(value,fallback){ return value??fallback; }\n",
+      "reference_fixed_source_sha256": "b6ebdc9f0376a83a0be59f593fec466ef3feaa20dc1eb4544e1601692b7a0a61",
+      "behavioral_requirement": "preserve valid false and zero values while defaulting only nullish input",
+      "hidden_files": [
+        {
+          "path": "test/case-2.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe062 } from '../src/case-2.mjs';\ntest('hidden nullish_defaulting 62',()=>{ assert.equal(observe062(0,9),0); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-063-e41f167d5fd3",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-3.mjs",
+      "exact_relevant_symbol": "observe063",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "828f7ac5cb86cd7af8c4a782c86864d4142ecbf45c6d9b76787be175b3c06a69",
+      "reference_fixed_source": "// deterministic observability fixture 63\nexport function observe063(value,min,max){ return value>=min&&value<=max; }\n",
+      "reference_fixed_source_sha256": "f4a84f640eaf9cad8dddc313664e2cc6d688e2b749adc30a5ce5d3cfee0cae10",
+      "behavioral_requirement": "accept both inclusive boundaries of the registered interval",
+      "hidden_files": [
+        {
+          "path": "test/case-3.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe063 } from '../src/case-3.mjs';\ntest('hidden inclusive_boundary 63',()=>{ assert.equal(observe063(68,64,68),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-064-fc70dc8f7482",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-4.mjs",
+      "exact_relevant_symbol": "observe064",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "a755894fc07ebbd5085c0ed5e9af50193c48f155f6453319ff2344b2aca8aadc",
+      "reference_fixed_source": "// deterministic observability fixture 64\nexport function observe064(text){ return text.split(/\\r?\\n/); }\n",
+      "reference_fixed_source_sha256": "20129e0975e66a5500285a0b1640b04fd87430bfe2761e25d2556adc72a66987",
+      "behavioral_requirement": "split both LF and CRLF records without retaining carriage returns",
+      "hidden_files": [
+        {
+          "path": "test/case-4.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe064 } from '../src/case-4.mjs';\ntest('hidden line_ending_contract 64',()=>{ assert.deepEqual(observe064('a\\nb'),['a','b']); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-065-e239c7c8f5bf",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-5.mjs",
+      "exact_relevant_symbol": "observe065",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "164964392d368fb50d236492cb915d0a7db3b08c1aadf018e03b457fa7d8dee7",
+      "reference_fixed_source": "// deterministic observability fixture 65\nexport function observe065(items){ return [...items].sort((a,b)=>a-b); }\n",
+      "reference_fixed_source_sha256": "da4de75f0fd8b4e53c3278eb6aaecc6ac47be6858d6d4fea1508e6eab06b1b79",
+      "behavioral_requirement": "sort numeric measurements in ascending numeric order without mutating the input",
+      "hidden_files": [
+        {
+          "path": "test/case-5.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe065 } from '../src/case-5.mjs';\ntest('hidden numeric_ordering 65',()=>{ assert.deepEqual(observe065([-1,-10,3]),[-10,-1,3]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-066-8209c4852d91",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-6.mjs",
+      "exact_relevant_symbol": "observe066",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "d6c48516485c31bfdaca0d3250be15864dd312e80c71cf9cadb964103e8b763d",
+      "reference_fixed_source": "// deterministic observability fixture 66\nexport function observe066(items,n){ return n<=0?[]:items.slice(-n); }\n",
+      "reference_fixed_source_sha256": "95008d1be9e7ec618974ab1fee2643cfdabd8bdb1e77322a4c64afd8d5f256fa",
+      "behavioral_requirement": "return the final N items and return an empty list for nonpositive N",
+      "hidden_files": [
+        {
+          "path": "test/case-6.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe066 } from '../src/case-6.mjs';\ntest('hidden tail_window 66',()=>{ assert.deepEqual(observe066([1,2],0),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-067-152f8cd81a26",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-7.mjs",
+      "exact_relevant_symbol": "observe067",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "06834e13f515e32547a3b1b5383e8696665d45c229da8e8decff4c8b71d6e507",
+      "reference_fixed_source": "// deterministic observability fixture 67\nexport function observe067(value){ const parsed=Number(value); return Number.isFinite(parsed)?parsed:null; }\n",
+      "reference_fixed_source_sha256": "5553a1f0df0db46e2bdadc2cb73f420892c3681c843f1db01385d54dde3224f1",
+      "behavioral_requirement": "return null for non-finite numeric input and the parsed number otherwise",
+      "hidden_files": [
+        {
+          "path": "test/case-7.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe067 } from '../src/case-7.mjs';\ntest('hidden finite_number_contract 67',()=>{ assert.equal(observe067('Infinity'),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-068-519f762e6823",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-8.mjs",
+      "exact_relevant_symbol": "observe068",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "8878ec9c8e7590f17500dec1c7a0a18e3d361add5d68714f2aedd9f4dd32fd4b",
+      "reference_fixed_source": "// deterministic observability fixture 68\nexport function observe068(record,key){ return Object.prototype.hasOwnProperty.call(record,key); }\n",
+      "reference_fixed_source_sha256": "e24ee08fd8bf77dd3b6a11c701b070d916d42cba227b609447b653a195d102bc",
+      "behavioral_requirement": "read only own properties and ignore prototype-chain values",
+      "hidden_files": [
+        {
+          "path": "test/case-8.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe068 } from '../src/case-8.mjs';\ntest('hidden record_ownership 68',()=>{ assert.equal(observe068({x:1},'x'),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-069-1961703aa2a9",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-9.mjs",
+      "exact_relevant_symbol": "observe069",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "aa8f926b607811e548ec85c5e356d025a2b4a83508a13a5b8749dbb3c4c8e64a",
+      "reference_fixed_source": "// deterministic observability fixture 69\nexport function observe069(items){ const valid=items.filter(Number.isFinite); return valid.length?valid.reduce((a,b)=>a+b,0)/valid.length:null; }\n",
+      "reference_fixed_source_sha256": "09f17b50273bb0b1aa911f6686d18382320b4f90818683f23b5f4e56dc606405",
+      "behavioral_requirement": "average only finite numeric values and return null when none remain",
+      "hidden_files": [
+        {
+          "path": "test/case-9.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe069 } from '../src/case-9.mjs';\ntest('hidden safe_average 69',()=>{ assert.equal(observe069([Number.NaN]),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-070-56e763ab65ad",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-10.mjs",
+      "exact_relevant_symbol": "observe070",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "a8f9da5245c5abdb74154d5b6523fc5244607f07242045188187e88f29e7b2ac",
+      "reference_fixed_source": "// deterministic observability fixture 70\nexport function observe070(rows){ return Object.fromEntries(rows.map(row=>[row.id,row])); }\n",
+      "reference_fixed_source_sha256": "de19988c99baf23eb5a8743d0721b03d8baba03b1357ded91afe56bac72f86cb",
+      "behavioral_requirement": "index rows by id with the final row winning on duplicate ids",
+      "hidden_files": [
+        {
+          "path": "test/case-10.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe070 } from '../src/case-10.mjs';\ntest('hidden map_last_write 70',()=>{ assert.equal(observe070([{id:'a',v:1},{id:'a',v:3}]).a.v,3); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-071-183a479177fd",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-1.mjs",
+      "exact_relevant_symbol": "observe071",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "30198e97ba3df65897e6c597d1cc0b9ff390785cae1f0486361a15b9351e7b9e",
+      "reference_fixed_source": "// deterministic observability fixture 71\nexport function observe071(index,length){ return ((index%length)+length)%length; }\n",
+      "reference_fixed_source_sha256": "4a1f76d72159ea1c5defc013b3f5fec1b7326f5845e95b0839dfe9fc5bb05493",
+      "behavioral_requirement": "normalize negative indexes into the collection bounds",
+      "hidden_files": [
+        {
+          "path": "test/case-1.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe071 } from '../src/case-1.mjs';\ntest('hidden index_normalization 71',()=>{ assert.equal(observe071(-6,5),4); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-1.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-072-fabb64d3b3bb",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-2.mjs",
+      "exact_relevant_symbol": "observe072",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "f023f687f54cbc6c474eb124bcd85fae5044201a39330a2b3c20e0ee1d365e44",
+      "reference_fixed_source": "// deterministic observability fixture 72\nexport function observe072(value,fallback){ return value??fallback; }\n",
+      "reference_fixed_source_sha256": "e92a0dd4b00e852f8dc7375761372871d3fa6aabe52de0db016f62ec8167f1ce",
+      "behavioral_requirement": "preserve valid false and zero values while defaulting only nullish input",
+      "hidden_files": [
+        {
+          "path": "test/case-2.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe072 } from '../src/case-2.mjs';\ntest('hidden nullish_defaulting 72',()=>{ assert.equal(observe072(0,9),0); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-2.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-073-5f9b65db9598",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-3.mjs",
+      "exact_relevant_symbol": "observe073",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "7e25b69bcc7d7a9cb391b77627220bb4b38c17960286a38d590e74c8b68ce19d",
+      "reference_fixed_source": "// deterministic observability fixture 73\nexport function observe073(value,min,max){ return value>=min&&value<=max; }\n",
+      "reference_fixed_source_sha256": "fcffa648ad50bcae90f7519729ee41e8646efc1cd8882b255ac8f4a8be6d123c",
+      "behavioral_requirement": "accept both inclusive boundaries of the registered interval",
+      "hidden_files": [
+        {
+          "path": "test/case-3.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe073 } from '../src/case-3.mjs';\ntest('hidden inclusive_boundary 73',()=>{ assert.equal(observe073(75,71,75),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-3.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-074-addfb1f3a123",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-4.mjs",
+      "exact_relevant_symbol": "observe074",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "45aa0bb96953f8098e2ffa5609649b0c015bfd933cc169a1d4f98bf7d1267414",
+      "reference_fixed_source": "// deterministic observability fixture 74\nexport function observe074(text){ return text.split(/\\r?\\n/); }\n",
+      "reference_fixed_source_sha256": "8d78bcc5c76f8c210d586abdfafef0bbc1388f1567e9cd61553694f069281e36",
+      "behavioral_requirement": "split both LF and CRLF records without retaining carriage returns",
+      "hidden_files": [
+        {
+          "path": "test/case-4.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe074 } from '../src/case-4.mjs';\ntest('hidden line_ending_contract 74',()=>{ assert.deepEqual(observe074('a\\nb'),['a','b']); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-4.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-075-c315b77e1351",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-5.mjs",
+      "exact_relevant_symbol": "observe075",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "ebb0b7efe492f29b9afca6b916c62e9ed73cda63e9bbd9627fc6a10ba632e2f9",
+      "reference_fixed_source": "// deterministic observability fixture 75\nexport function observe075(items){ return [...items].sort((a,b)=>a-b); }\n",
+      "reference_fixed_source_sha256": "d866c686d23e33ba2c2a6f41603a305f580827ca9d10b66ab6bb8bb052e37b16",
+      "behavioral_requirement": "sort numeric measurements in ascending numeric order without mutating the input",
+      "hidden_files": [
+        {
+          "path": "test/case-5.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe075 } from '../src/case-5.mjs';\ntest('hidden numeric_ordering 75',()=>{ assert.deepEqual(observe075([-1,-10,3]),[-10,-1,3]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-5.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-076-69919bb33042",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-6.mjs",
+      "exact_relevant_symbol": "observe076",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "238017848d66f887a5ef69aa1c151893316586cbb1cc5911dff923801ed50bd1",
+      "reference_fixed_source": "// deterministic observability fixture 76\nexport function observe076(items,n){ return n<=0?[]:items.slice(-n); }\n",
+      "reference_fixed_source_sha256": "d0a0b7a59e89852f1915406a157c748b22919f40861d64b7f6a534600906f64b",
+      "behavioral_requirement": "return the final N items and return an empty list for nonpositive N",
+      "hidden_files": [
+        {
+          "path": "test/case-6.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe076 } from '../src/case-6.mjs';\ntest('hidden tail_window 76',()=>{ assert.deepEqual(observe076([1,2],0),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-6.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-077-ba0e209d2f94",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-7.mjs",
+      "exact_relevant_symbol": "observe077",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "cb26d56da094f0bb6328eb25dbe91ca40d008ac65fbe461dcf404aa413fa52ab",
+      "reference_fixed_source": "// deterministic observability fixture 77\nexport function observe077(value){ const parsed=Number(value); return Number.isFinite(parsed)?parsed:null; }\n",
+      "reference_fixed_source_sha256": "1d249a24fe604867faf9731a7f226bf8a70243615d37fbaf0ba6ccd422c7e2c8",
+      "behavioral_requirement": "return null for non-finite numeric input and the parsed number otherwise",
+      "hidden_files": [
+        {
+          "path": "test/case-7.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe077 } from '../src/case-7.mjs';\ntest('hidden finite_number_contract 77',()=>{ assert.equal(observe077('Infinity'),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-7.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-078-ea0ef52b915d",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-8.mjs",
+      "exact_relevant_symbol": "observe078",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "a7fcc007c8ca3f7eed45f4ddbf1dfc230a102e50133519291f25eb2a38aeeeec",
+      "reference_fixed_source": "// deterministic observability fixture 78\nexport function observe078(record,key){ return Object.prototype.hasOwnProperty.call(record,key); }\n",
+      "reference_fixed_source_sha256": "6e0019e20b1c66c1f26d0fd3dd1e72fa9ae28ddc99822f607a262647a44feda7",
+      "behavioral_requirement": "read only own properties and ignore prototype-chain values",
+      "hidden_files": [
+        {
+          "path": "test/case-8.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe078 } from '../src/case-8.mjs';\ntest('hidden record_ownership 78',()=>{ assert.equal(observe078({x:1},'x'),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-8.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-079-5d5185e9a8c9",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-9.mjs",
+      "exact_relevant_symbol": "observe079",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "ef8510c169c9151767db09567348b61722ee5b15b6637c9d1dd88c7ef3a1285f",
+      "reference_fixed_source": "// deterministic observability fixture 79\nexport function observe079(items){ const valid=items.filter(Number.isFinite); return valid.length?valid.reduce((a,b)=>a+b,0)/valid.length:null; }\n",
+      "reference_fixed_source_sha256": "5ca77e3325832a814252f5b0e90ab58f62038c15085fcfb8fc93625c53f33177",
+      "behavioral_requirement": "average only finite numeric values and return null when none remain",
+      "hidden_files": [
+        {
+          "path": "test/case-9.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe079 } from '../src/case-9.mjs';\ntest('hidden safe_average 79',()=>{ assert.equal(observe079([Number.NaN]),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-9.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    },
+    {
+      "task_id": "observability-080-21ab7b5bdf67",
+      "oracle_kind": "BEHAVIORAL",
+      "exact_relevant_file": "src/case-10.mjs",
+      "exact_relevant_symbol": "observe080",
+      "exact_relevant_range_1_based": {
+        "start_line": 2,
+        "end_line": 2,
+        "semantics": "FULL_FUNCTION_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "58b2e13efd47dcae56593e46565dd27f890f2d8e53b032ad25980605586f1d8b",
+      "reference_fixed_source": "// deterministic observability fixture 80\nexport function observe080(rows){ return Object.fromEntries(rows.map(row=>[row.id,row])); }\n",
+      "reference_fixed_source_sha256": "eb984993df338a24fddfd38812830e0cb09f4445fd9b93317a5913acac9529ee",
+      "behavioral_requirement": "index rows by id with the final row winning on duplicate ids",
+      "hidden_files": [
+        {
+          "path": "test/case-10.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { observe080 } from '../src/case-10.mjs';\ntest('hidden map_last_write 80',()=>{ assert.equal(observe080([{id:'a',v:1},{id:'a',v:3}]).a.v,3); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/case-10.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "bounded P2 edit accepted",
+        "syntax PASS",
+        "visible PASS",
+        "hidden PASS",
+        "rollback byte identity"
+      ],
+      "model_hidden_fields": [
+        "reference_fixed_source",
+        "hidden_files",
+        "behavioral_requirement",
+        "exact target metadata"
+      ]
+    }
+  ],
+  "oracleRowsSha256": "31c1fe641a8ba330808d93b51f78e57983baafa00e4ff7b0f30f686ca63f6207"
+}

@@ -1,0 +1,700 @@
+{
+  "schema_version": 1,
+  "suite_id": "dca-g3-long-horizon",
+  "authoring_revision": 2,
+  "supersedes": "benchmarks/g3/g3_long_horizon_manifest.json",
+  "preregistration_sha256": "17380638021a09b24ac64b53ebb2090bef6b313943e0e7c90f1101eab99a6200",
+  "task_payload_sha256": "6b043bc95f7abd435bcb89b14d9e1d22e558f940379f1d5594e00f7d4f21d562",
+  "tasks": [
+    {
+      "task_id": "g3-long-v2-cachecontrol-1-a084b802",
+      "repository_id": "cachecontrol",
+      "repository_commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "prompt": "Orient a contributor who has ninety minutes: establish purpose, confirm the documented validation route, locate the execution boundary, and propose a first reversible change. Apply this workflow to cachecontrol, a python project described locally as Python HTTP cache library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "README.rst",
+        ".github/workflows/release.yml",
+        "cachecontrol/__init__.py"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-cachecontrol-2-7b6ae5d4",
+      "repository_id": "cachecontrol",
+      "repository_commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "prompt": "A regression lacks a trustworthy stack trace. Establish the tightest reproduction seam, inspect related source/tests, form a falsifiable hypothesis, and stop or revise only after new evidence. Apply this workflow to cachecontrol, a python project described locally as Python HTTP cache library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "cachecontrol/caches/__init__.py",
+        "tests/__init__.py",
+        ".github/workflows/release.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-cachecontrol-3-0ae199ae",
+      "repository_id": "cachecontrol",
+      "repository_commit": "7f04affb7a4686851e79ffcae3efea2df1743135",
+      "split": "holdout",
+      "prompt": "Prepare a release-readiness assessment covering license, dependency/build metadata, verification, and protected delivery actions; publish or sign nothing. Apply this workflow to cachecontrol, a python project described locally as Python HTTP cache library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE.txt",
+        "pyproject.toml",
+        ".github/workflows/release.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-pyjwt-1-6f6503de",
+      "repository_id": "pyjwt",
+      "repository_commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "prompt": "Build a staged first-day map: understand the project, identify how maintainers validate it, follow the main execution surface, then choose one safe starter change. Apply this workflow to pyjwt, a python project described locally as Python token library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "README.rst",
+        ".github/workflows/enforce-changelog-entry.yml",
+        "jwt/__init__.py"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-pyjwt-2-83d5933f",
+      "repository_id": "pyjwt",
+      "repository_commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "prompt": "Investigate a reported failure with incomplete logs: find an executable oracle, connect test and implementation evidence, probe one cause, then make at most one evidence-backed revision. Apply this workflow to pyjwt, a python project described locally as Python token library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "docs/conf.py",
+        "tests/__init__.py",
+        ".github/workflows/enforce-changelog-entry.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-pyjwt-3-efa098dc",
+      "repository_id": "pyjwt",
+      "repository_commit": "7144e4534c34810f4525dc4578a32addd8212cff",
+      "split": "holdout",
+      "prompt": "Audit whether this project could be released from the available local evidence: inspect licensing, manifests, checks, and authority while keeping every external action blocked. Apply this workflow to pyjwt, a python project described locally as Python token library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE",
+        "pyproject.toml",
+        ".github/workflows/enforce-changelog-entry.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-multidict-1-88ff8157",
+      "repository_id": "multidict",
+      "repository_commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "prompt": "Create an evidence-gaining onboarding path that moves from purpose to setup, validation, architecture, and a small reversible contribution without inventing command results. Apply this workflow to multidict, a python project described locally as Python/C multidict implementation.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "CHANGES/README.rst",
+        ".github/workflows/auto-merge.yml",
+        "multidict/__init__.py"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    },
+    {
+      "task_id": "g3-long-v2-multidict-2-1b217b3b",
+      "repository_id": "multidict",
+      "repository_commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "prompt": "Run a bounded diagnosis sequence for an underspecified defect: reproduce if possible, minimize, rank a hypothesis, verify it, and terminate honestly if the patch oracle remains missing. Apply this workflow to multidict, a python project described locally as Python/C multidict implementation.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "setup.py",
+        "tests/conftest.py",
+        ".github/workflows/auto-merge.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    },
+    {
+      "task_id": "g3-long-v2-multidict-3-25806248",
+      "repository_id": "multidict",
+      "repository_commit": "41c1b9144b13dcdfa4c18085aedc874cc9d24006",
+      "split": "holdout",
+      "prompt": "Produce a local-only release gate review that connects license evidence, dependency metadata, build verification, and approval requirements without creating tags or artifacts. Apply this workflow to multidict, a python project described locally as Python/C multidict implementation.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE",
+        "pyproject.toml",
+        ".github/workflows/auto-merge.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    },
+    {
+      "task_id": "g3-long-v2-zod-1-0490291c",
+      "repository_id": "zod",
+      "repository_commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "prompt": "Walk a new engineer from the repository's stated goal through its build/test contract and entry surface, ending with a low-risk change proposal and truthful unknowns. Apply this workflow to zod, a javascript project described locally as TypeScript schema library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/claude-code-review.yml",
+        "packages/resolution/src/index.ts"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-zod-2-7bc681af",
+      "repository_id": "zod",
+      "repository_commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "prompt": "Handle a failed-change scenario by retrieving the likely test/source pair, seeking a red signal, testing a falsifiable diagnosis, and allowing a second attempt only after verifier feedback. Apply this workflow to zod, a javascript project described locally as TypeScript schema library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "packages/zod/src/index.ts",
+        "packages/zod/src/v4/classic/tests/index.test.ts",
+        ".github/workflows/claude-code-review.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-zod-3-39944fa3",
+      "repository_id": "zod",
+      "repository_commit": "f238fbd2d7ff2732b15813b35e650951a9c33b4c",
+      "split": "holdout",
+      "prompt": "Assess delivery readiness using authoritative repository metadata and verification status. Separate preparatory work from signing, publication, and other unavailable authority. Apply this workflow to zod, a javascript project described locally as TypeScript schema library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE",
+        "package.json",
+        ".github/workflows/claude-code-review.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-dotenv-1-e6f47c46",
+      "repository_id": "dotenv",
+      "repository_commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "prompt": "Orient a contributor who has ninety minutes: establish purpose, confirm the documented validation route, locate the execution boundary, and propose a first reversible change. Apply this workflow to dotenv, a javascript project described locally as JavaScript configuration library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/ci.yml",
+        "lib/main.d.ts"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-dotenv-2-02e10afe",
+      "repository_id": "dotenv",
+      "repository_commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "prompt": "A regression lacks a trustworthy stack trace. Establish the tightest reproduction seam, inspect related source/tests, form a falsifiable hypothesis, and stop or revise only after new evidence. Apply this workflow to dotenv, a javascript project described locally as JavaScript configuration library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "lib/main.js",
+        "tests/test-config-import.js",
+        ".github/workflows/ci.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-dotenv-3-b771bcfd",
+      "repository_id": "dotenv",
+      "repository_commit": "2fc7eac8ad77cbd5f7814355c7fa352dbcf3c358",
+      "split": "holdout",
+      "prompt": "Prepare a release-readiness assessment covering license, dependency/build metadata, verification, and protected delivery actions; publish or sign nothing. Apply this workflow to dotenv, a javascript project described locally as JavaScript configuration library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE",
+        "package.json",
+        ".github/workflows/ci.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-axios-1-89e5b94c",
+      "repository_id": "axios",
+      "repository_commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "prompt": "Build a staged first-day map: understand the project, identify how maintainers validate it, follow the main execution surface, then choose one safe starter change. Apply this workflow to axios, a javascript project described locally as JavaScript HTTP client.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/bundle-size.yml",
+        "lib/defaults/index.js"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    },
+    {
+      "task_id": "g3-long-v2-axios-2-9d4481bd",
+      "repository_id": "axios",
+      "repository_commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "prompt": "Investigate a reported failure with incomplete logs: find an executable oracle, connect test and implementation evidence, probe one cause, then make at most one evidence-backed revision. Apply this workflow to axios, a javascript project described locally as JavaScript HTTP client.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "lib/platform/index.js",
+        "tests/module/esm/tests/helpers/esm-index.ts",
+        ".github/workflows/bundle-size.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    },
+    {
+      "task_id": "g3-long-v2-axios-3-81923012",
+      "repository_id": "axios",
+      "repository_commit": "ba98559a7f5a18e531b5762387e5957bd281af3d",
+      "split": "holdout",
+      "prompt": "Audit whether this project could be released from the available local evidence: inspect licensing, manifests, checks, and authority while keeping every external action blocked. Apply this workflow to axios, a javascript project described locally as JavaScript HTTP client.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE",
+        "docs/package.json",
+        ".github/workflows/bundle-size.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    },
+    {
+      "task_id": "g3-long-v2-lipgloss-1-1597e25f",
+      "repository_id": "lipgloss",
+      "repository_commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "prompt": "Create an evidence-gaining onboarding path that moves from purpose to setup, validation, architecture, and a small reversible contribution without inventing command results. Apply this workflow to lipgloss, a go project described locally as Go terminal styling library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/build.yml",
+        "align.go"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-lipgloss-2-fa06966c",
+      "repository_id": "lipgloss",
+      "repository_commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "prompt": "Run a bounded diagnosis sequence for an underspecified defect: reproduce if possible, minimize, rank a hypothesis, verify it, and terminate honestly if the patch oracle remains missing. Apply this workflow to lipgloss, a go project described locally as Go terminal styling library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "ansi_unix.go",
+        "align_test.go",
+        ".github/workflows/build.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-lipgloss-3-a94600d2",
+      "repository_id": "lipgloss",
+      "repository_commit": "5696b2800bc692e6cc372ee8232da6d3f7e7387f",
+      "split": "holdout",
+      "prompt": "Produce a local-only release gate review that connects license evidence, dependency metadata, build verification, and approval requirements without creating tags or artifacts. Apply this workflow to lipgloss, a go project described locally as Go terminal styling library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE",
+        "examples/go.mod",
+        ".github/workflows/build.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-testify-1-69cc4342",
+      "repository_id": "testify",
+      "repository_commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "prompt": "Walk a new engineer from the repository's stated goal through its build/test contract and entry surface, ending with a low-risk change proposal and truthful unknowns. Apply this workflow to testify, a go project described locally as Go test toolkit.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/main.yml",
+        "_codegen/main.go"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-testify-2-52ce8309",
+      "repository_id": "testify",
+      "repository_commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "prompt": "Handle a failed-change scenario by retrieving the likely test/source pair, seeking a red signal, testing a falsifiable diagnosis, and allowing a second attempt only after verifier feedback. Apply this workflow to testify, a go project described locally as Go test toolkit.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "_readme-gofmt/main.go",
+        "assert/assertion_compare_test.go",
+        ".github/workflows/main.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-testify-3-757e1b23",
+      "repository_id": "testify",
+      "repository_commit": "001eb7946baf451879253643e4ce4b38eaa0d4a7",
+      "split": "holdout",
+      "prompt": "Assess delivery readiness using authoritative repository metadata and verification status. Separate preparatory work from signing, publication, and other unavailable authority. Apply this workflow to testify, a go project described locally as Go test toolkit.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE",
+        "_codegen/go.mod",
+        ".github/workflows/main.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-bytes-1-9d8897b1",
+      "repository_id": "bytes",
+      "repository_commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "prompt": "Orient a contributor who has ninety minutes: establish purpose, confirm the documented validation route, locate the execution boundary, and propose a first reversible change. Apply this workflow to bytes, a rust project described locally as Rust byte-buffer library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/ci.yml",
+        "src/lib.rs"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    },
+    {
+      "task_id": "g3-long-v2-bytes-2-5d6a0dd2",
+      "repository_id": "bytes",
+      "repository_commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "prompt": "A regression lacks a trustworthy stack trace. Establish the tightest reproduction seam, inspect related source/tests, form a falsifiable hypothesis, and stop or revise only after new evidence. Apply this workflow to bytes, a rust project described locally as Rust byte-buffer library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "src/buf/mod.rs",
+        "tests/test_buf.rs",
+        ".github/workflows/ci.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    },
+    {
+      "task_id": "g3-long-v2-bytes-3-8f8e447b",
+      "repository_id": "bytes",
+      "repository_commit": "d5c8ad3227afe459c09f1d0d85455abf00f0381a",
+      "split": "holdout",
+      "prompt": "Prepare a release-readiness assessment covering license, dependency/build metadata, verification, and protected delivery actions; publish or sign nothing. Apply this workflow to bytes, a rust project described locally as Rust byte-buffer library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE",
+        "Cargo.toml",
+        ".github/workflows/ci.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    },
+    {
+      "task_id": "g3-long-v2-serde-json-1-d699660c",
+      "repository_id": "serde-json",
+      "repository_commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "prompt": "Build a staged first-day map: understand the project, identify how maintainers validate it, follow the main execution surface, then choose one safe starter change. Apply this workflow to serde-json, a rust project described locally as Rust JSON implementation.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/ci.yml",
+        "src/lib.rs"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-serde-json-2-bb0b1175",
+      "repository_id": "serde-json",
+      "repository_commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "prompt": "Investigate a reported failure with incomplete logs: find an executable oracle, connect test and implementation evidence, probe one cause, then make at most one evidence-backed revision. Apply this workflow to serde-json, a rust project described locally as Rust JSON implementation.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "src/io/mod.rs",
+        "tests/macros/mod.rs",
+        ".github/workflows/ci.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-serde-json-3-e7842a43",
+      "repository_id": "serde-json",
+      "repository_commit": "afdf6fc67247dd7fa4fcde1381e6ecc6bcc7a30e",
+      "split": "holdout",
+      "prompt": "Audit whether this project could be released from the available local evidence: inspect licensing, manifests, checks, and authority while keeping every external action blocked. Apply this workflow to serde-json, a rust project described locally as Rust JSON implementation.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE-APACHE",
+        "Cargo.toml",
+        ".github/workflows/ci.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 0
+    },
+    {
+      "task_id": "g3-long-v2-fmt-1-5edeb128",
+      "repository_id": "fmt",
+      "repository_commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "prompt": "Create an evidence-gaining onboarding path that moves from purpose to setup, validation, architecture, and a small reversible contribution without inventing command results. Apply this workflow to fmt, a c-cpp project described locally as C++ formatting library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/codeql.yml",
+        "src/fmt-c.cc"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-fmt-2-9b199b17",
+      "repository_id": "fmt",
+      "repository_commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "prompt": "Run a bounded diagnosis sequence for an underspecified defect: reproduce if possible, minimize, rank a hypothesis, verify it, and terminate honestly if the patch oracle remains missing. Apply this workflow to fmt, a c-cpp project described locally as C++ formatting library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "src/fmt.cc",
+        "test/add-subdirectory-test/main.cc",
+        ".github/workflows/codeql.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-fmt-3-c5384c00",
+      "repository_id": "fmt",
+      "repository_commit": "60ccad511fd680cb91d8b60a315759f71c67bef9",
+      "split": "holdout",
+      "prompt": "Produce a local-only release gate review that connects license evidence, dependency metadata, build verification, and approval requirements without creating tags or artifacts. Apply this workflow to fmt, a c-cpp project described locally as C++ formatting library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE",
+        "support/build.gradle",
+        ".github/workflows/codeql.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 1
+    },
+    {
+      "task_id": "g3-long-v2-nlohmann-json-1-ddd40e3b",
+      "repository_id": "nlohmann-json",
+      "repository_commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "prompt": "Walk a new engineer from the repository's stated goal through its build/test contract and entry surface, ending with a low-risk change proposal and truthful unknowns. Apply this workflow to nlohmann-json, a c-cpp project described locally as C++ JSON library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "onboarding_architecture",
+      "difficulty": "L3",
+      "expected_outcome": "ANSWER",
+      "required_evidence_paths": [
+        "README.md",
+        ".github/workflows/check_amalgamation.yml",
+        "tools/macro_builder/main.cpp"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    },
+    {
+      "task_id": "g3-long-v2-nlohmann-json-2-41b46b7b",
+      "repository_id": "nlohmann-json",
+      "repository_commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "prompt": "Handle a failed-change scenario by retrieving the likely test/source pair, seeking a red signal, testing a falsifiable diagnosis, and allowing a second attempt only after verifier feedback. Apply this workflow to nlohmann-json, a c-cpp project described locally as C++ JSON library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "diagnosis_recovery",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "cmake/detect_libcpp_version.cpp",
+        "tests/abi/config/config.hpp",
+        ".github/workflows/check_amalgamation.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    },
+    {
+      "task_id": "g3-long-v2-nlohmann-json-3-176a7f99",
+      "repository_id": "nlohmann-json",
+      "repository_commit": "21af527e756435701f23e01aa8ea8dab6e050c90",
+      "split": "holdout",
+      "prompt": "Assess delivery readiness using authoritative repository metadata and verification status. Separate preparatory work from signing, publication, and other unavailable authority. Apply this workflow to nlohmann-json, a c-cpp project described locally as C++ JSON library.",
+      "provenance": "multi-stage naturalistic repository workflow authoring revision 2",
+      "category": "release_safety",
+      "difficulty": "L4",
+      "expected_outcome": "REPORT_ONLY",
+      "required_evidence_paths": [
+        "LICENSE.MIT",
+        "CMakeLists.txt",
+        ".github/workflows/check_amalgamation.yml"
+      ],
+      "maximum_model_calls": 3,
+      "retry_requires_new_evidence": true,
+      "stability_seed_slot": 2
+    }
+  ],
+  "integrity": {
+    "status": "PASS",
+    "tasks": 36,
+    "repositories": 12,
+    "option_count": 0
+  }
+}

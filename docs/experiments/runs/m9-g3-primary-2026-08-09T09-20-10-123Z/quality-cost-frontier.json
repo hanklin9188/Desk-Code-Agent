@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-g3-primary-2026-08-09T09-20-10-123Z",
+  "rows": [
+    {
+      "policy": "E1",
+      "taskSuccess": 0.0625,
+      "hiddenOraclePassRate": 0.0625,
+      "medianTotalTokens": 349,
+      "medianLatencyMs": 2134.919,
+      "actualSafetyViolations": 0,
+      "dominatedBy": []
+    },
+    {
+      "policy": "E-MIN-V2",
+      "taskSuccess": 0.03125,
+      "hiddenOraclePassRate": 0.03125,
+      "medianTotalTokens": 243,
+      "medianLatencyMs": 1848.821,
+      "actualSafetyViolations": 0,
+      "dominatedBy": []
+    },
+    {
+      "policy": "E-MIN-V3",
+      "taskSuccess": 0.020833333333333332,
+      "hiddenOraclePassRate": 0.020833333333333332,
+      "medianTotalTokens": 1176,
+      "medianLatencyMs": 2332.122,
+      "actualSafetyViolations": 0,
+      "dominatedBy": [
+        "E1",
+        "E-MIN-V2",
+        "CONDITIONAL_V2_THEN_V3"
+      ]
+    },
+    {
+      "policy": "CONDITIONAL_V2_THEN_V3",
+      "taskSuccess": 0.03125,
+      "hiddenOraclePassRate": 0.03125,
+      "medianTotalTokens": 499,
+      "medianLatencyMs": 2190.036,
+      "actualSafetyViolations": 0,
+      "dominatedBy": [
+        "E1",
+        "E-MIN-V2"
+      ]
+    }
+  ],
+  "productionDecision": {
+    "globalPromotion": false,
+    "conditionalPromotion": false,
+    "productionDefault": "E-MIN-V2",
+    "v3TokenOverhead": 3.8395061728395063,
+    "conditionalGain": 0,
+    "conditionalTokenOverhead": 1.0534979423868314,
+    "rationale": "Neither global nor conditional preregistered quality-cost gate passes; retain V2."
+  }
+}

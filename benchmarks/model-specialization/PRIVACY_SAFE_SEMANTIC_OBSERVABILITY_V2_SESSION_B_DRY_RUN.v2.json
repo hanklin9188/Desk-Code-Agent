@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 2,
+  "dryRunId": "dca-privacy-safe-semantic-observability-v2-complete-pipeline-dry-run",
+  "status": "PASS_ZERO_TARGET_MODEL_CALLS",
+  "createdAt": "2026-08-11T20:31:59.843Z",
+  "inputs": {
+    "runnerSeal": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B_RUNNER_SEAL.v2.json",
+      "sha256": "776b542a866198969a3bd71aedc3d6a46b11eaa8ab9aef37f300d2d46dec98a9"
+    }
+  },
+  "scenarios": [
+    {
+      "scenario": "valid_success",
+      "pairSha256": "9bdc8a2fec5a40c8ebfeb6b992db712d0cc65b1062855b3262975fe9a071e454",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_OBJECT",
+      "actionValidationStatus": "PASS",
+      "afterSourceParseStatus": "PASS",
+      "syntax": "PASS",
+      "visible": "PASS",
+      "hidden": "PASS",
+      "privacyLeaks": 0
+    },
+    {
+      "scenario": "invalid_action",
+      "pairSha256": "1e5b05173a4ecd3a760b1d8e508ed1fef7f24efd465aadddba477304d76d559e",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_INVALID",
+      "actionValidationStatus": "NOT_APPLICABLE",
+      "afterSourceParseStatus": "NOT_APPLICABLE",
+      "syntax": "NOT_RUN",
+      "visible": "NOT_RUN",
+      "hidden": "NOT_RUN",
+      "privacyLeaks": 0
+    },
+    {
+      "scenario": "malformed_replacement",
+      "pairSha256": "44b98886fb994b14dea2fea07d7cc0a2316a047b7a79e67ce8dd7f68b8eb2f62",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_OBJECT",
+      "actionValidationStatus": "PASS",
+      "afterSourceParseStatus": "FAIL",
+      "syntax": "FAIL",
+      "visible": "NOT_RUN",
+      "hidden": "NOT_RUN",
+      "privacyLeaks": 0
+    },
+    {
+      "scenario": "syntax_failure",
+      "pairSha256": "e563c1100c903ee8f9921522e87aac5794a3295889079ac0a8e3cfed34a01c72",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_OBJECT",
+      "actionValidationStatus": "PASS",
+      "afterSourceParseStatus": "FAIL",
+      "syntax": "FAIL",
+      "visible": "NOT_RUN",
+      "hidden": "NOT_RUN",
+      "privacyLeaks": 0
+    },
+    {
+      "scenario": "visible_failure",
+      "pairSha256": "a33f44b6eb0dcd9f118bc1759500bedd7ff5cfd92b95a46644b81d6a529e5be8",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_OBJECT",
+      "actionValidationStatus": "PASS",
+      "afterSourceParseStatus": "PASS",
+      "syntax": "PASS",
+      "visible": "FAIL",
+      "hidden": "FAIL",
+      "privacyLeaks": 0
+    },
+    {
+      "scenario": "hidden_failure",
+      "pairSha256": "5bca8088153fd998c97b6120ef706605ceda21c25654a073668777d19ef80b5e",
+      "L0": 1,
+      "L1": 1,
+      "actionParseStatus": "JSON_OBJECT",
+      "actionValidationStatus": "PASS",
+      "afterSourceParseStatus": "PASS",
+      "syntax": "PASS",
+      "visible": "PASS",
+      "hidden": "FAIL",
+      "privacyLeaks": 0
+    }
+  ],
+  "summary": {
+    "syntheticCompletedResponses": 6,
+    "L0Packets": 6,
+    "L1Packets": 6,
+    "sameCallPairs": 6,
+    "extractorCrashes": 0,
+    "privacyLeaks": 0,
+    "targetModelCalls": 0,
+    "networkInference": false
+  },
+  "protectedActions": {
+    "targetModelCall": false,
+    "vllmStart": false,
+    "modelDownload": false
+  }
+}

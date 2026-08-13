@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T13:31:19.534Z",
+  "status": "NOT_WARRANTED_TRIGGER_NOT_MET",
+  "coder3bMaterialImprovementEstablished": false,
+  "protocolCreated": false,
+  "modelSelectedOrDownloaded": false,
+  "reason": "The preregistered trigger requires measured Coder-3B improvement; Coder-3B was not executed.",
+  "ifTriggeredLater": {
+    "comparison": "Qwen2.5-Coder-3B BF16 versus separately pinned Coder-7B",
+    "confound": "Do not claim pure scale effect if 7B requires quantization while 3B uses BF16",
+    "approvalRequired": true
+  },
+  "existingGeneralProtocol": {
+    "path": "docs/experiments/g4-diagnostics/STRONGER_MODEL_COMPARISON_PROTOCOL.json",
+    "sha256": "dd55f961d97321d57a193d186b2c1078d775d2e22c326cd94192195ad1235886"
+  }
+}

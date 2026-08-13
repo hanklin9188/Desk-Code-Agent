@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "seal_id": "dca-g3-seal-2026-08-09",
+  "state": "SEALED_BEFORE_FIRST_G3_MODEL_CALL",
+  "sealed_at": "2026-08-09T09:14:32.113Z",
+  "authoring_revision": 2,
+  "references": {
+    "preregistration": {
+      "path": "benchmarks/g3/G3_PREREGISTRATION.json",
+      "sha256": "17380638021a09b24ac64b53ebb2090bef6b313943e0e7c90f1101eab99a6200"
+    },
+    "repository_manifest": {
+      "path": "benchmarks/g3/g3_repository_manifest.json",
+      "sha256": "58498365b68d90fe9759c9fbd3ae27c061796f4ca41de879e5cba7495ed4d806",
+      "payload_sha256": "8120dfc4ce96038544a32987c75a56c2e2fa2a0cacd3bb4285e12eb30810a4e8"
+    },
+    "task_manifest": {
+      "path": "benchmarks/g3/g3_task_manifest.v2.json",
+      "sha256": "d17318fd96b4294e2231b678c2bf0c5b68bc4abd5a502fcaaf4ec41255423861",
+      "payload_sha256": "b895be71ddd624316ac64810f6e45f5f601ab3639900ffec1cf2adf3ad949a1e"
+    },
+    "oracle": {
+      "path": "benchmarks/g3/g3_oracle.v2.sealed.json",
+      "sha256": "206b0f53147004bbd405bc49337d4c9c6e9612460086be02648d36e3f2bce04e",
+      "payload_sha256": "c9a669541b5d25f449fc293d3d0566812c86f9ea830ac4c36fe3b08a7b208132"
+    },
+    "long_horizon": {
+      "path": "benchmarks/g3/g3_long_horizon_manifest.v2.json",
+      "sha256": "64ab3c8cc76cbba67ba15b6394c2095d2a2a12481f0398a09eacc9b0f080e43a"
+    },
+    "real_patch_manifest": {
+      "path": "benchmarks/g3/g3_real_patch_manifest.json",
+      "sha256": "3222597b156e11645d761dc59e4c92f32ab766a6e500b2f5980836384bedd662",
+      "payload_sha256": "1242046ca09e562a2a09da5336b1203ec6002b8173e16f48566c906fd89d6bea"
+    },
+    "real_patch_oracle": {
+      "path": "benchmarks/g3/g3_real_patch_oracle.sealed.json",
+      "sha256": "0653741b1bfb01c21871daba64fcb86c10f4ff201310f2d0c4bee453051b6598",
+      "payload_sha256": "e9b30fab4b9a342019cc7cee182871f2ddbd487b93cb1758a64a9f9c14474ffb"
+    },
+    "option_cue_audit": {
+      "path": "benchmarks/g3/g3_option_cue_audit.v2.json",
+      "sha256": "73e2621df0bf72e59ac79d51b3d211f26e80dd7a8cfdb3122c854c6dfda1e559"
+    },
+    "naturalistic_task_audit": {
+      "path": "benchmarks/g3/g3_naturalistic_task_audit.v2.json",
+      "sha256": "04c5eba67d3823384fb9337ce28c2dfe56f65dc1c2b25864581de8458d5dd7e4"
+    },
+    "provenance": {
+      "path": "benchmarks/g3/g3_task_provenance_report.v2.json",
+      "sha256": "eedb27620666f1b38c0bc9d32d615d88ed0ee9fd2b51a3d30ae384c9647ea8f7"
+    },
+    "authoring_decision": {
+      "path": "benchmarks/g3/g3_authoring_revision_record.json",
+      "sha256": "87adbc15fabd13453ac1bebb3584dfdbac1207001aac25f78cbd568d353a2615"
+    }
+  },
+  "candidates": {
+    "E-MIN-V2": {
+      "artifact": "config/production/emin-v2-frozen-2026-08-09.json",
+      "artifact_sha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+      "source_closure_sha256": "bb8c8b9abc4d863691446f3ff4523a68489a6139425acddd05ead5df6043cdf8"
+    },
+    "E-MIN-V3": {
+      "artifact": "config/production/emin-v3-frozen-2026-08-09.json",
+      "artifact_sha256": "7b8829aded41cc996785ce5197627a4b712991d526b7e9e3045b3bf3f9d91be0",
+      "source_closure_sha256": "e307862f7728ac6bc90b231c23b7562cbb5d114aaed3af77200a2c7b77a3a76b"
+    }
+  },
+  "fixed_model": {
+    "repository": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "vllm": "0.26.0",
+    "precision": "bfloat16",
+    "temperature": 0,
+    "seed": 20260809,
+    "thinking": false,
+    "multi_agent": "OFF",
+    "semantic_reviewer": "OFF"
+  },
+  "corpus": {
+    "repositories": 24,
+    "primary_tasks": 192,
+    "holdout_primary_tasks": 96,
+    "long_horizon_tasks": 36,
+    "real_patch_tasks": 60,
+    "repository_overlap_with_prior_public_corpora": 0
+  },
+  "immutability": "Any change to a referenced artifact, pinned repository SHA, candidate closure, model variable, prompt, oracle, scorer, retrieval policy, or route invalidates this G3 generation."
+}

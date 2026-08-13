@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "m9-g3-long-run-stability-2026-08-09T11-14-47-297Z",
+  "status": "PASS",
+  "classification": "EXTENDED_SINGLE_MODEL_SESSION_STABILITY_BEFORE_INTENTIONAL_CRASH",
+  "started": {
+    "sampledAt": "2026-08-09T09:48:13.281Z",
+    "pid": 3116525,
+    "rssMiB": 2334.46484375,
+    "fileDescriptors": 43,
+    "vram": {
+      "schemaVersion": 1,
+      "primary": {
+        "source": "NVIDIA_SMI_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12290,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T09:48:13.311Z",
+        "valid": true,
+        "note": null
+      },
+      "independent": {
+        "source": "NVML_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12620.32,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T09:48:13.339Z",
+        "valid": true,
+        "note": "NVML may include WSL/driver-reserved memory that nvidia-smi presentation excludes; compare loaded/workload deltas as well as absolute values."
+      },
+      "absoluteDifferenceMiB": 330.32,
+      "totalDifferenceMiB": 0,
+      "valid": true
+    },
+    "runtimeBytes": 16109510211,
+    "apiKey": {
+      "mode": "600",
+      "bytes": 44,
+      "contentRead": false
+    },
+    "port8000Listeners": 1
+  },
+  "ended": {
+    "sampledAt": "2026-08-09T11:14:45.088Z",
+    "pid": 3116525,
+    "rssMiB": 2352.98828125,
+    "fileDescriptors": 41,
+    "vram": {
+      "schemaVersion": 1,
+      "primary": {
+        "source": "NVIDIA_SMI_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12290,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T11:14:45.119Z",
+        "valid": true,
+        "note": null
+      },
+      "independent": {
+        "source": "NVML_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12620.32,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T11:14:45.145Z",
+        "valid": true,
+        "note": "NVML may include WSL/driver-reserved memory that nvidia-smi presentation excludes; compare loaded/workload deltas as well as absolute values."
+      },
+      "absoluteDifferenceMiB": 330.32,
+      "totalDifferenceMiB": 0,
+      "valid": true
+    },
+    "runtimeBytes": 16109511185,
+    "apiKey": {
+      "mode": "600",
+      "bytes": 44,
+      "contentRead": false
+    },
+    "port8000Listeners": 1
+  },
+  "deltas": {
+    "durationMs": 5191807,
+    "rssMiB": 18.5234375,
+    "fileDescriptors": -2,
+    "runtimeBytes": 974
+  },
+  "completedModelCallsAcrossG3Artifacts": 2443,
+  "primaryVramEvidence": {
+    "method": "device-level nvidia-smi primary with independent NVML start/end",
+    "started": {
+      "schemaVersion": 1,
+      "primary": {
+        "source": "NVIDIA_SMI_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12020,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T09:20:10.158Z",
+        "valid": true,
+        "note": null
+      },
+      "independent": {
+        "source": "NVML_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12350.32,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T09:20:10.183Z",
+        "valid": true,
+        "note": "NVML may include WSL/driver-reserved memory that nvidia-smi presentation excludes; compare loaded/workload deltas as well as absolute values."
+      },
+      "absoluteDifferenceMiB": 330.32,
+      "totalDifferenceMiB": 0,
+      "valid": true
+    },
+    "ended": {
+      "schemaVersion": 1,
+      "primary": {
+        "source": "NVIDIA_SMI_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12220,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T09:41:11.713Z",
+        "valid": true,
+        "note": null
+      },
+      "independent": {
+        "source": "NVML_DEVICE_MEMORY",
+        "deviceIndex": 0,
+        "usedMiB": 12550.32,
+        "totalMiB": 16376,
+        "sampledAt": "2026-08-09T09:41:11.747Z",
+        "valid": true,
+        "note": "NVML may include WSL/driver-reserved memory that nvidia-smi presentation excludes; compare loaded/workload deltas as well as absolute values."
+      },
+      "absoluteDifferenceMiB": 330.32,
+      "totalDifferenceMiB": 0,
+      "valid": true
+    },
+    "primaryPeakMiB": 12220
+  },
+  "workspace": {
+    "repositories": 24,
+    "registeredWorktrees": 24,
+    "expectedPrimaryWorktrees": 24
+  },
+  "targets": {
+    "sameModelProcess": true,
+    "rssGrowthUnder1024MiB": true,
+    "fileDescriptorGrowthUnder64": true,
+    "exactlyOneListener": true,
+    "apiKeyMode600": true,
+    "noAdditionalWorktrees": true,
+    "atLeast100SequentialCalls": true
+  },
+  "limitations": [
+    "Process RAM/FD deltas cover the explicit post-primary snapshot interval; the primary artifact separately records device VRAM start/end.",
+    "The artifact call count covers the complete G3 program and is not mislabeled as an exact count beginning at the process snapshot, which occurred during the long-horizon run.",
+    "Runtime storage growth includes immutable experiment results and model caches; it is not labeled a leak."
+  ]
+}

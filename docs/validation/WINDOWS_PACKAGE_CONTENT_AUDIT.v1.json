@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "auditId": "dca-w3-package-content-audit-v1",
+  "status": "PASS",
+  "msi": {
+    "productName": "Desk Code Agent",
+    "productVersion": "0.1.0",
+    "manufacturer": "deskcodeagent",
+    "upgradeCode": "A6C1AEB2-756B-5034-9266-9F41457962C6",
+    "architecture": "x64",
+    "payloadFiles": [{ "filename": "desk-code-agent.exe", "bytes": 3630592, "version": "0.1.0.0" }],
+    "shortcuts": ["Desktop", "Start Menu", "Uninstall"],
+    "webView2Detection": true
+  },
+  "nsisInstalledPayload": [
+    { "filename": "desk-code-agent.exe", "bytes": 3630592, "sha256": "92ee4475a8fdc2cd5a6627db2e184fc683102c6bedea005c2b4081472da4eda0" },
+    { "filename": "uninstall.exe", "bytes": 79112 }
+  ],
+  "requiredContent": {
+    "applicationExecutable": "PASS",
+    "embeddedFrontend": "PASS_INSTALLED_18_SURFACES",
+    "canonicalArtifactProjection": "PASS_READ_ONLY_ALLOWLIST",
+    "icon": "PASS_INSTALLER_AND_EXECUTABLE",
+    "configuration": "PASS"
+  },
+  "excludedContent": {
+    "modelWeights": 0,
+    "gitTrees": 0,
+    "sourceTrees": 0,
+    "tests": 0,
+    "benchmarkRawCorpora": 0,
+    "debugLogs": 0,
+    "buildCaches": 0,
+    "credentials": 0,
+    "developmentDependencies": 0,
+    "absoluteSourcePaths": 0
+  },
+  "portableAssumptions": {
+    "nodeRequiredOnEndUserMachine": false,
+    "rustRequiredOnEndUserMachine": false,
+    "visualStudioBuildToolsRequiredOnEndUserMachine": false,
+    "webView2": "REQUIRED_EXPECTED_FROM_WINDOWS_AND_INSTALLER_DETECTION",
+    "localModelRuntime": "SEPARATELY_INSTALLED_AND_CONFIGURED_OPTIONAL_FOR_FIXTURE_UI",
+    "modelWeightsIncluded": false
+  }
+}

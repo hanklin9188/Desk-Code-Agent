@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "validationId": "dca-practical-local-model-tournament-session-d-validation-v1",
+  "status": "PASS",
+  "validatedAt": "2026-08-11T14:26:25.446Z",
+  "inputs": {
+    "sessionC": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_C.v1.json",
+      "sha256": "32ff39c05b5ce6c64b57ac77085df2b5666750a8a5689d3ac801a683bd3ec683"
+    },
+    "sessionDV1": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_D.v1.json",
+      "sha256": "d8b9515a6ee3d09e8397eb3bf4bc711d962aec6f013a6019778e32c11ebebbd2"
+    },
+    "securityRegression": {
+      "path": "docs/experiments/patch-interface/PATCH_INTERFACE_SECURITY_REGRESSION.v3.json",
+      "sha256": "a9a43b1a263446b128685a3d9b16cf1f788665b1186d39679827ff4aa8d1f39a"
+    }
+  },
+  "checks": {
+    "commands": [
+      {
+        "command": "npm run check",
+        "exitCode": 0,
+        "stdoutSha256": "cdf4806f559465f1c55897a146f8523f62318a4ee95c73d06b904b61be0fe306",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": "npx tsx scripts/run_patch_interface_security_regression.ts",
+        "exitCode": 0,
+        "stdoutSha256": "48e3773996576c4883e6c25295ea117831f8a683466548d1df8d7c10db3285e6",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "designTypeTestBuild": "PASS",
+    "securityRegression": "PASS",
+    "artifactSidecars": "PASS",
+    "sourceClosure": "PASS",
+    "experimentLineage": "PASS_285_PRIMARY_3_TELEMETRY_855_EVENTS_ZERO_RETRY",
+    "secretScan": "PASS",
+    "modelWeightGitExclusion": "PASS",
+    "worktreeCleanup": "PASS",
+    "runtimeCleanup": "PASS"
+  },
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "services/model-tournament-analysis/src/index.ts",
+        "sha256": "c5154d4c6012f0d0100b722a39659aae7edbc39ec0188c56211879a3c90a104b",
+        "bytes": 5386
+      },
+      {
+        "path": "scripts/finalize_model_tournament_session_d.ts",
+        "sha256": "83dc3759e82590cce40cf407fd3ae03cbfa7e5095a9bc25cd1936384f73c70a9",
+        "bytes": 29729
+      },
+      {
+        "path": "scripts/finalize_model_tournament_session_d_v2.ts",
+        "sha256": "ad755fe0d33b6cbd1b352b53e5a38861d216277b9a45fc02fcbca25d5dd2362f",
+        "bytes": 11467
+      },
+      {
+        "path": "tests/model-tournament-analysis.test.ts",
+        "sha256": "e113d6fe4e67b738f7989a559c04ba619c84b9c09143118bc60ac0e1eacadb3c",
+        "bytes": 2338
+      },
+      {
+        "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_FINAL_REPORT.v1.md",
+        "sha256": "5e20e04d0a60f792a975d8e7a7dd075dac37e5a3a8fa60970aa59f522c40dd9d",
+        "bytes": 7828
+      },
+      {
+        "path": "docs/validation/2026-08-11-practical-local-model-tournament-session-d.md",
+        "sha256": "7b080362d7ba1e5336347fcfe8b96191aefeb801f56b43a8ba5957496ab48f19",
+        "bytes": 1581
+      },
+      {
+        "path": "adrs/0016-no-model-promoted-after-practical-7b-tournament.md",
+        "sha256": "82f0ae16abd5f630b2eca56f3390d67dc634b15936fed8c8fcade979b853bc6d",
+        "bytes": 3129
+      },
+      {
+        "path": "docs/exec-plans/active/MASTER_EXECUTION_PLAN.md",
+        "sha256": "5aeb457f4e37f4a81a2c2fb43dd775e7e35768187ce8c097ab7f25e0568ff477",
+        "bytes": 38294
+      },
+      {
+        "path": "CONTEXT.md",
+        "sha256": "a444b61f7144de3c5657a6d215e62c28a28a98fb8d6d89b01bda50e60970707f",
+        "bytes": 14454
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      }
+    ],
+    "sha256": "1e677ec82c25a34572fd85f0c9ee8aee73b64a25bcedca3a566916cc4bfd6904"
+  },
+  "cleanup": {
+    "modelProcessCount": 0,
+    "port8000Clear": true,
+    "gpuMemoryMiB": 0,
+    "ephemeralApiKeyAndStateAbsent": true,
+    "temporaryDirectories": 0,
+    "worktrees": 1
+  },
+  "sessionDModelCalls": 0
+}

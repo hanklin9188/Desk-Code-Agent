@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 2,
+  "status": "PASS_FAIL_CLOSED_SANITY_GATE_COMPLETE_VALIDATION",
+  "supersedes": {
+    "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_B_VALIDATION.v1.json",
+    "sha256": "5f1427c8c25e57ce0adf3e9644917d625d81481fd84a59866da3fa25f97744b7"
+  },
+  "sessionB": {
+    "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_B.v1.json",
+    "sha256": "58237e5130aaee5b8d22c0c38c905ec2da0d3b919436a5fc44c56fe755c80de6"
+  },
+  "checks": {
+    "sealedSessionAHashes": "PASS",
+    "runnerSourceClosure": "PASS",
+    "exactServingProfile": "PASS_M2_FIM_FP8_SEED_20260809",
+    "sanityCalls": "PASS_EXACTLY_1",
+    "sanityRetry": "PASS_ZERO",
+    "primaryCalls": "PASS_ZERO_AFTER_GATE_FAIL",
+    "primaryLedgersEmpty": "PASS",
+    "sanityLineage": "PASS_2_EVENTS",
+    "rawPersistence": "PASS_ZERO",
+    "L2": "PASS_DISABLED",
+    "strictTypeScript": "PASS",
+    "projectTypecheck": "PASS",
+    "completeTests": "PASS_188_OF_188",
+    "productionBuild": "PASS",
+    "designValidation": "PASS_0_WARNINGS_0_ERRORS",
+    "artifactSidecars": "PASS",
+    "privacySecretScan": "PASS",
+    "runtimeCleanup": "PASS",
+    "disposableCleanup": "PASS"
+  },
+  "accounting": {
+    "sanityCalls": 1,
+    "primaryCalls": 0,
+    "controlCalls": 0,
+    "treatmentCalls": 0,
+    "pairs": 0,
+    "retries": 0,
+    "reviewers": 0
+  },
+  "runtime": {
+    "modelProcesses": 0,
+    "port8000Listeners": 0,
+    "gpuComputeProcesses": 0,
+    "ephemeralStateAbsent": true,
+    "disposableWorkspaces": 0
+  },
+  "sessionCReady": false
+}

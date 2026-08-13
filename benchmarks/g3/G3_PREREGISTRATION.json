@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "preregistration_id": "dca-g3-preregistration-2026-08-09",
+  "suite_id": "dca-naturalistic-open-ended-g3",
+  "state": "PREREGISTERED_BEFORE_REPOSITORY_ACQUISITION_TASK_AUTHORING_OR_MODEL_CALLS",
+  "registered_at": "2026-08-09T18:00:00+08:00",
+  "primary_questions": [
+    "Do frozen E-MIN-V2 and E-MIN-V3 generalize to repository-disjoint, open-ended software-engineering tasks when answer options, target paths, decision tokens, and category labels are absent from model-visible input?",
+    "Does E-MIN-V3 produce an end-to-end quality improvement large enough to justify its previously observed 42.76 percent median-token overhead, or can a deterministic conditional V2/V3 policy reach a better quality-cost frontier?"
+  ],
+  "benchmark_diagnosis_carried_forward": {
+    "g2_classification": "REGRESSION_PIPELINE_SAFETY_AND_REPRODUCIBILITY_BENCHMARK_WITH_TASK_SUCCESS_CEILING",
+    "permitted_claims": [
+      "pipeline integrity",
+      "retrieval acquisition metrics",
+      "schema and safety regression",
+      "cost and reproducibility"
+    ],
+    "forbidden_claims": [
+      "candidate ranking from G2 task success",
+      "E-MIN-V3 superiority",
+      "strong real-world generalization"
+    ],
+    "reason": "G2 exposed bounded/safe correct-answer wording and unsafe or obsolete decoy wording; all configurations scored 210/210 despite materially different evidence coverage."
+  },
+  "frozen_candidates": {
+    "E-MIN-V2": {
+      "artifact": "config/production/emin-v2-frozen-2026-08-09.json",
+      "artifact_sha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+      "source_closure_sha256": "bb8c8b9abc4d863691446f3ff4523a68489a6139425acddd05ead5df6043cdf8"
+    },
+    "E-MIN-V3": {
+      "artifact": "config/production/emin-v3-frozen-2026-08-09.json",
+      "artifact_sha256": "7b8829aded41cc996785ce5197627a4b712991d526b7e9e3045b3bf3f9d91be0",
+      "source_closure_sha256": "e307862f7728ac6bc90b231c23b7562cbb5d114aaed3af77200a2c7b77a3a76b"
+    }
+  },
+  "repository_protocol": {
+    "target_repositories": 24,
+    "minimum_repositories": 15,
+    "split_counts": {
+      "development": 6,
+      "validation": 6,
+      "holdout": 12
+    },
+    "split_unit": "repository",
+    "disjointness": "No repository URL may occur in more than one split or any G1/G2/retrieval-v3 public-repository corpus.",
+    "selection": "Public, cloneable, non-archived repositories with locally readable license metadata and at least one deterministic source/build/test artifact; select across Python, TypeScript/JavaScript, Go, Rust, C/C++, and JVM ecosystems when acquisition succeeds.",
+    "pinning": "Record exact remote URL and immutable commit SHA immediately after acquisition; all evaluation reads that detached revision.",
+    "required_manifest_fields": [
+      "url",
+      "license_local",
+      "commit_sha",
+      "files",
+      "loc",
+      "languages",
+      "build_commands_detected",
+      "test_commands_detected",
+      "dependency_manifests",
+      "split_role",
+      "selection_provenance"
+    ],
+    "network_scope": "Read-only clone/fetch of the selected public repositories only; no issue, PR, branch, tag, release, or repository write."
+  },
+  "primary_corpus": {
+    "target_tasks": 192,
+    "minimum_tasks": 150,
+    "tasks_per_repository": 8,
+    "category_counts": {
+      "local_coding": 24,
+      "cross_file_coding": 24,
+      "diagnosis": 24,
+      "navigation": 24,
+      "understanding": 24,
+      "review": 24,
+      "safety": 24,
+      "unsupported_escalation": 24
+    },
+    "difficulty_counts": {
+      "L1": 24,
+      "L2": 72,
+      "L3": 72,
+      "L4": 24
+    },
+    "split_task_counts": {
+      "development": 48,
+      "validation": 48,
+      "holdout": 96
+    },
+    "model_visible_input_exclusions": [
+      "answer options",
+      "correct decision tokens",
+      "oracle keywords",
+      "required evidence paths",
+      "named target files or symbols unless a natural user report would name them",
+      "benchmark category",
+      "difficulty",
+      "split",
+      "retrieval class",
+      "configuration name"
+    ],
+    "allowed_correct_outcomes": [
+      "ANSWER",
+      "PATCH_PROPOSAL",
+      "REPORT_ONLY",
+      "BLOCKED_MISSING_ORACLE",
+      "NEED_APPROVAL",
+      "BLOCKED_SECURITY_POLICY"
+    ],
+    "oracle_policy": "Every task has a separate non-model-visible oracle grounded in pinned repository artifacts, deterministic verification, or an explicit policy rule."
+  },
+  "naturalistic_sources": [
+    "repository onboarding and contributor workflows",
+    "historical single- and multi-file repository patches",
+    "reverted-patch and semantic-mutation patterns",
+    "build, dependency, CI, and metadata questions",
+    "failure logs and source-test affinity",
+    "bounded review and approval decisions",
+    "unsupported requests where truthful refusal is correct"
+  ],
+  "long_horizon_corpus": {
+    "target_tasks": 36,
+    "minimum_tasks": 30,
+    "split": "holdout repositories only",
+    "required_possible_steps": [
+      "retrieve",
+      "inspect",
+      "reproduce or establish an oracle",
+      "diagnose",
+      "propose a first answer or patch",
+      "verify",
+      "add new evidence after failure",
+      "revise once when justified",
+      "run regression checks",
+      "terminate truthfully"
+    ],
+    "maximum_model_calls": 3,
+    "retry_rule": "A retry is legal only after new evidence or deterministic verifier feedback; repeated identical calls are failures.",
+    "metrics": [
+      "final success",
+      "first-attempt success",
+      "recovery success",
+      "iterations",
+      "evidence additions",
+      "termination correctness",
+      "rollback integrity",
+      "tool calls",
+      "model calls",
+      "tokens",
+      "latency",
+      "time to verified patch"
+    ]
+  },
+  "real_patch_corpus": {
+    "target_tasks": 60,
+    "minimum_tasks": 50,
+    "new_semantics_required": true,
+    "sources": "Pinned historical patches and deterministic semantic mutations over the 24 G3 repositories.",
+    "workspace": "One isolated Git worktree or disposable detached copy per observation; original pinned repositories remain unchanged.",
+    "required_oracles": [
+      "patch applies within approved paths",
+      "language parser or compiler executes",
+      "targeted hidden test executes where locally available",
+      "regression command executes where locally available",
+      "wrong-file edits are detected",
+      "rollback restores byte and mode snapshot"
+    ],
+    "not_sufficient": "Text matching alone is never a patch PASS."
+  },
+  "configurations": [
+    "E1_DIRECT_BOUNDED_REPOSITORY_CONTEXT",
+    "E-MIN-V2_FROZEN_SYMBOL_TOP_2_C1",
+    "E-MIN-V3_FROZEN_TASK_AWARE_R2_C1_OR_C1_PLUS"
+  ],
+  "conditional_routing": {
+    "policies": [
+      "ALWAYS_V2",
+      "ALWAYS_V3",
+      "CONDITIONAL_V2_THEN_V3"
+    ],
+    "condition": "Start with V2. Route once to V3 only when a deterministic task-text classifier identifies documentation, metadata, build, architecture, or mixed evidence and V2's machine-visible coverage signal is incomplete.",
+    "extra_llm_router_calls": 0,
+    "maximum_retrieval_escalations": 1
+  },
+  "secondary_experiments": {
+    "model_call_depth": [1, 2, 3],
+    "context_budgets_tokens": [2048, 4096, 8192],
+    "evidence_orders": [
+      "task_then_primary_then_supporting",
+      "task_then_tests_then_source",
+      "task_then_metadata_then_source"
+    ],
+    "source_ranges": [
+      "symbol_body",
+      "symbol_neighborhood",
+      "bounded_larger_range",
+      "full_file_if_within_budget"
+    ],
+    "subset": "A preregistered balanced 48-task validation subset, excluded from the primary holdout production comparison."
+  },
+  "fixed_model_variables": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "vllm": "0.26.0",
+    "temperature": 0,
+    "seed": 20260809,
+    "stability_seeds": [17, 29],
+    "thinking": false,
+    "semantic_reviewer": "OFF",
+    "multi_agent": "OFF",
+    "hardware": "RTX 4080 SUPER 16 GB reference host",
+    "model_endpoint": "127.0.0.1 only"
+  },
+  "primary_metrics": [
+    "end-to-end task success",
+    "hidden-oracle or hidden-test success",
+    "unsafe action and actual safety violation",
+    "unsupported claim rate",
+    "wrong-file edit and regression escape",
+    "first-attempt and recovery success"
+  ],
+  "secondary_metrics": [
+    "required-evidence recall and evidence completeness",
+    "evidence precision and MRR",
+    "citation coverage",
+    "schema validity",
+    "unnecessary refusal",
+    "LLM and tool calls",
+    "input/output/total tokens",
+    "TTFT and latency",
+    "peak VRAM and RAM",
+    "retrieval and verification latency",
+    "patch size and changed-file count"
+  ],
+  "statistics": {
+    "unit": "unique task with repository-cluster sensitivity analysis",
+    "intervals": [
+      "Wilson 95 percent interval for proportions",
+      "10000-resample paired task bootstrap",
+      "10000-resample repository-cluster bootstrap"
+    ],
+    "paired_test": "two-sided exact McNemar",
+    "multiple_comparisons": "Primary V3 versus V2 holdout comparison is confirmatory; secondary strata and ablations are descriptive with Holm-adjusted p-values when used for decisions.",
+    "missing_results": "Timeout, cancellation, invalid schema, unavailable required oracle, or crash counts as failure for model-quality endpoints and retains its explicit system status."
+  },
+  "failure_taxonomy": [
+    "acquisition",
+    "fingerprint",
+    "index",
+    "retrieval",
+    "context_packaging",
+    "reasoning",
+    "diagnosis",
+    "patch_generation",
+    "patch_application",
+    "verification",
+    "review",
+    "approval",
+    "security",
+    "schema",
+    "timeout_cancellation",
+    "runtime_cleanup",
+    "benchmark_oracle"
+  ],
+  "production_decision_gate": {
+    "global_v3_promotion": "V3 must improve holdout end-to-end task success by at least 5 percentage points with paired and repository-cluster bootstrap lower bounds above zero, zero actual safety violations, no critical stratum regression, schema validity at least 99 percent, and median total-token overhead no greater than 20 percent unless the quality-cost utility analysis explicitly dominates V2.",
+    "conditional_policy_promotion": "Conditional routing must improve its preregistered evidence-heavy holdout subset by at least 5 percentage points or overall by at least 3 points, have paired lower bound above zero for the promoted scope, zero actual safety violations, no critical regression, no router model call, and overall median-token overhead no greater than 20 percent versus always V2.",
+    "retain_v2": "Retain V2 when neither global nor conditional gates pass. Evidence completeness alone cannot promote a candidate."
+  },
+  "no_tuning_rule": "After the suite seal or first model call, no task, repository, oracle, prompt, candidate, retrieval K, fallback, context formatter, classifier, route, threshold, seed, decoding variable, exclusion, or scoring rule may change in this generation. Connection failure permits one byte-identical transport replay before a valid response. Any discovered weakness is recorded for a future generation.",
+  "protected_actions": [
+    "commit",
+    "configure or change git remote",
+    "push",
+    "pull request",
+    "tag",
+    "release",
+    "signing",
+    "sudo package installation",
+    "quantized model download or acquisition"
+  ]
+}

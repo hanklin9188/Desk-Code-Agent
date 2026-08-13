@@ -1,0 +1,613 @@
+{
+  "schemaVersion": 1,
+  "population": "NEW_TARGET_MODEL_UNSEEN_REPOSITORY_DISJOINT",
+  "taskCount": 40,
+  "repositoryCount": 40,
+  "historicalPopulationsExcluded": [
+    "PRIVACY_SAFE_OBSERVABILITY_V3_80",
+    "MODEL_TOURNAMENT_95"
+  ],
+  "taskIdsSha256": "13f14af078b1b9b35922c2bee5e8f534ab28c5f0617dc42075176d7c8f246133",
+  "tasks": [
+    {
+      "task_id": "cfc-v1-window-selection-07",
+      "repository_id": "cfc-v1-repo-window-selection-07",
+      "repository_revision": "053c91b6f81f66b59184651cfd06deadb96e070b1983a97ef8fb5a32afedd984",
+      "category": "window-selection",
+      "difficulty": "medium",
+      "prompt": "Fix selectWindow7 to return items from inclusive start through exclusive end without mutating input; invalid bounds yield an empty array.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-06",
+      "repository_id": "cfc-v1-repo-label-normalization-06",
+      "repository_revision": "3a0e042f3812dc40613e5c69fd5b989645ce68e04a738b91671482610a7a0cb3",
+      "category": "label-normalization",
+      "difficulty": "medium",
+      "prompt": "Fix normalizeLabel6 to trim, lowercase, collapse non-alphanumeric runs to one dash, and remove edge dashes.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-05",
+      "repository_id": "cfc-v1-repo-window-selection-05",
+      "repository_revision": "669e596ecffc1c7a5ef81cd3a17fb6ecaaf25a000594a1909fce7118628f227e",
+      "category": "window-selection",
+      "difficulty": "medium",
+      "prompt": "Fix selectWindow5 to return items from inclusive start through exclusive end without mutating input; invalid bounds yield an empty array.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-02",
+      "repository_id": "cfc-v1-repo-token-rendering-02",
+      "repository_revision": "2ed6aa7f610c19401be0b27bd690647a5959645ee9e627e66872ab63a177fb47",
+      "category": "token-rendering",
+      "difficulty": "medium",
+      "prompt": "Fix renderToken2 to render key=value, escaping backslash, newline, and double quote in the value.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-03",
+      "repository_id": "cfc-v1-repo-bounded-number-03",
+      "repository_revision": "4171073e6df48eb4fec51e596ee5bdb4b48d605ab3b6de3ea2a7f6298fb2401e",
+      "category": "bounded-number",
+      "difficulty": "medium",
+      "prompt": "Fix boundValue3 so it clamps finite values inclusively between min and max, returning min for non-finite input.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-03",
+      "repository_id": "cfc-v1-repo-token-rendering-03",
+      "repository_revision": "118e9b00c33924d9f1b624167cfb3dc1039b5819021386d52786d9b872780342",
+      "category": "token-rendering",
+      "difficulty": "medium",
+      "prompt": "Fix renderToken3 to render key=value, escaping backslash, newline, and double quote in the value.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-08",
+      "repository_id": "cfc-v1-repo-token-rendering-08",
+      "repository_revision": "56a388db1bc3876fd7da76106b038df90fe833153c7dfc6309d97eedb4f8fe7f",
+      "category": "token-rendering",
+      "difficulty": "medium",
+      "prompt": "Fix renderToken8 to render key=value, escaping backslash, newline, and double quote in the value.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-03",
+      "repository_id": "cfc-v1-repo-count-parsing-03",
+      "repository_revision": "2e795adb7577082c1bb20b0124d2eee4c196a01f45ee88d255130c84b9120552",
+      "category": "count-parsing",
+      "difficulty": "medium",
+      "prompt": "Fix parseCount3 to accept only canonical non-negative decimal integer strings and otherwise return the fallback.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-02",
+      "repository_id": "cfc-v1-repo-window-selection-02",
+      "repository_revision": "465a9288fdd5f6bc1befcfdb229f3694a22732c4851dc7c01f71cb66f1986005",
+      "category": "window-selection",
+      "difficulty": "medium",
+      "prompt": "Fix selectWindow2 to return items from inclusive start through exclusive end without mutating input; invalid bounds yield an empty array.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-02",
+      "repository_id": "cfc-v1-repo-count-parsing-02",
+      "repository_revision": "0536f7b48b68c4d125a249a877df497fb1949608ab95b13d4ad7e6eb9b2f8320",
+      "category": "count-parsing",
+      "difficulty": "medium",
+      "prompt": "Fix parseCount2 to accept only canonical non-negative decimal integer strings and otherwise return the fallback.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-04",
+      "repository_id": "cfc-v1-repo-token-rendering-04",
+      "repository_revision": "53d750016ba10047861cd893b8e2ec5b36dd2f6e1d6d4c94aebc3fdce24f2bfc",
+      "category": "token-rendering",
+      "difficulty": "medium",
+      "prompt": "Fix renderToken4 to render key=value, escaping backslash, newline, and double quote in the value.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-05",
+      "repository_id": "cfc-v1-repo-count-parsing-05",
+      "repository_revision": "c0739ab1bf135a8554564f0f4cd15c52bd06b6ff123bb8b14a6c39a8300b1460",
+      "category": "count-parsing",
+      "difficulty": "medium",
+      "prompt": "Fix parseCount5 to accept only canonical non-negative decimal integer strings and otherwise return the fallback.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-01",
+      "repository_id": "cfc-v1-repo-window-selection-01",
+      "repository_revision": "0d7e18c41a0fe87e40beedab8ea3c52361bfbdbd6534293b7b4ae82a0103e84d",
+      "category": "window-selection",
+      "difficulty": "medium",
+      "prompt": "Fix selectWindow1 to return items from inclusive start through exclusive end without mutating input; invalid bounds yield an empty array.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-04",
+      "repository_id": "cfc-v1-repo-label-normalization-04",
+      "repository_revision": "10d3309e5e74c388f6492973efe7a9dbb21daa004db41b6ee1f2ff192e5da609",
+      "category": "label-normalization",
+      "difficulty": "medium",
+      "prompt": "Fix normalizeLabel4 to trim, lowercase, collapse non-alphanumeric runs to one dash, and remove edge dashes.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-06",
+      "repository_id": "cfc-v1-repo-count-parsing-06",
+      "repository_revision": "e69dd68366ade36e7ece6f82b49d115d8a4bf9fab917e8687b55fc19f41d2d9c",
+      "category": "count-parsing",
+      "difficulty": "medium",
+      "prompt": "Fix parseCount6 to accept only canonical non-negative decimal integer strings and otherwise return the fallback.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-04",
+      "repository_id": "cfc-v1-repo-window-selection-04",
+      "repository_revision": "b12aa2e352f219a3d95b5781945de886eb98bd03ace53c1cfd1df9cb07150c65",
+      "category": "window-selection",
+      "difficulty": "medium",
+      "prompt": "Fix selectWindow4 to return items from inclusive start through exclusive end without mutating input; invalid bounds yield an empty array.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-07",
+      "repository_id": "cfc-v1-repo-count-parsing-07",
+      "repository_revision": "9d0d6224b825950abd05648ba3a3c9e0c0326e4a029315687ac7086cd6452450",
+      "category": "count-parsing",
+      "difficulty": "medium",
+      "prompt": "Fix parseCount7 to accept only canonical non-negative decimal integer strings and otherwise return the fallback.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-05",
+      "repository_id": "cfc-v1-repo-token-rendering-05",
+      "repository_revision": "a30696aa7ea3414b65bf9be2cb156aa2738a4af0d04a678fef90e83ef2dd03a7",
+      "category": "token-rendering",
+      "difficulty": "medium",
+      "prompt": "Fix renderToken5 to render key=value, escaping backslash, newline, and double quote in the value.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-03",
+      "repository_id": "cfc-v1-repo-window-selection-03",
+      "repository_revision": "978993c490ca83aed4ad64b6773ec8e9a7feac4b95737185aeba3f2bbb53830b",
+      "category": "window-selection",
+      "difficulty": "medium",
+      "prompt": "Fix selectWindow3 to return items from inclusive start through exclusive end without mutating input; invalid bounds yield an empty array.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-07",
+      "repository_id": "cfc-v1-repo-token-rendering-07",
+      "repository_revision": "2cb0e4734398abf48640e68ec835b315f2298a41d73ce8af6fc6561dd4c450f4",
+      "category": "token-rendering",
+      "difficulty": "medium",
+      "prompt": "Fix renderToken7 to render key=value, escaping backslash, newline, and double quote in the value.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-05",
+      "repository_id": "cfc-v1-repo-bounded-number-05",
+      "repository_revision": "fce2961a98c362410672c731946a9d4766faba93f51198a34fe9dbd52f1b4abd",
+      "category": "bounded-number",
+      "difficulty": "medium",
+      "prompt": "Fix boundValue5 so it clamps finite values inclusively between min and max, returning min for non-finite input.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-04",
+      "repository_id": "cfc-v1-repo-bounded-number-04",
+      "repository_revision": "1a8405c2ee8c0b6c102f1c6b18a87dca2bc3aa10a26eb7dcb92774f759c182dd",
+      "category": "bounded-number",
+      "difficulty": "medium",
+      "prompt": "Fix boundValue4 so it clamps finite values inclusively between min and max, returning min for non-finite input.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-01",
+      "repository_id": "cfc-v1-repo-bounded-number-01",
+      "repository_revision": "c5f4fb5d08ab423cf788487580738a19258547c5a7390672c76db0bdefaac55c",
+      "category": "bounded-number",
+      "difficulty": "medium",
+      "prompt": "Fix boundValue1 so it clamps finite values inclusively between min and max, returning min for non-finite input.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-06",
+      "repository_id": "cfc-v1-repo-bounded-number-06",
+      "repository_revision": "1661fcfdcf394effeeceac016c38224d114ce5470901b147e6068428c9493533",
+      "category": "bounded-number",
+      "difficulty": "medium",
+      "prompt": "Fix boundValue6 so it clamps finite values inclusively between min and max, returning min for non-finite input.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-07",
+      "repository_id": "cfc-v1-repo-bounded-number-07",
+      "repository_revision": "bd35323dc3a1cf235a4c549c2f49eb86be87deb63c12d4d3df52ef3a4df27410",
+      "category": "bounded-number",
+      "difficulty": "medium",
+      "prompt": "Fix boundValue7 so it clamps finite values inclusively between min and max, returning min for non-finite input.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-08",
+      "repository_id": "cfc-v1-repo-bounded-number-08",
+      "repository_revision": "f91f7bff4dad6525b53e394e533f9a01a5fc33ef62279440dcc3214eec13499b",
+      "category": "bounded-number",
+      "difficulty": "medium",
+      "prompt": "Fix boundValue8 so it clamps finite values inclusively between min and max, returning min for non-finite input.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-01",
+      "repository_id": "cfc-v1-repo-label-normalization-01",
+      "repository_revision": "bb6dc2e5aefb01dbf2b3e4b89c2be9ecf5707990cbacbc933aa546b6af36c59b",
+      "category": "label-normalization",
+      "difficulty": "medium",
+      "prompt": "Fix normalizeLabel1 to trim, lowercase, collapse non-alphanumeric runs to one dash, and remove edge dashes.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-08",
+      "repository_id": "cfc-v1-repo-label-normalization-08",
+      "repository_revision": "4daa35bfe77b7a6ccb5726911b5a5ff447cc5479594c27f3403bf4ce9220e24d",
+      "category": "label-normalization",
+      "difficulty": "medium",
+      "prompt": "Fix normalizeLabel8 to trim, lowercase, collapse non-alphanumeric runs to one dash, and remove edge dashes.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-01",
+      "repository_id": "cfc-v1-repo-count-parsing-01",
+      "repository_revision": "a64c800f575d29bc65d953bb294c501e09a560cc8cd3db4ab467a6b469ee7396",
+      "category": "count-parsing",
+      "difficulty": "medium",
+      "prompt": "Fix parseCount1 to accept only canonical non-negative decimal integer strings and otherwise return the fallback.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-04",
+      "repository_id": "cfc-v1-repo-count-parsing-04",
+      "repository_revision": "1625ad8eb41a33b8607423d011b1256528598b4cac4cb50a9875f037612f921a",
+      "category": "count-parsing",
+      "difficulty": "medium",
+      "prompt": "Fix parseCount4 to accept only canonical non-negative decimal integer strings and otherwise return the fallback.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-05",
+      "repository_id": "cfc-v1-repo-label-normalization-05",
+      "repository_revision": "208fb932dd3ee6eb4382f68a98062f55a7b99c93c38620640f9d25389f5cb8b5",
+      "category": "label-normalization",
+      "difficulty": "medium",
+      "prompt": "Fix normalizeLabel5 to trim, lowercase, collapse non-alphanumeric runs to one dash, and remove edge dashes.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-01",
+      "repository_id": "cfc-v1-repo-token-rendering-01",
+      "repository_revision": "2a79d375929734cfc81beabe40203701d5f924753771fbe492eda1f4bdeb91d7",
+      "category": "token-rendering",
+      "difficulty": "medium",
+      "prompt": "Fix renderToken1 to render key=value, escaping backslash, newline, and double quote in the value.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-02",
+      "repository_id": "cfc-v1-repo-label-normalization-02",
+      "repository_revision": "8599e45e9c5ae93f4db8928f64349aacb02815208e58b199c3a9e856926c8b09",
+      "category": "label-normalization",
+      "difficulty": "medium",
+      "prompt": "Fix normalizeLabel2 to trim, lowercase, collapse non-alphanumeric runs to one dash, and remove edge dashes.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-08",
+      "repository_id": "cfc-v1-repo-count-parsing-08",
+      "repository_revision": "f24b05f44f6c9da559b39ab0e87d88d2951ee7e9b8f3faa13778cafd5b9a7dee",
+      "category": "count-parsing",
+      "difficulty": "medium",
+      "prompt": "Fix parseCount8 to accept only canonical non-negative decimal integer strings and otherwise return the fallback.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-02",
+      "repository_id": "cfc-v1-repo-bounded-number-02",
+      "repository_revision": "3c8ffee0467b33515c9772dd6b748186d519d59f8e961c6f680b68260ebeeed4",
+      "category": "bounded-number",
+      "difficulty": "medium",
+      "prompt": "Fix boundValue2 so it clamps finite values inclusively between min and max, returning min for non-finite input.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-07",
+      "repository_id": "cfc-v1-repo-label-normalization-07",
+      "repository_revision": "c67717849c87bf41581fed38d7f61dae1af7e1931d4dcfbe7a7b611e27ce8758",
+      "category": "label-normalization",
+      "difficulty": "medium",
+      "prompt": "Fix normalizeLabel7 to trim, lowercase, collapse non-alphanumeric runs to one dash, and remove edge dashes.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-06",
+      "repository_id": "cfc-v1-repo-window-selection-06",
+      "repository_revision": "b7429a4bdc50539aab3b794aa646d37cb40a64edddb26f8127fb305bb9b213fd",
+      "category": "window-selection",
+      "difficulty": "medium",
+      "prompt": "Fix selectWindow6 to return items from inclusive start through exclusive end without mutating input; invalid bounds yield an empty array.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-08",
+      "repository_id": "cfc-v1-repo-window-selection-08",
+      "repository_revision": "7bea9d3a36ae04deef0294fcb9758de31c9fca2f24869d2312193935268f3ab2",
+      "category": "window-selection",
+      "difficulty": "medium",
+      "prompt": "Fix selectWindow8 to return items from inclusive start through exclusive end without mutating input; invalid bounds yield an empty array.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-06",
+      "repository_id": "cfc-v1-repo-token-rendering-06",
+      "repository_revision": "52268bce81914bc625a4638266f254f0dbda5da9de93bff17e1b7b326cdc12d9",
+      "category": "token-rendering",
+      "difficulty": "medium",
+      "prompt": "Fix renderToken6 to render key=value, escaping backslash, newline, and double quote in the value.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-03",
+      "repository_id": "cfc-v1-repo-label-normalization-03",
+      "repository_revision": "13dd5bb75b5aac113efa7a8eb06ce937bc47d29ef5c5c975fedf436fb56ae949",
+      "category": "label-normalization",
+      "difficulty": "medium",
+      "prompt": "Fix normalizeLabel3 to trim, lowercase, collapse non-alphanumeric runs to one dash, and remove edge dashes.",
+      "allowed_file": "src/subject.mjs",
+      "allowed_range": {
+        "start_line": 1,
+        "end_line": 3
+      },
+      "changed_line_budget": 12,
+      "visible_test_path": "test/visible.test.mjs"
+    }
+  ]
+}

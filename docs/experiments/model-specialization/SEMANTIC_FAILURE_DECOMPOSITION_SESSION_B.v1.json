@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "sessionId": "dca-semantic-failure-decomposition-session-b-v1",
+  "session": "B",
+  "status": "PASS",
+  "classification": "ZERO_TARGET_MODEL_CALL_FULL_CLASSIFICATION_AND_EVIDENCE_AUDIT",
+  "completedAt": "2026-08-11T19:11:06.048Z",
+  "inputs": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_PREREGISTRATION.v1.json",
+      "sha256": "6851a9a2a2fd25757413f71c0b331e5899a397c1928b59259f3cc6606123ed47"
+    },
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_SESSION_A.v1.json",
+      "sha256": "368ba02473ef7baf09f7c3927b969c579c1848c8c362c2be12f27cacd36535eb"
+    },
+    "sessionAReview": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_SESSION_A_REVIEW.v1.json",
+      "sha256": "fcc3a6b930d909ab88f13e14d8883c7aae61b1efffaf9d4aa361e03056478539"
+    }
+  },
+  "resultsIndex": {
+    "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_DECOMPOSITION_RESULTS_INDEX.v1.json",
+    "sha256": "f0f020501898aed91c64c6f2c8d8ffd71dc8ec437e975546b9fc6bdd90edb978"
+  },
+  "validation": {
+    "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_DECOMPOSITION_SESSION_B_VALIDATION.v1.json",
+    "sha256": "03d1bfec163dcd0abf2e8841776d48a2ca275e0ae621dc1eef37a9c17c5e182c"
+  },
+  "population": {
+    "failures": 66,
+    "controls": 29,
+    "total": 95
+  },
+  "primaryCategoryCounts": {
+    "total": 66,
+    "counts": {
+      "T11_RETRIEVAL_FAILURE": 5,
+      "T12_ACTION_OR_PATCH_REPRESENTATION": 2,
+      "T13_SYNTAX_CODE_FORMATION": 6,
+      "T14_AMBIGUOUS_OR_INCONCLUSIVE": 53
+    },
+    "ratesPercent": {
+      "T11_RETRIEVAL_FAILURE": 7.575757575757576,
+      "T12_ACTION_OR_PATCH_REPRESENTATION": 3.0303030303030303,
+      "T13_SYNTAX_CODE_FORMATION": 9.090909090909092,
+      "T14_AMBIGUOUS_OR_INCONCLUSIVE": 80.3030303030303
+    }
+  },
+  "confidenceDistribution": {
+    "total": 66,
+    "counts": {
+      "HIGH": 13,
+      "LOW": 53
+    },
+    "ratesPercent": {
+      "HIGH": 19.696969696969695,
+      "LOW": 80.3030303030303
+    }
+  },
+  "t14Observability": {
+    "count": 53,
+    "percent": 80.3030303030303,
+    "report": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_T14_OBSERVABILITY.v1.json",
+      "sha256": "66c0d303631044d34c74a79f6fbaaa3dfc9b7f3353482140ce2db2c1a9839cee"
+    }
+  },
+  "evidenceSufficiency": {
+    "total": 66,
+    "counts": {
+      "MISSING_REQUIRED_EVIDENCE": 5,
+      "PARTIALLY_SUFFICIENT": 61
+    },
+    "ratesPercent": {
+      "MISSING_REQUIRED_EVIDENCE": 7.575757575757576,
+      "PARTIALLY_SUFFICIENT": 92.42424242424242
+    }
+  },
+  "patchScope": {
+    "total": 66,
+    "counts": {
+      "SINGLE_RANGE": 66
+    },
+    "ratesPercent": {
+      "SINGLE_RANGE": 100
+    }
+  },
+  "reasoningHorizon": {
+    "total": 66,
+    "counts": {
+      "CROSS_FILE": 13,
+      "LOCAL": 32,
+      "STATEFUL_OR_API_LEVEL": 21
+    },
+    "ratesPercent": {
+      "CROSS_FILE": 19.696969696969695,
+      "LOCAL": 48.484848484848484,
+      "STATEFUL_OR_API_LEVEL": 31.818181818181817
+    }
+  },
+  "audit": {
+    "uniqueAudited": 60,
+    "disagreements": 0,
+    "report": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_QUALITY_AUDIT.v1.json",
+      "sha256": "7a4608f6ac222e8eb5296941c663e1e438065872c22a9fdf89c6d722f57235b5"
+    },
+    "resolutions": {
+      "path": "docs/experiments/model-specialization/semantic-failure-decomposition-session-b/SEMANTIC_FAILURE_DISAGREEMENTS.v1.json",
+      "sha256": "7848b5f0c8db62b92d3568d1b2980e0cd11191e8626a176f6f7c3c3c96d4ee43"
+    }
+  },
+  "historicalDecisions": {
+    "retry": "RETRY_NO_MATERIAL_GAIN",
+    "productMutation": "KEEP_MUTATION_DISABLED",
+    "fimStatus": "BEST_RESEARCH_MODEL__STRONGEST_SCORED_RESEARCH_CANDIDATE_ASSISTED_FLOOR_ONLY",
+    "eedit": "RESEARCH_ONLY_MUTATION_INTERFACE",
+    "changed": false
+  },
+  "SessionC": {
+    "gatesApplied": false,
+    "nextExperimentSelected": false,
+    "readiness": "READY_SEPARATE_INVOCATION_REQUIRED"
+  },
+  "closedHoldout": "ANALYSIS_EXPOSED_NOT_FRESH_PROMOTION_EVIDENCE",
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "services/semantic-failure-decomposition/src/index.ts",
+        "sha256": "b30fcf4a658289d1d7935839c91bccf63916d16f179126387e8050c4fbf55982",
+        "bytes": 11577
+      },
+      {
+        "path": "scripts/run_semantic_failure_decomposition_session_b.ts",
+        "sha256": "dd8f4fdd1795148b96cfb3de2071acc28763307b9f1632f00ecd4c5383d40734",
+        "bytes": 30860
+      },
+      {
+        "path": "tests/semantic-failure-decomposition.test.ts",
+        "sha256": "e07048d40335f0108775b04d3974f5793617106e5f0decae9e369ee2a9524d7c",
+        "bytes": 5038
+      },
+      {
+        "path": "services/g3-evaluation-runtime/src/index.ts",
+        "sha256": "02ebfd6a7914cbe35c49048c182236d578cf56a1ddeb40ff8a4b9ac141affad2",
+        "bytes": 10087
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      }
+    ],
+    "sha256": "4517f93a18298599b74f37507439e719b3248028ad4e76ad944c742c225232d3"
+  },
+  "cleanup": {
+    "targetModelCalls": 0,
+    "modelProcessCount": 0,
+    "modelComputeProcesses": 0,
+    "modelGpuAllocationMiB": 0,
+    "ambientGpuMemoryMiB": 0,
+    "port8000Clear": true,
+    "ephemeralStateAbsent": true,
+    "temporaryDirectories": 0,
+    "worktrees": 1
+  },
+  "protectedActions": {
+    "targetModelCall": false,
+    "modelDownload": false,
+    "retry": false,
+    "newTaskExecution": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  },
+  "stop": "SESSION_B_BOUNDARY_REACHED"
+}

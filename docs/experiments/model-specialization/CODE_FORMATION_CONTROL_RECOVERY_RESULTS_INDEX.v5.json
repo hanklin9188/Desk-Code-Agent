@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 5,
+  "experimentId": "CODE_FORMATION_CONTROL_RECOVERY_GENERATION",
+  "state": "SESSION_B_CONTROL_SANITY_GATE_FAIL_PRIMARY_NOT_STARTED",
+  "supersedes": {
+    "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RESULTS_INDEX.v4.json",
+    "sha256": "09a293861bfd4f6448c84f525736f2ea02df001eb81c50176b19186ab2416b81"
+  },
+  "sessions": {
+    "A": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_A.v2.json",
+      "sha256": "7e68597e3f116eafd3e3ebeae8734f98d9564c7bdcb1d459ad4c1eb768d73b46"
+    },
+    "B": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_B.v1.json",
+      "sha256": "58237e5130aaee5b8d22c0c38c905ec2da0d3b919436a5fc44c56fe755c80de6",
+      "bytes": 1752
+    },
+    "C": null
+  },
+  "artifacts": {
+    "result": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_B_SANITY_GATE_RESULT.v1.json",
+      "sha256": "a33b8dc28826fb315f9af59596f849bf4dae6f8b2f264077add4a46e93c3f631",
+      "bytes": 3903
+    },
+    "validation": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_B_VALIDATION.v1.json",
+      "sha256": "5f1427c8c25e57ce0adf3e9644917d625d81481fd84a59866da3fa25f97744b7",
+      "bytes": 793
+    },
+    "capabilityStatus": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CAPABILITY_RESEARCH_STATUS.v4.json",
+      "sha256": "2ed922933a7fc0163d1ad2778394dfd04080a38ed697f7f4e1c49f7ccba3a611",
+      "bytes": 719
+    }
+  },
+  "accounting": {
+    "sanityCalls": 1,
+    "primaryCalls": 0,
+    "pairs": 0
+  },
+  "productStatus": "KEEP_MUTATION_DISABLED",
+  "sessionCReady": false,
+  "researchStatus": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+  "nextProjectPhase": "PRODUCT_PORTFOLIO_RELEASE_POLISH",
+  "stop": "SESSION_B_BOUNDARY_REACHED"
+}

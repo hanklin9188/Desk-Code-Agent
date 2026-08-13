@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_NOT_REACHED",
+  "implementation": {
+    "constraintSource": {
+      "path": "services/code-formation-constraint/src/index.ts",
+      "sha256": "fb3e89e452c92b7b5e3f620cc92bc708c5bacd8b5e196e3d81d9e2c175bb5bf7"
+    },
+    "runnerSource": {
+      "path": "scripts/run_code_formation_constraint_experiment.ts",
+      "sha256": "4ab314e6429f96150e5c46b4ac88162ea2934fa56390b9ae023b501dd52d21ac"
+    },
+    "order": [
+      "runner performs base normalizePatchInterfaceOutput(P2)",
+      "treatment invokes applyCodeFormationConstraint",
+      "constraint repeats base P2 normalization",
+      "only VALID_EDIT proceeds to empty/whitespace/fence/NUL/module-boundary/whole-source-parse formation checks"
+    ]
+  },
+  "answers": {
+    "applicationPoint": "AFTER_BASE_P2_NORMALIZATION_ATTEMPT; formation-specific rules execute only after a valid P2 edit",
+    "sameRuleForAllTreatmentRejections": true,
+    "rejectionRule": "BASE_P2_REJECTED",
+    "rejectionCount": 40,
+    "validP2CandidatesReceived": 0,
+    "formationSpecificChecksReached": 0,
+    "hypothesisStageReached": false,
+    "currentRunActuallyTested": "UPSTREAM_ACTION_REPRESENTATION_REJECTION_ONLY"
+  },
+  "formationEffectIdentifiability": "NOT_IDENTIFIABLE_UPSTREAM_ACTION_COLLAPSE"
+}

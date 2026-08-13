@@ -1,0 +1,1644 @@
+{
+  "schemaVersion": 1,
+  "resultsId": "dca-patch-interface-v3-results",
+  "generatedAt": "2026-08-11T01:11:15.543Z",
+  "status": "PASS_840_OF_840_VALID_PRIMARY",
+  "inputs": {
+    "preregistration": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_PREREGISTRATION.v3.json",
+      "sha256": "d5cce7dfa35b8943d46a1d949a9f810f583997ae0cc7fbbb2c260c470844bbaa"
+    },
+    "baselineResult": {
+      "path": "docs/experiments/runs/patch-interface-baseline-v3-20260811T003246Z/result.json",
+      "sha256": "66db7559d7ea624317f16b56c00d96b0802c229e89272912ab37a433ef214635"
+    },
+    "coderResult": {
+      "path": "docs/experiments/runs/patch-interface-coder-v3-20260811T005651Z/result.json",
+      "sha256": "30a628def03591884b546d3cdb9092e8fdcc3c6cb61084ee52dbd35891a54cdc"
+    }
+  },
+  "lineage": {
+    "historicalExcluded": 7,
+    "baselineValidPrimary": 420,
+    "coderValidPrimary": 420,
+    "validPrimary": 840,
+    "physicalLineage": 847
+  },
+  "primaryInterfaces": {
+    "baseline": {
+      "P0_EXACT": {
+        "observations": 50,
+        "attemptedActions": 40,
+        "reportOnly": 10,
+        "unnecessaryRefusals": 10,
+        "locallySchemaValid": 47,
+        "normalizationValidActions": 11,
+        "canonicalPatchConstructed": 11,
+        "runtimeAcceptedActions": 11,
+        "syntaxPasses": 7,
+        "visibleTestPasses": 7,
+        "hiddenTestPasses": 7,
+        "behavioralSuccesses": 7,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 1.6363636363636365,
+        "changedLinesSuccessfulMean": 2,
+        "unnecessaryChangedLinesAcceptedMean": 0,
+        "tokens": {
+          "prompt": 19461,
+          "completion": 16192,
+          "total": 35653
+        },
+        "latencyMs": {
+          "mean": 4412.346011160001,
+          "p50": 3947.4893070000107,
+          "p95": 8638.169760000004
+        },
+        "decomposition": {
+          "REPORT_ONLY": 10,
+          "SYNTACTICALLY_INVALID_EDIT": 30,
+          "TRANSPORT_TRUNCATION": 3,
+          "VALID_EDIT": 7
+        },
+        "firstFailureStage": {
+          "COMPLETE": 7,
+          "action validation": 10,
+          "canonical patch construction": 26,
+          "syntax": 4,
+          "transport": 3
+        },
+        "refusalCategory": {
+          "REPORT_ONLY": 10,
+          "syntactically_invalid_patch_edit": 30,
+          "truncated_response": 3,
+          "valid_patch_edit": 7
+        }
+      },
+      "P0_MINIMAL": {
+        "observations": 50,
+        "attemptedActions": 50,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 48,
+        "normalizationValidActions": 15,
+        "canonicalPatchConstructed": 15,
+        "runtimeAcceptedActions": 15,
+        "syntaxPasses": 12,
+        "visibleTestPasses": 11,
+        "hiddenTestPasses": 9,
+        "behavioralSuccesses": 9,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 2.3333333333333335,
+        "changedLinesSuccessfulMean": 2,
+        "unnecessaryChangedLinesAcceptedMean": 0.4666666666666667,
+        "tokens": {
+          "prompt": 21311,
+          "completion": 16771,
+          "total": 38082
+        },
+        "latencyMs": {
+          "mean": 4577.080420299996,
+          "p50": 4059.7037000000128,
+          "p95": 7419.547011000046
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 36,
+          "TRANSPORT_TRUNCATION": 2,
+          "VALID_EDIT": 12
+        },
+        "firstFailureStage": {
+          "COMPLETE": 9,
+          "canonical patch construction": 33,
+          "hidden test": 2,
+          "syntax": 3,
+          "transport": 2,
+          "visible test": 1
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 36,
+          "truncated_response": 2,
+          "valid_patch_edit": 12
+        }
+      },
+      "P1_MINIMAL": {
+        "observations": 50,
+        "attemptedActions": 46,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 4,
+        "locallySchemaValid": 0,
+        "normalizationValidActions": 21,
+        "canonicalPatchConstructed": 21,
+        "runtimeAcceptedActions": 19,
+        "syntaxPasses": 18,
+        "visibleTestPasses": 13,
+        "hiddenTestPasses": 14,
+        "behavioralSuccesses": 10,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 2.8947368421052633,
+        "changedLinesSuccessfulMean": 2.9,
+        "unnecessaryChangedLinesAcceptedMean": 0.9473684210526315,
+        "tokens": {
+          "prompt": 20011,
+          "completion": 9330,
+          "total": 29341
+        },
+        "latencyMs": {
+          "mean": 2555.259297859996,
+          "p50": 2280.100710000028,
+          "p95": 4968.340937000001
+        },
+        "decomposition": {
+          "PATCH_CONSTRUCTION_OR_GIT_APPLY_FAILURE": 2,
+          "SYNTACTICALLY_INVALID_EDIT": 25,
+          "TEXTUAL_EXPLANATION_WITHOUT_ACTION": 4,
+          "TRANSPORT_TRUNCATION": 1,
+          "VALID_EDIT": 18
+        },
+        "firstFailureStage": {
+          "COMPLETE": 10,
+          "canonical patch construction": 24,
+          "git apply preflight": 2,
+          "hidden test": 3,
+          "syntax": 1,
+          "transport": 1,
+          "unified diff extraction": 4,
+          "visible test": 5
+        },
+        "refusalCategory": {
+          "other": 2,
+          "syntactically_invalid_patch_edit": 25,
+          "textual_explanation_without_action": 4,
+          "truncated_response": 1,
+          "valid_patch_edit": 18
+        }
+      },
+      "P2_MINIMAL": {
+        "observations": 50,
+        "attemptedActions": 50,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 50,
+        "normalizationValidActions": 48,
+        "canonicalPatchConstructed": 48,
+        "runtimeAcceptedActions": 48,
+        "syntaxPasses": 46,
+        "visibleTestPasses": 31,
+        "hiddenTestPasses": 27,
+        "behavioralSuccesses": 21,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 4.520833333333333,
+        "changedLinesSuccessfulMean": 3.2857142857142856,
+        "unnecessaryChangedLinesAcceptedMean": 0.7708333333333334,
+        "tokens": {
+          "prompt": 20411,
+          "completion": 4985,
+          "total": 25396
+        },
+        "latencyMs": {
+          "mean": 1394.3316491399985,
+          "p50": 1270.7836060000118,
+          "p95": 2377.7126129999524
+        },
+        "decomposition": {
+          "PATCH_CONSTRUCTION_OR_GIT_APPLY_FAILURE": 2,
+          "SYNTACTICALLY_INVALID_EDIT": 2,
+          "VALID_EDIT": 46
+        },
+        "firstFailureStage": {
+          "COMPLETE": 21,
+          "canonical patch construction": 2,
+          "hidden test": 10,
+          "syntax": 2,
+          "visible test": 15
+        },
+        "refusalCategory": {
+          "other": 2,
+          "syntactically_invalid_patch_edit": 2,
+          "valid_patch_edit": 46
+        }
+      },
+      "P3_MINIMAL": {
+        "observations": 50,
+        "attemptedActions": 50,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 50,
+        "normalizationValidActions": 32,
+        "canonicalPatchConstructed": 32,
+        "runtimeAcceptedActions": 32,
+        "syntaxPasses": 31,
+        "visibleTestPasses": 20,
+        "hiddenTestPasses": 17,
+        "behavioralSuccesses": 15,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 5.8125,
+        "changedLinesSuccessfulMean": 3.933333333333333,
+        "unnecessaryChangedLinesAcceptedMean": 1.59375,
+        "tokens": {
+          "prompt": 21161,
+          "completion": 4200,
+          "total": 25361
+        },
+        "latencyMs": {
+          "mean": 1187.8466007799889,
+          "p50": 1039.3686059999745,
+          "p95": 2292.7079769999254
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 19,
+          "VALID_EDIT": 31
+        },
+        "firstFailureStage": {
+          "COMPLETE": 15,
+          "canonical patch construction": 18,
+          "hidden test": 5,
+          "syntax": 1,
+          "visible test": 11
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 19,
+          "valid_patch_edit": 31
+        }
+      },
+      "P4_MINIMAL": {
+        "observations": 50,
+        "attemptedActions": 50,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 50,
+        "normalizationValidActions": 48,
+        "canonicalPatchConstructed": 48,
+        "runtimeAcceptedActions": 48,
+        "syntaxPasses": 43,
+        "visibleTestPasses": 27,
+        "hiddenTestPasses": 25,
+        "behavioralSuccesses": 20,
+        "wrongFileOutputAttempts": 1,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 4.354166666666667,
+        "changedLinesSuccessfulMean": 2.95,
+        "unnecessaryChangedLinesAcceptedMean": 0.6666666666666666,
+        "tokens": {
+          "prompt": 22661,
+          "completion": 5860,
+          "total": 28521
+        },
+        "latencyMs": {
+          "mean": 1711.0490251799974,
+          "p50": 1595.2433690000325,
+          "p95": 2985.7568770000944
+        },
+        "decomposition": {
+          "PATCH_CONSTRUCTION_OR_GIT_APPLY_FAILURE": 1,
+          "SYNTACTICALLY_INVALID_EDIT": 5,
+          "UNSAFE_EDIT": 1,
+          "VALID_EDIT": 43
+        },
+        "firstFailureStage": {
+          "COMPLETE": 20,
+          "canonical patch construction": 1,
+          "hidden test": 7,
+          "path/range validation": 1,
+          "syntax": 5,
+          "visible test": 16
+        },
+        "refusalCategory": {
+          "other": 1,
+          "syntactically_invalid_patch_edit": 5,
+          "unsafe_edit": 1,
+          "valid_patch_edit": 43
+        }
+      }
+    },
+    "coder": {
+      "P0_EXACT": {
+        "observations": 50,
+        "attemptedActions": 17,
+        "reportOnly": 33,
+        "unnecessaryRefusals": 33,
+        "locallySchemaValid": 50,
+        "normalizationValidActions": 0,
+        "canonicalPatchConstructed": 0,
+        "runtimeAcceptedActions": 0,
+        "syntaxPasses": 0,
+        "visibleTestPasses": 0,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": null,
+        "changedLinesAcceptedMean": null,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": null,
+        "tokens": {
+          "prompt": 18399,
+          "completion": 11501,
+          "total": 29900
+        },
+        "latencyMs": {
+          "mean": 2757.900086040001,
+          "p50": 2386.4851070000004,
+          "p95": 5009.326258999994
+        },
+        "decomposition": {
+          "REPORT_ONLY": 33,
+          "SYNTACTICALLY_INVALID_EDIT": 17
+        },
+        "firstFailureStage": {
+          "action validation": 33,
+          "canonical patch construction": 17
+        },
+        "refusalCategory": {
+          "REPORT_ONLY": 33,
+          "syntactically_invalid_patch_edit": 17
+        }
+      },
+      "P0_MINIMAL": {
+        "observations": 50,
+        "attemptedActions": 50,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 50,
+        "normalizationValidActions": 0,
+        "canonicalPatchConstructed": 0,
+        "runtimeAcceptedActions": 0,
+        "syntaxPasses": 0,
+        "visibleTestPasses": 0,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": null,
+        "changedLinesAcceptedMean": null,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": null,
+        "tokens": {
+          "prompt": 20199,
+          "completion": 10805,
+          "total": 31004
+        },
+        "latencyMs": {
+          "mean": 2237.1382363400003,
+          "p50": 1975.2413770000276,
+          "p95": 4137.639886000019
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 50
+        },
+        "firstFailureStage": {
+          "canonical patch construction": 50
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 50
+        }
+      },
+      "P1_MINIMAL": {
+        "observations": 50,
+        "attemptedActions": 49,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 1,
+        "locallySchemaValid": 0,
+        "normalizationValidActions": 0,
+        "canonicalPatchConstructed": 0,
+        "runtimeAcceptedActions": 0,
+        "syntaxPasses": 0,
+        "visibleTestPasses": 0,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": null,
+        "changedLinesAcceptedMean": null,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": null,
+        "tokens": {
+          "prompt": 18899,
+          "completion": 8630,
+          "total": 27529
+        },
+        "latencyMs": {
+          "mean": 1782.5167182599998,
+          "p50": 1804.0072529999889,
+          "p95": 2932.4021930000163
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 49,
+          "TEXTUAL_EXPLANATION_WITHOUT_ACTION": 1
+        },
+        "firstFailureStage": {
+          "canonical patch construction": 48,
+          "unified diff extraction": 2
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 49,
+          "textual_explanation_without_action": 1
+        }
+      },
+      "P2_MINIMAL": {
+        "observations": 50,
+        "attemptedActions": 50,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 50,
+        "normalizationValidActions": 50,
+        "canonicalPatchConstructed": 50,
+        "runtimeAcceptedActions": 50,
+        "syntaxPasses": 25,
+        "visibleTestPasses": 16,
+        "hiddenTestPasses": 15,
+        "behavioralSuccesses": 12,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 3.74,
+        "changedLinesSuccessfulMean": 2.75,
+        "unnecessaryChangedLinesAcceptedMean": 0.68,
+        "tokens": {
+          "prompt": 19299,
+          "completion": 3726,
+          "total": 23025
+        },
+        "latencyMs": {
+          "mean": 1039.3783608799986,
+          "p50": 802.2366200000397,
+          "p95": 2151.6179809999885
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 25,
+          "VALID_EDIT": 25
+        },
+        "firstFailureStage": {
+          "COMPLETE": 12,
+          "hidden test": 4,
+          "syntax": 25,
+          "visible test": 9
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 25,
+          "valid_patch_edit": 25
+        }
+      },
+      "P3_MINIMAL": {
+        "observations": 50,
+        "attemptedActions": 50,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 50,
+        "normalizationValidActions": 35,
+        "canonicalPatchConstructed": 35,
+        "runtimeAcceptedActions": 35,
+        "syntaxPasses": 35,
+        "visibleTestPasses": 14,
+        "hiddenTestPasses": 18,
+        "behavioralSuccesses": 12,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 4.142857142857143,
+        "changedLinesSuccessfulMean": 3.0833333333333335,
+        "unnecessaryChangedLinesAcceptedMean": 0.7428571428571429,
+        "tokens": {
+          "prompt": 20049,
+          "completion": 3308,
+          "total": 23357
+        },
+        "latencyMs": {
+          "mean": 704.8871023799933,
+          "p50": 568.8509229999618,
+          "p95": 1434.7073789999704
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 11,
+          "UNSAFE_EDIT": 4,
+          "VALID_EDIT": 35
+        },
+        "firstFailureStage": {
+          "COMPLETE": 12,
+          "canonical patch construction": 11,
+          "hidden test": 2,
+          "path/range validation": 4,
+          "visible test": 21
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 11,
+          "unsafe_edit": 4,
+          "valid_patch_edit": 35
+        }
+      },
+      "P4_MINIMAL": {
+        "observations": 50,
+        "attemptedActions": 50,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 50,
+        "normalizationValidActions": 48,
+        "canonicalPatchConstructed": 48,
+        "runtimeAcceptedActions": 48,
+        "syntaxPasses": 21,
+        "visibleTestPasses": 7,
+        "hiddenTestPasses": 8,
+        "behavioralSuccesses": 3,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 3.5208333333333335,
+        "changedLinesSuccessfulMean": 2,
+        "unnecessaryChangedLinesAcceptedMean": 0.4375,
+        "tokens": {
+          "prompt": 21549,
+          "completion": 5010,
+          "total": 26559
+        },
+        "latencyMs": {
+          "mean": 1268.0124815200002,
+          "p50": 960.2192139999825,
+          "p95": 2458.6157999999705
+        },
+        "decomposition": {
+          "PATCH_CONSTRUCTION_OR_GIT_APPLY_FAILURE": 1,
+          "SYNTACTICALLY_INVALID_EDIT": 27,
+          "UNSAFE_EDIT": 1,
+          "VALID_EDIT": 21
+        },
+        "firstFailureStage": {
+          "COMPLETE": 3,
+          "canonical patch construction": 1,
+          "hidden test": 4,
+          "path/range validation": 1,
+          "syntax": 27,
+          "visible test": 14
+        },
+        "refusalCategory": {
+          "other": 1,
+          "syntactically_invalid_patch_edit": 27,
+          "unsafe_edit": 1,
+          "valid_patch_edit": 21
+        }
+      }
+    }
+  },
+  "pairedModelComparison": {
+    "P0_EXACT": {
+      "tasks": 50,
+      "baselineOnly": 7,
+      "coderOnly": 0,
+      "bothPass": 0,
+      "bothFail": 43
+    },
+    "P1_MINIMAL": {
+      "tasks": 50,
+      "baselineOnly": 10,
+      "coderOnly": 0,
+      "bothPass": 0,
+      "bothFail": 40
+    },
+    "P2_MINIMAL": {
+      "tasks": 50,
+      "baselineOnly": 12,
+      "coderOnly": 3,
+      "bothPass": 9,
+      "bothFail": 26
+    },
+    "P3_MINIMAL": {
+      "tasks": 50,
+      "baselineOnly": 5,
+      "coderOnly": 2,
+      "bothPass": 10,
+      "bothFail": 33
+    },
+    "P4_MINIMAL": {
+      "tasks": 50,
+      "baselineOnly": 17,
+      "coderOnly": 0,
+      "bothPass": 3,
+      "bothFail": 30
+    }
+  },
+  "refusalEffect": {
+    "baseline": {
+      "REPORT_AVAILABLE_FULL": {
+        "observations": 12,
+        "attemptedActions": 9,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 3,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 4,
+        "canonicalPatchConstructed": 4,
+        "runtimeAcceptedActions": 4,
+        "syntaxPasses": 1,
+        "visibleTestPasses": 1,
+        "hiddenTestPasses": 1,
+        "behavioralSuccesses": 1,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 1.25,
+        "changedLinesSuccessfulMean": 2,
+        "unnecessaryChangedLinesAcceptedMean": 0,
+        "tokens": {
+          "prompt": 5502,
+          "completion": 3011,
+          "total": 8513
+        },
+        "latencyMs": {
+          "mean": 3461.423578416696,
+          "p50": 3407.9510390001815,
+          "p95": 5184.808239999926
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 8,
+          "TEXTUAL_EXPLANATION_WITHOUT_ACTION": 3,
+          "VALID_EDIT": 1
+        },
+        "firstFailureStage": {
+          "COMPLETE": 1,
+          "action validation": 3,
+          "canonical patch construction": 5,
+          "syntax": 3
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 8,
+          "textual_explanation_without_action": 3,
+          "valid_patch_edit": 1
+        }
+      },
+      "REPORT_UNAVAILABLE_FULL": {
+        "observations": 12,
+        "attemptedActions": 9,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 3,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 4,
+        "canonicalPatchConstructed": 4,
+        "runtimeAcceptedActions": 4,
+        "syntaxPasses": 1,
+        "visibleTestPasses": 1,
+        "hiddenTestPasses": 1,
+        "behavioralSuccesses": 1,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 1.25,
+        "changedLinesSuccessfulMean": 2,
+        "unnecessaryChangedLinesAcceptedMean": 0,
+        "tokens": {
+          "prompt": 5502,
+          "completion": 3011,
+          "total": 8513
+        },
+        "latencyMs": {
+          "mean": 3440.513571999967,
+          "p50": 3401.6704160000663,
+          "p95": 5124.247531999834
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 8,
+          "TEXTUAL_EXPLANATION_WITHOUT_ACTION": 3,
+          "VALID_EDIT": 1
+        },
+        "firstFailureStage": {
+          "COMPLETE": 1,
+          "action validation": 3,
+          "canonical patch construction": 5,
+          "syntax": 3
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 8,
+          "textual_explanation_without_action": 3,
+          "valid_patch_edit": 1
+        }
+      }
+    },
+    "coder": {
+      "REPORT_AVAILABLE_FULL": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 0,
+        "canonicalPatchConstructed": 0,
+        "runtimeAcceptedActions": 0,
+        "syntaxPasses": 0,
+        "visibleTestPasses": 0,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": null,
+        "changedLinesAcceptedMean": null,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": null,
+        "tokens": {
+          "prompt": 5233,
+          "completion": 3101,
+          "total": 8334
+        },
+        "latencyMs": {
+          "mean": 2669.051004249981,
+          "p50": 3111.112347999937,
+          "p95": 3725.0783309999388
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 12
+        },
+        "firstFailureStage": {
+          "canonical patch construction": 12
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 12
+        }
+      },
+      "REPORT_UNAVAILABLE_FULL": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 0,
+        "canonicalPatchConstructed": 0,
+        "runtimeAcceptedActions": 0,
+        "syntaxPasses": 0,
+        "visibleTestPasses": 0,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": null,
+        "changedLinesAcceptedMean": null,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": null,
+        "tokens": {
+          "prompt": 5233,
+          "completion": 3023,
+          "total": 8256
+        },
+        "latencyMs": {
+          "mean": 2594.743854500004,
+          "p50": 2239.6108650000533,
+          "p95": 3928.606904000044
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 12
+        },
+        "firstFailureStage": {
+          "canonical patch construction": 12
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 12
+        }
+      }
+    }
+  },
+  "outputContractComplexity": {
+    "baseline": {
+      "S0_P1_FULL": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 0,
+        "normalizationValidActions": 4,
+        "canonicalPatchConstructed": 4,
+        "runtimeAcceptedActions": 3,
+        "syntaxPasses": 2,
+        "visibleTestPasses": 1,
+        "hiddenTestPasses": 2,
+        "behavioralSuccesses": 1,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 1.6666666666666667,
+        "changedLinesSuccessfulMean": 2,
+        "unnecessaryChangedLinesAcceptedMean": 0,
+        "tokens": {
+          "prompt": 5202,
+          "completion": 1415,
+          "total": 6617
+        },
+        "latencyMs": {
+          "mean": 1641.8913651666953,
+          "p50": 1557.9696479999693,
+          "p95": 3101.6610910000745
+        },
+        "decomposition": {
+          "PATCH_CONSTRUCTION_OR_GIT_APPLY_FAILURE": 1,
+          "SYNTACTICALLY_INVALID_EDIT": 9,
+          "VALID_EDIT": 2
+        },
+        "firstFailureStage": {
+          "COMPLETE": 1,
+          "canonical patch construction": 8,
+          "git apply preflight": 1,
+          "syntax": 1,
+          "visible test": 1
+        },
+        "refusalCategory": {
+          "other": 1,
+          "syntactically_invalid_patch_edit": 9,
+          "valid_patch_edit": 2
+        }
+      },
+      "S1": {
+        "observations": 12,
+        "attemptedActions": 4,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 8,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 2,
+        "canonicalPatchConstructed": 2,
+        "runtimeAcceptedActions": 2,
+        "syntaxPasses": 1,
+        "visibleTestPasses": 1,
+        "hiddenTestPasses": 1,
+        "behavioralSuccesses": 1,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 1.5,
+        "changedLinesSuccessfulMean": 2,
+        "unnecessaryChangedLinesAcceptedMean": 0,
+        "tokens": {
+          "prompt": 5286,
+          "completion": 976,
+          "total": 6262
+        },
+        "latencyMs": {
+          "mean": 1160.7725759999885,
+          "p50": 1101.077958000009,
+          "p95": 2655.873234999948
+        },
+        "decomposition": {
+          "GENERATION_FAILURE": 6,
+          "SYNTACTICALLY_INVALID_EDIT": 3,
+          "TEXTUAL_EXPLANATION_WITHOUT_ACTION": 2,
+          "VALID_EDIT": 1
+        },
+        "firstFailureStage": {
+          "COMPLETE": 1,
+          "action validation": 8,
+          "canonical patch construction": 2,
+          "syntax": 1
+        },
+        "refusalCategory": {
+          "GENERATION_FAILURE": 6,
+          "syntactically_invalid_patch_edit": 3,
+          "textual_explanation_without_action": 2,
+          "valid_patch_edit": 1
+        }
+      },
+      "S2": {
+        "observations": 12,
+        "attemptedActions": 1,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 11,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 1,
+        "canonicalPatchConstructed": 1,
+        "runtimeAcceptedActions": 1,
+        "syntaxPasses": 1,
+        "visibleTestPasses": 1,
+        "hiddenTestPasses": 1,
+        "behavioralSuccesses": 1,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 2,
+        "changedLinesSuccessfulMean": 2,
+        "unnecessaryChangedLinesAcceptedMean": 0,
+        "tokens": {
+          "prompt": 5370,
+          "completion": 944,
+          "total": 6314
+        },
+        "latencyMs": {
+          "mean": 1125.9736010833585,
+          "p50": 983.8685680001508,
+          "p95": 2057.8286480000243
+        },
+        "decomposition": {
+          "GENERATION_FAILURE": 11,
+          "VALID_EDIT": 1
+        },
+        "firstFailureStage": {
+          "COMPLETE": 1,
+          "action validation": 11
+        },
+        "refusalCategory": {
+          "GENERATION_FAILURE": 11,
+          "valid_patch_edit": 1
+        }
+      },
+      "S3_P0_FULL": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 5,
+        "canonicalPatchConstructed": 5,
+        "runtimeAcceptedActions": 5,
+        "syntaxPasses": 3,
+        "visibleTestPasses": 2,
+        "hiddenTestPasses": 3,
+        "behavioralSuccesses": 2,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 1.6,
+        "changedLinesSuccessfulMean": 2,
+        "unnecessaryChangedLinesAcceptedMean": 0,
+        "tokens": {
+          "prompt": 5514,
+          "completion": 3440,
+          "total": 8954
+        },
+        "latencyMs": {
+          "mean": 4554.729983500011,
+          "p50": 3946.327234000084,
+          "p95": 11058.054153000005
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 9,
+          "VALID_EDIT": 3
+        },
+        "firstFailureStage": {
+          "COMPLETE": 2,
+          "canonical patch construction": 7,
+          "syntax": 2,
+          "visible test": 1
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 9,
+          "valid_patch_edit": 3
+        }
+      }
+    },
+    "coder": {
+      "S0_P1_FULL": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 0,
+        "normalizationValidActions": 0,
+        "canonicalPatchConstructed": 0,
+        "runtimeAcceptedActions": 0,
+        "syntaxPasses": 0,
+        "visibleTestPasses": 0,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": null,
+        "changedLinesAcceptedMean": null,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": null,
+        "tokens": {
+          "prompt": 4933,
+          "completion": 2017,
+          "total": 6950
+        },
+        "latencyMs": {
+          "mean": 1736.970391583338,
+          "p50": 2056.1280930000357,
+          "p95": 2707.460671000066
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 12
+        },
+        "firstFailureStage": {
+          "canonical patch construction": 12
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 12
+        }
+      },
+      "S1": {
+        "observations": 12,
+        "attemptedActions": 7,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 5,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 0,
+        "canonicalPatchConstructed": 0,
+        "runtimeAcceptedActions": 0,
+        "syntaxPasses": 0,
+        "visibleTestPasses": 0,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": null,
+        "changedLinesAcceptedMean": null,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": null,
+        "tokens": {
+          "prompt": 5017,
+          "completion": 1981,
+          "total": 6998
+        },
+        "latencyMs": {
+          "mean": 1716.1212489166744,
+          "p50": 1698.4509229999967,
+          "p95": 3203.612014000071
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 7,
+          "TEXTUAL_EXPLANATION_WITHOUT_ACTION": 5
+        },
+        "firstFailureStage": {
+          "action validation": 5,
+          "canonical patch construction": 7
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 7,
+          "textual_explanation_without_action": 5
+        }
+      },
+      "S2": {
+        "observations": 12,
+        "attemptedActions": 7,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 5,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 0,
+        "canonicalPatchConstructed": 0,
+        "runtimeAcceptedActions": 0,
+        "syntaxPasses": 0,
+        "visibleTestPasses": 0,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": null,
+        "changedLinesAcceptedMean": null,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": null,
+        "tokens": {
+          "prompt": 5101,
+          "completion": 2140,
+          "total": 7241
+        },
+        "latencyMs": {
+          "mean": 1852.454589666663,
+          "p50": 1874.211588999955,
+          "p95": 3409.7151450000238
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 7,
+          "TEXTUAL_EXPLANATION_WITHOUT_ACTION": 5
+        },
+        "firstFailureStage": {
+          "action validation": 5,
+          "canonical patch construction": 7
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 7,
+          "textual_explanation_without_action": 5
+        }
+      },
+      "S3_P0_FULL": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 0,
+        "canonicalPatchConstructed": 0,
+        "runtimeAcceptedActions": 0,
+        "syntaxPasses": 0,
+        "visibleTestPasses": 0,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": null,
+        "changedLinesAcceptedMean": null,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": null,
+        "tokens": {
+          "prompt": 5245,
+          "completion": 1850,
+          "total": 7095
+        },
+        "latencyMs": {
+          "mean": 1605.3892514166557,
+          "p50": 1556.6456789999502,
+          "p95": 2855.3774089999497
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 12
+        },
+        "firstFailureStage": {
+          "canonical patch construction": 12
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 12
+        }
+      }
+    }
+  },
+  "patchGranularity": {
+    "baseline": {
+      "minimalDiff": {
+        "observations": 12,
+        "attemptedActions": 11,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 1,
+        "locallySchemaValid": 0,
+        "normalizationValidActions": 0,
+        "canonicalPatchConstructed": 0,
+        "runtimeAcceptedActions": 0,
+        "syntaxPasses": 0,
+        "visibleTestPasses": 0,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": null,
+        "changedLinesAcceptedMean": null,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": null,
+        "tokens": {
+          "prompt": 5944,
+          "completion": 3007,
+          "total": 8951
+        },
+        "latencyMs": {
+          "mean": 3417.275921083337,
+          "p50": 3173.764729000046,
+          "p95": 8673.952186000068
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 10,
+          "TEXTUAL_EXPLANATION_WITHOUT_ACTION": 1,
+          "TRANSPORT_TRUNCATION": 1
+        },
+        "firstFailureStage": {
+          "canonical patch construction": 10,
+          "transport": 1,
+          "unified diff extraction": 1
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 10,
+          "textual_explanation_without_action": 1,
+          "truncated_response": 1
+        }
+      },
+      "range": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 11,
+        "canonicalPatchConstructed": 11,
+        "runtimeAcceptedActions": 11,
+        "syntaxPasses": 10,
+        "visibleTestPasses": 4,
+        "hiddenTestPasses": 3,
+        "behavioralSuccesses": 2,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 7.818181818181818,
+        "changedLinesSuccessfulMean": 5,
+        "unnecessaryChangedLinesAcceptedMean": 2.272727272727273,
+        "tokens": {
+          "prompt": 6040,
+          "completion": 1518,
+          "total": 7558
+        },
+        "latencyMs": {
+          "mean": 1754.1839865000122,
+          "p50": 1795.313049999997,
+          "p95": 3498.064134000102
+        },
+        "decomposition": {
+          "PATCH_CONSTRUCTION_OR_GIT_APPLY_FAILURE": 1,
+          "SYNTACTICALLY_INVALID_EDIT": 1,
+          "VALID_EDIT": 10
+        },
+        "firstFailureStage": {
+          "COMPLETE": 2,
+          "canonical patch construction": 1,
+          "hidden test": 2,
+          "syntax": 1,
+          "visible test": 6
+        },
+        "refusalCategory": {
+          "other": 1,
+          "syntactically_invalid_patch_edit": 1,
+          "valid_patch_edit": 10
+        }
+      },
+      "symbol": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 10,
+        "canonicalPatchConstructed": 10,
+        "runtimeAcceptedActions": 10,
+        "syntaxPasses": 10,
+        "visibleTestPasses": 4,
+        "hiddenTestPasses": 4,
+        "behavioralSuccesses": 3,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 8.4,
+        "changedLinesSuccessfulMean": 8,
+        "unnecessaryChangedLinesAcceptedMean": 3,
+        "tokens": {
+          "prompt": 6220,
+          "completion": 1269,
+          "total": 7489
+        },
+        "latencyMs": {
+          "mean": 1484.2504155832964,
+          "p50": 1362.2846049999353,
+          "p95": 2292.7079769999254
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 2,
+          "VALID_EDIT": 10
+        },
+        "firstFailureStage": {
+          "COMPLETE": 3,
+          "canonical patch construction": 2,
+          "hidden test": 1,
+          "visible test": 6
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 2,
+          "valid_patch_edit": 10
+        }
+      },
+      "wholeFile": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 12,
+        "canonicalPatchConstructed": 12,
+        "runtimeAcceptedActions": 12,
+        "syntaxPasses": 12,
+        "visibleTestPasses": 7,
+        "hiddenTestPasses": 5,
+        "behavioralSuccesses": 4,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 6.833333333333333,
+        "changedLinesSuccessfulMean": 5.75,
+        "unnecessaryChangedLinesAcceptedMean": 1.6666666666666667,
+        "tokens": {
+          "prompt": 5980,
+          "completion": 2552,
+          "total": 8532
+        },
+        "latencyMs": {
+          "mean": 3220.448196750018,
+          "p50": 3336.0640229999553,
+          "p95": 4744.144354999997
+        },
+        "decomposition": {
+          "VALID_EDIT": 12
+        },
+        "firstFailureStage": {
+          "COMPLETE": 4,
+          "hidden test": 3,
+          "visible test": 5
+        },
+        "refusalCategory": {
+          "valid_patch_edit": 12
+        }
+      }
+    },
+    "coder": {
+      "minimalDiff": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 0,
+        "normalizationValidActions": 0,
+        "canonicalPatchConstructed": 0,
+        "runtimeAcceptedActions": 0,
+        "syntaxPasses": 0,
+        "visibleTestPasses": 0,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": null,
+        "changedLinesAcceptedMean": null,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": null,
+        "tokens": {
+          "prompt": 5580,
+          "completion": 2778,
+          "total": 8358
+        },
+        "latencyMs": {
+          "mean": 2387.533449333326,
+          "p50": 2291.487270999991,
+          "p95": 3144.3937949999818
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 12
+        },
+        "firstFailureStage": {
+          "canonical patch construction": 11,
+          "unified diff extraction": 1
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 12
+        }
+      },
+      "range": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 12,
+        "canonicalPatchConstructed": 12,
+        "runtimeAcceptedActions": 12,
+        "syntaxPasses": 2,
+        "visibleTestPasses": 1,
+        "hiddenTestPasses": 0,
+        "behavioralSuccesses": 0,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 4.583333333333333,
+        "changedLinesSuccessfulMean": null,
+        "unnecessaryChangedLinesAcceptedMean": 1,
+        "tokens": {
+          "prompt": 5676,
+          "completion": 913,
+          "total": 6589
+        },
+        "latencyMs": {
+          "mean": 811.2173419999987,
+          "p50": 697.7399469999946,
+          "p95": 1657.0943580000312
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 10,
+          "VALID_EDIT": 2
+        },
+        "firstFailureStage": {
+          "hidden test": 1,
+          "syntax": 10,
+          "visible test": 1
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 10,
+          "valid_patch_edit": 2
+        }
+      },
+      "symbol": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 10,
+        "canonicalPatchConstructed": 10,
+        "runtimeAcceptedActions": 10,
+        "syntaxPasses": 10,
+        "visibleTestPasses": 2,
+        "hiddenTestPasses": 2,
+        "behavioralSuccesses": 2,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 4.9,
+        "changedLinesSuccessfulMean": 6,
+        "unnecessaryChangedLinesAcceptedMean": 1,
+        "tokens": {
+          "prompt": 5856,
+          "completion": 892,
+          "total": 6748
+        },
+        "latencyMs": {
+          "mean": 793.3336126666545,
+          "p50": 769.6707099999767,
+          "p95": 1536.305090000038
+        },
+        "decomposition": {
+          "SYNTACTICALLY_INVALID_EDIT": 1,
+          "UNSAFE_EDIT": 1,
+          "VALID_EDIT": 10
+        },
+        "firstFailureStage": {
+          "COMPLETE": 2,
+          "canonical patch construction": 1,
+          "path/range validation": 1,
+          "visible test": 8
+        },
+        "refusalCategory": {
+          "syntactically_invalid_patch_edit": 1,
+          "unsafe_edit": 1,
+          "valid_patch_edit": 10
+        }
+      },
+      "wholeFile": {
+        "observations": 12,
+        "attemptedActions": 12,
+        "reportOnly": 0,
+        "unnecessaryRefusals": 0,
+        "locallySchemaValid": 12,
+        "normalizationValidActions": 12,
+        "canonicalPatchConstructed": 12,
+        "runtimeAcceptedActions": 12,
+        "syntaxPasses": 12,
+        "visibleTestPasses": 3,
+        "hiddenTestPasses": 3,
+        "behavioralSuccesses": 1,
+        "wrongFileOutputAttempts": 0,
+        "actualForbiddenMutations": 0,
+        "actualSafetyViolations": 0,
+        "rollbackFailures": 0,
+        "malformed": 0,
+        "changedFilesAcceptedMean": 1,
+        "changedLinesAcceptedMean": 6.333333333333333,
+        "changedLinesSuccessfulMean": 2,
+        "unnecessaryChangedLinesAcceptedMean": 1.0833333333333333,
+        "tokens": {
+          "prompt": 5616,
+          "completion": 2449,
+          "total": 8065
+        },
+        "latencyMs": {
+          "mean": 2119.999241749989,
+          "p50": 2169.9814679999836,
+          "p95": 2782.7325399999972
+        },
+        "decomposition": {
+          "VALID_EDIT": 12
+        },
+        "firstFailureStage": {
+          "COMPLETE": 1,
+          "hidden test": 2,
+          "visible test": 9
+        },
+        "refusalCategory": {
+          "valid_patch_edit": 12
+        }
+      }
+    }
+  },
+  "capabilityAttribution": {
+    "firstFailureStage": {
+      "COMPLETE": 139,
+      "action validation": 78,
+      "canonical patch construction": 324,
+      "git apply preflight": 3,
+      "hidden test": 51,
+      "path/range validation": 8,
+      "syntax": 89,
+      "transport": 6,
+      "unified diff extraction": 6,
+      "visible test": 136
+    },
+    "decompositionCategory": {
+      "GENERATION_FAILURE": 17,
+      "PATCH_CONSTRUCTION_OR_GIT_APPLY_FAILURE": 7,
+      "REPORT_ONLY": 43,
+      "SYNTACTICALLY_INVALID_EDIT": 410,
+      "TEXTUAL_EXPLANATION_WITHOUT_ACTION": 23,
+      "TRANSPORT_TRUNCATION": 6,
+      "UNSAFE_EDIT": 8,
+      "VALID_EDIT": 326
+    },
+    "interpretation": "The interface exposes latent behavioral patch capability: P2 is selected by the preregistered gate. Remaining failures after accepted edits are behavioral/model reasoning failures rather than parser-only failures."
+  },
+  "promotionDecision": {
+    "path": "benchmarks/patch-interface/PATCH_INTERFACE_V3_PROMOTION_DECISION.json",
+    "sha256": "668ed05945c5f0f4747d4b651cc4bdb30e2dde76f7ba1fc8aac6c8af631624b7",
+    "decision": "E_EDIT_JUSTIFIED",
+    "selectedInterface": "P2_MINIMAL"
+  },
+  "safety": {
+    "wrongFileOutputAttempts": 1,
+    "actualForbiddenMutations": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "rawDiffsStored": false,
+    "hiddenOracleSourceStored": false
+  }
+}

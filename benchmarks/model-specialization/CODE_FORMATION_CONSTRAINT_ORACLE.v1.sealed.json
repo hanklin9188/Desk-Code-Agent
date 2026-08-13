@@ -1,0 +1,527 @@
+{
+  "schemaVersion": 1,
+  "sealed": true,
+  "taskIdsSha256": "13f14af078b1b9b35922c2bee5e8f534ab28c5f0617dc42075176d7c8f246133",
+  "rows": [
+    {
+      "task_id": "cfc-v1-window-selection-07",
+      "original_source_sha256": "37a880b169d716dde00e5aed9f576380c61657ed4c0e9822370db2c935ba0c52",
+      "reference_fixed_source": "export function selectWindow7(items, start, end) {\n  return Number.isInteger(start) && Number.isInteger(end) && start >= 0 && end >= start ? items.slice(start, end) : [];\n}\nexport const fixtureTag = 7;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow7 } from '../src/subject.mjs';\ntest('selectWindow7', () => { assert.deepEqual(selectWindow7([1,2], -1, 2), []); assert.deepEqual(selectWindow7([1,2], 2, 1), []); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-06",
+      "original_source_sha256": "a6bb5f76824bb66013c6dcf7d035464ccd9e715ef0a609aa86720864e8bfa1ff",
+      "reference_fixed_source": "export function normalizeLabel6(value) {\n  return String(value).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');\n}\nexport const fixtureTag = 6;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel6 } from '../src/subject.mjs';\ntest('normalizeLabel6', () => { assert.equal(normalizeLabel6('A__B!!!'), 'a-b'); assert.equal(normalizeLabel6('---'), ''); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-05",
+      "original_source_sha256": "5219660c8d44ef6c7d2a55a636b703c4c63ed5983b9f5967e3b7004117b2f6e0",
+      "reference_fixed_source": "export function selectWindow5(items, start, end) {\n  return Number.isInteger(start) && Number.isInteger(end) && start >= 0 && end >= start ? items.slice(start, end) : [];\n}\nexport const fixtureTag = 5;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow5 } from '../src/subject.mjs';\ntest('selectWindow5', () => { assert.deepEqual(selectWindow5([1,2], -1, 2), []); assert.deepEqual(selectWindow5([1,2], 2, 1), []); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-02",
+      "original_source_sha256": "f2cdb4ccc03e23904ef385be24d3a402691db532f8d4abe62d21333156c83d6e",
+      "reference_fixed_source": "export function renderToken2(key, value) {\n  const escaped = String(value).replace(/\\\\/g, '\\\\\\\\').replace(/\\n/g, '\\\\n').replace(/\"/g, '\\\\\"'); return key + '=\"' + escaped + '\"';\n}\nexport const fixtureTag = 2;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken2 } from '../src/subject.mjs';\ntest('renderToken2', () => { assert.equal(renderToken2('p', 'a\\\\b\\nc'), 'p=\"a\\\\\\\\b\\\\nc\"'); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-03",
+      "original_source_sha256": "79c80fd64a6092f676662b635976d4b0e5116a464fccb482f888574029ade10c",
+      "reference_fixed_source": "export function boundValue3(value, min, max) {\n  return Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : min;\n}\nexport const fixtureTag = 3;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue3 } from '../src/subject.mjs';\ntest('boundValue3', () => { assert.equal(boundValue3(99, 0, 8), 8); assert.equal(boundValue3(NaN, 2, 8), 2); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-03",
+      "original_source_sha256": "22eb1278ae23e45dda4e91e55719ec1fa5b6117918dbbfb2b6ff91b74614d367",
+      "reference_fixed_source": "export function renderToken3(key, value) {\n  const escaped = String(value).replace(/\\\\/g, '\\\\\\\\').replace(/\\n/g, '\\\\n').replace(/\"/g, '\\\\\"'); return key + '=\"' + escaped + '\"';\n}\nexport const fixtureTag = 3;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken3 } from '../src/subject.mjs';\ntest('renderToken3', () => { assert.equal(renderToken3('p', 'a\\\\b\\nc'), 'p=\"a\\\\\\\\b\\\\nc\"'); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-08",
+      "original_source_sha256": "f02318dfd6c6364567afb5eb0b4b27896331afee997dfbb94137ff36b20bc8ef",
+      "reference_fixed_source": "export function renderToken8(key, value) {\n  const escaped = String(value).replace(/\\\\/g, '\\\\\\\\').replace(/\\n/g, '\\\\n').replace(/\"/g, '\\\\\"'); return key + '=\"' + escaped + '\"';\n}\nexport const fixtureTag = 8;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken8 } from '../src/subject.mjs';\ntest('renderToken8', () => { assert.equal(renderToken8('p', 'a\\\\b\\nc'), 'p=\"a\\\\\\\\b\\\\nc\"'); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-03",
+      "original_source_sha256": "c49157f66634496f4ad6e3e73ce79679bf958be14203a3d8fd54f78529b42262",
+      "reference_fixed_source": "export function parseCount3(value, fallback) {\n  return typeof value === 'string' && /^(0|[1-9]\\d*)$/.test(value) ? Number(value) : fallback;\n}\nexport const fixtureTag = 3;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount3 } from '../src/subject.mjs';\ntest('parseCount3', () => { assert.equal(parseCount3('-1', 9), 9); assert.equal(parseCount3('01', 9), 9); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-02",
+      "original_source_sha256": "89a76475dbbf6fa84ecfa09ae325980b98920db828ba9b3d0b89ffbdf4522189",
+      "reference_fixed_source": "export function selectWindow2(items, start, end) {\n  return Number.isInteger(start) && Number.isInteger(end) && start >= 0 && end >= start ? items.slice(start, end) : [];\n}\nexport const fixtureTag = 2;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow2 } from '../src/subject.mjs';\ntest('selectWindow2', () => { assert.deepEqual(selectWindow2([1,2], -1, 2), []); assert.deepEqual(selectWindow2([1,2], 2, 1), []); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-02",
+      "original_source_sha256": "245b7ac6a801fc88798eca614e7aac4380c667ac0af3ac547a98eb4ada47ea57",
+      "reference_fixed_source": "export function parseCount2(value, fallback) {\n  return typeof value === 'string' && /^(0|[1-9]\\d*)$/.test(value) ? Number(value) : fallback;\n}\nexport const fixtureTag = 2;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount2 } from '../src/subject.mjs';\ntest('parseCount2', () => { assert.equal(parseCount2('-1', 9), 9); assert.equal(parseCount2('01', 9), 9); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-04",
+      "original_source_sha256": "834afea34177a9dbfdb566353a0d9b83f573eadb3338d51c5871193742708dc1",
+      "reference_fixed_source": "export function renderToken4(key, value) {\n  const escaped = String(value).replace(/\\\\/g, '\\\\\\\\').replace(/\\n/g, '\\\\n').replace(/\"/g, '\\\\\"'); return key + '=\"' + escaped + '\"';\n}\nexport const fixtureTag = 4;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken4 } from '../src/subject.mjs';\ntest('renderToken4', () => { assert.equal(renderToken4('p', 'a\\\\b\\nc'), 'p=\"a\\\\\\\\b\\\\nc\"'); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-05",
+      "original_source_sha256": "37eb4a1d1f446626336a776f33328ac47ea7bf7d1e81fb96f28a797564ea2d2b",
+      "reference_fixed_source": "export function parseCount5(value, fallback) {\n  return typeof value === 'string' && /^(0|[1-9]\\d*)$/.test(value) ? Number(value) : fallback;\n}\nexport const fixtureTag = 5;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount5 } from '../src/subject.mjs';\ntest('parseCount5', () => { assert.equal(parseCount5('-1', 9), 9); assert.equal(parseCount5('01', 9), 9); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-01",
+      "original_source_sha256": "7b8cfd8701be398af5cc2da7dcba1edce3bb37a97eb356830983f75de34730d4",
+      "reference_fixed_source": "export function selectWindow1(items, start, end) {\n  return Number.isInteger(start) && Number.isInteger(end) && start >= 0 && end >= start ? items.slice(start, end) : [];\n}\nexport const fixtureTag = 1;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow1 } from '../src/subject.mjs';\ntest('selectWindow1', () => { assert.deepEqual(selectWindow1([1,2], -1, 2), []); assert.deepEqual(selectWindow1([1,2], 2, 1), []); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-04",
+      "original_source_sha256": "bdd3ef595325fef439c3a39ce264c6f9f0b06cfd6314f4b14c7e704a2699e4e5",
+      "reference_fixed_source": "export function normalizeLabel4(value) {\n  return String(value).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');\n}\nexport const fixtureTag = 4;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel4 } from '../src/subject.mjs';\ntest('normalizeLabel4', () => { assert.equal(normalizeLabel4('A__B!!!'), 'a-b'); assert.equal(normalizeLabel4('---'), ''); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-06",
+      "original_source_sha256": "fd4623a8b0b7a158b5c732d0ec7d3f1df92b77f77b0efdff1e73ec6689a69439",
+      "reference_fixed_source": "export function parseCount6(value, fallback) {\n  return typeof value === 'string' && /^(0|[1-9]\\d*)$/.test(value) ? Number(value) : fallback;\n}\nexport const fixtureTag = 6;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount6 } from '../src/subject.mjs';\ntest('parseCount6', () => { assert.equal(parseCount6('-1', 9), 9); assert.equal(parseCount6('01', 9), 9); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-04",
+      "original_source_sha256": "6691919e4ac606c4d1014cde3d60a442447e9fe385fffdac416a91e7bcc4f47b",
+      "reference_fixed_source": "export function selectWindow4(items, start, end) {\n  return Number.isInteger(start) && Number.isInteger(end) && start >= 0 && end >= start ? items.slice(start, end) : [];\n}\nexport const fixtureTag = 4;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow4 } from '../src/subject.mjs';\ntest('selectWindow4', () => { assert.deepEqual(selectWindow4([1,2], -1, 2), []); assert.deepEqual(selectWindow4([1,2], 2, 1), []); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-07",
+      "original_source_sha256": "44f20056145f2c3d5c7a742a67ea2802cfb24d1880667728a1c537d4e8bcf2cc",
+      "reference_fixed_source": "export function parseCount7(value, fallback) {\n  return typeof value === 'string' && /^(0|[1-9]\\d*)$/.test(value) ? Number(value) : fallback;\n}\nexport const fixtureTag = 7;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount7 } from '../src/subject.mjs';\ntest('parseCount7', () => { assert.equal(parseCount7('-1', 9), 9); assert.equal(parseCount7('01', 9), 9); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-05",
+      "original_source_sha256": "3d7ad5b2070691a8f13b762a6ea469f89c5d93874985c6ec343523cda642647e",
+      "reference_fixed_source": "export function renderToken5(key, value) {\n  const escaped = String(value).replace(/\\\\/g, '\\\\\\\\').replace(/\\n/g, '\\\\n').replace(/\"/g, '\\\\\"'); return key + '=\"' + escaped + '\"';\n}\nexport const fixtureTag = 5;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken5 } from '../src/subject.mjs';\ntest('renderToken5', () => { assert.equal(renderToken5('p', 'a\\\\b\\nc'), 'p=\"a\\\\\\\\b\\\\nc\"'); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-03",
+      "original_source_sha256": "42a5a93aba20fa717e6588da5e7dfdc73bceaf8e80b5003e7632b0e85333daf1",
+      "reference_fixed_source": "export function selectWindow3(items, start, end) {\n  return Number.isInteger(start) && Number.isInteger(end) && start >= 0 && end >= start ? items.slice(start, end) : [];\n}\nexport const fixtureTag = 3;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow3 } from '../src/subject.mjs';\ntest('selectWindow3', () => { assert.deepEqual(selectWindow3([1,2], -1, 2), []); assert.deepEqual(selectWindow3([1,2], 2, 1), []); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-07",
+      "original_source_sha256": "4f106fedf11a6e4e6bcf9816171f5ce949b8ebe116a043aac561786655499cbc",
+      "reference_fixed_source": "export function renderToken7(key, value) {\n  const escaped = String(value).replace(/\\\\/g, '\\\\\\\\').replace(/\\n/g, '\\\\n').replace(/\"/g, '\\\\\"'); return key + '=\"' + escaped + '\"';\n}\nexport const fixtureTag = 7;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken7 } from '../src/subject.mjs';\ntest('renderToken7', () => { assert.equal(renderToken7('p', 'a\\\\b\\nc'), 'p=\"a\\\\\\\\b\\\\nc\"'); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-05",
+      "original_source_sha256": "909fb1691f873ebeccf5c1be8337f0c0b2f1fb99bb727f16cf88a0440ad03b62",
+      "reference_fixed_source": "export function boundValue5(value, min, max) {\n  return Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : min;\n}\nexport const fixtureTag = 5;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue5 } from '../src/subject.mjs';\ntest('boundValue5', () => { assert.equal(boundValue5(99, 0, 8), 8); assert.equal(boundValue5(NaN, 2, 8), 2); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-04",
+      "original_source_sha256": "036a8e9da52a5a1111ce90a5a6bc1e66bcf1e57a93e8ecb26b2454527d043617",
+      "reference_fixed_source": "export function boundValue4(value, min, max) {\n  return Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : min;\n}\nexport const fixtureTag = 4;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue4 } from '../src/subject.mjs';\ntest('boundValue4', () => { assert.equal(boundValue4(99, 0, 8), 8); assert.equal(boundValue4(NaN, 2, 8), 2); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-01",
+      "original_source_sha256": "f36fef203e0f5d8f53ad2f5db4a31621cbc0135f6736a292295de6bab2355db8",
+      "reference_fixed_source": "export function boundValue1(value, min, max) {\n  return Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : min;\n}\nexport const fixtureTag = 1;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue1 } from '../src/subject.mjs';\ntest('boundValue1', () => { assert.equal(boundValue1(99, 0, 8), 8); assert.equal(boundValue1(NaN, 2, 8), 2); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-06",
+      "original_source_sha256": "47ea12c1de34f17081e4f1694a20bab6cb1ecaa170a602af446046d8adfbe323",
+      "reference_fixed_source": "export function boundValue6(value, min, max) {\n  return Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : min;\n}\nexport const fixtureTag = 6;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue6 } from '../src/subject.mjs';\ntest('boundValue6', () => { assert.equal(boundValue6(99, 0, 8), 8); assert.equal(boundValue6(NaN, 2, 8), 2); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-07",
+      "original_source_sha256": "702544faaf394ac8a428ec1e1f03742ef9d5524eaaecb52ef7283202e362a115",
+      "reference_fixed_source": "export function boundValue7(value, min, max) {\n  return Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : min;\n}\nexport const fixtureTag = 7;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue7 } from '../src/subject.mjs';\ntest('boundValue7', () => { assert.equal(boundValue7(99, 0, 8), 8); assert.equal(boundValue7(NaN, 2, 8), 2); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-08",
+      "original_source_sha256": "7d177b632e6782154937b8ff0924264b3b8a535f2dce820a704a83ebf36a5787",
+      "reference_fixed_source": "export function boundValue8(value, min, max) {\n  return Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : min;\n}\nexport const fixtureTag = 8;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue8 } from '../src/subject.mjs';\ntest('boundValue8', () => { assert.equal(boundValue8(99, 0, 8), 8); assert.equal(boundValue8(NaN, 2, 8), 2); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-01",
+      "original_source_sha256": "c3c5465dff19b411e7e0a4ac2be2577c43303f16ff3f31f2f7c4f3dd4ae0beaf",
+      "reference_fixed_source": "export function normalizeLabel1(value) {\n  return String(value).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');\n}\nexport const fixtureTag = 1;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel1 } from '../src/subject.mjs';\ntest('normalizeLabel1', () => { assert.equal(normalizeLabel1('A__B!!!'), 'a-b'); assert.equal(normalizeLabel1('---'), ''); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-08",
+      "original_source_sha256": "a1e6b311041dc49442fbe390d6462966d1e92b06fe419a431e779b731606d6d7",
+      "reference_fixed_source": "export function normalizeLabel8(value) {\n  return String(value).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');\n}\nexport const fixtureTag = 8;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel8 } from '../src/subject.mjs';\ntest('normalizeLabel8', () => { assert.equal(normalizeLabel8('A__B!!!'), 'a-b'); assert.equal(normalizeLabel8('---'), ''); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-01",
+      "original_source_sha256": "5ddc646e6e7e0b714641af5cd5f193428d5804e57aae19e61f3befe9c1152b27",
+      "reference_fixed_source": "export function parseCount1(value, fallback) {\n  return typeof value === 'string' && /^(0|[1-9]\\d*)$/.test(value) ? Number(value) : fallback;\n}\nexport const fixtureTag = 1;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount1 } from '../src/subject.mjs';\ntest('parseCount1', () => { assert.equal(parseCount1('-1', 9), 9); assert.equal(parseCount1('01', 9), 9); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-04",
+      "original_source_sha256": "b1dae7d1373cc5ca8ccfb143569b081dafe0ef8429355379db804cc042ddf1da",
+      "reference_fixed_source": "export function parseCount4(value, fallback) {\n  return typeof value === 'string' && /^(0|[1-9]\\d*)$/.test(value) ? Number(value) : fallback;\n}\nexport const fixtureTag = 4;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount4 } from '../src/subject.mjs';\ntest('parseCount4', () => { assert.equal(parseCount4('-1', 9), 9); assert.equal(parseCount4('01', 9), 9); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-05",
+      "original_source_sha256": "d8e7449d198b25d6f254b079c9511f08b1d11b0ac8c1edd19a3d7be313c31823",
+      "reference_fixed_source": "export function normalizeLabel5(value) {\n  return String(value).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');\n}\nexport const fixtureTag = 5;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel5 } from '../src/subject.mjs';\ntest('normalizeLabel5', () => { assert.equal(normalizeLabel5('A__B!!!'), 'a-b'); assert.equal(normalizeLabel5('---'), ''); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-01",
+      "original_source_sha256": "6ae6c5417add1ac5521f6403062f91b30e68509486c5e6bc8b92323d294f28a8",
+      "reference_fixed_source": "export function renderToken1(key, value) {\n  const escaped = String(value).replace(/\\\\/g, '\\\\\\\\').replace(/\\n/g, '\\\\n').replace(/\"/g, '\\\\\"'); return key + '=\"' + escaped + '\"';\n}\nexport const fixtureTag = 1;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken1 } from '../src/subject.mjs';\ntest('renderToken1', () => { assert.equal(renderToken1('p', 'a\\\\b\\nc'), 'p=\"a\\\\\\\\b\\\\nc\"'); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-02",
+      "original_source_sha256": "83a5a198065af6825f375c7866731c04e0239c3e79fb6ecb64c93515f83f275e",
+      "reference_fixed_source": "export function normalizeLabel2(value) {\n  return String(value).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');\n}\nexport const fixtureTag = 2;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel2 } from '../src/subject.mjs';\ntest('normalizeLabel2', () => { assert.equal(normalizeLabel2('A__B!!!'), 'a-b'); assert.equal(normalizeLabel2('---'), ''); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-count-parsing-08",
+      "original_source_sha256": "a0cf4747a95a45cc96c333796d52e82a97e1ef54f7bf4659c7cdc71f26f6cf8f",
+      "reference_fixed_source": "export function parseCount8(value, fallback) {\n  return typeof value === 'string' && /^(0|[1-9]\\d*)$/.test(value) ? Number(value) : fallback;\n}\nexport const fixtureTag = 8;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseCount8 } from '../src/subject.mjs';\ntest('parseCount8', () => { assert.equal(parseCount8('-1', 9), 9); assert.equal(parseCount8('01', 9), 9); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-bounded-number-02",
+      "original_source_sha256": "78a0a0031c5d57358fef2653c7fe8a11a42c5a75dc5f28963413b0cf95830b45",
+      "reference_fixed_source": "export function boundValue2(value, min, max) {\n  return Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : min;\n}\nexport const fixtureTag = 2;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { boundValue2 } from '../src/subject.mjs';\ntest('boundValue2', () => { assert.equal(boundValue2(99, 0, 8), 8); assert.equal(boundValue2(NaN, 2, 8), 2); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-07",
+      "original_source_sha256": "2666cad8481d15eb788a785151a1379ebe945da3453b127abb383486ea9c95de",
+      "reference_fixed_source": "export function normalizeLabel7(value) {\n  return String(value).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');\n}\nexport const fixtureTag = 7;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel7 } from '../src/subject.mjs';\ntest('normalizeLabel7', () => { assert.equal(normalizeLabel7('A__B!!!'), 'a-b'); assert.equal(normalizeLabel7('---'), ''); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-06",
+      "original_source_sha256": "a4e38bfda3e920a7d11c19ae495cbf3075dbc16229b13dc828c14d7b51dc2f43",
+      "reference_fixed_source": "export function selectWindow6(items, start, end) {\n  return Number.isInteger(start) && Number.isInteger(end) && start >= 0 && end >= start ? items.slice(start, end) : [];\n}\nexport const fixtureTag = 6;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow6 } from '../src/subject.mjs';\ntest('selectWindow6', () => { assert.deepEqual(selectWindow6([1,2], -1, 2), []); assert.deepEqual(selectWindow6([1,2], 2, 1), []); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-window-selection-08",
+      "original_source_sha256": "825d0ac83b6e64caa356135b6e2222249147311bab0e4f2c019897d3a4e06054",
+      "reference_fixed_source": "export function selectWindow8(items, start, end) {\n  return Number.isInteger(start) && Number.isInteger(end) && start >= 0 && end >= start ? items.slice(start, end) : [];\n}\nexport const fixtureTag = 8;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { selectWindow8 } from '../src/subject.mjs';\ntest('selectWindow8', () => { assert.deepEqual(selectWindow8([1,2], -1, 2), []); assert.deepEqual(selectWindow8([1,2], 2, 1), []); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-token-rendering-06",
+      "original_source_sha256": "794869100770b53983aa610f2754f223f3d073773c8e1bb0dc94a69735202a54",
+      "reference_fixed_source": "export function renderToken6(key, value) {\n  const escaped = String(value).replace(/\\\\/g, '\\\\\\\\').replace(/\\n/g, '\\\\n').replace(/\"/g, '\\\\\"'); return key + '=\"' + escaped + '\"';\n}\nexport const fixtureTag = 6;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { renderToken6 } from '../src/subject.mjs';\ntest('renderToken6', () => { assert.equal(renderToken6('p', 'a\\\\b\\nc'), 'p=\"a\\\\\\\\b\\\\nc\"'); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    },
+    {
+      "task_id": "cfc-v1-label-normalization-03",
+      "original_source_sha256": "9ead5fb9ac2059d5177199ae27ed7b6869c524d672a2c9c8e596fd9251776720",
+      "reference_fixed_source": "export function normalizeLabel3(value) {\n  return String(value).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');\n}\nexport const fixtureTag = 3;\n",
+      "hidden_files": [
+        {
+          "path": "test/hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLabel3 } from '../src/subject.mjs';\ntest('normalizeLabel3', () => { assert.equal(normalizeLabel3('A__B!!!'), 'a-b'); assert.equal(normalizeLabel3('---'), ''); });\n",
+          "role": "test"
+        }
+      ],
+      "hidden_test_path": "test/hidden.test.mjs"
+    }
+  ]
+}

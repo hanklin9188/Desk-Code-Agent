@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Repository Fingerprint",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "baseline_sha",
+    "languages",
+    "manifests",
+    "commands",
+    "entry_points",
+    "test_frameworks",
+    "exclusions",
+    "cache_key"
+  ],
+  "properties": {
+    "baseline_sha": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "file_count"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "file_count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "manifests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "commands": {
+      "type": "object"
+    },
+    "entry_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "test_frameworks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cache_key": {
+      "type": "string"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

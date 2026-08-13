@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 2,
+  "sealId": "dca-code-formation-control-recovery-runner-v2",
+  "state": "SEALED_BEFORE_FIRST_RECOVERY_TARGET_MODEL_CALL",
+  "targetModelCallsAtSeal": 0,
+  "runner": {
+    "path": "scripts/run_code_formation_control_recovery.ts",
+    "sha256": "6c02e7e6194eff87d5ac90f4ee5c8fd46ac5af991c75f862117d2d6e7b427680",
+    "bytes": 15674
+  },
+  "materializer": {
+    "path": "services/code-formation-control-recovery/src/index.ts",
+    "sha256": "48f48a2e16eac171a2db02b36132f74bfc256b1022b3b585e3e5861036f8f63e",
+    "bytes": 9494
+  },
+  "parserTelemetry": {
+    "path": "services/code-formation-control-recovery/src/index.ts",
+    "sha256": "48f48a2e16eac171a2db02b36132f74bfc256b1022b3b585e3e5861036f8f63e",
+    "bytes": 9494
+  },
+  "inputs": {
+    "manifest": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_TASK_MANIFEST.v1.json",
+      "sha256": "b37b399128411ac0de241db5cd9eb167e526aaf560af0aec976e81126f1127e7",
+      "bytes": 25164
+    },
+    "repositories": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_REPOSITORIES.v1.json",
+      "sha256": "a8c417f2cccc3e7ced8e84354e040214045ae73bcac82974c325ddf4f5b5e86e",
+      "bytes": 30958
+    },
+    "oracle": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_ORACLE.v1.sealed.json",
+      "sha256": "4d1a0c01e520c73245aab3ac073036c194a0006e706a195d246c6516a8c0957c",
+      "bytes": 37195
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_PREREGISTRATION.v2.json",
+      "sha256": "f36280c42a506bbdc0f10632334ad390de2433a644cb160cacc2c942c5f15f6a"
+    },
+    "intents": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_REQUEST_INTENT_EQUIVALENCE.v1.json",
+      "sha256": "be9407648656b064188e816b421f9ca303b88702b2742989e7a06d1b4bb526fe",
+      "bytes": 110740
+    },
+    "telemetryValidation": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_PARSER_TELEMETRY_VALIDATION.v1.json",
+      "sha256": "70495b7cbaa25cec78a2e44f211883474067314de165fc913529ad90232b0272",
+      "bytes": 5771
+    }
+  },
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "scripts/run_code_formation_control_recovery.ts",
+        "sha256": "6c02e7e6194eff87d5ac90f4ee5c8fd46ac5af991c75f862117d2d6e7b427680",
+        "bytes": 15674
+      },
+      {
+        "path": "services/code-formation-control-recovery/src/index.ts",
+        "sha256": "48f48a2e16eac171a2db02b36132f74bfc256b1022b3b585e3e5861036f8f63e",
+        "bytes": 9494
+      },
+      {
+        "path": "services/code-formation-constraint/src/index.ts",
+        "sha256": "fb3e89e452c92b7b5e3f620cc92bc708c5bacd8b5e196e3d81d9e2c175bb5bf7",
+        "bytes": 4572
+      },
+      {
+        "path": "services/g3-evaluation-runtime/src/index.ts",
+        "sha256": "02ebfd6a7914cbe35c49048c182236d578cf56a1ddeb40ff8a4b9ac141affad2",
+        "bytes": 10087
+      },
+      {
+        "path": "services/g3-benchmark-runtime/src/index.ts",
+        "sha256": "edcbc59ac3164da338289f9ae6499074a51a8e92625e189d722a9162a34b6478",
+        "bytes": 37293
+      },
+      {
+        "path": "services/repo-intelligence/src/index.ts",
+        "sha256": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d",
+        "bytes": 37025
+      },
+      {
+        "path": "services/task-aware-retrieval/src/index.ts",
+        "sha256": "a6aca66c4758d7b35126dc4bb3c53a6ebd38bf17ec3006d8f5b1bc40fa3d18eb",
+        "bytes": 18657
+      },
+      {
+        "path": "services/model-specialization-runtime/src/index.ts",
+        "sha256": "2ed2faaa4f49d33da64cb78bd7bf6559d43a84a4623db485ea145a0d616481ee",
+        "bytes": 14994
+      },
+      {
+        "path": "services/patch-interface-runtime/src/index.ts",
+        "sha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+        "bytes": 59703
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21",
+        "bytes": 13021
+      }
+    ]
+  },
+  "ledgers": {
+    "callEventsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pairedObservationsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sanityEventsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "supersedes": {
+    "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RUNNER_SEAL.v1.json",
+    "sha256": "6ef0e72de5efc847e4bdcb1d397c0a87657567fcf2a14f08b8e5e363e0888dcb"
+  }
+}

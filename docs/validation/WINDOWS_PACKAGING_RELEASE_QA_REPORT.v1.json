@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "reportId": "dca-w3-windows-packaging-release-qa-v1",
+  "phase": "WINDOWS_PACKAGING_RELEASE_QA",
+  "status": "PASS_WITH_RELEASE_BLOCKERS",
+  "lineage": {
+    "w2": { "path": "docs/validation/FINAL_MEDIA_CAPTURE_REPORT.v1.json", "sha256": "97040ab170bada161bc6f6b161a84734d431c471f58f549ebeb7a4aa4fa6a650" },
+    "mediaManifest": { "path": "docs/media/CAPTURE_MANIFEST.json", "sha256": "d2dc0be4ddf8fed334f7114b8f6aa854817281fee2a950cab0cf91134eca690e" },
+    "integrity": "PASS"
+  },
+  "supportingArtifacts": {
+    "sourceIdentity": { "path": "docs/validation/WINDOWS_PACKAGING_SOURCE_IDENTITY.v1.json", "sha256": "fdb820e5fa2314041f8830408a97c638649cff3d6bfb54da6598a35050adc67d" },
+    "buildManifest": { "path": "docs/validation/WINDOWS_PACKAGE_BUILD_MANIFEST.v1.json", "sha256": "e68a710ceb6e259809b151e931858fdaa73bdf302f1041193a51c283b4ba11cb" },
+    "contentAudit": { "path": "docs/validation/WINDOWS_PACKAGE_CONTENT_AUDIT.v1.json", "sha256": "2ea90d484b60569adf7aade969b8a9233602af07008d33eb3c4f3d2d09c10fd5" },
+    "installLifecycle": { "path": "docs/validation/WINDOWS_INSTALL_LIFECYCLE_QA.v1.json", "sha256": "0b8f14a3c7930b59fba0b8eb571f2a7c3a87c2424ab40b578cc4a08c5d794cce" },
+    "licenseAudit": { "path": "docs/validation/WINDOWS_LICENSE_DISTRIBUTION_AUDIT.v1.json", "sha256": "691f4c77fb26b2e8a7e6d4eaa770ba34e895d2747f9b102b79ef3563e5dde35f" }
+  },
+  "localPackaging": {
+    "status": "PASS_LOCAL_UNSIGNED",
+    "formats": ["MSI_X64", "NSIS_X64_CURRENT_USER"],
+    "lockedBuilds": 2,
+    "contentAudit": "PASS",
+    "modelWeightsBundled": 0,
+    "secrets": 0,
+    "installLifecycle": "PASS_INSTALL_UNINSTALL_REINSTALL_FINAL_CLEANUP",
+    "installedRuntime": "PASS_18_SURFACES_6_ARTIFACT_PATH_CASES",
+    "sourceTreeDependency": false,
+    "upgradePath": "UPGRADE_PATH_NOT_APPLICABLE_FIRST_RELEASE"
+  },
+  "metadata": {
+    "productName": "Desk Code Agent",
+    "identifier": "com.deskcodeagent.desktop",
+    "publisher": "deskcodeagent",
+    "version": "0.1.0",
+    "architecture": "x86_64",
+    "upgradeCode": "A6C1AEB2-756B-5034-9266-9F41457962C6",
+    "placeholderMetadata": 0,
+    "versionConsistency": "PASS_NPM_CARGO_TAURI_INSTALLER_EXECUTABLE"
+  },
+  "failureHandling": {
+    "missingModelRuntime": "PASS_VISIBLE_OFFLINE_NOT_RUN_NO_CRASH",
+    "optionalModelServerUnavailable": "PASS_NO_AUTOMATIC_CONNECTION_OR_CRASH",
+    "invalidOrInaccessibleRepository": "SAFE_NATIVE_PICKER_AND_ACQUISITION_CHECK_BOUNDARY_PRESENT_NOT_DESTRUCTIVELY_EXERCISED",
+    "malformedConfiguration": "NOT_APPLICABLE_NO_PERSISTED_RUNTIME_CONFIGURATION_CREATED"
+  },
+  "defects": {
+    "found": [
+      { "category": "PACKAGING_CONFIGURATION", "symptom": "Initial MSI bundle failed because the existing icon.ico was not explicitly declared." }
+    ],
+    "fixed": [
+      { "change": "Declared bundle.icon as icons/icon.ico.", "regression": "tests/p5-portfolio-docs.test.ts", "result": "PASS_MSI_AND_NSIS" }
+    ]
+  },
+  "releaseBlockers": [
+    "ROOT_LICENSE_DECISION_REQUIRED",
+    "139_DEPENDENCY_LICENSE_COMPONENTS_REMAIN_NOASSERTION",
+    "THIRD_PARTY_AUTHORITATIVE_LICENSE_TEXT_PINNING_REQUIRED",
+    "SIGNING_NOT_PERFORMED_REQUIRES_OWNER_APPROVAL_OR_CREDENTIALS",
+    "NARRATOR_SPOKEN_OUTPUT_DEFERRED_NONBLOCKING_PUBLIC_RELEASE_ACCESSIBILITY_QA",
+    "PROTECTED_GIT_AND_GITHUB_PUBLICATION_APPROVAL_REQUIRED"
+  ],
+  "explicitNonclaims": [
+    "SIGNED_RELEASE",
+    "PUBLIC_DISTRIBUTION_AUTHORIZED",
+    "NARRATOR_PASS",
+    "FULL_SCREEN_READER_CERTIFICATION",
+    "WCAG_CERTIFICATION",
+    "ACCESSIBILITY_CERTIFICATION",
+    "BYTE_IDENTICAL_INSTALLER_REPRODUCIBILITY"
+  ],
+  "validation": {
+    "targetedPackagingConfig": "PASS_1_FILE_4_TESTS",
+    "canonicalCompletion": "PASS_DESIGN_ZERO_WARNINGS_ZERO_ERRORS_TYPECHECK_44_FILES_220_TESTS_PRODUCTION_BUILD",
+    "lockedNativePackaging": "PASS_TWO_RUNS_MSI_AND_NSIS",
+    "windowsInstalledRuntime": "PASS_TWO_RUNS_18_SURFACES_6_PATH_CASES",
+    "documentationLinks": "PASS",
+    "packageChecksums": "PASS",
+    "packageContent": "PASS",
+    "modelWeightExclusion": "PASS_ZERO",
+    "secretScan": "PASS_ZERO_FINDINGS",
+    "mediaLinks": "PASS_8_OF_8_SHA256_VERIFIED"
+  },
+  "invariants": {
+    "research": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "modelCalls": 0,
+    "benchmarkCalls": 0,
+    "signingPerformed": false,
+    "publicationPerformed": false,
+    "w4Entered": false,
+    "protectedExternalActions": 0
+  },
+  "decision": {
+    "w3": "PASS_WITH_RELEASE_BLOCKERS",
+    "nextAuthorizedPhase": "GITHUB_PUBLICATION_READINESS",
+    "w4Status": "READY_NOT_STARTED"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_ZERO_CALL_PRIVACY_SAFE_STAGE_COVERAGE",
+  "cases": [
+    {
+      "id": "invalid_json",
+      "telemetry": {
+        "responseReceived": true,
+        "schemaValid": false,
+        "modelError": "INVALID_JSON",
+        "finishReason": "STOP",
+        "outputEmpty": false,
+        "outputLengthBucket": "1_64",
+        "normalizationClassification": "MALFORMED_SCHEMA",
+        "jsonParsed": false,
+        "schemaValidated": false,
+        "parserSchemaReason": "NOT_APPLICABLE",
+        "explicitRefusalOrReportOnly": false,
+        "parseCode": "INVALID_JSON",
+        "schemaValidationCode": "NOT_RUN",
+        "actionValidationCode": "NOT_RUN",
+        "patchConstructionCode": "NOT_RUN",
+        "validP2Action": false
+      }
+    },
+    {
+      "id": "wrong_shape",
+      "telemetry": {
+        "responseReceived": true,
+        "schemaValid": false,
+        "modelError": "NONE",
+        "finishReason": "STOP",
+        "outputEmpty": false,
+        "outputLengthBucket": "1_64",
+        "normalizationClassification": "MALFORMED_SCHEMA",
+        "jsonParsed": true,
+        "schemaValidated": false,
+        "parserSchemaReason": "WRONG_JSON_SHAPE",
+        "explicitRefusalOrReportOnly": false,
+        "parseCode": "JSON_PARSED",
+        "schemaValidationCode": "SCHEMA_VALIDATION_FAILED",
+        "actionValidationCode": "NOT_RUN",
+        "patchConstructionCode": "NOT_RUN",
+        "validP2Action": false
+      }
+    },
+    {
+      "id": "missing_action",
+      "telemetry": {
+        "responseReceived": true,
+        "schemaValid": false,
+        "modelError": "NONE",
+        "finishReason": "STOP",
+        "outputEmpty": false,
+        "outputLengthBucket": "1_64",
+        "normalizationClassification": "MALFORMED_SCHEMA",
+        "jsonParsed": true,
+        "schemaValidated": false,
+        "parserSchemaReason": "MISSING_ACTION",
+        "explicitRefusalOrReportOnly": false,
+        "parseCode": "JSON_PARSED",
+        "schemaValidationCode": "SCHEMA_VALIDATION_FAILED",
+        "actionValidationCode": "NOT_RUN",
+        "patchConstructionCode": "NOT_RUN",
+        "validP2Action": false
+      }
+    },
+    {
+      "id": "wrong_action_type",
+      "telemetry": {
+        "responseReceived": true,
+        "schemaValid": false,
+        "modelError": "NONE",
+        "finishReason": "STOP",
+        "outputEmpty": false,
+        "outputLengthBucket": "1_64",
+        "normalizationClassification": "MALFORMED_SCHEMA",
+        "jsonParsed": true,
+        "schemaValidated": false,
+        "parserSchemaReason": "WRONG_ACTION_TYPE",
+        "explicitRefusalOrReportOnly": false,
+        "parseCode": "JSON_PARSED",
+        "schemaValidationCode": "SCHEMA_VALIDATION_FAILED",
+        "actionValidationCode": "NOT_RUN",
+        "patchConstructionCode": "NOT_RUN",
+        "validP2Action": false
+      }
+    },
+    {
+      "id": "missing_file",
+      "telemetry": {
+        "responseReceived": true,
+        "schemaValid": false,
+        "modelError": "NONE",
+        "finishReason": "STOP",
+        "outputEmpty": false,
+        "outputLengthBucket": "1_64",
+        "normalizationClassification": "MALFORMED_SCHEMA",
+        "jsonParsed": true,
+        "schemaValidated": false,
+        "parserSchemaReason": "MISSING_FILE",
+        "explicitRefusalOrReportOnly": false,
+        "parseCode": "JSON_PARSED",
+        "schemaValidationCode": "SCHEMA_VALIDATION_FAILED",
+        "actionValidationCode": "NOT_RUN",
+        "patchConstructionCode": "NOT_RUN",
+        "validP2Action": false
+      }
+    },
+    {
+      "id": "missing_range",
+      "telemetry": {
+        "responseReceived": true,
+        "schemaValid": false,
+        "modelError": "NONE",
+        "finishReason": "STOP",
+        "outputEmpty": false,
+        "outputLengthBucket": "1_64",
+        "normalizationClassification": "MALFORMED_SCHEMA",
+        "jsonParsed": true,
+        "schemaValidated": false,
+        "parserSchemaReason": "MISSING_RANGE",
+        "explicitRefusalOrReportOnly": false,
+        "parseCode": "JSON_PARSED",
+        "schemaValidationCode": "SCHEMA_VALIDATION_FAILED",
+        "actionValidationCode": "NOT_RUN",
+        "patchConstructionCode": "NOT_RUN",
+        "validP2Action": false
+      }
+    },
+    {
+      "id": "missing_replacement",
+      "telemetry": {
+        "responseReceived": true,
+        "schemaValid": false,
+        "modelError": "NONE",
+        "finishReason": "STOP",
+        "outputEmpty": false,
+        "outputLengthBucket": "1_64",
+        "normalizationClassification": "MALFORMED_SCHEMA",
+        "jsonParsed": true,
+        "schemaValidated": false,
+        "parserSchemaReason": "MISSING_REPLACEMENT",
+        "explicitRefusalOrReportOnly": false,
+        "parseCode": "JSON_PARSED",
+        "schemaValidationCode": "SCHEMA_VALIDATION_FAILED",
+        "actionValidationCode": "NOT_RUN",
+        "patchConstructionCode": "NOT_RUN",
+        "validP2Action": false
+      }
+    },
+    {
+      "id": "valid",
+      "telemetry": {
+        "responseReceived": true,
+        "schemaValid": true,
+        "modelError": "NONE",
+        "finishReason": "STOP",
+        "outputEmpty": false,
+        "outputLengthBucket": "257_1024",
+        "normalizationClassification": "VALID_EDIT",
+        "jsonParsed": true,
+        "schemaValidated": true,
+        "parserSchemaReason": "NOT_APPLICABLE",
+        "explicitRefusalOrReportOnly": false,
+        "parseCode": "JSON_PARSED",
+        "schemaValidationCode": "SCHEMA_VALIDATED",
+        "actionValidationCode": "RANGE_EDIT_ACCEPTED",
+        "patchConstructionCode": "CANONICAL_DIFF_READY",
+        "validP2Action": true
+      }
+    }
+  ],
+  "rawModelOutputsPersisted": 0,
+  "rawEditBodiesPersisted": 0,
+  "L2": false,
+  "inferenceAltered": false
+}

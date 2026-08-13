@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "validationId": "dca-privacy-safe-semantic-observability-session-a-validation-v1",
+  "status": "PASS",
+  "validatedAt": "2026-08-11T19:51:54.832Z",
+  "inputs": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PREREGISTRATION.v1.json",
+      "sha256": "1a6de2094142da008222aa65dea0bbb16c28425f1d29c1eb98be807f0eaf96c5"
+    },
+    "manifest": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_TASK_MANIFEST.v1.json",
+      "sha256": "bfefa8f89ee2221f1e8dc45de9fe4bae549b2d0919fd2ce0fc3e5c44087aec38"
+    },
+    "repositories": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_REPOSITORIES.v1.json",
+      "sha256": "f29e0eb0c829cdfc6f1b7087ab30ee06268d1d44c58b1e179016dc0903fd701e"
+    },
+    "oracle": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_ORACLE.v1.sealed.json",
+      "sha256": "cace6716684f9d7f262733b1ff87c2ddebc411ddd06339060d15a4205e35c6a3"
+    },
+    "privacyPreflight": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_OBSERVABILITY_PRIVACY_PREFLIGHT.v1.json",
+      "sha256": "d7fabb8237347f90f337eea6778ad08ff90c85dfe75c9c6ded611463cc959250"
+    }
+  },
+  "checks": {
+    "strictTypeScript": "PASS",
+    "projectTypecheck": "PASS",
+    "completeTests": "PASS",
+    "productionBuild": "PASS",
+    "designValidation": "PASS",
+    "L0Schema": "PASS",
+    "L1Schema": "PASS",
+    "featureExtractor": "PASS",
+    "privacyCanaries": "PASS_ZERO_LEAKS",
+    "determinism": "PASS_BYTE_IDENTICAL",
+    "taskSetIntegrity": "PASS_80",
+    "repositoryDisjointness": "PASS_ZERO_OVERLAP",
+    "taskDisjointness": "PASS_ZERO_FINGERPRINT_OVERLAP",
+    "referenceOracle": "PASS_80_SYNTAX_VISIBLE_HIDDEN",
+    "artifactSidecars": "PASS",
+    "secretScan": "PASS",
+    "sourceClosure": "PASS",
+    "lineage": "PASS",
+    "SessionBNotExecuted": "PASS"
+  },
+  "commands": [
+    {
+      "command": "npx tsc --ignoreConfig --noEmit --strict --skipLibCheck --target ES2022 --module ESNext --moduleResolution Bundler --allowSyntheticDefaultImports --types node services/semantic-observability/src/index.ts tests/semantic-observability.test.ts scripts/freeze_privacy_safe_semantic_observability_session_a.ts",
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "stdoutSha256": "1fcfe57781045a818698db7cbe3c9428c10ea084583a12bb0925411079a7a5df",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 0,
+      "stdoutSha256": "e6ded405d075b2b5d0dc24d4a6cce60df971e431d9e135061a6a1b66ad75b150",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "stdoutSha256": "c5f0a7aceec6c980c4ff9de682a11ffc7b6829726b320cabe4d901b810a95c01",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run validate:design",
+      "exitCode": 0,
+      "stdoutSha256": "eb4969ab0794e630fdadf961bd96443c8c80605e8a2aa6c700c3da4341f637eb",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npx vitest run tests/semantic-observability.test.ts tests/patch-interface-runtime.test.ts tests/tool-runtime.test.ts",
+      "exitCode": 0,
+      "stdoutSha256": "51fda4bccc8a03f5f07fb5eb61396a3daff03d5e6ebf3e383f908e194354ffd0",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "services/semantic-observability/src/index.ts",
+        "sha256": "96b92bed402662ad1c3d008fe29a8573bd037bacdffa3a94c6686c14d153e028",
+        "bytes": 12544
+      },
+      {
+        "path": "tests/semantic-observability.test.ts",
+        "sha256": "2a19c0ef1e6dc565b6bac410071531e3da1e731b6fa032e499c478e1761caa68",
+        "bytes": 3609
+      },
+      {
+        "path": "scripts/freeze_privacy_safe_semantic_observability_session_a.ts",
+        "sha256": "0012e6d714f72fea322ced48e27751a5634ec11fbb18f76f78157824408fa811",
+        "bytes": 41977
+      },
+      {
+        "path": "services/semantic-failure-decomposition/src/index.ts",
+        "sha256": "4f16feeb5c2764f3d819357283722590b1a3e2751290ca415e7f271a1b0ec987",
+        "bytes": 14070
+      },
+      {
+        "path": "services/g3-evaluation-runtime/src/index.ts",
+        "sha256": "02ebfd6a7914cbe35c49048c182236d578cf56a1ddeb40ff8a4b9ac141affad2",
+        "bytes": 10087
+      },
+      {
+        "path": "services/patch-interface-runtime/src/index.ts",
+        "sha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+        "bytes": 59703
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21",
+        "bytes": 13021
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      },
+      {
+        "path": "CONTEXT.md",
+        "sha256": "1339fe6bad47270f3ec2aec503900e9fa4d07cc738def1c80d87185fa1008240",
+        "bytes": 24676
+      },
+      {
+        "path": "docs/exec-plans/active/MASTER_EXECUTION_PLAN.md",
+        "sha256": "67333b2d29784b332e0c969248505754bf7800f63da8fe822a7b5c541178067e",
+        "bytes": 47867
+      }
+    ],
+    "sha256": "c225370960d3863538cfd57f4f632d463546650899cdd1b4a3f0bc0de7a78e80"
+  },
+  "cleanup": {
+    "targetModelCalls": 0,
+    "vllmOrModelProcesses": 0,
+    "modelComputeProcesses": 0,
+    "modelGpuAllocationMiB": 0,
+    "ambientGpuMemoryMiB": 0,
+    "port8000Clear": true,
+    "ephemeralStateAbsent": true,
+    "temporaryDirectories": 0,
+    "worktrees": 1
+  }
+}

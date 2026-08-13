@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "g4-capability-2026-08-09T12-13-22-904Z",
+  "classification": "G4_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "startedAt": "2026-08-09T12:13:22.904Z",
+  "completedAt": "2026-08-09T12:24:38.167Z",
+  "inputs": {
+    "manifest": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_MANIFEST.v2.json",
+      "sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7"
+    },
+    "oracle": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_ORACLE.v2.sealed.json",
+      "sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6"
+    },
+    "preregistration": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_EXPERIMENT_PREREGISTRATION.v2.json",
+      "sha256": "2dbcea905970ca51f1c9101ff1c870e8d9403546038814a629cb4f3c8d2aa23f"
+    }
+  },
+  "fixedVariables": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "temperature": 0,
+    "seed": 20260809,
+    "thinking": false,
+    "semanticReviewer": "OFF",
+    "multiAgent": "OFF",
+    "rawModelOutputStored": false
+  },
+  "protectedActions": {
+    "persistentCommit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false,
+    "modelDownload": false
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawModelOutputsStored": false,
+    "hashesAndScoredFieldsOnly": true
+  },
+  "status": "PASS",
+  "artifacts": [
+    {
+      "path": "docs/experiments/g4-capability/ORACLE_CONTEXT_EXPERIMENT.json",
+      "sha256": "1bd88e30fc4a7d2a75a07026f73d04b2fbdbf23240954f1b40a54ceade5779f7"
+    },
+    {
+      "path": "docs/experiments/g4-capability/NAVIGATION_ISOLATION_EXPERIMENT.json",
+      "sha256": "1361a9de3fb2088518dcc82d2a90e66035ea213c8d90766dc5540a18175877f6"
+    },
+    {
+      "path": "docs/experiments/g4-capability/DIAGNOSIS_ISOLATION_EXPERIMENT.json",
+      "sha256": "660b67fd67b1388fce10e65590b930cc7b13cddb5612c9d992cccd672678804e"
+    },
+    {
+      "path": "docs/experiments/g4-capability/PATCH_GENERATION_ISOLATION_EXPERIMENT.json",
+      "sha256": "c28381df7c91f7274764407da757f53f541be79e44cea1a4b6f701ebdd6b945a"
+    },
+    {
+      "path": "docs/experiments/g4-capability/PLANNING_ISOLATION_EXPERIMENT.json",
+      "sha256": "786f4d5922e4a2b36e7e57d6d0ab5a58db973a1dcef0ee5693af635793c33658"
+    },
+    {
+      "path": "docs/experiments/g4-capability/RETRY_DEPTH_ABLATION.json",
+      "sha256": "7bbee3e67f9350d28c6bfef5121a23d34d26cc85c021e4973ca9d6546de89361"
+    }
+  ],
+  "summaries": {
+    "oracleContext": {
+      "NORMAL_RETRIEVAL": {
+        "tasks": 42,
+        "successes": 0,
+        "successRate": 0,
+        "schemaValidity": 0.9047619047619048,
+        "totalTokens": 23260,
+        "totalLatencyMs": 92027.26797200002
+      },
+      "ORACLE_EVIDENCE": {
+        "tasks": 42,
+        "successes": 1,
+        "successRate": 0.023809523809523808,
+        "schemaValidity": 0.6904761904761905,
+        "totalTokens": 78303,
+        "totalLatencyMs": 149084.03476999997
+      }
+    },
+    "navigation": {
+      "TASK_ONLY": {
+        "tasks": 12,
+        "successes": 0,
+        "successRate": 0,
+        "schemaValidity": 0.9166666666666666,
+        "totalTokens": 2338,
+        "totalLatencyMs": 23002.66670699994
+      },
+      "EXACT_FILE": {
+        "tasks": 12,
+        "successes": 3,
+        "successRate": 0.25,
+        "schemaValidity": 0.9166666666666666,
+        "totalTokens": 2523,
+        "totalLatencyMs": 23638.141706999944
+      },
+      "EXACT_SYMBOL": {
+        "tasks": 12,
+        "successes": 0,
+        "successRate": 0,
+        "schemaValidity": 1,
+        "totalTokens": 2449,
+        "totalLatencyMs": 23428.319633000065
+      },
+      "ORACLE_SOURCE_AND_TEST_CONTEXT": {
+        "tasks": 12,
+        "successes": 6,
+        "successRate": 0.5,
+        "schemaValidity": 0.8333333333333334,
+        "totalTokens": 3917,
+        "totalLatencyMs": 27248.534794000007
+      }
+    },
+    "diagnosis": {
+      "tasks": 12,
+      "successes": 2,
+      "successRate": 0.16666666666666666,
+      "schemaValidity": 0.4166666666666667,
+      "totalTokens": 5255,
+      "totalLatencyMs": 41523.53836700012
+    },
+    "patchGeneration": {
+      "tasks": 12,
+      "successes": 0,
+      "successRate": 0,
+      "schemaValidity": 1,
+      "totalTokens": 5502,
+      "totalLatencyMs": 40416.133546000114
+    },
+    "planning": {
+      "tasks": 12,
+      "successes": 12,
+      "successRate": 1,
+      "schemaValidity": 1,
+      "totalTokens": 28881,
+      "totalLatencyMs": 36763.27827999991
+    },
+    "retryDepth": {
+      "1": {
+        "tasks": 12,
+        "successes": 0,
+        "successRate": 0,
+        "recoveries": 0,
+        "recoveryRateAmongFirstFailures": 0,
+        "repeatedPatchRate": 0,
+        "contradictionRate": 0,
+        "safetyViolations": 0,
+        "rollbackPassRate": 1,
+        "meanTokens": 428.9166666666667,
+        "meanLatencyMs": 3410.44320075,
+        "meanCalls": 1
+      },
+      "2": {
+        "tasks": 12,
+        "successes": 0,
+        "successRate": 0,
+        "recoveries": 0,
+        "recoveryRateAmongFirstFailures": 0,
+        "repeatedPatchRate": 0,
+        "contradictionRate": 1,
+        "safetyViolations": 0,
+        "rollbackPassRate": 1,
+        "meanTokens": 959.75,
+        "meanLatencyMs": 6976.6647779166915,
+        "meanCalls": 2
+      },
+      "3": {
+        "tasks": 12,
+        "successes": 0,
+        "successRate": 0,
+        "recoveries": 0,
+        "recoveryRateAmongFirstFailures": 0,
+        "repeatedPatchRate": 0,
+        "contradictionRate": 1,
+        "safetyViolations": 0,
+        "rollbackPassRate": 1,
+        "meanTokens": 959.75,
+        "meanLatencyMs": 6981.800341000005,
+        "meanCalls": 2
+      }
+    }
+  },
+  "eIterGate": {
+    "improvement2Vs1Pp": 0,
+    "recovery2": 0,
+    "repeated2": 0,
+    "contradiction2": 1,
+    "safety2": 0,
+    "tokenRatio2Vs1": 2.2376141441616473,
+    "improvement3Vs2Pp": 0,
+    "passed": false,
+    "thirdCallJustified": false
+  }
+}

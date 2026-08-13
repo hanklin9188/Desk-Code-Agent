@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 5,
+  "indexId": "dca-privacy-safe-semantic-observability-results-index-v5",
+  "status": "PASS_V3_SESSION_A_COMPLETE",
+  "generatedAt": "2026-08-11T21:14:06.931Z",
+  "v2": {
+    "status": "PERMANENTLY_CLOSED_ABORTED_INFRASTRUCTURE_GENERATION",
+    "sessionB": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V2_SESSION_B.v2.json",
+      "sha256": "aa61f458fe3f039bdc7b732d37cef06dc9d31a41b7e405927ed31c0950c63204"
+    },
+    "supersession": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SUPERSESSION.v3.json",
+      "sha256": "d52eca890ce9257de1de7171e057a44fd5b7f8446146cbc48868a2daa4cc9106"
+    },
+    "consumedCalls": 14,
+    "diagnosticPairs": 13,
+    "primaryEligiblePairs": 0
+  },
+  "v3": {
+    "sessions": {
+      "A": {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_A.v3.json",
+        "sha256": "5e6a60de68bd36602f4f0e8e328ee149e6e1cbcc78483dfc867850b37647bfaf"
+      },
+      "B": null,
+      "C": null,
+      "D": null
+    },
+    "artifacts": {
+      "causalReport": {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_INFRASTRUCTURE_CAUSAL_REPORT.v3.json",
+        "sha256": "9fce8fe672b7fb5acc42d99051603e9dbb3de6d2b08b42d29f9e54b1121dcb96"
+      },
+      "storageAudit": {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_STORAGE_FOOTPRINT_AUDIT.v3.json",
+        "sha256": "c2b71b123801c148264eb8edc67334f419b4da18258f3651573de5bdc50209e5"
+      },
+      "preregistration": {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PREREGISTRATION.v3.json",
+        "sha256": "edf0ea732bbb235d10e6d898b15089bc4d1f053f54510e99e58bc63b76a42cb9"
+      },
+      "manifest": {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_TASK_MANIFEST.v3.json",
+        "sha256": "51d6b6759c9b39cb8e4e1024039b32dca4e1c6be749936aab586460beecb8286"
+      },
+      "repositories": {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_REPOSITORIES.v3.json",
+        "sha256": "9c2e077fee1a4c25784923cc73fa3bef71626980bf85a2cb2adb4f289acb9b9b"
+      },
+      "oracle": {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_ORACLE.v3.sealed.json",
+        "sha256": "da4522fe1143049f56b0b40862f1532aced9e63c4af0e4bbca5b448a2fef9606"
+      },
+      "L1Schema": {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_L1_SCHEMA.v2.json",
+        "sha256": "b40cf1819135d2cc64fd0573a67880c259e2d4c717aab414e26f583e31359bad"
+      },
+      "totality": {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_OBSERVABILITY_V3_TOTALITY_VALIDATION.v3.json",
+        "sha256": "e7d9e247783571ff5a52d1b2da19d2849f67decb995a9416e61e9b727234159b"
+      },
+      "runnerSeal": {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_B_RUNNER_SEAL.v3.json",
+        "sha256": "e63d4831dcf3bed2e23b262998ce8211d58a6ad7ec6ba62a45ae648d6baed9e2"
+      },
+      "dryRun": {
+        "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_B_DRY_RUN.v3.json",
+        "sha256": "03995b923882c0920a93417d42170e28a1be27b73b15a383f6d08bb1bd218954"
+      },
+      "validation": {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_A_VALIDATION.v3.json",
+        "sha256": "25796914e81d5ad04134158317fbfa346d5944ef6a60564695f9ad9c2097966d"
+      },
+      "review": {
+        "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_SESSION_A_REVIEW.v3.json",
+        "sha256": "e3984c9ae81db902513079d379ee0acb303acb3a56daa71e767d75fb3ace4316"
+      }
+    },
+    "calls": {
+      "targetModelCallsAtSeal": 0,
+      "plannedSessionBPhysicalCalls": 80,
+      "retries": 0,
+      "reviewerCalls": 0
+    }
+  },
+  "next": "V3_SESSION_B_SEPARATE_INVOCATION_REQUIRED"
+}

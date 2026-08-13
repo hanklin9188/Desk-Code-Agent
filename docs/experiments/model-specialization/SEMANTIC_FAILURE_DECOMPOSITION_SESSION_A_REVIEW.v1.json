@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "dca-semantic-failure-decomposition-session-a-review-v1",
+  "status": "PASS",
+  "reviewedAt": "2026-08-12T02:37:00.000Z",
+  "skill": {
+    "skill_id": "D07",
+    "skill_version": "0.2.0",
+    "run_id": "f09d16ca-630e-4ce5-83a7-21d1c30ef3c5",
+    "status": "PASS",
+    "input_artifact_hashes": [
+      "6851a9a2a2fd25757413f71c0b331e5899a397c1928b59259f3cc6606123ed47",
+      "368ba02473ef7baf09f7c3927b969c579c1848c8c362c2be12f27cacd36535eb"
+    ],
+    "evidence_ids": [
+      "SFD-A1-POPULATION",
+      "SFD-A2-TAXONOMY",
+      "SFD-A3-DIMENSIONS",
+      "SFD-A6-GATES"
+    ],
+    "warnings": [
+      "Raw first-attempt edit bodies are unavailable; the preregistration correctly requires T14/LOW when a stronger semantic label would depend on them."
+    ],
+    "errors": [],
+    "metrics": {
+      "specBlockers": 0,
+      "standardsBlockers": 0,
+      "targetModelCalls": 0
+    }
+  },
+  "specReview": {
+    "status": "PASS",
+    "findings": [],
+    "checks": {
+      "sessionAOnly": true,
+      "population95_29_66": true,
+      "firstAttemptPrimaryUnit": true,
+      "retrySecondaryOnly": true,
+      "taxonomyT1ThroughT14": true,
+      "exactlyOnePrimaryMaximumTwoSecondary": true,
+      "sevenDimensions": true,
+      "observableEvidenceRequired": true,
+      "failClosedUncertainty": true,
+      "gatesG1ThroughG5Frozen": true,
+      "closedHoldoutPolicy": true,
+      "sessionBNotEntered": true
+    }
+  },
+  "standardsReview": {
+    "status": "PASS",
+    "findings": [],
+    "checks": {
+      "strictTypeScript": "PASS",
+      "projectTypecheck": "PASS",
+      "completeTests": "PASS",
+      "targetedTests": "PASS_2_OF_2",
+      "immutableSidecars": "PASS",
+      "sourceClosure": "PASS",
+      "secretScan": "PASS",
+      "privacy": "PASS_NO_RAW_OUTPUT_OR_ACTION_REPERSISTENCE",
+      "protectedActions": "PASS_ALL_FALSE",
+      "runtimeCleanup": "PASS"
+    }
+  },
+  "decision": "APPROVED_SESSION_A_ONLY",
+  "targetModelCalls": 0
+}

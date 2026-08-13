@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 3,
+  "experimentId": "CODE_FORMATION_CONTROL_RECOVERY_GENERATION",
+  "state": "SESSION_A_COMPLETE_ZERO_CALL_THRESHOLD_STRENGTHENED_AND_RESEALED",
+  "supersedes": {
+    "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RESULTS_INDEX.v2.json",
+    "sha256": "f34806e4564bc89177acece8bccd5c3f0392fe24a9466842e7ead8f2974eca66"
+  },
+  "sessions": {
+    "A": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_A.v2.json",
+      "sha256": "7e68597e3f116eafd3e3ebeae8734f98d9564c7bdcb1d459ad4c1eb768d73b46"
+    },
+    "B": null,
+    "C": null
+  },
+  "artifacts": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_PREREGISTRATION.v2.json",
+      "sha256": "f36280c42a506bbdc0f10632334ad390de2433a644cb160cacc2c942c5f15f6a"
+    },
+    "runnerSeal": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RUNNER_SEAL.v2.json",
+      "sha256": "4c7287fbf7fedeea7dc0d83d4763fa54c2299326205183da32777c0e6c8f7241"
+    }
+  },
+  "reachabilityMinimum": {
+    "candidates": 20,
+    "fraction": 0.5
+  },
+  "primaryMetric": "strict behavioral success",
+  "targetModelCallsSessionA": 0,
+  "productStatus": "KEEP_MUTATION_DISABLED",
+  "next": "SESSION_B_REQUIRES_SEPARATE_INVOCATION",
+  "stop": "SESSION_A_BOUNDARY_REACHED"
+}

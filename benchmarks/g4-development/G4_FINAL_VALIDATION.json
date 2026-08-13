@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "completedAt": "2026-08-09T12:39:09.616Z",
+  "startedAt": "2026-08-09T12:39:00.394Z",
+  "command": "npm run check",
+  "stages": {
+    "design": "PASS",
+    "typecheck": "PASS",
+    "tests": "PASS_22_FILES_89_TESTS",
+    "build": "PASS"
+  },
+  "outputSha256": "de3f10dcb595adfa7abdeaf8e4dd48e1ce21e59065fc870afbeeb0674dd4b2cf",
+  "regressionRuns": {
+    "indexMutation100": {
+      "path": "docs/experiments/runs/m9-g3-index-mutation-2026-08-09T12-34-51-247Z/result.json",
+      "sha256": "d39eab0fd086464b3c561076288212479987ffb038d674d53e2b16f78f921c45"
+    },
+    "securityFuzz1000": {
+      "path": "docs/experiments/runs/m9-g3-security-fuzz-2026-08-09T12-34-52-775Z/result.json",
+      "sha256": "e92eb08fa14f2be20214e8f922856c1fc9d4c22ad11b620bf7d4f57db6624509"
+    },
+    "uiSoak200000": {
+      "path": "docs/experiments/runs/m9-g3-ui-soak-2026-08-09T12-34-53-064Z/result.json",
+      "sha256": "7bb09d054e5172b686fc457ea5afc837410c08e72d130af46909f06e76edee16"
+    },
+    "crashRecovery": {
+      "path": "benchmarks/g3/G3_RESULTS_INDEX.json",
+      "family": "crashRecovery",
+      "status": "PASS_HASH_VERIFIED_NOT_RERUN"
+    }
+  }
+}

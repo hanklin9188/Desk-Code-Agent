@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "protocolId": "dca-practical-local-model-tournament-v1",
+  "state": "PROTOCOL_ONLY_NOT_AUTHORIZED",
+  "classification": "PRACTICAL_LOCAL_MODEL_TOURNAMENT",
+  "preparedAt": "2026-08-11T03:14:15.580Z",
+  "scientificJustification": {
+    "eEditValidActions": 89,
+    "eEditStrictSuccesses": 23,
+    "acceptedEditsFailingStrictBehavior": 66,
+    "exactSourceRetrievalMisses": 5,
+    "conclusion": "Stronger coding-model capability is justified for controlled study, while retrieval remains a separately measured secondary limitation."
+  },
+  "candidates": [
+    {
+      "modelId": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "role": "GENERIC_CODER_CONTROL",
+      "revision": "NOT_SELECTED"
+    },
+    {
+      "modelId": "FIM-7B",
+      "role": "FIM_AGENTIC_CANDIDATE",
+      "revision": "NOT_SELECTED"
+    },
+    {
+      "modelId": "SWE-agent-LM-7B",
+      "role": "SWE_TRAJECTORY_CANDIDATE",
+      "revision": "NOT_SELECTED"
+    }
+  ],
+  "fixedVariables": [
+    "E-EDIT-P2-V1 interface",
+    "E-MIN-V2 retrieval",
+    "C1 context",
+    "same deterministic safety and patch runtime",
+    "same verification and behavioral scoring",
+    "same frozen 95-task screening set"
+  ],
+  "disclosure": {
+    "existingHoldoutNoLongerUntouchedForFutureModels": true,
+    "productPromotionRequiresNewRepositoryDisjointHoldout": true,
+    "reducedPrecisionLikelyOn16GiBGpu": true,
+    "pureScaleOnlyClaimAllowed": false
+  },
+  "prerequisites": [
+    "separate preregistration before acquisition",
+    "exact revision and license review",
+    "explicit model-download approval",
+    "equal or explicitly practical precision profiles",
+    "zero-call runtime/safety preflight",
+    "new untouched holdout before product claim"
+  ],
+  "acquisitionAuthorized": false,
+  "modelDownloaded": false,
+  "modelExecuted": false,
+  "protectedActions": {
+    "dependencyInstall": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

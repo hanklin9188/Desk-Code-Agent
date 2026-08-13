@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 3,
+  "identityId": "dca-w1-windows-native-authoritative-source-identity-v3",
+  "status": "PASS_NATIVE_AUTHORITATIVE_SOURCE_IDENTITY",
+  "supersedes": {
+    "path": "docs/validation/WINDOWS_NATIVE_SOURCE_IDENTITY.v2.json",
+    "sha256": "f7e6092a949a6709b97aff61b014da283c86082d1a758c62c000153893c4bb4b",
+    "reason": "The first resumed Tauri build proved four exact src-tauri/gen/schema files are build outputs, and the required native icon fix added two authoritative files."
+  },
+  "policy": {
+    "version": 3,
+    "implementation": "scripts/windows_native_source_identity.ts",
+    "implementationSha256": "c898f73c5ae688b51e51361774e38a16162393c85328b29acc712e37f5ee956d",
+    "regressionTests": "tests/windows-native-source-identity.test.ts",
+    "regressionTestsSha256": "95e8c6ba36cd352017fb00c709749aca4e012f657917ac59b2cd60b35ce13b0b",
+    "testResult": "PASS_12_OF_12",
+    "defaultClassification": "AUTHORITATIVE_SOURCE",
+    "unknownPaths": "FAIL_CLOSED_INCLUDED_AS_AUTHORITATIVE",
+    "symbolicLinks": "FAIL_CLOSED_REJECTED"
+  },
+  "exactGeneratedMutableFiles": [
+    "tsconfig.app.tsbuildinfo",
+    "tsconfig.node.tsbuildinfo",
+    "apps/desktop/src-tauri/gen/schemas/acl-manifests.json",
+    "apps/desktop/src-tauri/gen/schemas/capabilities.json",
+    "apps/desktop/src-tauri/gen/schemas/desktop-schema.json",
+    "apps/desktop/src-tauri/gen/schemas/windows-schema.json"
+  ],
+  "generatedSchemaEvidence": {
+    "generatingTool": "tauri-build 2.6.3 invoked by cargo build --locked",
+    "preBuildPresence": "ABSENT_FROM_SEALED_NATIVE_SNAPSHOT",
+    "postBuildPresence": "FOUR_FILES_CREATED_AT_BUILD_TIME_2026-08-12T15:48:31+08:00",
+    "exclusionShape": "EXACT_PATHS_ONLY_NO_GEN_DIRECTORY_WILDCARD",
+    "adjacentUnknownFileRegression": "PASS_AUTHORITATIVE"
+  },
+  "authoritativeNativeFixes": [
+    {
+      "path": "apps/desktop/src-tauri/icons/icon.ico",
+      "bytes": 270398,
+      "sha256": "2d45f39b31660a4029685c6e17c5194bed23c1d432f0036f497a169f5347a29d",
+      "purpose": "Required Windows resource derived from the existing Desk cube mark"
+    },
+    {
+      "path": "scripts/generate_tauri_icon.mjs",
+      "bytes": 2780,
+      "sha256": "d0ae7236695042275e68b0f0545133624930864d882924a799b968cead135c12",
+      "purpose": "Deterministic dependency-free Windows icon generator"
+    }
+  ],
+  "normalizedIdentity": {
+    "nativePath": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508",
+    "algorithm": "SHA256_OVER_SORTED_NUL_DELIMITED_SHA256_AND_RELATIVE_PATH_PAIRS",
+    "sha256": "8f68749cd7338b1d3563d2e0889af85ccc3801a8bb503488b7e2214e9b2255ff",
+    "authoritativeFileCount": 2197,
+    "authoritativeBytes": 86408564,
+    "repeatComputation": "PASS_BYTE_IDENTICAL_RESULT",
+    "deltaFromV2": "EXACTLY_TWO_AUTHORIZED_AUTHORITATIVE_FILES"
+  }
+}

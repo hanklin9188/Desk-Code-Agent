@@ -1,0 +1,17 @@
+import { mkdir, readdir, stat, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { renderToStaticMarkup } from "react-dom/server";
+import React from "react";
+import type { AgentEvent, VerificationStage } from "../packages/contracts/src/index";
+import { replayEvents } from "../packages/event-protocol/src/index";
+import { WorkspaceView } from "../apps/desktop/src/app/Views";
+
+const root = path.resolve(process.cwd()); const experimentId = `m8-ui-performance-${new Date().toISOString().replace(/[:.]/g, "-")}`;
+const events: AgentEvent[] = Array.from({ length: 100_000 }, (_, sequence) => ({ eventId: `perf-${sequence}`, runId: "perf-run", taskId: "perf-task", sequence, timestamp: new Date(sequence).toISOString(), source: "benchmark", type: sequence === 99_999 ? "run.completed" : sequence % 10_000 === 0 ? "verification.stage" : "tool.output", severity: "info", payload: sequence % 10_000 === 0 ? { id: `stage-${sequence}`, label: "Stage", trustedCommandId: "fixture", status: "PASS", durationMs: 1 } : { ordinal: sequence }, privacy: "local_only" }));
+const replayStarted = performance.now(); const projection = replayEvents(events); const replayMs = performance.now() - replayStarted;
+const verification: VerificationStage[] = projection.verification; const renderSamples: number[] = [];
+for (let index = 0; index < 50; index += 1) { const started = performance.now(); renderToStaticMarkup(<WorkspaceView view="Flow" projection={projection} verification={verification} reducedMotion onReplay={() => undefined} onNotify={() => undefined}/>); renderSamples.push(performance.now() - started); }
+const sorted = [...renderSamples].sort((a, b) => a - b); const assetsRoot = path.join(root, "dist", "desktop", "assets"); const assets = await readdir(assetsRoot); const assetBytes = await Promise.all(assets.map(async (file) => ({ file, bytes: (await stat(path.join(assetsRoot, file))).size })));
+const result = { experimentId, status: projection.state === "DONE" && projection.totalEvents === events.length && projection.events.length === 2_000 && replayMs < 5_000 && sorted[47] < 100 ? "PASS" : "FAIL", environment: { node: process.version, platform: process.platform, arch: process.arch }, replay: { inputEvents: events.length, retainedUiWindow: projection.events.length, finalState: projection.state, durationMs: Number(replayMs.toFixed(3)), eventsPerSecond: Math.round(events.length / (replayMs / 1_000)), droppedTruthEvents: projection.totalEvents === events.length ? 0 : events.length - projection.totalEvents }, render: { samples: renderSamples.length, medianMs: Number(sorted[Math.floor(sorted.length / 2)].toFixed(3)), p95Ms: Number(sorted[47].toFixed(3)), reducedMotion: true }, bundle: { assets: assetBytes, totalBytes: assetBytes.reduce((sum, item) => sum + item.bytes, 0) }, accessibility: { automatedStatus: "PASS", source: "tests/accessibility.test.tsx", colorContrast: "MANUAL_REQUIRED", windowsScreenReader: "NOT_RUN" }, native: { linuxPackage: "BLOCKED_EXTERNAL", windowsInstaller: "NOT_RUN" } };
+const output = path.join(root, "docs", "experiments", "runs", experimentId); await mkdir(output, { recursive: false }); await writeFile(path.join(output, "result.json"), `${JSON.stringify(result, null, 2)}\n`, { flag: "wx" }); process.stdout.write(`${JSON.stringify(result, null, 2)}\n`); if (result.status !== "PASS") process.exitCode = 1;

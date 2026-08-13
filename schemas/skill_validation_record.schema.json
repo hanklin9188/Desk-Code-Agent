@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill Validation Record",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "skill_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "skill_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "backend_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_suite": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_manifest_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sample_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "independent_runs": {
+      "type": "integer",
+      "minimum": 3
+    },
+    "without_configuration": {
+      "type": "string",
+      "minLength": 1
+    },
+    "with_configuration": {
+      "type": "string",
+      "minLength": 1
+    },
+    "without_skill_success": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "with_skill_success": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "delta_pp": {
+      "type": "number"
+    },
+    "delta_pp_ci95": {
+      "type": "array",
+      "prefixItems": [
+        { "type": "number" },
+        { "type": "number" }
+      ],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "without_skill_median_tokens": {
+      "type": "number",
+      "minimum": 0
+    },
+    "with_skill_median_tokens": {
+      "type": "number",
+      "minimum": 0
+    },
+    "token_overhead_ratio": {
+      "type": "number"
+    },
+    "without_skill_median_latency_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "with_skill_median_latency_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "schema_validity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "safety_violations": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "critical_regressions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "ADMIT",
+        "EXPERIMENTAL",
+        "DISABLE",
+        "DEPRECATE"
+      ]
+    },
+    "decision_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evaluated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "evaluator": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "record_id",
+    "skill_id",
+    "skill_version",
+    "model_profile",
+    "backend_version",
+    "task_suite",
+    "task_manifest_hash",
+    "sample_count",
+    "independent_runs",
+    "without_configuration",
+    "with_configuration",
+    "without_skill_success",
+    "with_skill_success",
+    "delta_pp",
+    "delta_pp_ci95",
+    "without_skill_median_tokens",
+    "with_skill_median_tokens",
+    "token_overhead_ratio",
+    "without_skill_median_latency_ms",
+    "with_skill_median_latency_ms",
+    "schema_validity",
+    "safety_violations",
+    "critical_regressions",
+    "decision",
+    "decision_reasons",
+    "evaluated_at",
+    "evaluator"
+  ]
+}

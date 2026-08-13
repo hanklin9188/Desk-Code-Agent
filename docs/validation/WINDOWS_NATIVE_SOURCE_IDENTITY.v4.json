@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 4,
+  "identityId": "dca-w1-windows-native-authoritative-source-identity-v4-200-percent-fix",
+  "status": "PASS_NATIVE_AUTHORITATIVE_SOURCE_IDENTITY",
+  "supersedes": {
+    "path": "docs/validation/WINDOWS_NATIVE_SOURCE_IDENTITY.v3.json",
+    "sha256": "cbb004b1f201fff5e0c791549e25da7f503a4ba87d942a2d829d95738a972921",
+    "reason": "A reproducible actual-200-percent Workspace horizontal-overflow defect required two authoritative source changes."
+  },
+  "policy": {
+    "version": 3,
+    "implementation": "scripts/windows_native_source_identity.ts",
+    "exclusionsUnchanged": true,
+    "regressionTests": "PASS_12_OF_12"
+  },
+  "authorizedAuthoritativeChanges": [
+    {
+      "path": "apps/desktop/src/styles.css",
+      "sha256": "c1ee1aa3f1bb913c19f4a0b84646f06e72db5a18ea1f6851b42ed707ef2f4f16",
+      "change": "Stack workflow-layout below 1300 CSS pixels."
+    },
+    {
+      "path": "tests/productization-ui.test.tsx",
+      "sha256": "2b7176ee3115dea64fefa67a3f56a56ecf4c8becc62c16decf837e4845f015ca",
+      "change": "Regression assertion for the constrained native viewport rule."
+    }
+  ],
+  "normalizedIdentity": {
+    "nativePath": "C:\\Users\\User\\dca-w1-native-qa-20260812T1508",
+    "algorithm": "SHA256_OVER_SORTED_NUL_DELIMITED_SHA256_AND_RELATIVE_PATH_PAIRS",
+    "sha256": "81b9ca9e879db24afc02e98539611b05a6f9d4bf98e1c74a6ad541574717ee08",
+    "authoritativeFileCount": 2197,
+    "authoritativeBytes": 86409016,
+    "repeatComputation": "PASS_BYTE_IDENTICAL_RESULT"
+  }
+}

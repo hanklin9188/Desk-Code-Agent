@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "PATCH_INTERFACE_MODEL_LIFECYCLE",
+  "status": "PASS",
+  "checkedAt": "2026-08-11T01:42:06.240Z",
+  "profileId": "baseline",
+  "exactModel": {
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+  },
+  "runDirectory": "docs/experiments/runs/e-edit-retry-baseline-20260811T094020Z",
+  "checks": {
+    "exactModelProcessAbsent": true,
+    "profileLauncherProcessAbsent": true,
+    "loopbackPort8000Clear": true,
+    "ephemeralApiKeyAbsent": true,
+    "gpuMemoryReleased": true,
+    "maximumGpuMemoryMiB": 0,
+    "temporaryPatchInterfaceDirectoriesAbsent": true,
+    "temporaryPatchInterfaceDirectoryCount": 0,
+    "extraGitWorktreesAbsent": true,
+    "declaredGitWorktreeCount": 1,
+    "runtimeServingAttestationFilesAbsent": true
+  },
+  "evidence": {
+    "commands": {
+      "process": {
+        "commandSha256": "d3fb614d438733dd6da278547fe17fe06186048d461c9c33e29118d5de3be180",
+        "status": "PASS",
+        "stdoutSha256": "b7192ab3b5a62edb77e4bd4ef9e79df504db3f5548b16c0763737fcee0fe0833",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "errorSha256": null
+      },
+      "listener": {
+        "commandSha256": "b1c227637035186864ffd54b19ad72474c53a2e037cb3d189bd2ee437f83541b",
+        "status": "PASS",
+        "stdoutSha256": "14f4ea5bdea2bd6f8d856ec28619243555e53de100d4bca155a751876e97a843",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "errorSha256": null
+      },
+      "gpu": {
+        "commandSha256": "2c8687478bd7e3bb59afce3eac475eceebb199b499e2f956ded00393e9b11e74",
+        "status": "PASS",
+        "stdoutSha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "errorSha256": null
+      },
+      "worktree": {
+        "commandSha256": "0ed28ab2d231d0b2bd8ef8fcc7c11bb59995fd48770e67cf2eb8a98065389117",
+        "status": "PASS",
+        "stdoutSha256": "efa8047d975c43a188ee274307f18c604c5fb95701e9d5befd1bd19e489dec9c",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "errorSha256": null
+      }
+    },
+    "statusSha256": "f4b0cf7c442ed112ab4e2b2f3501f4af3af829870ad044f6a566f150bcf05cd8",
+    "apiKeyFilesystemStatusSha256": "08b6a0bc6906cd596f1458be5ac2911c478709b27e4f3c52e8edd0293e2f4c56",
+    "matchedProcessRowHashes": [],
+    "listenerRowHashes": [],
+    "temporaryEntryNameHashes": [],
+    "extraWorktreePathHashes": []
+  },
+  "privacy": {
+    "processCommandLinesStored": false,
+    "commandOutputStored": false,
+    "apiKeyRead": false,
+    "secretsStored": false
+  },
+  "protectedEffects": {
+    "modelStartedOrStopped": false,
+    "networkCalls": 0,
+    "gitMutations": 0,
+    "externalWrites": 0
+  },
+  "runtimeStateCleanup": {
+    "operation": "UNLINK_EXACT_PRIVATE_RUNTIME_STATE_FILES_BEFORE_ARTIFACT_PUBLICATION",
+    "targets": [
+      ".runtime/model/profile-start.json",
+      ".runtime/model/profile-launch.json",
+      ".runtime/model/profile-ready.json"
+    ],
+    "results": {
+      ".runtime/model/profile-start.json": "REMOVED",
+      ".runtime/model/profile-launch.json": "REMOVED",
+      ".runtime/model/profile-ready.json": "REMOVED"
+    },
+    "verifiedAbsent": true
+  }
+}

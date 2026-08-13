@@ -1,0 +1,3280 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "dca-best-7b-bounded-retry-eligibility-manifest-v1",
+  "state": "IMMUTABLE_SESSION_A_GENERATOR_OUTPUT",
+  "classification": "M2_STRICT_FAILURES_HASH_ONLY",
+  "sealedAt": "2026-08-11T15:02:44.551Z",
+  "modelCallsAtSeal": 0,
+  "inputs": {
+    "protocol": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_PROTOCOL.v1.json",
+      "sha256": "228ca9e5d8a836c40f345db2f7d39a415d6e4a1cc1d9bfa7af62b9fcfdfe51b3"
+    },
+    "tournamentPreregistration": {
+      "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PREREGISTRATION.v1.json",
+      "sha256": "51f983f63719494e8877eb7b24fcbc7a47b0b9fb53d5c1e2bb838961b87246c1"
+    },
+    "tournamentSessionCSeal": {
+      "path": "benchmarks/model-specialization/MODEL_TOURNAMENT_SESSION_C_SEAL.v1.json",
+      "sha256": "e7d3d76a74342423f67b538f34e19276d1b0fbdecc6541269897919d585fa50c"
+    },
+    "tournamentSessionC": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_C.v1.json",
+      "sha256": "32ff39c05b5ce6c64b57ac77085df2b5666750a8a5689d3ac801a683bd3ec683"
+    },
+    "tournamentSessionD": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_D.v2.json",
+      "sha256": "d61cca9ab4bcf2b05c13b277b432ccbb466423639496e04affb12deeb9ed5504"
+    },
+    "priorRetryEligibility": {
+      "path": "docs/experiments/model-specialization/MODEL_TOURNAMENT_RETRY_ELIGIBILITY.v1.json",
+      "sha256": "c88e39e24f0b08b95cdab8bded29c2b9e19e6a9490f891617e177aedd325f728"
+    },
+    "M2Acquisition": {
+      "path": "docs/experiments/model-specialization/tournament-session-b/M2_ACQUISITION.v1.json",
+      "sha256": "cf8e77a5bf0fe8828c1f8deeacc9c87c995a05546efde46341eeccee29998fb6"
+    },
+    "M2Result": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/result.json",
+      "sha256": "8cf1bdb5d6cb8e86200d4833ff41b5e89100582406da7239008e7c32fc03f940"
+    },
+    "M2Checkpoint": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/observations.checkpoint.jsonl",
+      "sha256": "bd3ef439745fecfdbdee7dc76977ec999da4b8c976db8273e8e560acdd29746a",
+      "rows": 95
+    },
+    "M2CallEvents": {
+      "path": "docs/experiments/runs/model-tournament-session-c-m2-v1/call-events.jsonl",
+      "sha256": "2b73cfd9abdbeb1da9f2e56258a184d5321c012ad6781b3a56bf602ad70c6188",
+      "rows": 285
+    },
+    "manifest": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_MANIFEST.v5.json",
+      "sha256": "36e13ea25be42009ea98738687b6e854f75a2de0c75c3cd2ad0e0df2b04d3014"
+    },
+    "repositories": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_REPOSITORIES.v1.json",
+      "sha256": "4caddd313081a31433c752f30a4fb6bfbf0c69445e3ade7660ada58137b3ecd1"
+    },
+    "oracle": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_ORACLE.v5.sealed.json",
+      "sha256": "3109a023ed5c07faa4acc029824bf8988f9ee0515ecc7b1ea07387861d5d787d"
+    }
+  },
+  "eligibilityRule": {
+    "source": "all M2 strict behavioral failures",
+    "ordering": "taskId ascending",
+    "postHocExclusions": false,
+    "hiddenFailureRepresentation": "GENERIC_NON_LEAKING_SIGNAL_ONLY"
+  },
+  "counts": {
+    "originalTasks": 95,
+    "oneShotSuccesses": 29,
+    "eligible": 66,
+    "evidenceClasses": {
+      "ACTION_VALIDATION": 2,
+      "HIDDEN_TEST": 6,
+      "RETRIEVAL": 5,
+      "SYNTAX_TYPE": 6,
+      "VISIBLE_TEST": 47
+    }
+  },
+  "modelIdentity": {
+    "modelId": "TIGER-Lab/FIM-7B",
+    "revision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+    "inventorySha256": "abdb31fbb5f6ec73e29992f97b73569bbd65d75cea1d195c9f5cc9288f36f9bc",
+    "files": 16,
+    "totalBytes": 15247186377,
+    "everyFileRehashed": true
+  },
+  "requestIntents": {
+    "rows": [
+      {
+        "taskId": "holdout-003-5e3903e649c4",
+        "repositoryId": "eedit-holdout-01-sable-metrics",
+        "repositoryRevision": "sha256:cdc611f617bad26207c0af2e2a06404d2bdc2c34023e6e81b51948405d480c8b",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-003-5e3903e649c4",
+        "firstAttemptOutputSha256": "54535dc8b73fa1a70d8cdaf33fcb46a8aa2b4ec54f086d2240178bc54fe6a786",
+        "previousEditDigest": "d2e942f319d6c3dc5e7e995b302a096747c4de802ecd9831fe5b1e5da08a7fae",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "b7f0ece62ca26f7c93e3b086a714e9a959a9cdb34811b2a05e71d10df4dc50be",
+        "promptDigest": "aced5552119e4eee26360d268cb744c49ad5dc84b4d1fc4ce2d872a4f935f2c1",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "d93dfad37248176b9265f2c5ca754f798ee90250be733d5b76b0b81fe7d18365",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "a1b076b85db63d74eb1c4f5a57faf70ee14371459aa42c9adebf33f5445d76cb",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "6e16d63ddfaac5d61135e8867afd0154d2fbf15a94339579a457e09886636c50",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-004-53e3a889c55a",
+        "repositoryId": "eedit-holdout-01-sable-metrics",
+        "repositoryRevision": "sha256:cdc611f617bad26207c0af2e2a06404d2bdc2c34023e6e81b51948405d480c8b",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-004-53e3a889c55a",
+        "firstAttemptOutputSha256": "340f98c70dad405d5dc0a62e9146600e14a40d6db2a98ad270603cf82a0e77bd",
+        "previousEditDigest": "1b5a3903f2ab16f090f948795d12cab915842f74a0781cffc072e6bedd1ebb8a",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "45b3acfd7057494c3331067ac293e1763ea368459a3ce0f543ba94b0c6b9804a",
+        "promptDigest": "721168b0b8d9373535966257b0314bc1933261b71856d007cccf439abceef62f",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "2b5538ce3c5bf618e0b2af955f98761ed2a5bcbb6b54e21cccc43d53c0fd823e",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "b4b63d0d0811dbf58be3f97b658fa990a28a38a6c053015b89b663a4d3ad7a9b",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "7786b5e366d7089cb533e2df639989a62ae7575b62d9b60fd73f7cbef4ca464d",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-005-edee1a90b69e",
+        "repositoryId": "eedit-holdout-01-sable-metrics",
+        "repositoryRevision": "sha256:cdc611f617bad26207c0af2e2a06404d2bdc2c34023e6e81b51948405d480c8b",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-005-edee1a90b69e",
+        "firstAttemptOutputSha256": "13ad64ae865455eca97cbbc4ff3e9ed0e103446c513caa0e9a4328a0fde1a0a4",
+        "previousEditDigest": "85195c909d47cfcdbfea359cd6ae38a8547dc6a38df3b03b557cd51ac6dbf933",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "9829b30753ffaf53495213a5248d680c7775023e8d61250c1b2a83f5d6d47b27",
+        "promptDigest": "2ed0b8bc1e16262f7c01b4dfd456d4bc8e4b377e6f253de205d2be53dc07f4af",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "ea5efa755b9ce32980b6a4e9387b1da94ba0aec2a93091149d4c000d5dbf28d1",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "9dd292cbbd3605783fa03632b9831e1c69a56aadb0703bbcf97251b7d8d5b1a1",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "b136103dbac13e41cf953d709ab69fee77a758264e99031308fdb6f1666305d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-006-078693d6b3de",
+        "repositoryId": "eedit-holdout-01-sable-metrics",
+        "repositoryRevision": "sha256:cdc611f617bad26207c0af2e2a06404d2bdc2c34023e6e81b51948405d480c8b",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-006-078693d6b3de",
+        "firstAttemptOutputSha256": "4949912bb2969d25d59c254bde55d2e5cf679f6b1420971fef0e6a70950207c8",
+        "previousEditDigest": "04507dd6a56a872025373121f8076a151691f2d33ef627ef4f8416bf8130d133",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "551760befd354a3d535cec13c3cdaad6fb3fc0877e459da3151e29824a58d591",
+        "promptDigest": "a3fd85f0b99133ac452427d7314265dbe34422d70ee44457b9869c8444c43917",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "a255eaf74c84bf1d144e6a7bb5854e6fe3b5cfef026de9673358516ec519afb1",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "4133b792c8caaf59fa220268e3aae7a9b9fc601de2ce80032233aa2339284576",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "a71611b046677c8cc22c4c7c2c33e01924c6be77f726307480553d56fda8195b",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-007-9dc86fdb3a47",
+        "repositoryId": "eedit-holdout-01-sable-metrics",
+        "repositoryRevision": "sha256:cdc611f617bad26207c0af2e2a06404d2bdc2c34023e6e81b51948405d480c8b",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-007-9dc86fdb3a47",
+        "firstAttemptOutputSha256": "c8fdf6a1fea27f4e354b349e55e184f5c6c1932d3d59a6c2e407957e88b6e1b5",
+        "previousEditDigest": "7ba7cbe4309a63e0e5fe2e386a77ed69f2b91fa5903de08e96120a0e18b8bdbc",
+        "failureEvidenceDigest": "9110742faf25376314beec78a79f0e27db7eb75eed7b2ce51c1dd276e4d2764d",
+        "sourceContextDigest": "88853dececc5386163d86d77a2051d3cc40544f9ded34e7ad3ed1b6852e0050b",
+        "promptDigest": "774913d9f7f53a904a01d83cf1d630d79e0a83fb0269fc6fe351d3c6489e7c0c",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_HIDDEN_TEST",
+        "intentSha256": "ccce6b2a4bf257f55812205b177d69b0d0a0f0db037a264e4b4d8243c7ec273a",
+        "evidenceClass": "HIDDEN_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "67b3592e308908e626db52cf20d8ffbd9c8cd06b52441581d094fdd2ca1e91c1",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "61440af8f5ab4d25261404eef2690b4cb867ce9cae18e59e816ffbc2cea0b9d3",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "VISIBLE_TEST"
+          ],
+          "hiddenDetailsWithheld": true,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "ed6b2588468f0353cefae9273c39851679d4e3ea8cd3773cfb03e8017c491168",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-008-950c857777ba",
+        "repositoryId": "eedit-holdout-01-sable-metrics",
+        "repositoryRevision": "sha256:cdc611f617bad26207c0af2e2a06404d2bdc2c34023e6e81b51948405d480c8b",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-008-950c857777ba",
+        "firstAttemptOutputSha256": "05b00a7161916ad2dc4ba0ae4edfc0cc40075496e13ac41e1db01441c5ccb58a",
+        "previousEditDigest": "f91b6ee5f31b63dfc33689e667bf40a1c7762d71e3b718b7fcca45fe1b270633",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "983678f0021624f803e625199aa834a9bdc4350a238ff59acebca2a8f4adb0f6",
+        "promptDigest": "e883d43b364094eca64dcf18aa99a402f56904a9b2f82df8ed395978a266c42f",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "abb338a31521bb3cc6529e7f9fb3478ae6e0a2cb91a5b83d9cd48560b4ac0289",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "50d61a2cff7bf52303eac13eb90ce716469e47bae1e5bc0dc919ee3634001940",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "63038d12895f01a27d8429478fac050413db44bfd1f3880142e3ef75147bee21",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-012-3d0cbd287831",
+        "repositoryId": "eedit-holdout-02-lumen-router",
+        "repositoryRevision": "sha256:bbbeeb8c7a74978f25c5757ebcefe41b25d08f71cc42f7f930d98edf18bdfe7c",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-012-3d0cbd287831",
+        "firstAttemptOutputSha256": "023ea9736c1dea40298fc0f048daff9a93aa6c64ca29b8aff34d664ff46cee8c",
+        "previousEditDigest": "d3f2cb3d8da1a895de91a855c6ae014f6668a7326dcbd28bef38aa74fc078c11",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "adfbc6b1b2b7849b29a86a00f1d87ae867de5cdbe661bf8f31c0e2249402c707",
+        "promptDigest": "5e738b621b8cbcdd148650bc474a843c29fb927fa43c67af8b250097c9dafbbc",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "3890c515a523d3b45fe8160a3ff7bdb121557a86932da37044f039b06d99fe6e",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "6602654205c48414588607a33c4b476efc6e718b0a9eeb6a18aa7a66c678c291",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "7786b5e366d7089cb533e2df639989a62ae7575b62d9b60fd73f7cbef4ca464d",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-013-5d557d000b1b",
+        "repositoryId": "eedit-holdout-02-lumen-router",
+        "repositoryRevision": "sha256:bbbeeb8c7a74978f25c5757ebcefe41b25d08f71cc42f7f930d98edf18bdfe7c",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-013-5d557d000b1b",
+        "firstAttemptOutputSha256": "0dc5f2a1eb3bd73e16b5b239bb987fd534b5344f04efc8bf3a98f285cf854e89",
+        "previousEditDigest": "3293357bc304ffa2fe745f4bad669d20d974a076f208b540cceadd7d68ca6178",
+        "failureEvidenceDigest": "93a1d67a37e342871c17de63fc4a40b79f1780860a5800c59f0a9b39ccf6c4d3",
+        "sourceContextDigest": "943fe86e0128391a7c6c93e2ca716130f40813668ac96e08718f9f035d85f0dc",
+        "promptDigest": "8e3d217a42879a7008837bb785c47f9dd0cfe4d131db2f3fe7d2475368269bae",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_ACTION_VALIDATION",
+        "intentSha256": "e02026ad972f77b7b5b4aab959bede68636e6b54d061c2afdea2543cb7e1ae3a",
+        "evidenceClass": "ACTION_VALIDATION",
+        "previousEdit": {
+          "classification": "OTHER",
+          "changedFiles": 1,
+          "changedLines": 0,
+          "canonicalDiffSha256": null,
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "fcb66b8712a41ebbd1f831376eebf597628fdcff6fcd3a5a8449009fa1a6762a",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": "NORMALIZATION_REJECTED",
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "b136103dbac13e41cf953d709ab69fee77a758264e99031308fdb6f1666305d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-014-4daf7e7c16c0",
+        "repositoryId": "eedit-holdout-02-lumen-router",
+        "repositoryRevision": "sha256:bbbeeb8c7a74978f25c5757ebcefe41b25d08f71cc42f7f930d98edf18bdfe7c",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-014-4daf7e7c16c0",
+        "firstAttemptOutputSha256": "52ebb625489cc08a34bda0385e3f44b2ea6f298cbdafe97bafe3d36dc7011029",
+        "previousEditDigest": "7be6c59f0d2301d6bc27994c371e2f9d1d73ca615ce0fbb3e07b665705dcee8c",
+        "failureEvidenceDigest": "479fe6df06f3a22a9253d6cf0982125d4e47dc5d799a1ba0d70c840f280b151f",
+        "sourceContextDigest": "2546332e2e08e130da0a20eaa2725ca070fdef48f31fb8aaa33fd842cb7ccda8",
+        "promptDigest": "a30b20a5b35306e7ec8b807554fc7d3779780b160cd49839a847cf1d0ced65e1",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_SYNTAX_TYPE",
+        "intentSha256": "34bec73845d38364270869b15644fe0fbc166e8893834101f6ebc57bba08f59e",
+        "evidenceClass": "SYNTAX_TYPE",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "243e9973762d3d49d04558ea25ce66c5b69c11f742590dc42ddaeb9013f0e6a0",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "403c3b08682e86acf0bac84abcf99472421bb4f7b7d23199385e1eae3935a581",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "a71611b046677c8cc22c4c7c2c33e01924c6be77f726307480553d56fda8195b",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-015-dd129f14970a",
+        "repositoryId": "eedit-holdout-02-lumen-router",
+        "repositoryRevision": "sha256:bbbeeb8c7a74978f25c5757ebcefe41b25d08f71cc42f7f930d98edf18bdfe7c",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-015-dd129f14970a",
+        "firstAttemptOutputSha256": "e556a36b8bb8ae466a848f0769f17dc7ce1ed76a05839cf4ea795dc521deeb53",
+        "previousEditDigest": "278bdc2dd5cf317b8a4e953f0ee9a5e58d522a08c74d7ef45baa24cca7e3b584",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "edd88619048cfdcfc086acd093ea013a386363623c72b5b3ad37309fa162951f",
+        "promptDigest": "8fd2c3ab13a93d9d493b2fd511812ea0d97a3b2956423a2067d3c80577298cd8",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "eb4d93f57e71c0138c35fba4da3dfbece654d95fcc6af42192aa0b87c3b89094",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "4fb3bb14609b0272f12626e2a709aa093790b5c878f3fb7e5964ce4bb46813e8",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "ed6b2588468f0353cefae9273c39851679d4e3ea8cd3773cfb03e8017c491168",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-017-555ee4ba3638",
+        "repositoryId": "eedit-holdout-03-cedar-ledger",
+        "repositoryRevision": "sha256:89b5278cf3d617cf2eda8d320ee5efa7c0b45142b31439ac9bdb8407c17f39da",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-017-555ee4ba3638",
+        "firstAttemptOutputSha256": "0775d7e57e1c4d231ca35fb9eb82ef0d3c0c58a09159bf1c4379c15eb80b6ac4",
+        "previousEditDigest": "bfa39f3d02c487036f66aff08676a0487ffaf2aec710e05ce46bbc1d68b50eda",
+        "failureEvidenceDigest": "479fe6df06f3a22a9253d6cf0982125d4e47dc5d799a1ba0d70c840f280b151f",
+        "sourceContextDigest": "1eb22e2fb35708699bf8edc637d78ec4fbb8edd240980a03ac6a0f67d669055b",
+        "promptDigest": "ae5f9fa881c41e601abbf74ebfb881758cac6da59a5aad79768f851354433134",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_SYNTAX_TYPE",
+        "intentSha256": "45c6c167e82d17e6953684324119a62c2a639eecdda728110a226d71097ed1f6",
+        "evidenceClass": "SYNTAX_TYPE",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "5701f3209bf79fe71d07565901fdaaa72e234dc9c2f370802c1751472fd4b273",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "403c3b08682e86acf0bac84abcf99472421bb4f7b7d23199385e1eae3935a581",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "1076f2ae9f3d1d174849d3db6f45f2cc00ee4811a74d31c8692d929fcc8459d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-018-b1420e9ae053",
+        "repositoryId": "eedit-holdout-03-cedar-ledger",
+        "repositoryRevision": "sha256:89b5278cf3d617cf2eda8d320ee5efa7c0b45142b31439ac9bdb8407c17f39da",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-018-b1420e9ae053",
+        "firstAttemptOutputSha256": "fc1e3dbdf468fb4ba694a1010d799a75ba4d8ac8c90cfe7dc0221ad25f01d76d",
+        "previousEditDigest": "1ead95163454113da1a3bacd1f11f570abe3829474b2525d7b02910aa85e8e37",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "53051015366b4bfcd5c2e6b046ff46298809900fc2fed17cc094ba5d67284fb6",
+        "promptDigest": "aeca424d3102ceea82c562fddd880889a3ccec9eee4aa2054213e6a839004d8e",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "5531999c4491ab59e63d3400c7aefe3974f0b6f75f54465ee5efc0583dd949a6",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "6e91c9c1655a7bf98678982089d4deda927a4eabf0065b32dc909ee950521b08",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "e995a6c9dae8920c93549431a6013ce10f0b351626b0816fac233d9fdfdd75a4",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-019-580af46c94a0",
+        "repositoryId": "eedit-holdout-03-cedar-ledger",
+        "repositoryRevision": "sha256:89b5278cf3d617cf2eda8d320ee5efa7c0b45142b31439ac9bdb8407c17f39da",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-019-580af46c94a0",
+        "firstAttemptOutputSha256": "41c5f5693be2c2fd79f3ebe3bba65bf47b0e996e88d83ac57563b5ce55af872c",
+        "previousEditDigest": "94dde44fed09e689b7fe31e2c549129f95ae97888f58e70922df3dc6e06114d4",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "ce5de21afc8e557d4c6b274566a77ce4b4357ae985ab6b508746ee93127eea5d",
+        "promptDigest": "538f4b262877335dd2f542c6dd8abec812761fdb86b64c9bed83db95b9830525",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "7d3d99e5e3001f1a64be5a36780491da6e00058075f3167d1bb88750370e7cd9",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "f0a071169529cfb05495e838bfa8012b355ef7b62bfef919d8aaa3299fa08782",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "6e16d63ddfaac5d61135e8867afd0154d2fbf15a94339579a457e09886636c50",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-020-668cf63fd0be",
+        "repositoryId": "eedit-holdout-03-cedar-ledger",
+        "repositoryRevision": "sha256:89b5278cf3d617cf2eda8d320ee5efa7c0b45142b31439ac9bdb8407c17f39da",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-020-668cf63fd0be",
+        "firstAttemptOutputSha256": "1e3a89dbffecd87dd3a3a89cd955090997c045f4a0df7de855c1dc7a727c9e38",
+        "previousEditDigest": "b2b4b00724b1882543a251818e25eae4583caa3ce74021cb63c9bd5e767885bf",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "36feaed35f3fdd9583b4d32ec71423236e580b9555948b58015a1c884c54b71e",
+        "promptDigest": "3f535d76deeb34d416257793be10a5bf90e3ae59669029429518a08ef380748f",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "47bb1f0f146a05dc19529bafab02e1e451d6b7a032ea07c9475e1a10da8fef39",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "b0aa4fd689958c0600610772c5dc9cff94120ebb628efd1eb622a654c67a7d33",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "7786b5e366d7089cb533e2df639989a62ae7575b62d9b60fd73f7cbef4ca464d",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-021-97fb2ee2dff5",
+        "repositoryId": "eedit-holdout-03-cedar-ledger",
+        "repositoryRevision": "sha256:89b5278cf3d617cf2eda8d320ee5efa7c0b45142b31439ac9bdb8407c17f39da",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-021-97fb2ee2dff5",
+        "firstAttemptOutputSha256": "7a3212398960b1bc2b44e66ec8563c7be0919baa4652874e0ce340ab2f4f9c0f",
+        "previousEditDigest": "d19ce003f6842e32dac5076dec26d259f98c4de701d4c88854f2d23b6aa3b026",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "5c76f15b23b2967ab646e0e5f1cc3e46a2337e00b1331bb6e24cfefb01028b16",
+        "promptDigest": "6c251053988ee8eb74ece02fc6d315ff77e2e3a2fadc856bebf52b0513293836",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "3fed603aac288e6989cba242baf73c7ad2f99eff419bafde046bb5c25e6afdac",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "057c4b7f0e05501a98408557c5e1f6193840637a7729ce6e7caaeacd8d339bfc",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "b136103dbac13e41cf953d709ab69fee77a758264e99031308fdb6f1666305d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-022-5c50a496b617",
+        "repositoryId": "eedit-holdout-03-cedar-ledger",
+        "repositoryRevision": "sha256:89b5278cf3d617cf2eda8d320ee5efa7c0b45142b31439ac9bdb8407c17f39da",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-022-5c50a496b617",
+        "firstAttemptOutputSha256": "2007d83ce95660425005515e813ec78445a52f27d10ef710fb5083b7f11f89c8",
+        "previousEditDigest": "bc54db3aaa7ee3a03a4218ed599736a7972370821bc586627386eca8c25a23c9",
+        "failureEvidenceDigest": "ba941865f489c77bee24d4c7c697d763ae1ef60da1361180622cb9fbf38242f7",
+        "sourceContextDigest": "cb0d6a1de34e51702c1abd1261e9d34370f879f0f0bb2e99ef1c5843b1f9b4b2",
+        "promptDigest": "a86031aedc0ea2dcf15b3bceb428ab994c6a5f9822b6e8ed155ccc605ae9767a",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_ACTION_VALIDATION",
+        "intentSha256": "30b6a6a36d8382a65b542f9126de523b34cc7cc1274ab0428d1ad3a081589293",
+        "evidenceClass": "ACTION_VALIDATION",
+        "previousEdit": {
+          "classification": "UNSAFE_EDIT",
+          "changedFiles": 1,
+          "changedLines": 10,
+          "canonicalDiffSha256": null,
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "f2cdc6f8e5502aae112c60b08e999d756aea2ffb3813118432daca311260c763",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": "NORMALIZATION_REJECTED",
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "a71611b046677c8cc22c4c7c2c33e01924c6be77f726307480553d56fda8195b",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-023-1180321a83e0",
+        "repositoryId": "eedit-holdout-03-cedar-ledger",
+        "repositoryRevision": "sha256:89b5278cf3d617cf2eda8d320ee5efa7c0b45142b31439ac9bdb8407c17f39da",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-023-1180321a83e0",
+        "firstAttemptOutputSha256": "2b2075fc6448d8d865b3bf2fd0b3fffce48093928b2a88d2609a1f8c63c1d015",
+        "previousEditDigest": "45f13d5e1e977d83126febe67e89bf3976e7dc0ad5ec68db153ad029a37cb90f",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "c0a3e00fde96fc83a3a74c64fb6a86fb14f338e2575903030a0372f3513d1c5c",
+        "promptDigest": "997ce9bdea0a96753c576b73aef5b97e39d1ff367c5a6d60585130536c56cc67",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "16793ebb97ba32172d9b9abd4589b7a8447d65b0a70fad5e884177fb47d16f6b",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "d82b086d1fb7da959db0eb12c0cb0c2eb594be9bbf299497654f872277e1a89b",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "ed6b2588468f0353cefae9273c39851679d4e3ea8cd3773cfb03e8017c491168",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-027-0bdfebe57bb9",
+        "repositoryId": "eedit-holdout-04-quartz-parser",
+        "repositoryRevision": "sha256:2eb64c4875186aa3188105c3ac3e41e6c12431f5f6b26ecf87258d3fe3a4e803",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-027-0bdfebe57bb9",
+        "firstAttemptOutputSha256": "d187499828b8431ff51fd6bce8fcf71a42cc6cc19e38e87b1fa41f3160d60a46",
+        "previousEditDigest": "6f39f80e05f9fab07d3a99aa3a94df1ab7d7574450a22aa943b4c4883c54f03a",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "dfe5781c9c3225d93d94036df2d182309af2ce9f912cdda5110e7b5764269925",
+        "promptDigest": "996a5ae26e64bb354933cf95eb5c3d0e951a62652ee7a956e2f63b3308d747c8",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "2e0086bfb50839a746df71ebc7637768eb42da4773f90bb9563e6049ed5ef64f",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "466fa29139ccb9f9968a67003715aabfb3fadf1e393880c51a448eaaf40c0804",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "6e16d63ddfaac5d61135e8867afd0154d2fbf15a94339579a457e09886636c50",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-028-1903ecf5ab15",
+        "repositoryId": "eedit-holdout-04-quartz-parser",
+        "repositoryRevision": "sha256:2eb64c4875186aa3188105c3ac3e41e6c12431f5f6b26ecf87258d3fe3a4e803",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-028-1903ecf5ab15",
+        "firstAttemptOutputSha256": "c10c99a99c6aee2610126698818f4d051e7910695d3fd48c2aedeb6c5e80dfb2",
+        "previousEditDigest": "a96a7793a20994752035892a1210d3f6cd4721843988cb9cbe6fb7c63a8b045d",
+        "failureEvidenceDigest": "9110742faf25376314beec78a79f0e27db7eb75eed7b2ce51c1dd276e4d2764d",
+        "sourceContextDigest": "0a27c81409dc49f1a2f203c9cd74b27dd1aa510585e376260c43bf06ec393490",
+        "promptDigest": "abb598c23cd36dd578c3037c5d28195abc01e6f516edd64c76e5a2fa05ed6941",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_HIDDEN_TEST",
+        "intentSha256": "e81498a8b8d60fcb73e5327e0bf9229d87b4e2095f593befffa6d8b13a8eca08",
+        "evidenceClass": "HIDDEN_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "e9fc7bbda07d0a67819acf091b746549909dad6b5defbe748617b02f7f465cdc",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "61440af8f5ab4d25261404eef2690b4cb867ce9cae18e59e816ffbc2cea0b9d3",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "VISIBLE_TEST"
+          ],
+          "hiddenDetailsWithheld": true,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "7786b5e366d7089cb533e2df639989a62ae7575b62d9b60fd73f7cbef4ca464d",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-030-972ec436cbb0",
+        "repositoryId": "eedit-holdout-04-quartz-parser",
+        "repositoryRevision": "sha256:2eb64c4875186aa3188105c3ac3e41e6c12431f5f6b26ecf87258d3fe3a4e803",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-030-972ec436cbb0",
+        "firstAttemptOutputSha256": "4e75db51860363640af9b6b8826fc39e170a1015aad93aaec6f93329bb58f011",
+        "previousEditDigest": "39b4031c0c346cc222814fad32b563ea789d76a40ab86373748f3b9be4a967bb",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "42154bd7eb693adb9c9d54c6c84b376ffae0b262644c53084b8d2ae474afaf95",
+        "promptDigest": "073944d0c20e32d83941e351cad1f18d244f013c5ba3b53e98dc899ebee58f51",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "9311d4350fbb53f5dcf226d9655a0e9e7016089e94a6ec06fe2a46adde3a3c06",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "7cee9b12c647bf69060eb69043efb3f3eb7cab653201d8a534c0179b0ca13e2d",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "a71611b046677c8cc22c4c7c2c33e01924c6be77f726307480553d56fda8195b",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-032-7fc6ff887bdc",
+        "repositoryId": "eedit-holdout-04-quartz-parser",
+        "repositoryRevision": "sha256:2eb64c4875186aa3188105c3ac3e41e6c12431f5f6b26ecf87258d3fe3a4e803",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-032-7fc6ff887bdc",
+        "firstAttemptOutputSha256": "f66d1f65ab647de9e7aab5d06f90c53f009c2dfcfa590d9c1aa0e2a3b4e35602",
+        "previousEditDigest": "32f06e3fcaf942896565ed4ee67dd94f332c0691cca576872e9064f312bc91bd",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "ab393459d5d5010afa0890681e41ee138867b3f48ddb742a6c51e483526ad43b",
+        "promptDigest": "d7d12d9a6a41734627d9b2399d839f11104bf333e55875434db85ec9a3c767ec",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "0c9012792acf4cdfe575a3d0ed23ca158668f52d7a451bfa7673dc9d29f85e2b",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "4b4221be9329fec657a08afd2aceaef2c1d5b42b56622065aceb9fe0e9b0cc63",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "63038d12895f01a27d8429478fac050413db44bfd1f3880142e3ef75147bee21",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-033-9ef543fc9afe",
+        "repositoryId": "eedit-holdout-05-harbor-cache",
+        "repositoryRevision": "sha256:7f0488229b756355f94a4febd2e49c36b467e2ef61bea735083a371d851b2d1d",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-033-9ef543fc9afe",
+        "firstAttemptOutputSha256": "c483eb905bac76bc26c8044229a4ceae766208ac537a52976492f052cfc0bde7",
+        "previousEditDigest": "becc260b2ad9296cb0c0b33a5b9aaf089b08e55d0a6d3ca68a8274e39ef0c297",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "23e47150b481ead05af8f313faee9ac377980c91995b35ed3b1170382c76664d",
+        "promptDigest": "7aeb9b057f3e9b337f8491edacc81038d632722677a8a7e91d01993c7482196e",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "adffc1302e5e38175fa312aea82aae220d1649e73638b6171f5f4c8b3d40cddb",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "294b66fd70bcf37e9349638288938d80ec7e78831d0d879cb22924354b1a5d03",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "1076f2ae9f3d1d174849d3db6f45f2cc00ee4811a74d31c8692d929fcc8459d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-034-6404daac6c8d",
+        "repositoryId": "eedit-holdout-05-harbor-cache",
+        "repositoryRevision": "sha256:7f0488229b756355f94a4febd2e49c36b467e2ef61bea735083a371d851b2d1d",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-034-6404daac6c8d",
+        "firstAttemptOutputSha256": "e07c51c6e82e887404265d9f7493571d7c3497607c9723a3f91863a6c41daecf",
+        "previousEditDigest": "497dce129c49ceed2a9d8fd8da15dd31f7ea7ddc7a2add533ed708301a576bf9",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "40f7807e0bdd4659abd965d22895dc077f730961ea9baf4c1f7dc16c947e61bf",
+        "promptDigest": "98ef3a21d95b205b89169ccbf5cee70f57493d8acfe453428bc31b4aaef24ba7",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "5b286ba95d5f077910c528a16c0fcadc4c3cbc5a96743372b71b3ecbfe6e9436",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "218c1d1dac43df118a40f4db8de8330744d3011403ac8a95e1a310c4a7ec7349",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "e995a6c9dae8920c93549431a6013ce10f0b351626b0816fac233d9fdfdd75a4",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-035-eebd0076f0a0",
+        "repositoryId": "eedit-holdout-05-harbor-cache",
+        "repositoryRevision": "sha256:7f0488229b756355f94a4febd2e49c36b467e2ef61bea735083a371d851b2d1d",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-035-eebd0076f0a0",
+        "firstAttemptOutputSha256": "8c3929439e751ffd6b17fb3a4abb9e4792f3abe77ed07d6af1219c20f3ca5329",
+        "previousEditDigest": "b6892e90e80de676ee2bf4373bd565f789dfe73c84eec4ee2447325400dc8ce3",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "8388af917c67388795a501243c44a8a5290806c386df8b7a5af4acfcb82dd0ae",
+        "promptDigest": "d8be119894b61f7c8ff96f84add57f513e3f29fd8236b5680812e632cfb62b01",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "5b3cdd90c2e9d3788ae37bdd08b1e3644d3bd7849b0f3c07c6727acb56bb9722",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "8ab2f8610fe6f6d553e6387e60a8d142d20f580d3f7b3398a1460da07d61ab04",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "6e16d63ddfaac5d61135e8867afd0154d2fbf15a94339579a457e09886636c50",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-036-b36ffcbc6c61",
+        "repositoryId": "eedit-holdout-05-harbor-cache",
+        "repositoryRevision": "sha256:7f0488229b756355f94a4febd2e49c36b467e2ef61bea735083a371d851b2d1d",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-036-b36ffcbc6c61",
+        "firstAttemptOutputSha256": "d5d7ea30e2d39c1d17ac2358bd47e7ebbe72e72f8e8483bbcda90f7d5ce2a6c1",
+        "previousEditDigest": "9c920b6a6da8c77d78ab9e8918ec53952fbd3aec6efd2e0e5ce69e2ff330682d",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "c1072141c04c62ae1a89e73cdf3586e410e64351465ff49c65b1d29682b56be6",
+        "promptDigest": "12090588caf20ab0c7e255b3995790d594a632032b8a25b4617d7252f3c542f5",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "c12dc055f148637192da76d5690fadf919ea5635f75b8df9afcc571c7b233835",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "e0db5acb50bac9c8f3b6eb72538bc875e651155f0cd0eebee2f9df1b412771b3",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "7786b5e366d7089cb533e2df639989a62ae7575b62d9b60fd73f7cbef4ca464d",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-037-717be2e92482",
+        "repositoryId": "eedit-holdout-05-harbor-cache",
+        "repositoryRevision": "sha256:7f0488229b756355f94a4febd2e49c36b467e2ef61bea735083a371d851b2d1d",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-037-717be2e92482",
+        "firstAttemptOutputSha256": "c2bd97baeb68812510cc43b8d57cfe453670ff59c3860ea0b0d718c6a0a09489",
+        "previousEditDigest": "7f7f8b0e8e4a552f8440bfe0024390925b34aec6897255a1b3d62c76936dde1d",
+        "failureEvidenceDigest": "9110742faf25376314beec78a79f0e27db7eb75eed7b2ce51c1dd276e4d2764d",
+        "sourceContextDigest": "8de5b4485d0f9a3560772b3d1dc25ea21067f500c8318438ce48a023306fe826",
+        "promptDigest": "b622995d5852cb5e8ccb0d8c09ab24b39ea1df1a9f9abfb909ca73eca5a6cc96",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_HIDDEN_TEST",
+        "intentSha256": "b5daa2cac992d2e9a0d746607bdbc1650140dbade449b32683bf98e8eccf90f6",
+        "evidenceClass": "HIDDEN_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "0618aa153d660375f61b9185f38dc8cccd8e4036fec0f3541ce3bfa658d24787",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "61440af8f5ab4d25261404eef2690b4cb867ce9cae18e59e816ffbc2cea0b9d3",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "VISIBLE_TEST"
+          ],
+          "hiddenDetailsWithheld": true,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "b136103dbac13e41cf953d709ab69fee77a758264e99031308fdb6f1666305d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-038-4a28c0299ac1",
+        "repositoryId": "eedit-holdout-05-harbor-cache",
+        "repositoryRevision": "sha256:7f0488229b756355f94a4febd2e49c36b467e2ef61bea735083a371d851b2d1d",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-038-4a28c0299ac1",
+        "firstAttemptOutputSha256": "77047f34d5a1030c368dce38ad02abd7d2e9170019be0dffa26b889f687af7c6",
+        "previousEditDigest": "39dd001a043568d983ecb91fa37b188e1d33897c21942ce57a549ac0b007f3c8",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "696ed4c88d99393dc835d1c8ce1b254f528786eab5a601d56208f9735f5a9c54",
+        "promptDigest": "2cf8e821d3858dc3de7e10e56a93d5c5b5fcabd77f5d944976868b09e013e99a",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "2b2f79e62adc7cc98efa6b4f42613defbdc9f69cd4a17c9a011d214b1cd03235",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "a770354c702d4ec2da04ff4d14751c13715b1395566adf5144366dd5cc07ab2a",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "a71611b046677c8cc22c4c7c2c33e01924c6be77f726307480553d56fda8195b",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-042-ff42691ce02b",
+        "repositoryId": "eedit-holdout-06-ember-policy",
+        "repositoryRevision": "sha256:81911ba29459556940a81287d787c3644adc63c5e8168dcc9b7de4a55dee9120",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-042-ff42691ce02b",
+        "firstAttemptOutputSha256": "0982d2726a7c76da3aa6fddd91ebe9a9dfd19c3abb58fac978be50f7a7ad685a",
+        "previousEditDigest": "eeec3e92440ad7af203360580caa0a1eb1d9975afe2d03ed8be70a4fc3ffa6bc",
+        "failureEvidenceDigest": "615fd9fcc8900fcbf627d73f30bd0d58269c0758e98a4994f2c239edb17cdb1a",
+        "sourceContextDigest": "7a08044cdc30814dedcfa3580f5facae3d9c97e3fe579aeee47a3f85cdf3562e",
+        "promptDigest": "921b5948a60e5de953b7ef8f34ad9d62cebc5fef0f92615ca0a649f331ae3a47",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_RETRIEVAL",
+        "intentSha256": "5bff528f86e57a57c2b3ceb49d7d9ae18ec84b8c6a4bf655799c629c89fc5fef",
+        "evidenceClass": "RETRIEVAL",
+        "previousEdit": {
+          "classification": "UNSAFE_EDIT",
+          "changedFiles": 1,
+          "changedLines": 11,
+          "canonicalDiffSha256": null,
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "97fa786e879dd494fc5aa21fa439327aed13b06c957073c5f079abb80d17c92c",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": "NORMALIZATION_REJECTED",
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "e995a6c9dae8920c93549431a6013ce10f0b351626b0816fac233d9fdfdd75a4",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-043-75560a470232",
+        "repositoryId": "eedit-holdout-06-ember-policy",
+        "repositoryRevision": "sha256:81911ba29459556940a81287d787c3644adc63c5e8168dcc9b7de4a55dee9120",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-043-75560a470232",
+        "firstAttemptOutputSha256": "1e4a01d0ba6e7e23409b74252c313417c8870ce94a678166aad8c2d3ab43f7cc",
+        "previousEditDigest": "9d480249a96879ade8b6eadc74a9bf46d9cb54093d446990268bd306121301ef",
+        "failureEvidenceDigest": "615fd9fcc8900fcbf627d73f30bd0d58269c0758e98a4994f2c239edb17cdb1a",
+        "sourceContextDigest": "f54116dc5d04e82dfb1594c27786a83124a75d7a80f260b1f1f03673e55d2388",
+        "promptDigest": "322865d2006ab6bc7a5deadffe07600af7eb44c26b114e664ec45f100ebeb137",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_RETRIEVAL",
+        "intentSha256": "b76ed90a56f075e6a39a8995bd279eef5c68e64ee49e485536e29a5f9e9f36dc",
+        "evidenceClass": "RETRIEVAL",
+        "previousEdit": {
+          "classification": "UNSAFE_EDIT",
+          "changedFiles": 1,
+          "changedLines": 27,
+          "canonicalDiffSha256": null,
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "97fa786e879dd494fc5aa21fa439327aed13b06c957073c5f079abb80d17c92c",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": "NORMALIZATION_REJECTED",
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "6e16d63ddfaac5d61135e8867afd0154d2fbf15a94339579a457e09886636c50",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-044-6b886da44d2c",
+        "repositoryId": "eedit-holdout-06-ember-policy",
+        "repositoryRevision": "sha256:81911ba29459556940a81287d787c3644adc63c5e8168dcc9b7de4a55dee9120",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-044-6b886da44d2c",
+        "firstAttemptOutputSha256": "2cf6f19d3c5cc31dedb92771c2b8dfb8ec9aad14c1f073160cb0240fb6ee2a46",
+        "previousEditDigest": "f8a171238f67216f0b2f7cb64521c7e5bf4e41c89ba563e45a352f453546c6e5",
+        "failureEvidenceDigest": "479fe6df06f3a22a9253d6cf0982125d4e47dc5d799a1ba0d70c840f280b151f",
+        "sourceContextDigest": "5231251042e4a50f2bea4b15ad03ede91c0a1bcaf02d1f58eadddd4b379037d4",
+        "promptDigest": "82be67fb5d087f1d005dbc06d7d14aaa487e03e3171bd30b141ea698f8e3ceb6",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_SYNTAX_TYPE",
+        "intentSha256": "8bcc4c5fce9af3da2372dfdbb68d2acd969771b3d5086ea11183d13f84a4d9a2",
+        "evidenceClass": "SYNTAX_TYPE",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "7106ade8dfd33445495c46470ea3dcbf75f821b622b194753ccd920b78e9d05f",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "403c3b08682e86acf0bac84abcf99472421bb4f7b7d23199385e1eae3935a581",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "7786b5e366d7089cb533e2df639989a62ae7575b62d9b60fd73f7cbef4ca464d",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-045-b1027dc3f2fa",
+        "repositoryId": "eedit-holdout-06-ember-policy",
+        "repositoryRevision": "sha256:81911ba29459556940a81287d787c3644adc63c5e8168dcc9b7de4a55dee9120",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-045-b1027dc3f2fa",
+        "firstAttemptOutputSha256": "b902b33c0980710793fcdb31986bd61107c9c5ce1e822aefddbf9e37872ca672",
+        "previousEditDigest": "09405866c8937e50dc435ead9d8aa55db847458f50fb5f85548efed3e787fe01",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "993437c8f4a0bb22a7551da61e11b7afacbac5ccac182f22dbcd11ad1a2f589f",
+        "promptDigest": "bb51395b9b3b07ffc85ead93a9d3208341ad68701d777fcc799a699a37ad6160",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "84065a329f9390f04b2c2607113cbad70c8ad2683b2ac1b520e5bfaa259122f7",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "9c84c313463d825e631a0ad31f2c167d83edfea4cb6d9e8e0c8029a58f5869f5",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "b136103dbac13e41cf953d709ab69fee77a758264e99031308fdb6f1666305d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-048-fd403684528e",
+        "repositoryId": "eedit-holdout-06-ember-policy",
+        "repositoryRevision": "sha256:81911ba29459556940a81287d787c3644adc63c5e8168dcc9b7de4a55dee9120",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-048-fd403684528e",
+        "firstAttemptOutputSha256": "aaf76063d418b9e5cdbe8503a8bef98f76595c1547a8e24765301a22e9b3d4bb",
+        "previousEditDigest": "0b669b5beb778c198f13cfa1fff37c7fe8f102edb464f598060d8391ca1091f7",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "b63bcf1e92940b25bb5886f096a3b2a9c62b5c0a73d2fa625b2f9d3e4db993a1",
+        "promptDigest": "72734bca8e903bf30336d4e891f9e251495efca4f5cb6683107d4c212f1d7680",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "fb1a8f8d5569e6058496b34e70c195064cc0af4e9ae6acf5b4a5176d9cf7cf66",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "55fcb974c2356983d15dc5c8059f88096aab3074e5da997a47b077b774f06d40",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "63038d12895f01a27d8429478fac050413db44bfd1f3880142e3ef75147bee21",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-049-3057d3ce7070",
+        "repositoryId": "eedit-holdout-07-tundra-scheduler",
+        "repositoryRevision": "sha256:807635971496e5d81d40a68a0224a9045f6195a7921becf7f4b164a1ba74bd41",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-049-3057d3ce7070",
+        "firstAttemptOutputSha256": "72f5ff9a44b02cfd391f4aa7e45337df6e9f044034f23ca6075c8dbf268648f0",
+        "previousEditDigest": "cfc5b803cc0c0f6eda25aa8f6363985b8681ebeeee37ff5119513ac85a8c2c81",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "6df117cd35e1646faa16981dc84627e234e28a00d62b5848f4ee52380970979d",
+        "promptDigest": "ee0eba397964007b6d5143bd73c0cf321d0c0a156ec1de32b2d32af1a259f9c2",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "bbfd83189324aa3247e5ed213e37d61c19ac503586f563bd7105d0831d106e9a",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "89f0bd36093dd200a0c6a3a45596f064803c52621b49abcd039bd4b6434d3b2c",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "1076f2ae9f3d1d174849d3db6f45f2cc00ee4811a74d31c8692d929fcc8459d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-050-cef39f7fef3f",
+        "repositoryId": "eedit-holdout-07-tundra-scheduler",
+        "repositoryRevision": "sha256:807635971496e5d81d40a68a0224a9045f6195a7921becf7f4b164a1ba74bd41",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-050-cef39f7fef3f",
+        "firstAttemptOutputSha256": "5eb68504a5e1acd41fd3775d94c0d831ef74d185a8b2233069f156e438f0baac",
+        "previousEditDigest": "0a4162917ede0c3c648069ceb5c0753617b4734413cbc917cb607672e3f97410",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "dfe71252eb40371d54abf5546b301b152173ddd45377d64dceee9cfe475fe566",
+        "promptDigest": "079f9983431eda98cb6cbc3885abd99b676611a0bf42f99f16bcd66fdae84717",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "db92ebb5eb727ee25a18002d3ec1b8c3a6353028502761bae91966fd1c29205a",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "efbdb97cfaca81d96c383d022371713c485971c55dd66d9395f671c5de7faf5e",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "e995a6c9dae8920c93549431a6013ce10f0b351626b0816fac233d9fdfdd75a4",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-051-f69bf26131b8",
+        "repositoryId": "eedit-holdout-07-tundra-scheduler",
+        "repositoryRevision": "sha256:807635971496e5d81d40a68a0224a9045f6195a7921becf7f4b164a1ba74bd41",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-051-f69bf26131b8",
+        "firstAttemptOutputSha256": "87b2aa86dd83825a224a936face07a666075ea0ff79a8703a59b4bd23c41a504",
+        "previousEditDigest": "895eb36bf8874450f2e7b5a4b31601313637e3e669da41a15f0f043e0881833c",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "44affdc4ab3eddf4e2214c142b124e96d52e0be2005fa7172e58da9de38bbb62",
+        "promptDigest": "696db91a797a4f0f9fc2b5ef4a8dd1b7f84aa65336ebfe0ce49a52943544a434",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "da040245f0c7fabfa8366339aea6f97a6b18490e45ea25619539210c0bea88cd",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "65a75bad62889599f42ad16cdc903ff84b3bf366647ad7150367af901c0195af",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "6e16d63ddfaac5d61135e8867afd0154d2fbf15a94339579a457e09886636c50",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-052-d47ce7bab6d5",
+        "repositoryId": "eedit-holdout-07-tundra-scheduler",
+        "repositoryRevision": "sha256:807635971496e5d81d40a68a0224a9045f6195a7921becf7f4b164a1ba74bd41",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-052-d47ce7bab6d5",
+        "firstAttemptOutputSha256": "5253a5963b353e1a26e8f8882c4e60e5fd7ed90f39a2a51245f42523f24e595b",
+        "previousEditDigest": "c1948d43d26a0e89e7b2ce21bb598bc1222b5596118d2eafb9fca20b7cf15513",
+        "failureEvidenceDigest": "615fd9fcc8900fcbf627d73f30bd0d58269c0758e98a4994f2c239edb17cdb1a",
+        "sourceContextDigest": "c3482ede41c50e25d6d109b566638f7f756411c5a700d4b6bf281ad9c5ef629a",
+        "promptDigest": "c34078e149e22dd010bf86c4b10ba618c65e9dbf2d69ca9a49f39513c608f642",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_RETRIEVAL",
+        "intentSha256": "0d183010df34c1d953316f8c66fc4acef22ec35181367f346cae7af790fb2f77",
+        "evidenceClass": "RETRIEVAL",
+        "previousEdit": {
+          "classification": "UNSAFE_EDIT",
+          "changedFiles": 1,
+          "changedLines": 12,
+          "canonicalDiffSha256": null,
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "97fa786e879dd494fc5aa21fa439327aed13b06c957073c5f079abb80d17c92c",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": "NORMALIZATION_REJECTED",
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "7786b5e366d7089cb533e2df639989a62ae7575b62d9b60fd73f7cbef4ca464d",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-053-34ce18abb247",
+        "repositoryId": "eedit-holdout-07-tundra-scheduler",
+        "repositoryRevision": "sha256:807635971496e5d81d40a68a0224a9045f6195a7921becf7f4b164a1ba74bd41",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-053-34ce18abb247",
+        "firstAttemptOutputSha256": "e8a78b52d491baddb1a5dc73f540f1a756b501cd87b3ec60f63deaed384d37a6",
+        "previousEditDigest": "f85952eb7035c3b0fcff9970c38766b3b217020d667073cd0e9701a7e1fe87c2",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "3622c602b055236b84192a9dfe98090945aa14c3c8c43c62082dd5a4c41b95ee",
+        "promptDigest": "488dce0cd70e53132455409de6e32fce38330442eda69b837ac397f065b7714d",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "1deddd1d1f55e1c68fe917bcab32e6bba41ee1e13d9f5c506d76ee132cd813d3",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "c929750bd5975020df85b5ffd718f34e62849adc8c4320e49b7e902ffa6b4989",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "b136103dbac13e41cf953d709ab69fee77a758264e99031308fdb6f1666305d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-056-66e32a002f0a",
+        "repositoryId": "eedit-holdout-07-tundra-scheduler",
+        "repositoryRevision": "sha256:807635971496e5d81d40a68a0224a9045f6195a7921becf7f4b164a1ba74bd41",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-056-66e32a002f0a",
+        "firstAttemptOutputSha256": "da6f9eb026149d0346503e9da5fa11561643800cc649926bcdf7624fd0712d9a",
+        "previousEditDigest": "442b7035cb117f3a64cab6cce1addae318d9ea0be94e0e8646c71b23cf44db8b",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "9f335b83c4cc7dbaf0c68cef092cca18f7b7788d0b61ffed9cfd1ba69b9f4a7d",
+        "promptDigest": "7a44c4d9e48476f1597ded7e61a960cf8707e49224b844f9bddfe86526a38ba8",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "3a54e38d2e799d5d7963889d3500222ef933e26de45698f8bcd3e3e3cfa9596d",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "88f06e433a3bab85c61ab41857a9e7406228b69a0d80c96d6f56284c9f0ed1aa",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "63038d12895f01a27d8429478fac050413db44bfd1f3880142e3ef75147bee21",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-057-e7a7874e180f",
+        "repositoryId": "eedit-holdout-08-cobalt-config",
+        "repositoryRevision": "sha256:4578b566549f2ee9240086714cc8ab00c37bbcb93c66b5f14076970ca38d6296",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-057-e7a7874e180f",
+        "firstAttemptOutputSha256": "636f9005a7bd19da60488f319f5835fbf7a2a87856fa7735a9c0f3994fdc8b3e",
+        "previousEditDigest": "f5df377f1a01c39bea607a8dc1a270855b209c34319ff5372f92bb8f712026b3",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "5b3e0ef8a3e159894da0364b5e56cff5201963653076fee090c590ffdbf2ff19",
+        "promptDigest": "748804ee15b2ef648bc04be0cbbb6680cc0f7a77e46325aa46a2a6445b727e3c",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "42585398c62ebbaeb77c11389ae4367a3380d108ddcef8db26cfca2e7f8f63e4",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "66d98cca173cd1438571c1b635d5e32499cdcf7b71f6367050695efdc8a3a044",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "1076f2ae9f3d1d174849d3db6f45f2cc00ee4811a74d31c8692d929fcc8459d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-058-429a3db39441",
+        "repositoryId": "eedit-holdout-08-cobalt-config",
+        "repositoryRevision": "sha256:4578b566549f2ee9240086714cc8ab00c37bbcb93c66b5f14076970ca38d6296",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-058-429a3db39441",
+        "firstAttemptOutputSha256": "a7463f9b823a71b1802c0f484d289557ab20afd7875b6d2b0e4525c66e33ac88",
+        "previousEditDigest": "246c65a1b28da8680695ecbef64f10dc4943638554bd00d9177a5f4877188a8c",
+        "failureEvidenceDigest": "615fd9fcc8900fcbf627d73f30bd0d58269c0758e98a4994f2c239edb17cdb1a",
+        "sourceContextDigest": "1020235b4eecb929a90e27f50f521c5627b967028ec37efc2c01bf2513faa889",
+        "promptDigest": "933eadba4bd0cc4a3df73bb91ec6ea3bb586bfc07081a5ef4604ec35f1fea3ef",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_RETRIEVAL",
+        "intentSha256": "6e8907002857ad981f268bc03eb2450e3f375470ad9b2823d7f35c46d4cb948b",
+        "evidenceClass": "RETRIEVAL",
+        "previousEdit": {
+          "classification": "UNSAFE_EDIT",
+          "changedFiles": 1,
+          "changedLines": 32,
+          "canonicalDiffSha256": null,
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "97fa786e879dd494fc5aa21fa439327aed13b06c957073c5f079abb80d17c92c",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": "NORMALIZATION_REJECTED",
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "e995a6c9dae8920c93549431a6013ce10f0b351626b0816fac233d9fdfdd75a4",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-059-2e9d8048f513",
+        "repositoryId": "eedit-holdout-08-cobalt-config",
+        "repositoryRevision": "sha256:4578b566549f2ee9240086714cc8ab00c37bbcb93c66b5f14076970ca38d6296",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-059-2e9d8048f513",
+        "firstAttemptOutputSha256": "821858fbb011e48e16f9ab31a7c541fb262fe9ca8824ddd0c32eb104d93f0089",
+        "previousEditDigest": "8820e122a017316a88c56f0ca310451c8679e16648b2b40d7b15436567a3bcfc",
+        "failureEvidenceDigest": "479fe6df06f3a22a9253d6cf0982125d4e47dc5d799a1ba0d70c840f280b151f",
+        "sourceContextDigest": "4264fc0a774144892983d4723694d787b9926b6bcf3ec65a3546ccbb6854a41a",
+        "promptDigest": "db84f581b02dde71d040f55761fd964385ed922bf72ec51d4503326929267f39",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_SYNTAX_TYPE",
+        "intentSha256": "b6ee5cedf2e81000fb5129b79b6442381c090aeeb050b3bc71d32b2e4ff4749c",
+        "evidenceClass": "SYNTAX_TYPE",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "3902dd7d66de484550db86401ad13048ee005e366be09d63848ba3e0bb8e7392",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "403c3b08682e86acf0bac84abcf99472421bb4f7b7d23199385e1eae3935a581",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "6e16d63ddfaac5d61135e8867afd0154d2fbf15a94339579a457e09886636c50",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-060-499ac6d813e6",
+        "repositoryId": "eedit-holdout-08-cobalt-config",
+        "repositoryRevision": "sha256:4578b566549f2ee9240086714cc8ab00c37bbcb93c66b5f14076970ca38d6296",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-060-499ac6d813e6",
+        "firstAttemptOutputSha256": "bc3fefd593c5acb9a1d8d8f68f265dd0a8b1b0e361d6879f9a2b14abc9dbee37",
+        "previousEditDigest": "d979382dde5dfe7dc2ad76e25be973e94c3da496178c6f9c9cf07ac5659af93c",
+        "failureEvidenceDigest": "eaad2b6a760b5eb7de9bcf88ed3b298f8e2f00b6d460828c1c90b1c02820b301",
+        "sourceContextDigest": "6c44e7448098d36f1f219322d0d47e0715a400ed5063c96e7c82c1f601173de0",
+        "promptDigest": "2ca1a6ebeddb791cf44ad6841d72e80aaaf612f8747c44b74a7bcacd575c2ad2",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_RETRIEVAL",
+        "intentSha256": "53ff22dc7906a3fd137ef0578e97ddef30661bf6f4642f928919760ab22917c3",
+        "evidenceClass": "RETRIEVAL",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 8,
+          "canonicalDiffSha256": "4f53b57a6dbc599e376e76c52e2933cd53b06298ebf42b394f7afc1a5058396c",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "97fa786e879dd494fc5aa21fa439327aed13b06c957073c5f079abb80d17c92c",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "7786b5e366d7089cb533e2df639989a62ae7575b62d9b60fd73f7cbef4ca464d",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-063-1478b1138e5b",
+        "repositoryId": "eedit-holdout-08-cobalt-config",
+        "repositoryRevision": "sha256:4578b566549f2ee9240086714cc8ab00c37bbcb93c66b5f14076970ca38d6296",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-063-1478b1138e5b",
+        "firstAttemptOutputSha256": "6325c5c36a1f65c72fda1d04a211e811bc7b04f44c2d0076e696d20e74effdb6",
+        "previousEditDigest": "5f9e17921ec22d675be7d5a382268fbdc286d7e04fa7726cb5eec53c486495cd",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "9ad9d2d87b2d2bd145100ead0373e203e0314f5e4422e33613d2ca2ae6487eb7",
+        "promptDigest": "5b86323f0278676af3a0ac3516f37ed2996e524602d95c9b74422e007611d32d",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "c1fff20e3cf9fb449ca52a09514d4ec6321d9d387d6a020e9fbd19277d1f04f8",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "3400218c13d7cfd0fbd8976075b04130e42064d37b23cfec9861814c5ee68314",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "ed6b2588468f0353cefae9273c39851679d4e3ea8cd3773cfb03e8017c491168",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-064-a7dd1b9eadff",
+        "repositoryId": "eedit-holdout-08-cobalt-config",
+        "repositoryRevision": "sha256:4578b566549f2ee9240086714cc8ab00c37bbcb93c66b5f14076970ca38d6296",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-064-a7dd1b9eadff",
+        "firstAttemptOutputSha256": "dace9feb8026d4144c57803744161ae1efd0bad844345963d1fea595422c0659",
+        "previousEditDigest": "b2e17f971ecd660d66a43c7f84134a2bda5f5fcb42b0d29d32ef5cac0f0cc03e",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "33476ee5bef48e89d6c802c353434b7928fda718260a86f481e7d50b745f5068",
+        "promptDigest": "bb245cd24f22ba04094c54aea6186aa99089b31267a6718d66805061e500bb67",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "b22ef2c4543e24d990f5c5c0255f041c4089d1bd4a7ba18ab9734047526ac72f",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "b5dc2bb0f029c818f9ffb9ba590bc1218e218c1912bb94b5391139afabd1a721",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "63038d12895f01a27d8429478fac050413db44bfd1f3880142e3ef75147bee21",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-065-1a8ed4c228ed",
+        "repositoryId": "eedit-holdout-09-willow-events",
+        "repositoryRevision": "sha256:0788e546bc78338f3a68d429e1af69b6748f3727c1e826cd1d607eb45f23aa58",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-065-1a8ed4c228ed",
+        "firstAttemptOutputSha256": "b94ee0fbc08994b7e0ccd659273662e8672b12e9dda53af4c81d63ab88250c98",
+        "previousEditDigest": "a3a8981f67ecfb7922763fe63b6c8c34b451af3defa3e90e257452da1bef11df",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "fca039c5ffec701d48e885e1e072c2a91cd08087614a6bf4391fc83480d7af17",
+        "promptDigest": "4acc14a4944e490a312393419488a37b02e6ef7f3bb078171a10dd3534dfa44e",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "89ae46b5ec7a5a9e64f8ec9a61977f24a1c38fc544e334ffc542dcac9114447e",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "ca12e822b710142016b460c38c1831fcdff343cd21d5d40bdb85a216ce371955",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "1076f2ae9f3d1d174849d3db6f45f2cc00ee4811a74d31c8692d929fcc8459d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-066-181f74021ed8",
+        "repositoryId": "eedit-holdout-09-willow-events",
+        "repositoryRevision": "sha256:0788e546bc78338f3a68d429e1af69b6748f3727c1e826cd1d607eb45f23aa58",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-066-181f74021ed8",
+        "firstAttemptOutputSha256": "659e2100ae7da572c665488e2cb6e9e707096fb67ec500022776607c2e1e85fa",
+        "previousEditDigest": "f8a3ec32c7cb1f692864b90c81cf8b6d894814183fb441162b4a4f05b933f370",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "9b556a171f3fb97ebe1ba5d7e2de058e6db3f4a022657a718875dc4a25d9509f",
+        "promptDigest": "a158231eec7b649c3489d9d714071ee4765797fbec3ea2457002547b771c46f4",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "8b6ae7ffb3b13c3b09b0bf568a11746caf1d3ad353132eaeb507e7e4ff855784",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "f2acb05dcf0b64767e7ce531f397c2bea06a111c8c7f636fe0d1b9bfdac2016c",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "e995a6c9dae8920c93549431a6013ce10f0b351626b0816fac233d9fdfdd75a4",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-067-63feab066d52",
+        "repositoryId": "eedit-holdout-09-willow-events",
+        "repositoryRevision": "sha256:0788e546bc78338f3a68d429e1af69b6748f3727c1e826cd1d607eb45f23aa58",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-067-63feab066d52",
+        "firstAttemptOutputSha256": "94447ee8212f14b53d623dc80aa67667464903d16577494d004fee12c6fabdc9",
+        "previousEditDigest": "88b8585eb3b3189aacb72cb8c2dfa547fa3cac03a45c9e647c041e4e74c7d99a",
+        "failureEvidenceDigest": "9110742faf25376314beec78a79f0e27db7eb75eed7b2ce51c1dd276e4d2764d",
+        "sourceContextDigest": "5febb159e5e0ddffeb826a5a2eb5ba67db03e5648354869ca58f64791eaff8f6",
+        "promptDigest": "684a180c012a8632b833fd5fee8a4a7752f228f436db1000c187868d1d71ffae",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_HIDDEN_TEST",
+        "intentSha256": "47950c6c9c4285b9858b0c44b8b113a2b169347a1a78c6c10060732ac0098a69",
+        "evidenceClass": "HIDDEN_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "f1eb8c7916769c3a750fb04d028eb1f4097b86769c2c9e93b19141d947dcca1b",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "61440af8f5ab4d25261404eef2690b4cb867ce9cae18e59e816ffbc2cea0b9d3",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "VISIBLE_TEST"
+          ],
+          "hiddenDetailsWithheld": true,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "6e16d63ddfaac5d61135e8867afd0154d2fbf15a94339579a457e09886636c50",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-068-d2cf079444dc",
+        "repositoryId": "eedit-holdout-09-willow-events",
+        "repositoryRevision": "sha256:0788e546bc78338f3a68d429e1af69b6748f3727c1e826cd1d607eb45f23aa58",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-068-d2cf079444dc",
+        "firstAttemptOutputSha256": "1edfede7717f8478283bf56e408c85727bd115fdbb03149b548d1119ea0c06ad",
+        "previousEditDigest": "c7c6ce8d7a0c8201dccfa8fc924f0c123619ffa9230af3842d0eea41d1d8c90e",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "2986f93894d0e7a901e5d4b798d9c7ee0400cade45540c6bf040028b29a45da2",
+        "promptDigest": "dc2bb19bec185405c5a3fdedac6fcf2b91630fbe79b60dbaa2b9e82d471ab633",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "e2c4e2f0f3c15d5fb6eed57dcf4d2f24a8eec685146400323fdf172fae55d031",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "5a48d491a5b0ba35b4b9c1cf13b6a95b7b6d95c6e1e00d9eea55346100c0786f",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "7786b5e366d7089cb533e2df639989a62ae7575b62d9b60fd73f7cbef4ca464d",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-071-0b4bf43ea722",
+        "repositoryId": "eedit-holdout-09-willow-events",
+        "repositoryRevision": "sha256:0788e546bc78338f3a68d429e1af69b6748f3727c1e826cd1d607eb45f23aa58",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-071-0b4bf43ea722",
+        "firstAttemptOutputSha256": "67130fabba38d55f3130123691f4df3813c2dfb9dbbe03737a142c77b801052e",
+        "previousEditDigest": "c51e53951b638077fde81dc619936adcb9db0e17e15ac4d038fec5a21744c85b",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "7a84636365fd981160fee4a64c8409a2f60a35ad0eb40cd6f9150b4539c6a456",
+        "promptDigest": "f269e72bd2e68d4aa9297132fdb47abbba879a7e0154b46da7a0def65a8c418e",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "28d0a0471cc56c5a9cf39b84747c0f5b60be77deedee9d38f289b9b3ace3baa0",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "2594417543980f1634f2581c7ad1ed60f6106ff6db67af8a510639361e72015b",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "ed6b2588468f0353cefae9273c39851679d4e3ea8cd3773cfb03e8017c491168",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-072-974cdc048e90",
+        "repositoryId": "eedit-holdout-09-willow-events",
+        "repositoryRevision": "sha256:0788e546bc78338f3a68d429e1af69b6748f3727c1e826cd1d607eb45f23aa58",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-072-974cdc048e90",
+        "firstAttemptOutputSha256": "3cca39d86bc35366d26f96f1dc91672fc1bf1f62e7fa401a36bb00896622533e",
+        "previousEditDigest": "294f3f963d6c86dfe23c7db9eae0b4f5e80869fd8ff6571d93c75472dc25364c",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "b8c821c88371a07987bf0c1597c8f7ecc40ba75044ceb9a55478918553be7583",
+        "promptDigest": "b5b5833b601ed9949c28fefbb4f201d5ed008276f84783dc87f1fb9047843bf7",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "7f72345cbb4b39349f0396f139c61b7274bf4bf872b7069427cbe190d2d64bc7",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "2c45c7e7875126ca322656cc507396498adf7cbedbc18c671a896a8cc0204184",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "63038d12895f01a27d8429478fac050413db44bfd1f3880142e3ef75147bee21",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-073-2080df2f7d1f",
+        "repositoryId": "eedit-holdout-10-marble-protocol",
+        "repositoryRevision": "sha256:68452756db2d3fe8269f7df9a81dd22a3475c38025cfdd7eb0b8026cd2b9429f",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-073-2080df2f7d1f",
+        "firstAttemptOutputSha256": "340f7a4e1821fc63db29a3eb91d90325e7c0d63b35f67e35c0cc2f151f370cae",
+        "previousEditDigest": "8b1d1246d0b91befb8f3de89a58b3f0852a092f07ee3894cfdc1c128a41cdb5f",
+        "failureEvidenceDigest": "9110742faf25376314beec78a79f0e27db7eb75eed7b2ce51c1dd276e4d2764d",
+        "sourceContextDigest": "2755b8a5efcb5d966d9b36569eaa4364e8edbfd2fd05469159eb7c7bcf3d5ad7",
+        "promptDigest": "6945c87ec6b596f06d83d425a4ec00d4c2eb38e40b41aa6422ebcbb068f622c6",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_HIDDEN_TEST",
+        "intentSha256": "a75761c41b3d4767e4e1b1cb91060dec3680086c05c9de8fc2d62c0a81790998",
+        "evidenceClass": "HIDDEN_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "3ff2bef59691e3eec9b514215437a68288870caaa83f0516e7c2f9d4d1e4ae81",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "61440af8f5ab4d25261404eef2690b4cb867ce9cae18e59e816ffbc2cea0b9d3",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "VISIBLE_TEST"
+          ],
+          "hiddenDetailsWithheld": true,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "1076f2ae9f3d1d174849d3db6f45f2cc00ee4811a74d31c8692d929fcc8459d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-075-cd9fc970570a",
+        "repositoryId": "eedit-holdout-10-marble-protocol",
+        "repositoryRevision": "sha256:68452756db2d3fe8269f7df9a81dd22a3475c38025cfdd7eb0b8026cd2b9429f",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-075-cd9fc970570a",
+        "firstAttemptOutputSha256": "865922c8430fa5beca88fcebf130fca3e1c06f9cf21a3b2056b06180de648553",
+        "previousEditDigest": "29cdb0eef65a0fab88822b1ba002d177f62daaa028d6264f7d54e3e169968718",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "a5c625a07698c775ca9398333064a2af2c3c72a87bf8622acd8766558026e18b",
+        "promptDigest": "8b600954d7e919ef7ed70109f1873890bb0f9c6648a53d0eeef131f2be4d8f2a",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "57c47c8d396b6c06a9a75b6dde6e1ba32d98a6eb43fbdd3d38d2d470c8b59b3d",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "3bdfe6a47f6f7ddfafd9d0b034f6dfaf3baded9f7a5abad2ae6da5f87b0864c8",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "6e16d63ddfaac5d61135e8867afd0154d2fbf15a94339579a457e09886636c50",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-078-3598af9fe400",
+        "repositoryId": "eedit-holdout-10-marble-protocol",
+        "repositoryRevision": "sha256:68452756db2d3fe8269f7df9a81dd22a3475c38025cfdd7eb0b8026cd2b9429f",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-078-3598af9fe400",
+        "firstAttemptOutputSha256": "75648267ac995f9b366525e4c50755ff884aecf89b449531faba7d5cbd946b50",
+        "previousEditDigest": "96deb502996923a99773e480167c425767434c426e82629c994dbf6b43f3e90e",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "41ac4c4e9460e63f866ae6065e282956a04b7257127c6950c37b4adf0f16b210",
+        "promptDigest": "f0ac08394320f16e0a76d0b0ea771dc99df3fa3188a32bff55eed3f2703a4a24",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "eda0777c596501da5d9944a73e2af28f0419bb3a2397d2f123cf10d0e935d3ba",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "c70202608c375a0df2fc650fa37b531d64f27856c02bc741d942903478a2399e",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "a71611b046677c8cc22c4c7c2c33e01924c6be77f726307480553d56fda8195b",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-079-3bfd416fe458",
+        "repositoryId": "eedit-holdout-10-marble-protocol",
+        "repositoryRevision": "sha256:68452756db2d3fe8269f7df9a81dd22a3475c38025cfdd7eb0b8026cd2b9429f",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-079-3bfd416fe458",
+        "firstAttemptOutputSha256": "b925f685608a820c05b5ca289736820d9d05961fb21567cacd27ef5a029164ec",
+        "previousEditDigest": "88c2bde5b22404dc7def9d16eba8a0dd06208ae7748b30698d5d352c48764e7f",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "1d7bd4d398d046cd5ba0b113e200951379f618bfbb31142d7fe2700850c42628",
+        "promptDigest": "6ca77981ea9796362da025606ed2155a995a53371890d73e13a6c50cee8bab31",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "22352e7e8a7e844f9c8e51c38ad3f507ca17732c9310a3c60ec84c0d414141a1",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "55843101e5e1b0cf34839f3148f430b129aacd4db66afad2dfa199c572033a2a",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "ed6b2588468f0353cefae9273c39851679d4e3ea8cd3773cfb03e8017c491168",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-080-26f32f100d8c",
+        "repositoryId": "eedit-holdout-10-marble-protocol",
+        "repositoryRevision": "sha256:68452756db2d3fe8269f7df9a81dd22a3475c38025cfdd7eb0b8026cd2b9429f",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-080-26f32f100d8c",
+        "firstAttemptOutputSha256": "b9648c456d764a9826a8c832110a616729e729d6f4b0d94f85de98f0e151401e",
+        "previousEditDigest": "cbf2379cd7796041107f1d6a43193495c2bd7c05c5774dbc436791e539f266b8",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "3357ee24e8106b7bf315402e041beb4edd79718347822d33d15baefbbd4136a2",
+        "promptDigest": "99585f07d4a4e1875b154ab901810bd9b78464cbc30b714f04a163364bf87a4a",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "e6cd5d5a8bc245c56881a0d56bd25653dab3b2c0c7035f946ac8dd492542057c",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "73a765cb838ab7db440a99ab2566f08a7d1e188f26600028f3198004b47230a8",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "63038d12895f01a27d8429478fac050413db44bfd1f3880142e3ef75147bee21",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-081-0ca18edcd640",
+        "repositoryId": "eedit-holdout-11-opal-batches",
+        "repositoryRevision": "sha256:9daf1264e0b5cb721cabe0b3cc002774df451b9bd3df160e76bec36e4e872856",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-081-0ca18edcd640",
+        "firstAttemptOutputSha256": "0585e3e3080683b7d8504148ba01b0bc3120cb5ca9a1803a196a6320dd7c41bc",
+        "previousEditDigest": "330108f6076acc4fec7132474f34dd286a30bdc6c7238f8c5d6f0c05406bd891",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "f76d05567ab27165d64ecb3af629286a64edd5708ea3e7322ca7aa866a45578f",
+        "promptDigest": "e355d49d822090f6229fddd1b109f8f9816ee88006ff1e3445fbb787cc8a734e",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "eed8c18515c60a090a84a6f6247aa61d5ea3a96388ffb8e3657b06d7612e9f25",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "941ce82ee1fe8d4b261f29894f2e1d37ea6f82fb45dc12d6b9d834a31407259e",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "1076f2ae9f3d1d174849d3db6f45f2cc00ee4811a74d31c8692d929fcc8459d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-082-7f63731ecb8f",
+        "repositoryId": "eedit-holdout-11-opal-batches",
+        "repositoryRevision": "sha256:9daf1264e0b5cb721cabe0b3cc002774df451b9bd3df160e76bec36e4e872856",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-082-7f63731ecb8f",
+        "firstAttemptOutputSha256": "fe85d53a10fb5264ea48311eb1b88f47385c21b141f1f157dfccc7a575ca2cf8",
+        "previousEditDigest": "bc141d47a13254ca796cbe62b81001fc1b3efe92c4a5dc8cc4e7c7d087374b32",
+        "failureEvidenceDigest": "9110742faf25376314beec78a79f0e27db7eb75eed7b2ce51c1dd276e4d2764d",
+        "sourceContextDigest": "a454ba536edf598897f05fe581769270af69bc9d9d574abb9ad34e8e8eaa5faa",
+        "promptDigest": "9e22d25eefeedfb2e0328c2b7d71562b091c4e96bad98efd1e54258175b14841",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_HIDDEN_TEST",
+        "intentSha256": "5bff6f4c36f9eaa4b1947f707c4143bc7dc680c70f1d776feafa83196cb7ff51",
+        "evidenceClass": "HIDDEN_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "08010f90b7c0c0807d8a6e613a020fbf8c60d4ddaa22b31a5e6034fb572d4145",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "61440af8f5ab4d25261404eef2690b4cb867ce9cae18e59e816ffbc2cea0b9d3",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "VISIBLE_TEST"
+          ],
+          "hiddenDetailsWithheld": true,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "e995a6c9dae8920c93549431a6013ce10f0b351626b0816fac233d9fdfdd75a4",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-083-dc24ea1dd2e3",
+        "repositoryId": "eedit-holdout-11-opal-batches",
+        "repositoryRevision": "sha256:9daf1264e0b5cb721cabe0b3cc002774df451b9bd3df160e76bec36e4e872856",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-083-dc24ea1dd2e3",
+        "firstAttemptOutputSha256": "83b9847314c175070bac50b7671222f68071de251a3376937ee54bbb9350038b",
+        "previousEditDigest": "8fa401712ad61b885413c03b1d9db6915e45d3dae53c1aff04a725a18ad259ca",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "71a8e622c6d48834efd312ebf845c86df41c558b977741e77af8efb63183c90e",
+        "promptDigest": "948c66f2945364f80602749cbb742caa31098ba0f6d4481a7b470721ae8f9300",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "4dac9ba4e25dfdcded2bbe96bcbd1575bdd1961942a5a433fa779bd060187186",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "f55d8798835cf90d29d1ee6b53402315c711069e085462ce32407c693af5ae4d",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "6e16d63ddfaac5d61135e8867afd0154d2fbf15a94339579a457e09886636c50",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-086-4bb2bd5d29cd",
+        "repositoryId": "eedit-holdout-11-opal-batches",
+        "repositoryRevision": "sha256:9daf1264e0b5cb721cabe0b3cc002774df451b9bd3df160e76bec36e4e872856",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-086-4bb2bd5d29cd",
+        "firstAttemptOutputSha256": "34b43cc9590e678e9cebc2f6b113bd83b3a8f4dabd39da0a59f7b5921df46d65",
+        "previousEditDigest": "7546ecbeb5cd01269e9b0d88f52a9d5d325c13724b4a016cd6b783145ae89786",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "98ac8ecc8c50ab61bf51c37fe4025d1ce2bce00ceebc78acbbd4435c4d007fb1",
+        "promptDigest": "305a98e1cd33b0c589c289327258592f830c61a3127e6fcc213d6347039595f9",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "67319544e3d7f3319701598e477afed294f89debf319d43c843b31758a838d4a",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "55118e335ec4bc78253992dc325f34b5f2c45f190a3df82d9e70281fb69ab806",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "a71611b046677c8cc22c4c7c2c33e01924c6be77f726307480553d56fda8195b",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-087-169db7fc84ec",
+        "repositoryId": "eedit-holdout-11-opal-batches",
+        "repositoryRevision": "sha256:9daf1264e0b5cb721cabe0b3cc002774df451b9bd3df160e76bec36e4e872856",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-087-169db7fc84ec",
+        "firstAttemptOutputSha256": "9f7b41bd9d6ba8b44b57b95873a3103009c14a50ef61da8dc1fc0752f1a51486",
+        "previousEditDigest": "7e79696fdb61c0f6be37639af6656cf01e246ed9ac1403dd5822e722fe19ba8d",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "b1b245d8157c283ecd6b6959c5d44233a679e65c077806027d207148cd72f9ca",
+        "promptDigest": "194c3a67f17febd7443dc3b7dec691c1a07173307087a57a90965c580338913d",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "2d4d2b3521dfc58b81f25dcc0edac00d6955e27151deba6142e076cf411a027b",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "5d721d7b9a63433c180cf50875e00d0dad097980c3f1f33dccad93cc7fce3922",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "ed6b2588468f0353cefae9273c39851679d4e3ea8cd3773cfb03e8017c491168",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-088-5bb0262d262f",
+        "repositoryId": "eedit-holdout-11-opal-batches",
+        "repositoryRevision": "sha256:9daf1264e0b5cb721cabe0b3cc002774df451b9bd3df160e76bec36e4e872856",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-088-5bb0262d262f",
+        "firstAttemptOutputSha256": "e5296cd68ed386f4bafe71bcf42df6e14078790b2129c31e2bf086bba71b788a",
+        "previousEditDigest": "454f48c8991feb385372b99c7632a965bed506ab3ab98b4f029c9fd03bc4f87c",
+        "failureEvidenceDigest": "479fe6df06f3a22a9253d6cf0982125d4e47dc5d799a1ba0d70c840f280b151f",
+        "sourceContextDigest": "6aecd26344260749e14caf62ebdf4c2ec8373b3be906d6ed0eed57752faa6b7b",
+        "promptDigest": "ffa1fa614b5c2406ab014401f3ddf9d88c2961e9d9d928f24294c2ef270b7a88",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_SYNTAX_TYPE",
+        "intentSha256": "8fe8d8caf67048057647ef7080833f0b2282d72e0a31b6d05572646cf0ea983f",
+        "evidenceClass": "SYNTAX_TYPE",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "b50e1992ea802fbe2346c4de2f7b93ace8c66b7fe6988fbabaf2a0a75d70b765",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "403c3b08682e86acf0bac84abcf99472421bb4f7b7d23199385e1eae3935a581",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "63038d12895f01a27d8429478fac050413db44bfd1f3880142e3ef75147bee21",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-089-142a4c40690e",
+        "repositoryId": "eedit-holdout-12-raven-errors",
+        "repositoryRevision": "sha256:034465c0781a54e840006235734b760e3ed3f00a7db92a22e070919680fee544",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-089-142a4c40690e",
+        "firstAttemptOutputSha256": "52c9cc8ee85676635422ae690daefee44011f582f0719eb837737d78bb9cc968",
+        "previousEditDigest": "f3e566175915b422bd3a5cb1e355b534e64ba3755dbb28014c8d5139798de1ee",
+        "failureEvidenceDigest": "479fe6df06f3a22a9253d6cf0982125d4e47dc5d799a1ba0d70c840f280b151f",
+        "sourceContextDigest": "dc7fe6e976fbcf8dd5b3f3594a6a87de8d659de4e9484fc94a45147212a71ea1",
+        "promptDigest": "7e117ddccd5b91b10af80e1c46d9e8ec7fc65d313f06f12c8c18da080d432382",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_SYNTAX_TYPE",
+        "intentSha256": "69c7852c8549c8516ffdf9dda9c3a243302412fae042b38af1eca376ad800064",
+        "evidenceClass": "SYNTAX_TYPE",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "cb1f249d80ba9ac69d9ddb5c03387eb82762b141d46d8301b39a0c2bc5363d6f",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "403c3b08682e86acf0bac84abcf99472421bb4f7b7d23199385e1eae3935a581",
+          "priorKnownPassStages": [],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "1076f2ae9f3d1d174849d3db6f45f2cc00ee4811a74d31c8692d929fcc8459d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-090-5f9d97b92b1f",
+        "repositoryId": "eedit-holdout-12-raven-errors",
+        "repositoryRevision": "sha256:034465c0781a54e840006235734b760e3ed3f00a7db92a22e070919680fee544",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-090-5f9d97b92b1f",
+        "firstAttemptOutputSha256": "c9966b585829797c58e3a9d49d4c70378e0b65ee2af94cd99f8bdca0088e2e89",
+        "previousEditDigest": "678925f1a606b3e00fe7a60d97812b51a7d86991866e0b63ba52a46d81b60e9b",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "72e1594503feea2c23e953a014e3b3af6a295c12275ef793f9628ff934859c49",
+        "promptDigest": "b6852ea17643fd869aeda9ca622bedbddf26bdd924f67397820395af20d69863",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "6e083eb2f8c579645974220d9cf03b4bcaf5bf10edfc7051be9e9b1e3bbcdd56",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "c6703886c791d3483aef911df005a3867b8532e9fba254558d8b9974a26d84f4",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "e995a6c9dae8920c93549431a6013ce10f0b351626b0816fac233d9fdfdd75a4",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-093-afa120cc8c99",
+        "repositoryId": "eedit-holdout-12-raven-errors",
+        "repositoryRevision": "sha256:034465c0781a54e840006235734b760e3ed3f00a7db92a22e070919680fee544",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-093-afa120cc8c99",
+        "firstAttemptOutputSha256": "ff8b02f931663094cac07c964278ac39dfc3303f1689e46d631017b4384cba63",
+        "previousEditDigest": "7b6653217be9c771384fb7fa87007aeab51b922b40b70261a92d9485df5f4cab",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "03af61eb314d099f12e424eed143b5da6c7e9ab1508034fb9880ecae3cd539e7",
+        "promptDigest": "5e3f6de06c58fea1870518a8f5609fdf07e9953752bb87c8040376743511eb98",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "889277c3c375696ba83d40414e19baea9cd475075fce4a9164f33747b541f038",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "4e7d13905124f80262819c82dc5f4822b22b5c12c84ddc40caf5f3fb594a30ca",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "b136103dbac13e41cf953d709ab69fee77a758264e99031308fdb6f1666305d9",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-094-83590e5fae4c",
+        "repositoryId": "eedit-holdout-12-raven-errors",
+        "repositoryRevision": "sha256:034465c0781a54e840006235734b760e3ed3f00a7db92a22e070919680fee544",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-094-83590e5fae4c",
+        "firstAttemptOutputSha256": "7e7060882adb65d505e91fefdf9e7ed7138936578868462a60464205a9001f88",
+        "previousEditDigest": "188e028e81a6f86040920ec4b6d781a8b196e8094e167fe6f085a6b0cd34ae5f",
+        "failureEvidenceDigest": "98d3120128d723b5b491785e651811d79481e00f2196540e58ea76e8ef1f1806",
+        "sourceContextDigest": "d84881379a4d46a1afbf49a8a157e9c00026ad94e9cde5b0f03f9bc8a0c10c6a",
+        "promptDigest": "34e539ef7790c347e4f549da43088a5efc82cda60d04760e15ee3041616d1330",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "15f2ccc8858980eaa828d6fe073e5468039b63e20af7cfa91218aa2b09a79b1d",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "c3a728a7a6726029668965d0634484f15f592481a15ac3d35ee2ea8b56b8695e",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "a71611b046677c8cc22c4c7c2c33e01924c6be77f726307480553d56fda8195b",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      },
+      {
+        "taskId": "holdout-095-dc7e7ec8630a",
+        "repositoryId": "eedit-holdout-12-raven-errors",
+        "repositoryRevision": "sha256:034465c0781a54e840006235734b760e3ed3f00a7db92a22e070919680fee544",
+        "modelId": "TIGER-Lab/FIM-7B",
+        "modelRevision": "5a1d4294185e4fa0bbd40750c87d0beab7e67a3a",
+        "firstAttemptArtifactId": "model-tournament-session-c-m2-holdout-095-dc7e7ec8630a",
+        "firstAttemptOutputSha256": "95d8df3171feab5e629119da616f7668cff5b867f72144869783ec62a866a244",
+        "previousEditDigest": "862dc3b5d6c374e976544e2eb64acc592b9adf03eae5543928dc2b7922dedc8c",
+        "failureEvidenceDigest": "b396d86642dbd24b1f1b31540d5e76cfa5be53697191cb4480d9977f98c86505",
+        "sourceContextDigest": "6c62c700dafd2da2b0f9f41204564823854a5db17fb3bf7590c21511447e033c",
+        "promptDigest": "f685e1f9a5c53ecc5c88b780ed772d68bdff079736b02b270c5bf232cd72fb16",
+        "systemDigest": "17995de2f362053183345c37c911c5ff1febdfc6bdbdb16e84c0bad2cfd71b55",
+        "schemaDigest": "21bb1fd57b04f59c37bfedced6ef675d2e0e684e67c45893708b56a9d2269724",
+        "generationDigest": "fb8070e933292f34a4f5d7160c64f4bd21c895684f2598be43d5404dac3d3ee4",
+        "retryAttemptIndex": 1,
+        "eligibilityReason": "M2_STRICT_FAILURE_VISIBLE_TEST",
+        "intentSha256": "7b3f617e0ae48a098298549b04bda9cea423f33bb2cd44255c112964df078edb",
+        "evidenceClass": "VISIBLE_TEST",
+        "previousEdit": {
+          "classification": "VALID_EDIT",
+          "changedFiles": 1,
+          "changedLines": 2,
+          "canonicalDiffSha256": "e6b2afdfe7d9d2c77231f358aee340740650c6c98e6b5a3c9a6a4c5828353a87",
+          "rawEditStored": false
+        },
+        "deterministicFailure": {
+          "signalSha256": "09df0a3d0fd79f64990ec6bde5ba629fcb2b52ad9532aa04cedc129f66700829",
+          "priorKnownPassStages": [
+            "SYNTAX_TYPE",
+            "HIDDEN_TEST"
+          ],
+          "hiddenDetailsWithheld": false,
+          "errorCode": null,
+          "errorSha256": null
+        },
+        "allowedTarget": {
+          "fileSha256": "ed6b2588468f0353cefae9273c39851679d4e3ea8cd3773cfb03e8017c491168",
+          "startLine": 2,
+          "endLine": 2,
+          "changedLineBudget": 8
+        },
+        "rawPromptStored": false,
+        "rawSourceStored": false,
+        "rawPriorEditStored": false,
+        "hiddenOracleStored": false,
+        "referenceFixStored": false
+      }
+    ],
+    "taskIdsSha256": "7c763976edd45e2495c986c1e29052fc768ed8cd427407548acb8155ab7bb9f0",
+    "intentsSha256": "765c9f8171d5f8d8dee95de7962da16ef9bf5f5111f918a969116deead451b45",
+    "count": 66,
+    "deterministicRegeneration": true,
+    "duplicates": 0
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawSourcesStored": false,
+    "rawPriorEditsStored": false,
+    "hiddenOracleStored": false,
+    "referenceFixStored": false
+  },
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "scripts/freeze_best_7b_bounded_retry_session_a.ts",
+        "sha256": "20f0f2312cfe7e7225762ad73ef5e436cf865eb1152b35b947769de013c85557",
+        "bytes": 25699
+      },
+      {
+        "path": "scripts/run_model_tournament_session_c.ts",
+        "sha256": "5288c049824f63d8a31f602ca0f572785e934170028653c06baca881351e8db6",
+        "bytes": 37894
+      },
+      {
+        "path": "services/bounded-retry-runtime/src/index.ts",
+        "sha256": "b5df2630b3b5bedceebb6b241b6f913125a67688b20e179e995e221736d883a3",
+        "bytes": 8830
+      },
+      {
+        "path": "services/g3-benchmark-runtime/src/index.ts",
+        "sha256": "edcbc59ac3164da338289f9ae6499074a51a8e92625e189d722a9162a34b6478",
+        "bytes": 37293
+      },
+      {
+        "path": "services/g3-evaluation-runtime/src/index.ts",
+        "sha256": "02ebfd6a7914cbe35c49048c182236d578cf56a1ddeb40ff8a4b9ac141affad2",
+        "bytes": 10087
+      },
+      {
+        "path": "services/patch-interface-runtime/src/index.ts",
+        "sha256": "a6a9e5517ce325585bfb467e5839f0eb224294d619e7185bfb5141babf955508",
+        "bytes": 59703
+      },
+      {
+        "path": "services/repo-intelligence/src/index.ts",
+        "sha256": "087b12de9275169c447995677744fc342f2a659ff093dc0950cc09437f66119d",
+        "bytes": 37025
+      },
+      {
+        "path": "services/task-aware-retrieval/src/index.ts",
+        "sha256": "a6aca66c4758d7b35126dc4bb3c53a6ebd38bf17ec3006d8f5b1bc40fa3d18eb",
+        "bytes": 18657
+      },
+      {
+        "path": "services/tool-runtime/src/index.ts",
+        "sha256": "799b3946a98a54ad6ada6e7f460fd1c52884dc541c26386fa3e713347c14dc21",
+        "bytes": 13021
+      },
+      {
+        "path": "tests/bounded-retry-runtime.test.ts",
+        "sha256": "aa002093caface764d1a60ec08c0e26c41e5eeea38e11daaa50b891c31d0de8e",
+        "bytes": 4127
+      }
+    ],
+    "sha256": "f0d2cf3b01161645ea302cbbf03fe46108d034ff0ae2dffdc7366b965c72f2b4"
+  }
+}

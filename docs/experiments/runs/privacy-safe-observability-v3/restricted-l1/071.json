@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 3,
+  "packetLevel": "L1",
+  "identity": {
+    "taskId": "observability-v3-replacement-006-a9005fc75e1d",
+    "repositoryRevision": "sha256:198ff5a9f2e08c4e765de0b09b85d47dd58c20520ecce06f8e9978896d0a5db5",
+    "physicalCallId": "privacy-observability-v3-072-132b0df9-d622-4b15-95bb-38fc8d0fcb0a",
+    "requestSha256": "726b007af475f6d26c4cd5930b45f9b612eaa97bff6bd95f3cde3d20d33729f3",
+    "actionIdentitySha256": "029a9646a687dcc21403ea05d006b7e65c0bb7eb36d575fe30c84a8e23c9759d"
+  },
+  "evidence": {
+    "schemaVersion": 2,
+    "level": "L1_STRUCTURED_DERIVED_EDIT_FEATURES",
+    "taskId": "observability-v3-replacement-006-a9005fc75e1d",
+    "repositoryRevision": "sha256:198ff5a9f2e08c4e765de0b09b85d47dd58c20520ecce06f8e9978896d0a5db5",
+    "physicalCallId": "privacy-observability-v3-072-132b0df9-d622-4b15-95bb-38fc8d0fcb0a",
+    "requestSha256": "726b007af475f6d26c4cd5930b45f9b612eaa97bff6bd95f3cde3d20d33729f3",
+    "actionIdentitySha256": "029a9646a687dcc21403ea05d006b7e65c0bb7eb36d575fe30c84a8e23c9759d",
+    "modelResponseStatus": "COMPLETED",
+    "actionParseStatus": "JSON_OBJECT",
+    "actionValidationStatus": "PASS",
+    "replacementPresent": true,
+    "afterSourceParseStatus": "PASS",
+    "astFeaturesAvailable": true,
+    "parserFailureCategory": "NONE",
+    "selectedFile": "src/case.mjs",
+    "range": {
+      "startLine": 2,
+      "endLine": 2
+    },
+    "targetSymbol": {
+      "digest": "29d505c046a4a70239cb0a2a28115c58ff31fa6ceba86fff5cb9b1c35561aab1",
+      "kind": "function"
+    },
+    "replacementShape": {
+      "bytes": 72,
+      "characters": 72,
+      "lines": 1,
+      "newlines": 0,
+      "whitespaceOnly": false,
+      "indentation": [
+        {
+          "kind": "0",
+          "count": 1
+        }
+      ],
+      "lexicalTokenKinds": [
+        {
+          "kind": "IDENTIFIER",
+          "count": 9
+        }
+      ],
+      "operatorCategories": [],
+      "commentTokens": 0,
+      "delimiterBalance": {
+        "parentheses": 0,
+        "brackets": 0,
+        "braces": 0
+      },
+      "identifierDigests": [
+        {
+          "digest": "1c6164a7e9e8f96c8f0e0d5c0166a0be3b2f4d7e1b1ef8000284899a0da3f394",
+          "count": 1
+        },
+        {
+          "digest": "53be6d5dd9410aabc82f3f2f148f3f0123384ec58500dfd98d3f4811fbc8beb8",
+          "count": 1
+        },
+        {
+          "digest": "60af2514f47f401ca8b9e55d3d77515bd88421c724f9e1cb9b3e87c0ea815847",
+          "count": 1
+        },
+        {
+          "digest": "8cdfd5764ae115fc1b081b4bf46b5213e4e619891d1ec7d001f51c5108dddd48",
+          "count": 2
+        },
+        {
+          "digest": "bfe5595c5e6093b18eb1f293dea0087326e9ad53a67bc77db3a5839f64a02dd9",
+          "count": 1
+        },
+        {
+          "digest": "ccd017f6014ef76efa7aea95d67b2c55c40c8c7a934d32028f27cf6f9ded6819",
+          "count": 1
+        },
+        {
+          "digest": "fc10d56842f4c7620a9f8730b2b04ab2f95a108aeaddf1b9962cbf76cc185509",
+          "count": 2
+        }
+      ],
+      "literalDigests": []
+    },
+    "astFeatures": {
+      "astNodeChanges": [],
+      "expressionChanges": [],
+      "controlFlowChanges": [],
+      "operatorChanges": [],
+      "identifierChanges": [],
+      "literalChanges": [],
+      "apiCallChanges": [],
+      "importChanges": []
+    },
+    "canonicalEditSha256": "395cde3883bb3a99b0ce7c267c1fe4466b556aaf66143a853f557cf22b3797ec",
+    "hashKeyId": "10b76595429d293bbf0364e08dfbd6a62e71f9a5bc6fcc9d01e51213717c2c92",
+    "verification": {
+      "stage": "SYNTAX_TYPE",
+      "status": "FAIL",
+      "code": "SYNTAX_TYPE_FAILED",
+      "diagnosticSha256": null
+    },
+    "visibleBehavioralEffect": {
+      "status": "NOT_RUN",
+      "category": "NOT_RUN",
+      "diagnosticSha256": null
+    },
+    "privacy": {
+      "rawPromptStored": false,
+      "rawModelOutputStored": false,
+      "rawEditBodyStored": false,
+      "rawIdentifiersStored": false,
+      "rawLiteralsStored": false,
+      "commentsStored": false,
+      "sourceStored": false,
+      "rawParserMessageStored": false,
+      "hashKeyStored": false
+    }
+  }
+}

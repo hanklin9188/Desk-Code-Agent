@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "supersessionId": "dca-patch-interface-v1-precall-abort-v2",
+  "status": "V1_SUPERSEDED_AFTER_VERIFIED_PRECALL_ABORT",
+  "classification": "DEVELOPMENT_ONLY_APPEND_ONLY_CAUSAL_CORRECTION",
+  "recordedAt": "2026-08-09T16:58:06.904Z",
+  "supersededArtifacts": {
+    "securityRegression": {
+      "path": "docs/experiments/patch-interface/PATCH_INTERFACE_SECURITY_REGRESSION.v1.json",
+      "sha256": "aec9da588343fe638599df4efc9bc2593f4a8450ec7a277fb482eff9c702c391"
+    },
+    "referenceActionPreflight": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_REFERENCE_PREFLIGHT.v1.json",
+      "sha256": "a204e693c532dba23f985259effbcd1d35eb53878127c5bf871ecce0efee093c"
+    },
+    "preregistration": {
+      "path": "benchmarks/patch-interface/PATCH_INTERFACE_PREREGISTRATION.v1.json",
+      "sha256": "d4994e226e0f4ad20fff96a42c79ae8f7fa38dfc577958e7e9f7eb111bfbccd6"
+    }
+  },
+  "precallAbortEvidence": {
+    "failureCode": "INSTALLED_RUNTIME_KEY_ORDER_SENSITIVE_COMPARISON",
+    "profileId": "baseline",
+    "runDirectory": "docs/experiments/runs/patch-interface-baseline-20260810T0054",
+    "assignment": {
+      "path": ".runtime/patch-interface-experiment/d4994e226e0f4ad20fff96a42c79ae8f7fa38dfc577958e7e9f7eb111bfbccd6-baseline.assignment.json",
+      "sha256": "5f6903bc2de0d8547d721545e3a9b5bfeaffa33b50f647c667f5596fff326186",
+      "preregistrationSha256": "d4994e226e0f4ad20fff96a42c79ae8f7fa38dfc577958e7e9f7eb111bfbccd6"
+    },
+    "checkpoint": {
+      "path": "docs/experiments/runs/patch-interface-baseline-20260810T0054/observations.checkpoint.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "records": 0
+    },
+    "callEvents": {
+      "path": "docs/experiments/runs/patch-interface-baseline-20260810T0054/call-events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "records": 0
+    },
+    "callStartedEvents": 0,
+    "modelCalls": 0,
+    "lifecycle": {
+      "path": "docs/experiments/runs/patch-interface-baseline-20260810T0054/lifecycle.json",
+      "sha256": "df4cdf42b28243571f3b48dd9bd55990f4333279effae027c295ba4782ab247a",
+      "status": "PASS"
+    },
+    "absentArtifacts": [
+      "docs/experiments/runs/patch-interface-baseline-20260810T0054/result.json",
+      "docs/experiments/runs/patch-interface-baseline-20260810T0054/result.json.sha256",
+      "docs/experiments/runs/patch-interface-baseline-20260810T0054/observations.final.json",
+      "docs/experiments/runs/patch-interface-baseline-20260810T0054/observations.final.json.sha256",
+      "docs/experiments/runs/patch-interface-baseline-20260810T0054/recovery.json",
+      ".runtime/patch-interface-experiment/d4994e226e0f4ad20fff96a42c79ae8f7fa38dfc577958e7e9f7eb111bfbccd6-baseline.active.lock",
+      ".runtime/patch-interface-experiment/d4994e226e0f4ad20fff96a42c79ae8f7fa38dfc577958e7e9f7eb111bfbccd6-baseline.active.lock.recovery",
+      ".runtime/model/api-key",
+      ".runtime/model/profile-start.json",
+      ".runtime/model/profile-launch.json",
+      ".runtime/model/profile-ready.json"
+    ]
+  },
+  "rootCause": {
+    "oldCausalClosureSha256": "d46ac86623e3093625056633ba3b902cf51bcb4fde51c06cec428f9932847969",
+    "oldSource": {
+      "path": "scripts/model_serving_attestation.ts",
+      "sha256": "2ef5dbda1f85ea000bd6e8e2bfb3dc9da194605be0a2cf921bdf162146adc8b0"
+    },
+    "comparison": "JSON_STRINGIFY_OBJECT_INSERTION_ORDER",
+    "launchRuntimeFieldOrder": [
+      "pythonExecutable",
+      "pythonExecutableSha256",
+      "pythonVersion",
+      "packages"
+    ],
+    "probeRuntimeFieldOrder": [
+      "pythonExecutable",
+      "pythonVersion",
+      "packages",
+      "pythonExecutableSha256"
+    ],
+    "semanticValuesEqual": true,
+    "serializedOrderEqual": false,
+    "semanticRuntimeSha256": "01dee5ecb0831b32c46e9a6b9578b9c1966902133bd7afb51b6f998e680edd55"
+  },
+  "implementation": {
+    "generator": {
+      "path": "scripts/write_patch_interface_precall_supersession.ts",
+      "sha256": "98b28973c1ff344f363f7c548ed2dabb1484f97533d5494d3b4d4ababe07019f"
+    }
+  },
+  "remediation": {
+    "source": {
+      "path": "scripts/model_serving_attestation.ts",
+      "sha256": "c2a589d2ad82c28923c2de8b0de6070cead075e91a061f2998c0ebdde0c50702"
+    },
+    "comparator": "EXACT_KEYS_AND_FIELD_WISE_VALUE_COMPARISON",
+    "newArtifactLineage": [
+      "docs/experiments/patch-interface/PATCH_INTERFACE_SECURITY_REGRESSION.v2.json",
+      "benchmarks/patch-interface/PATCH_INTERFACE_REFERENCE_PREFLIGHT.v2.json",
+      "benchmarks/patch-interface/PATCH_INTERFACE_PREREGISTRATION.v2.json"
+    ],
+    "oldArtifactsModified": false,
+    "oldRunReused": false
+  },
+  "protectedActions": {
+    "modelCall": false,
+    "modelDownload": false,
+    "dependencyInstall": false,
+    "sudoAdmin": false,
+    "commit": false,
+    "remoteConfiguration": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "signing": false,
+    "release": false
+  }
+}

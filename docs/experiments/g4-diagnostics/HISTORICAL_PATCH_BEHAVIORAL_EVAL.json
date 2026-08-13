@@ -1,0 +1,4401 @@
+{
+  "schemaVersion": 1,
+  "evaluationId": "HISTORICAL_PATCH_BEHAVIORAL_EVAL",
+  "status": "COMPLETE_WITH_BEHAVIOR_ORACLE_GAP",
+  "releaseInterpretation": "FAIL_NO_BEHAVIORAL_EVIDENCE",
+  "rows": [
+    {
+      "taskId": "g3-patch-werkzeug-2481648714d4",
+      "repository": "werkzeug",
+      "baseCommit": "0caf67da4fbecce88cadeaa68490c47910100dfc",
+      "fixCommit": "4ce92208da851b30ac1a8fe0b2448ddfb962f308",
+      "allowedFiles": [
+        "src/werkzeug/formparser.py"
+      ],
+      "historicalPatchSha256": "06d03870f94dbbfb6248f8f4650a7f290694b9c32d4f262378e18d5c897dbfa2",
+      "historicalAfterContentSha256": "2a48fa6ed9819711548734eb58e63f93d57ba7ea533138c9102dd9d59adcac46",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-ky-f77af9f78506",
+      "repository": "ky",
+      "baseCommit": "6edddd986f2f6a9c7d91e851d9b9a48df439d328",
+      "fixCommit": "06375efbacfc1bdc96f7a4de7560684b765e1274",
+      "allowedFiles": [
+        "source/utils/merge.ts"
+      ],
+      "historicalPatchSha256": "12f46cd8516169cb156a88ad72438b4defd170b79b2b904157e1f007b1c288bf",
+      "historicalAfterContentSha256": "03b5b800027821ee2ec17eb95e01b6e86eb1a6b007ccf06b0b77e723abf1118b",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 16
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 16
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 16
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pluggy-fcf12862c082",
+      "repository": "pluggy",
+      "baseCommit": "dd20a85e38af556e1c818b03391eab1480438e0c",
+      "fixCommit": "0258484dc180a0c28705de83783b269f4fed4873",
+      "allowedFiles": [
+        "src/pluggy/_hooks.py"
+      ],
+      "historicalPatchSha256": "5872d2f3b2ac24d0222b9c4b1842fe173a3051adcba0edd138b9fb54e6e9a9ea",
+      "historicalAfterContentSha256": "ee1c8cc8fefc5656f23efdc330a2b735c5bba7b7b1dfd41f6c3b0aa4aa2cd52f",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 30
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 30
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 30
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-p-queue-84a9ec80c32f",
+      "repository": "p-queue",
+      "baseCommit": "a06fbc928725f074c72716e1ba21106df6822dae",
+      "fixCommit": "9efde425e233ab59ff3e6842430d40fd2208c103",
+      "allowedFiles": [
+        "source/index.ts"
+      ],
+      "historicalPatchSha256": "bf301b5251c173d42b1b2d011c363d08b0724dfcecb3b9c24665692dca08e1aa",
+      "historicalAfterContentSha256": "43ce8fdedaca0b8825c5e62f7df62376ec4b4f960120837eacb8dd6fa73e86f7",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 6
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 6
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 6
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-cachecontrol-b70e71a0e6c7",
+      "repository": "cachecontrol",
+      "baseCommit": "9b85ea1bbb197fd126b675b0e9bf88a50e3ab76e",
+      "fixCommit": "e46a97fedcdd4ab4dcb41b40837768f58e71f602",
+      "allowedFiles": [
+        "cachecontrol/controller.py"
+      ],
+      "historicalPatchSha256": "50145f06d5372421a89398da2f654bddbef449a164428418e468cf7e4c1a5713",
+      "historicalAfterContentSha256": "c716f004bc889f6bed321d428289d6021f23a54f582820b87a66921cf0a8aba9",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 10
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 10
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 10
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pyjwt-7896e921b589",
+      "repository": "pyjwt",
+      "baseCommit": "22f478cebddd8294259c30f037ecb92b0b348774",
+      "fixCommit": "d2f4bec4963897c0ef96ef64a875894f2c8542ab",
+      "allowedFiles": [
+        "jwt/algorithms.py"
+      ],
+      "historicalPatchSha256": "0eb61ec6643ed54f429649b802948325069d4d42f842c1aee2ee6257af43b07c",
+      "historicalAfterContentSha256": "f637f8b5e4f1f4ba6365acf18eb6576e9eb13d1f622eb5659efd586d45e9271b",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-multidict-9b9cd28ac785",
+      "repository": "multidict",
+      "baseCommit": "8d0edb4dba3f1d9f1a512ac6be42812055f32843",
+      "fixCommit": "656c4de8f7dbeb6ecfb281ce857bdda931b5c909",
+      "allowedFiles": [
+        "multidict/_multidict_py.py"
+      ],
+      "historicalPatchSha256": "6e49d3028aedbf2a20c26c5158f060c3df89fe5d877f0dfe5d141990462b7b70",
+      "historicalAfterContentSha256": "d45a67bb2f5c6eb6be14d054339bf228a73cc1791e733a39b48b75add49b61ef",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-zod-4da14f497654",
+      "repository": "zod",
+      "baseCommit": "ee7376ad3ac04ede2567a7074762d20b0de1de6d",
+      "fixCommit": "f29f2a6db443284eff44db181dbe146df98f92c2",
+      "allowedFiles": [
+        "packages/zod/src/v4/core/regexes.ts"
+      ],
+      "historicalPatchSha256": "193c2f2f7d3421212bc3a8611281e7895b0ac7259d7b1316c23704c7557f7b55",
+      "historicalAfterContentSha256": "da0efe9a6612fc6cdc0b5ac9606b5b5375e3a011bcdccecf7bb605600f844455",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-dotenv-f21f9cad3d1e",
+      "repository": "dotenv",
+      "baseCommit": "98c6030882b9f8dbf204426771e41e7ee86b0916",
+      "fixCommit": "5b70de00150a3f74625de456b2386078b38eee4c",
+      "allowedFiles": [
+        "lib/main.js"
+      ],
+      "historicalPatchSha256": "4e3dfd1f94707799d930fc060f6df6f1a856adf58adea478b959b5512f0356e5",
+      "historicalAfterContentSha256": "4fcf55cdbb09a5758396bb2985518ffc87eceb7108dc644eeeae5d3b377b77d8",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 19
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 19
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 19
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-axios-7d34905d4cb0",
+      "repository": "axios",
+      "baseCommit": "a092bae50d1884782151b2fcea12974d6da6e376",
+      "fixCommit": "878bb29de570765b0d4c0970e30400d9ea9399f7",
+      "allowedFiles": [
+        "sandbox/server.js"
+      ],
+      "historicalPatchSha256": "5ddec812a3056e0b465d38061989617752b3dcbff0b2722c5341ed3207f1b0ca",
+      "historicalAfterContentSha256": "5b5ee6f0a4f726cef8adcd9c526796a379564d0198b76f6551b98f9875f6e032",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-werkzeug-67f0694b7c36",
+      "repository": "werkzeug",
+      "baseCommit": "b2b281beec14dad63882bcee863d8c2fc5be34c0",
+      "fixCommit": "4da3786f1443cbd6efd3f4107bcd5b4ab121f122",
+      "allowedFiles": [
+        "src/werkzeug/urls.py"
+      ],
+      "historicalPatchSha256": "a4ac31072886efbc2083ab6c12615b86e4663e570399e1844b2beda0d5364b12",
+      "historicalAfterContentSha256": "67f0f278834ac7fef3cc32cada16750d05c19771ecb11cd78b479dded107eacb",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": true,
+          "buildResult": "PASS_LANGUAGE_PARSER_ONLY",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 1,
+            "lines": 4,
+            "lineBudget": 18
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 18
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 18
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-ky-943680c06acc",
+      "repository": "ky",
+      "baseCommit": "e0fcf780de2bd69af2528e4b7b87ccae6bb727b1",
+      "fixCommit": "61d6d66d27911001b9b4d57ab93139f9ad61384b",
+      "allowedFiles": [
+        "source/utils/is-network-error.ts"
+      ],
+      "historicalPatchSha256": "a55be9382de615dfa863cfc811e42c18ea2102125d51e4fcb6fac25b00662e4d",
+      "historicalAfterContentSha256": "0f9464473184bc45102e3c10cd9a3fffeb55d779a15831cc5acf62248f67e6dc",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pluggy-da7d136e03f6",
+      "repository": "pluggy",
+      "baseCommit": "c1dfc0b9ca32355c214883471d15ecc5133cd2b8",
+      "fixCommit": "0b7790eb2adf436c6df39c9a2256aa8a31ba3893",
+      "allowedFiles": [
+        "src/pluggy/_hooks.py"
+      ],
+      "historicalPatchSha256": "6395b445e5dec96f03085b98fbb4971255785746d8ca3fdd7e6c7ee136731fdb",
+      "historicalAfterContentSha256": "7b25108d9bf729f23a35ecd27c975a06afc133b9858944bb8dfb1036e0720ab8",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 9
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 9
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 9
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-p-queue-6ba45037be0c",
+      "repository": "p-queue",
+      "baseCommit": "9eec7efb433c33f66799d9dec41aa56d43f3435a",
+      "fixCommit": "a20e1f34b5c82e4e91e5d2e0c8b663e831dc16ab",
+      "allowedFiles": [
+        "source/index.ts"
+      ],
+      "historicalPatchSha256": "ac6ed65157bb7d902665a4ea1d608fefaef243475f1b4046d0733623f13e94eb",
+      "historicalAfterContentSha256": "dad7a86b49d27d1d83af548c678f257222c5cca763365c737cdddf9d69748b75",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 1
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 1
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 1
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-cachecontrol-8bac6d0430a0",
+      "repository": "cachecontrol",
+      "baseCommit": "385618ef9e04277b2d219e8f13c86cfb22c4fee1",
+      "fixCommit": "2d4710cb2bd622cc96b47a593dea9c9afe96fbe0",
+      "allowedFiles": [
+        "cachecontrol/controller.py"
+      ],
+      "historicalPatchSha256": "404fab6ae183bb8e5f452204fc65083d6249545b4652338bfd64a902bee6cb93",
+      "historicalAfterContentSha256": "66313667c189a0c01fc6ca48aff06a4abc908cf50a4c4538b61b6c9673ae4f61",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pyjwt-00216e6a316f",
+      "repository": "pyjwt",
+      "baseCommit": "95791b1759b8aa4f2203575d344d5c78564cdc81",
+      "fixCommit": "22f478cebddd8294259c30f037ecb92b0b348774",
+      "allowedFiles": [
+        "jwt/algorithms.py"
+      ],
+      "historicalPatchSha256": "1ad8bd0f3a119260c6298b361936f3e5cdc926b2b19758712c1bde2311bd384a",
+      "historicalAfterContentSha256": "861467efb5d406ae72da61f552b838bfac43869cc4d9f710752a3faac8c55fa1",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 7
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 7
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 7
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-multidict-f40c4f834a46",
+      "repository": "multidict",
+      "baseCommit": "eebdb187601ee6110982b8614c5705bb0bed3493",
+      "fixCommit": "02d49bc12535d0ac1610d039cbe6af01bc73f45e",
+      "allowedFiles": [
+        "multidict/_multidict_py.py"
+      ],
+      "historicalPatchSha256": "6a8cde305cac72f5317f29cdff40a8f3f6caf9503ba0d96437e13ba93fc8b863",
+      "historicalAfterContentSha256": "c82ea0a6cd9611a41d147cac11086ee72878a8b05b994a0f66f6cb1b59317ff1",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-zod-a7153658e7cf",
+      "repository": "zod",
+      "baseCommit": "1fb56a5c18c27102dbc92260a4007c7732a0ccca",
+      "fixCommit": "fbe8ad1b709460fc45d88fdcb5eca591198de60d",
+      "allowedFiles": [
+        "packages/zod/src/v4/core/json-schema-processors.ts"
+      ],
+      "historicalPatchSha256": "1c582341a3defb03a57d113e6a78e4c59bd8ca9b993b7b53d136888b9b67ad54",
+      "historicalAfterContentSha256": "f73b65afdfd9f016523b9091f82258e6fecbf3bf79fe58f046083cf3e7563e99",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-dotenv-48aa85c1d093",
+      "repository": "dotenv",
+      "baseCommit": "c0e32b8267b69a438bc0cc31345f73b5e2f037db",
+      "fixCommit": "bfb434360ffaf6cf53c7ca1f696165b0fbdf0d6c",
+      "allowedFiles": [
+        "lib/main.js"
+      ],
+      "historicalPatchSha256": "76f46d98db6f1aa0d6dce2762508f42546baf50c9f1dc9fde22aad7328c94e02",
+      "historicalAfterContentSha256": "812212a2ce5ea1390fc59a8ea457962b2f4db8c054d431a33098a5fe28b70c3b",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-axios-34d8fa97f19b",
+      "repository": "axios",
+      "baseCommit": "ff60b43277c32a5b2f7589c917db16d8e043c0d4",
+      "fixCommit": "a93b1c90d919542987cc38591d10eed949a345d0",
+      "allowedFiles": [
+        "lib/core/AxiosError.js"
+      ],
+      "historicalPatchSha256": "3fdf933e6bd88711bcef9641508a1f00c8f73d314803ff62e3a50a0e44f1973f",
+      "historicalAfterContentSha256": "6c2860a06292ab37ce5fc172514171288f2745c671fda1705c3b0e0870fe01ae",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 33
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 33
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 33
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-werkzeug-1f6977fc12f6",
+      "repository": "werkzeug",
+      "baseCommit": "48dde21febc3db2bd75cbad3bf3aa74dedf32e4a",
+      "fixCommit": "eff2d027012a6a858f6d40ca91de303016d95513",
+      "allowedFiles": [
+        "src/werkzeug/middleware/profiler.py"
+      ],
+      "historicalPatchSha256": "c7e2b251c4ef238c666f3077a9ac43750638f4d758e526da8b55e87ccbf485bd",
+      "historicalAfterContentSha256": "76e40e529ce9cd1a01bcbc66040b393ab0e4240bdc4af7e89ee8707c628ec000",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-ky-226a7be37e73",
+      "repository": "ky",
+      "baseCommit": "e9eeb35770bdf6d894998c6c9f9a3fb090c8b5d2",
+      "fixCommit": "346f8986f98b3b6769034e28d5095922670a7ed6",
+      "allowedFiles": [
+        "source/core/Ky.ts"
+      ],
+      "historicalPatchSha256": "9ccf9ebbe9fc4609346af02626d7abfa539942eaa682600d12dafc3543663f62",
+      "historicalAfterContentSha256": "741aba6eb53bd4051d1787a067ef87af073c4633281b896c4f3b97c55942490d",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 10
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 10
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 10
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pluggy-cba86e442251",
+      "repository": "pluggy",
+      "baseCommit": "74876c40efa3137aee8ebf5d53d9542d65a13381",
+      "fixCommit": "c4e254ca53d02f969c81586dc50c83cc8bb3dea9",
+      "allowedFiles": [
+        "src/pluggy/_hooks.py"
+      ],
+      "historicalPatchSha256": "6145ef67bcb26effbaeff3b9d4a46e20a1c9065e82e2b438ec4b22946b86689c",
+      "historicalAfterContentSha256": "08e27d83f6d5c05977e56243f2ec67c3eccfd3f48d1e44de7d1654083d4997f7",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 73
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 73
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 73
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-p-queue-cbe8eae2e48e",
+      "repository": "p-queue",
+      "baseCommit": "5e400174a89395a44399713191b76544cf743fe5",
+      "fixCommit": "e9074f06fff500a13e0ef7c910ff4fc2fe65b01c",
+      "allowedFiles": [
+        "source/index.ts"
+      ],
+      "historicalPatchSha256": "853651d08725b5ff826dd0d264791d81d012f235ff50323b6c1b5d96d0030914",
+      "historicalAfterContentSha256": "3982b8df3e17933a8e8ea69229ee42e816bf9aba6cfd385c14ae5af5eb112010",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 23
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 23
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 23
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-cachecontrol-bbb8dc60f77d",
+      "repository": "cachecontrol",
+      "baseCommit": "184ed034c2d2cc743ca4a29031ed390630e7d2f2",
+      "fixCommit": "b4f1ab5a78bec0ab97b9d45f77b792b22e0d22e4",
+      "allowedFiles": [
+        "cachecontrol/controller.py"
+      ],
+      "historicalPatchSha256": "ae95ceb15740568925d5c9228cd66892e9eac86f77713103fbbc92cc62e2818b",
+      "historicalAfterContentSha256": "fb3694b24e5ea37d013941991ec4a45d1345b9d6fac885aa3cb0a791f52f96b1",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pyjwt-c0e398c9fe1d",
+      "repository": "pyjwt",
+      "baseCommit": "bd9700cca7f9258fadcc429c1034e508025931f2",
+      "fixCommit": "a4e1a3d1218b01c5806420b8f16d9308ac4adc30",
+      "allowedFiles": [
+        "jwt/__init__.py"
+      ],
+      "historicalPatchSha256": "6cef32ac468582ad1395cb9a86cefd6cee2af17e779bb25fb95f347a1c1e3c6c",
+      "historicalAfterContentSha256": "9e690ab5351a89aedf97851b2f08a9c5447ce240cfe3e5bf050ce865a2b631a4",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-multidict-4a530a53c8a5",
+      "repository": "multidict",
+      "baseCommit": "39d3c322f6a9e824beee9b6f178e3166205f0f59",
+      "fixCommit": "80c910bd1badf4b5c2ecfbe5571c5c2367e6e707",
+      "allowedFiles": [
+        "multidict/__init__.py"
+      ],
+      "historicalPatchSha256": "eed85b480c56b44f8e9c7b6b000a3e63d1c44cf1cc60568259dad2ebedfa6c24",
+      "historicalAfterContentSha256": "55c0fd60df4726f30d5aa640204bc7d6666d20c7b3f18d3c74993ffd1ca34d18",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-zod-2c19718ccd86",
+      "repository": "zod",
+      "baseCommit": "b8dffe9e62f17e6571e6249d05cc5102b54d94e4",
+      "fixCommit": "1cab69383fcdeae2a366d5e2a2fc4d8fc765d168",
+      "allowedFiles": [
+        "packages/zod/src/v4/core/schemas.ts"
+      ],
+      "historicalPatchSha256": "f44a78d2bd87f646191914e63f53c4276f3769a1c7985fd422a05a994edae9b6",
+      "historicalAfterContentSha256": "8115b34aa4800a56cd69d532c5c40a3f6016ccc800d5ad9c61af92e22b542fcb",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 13
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 13
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 13
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-dotenv-03b4d37aa976",
+      "repository": "dotenv",
+      "baseCommit": "a61f616a3160bb6e6f22ff55f08b7eba3a3fab68",
+      "fixCommit": "217861c31a52abc76b5c05dd80bb8b725a9a0c8d",
+      "allowedFiles": [
+        "lib/main.js"
+      ],
+      "historicalPatchSha256": "b2a15013f030f45cb743be1980d9481dff65356d7cdcca7e9d5f7a37c2b9369e",
+      "historicalAfterContentSha256": "5f80ac5ae6fc52b7891f46772a9dd7bd259b1cf2a6dcedbddb479e26f427b9ce",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 1
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 1
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 1
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-axios-565fb806aeba",
+      "repository": "axios",
+      "baseCommit": "3ebc76240c835a07fc6af23cb10d41579371a08f",
+      "fixCommit": "ff60b43277c32a5b2f7589c917db16d8e043c0d4",
+      "allowedFiles": [
+        "lib/helpers/shouldBypassProxy.js"
+      ],
+      "historicalPatchSha256": "160eebd6e209da9865985e69de9189df5398dfe067741c942724b7f9ea625af1",
+      "historicalAfterContentSha256": "7469d0735e7894edd69b0952802863ae07cffb3d33dcc720f80fd8ff0e6b3739",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-werkzeug-b019c2c682da",
+      "repository": "werkzeug",
+      "baseCommit": "1b00618e787f40dfb21eba29caf8f8be7c8e1d93",
+      "fixCommit": "884437aef93e543ebaff3b9cdbe857ee47e7e00c",
+      "allowedFiles": [
+        "src/werkzeug/routing/map.py"
+      ],
+      "historicalPatchSha256": "a50cbeb9dbc8f2e049db5874b3fcdd7a763a39cebfeada9b1920b8341a8ab602",
+      "historicalAfterContentSha256": "b334151abeab5428162c7d37edf8dc51a57815d1c009fb132896cfabbc6b17fc",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-ky-91caaa753b6c",
+      "repository": "ky",
+      "baseCommit": "2df9b7e71963b8d0bb7edd172a5d3518c2778330",
+      "fixCommit": "4ba8c15feaca524b4a716413db21a481c494721b",
+      "allowedFiles": [
+        "source/core/Ky.ts"
+      ],
+      "historicalPatchSha256": "2939942edbbbe129462a8ff97b15323dd24d6dee5a8d92c85e1154024f02bdbf",
+      "historicalAfterContentSha256": "06694f3c0ebc57ec0cb7c98cc9c28d18cc411c422db5287ef880bf2c18196152",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": true,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pluggy-779c8701ae0f",
+      "repository": "pluggy",
+      "baseCommit": "59e66fdb231bf47ce5e0b8ed75b788820b135c34",
+      "fixCommit": "74876c40efa3137aee8ebf5d53d9542d65a13381",
+      "allowedFiles": [
+        "src/pluggy/_hooks.py"
+      ],
+      "historicalPatchSha256": "4e9a85be3b9192b6b1b2fbd7552b8737b1a39151995e602e278497b393b30324",
+      "historicalAfterContentSha256": "b359cd2770c714d3606a64886001b307830eff6cfd8ca6d175d0b9cfc1cdc027",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 25
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 25
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 25
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-p-queue-c7a77f5e2b9c",
+      "repository": "p-queue",
+      "baseCommit": "27839dc04ae221441e2534ce378ed0e58b498473",
+      "fixCommit": "81cbae2128a1a0cef5029042fe4076ddbafdfd15",
+      "allowedFiles": [
+        "source/index.ts"
+      ],
+      "historicalPatchSha256": "a9a852d5a87ebb03910c65971b21279dd763a721b8802a17f237bf47579e262e",
+      "historicalAfterContentSha256": "5908834f5a57ed0776f8cba56e30708480fe96d862205371c1a0f9f32d048e10",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pyjwt-68dfff00e2ac",
+      "repository": "pyjwt",
+      "baseCommit": "f3ba74c106df9ce10e272dfaad96acb4ab3ef5a5",
+      "fixCommit": "1451d70eca2059bc472703692f0bb0777bc0fe93",
+      "allowedFiles": [
+        "jwt/api_jwk.py"
+      ],
+      "historicalPatchSha256": "43f612ba9252ade3e534c132d920ce9233fed35b043ff3f2bcfff44ebd6f2e11",
+      "historicalAfterContentSha256": "a975331615c74aae1d64dfd9e8a8543c9a82a3cf040b0b624af1ef42323d921d",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": true,
+          "buildResult": "PASS_LANGUAGE_PARSER_ONLY",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 1,
+            "lines": 2,
+            "lineBudget": 11
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-zod-97e7209aaa3e",
+      "repository": "zod",
+      "baseCommit": "76e8f706bb554de82234106de8299d0139cb3b8e",
+      "fixCommit": "f0b0608ee300e609772405501ab4b219f0e19680",
+      "allowedFiles": [
+        "packages/docs/components/ecosystem.tsx"
+      ],
+      "historicalPatchSha256": "06ea610d3eca160e6048ceff467881c2d044b34f78cfced88ce76d9a136e975d",
+      "historicalAfterContentSha256": "edceabeeea2209aa42e9b80cc6e2986906b2db68ffab3fe35a435a93ad681141",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": true,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 6
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 6
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 6
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-dotenv-d064be827e3a",
+      "repository": "dotenv",
+      "baseCommit": "ccc50d50d9e398a0b20355748e710852e1db5d07",
+      "fixCommit": "3f01a8b61addc4e6978f2c40b0147f6812e2f64b",
+      "allowedFiles": [
+        "lib/main.js"
+      ],
+      "historicalPatchSha256": "5a1852e01e7c3ed6528809067146be984d49f48caccdd935a24f68e90d67fd21",
+      "historicalAfterContentSha256": "46c50c6399a53bde79a1f85e720a80a073cb959b21072fad44a98b1bde72c3c2",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-axios-83a72e800288",
+      "repository": "axios",
+      "baseCommit": "02c2c4f891d76b15712a9edd149a2d9f7978774f",
+      "fixCommit": "3d253b4f17a5107e6f274ee5b2e96e03508dceb2",
+      "allowedFiles": [
+        "lib/helpers/progressEventReducer.js"
+      ],
+      "historicalPatchSha256": "58ba083c249d92180d8b6647a29a601beb56fceb116a3885c5319bdb8a82c724",
+      "historicalAfterContentSha256": "997e7531a239c94d7f623dec81b23ba624e2d043d3719243e07962b8dcbc39e2",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-werkzeug-b75bcb795224",
+      "repository": "werkzeug",
+      "baseCommit": "801ea65e8bcfb215fad4a6184a7d80fa4115c95d",
+      "fixCommit": "e6892a69e3321791779cbe7c16b3db7d862d2b32",
+      "allowedFiles": [
+        "src/werkzeug/datastructures/cache_control.py"
+      ],
+      "historicalPatchSha256": "e4f7e47df854681a01cfbb54e129390ab803dcd354761eb38a48485ada6323f7",
+      "historicalAfterContentSha256": "44feca600aa850f5d3cc1f35d09616456f9534a82a611ba7a43636559fa86bf5",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": true,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-ky-638b6b6d14e0",
+      "repository": "ky",
+      "baseCommit": "c168a7ccd44d11bfc44390faca1e01cfc8895658",
+      "fixCommit": "a541fc08b8c078a835b4ffc146226107aba375fe",
+      "allowedFiles": [
+        "source/core/Ky.ts"
+      ],
+      "historicalPatchSha256": "812acd02337f03a0bb948b8ff09a0e624281484ee6b9fd859e80ab2221e9713a",
+      "historicalAfterContentSha256": "96b975f9108729c58cbe3a2c37a6a28d55450e370e7a2f8200c99302966c7147",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 7
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 7
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 7
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pluggy-8b5baee5d473",
+      "repository": "pluggy",
+      "baseCommit": "40f3ab1293c48d2a149a5328be893dc3fa08b395",
+      "fixCommit": "5b9a37cbf43fee0f3bbf8ed03586e5dd0695bf56",
+      "allowedFiles": [
+        "downstream/run_downstream.py"
+      ],
+      "historicalPatchSha256": "e1e8e63cd74f50a8d9704cb7a0743648fa04bd1fe968dd1983973bcaae6fbf15",
+      "historicalAfterContentSha256": "8962d0b8ac66d54e36fe03c8a53e0d6398b4868574bc1265895d7d41e8b198b8",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 12
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 12
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 12
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-p-queue-ecd7758b3aa6",
+      "repository": "p-queue",
+      "baseCommit": "7b3f53e5da211449e8c42ad7ef656a8f4333a6b7",
+      "fixCommit": "7fea65877a12f1d74ba75c0e5a5d96f2be117149",
+      "allowedFiles": [
+        "source/index.ts"
+      ],
+      "historicalPatchSha256": "e0643570fc3769d124b23d2986001241754c215fb918ea5e17b1e7c1fa9fb8f4",
+      "historicalAfterContentSha256": "831752cdb598fa7a78df08e0e31c3e99b71656d1a39d646a630717c1edb280d6",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 19
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 19
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 19
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pyjwt-1ef69b3ead48",
+      "repository": "pyjwt",
+      "baseCommit": "53e9381ef9e529ea196bf862e445e90b264ef940",
+      "fixCommit": "412cb67a93363812ae4029d6a95f5d4d40ab2609",
+      "allowedFiles": [
+        "jwt/jwks_client.py"
+      ],
+      "historicalPatchSha256": "8aeb492117b5a21f9a8c835ddad3eb4a6fac198613875c5b53482b53e4259e23",
+      "historicalAfterContentSha256": "5ad761f0af650f164dcb3903455c7470a997f358f8a7d9689c4878336f95e7c1",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-zod-ce6f73faa157",
+      "repository": "zod",
+      "baseCommit": "8fcb71a5ffa5b32a508ac8bb38b7e1e13c387bf5",
+      "fixCommit": "76e8f706bb554de82234106de8299d0139cb3b8e",
+      "allowedFiles": [
+        "packages/zod/src/v4/core/schemas.ts"
+      ],
+      "historicalPatchSha256": "37f04b347a513d3f4c34a0e9f6083c3420f7f7c2e2f66107e8e846922c3556e9",
+      "historicalAfterContentSha256": "518e75e274d11c1ca5350521f5af17553138fe49b1a5774687496bd9f5988736",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-dotenv-31fb3845ee6e",
+      "repository": "dotenv",
+      "baseCommit": "d35b6a9f019944ef014387f362bd5fe23433d84a",
+      "fixCommit": "9a3f955cc8809f64c61d0de7266ea380cdc3ac31",
+      "allowedFiles": [
+        "lib/main.js"
+      ],
+      "historicalPatchSha256": "d85f66f1d3e011ff010af01808d195781309ceee88ad42b513c7a5b8277dced2",
+      "historicalAfterContentSha256": "ec9e12246ed558e0da3dd5609277153e40c6c4461aa84ac8feaeb50d83132f45",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 3
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 3
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 3
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-axios-3fc86cd7335e",
+      "repository": "axios",
+      "baseCommit": "bdba132964d91d2e74341cf0af0a54e4d2346870",
+      "fixCommit": "02c2c4f891d76b15712a9edd149a2d9f7978774f",
+      "allowedFiles": [
+        "lib/helpers/combineURLs.js"
+      ],
+      "historicalPatchSha256": "6f010cd94b2741bda54b90603b799f4a104598c33e2d4e39a948449369772385",
+      "historicalAfterContentSha256": "f4ae2b221e8ee30fa99432a1419f4a09c0bb8eff41bce71dc428ba787e18717f",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-werkzeug-218d06e61f7a",
+      "repository": "werkzeug",
+      "baseCommit": "cd8be56a8a3cd70ed359cfaeeee6905933b1e07a",
+      "fixCommit": "ff1b12a6629b37f5d8372b9e53f02de9d1322e19",
+      "allowedFiles": [
+        "src/werkzeug/http.py"
+      ],
+      "historicalPatchSha256": "888f183d360a02bf638d47a7a7ef822425956deff11a505ead7cb538dccb2a80",
+      "historicalAfterContentSha256": "eee14663dc4ed14b4983403bdbab5854ab1c65cac9bc023c0ada287c85ff4196",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 9
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 9
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 9
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-ky-8f51cf7c2b85",
+      "repository": "ky",
+      "baseCommit": "aac83fa9403355d628e8c1bdc505311b6a8683e7",
+      "fixCommit": "433febd55cc19c98c7a643be934693927ac38503",
+      "allowedFiles": [
+        "source/core/Ky.ts"
+      ],
+      "historicalPatchSha256": "0ec81f30b0f2b66a721d13abd8df4912844a77fdd4cca2114d3bbdf72d7edf7d",
+      "historicalAfterContentSha256": "259408a78f299697418a163e4d9c0f4af45659eca2aa7ce63bed4382bca893fa",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pluggy-f7ac61a9103b",
+      "repository": "pluggy",
+      "baseCommit": "fa2af2b84a3c164b7a16ac340119d42668a7da40",
+      "fixCommit": "40f3ab1293c48d2a149a5328be893dc3fa08b395",
+      "allowedFiles": [
+        "downstream/run_downstream.py"
+      ],
+      "historicalPatchSha256": "f071b3ffa8561f8bbf21ac9bc377c6917e189e599e93a5d67370d78b1a945189",
+      "historicalAfterContentSha256": "34c7c399eec7fde063d938070772ca5f8c3c4e3e7e3499b14fec1423d924de85",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-p-queue-4e03f7199ff7",
+      "repository": "p-queue",
+      "baseCommit": "5ecfda8d64a24f7baf7bab9dfaba2e9c73bb04be",
+      "fixCommit": "439d512cd901adc5c7053745ade15c9048982c53",
+      "allowedFiles": [
+        "source/priority-queue.ts"
+      ],
+      "historicalPatchSha256": "00aff46c5a723a2dcfcf684a21b47a519c9e94f82edc0cfc2b7e237667d94182",
+      "historicalAfterContentSha256": "85345999e81e341c7d2902e765bcd97321d8b13fdbaf765c90c99b1f070fd09c",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pyjwt-930a15446693",
+      "repository": "pyjwt",
+      "baseCommit": "0f4de5a48c0d5567b62f979cf055597cbf73415e",
+      "fixCommit": "53e9381ef9e529ea196bf862e445e90b264ef940",
+      "allowedFiles": [
+        "jwt/api_jwk.py"
+      ],
+      "historicalPatchSha256": "a08d41004d1f549df6fc97baa255c026e7bc97c6af75561bf5431af87570f71f",
+      "historicalAfterContentSha256": "16a2167814e4c61df65b28cff2437396cd8279999b342097b748353bd815fbd3",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-zod-8d260b6e58c9",
+      "repository": "zod",
+      "baseCommit": "fa4a37404966d7ada0f5bb02ceeb592f1d4d9c52",
+      "fixCommit": "ebc8287ca206402cf3a9aceb745b204493cbadfb",
+      "allowedFiles": [
+        "packages/zod/src/v4/core/to-json-schema.ts"
+      ],
+      "historicalPatchSha256": "3fca8041915e5bb97654c1021fc955b69713b4dc58a0ba5c2700b9c3b1c6ee9c",
+      "historicalAfterContentSha256": "fa9dda46bee81a6241d6a196675906e8166140595b3d871e035a1754e812fb5d",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-dotenv-9048c8185be0",
+      "repository": "dotenv",
+      "baseCommit": "185e641b8f1d69a6586ef75dd97d980a83b989e5",
+      "fixCommit": "a115e3ab874b31c6f9460a2a8c9336bff30fb62c",
+      "allowedFiles": [
+        "lib/main.js"
+      ],
+      "historicalPatchSha256": "913ecff56b7afae8067dc9bd976feae394ba9332624cccfbb7b66cf8b875db75",
+      "historicalAfterContentSha256": "28c32591c34260fcb8b5e4a8b883375568ff71f8f6c54ede1974cb074471def7",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 6
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 6
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 6
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-axios-59743d4e186d",
+      "repository": "axios",
+      "baseCommit": "7737fae3c54937105d3ab27ae814d857856fe058",
+      "fixCommit": "7b1825ff0832981f02a7aa6f3995522b0be297ee",
+      "allowedFiles": [
+        "rollup.config.js"
+      ],
+      "historicalPatchSha256": "813fbb0c725c898cd408628411c52ce53c3559a9c82592550fc0baf4c1d1749d",
+      "historicalAfterContentSha256": "498a1d8568baa9d80e851798efefd3f4477830e44aa8160c2634a7fad8a22530",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 1
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 1
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 1
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-werkzeug-fcf52ef0664f",
+      "repository": "werkzeug",
+      "baseCommit": "811b9e511e336fd122933690a50451f99ab6b0de",
+      "fixCommit": "9ffdc2d38581119fa82829bdbde4b75e2519866f",
+      "allowedFiles": [
+        "src/werkzeug/sansio/utils.py"
+      ],
+      "historicalPatchSha256": "796d89c91afc3ec3ab42c7859d04ec7a757564309841cab56dc6d8f85aa9fbf0",
+      "historicalAfterContentSha256": "0d4aefd6be705aac7362b107bdc8e726229bd8927c6d4c2422efeacc63b88076",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 17
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 17
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 17
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-ky-71a240924c0e",
+      "repository": "ky",
+      "baseCommit": "5791b664a07ab9533c1261984a623d2d5bb60ee2",
+      "fixCommit": "e673eaa6e42e5d96399db7996c9fd940a1cf02c8",
+      "allowedFiles": [
+        "source/core/Ky.ts"
+      ],
+      "historicalPatchSha256": "e64894de444f422352636ebc58f672c96e0f202ee9e824199c776175751efc64",
+      "historicalAfterContentSha256": "4846f2dd1e0672798d724c4c7c1cd9a8e6b7dbbda1e0149936a687d7dae8da87",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 14
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pluggy-65a32d44cd32",
+      "repository": "pluggy",
+      "baseCommit": "b6be9d907422621d878b09234146db9598ee3a59",
+      "fixCommit": "fa2af2b84a3c164b7a16ac340119d42668a7da40",
+      "allowedFiles": [
+        "downstream/run_downstream.py"
+      ],
+      "historicalPatchSha256": "4f02c7a87ce8ff30dc43c3d14bbc0d620604c6c7a5962a2e863a343ed51dcf68",
+      "historicalAfterContentSha256": "a276a08c93e52d381f1780441f180823868fdaa284fd68c0947c7fc489b7c68d",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 8
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 8
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 8
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-p-queue-a1d2371e2a22",
+      "repository": "p-queue",
+      "baseCommit": "b846a358ffb1d4160e4a56467d156ffbc949bd21",
+      "fixCommit": "e5dc53c11ab44ac622fa13fff86c8f77b59a35c3",
+      "allowedFiles": [
+        "source/index.ts"
+      ],
+      "historicalPatchSha256": "1cb0a71d39c1745ec11daa2c4d232238eafaacefed727b628cf22ad70e845c2c",
+      "historicalAfterContentSha256": "506e6f4fa89909dc70af230c943f4cc94d03407e2979aa9f345a95f2918113c4",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 5
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-pyjwt-882156dfedd3",
+      "repository": "pyjwt",
+      "baseCommit": "96ae3563b9db8f5e18621c4d612f622cf476c92b",
+      "fixCommit": "635c8d89dd8b8bea1813fe8830a26d0274a4e724",
+      "allowedFiles": [
+        "jwt/types.py"
+      ],
+      "historicalPatchSha256": "d64bf22d182f014ca0b15d838889e7473ce6c8affd38c902b5bfc5042d7c1371",
+      "historicalAfterContentSha256": "56fad669cd83e87a837626d8ffd90bad5355b61a1ca7a9342f5ea64b11a11ad1",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 2
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    },
+    {
+      "taskId": "g3-patch-zod-2034772eb316",
+      "repository": "zod",
+      "baseCommit": "6217527e4880054dda5e4d33aa12192a36a35062",
+      "fixCommit": "757f0b0f5217e0e7125478cd91af1e2c0cd21aa9",
+      "allowedFiles": [
+        "packages/zod/src/v4/classic/schemas.ts"
+      ],
+      "historicalPatchSha256": "60b6de5a070143c53a59912008e4482941845e1e190003a6efda05b9dad43c30",
+      "historicalAfterContentSha256": "767348e67cc459f1494de897b866fe2aae3ad3c3fa212fe9291bb1261309b8cf",
+      "oracleNature": "EXACT_HISTORICAL_AFTER_CONTENT_PLUS_LANGUAGE_PARSER",
+      "likelyDocumentationOnly": false,
+      "behavioralOracleAvailability": "NOT_AVAILABLE",
+      "configurations": [
+        {
+          "candidate": "E1",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V2",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        },
+        {
+          "candidate": "E-MIN-V3",
+          "exactPatchMatch": false,
+          "patchApplied": false,
+          "buildResult": "NOT_RUN",
+          "visibleTests": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "hiddenTests": "NOT_AVAILABLE_BEHAVIOR_TESTS_NOT_PINNED",
+          "behavioralOracle": "NOT_RUN_NO_BEHAVIOR_ORACLE",
+          "wrongFileEdit": false,
+          "regression": "NOT_RUN_NO_PINNED_DEPENDENCY_INSTALL",
+          "policyCompliance": true,
+          "acceptableAlternativePatch": "NOT_EVALUATED_EXACT_ORACLE_CANNOT_RECOGNIZE_EQUIVALENCE",
+          "patchSize": {
+            "files": 0,
+            "lines": 0,
+            "lineBudget": 4
+          },
+          "finalStrictProductPass": false
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "tasks": 60,
+    "observations": 180,
+    "exactPass": 0,
+    "buildParserPass": 2,
+    "visibleTestPass": 0,
+    "hiddenBehaviorTestPass": 0,
+    "behavioralOraclePass": 0,
+    "behaviorOracleUnavailableTasks": 60,
+    "wrongFileEdits": 0,
+    "rollbackPass": 180
+  },
+  "note": "This artifact preserves the old exact metric and records the absence of a behavioral oracle task-by-task. A separately sealed G4 development patch suite supplies executable behavior oracles; it does not rewrite G3."
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "validationId": "dca-final-publication-validation-v1",
+  "status": "PASS_LOCAL_PUBLICATION_PREPARATION",
+  "canonicalSuite": {
+    "command": "npm run check",
+    "designValidation": "PASS_ZERO_WARNINGS_ZERO_ERRORS",
+    "typecheck": "PASS",
+    "testFiles": 45,
+    "tests": 225,
+    "productionBuild": "PASS"
+  },
+  "targetedValidation": {
+    "finalPublicationAndPackagingTests": "PASS_2_FILES_9_TESTS",
+    "windowsPackagingRegression": "PASS",
+    "documentationFiles": 11,
+    "documentationMissingLinks": 0,
+    "canonicalMediaAssets": 8,
+    "canonicalMediaChecksumFailures": 0,
+    "socialPreview": "PASS_1280_X_640",
+    "mermaidSources": 3,
+    "mermaidStructuralFailures": 0,
+    "existingChecksumSidecars": 768,
+    "existingChecksumFailures": 0,
+    "thirdPartyInventory": "PASS_139_ROWS_CLASSIFIED_197_DISTRIBUTED_DEPENDENCIES",
+    "thirdPartyPinnedTextChecksums": "PASS_120_UNIQUE_TEXTS",
+    "modelWeightExclusion": "PASS_ZERO",
+    "installerBinariesInGitSource": "PASS_ZERO",
+    "unresolvedSecretsInIntendedCommit": "PASS_ZERO",
+    "rawModelOutputsInIntendedCommit": "PASS_ZERO",
+    "rawEditBodiesInIntendedCommit": "PASS_ZERO",
+    "l2EvidenceInIntendedCommit": "PASS_ZERO"
+  },
+  "sealedWindowsEvidence": {
+    "w1ReportSha256": "59416a7e2dfaf48aee7601f762e73bd06f7a18243f0561fd6a98b42882e56161",
+    "w1ScopeAmendmentSha256": "a6c643ef43ff9dc88f667be3266a68e3a460c46a48474c9a77801848a266d987",
+    "w2ReportSha256": "97040ab170bada161bc6f6b161a84734d431c471f58f549ebeb7a4aa4fa6a650",
+    "w2MediaManifestSha256": "d2dc0be4ddf8fed334f7114b8f6aa854817281fee2a950cab0cf91134eca690e",
+    "w3ReportSha256": "8b70da95b217848bd5ab028469828e2925c45583000c3b3f16a36600e5b64463",
+    "msiSha256": "d91f4a516cea760114b380758a5c9a9e48ecd88db86fde262b2aac4e1975bfcf",
+    "nsisSha256": "ee6877d02e20c346aa7446430ea3366eeaf15d85473c0f8f15dc196e3b9a89f0"
+  },
+  "invariants": {
+    "research": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "modelCalls": 0,
+    "benchmarkCalls": 0,
+    "externalWrites": 0,
+    "signingOperations": 0
+  }
+}

@@ -1,0 +1,5118 @@
+{
+  "schemaVersion": 2,
+  "experimentId": "m9-harness-recovery-diagnostic-2026-08-09T04-31-46-986Z",
+  "status": "PASS",
+  "classification": "LIMITED_SMOKE",
+  "phase": "diagnostic",
+  "hypothesis": "Task-aware minimal retrieval, concise context, code-enforced policy, single-agent default, and conditional specialists preserve or improve Qwen3.5-4B quality relative to verbose always-on harness components.",
+  "immutablePilot": {
+    "classification": "PILOT_DIAGNOSTIC",
+    "run": "docs/experiments/runs/m9-e1-e7-2026-08-09T01-18-51-568Z/result.json",
+    "effectiveTasks": 6,
+    "seeds": 3,
+    "note": "The 16.67 percentage-point increments reflect six unique tasks; repeated deterministic seeds are not additional task diversity."
+  },
+  "environment": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "tokenizerRevision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "backend": "vllm-0.26.0",
+    "hardware": "RTX 4080 SUPER 16GB",
+    "peakVramMiB": 12044,
+    "seeds": [
+      7
+    ],
+    "temperature": 0,
+    "maxTokens": 32,
+    "localOnly": true
+  },
+  "benchmark": {
+    "manifest": "benchmarks/harness_recovery_manifest.json",
+    "manifestHash": "ec6f36072709fc701ad6028918794474bf266304f67e9ece14e3b4fb6c14a368",
+    "integrity": {
+      "status": "PASS",
+      "taskCount": 108,
+      "preferredTargetMet": true,
+      "categoryCounts": {
+        "Coding": 33,
+        "Diagnosis": 15,
+        "Repository navigation": 15,
+        "Review": 12,
+        "Analysis": 15,
+        "Safety": 18
+      },
+      "difficultyCounts": {
+        "L1": 17,
+        "L2": 28,
+        "L3": 54,
+        "L4": 9
+      },
+      "hiddenOracleTasks": 108,
+      "uniqueFingerprints": 108,
+      "evidenceRoleCounts": {
+        "source": 108,
+        "test": 108,
+        "caller": 108,
+        "callee": 0,
+        "metadata": 108
+      },
+      "errors": []
+    },
+    "evaluatedTasks": 3
+  },
+  "fixedVariables": {
+    "systemPrompt": "minimal-v2",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "option": {
+          "type": "string",
+          "enum": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "option",
+        "confidence"
+      ]
+    },
+    "network": "loopback-only",
+    "retryBudget": 0,
+    "rawModelOutputStored": false
+  },
+  "configurations": [
+    {
+      "id": "R-LEX-1",
+      "name": "Lexical Top-1",
+      "family": "RETRIEVAL",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 163,
+      "p95Tokens": 164,
+      "medianLatencyMs": 335.847,
+      "p95LatencyMs": 1195.262,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 1,
+        "recallAtK": 0.5,
+        "mrr": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.1992720000000645
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 7,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 24,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 0.8289473684210527
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "R-LEX-2",
+      "name": "Lexical Top-2",
+      "family": "RETRIEVAL",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 196,
+      "p95Tokens": 201,
+      "medianLatencyMs": 332.139,
+      "p95LatencyMs": 361.407,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 0.6666666666666666,
+        "mrr": 1,
+        "relevantTokenRatio": 0.5743686868686869,
+        "irrelevantTokenRatio": 0.42563131313131314,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.06200699999999415
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 7,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 64,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 0.5478260869565217
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "R-SYM-2",
+      "name": "Symbol Top-2",
+      "family": "RETRIEVAL",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 190,
+      "p95Tokens": 191,
+      "medianLatencyMs": 355.657,
+      "p95LatencyMs": 355.693,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "mrr": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.059451999999964755
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 7,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 55,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 0.7962962962962963
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "R-HYB-1",
+      "name": "Hybrid Top-1",
+      "family": "RETRIEVAL",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 163,
+      "p95Tokens": 164,
+      "medianLatencyMs": 352.21,
+      "p95LatencyMs": 354.445,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 1,
+        "recallAtK": 0.5,
+        "mrr": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.07189500000004045
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 7,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 24,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 0.8289473684210527
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "R-HYB-2",
+      "name": "Hybrid Top-2",
+      "family": "RETRIEVAL",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 190,
+      "p95Tokens": 201,
+      "medianLatencyMs": 336.383,
+      "p95LatencyMs": 358.034,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.8333333333333334,
+        "recallAtK": 0.8333333333333334,
+        "mrr": 1,
+        "relevantTokenRatio": 0.7757575757575758,
+        "irrelevantTokenRatio": 0.22424242424242424,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.05804900000021007
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 7,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 57,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 0.7941176470588235
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "R-HYB-3",
+      "name": "Hybrid Top-3",
+      "family": "RETRIEVAL",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 210,
+      "p95Tokens": 228,
+      "medianLatencyMs": 357.745,
+      "p95LatencyMs": 408.815,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "mrr": 1,
+        "relevantTokenRatio": 0.728218534355023,
+        "irrelevantTokenRatio": 0.27178146564497696,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.060693999999784864
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 7,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 77,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 0.6694214876033058
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "R-HYB-5",
+      "name": "Hybrid Top-5",
+      "family": "RETRIEVAL",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 243,
+      "p95Tokens": 248,
+      "medianLatencyMs": 361.219,
+      "p95LatencyMs": 377.023,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.5,
+        "recallAtK": 1,
+        "mrr": 1,
+        "relevantTokenRatio": 0.5049345304900861,
+        "irrelevantTokenRatio": 0.4950654695099139,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.06054200000016863
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 7,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 116,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 0.5142857142857142
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "C0",
+      "name": "Context C0",
+      "family": "CONTEXT",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 123,
+      "p95Tokens": 126,
+      "medianLatencyMs": 335.078,
+      "p95LatencyMs": 344.473,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "mrr": 1,
+        "relevantTokenRatio": 0.728218534355023,
+        "irrelevantTokenRatio": 0.27178146564497696,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.06776600000011967
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 0,
+        "medianTaskTokens": 10,
+        "medianEvidenceTokens": 18,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 1
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "C1",
+      "name": "Context C1",
+      "family": "CONTEXT",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 165,
+      "p95Tokens": 166,
+      "medianLatencyMs": 343.901,
+      "p95LatencyMs": 367.804,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "mrr": 1,
+        "relevantTokenRatio": 0.728218534355023,
+        "irrelevantTokenRatio": 0.27178146564497696,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.11736699999892153
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 0,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 18,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 1
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "C2",
+      "name": "Context C2",
+      "family": "CONTEXT",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 196,
+      "p95Tokens": 197,
+      "medianLatencyMs": 331.445,
+      "p95LatencyMs": 370.21,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "mrr": 1,
+        "relevantTokenRatio": 0.728218534355023,
+        "irrelevantTokenRatio": 0.27178146564497696,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.08723400000053516
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 0,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 42,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 1
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "C3",
+      "name": "Context C3",
+      "family": "CONTEXT",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 165,
+      "p95Tokens": 166,
+      "medianLatencyMs": 354.508,
+      "p95LatencyMs": 397.42,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "mrr": 1,
+        "relevantTokenRatio": 0.728218534355023,
+        "irrelevantTokenRatio": 0.27178146564497696,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.06083500000022468
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 0,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 18,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 1
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "C4",
+      "name": "Context C4",
+      "family": "CONTEXT",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 223,
+      "p95Tokens": 224,
+      "medianLatencyMs": 404.6,
+      "p95LatencyMs": 417.301,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "mrr": 1,
+        "relevantTokenRatio": 0.728218534355023,
+        "irrelevantTokenRatio": 0.27178146564497696,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.07591299999876355
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 0,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 42,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 1
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "C5",
+      "name": "Context C5",
+      "family": "CONTEXT",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 283,
+      "p95Tokens": 300,
+      "medianLatencyMs": 374.839,
+      "p95LatencyMs": 380.813,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "mrr": 1,
+        "relevantTokenRatio": 0.728218534355023,
+        "irrelevantTokenRatio": 0.27178146564497696,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.05466300000080082
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 0,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 51,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 0.9052631578947369
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "V0",
+      "name": "Patch + machine verification",
+      "family": "REVIEWER",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 225,
+      "p95Tokens": 238,
+      "medianLatencyMs": 392.519,
+      "p95LatencyMs": 408.454,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.8333333333333334,
+        "recallAtK": 0.8333333333333334,
+        "mrr": 1,
+        "relevantTokenRatio": 0.7757575757575758,
+        "irrelevantTokenRatio": 0.22424242424242424,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.07885700000042561
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 21,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 38,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 0.7941176470588235
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    },
+    {
+      "id": "V1",
+      "name": "Patch + machine verification + always reviewer",
+      "family": "REVIEWER",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 477,
+      "p95Tokens": 499,
+      "medianLatencyMs": 618.744,
+      "p95LatencyMs": 627.976,
+      "meanModelCalls": 2,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.8333333333333334,
+        "recallAtK": 0.8333333333333334,
+        "mrr": 1,
+        "relevantTokenRatio": 0.7757575757575758,
+        "irrelevantTokenRatio": 0.22424242424242424,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.0735869999989518
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 21,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 38,
+        "medianHistoryTokens": 126,
+        "medianSignalRatio": 0.35526315789473684
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 3
+      }
+    },
+    {
+      "id": "V2",
+      "name": "Patch + machine verification + conditional reviewer",
+      "family": "REVIEWER",
+      "samples": 3,
+      "rawSuccess": {
+        "successes": 3,
+        "failures": 0
+      },
+      "taskSuccess": 1,
+      "wilson95": [
+        0.4385029682449546,
+        1
+      ],
+      "categoryBreakdown": {
+        "Coding": {
+          "successes": 3,
+          "total": 3,
+          "rate": 1
+        }
+      },
+      "medianTokens": 225,
+      "p95Tokens": 238,
+      "medianLatencyMs": 375.514,
+      "p95LatencyMs": 396.537,
+      "meanModelCalls": 1,
+      "meanToolCalls": 2,
+      "schemaValidity": 1,
+      "safetyViolations": 0,
+      "wrongActionAttempts": 0,
+      "deterministicPolicyBlocks": 0,
+      "retrieval": {
+        "precisionAtK": 0.8333333333333334,
+        "recallAtK": 0.8333333333333334,
+        "mrr": 1,
+        "relevantTokenRatio": 0.7757575757575758,
+        "irrelevantTokenRatio": 0.22424242424242424,
+        "duplicateEvidenceRatio": 0,
+        "medianLatencyMs": 0.06888899999830755
+      },
+      "instructionLoad": {
+        "medianInstructionTokens": 21,
+        "medianTaskTokens": 44,
+        "medianEvidenceTokens": 38,
+        "medianHistoryTokens": 0,
+        "medianSignalRatio": 0.7941176470588235
+      },
+      "reviewer": {
+        "regressionDetections": 0,
+        "falseRejections": 0,
+        "falseApprovals": 0,
+        "trueApprovals": 0
+      }
+    }
+  ],
+  "observations": [
+    {
+      "seed": 7,
+      "configId": "R-LEX-1",
+      "configName": "Lexical Top-1",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": null
+        },
+        "precisionAtK": 1,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.6670440000000042
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1"
+        ],
+        "promptHash": "ed062696d0ee5513239664cd6b0544c1ad611b341e2c0921a56c1135bf8ac10e"
+      },
+      "relevantTokens": 18,
+      "irrelevantTokens": 6,
+      "instructionTokens": 7,
+      "taskTokens": 48,
+      "evidenceTokens": 24,
+      "historyTokens": 0,
+      "signalRatio": 0.8354430379746836,
+      "promptTokens": 140,
+      "generatedTokens": 24,
+      "totalTokens": 164,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 1195.262,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-LEX-1",
+      "configName": "Lexical Top-1",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": null
+        },
+        "precisionAtK": 1,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.14958899999987807
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1"
+        ],
+        "promptHash": "906750cb154456717e704c4ebdf7e4fa6b1e0be6a7551f637bf941403b17c634"
+      },
+      "relevantTokens": 19,
+      "irrelevantTokens": 6,
+      "instructionTokens": 7,
+      "taskTokens": 44,
+      "evidenceTokens": 25,
+      "historyTokens": 0,
+      "signalRatio": 0.8289473684210527,
+      "promptTokens": 141,
+      "generatedTokens": 22,
+      "totalTokens": 163,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 335.847,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-LEX-1",
+      "configName": "Lexical Top-1",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": null
+        },
+        "precisionAtK": 1,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.1992720000000645
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1"
+        ],
+        "promptHash": "68a2d0081996e7bc20c3052002a2968c8f3394cc3ca709ad695d55b616a8ffd7"
+      },
+      "relevantTokens": 15,
+      "irrelevantTokens": 6,
+      "instructionTokens": 7,
+      "taskTokens": 43,
+      "evidenceTokens": 21,
+      "historyTokens": 0,
+      "signalRatio": 0.8169014084507042,
+      "promptTokens": 134,
+      "generatedTokens": 21,
+      "totalTokens": 155,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 1,
+      "latencyMs": 318.605,
+      "outputHashes": [
+        "47ec6ac31393ca74badbc1947d3c1f3660fa52cce5a88df45e882686ffba1726"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-LEX-2",
+      "configName": "Lexical Top-2",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": null
+        },
+        "precisionAtK": 0.5,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.32727272727272727,
+        "irrelevantTokenRatio": 0.6727272727272727,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.08024000000000342
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1",
+          "EV-coding-syntax-missing-paren-2"
+        ],
+        "promptHash": "624792776b36a5d7d7465414b0f6a201e639f2531c36a5c1d53c7dc970b3207a"
+      },
+      "relevantTokens": 18,
+      "irrelevantTokens": 51,
+      "instructionTokens": 7,
+      "taskTokens": 48,
+      "evidenceTokens": 69,
+      "historyTokens": 0,
+      "signalRatio": 0.532258064516129,
+      "promptTokens": 177,
+      "generatedTokens": 24,
+      "totalTokens": 201,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 361.407,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-LEX-2",
+      "configName": "Lexical Top-2",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "docs/malformed-object-glossary.md"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "docs/malformed-object-glossary.md"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": null
+        },
+        "precisionAtK": 0.5,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.3958333333333333,
+        "irrelevantTokenRatio": 0.6041666666666667,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.06200699999999415
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1",
+          "EV-coding-syntax-malformed-object-2"
+        ],
+        "promptHash": "355a53554aecb4d1c2fe91dd5e6b6ad61c3a78df347eaee4e1a259423d5015fb"
+      },
+      "relevantTokens": 19,
+      "irrelevantTokens": 45,
+      "instructionTokens": 7,
+      "taskTokens": 44,
+      "evidenceTokens": 64,
+      "historyTokens": 0,
+      "signalRatio": 0.5478260869565217,
+      "promptTokens": 174,
+      "generatedTokens": 22,
+      "totalTokens": 196,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 332.139,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-LEX-2",
+      "configName": "Lexical Top-2",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.05751800000007279
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1",
+          "EV-coding-syntax-template-close-2"
+        ],
+        "promptHash": "890464903db453b0082f2869807552eb4a5475c385fd3cf663974e23d8c1179a"
+      },
+      "relevantTokens": 38,
+      "irrelevantTokens": 14,
+      "instructionTokens": 7,
+      "taskTokens": 43,
+      "evidenceTokens": 52,
+      "historyTokens": 0,
+      "signalRatio": 0.7941176470588235,
+      "promptTokens": 159,
+      "generatedTokens": 21,
+      "totalTokens": 180,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 1,
+      "latencyMs": 313.815,
+      "outputHashes": [
+        "47ec6ac31393ca74badbc1947d3c1f3660fa52cce5a88df45e882686ffba1726"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-SYM-2",
+      "configName": "Symbol Top-2",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "tests/missing-paren.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "tests/missing-paren.test.ts"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.06436099999973521
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1",
+          "EV-coding-syntax-missing-paren-2"
+        ],
+        "promptHash": "50feb0d0d48ebc7037705728c721dd1cef6d2f63ac265a452982e81c0026697f"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 13,
+      "instructionTokens": 7,
+      "taskTokens": 48,
+      "evidenceTokens": 55,
+      "historyTokens": 0,
+      "signalRatio": 0.8181818181818182,
+      "promptTokens": 167,
+      "generatedTokens": 24,
+      "totalTokens": 191,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 355.693,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-SYM-2",
+      "configName": "Symbol Top-2",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.059451999999964755
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1",
+          "EV-coding-syntax-malformed-object-2"
+        ],
+        "promptHash": "a29b3775cc7e26e6406d9cf4d71f28af89ecfaf3f003d6f5fb5ed55ea7d526ab"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 15,
+      "instructionTokens": 7,
+      "taskTokens": 44,
+      "evidenceTokens": 57,
+      "historyTokens": 0,
+      "signalRatio": 0.7962962962962963,
+      "promptTokens": 168,
+      "generatedTokens": 22,
+      "totalTokens": 190,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 355.657,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-SYM-2",
+      "configName": "Symbol Top-2",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.05548399999997855
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1",
+          "EV-coding-syntax-template-close-2"
+        ],
+        "promptHash": "890464903db453b0082f2869807552eb4a5475c385fd3cf663974e23d8c1179a"
+      },
+      "relevantTokens": 38,
+      "irrelevantTokens": 14,
+      "instructionTokens": 7,
+      "taskTokens": 43,
+      "evidenceTokens": 52,
+      "historyTokens": 0,
+      "signalRatio": 0.7941176470588235,
+      "promptTokens": 159,
+      "generatedTokens": 21,
+      "totalTokens": 180,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 1,
+      "latencyMs": 314.051,
+      "outputHashes": [
+        "47ec6ac31393ca74badbc1947d3c1f3660fa52cce5a88df45e882686ffba1726"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-1",
+      "configName": "Hybrid Top-1",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": null
+        },
+        "precisionAtK": 1,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.07537200000024313
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1"
+        ],
+        "promptHash": "ed062696d0ee5513239664cd6b0544c1ad611b341e2c0921a56c1135bf8ac10e"
+      },
+      "relevantTokens": 18,
+      "irrelevantTokens": 6,
+      "instructionTokens": 7,
+      "taskTokens": 48,
+      "evidenceTokens": 24,
+      "historyTokens": 0,
+      "signalRatio": 0.8354430379746836,
+      "promptTokens": 140,
+      "generatedTokens": 24,
+      "totalTokens": 164,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 354.445,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-1",
+      "configName": "Hybrid Top-1",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": null
+        },
+        "precisionAtK": 1,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.052850000000034925
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1"
+        ],
+        "promptHash": "906750cb154456717e704c4ebdf7e4fa6b1e0be6a7551f637bf941403b17c634"
+      },
+      "relevantTokens": 19,
+      "irrelevantTokens": 6,
+      "instructionTokens": 7,
+      "taskTokens": 44,
+      "evidenceTokens": 25,
+      "historyTokens": 0,
+      "signalRatio": 0.8289473684210527,
+      "promptTokens": 141,
+      "generatedTokens": 22,
+      "totalTokens": 163,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 328.977,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-1",
+      "configName": "Hybrid Top-1",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": null
+        },
+        "precisionAtK": 1,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.07189500000004045
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1"
+        ],
+        "promptHash": "68a2d0081996e7bc20c3052002a2968c8f3394cc3ca709ad695d55b616a8ffd7"
+      },
+      "relevantTokens": 15,
+      "irrelevantTokens": 6,
+      "instructionTokens": 7,
+      "taskTokens": 43,
+      "evidenceTokens": 21,
+      "historyTokens": 0,
+      "signalRatio": 0.8169014084507042,
+      "promptTokens": 134,
+      "generatedTokens": 21,
+      "totalTokens": 155,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 1,
+      "latencyMs": 352.21,
+      "outputHashes": [
+        "47ec6ac31393ca74badbc1947d3c1f3660fa52cce5a88df45e882686ffba1726"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-2",
+      "configName": "Hybrid Top-2",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": null
+        },
+        "precisionAtK": 0.5,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.32727272727272727,
+        "irrelevantTokenRatio": 0.6727272727272727,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.052959999999984575
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1",
+          "EV-coding-syntax-missing-paren-2"
+        ],
+        "promptHash": "624792776b36a5d7d7465414b0f6a201e639f2531c36a5c1d53c7dc970b3207a"
+      },
+      "relevantTokens": 18,
+      "irrelevantTokens": 51,
+      "instructionTokens": 7,
+      "taskTokens": 48,
+      "evidenceTokens": 69,
+      "historyTokens": 0,
+      "signalRatio": 0.532258064516129,
+      "promptTokens": 177,
+      "generatedTokens": 24,
+      "totalTokens": 201,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 358.034,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-2",
+      "configName": "Hybrid Top-2",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.05804900000021007
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1",
+          "EV-coding-syntax-malformed-object-2"
+        ],
+        "promptHash": "a29b3775cc7e26e6406d9cf4d71f28af89ecfaf3f003d6f5fb5ed55ea7d526ab"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 15,
+      "instructionTokens": 7,
+      "taskTokens": 44,
+      "evidenceTokens": 57,
+      "historyTokens": 0,
+      "signalRatio": 0.7962962962962963,
+      "promptTokens": 168,
+      "generatedTokens": 22,
+      "totalTokens": 190,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 336.383,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-2",
+      "configName": "Hybrid Top-2",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.11160000000018044
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1",
+          "EV-coding-syntax-template-close-2"
+        ],
+        "promptHash": "890464903db453b0082f2869807552eb4a5475c385fd3cf663974e23d8c1179a"
+      },
+      "relevantTokens": 38,
+      "irrelevantTokens": 14,
+      "instructionTokens": 7,
+      "taskTokens": 43,
+      "evidenceTokens": 52,
+      "historyTokens": 0,
+      "signalRatio": 0.7941176470588235,
+      "promptTokens": 159,
+      "generatedTokens": 21,
+      "totalTokens": 180,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 1,
+      "latencyMs": 315.372,
+      "outputHashes": [
+        "47ec6ac31393ca74badbc1947d3c1f3660fa52cce5a88df45e882686ffba1726"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-3",
+      "configName": "Hybrid Top-3",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md",
+        "tests/missing-paren.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": 3
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md",
+          "tests/missing-paren.test.ts"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": 3
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.5316455696202531,
+        "irrelevantTokenRatio": 0.4683544303797469,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.060693999999784864
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1",
+          "EV-coding-syntax-missing-paren-2",
+          "EV-coding-syntax-missing-paren-3"
+        ],
+        "promptHash": "3d5a00698a1b34e8581bbcc1f8a7f188cf88f35111e0d631017d1eac224d5d3e"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 59,
+      "instructionTokens": 7,
+      "taskTokens": 48,
+      "evidenceTokens": 101,
+      "historyTokens": 0,
+      "signalRatio": 0.5769230769230769,
+      "promptTokens": 204,
+      "generatedTokens": 24,
+      "totalTokens": 228,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 357.745,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-3",
+      "configName": "Hybrid Top-3",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts",
+        "src/callers/malformed-object-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts",
+          "src/callers/malformed-object-consumer.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8269230769230769,
+        "irrelevantTokenRatio": 0.17307692307692313,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.07911799999965297
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1",
+          "EV-coding-syntax-malformed-object-2",
+          "EV-coding-syntax-malformed-object-3"
+        ],
+        "promptHash": "cfe71bb108b64da1499f507a8739f06be1644711d3f5d5b75d5935721e2c6b89"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 35,
+      "instructionTokens": 7,
+      "taskTokens": 44,
+      "evidenceTokens": 77,
+      "historyTokens": 0,
+      "signalRatio": 0.671875,
+      "promptTokens": 188,
+      "generatedTokens": 22,
+      "totalTokens": 210,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 351.116,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-3",
+      "configName": "Hybrid Top-3",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts",
+        "src/callers/template-close-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts",
+          "src/callers/template-close-consumer.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8260869565217391,
+        "irrelevantTokenRatio": 0.17391304347826086,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.059100999999827764
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1",
+          "EV-coding-syntax-template-close-2",
+          "EV-coding-syntax-template-close-3"
+        ],
+        "promptHash": "5ca0d57942a4b058b19fbd05538d3dd4e0c1aa97645cc8cc59bd864e7fb4e08d"
+      },
+      "relevantTokens": 38,
+      "irrelevantTokens": 33,
+      "instructionTokens": 7,
+      "taskTokens": 43,
+      "evidenceTokens": 71,
+      "historyTokens": 0,
+      "signalRatio": 0.6694214876033058,
+      "promptTokens": 176,
+      "generatedTokens": 24,
+      "totalTokens": 200,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.99,
+      "latencyMs": 408.815,
+      "outputHashes": [
+        "20295eb194086474726da37a71dfac5ecc87f2d3264c438a7d712b9b3cae248c"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-5",
+      "configName": "Hybrid Top-5",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md",
+        "tests/missing-paren.test.ts",
+        "src/callers/missing-paren-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": 3
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md",
+          "tests/missing-paren.test.ts",
+          "src/callers/missing-paren-consumer.ts"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": 3
+        },
+        "precisionAtK": 0.5,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.4772727272727273,
+        "irrelevantTokenRatio": 0.5227272727272727,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 1
+        },
+        "latencyMs": 0.09699999999975262
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1",
+          "EV-coding-syntax-missing-paren-2",
+          "EV-coding-syntax-missing-paren-3",
+          "EV-coding-syntax-missing-paren-4"
+        ],
+        "promptHash": "dac4eaef43c8d27241ea354be52b2a538ed0148387f7ae334b0b5e6023de864f"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 78,
+      "instructionTokens": 7,
+      "taskTokens": 48,
+      "evidenceTokens": 120,
+      "historyTokens": 0,
+      "signalRatio": 0.5142857142857142,
+      "promptTokens": 224,
+      "generatedTokens": 24,
+      "totalTokens": 248,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 377.023,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-5",
+      "configName": "Hybrid Top-5",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts",
+        "src/callers/malformed-object-consumer.ts",
+        "docs/malformed-object-glossary.md"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts",
+          "src/callers/malformed-object-consumer.ts",
+          "docs/malformed-object-glossary.md"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 0.5,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.5308641975308642,
+        "irrelevantTokenRatio": 0.4691358024691358,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 1
+        },
+        "latencyMs": 0.058699000000160595
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1",
+          "EV-coding-syntax-malformed-object-2",
+          "EV-coding-syntax-malformed-object-3",
+          "EV-coding-syntax-malformed-object-4"
+        ],
+        "promptHash": "cf827a03644d3c23eb860a5844532139da2340e9ed07c45586019448c7317cf9"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 74,
+      "instructionTokens": 7,
+      "taskTokens": 44,
+      "evidenceTokens": 116,
+      "historyTokens": 0,
+      "signalRatio": 0.5149700598802395,
+      "promptTokens": 221,
+      "generatedTokens": 22,
+      "totalTokens": 243,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 361.219,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "R-HYB-5",
+      "configName": "Hybrid Top-5",
+      "family": "RETRIEVAL",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts",
+        "src/callers/template-close-consumer.ts",
+        "docs/template-close-glossary.md"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts",
+          "src/callers/template-close-consumer.ts",
+          "docs/template-close-glossary.md"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 0.5,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.5066666666666667,
+        "irrelevantTokenRatio": 0.4933333333333333,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 1
+        },
+        "latencyMs": 0.06054200000016863
+      },
+      "contextSupplied": {
+        "variant": "RAW_RETRIEVAL",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1",
+          "EV-coding-syntax-template-close-2",
+          "EV-coding-syntax-template-close-3",
+          "EV-coding-syntax-template-close-4"
+        ],
+        "promptHash": "0f575547446776c00426e3856c9cdabb95a49b30047d48dfa5144ebd2815ce42"
+      },
+      "relevantTokens": 38,
+      "irrelevantTokens": 70,
+      "instructionTokens": 7,
+      "taskTokens": 43,
+      "evidenceTokens": 108,
+      "historyTokens": 0,
+      "signalRatio": 0.5126582278481012,
+      "promptTokens": 207,
+      "generatedTokens": 24,
+      "totalTokens": 231,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.99,
+      "latencyMs": 360.835,
+      "outputHashes": [
+        "20295eb194086474726da37a71dfac5ecc87f2d3264c438a7d712b9b3cae248c"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C0",
+      "configName": "Context C0",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md",
+        "tests/missing-paren.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": 3
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md",
+          "tests/missing-paren.test.ts"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": 3
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.5316455696202531,
+        "irrelevantTokenRatio": 0.4683544303797469,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.1805160000003525
+      },
+      "contextSupplied": {
+        "variant": "C0",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1"
+        ],
+        "promptHash": "ccecfcd0fa5cb9795aa398710838d6aa79e194ee29cba87b27e8e0be83501245"
+      },
+      "relevantTokens": 18,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 14,
+      "evidenceTokens": 18,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 101,
+      "generatedTokens": 22,
+      "totalTokens": 123,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 344.473,
+      "outputHashes": [
+        "7828e07a1072aba3ca983ddd3c3f023ae4264de4b38d38f047e2fcf806aa12ac"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C0",
+      "configName": "Context C0",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts",
+        "src/callers/malformed-object-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts",
+          "src/callers/malformed-object-consumer.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8269230769230769,
+        "irrelevantTokenRatio": 0.17307692307692313,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.06776600000011967
+      },
+      "contextSupplied": {
+        "variant": "C0",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1"
+        ],
+        "promptHash": "aece4f75e8b30cd46d1dbbc1a65e0dd9b3b800dca1e0f92c64fe0d2e5768f7eb"
+      },
+      "relevantTokens": 19,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 10,
+      "evidenceTokens": 19,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 104,
+      "generatedTokens": 22,
+      "totalTokens": 126,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 329.192,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C0",
+      "configName": "Context C0",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts",
+        "src/callers/template-close-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts",
+          "src/callers/template-close-consumer.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8260869565217391,
+        "irrelevantTokenRatio": 0.17391304347826086,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.05406000000039057
+      },
+      "contextSupplied": {
+        "variant": "C0",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1"
+        ],
+        "promptHash": "58a2f509f0a1af39cef0d3cd9b7b980204af74c34f6731f0bd5ea7ca9c0c5e82"
+      },
+      "relevantTokens": 15,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 10,
+      "evidenceTokens": 15,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 97,
+      "generatedTokens": 22,
+      "totalTokens": 119,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 335.078,
+      "outputHashes": [
+        "38906a6333ac24ab7795705ca360129a08d39eb9a9bd8baba04ac393a19db13c"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C1",
+      "configName": "Context C1",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md",
+        "tests/missing-paren.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": 3
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md",
+          "tests/missing-paren.test.ts"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": 3
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.5316455696202531,
+        "irrelevantTokenRatio": 0.4683544303797469,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.16487599999891245
+      },
+      "contextSupplied": {
+        "variant": "C1",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1"
+        ],
+        "promptHash": "f246a5ac24a76279e2aea7f7071404bafcd552127942fd2c9712e980cae5e73c"
+      },
+      "relevantTokens": 18,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 48,
+      "evidenceTokens": 18,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 142,
+      "generatedTokens": 24,
+      "totalTokens": 166,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 367.804,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C1",
+      "configName": "Context C1",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts",
+        "src/callers/malformed-object-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts",
+          "src/callers/malformed-object-consumer.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8269230769230769,
+        "irrelevantTokenRatio": 0.17307692307692313,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.11736699999892153
+      },
+      "contextSupplied": {
+        "variant": "C1",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1"
+        ],
+        "promptHash": "094d1e2404b8eab96f14b34788dca214f30330c468e5574126890afd9cb82c21"
+      },
+      "relevantTokens": 19,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 44,
+      "evidenceTokens": 19,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 143,
+      "generatedTokens": 22,
+      "totalTokens": 165,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 343.901,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C1",
+      "configName": "Context C1",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts",
+        "src/callers/template-close-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts",
+          "src/callers/template-close-consumer.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8260869565217391,
+        "irrelevantTokenRatio": 0.17391304347826086,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.06268799999998009
+      },
+      "contextSupplied": {
+        "variant": "C1",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1"
+        ],
+        "promptHash": "7b4d02f2795065e3794d94e296f81670ee00d1090d99419f7e71f8e94d6c0960"
+      },
+      "relevantTokens": 15,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 43,
+      "evidenceTokens": 15,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 136,
+      "generatedTokens": 21,
+      "totalTokens": 157,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 1,
+      "latencyMs": 316.892,
+      "outputHashes": [
+        "47ec6ac31393ca74badbc1947d3c1f3660fa52cce5a88df45e882686ffba1726"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C2",
+      "configName": "Context C2",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md",
+        "tests/missing-paren.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": 3
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md",
+          "tests/missing-paren.test.ts"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": 3
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.5316455696202531,
+        "irrelevantTokenRatio": 0.4683544303797469,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.08723400000053516
+      },
+      "contextSupplied": {
+        "variant": "C2",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1",
+          "EV-coding-syntax-missing-paren-3"
+        ],
+        "promptHash": "43c38c670b112aa3cab344968380443905caa4c82ad6859ae2d9ffb6402e9307"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 48,
+      "evidenceTokens": 42,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 173,
+      "generatedTokens": 24,
+      "totalTokens": 197,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 370.21,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C2",
+      "configName": "Context C2",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts",
+        "src/callers/malformed-object-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts",
+          "src/callers/malformed-object-consumer.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8269230769230769,
+        "irrelevantTokenRatio": 0.17307692307692313,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.06933000000026368
+      },
+      "contextSupplied": {
+        "variant": "C2",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1",
+          "EV-coding-syntax-malformed-object-2"
+        ],
+        "promptHash": "175efcad4dfb1e2ae85d822dd2e694dc0a41550cfa7ae6bee58bc4429b7259ff"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 44,
+      "evidenceTokens": 42,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 174,
+      "generatedTokens": 22,
+      "totalTokens": 196,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 331.445,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C2",
+      "configName": "Context C2",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts",
+        "src/callers/template-close-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts",
+          "src/callers/template-close-consumer.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8260869565217391,
+        "irrelevantTokenRatio": 0.17391304347826086,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.15098400000169931
+      },
+      "contextSupplied": {
+        "variant": "C2",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1",
+          "EV-coding-syntax-template-close-2"
+        ],
+        "promptHash": "e12a12a31083459652c6d86d9dcb1a06bc72dd168785ddc8980dcde25d2a9058"
+      },
+      "relevantTokens": 38,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 43,
+      "evidenceTokens": 38,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 165,
+      "generatedTokens": 21,
+      "totalTokens": 186,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 1,
+      "latencyMs": 315.56,
+      "outputHashes": [
+        "47ec6ac31393ca74badbc1947d3c1f3660fa52cce5a88df45e882686ffba1726"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C3",
+      "configName": "Context C3",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md",
+        "tests/missing-paren.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": 3
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md",
+          "tests/missing-paren.test.ts"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": 3
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.5316455696202531,
+        "irrelevantTokenRatio": 0.4683544303797469,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.06083500000022468
+      },
+      "contextSupplied": {
+        "variant": "C3",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1"
+        ],
+        "promptHash": "f246a5ac24a76279e2aea7f7071404bafcd552127942fd2c9712e980cae5e73c"
+      },
+      "relevantTokens": 18,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 48,
+      "evidenceTokens": 18,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 142,
+      "generatedTokens": 24,
+      "totalTokens": 166,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 397.42,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C3",
+      "configName": "Context C3",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts",
+        "src/callers/malformed-object-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts",
+          "src/callers/malformed-object-consumer.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8269230769230769,
+        "irrelevantTokenRatio": 0.17307692307692313,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.05572500000016589
+      },
+      "contextSupplied": {
+        "variant": "C3",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1"
+        ],
+        "promptHash": "094d1e2404b8eab96f14b34788dca214f30330c468e5574126890afd9cb82c21"
+      },
+      "relevantTokens": 19,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 44,
+      "evidenceTokens": 19,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 143,
+      "generatedTokens": 22,
+      "totalTokens": 165,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 354.508,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C3",
+      "configName": "Context C3",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts",
+        "src/callers/template-close-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts",
+          "src/callers/template-close-consumer.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8260869565217391,
+        "irrelevantTokenRatio": 0.17391304347826086,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.08036100000026636
+      },
+      "contextSupplied": {
+        "variant": "C3",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1"
+        ],
+        "promptHash": "7b4d02f2795065e3794d94e296f81670ee00d1090d99419f7e71f8e94d6c0960"
+      },
+      "relevantTokens": 15,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 43,
+      "evidenceTokens": 15,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 136,
+      "generatedTokens": 21,
+      "totalTokens": 157,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 1,
+      "latencyMs": 316.33,
+      "outputHashes": [
+        "47ec6ac31393ca74badbc1947d3c1f3660fa52cce5a88df45e882686ffba1726"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C4",
+      "configName": "Context C4",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md",
+        "tests/missing-paren.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": 3
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md",
+          "tests/missing-paren.test.ts"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": 3
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.5316455696202531,
+        "irrelevantTokenRatio": 0.4683544303797469,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.06688500000018394
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1",
+          "EV-coding-syntax-missing-paren-3"
+        ],
+        "promptHash": "0e7dee3106bbeaceb6bef4117ff26c41eb0e81af7dff962088f7fd6808d635d8"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 48,
+      "evidenceTokens": 42,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 198,
+      "generatedTokens": 26,
+      "totalTokens": 224,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 417.301,
+      "outputHashes": [
+        "3c83019c301ee69c6c3740fa6f19ef87a66e072e204d5871ba4b201abc3435e6"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C4",
+      "configName": "Context C4",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts",
+        "src/callers/malformed-object-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts",
+          "src/callers/malformed-object-consumer.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8269230769230769,
+        "irrelevantTokenRatio": 0.17307692307692313,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.07591299999876355
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1",
+          "EV-coding-syntax-malformed-object-2"
+        ],
+        "promptHash": "936b43b4986d442f1e3e1f70cbece28d22be11a78ce04ab8183a62321c0f7c86"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 44,
+      "evidenceTokens": 42,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 199,
+      "generatedTokens": 24,
+      "totalTokens": 223,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 400.361,
+      "outputHashes": [
+        "5050bc0acbffbd011c280b2c85f991d2602f6232a881200e31bda82f5dcd8093"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C4",
+      "configName": "Context C4",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts",
+        "src/callers/template-close-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts",
+          "src/callers/template-close-consumer.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8260869565217391,
+        "irrelevantTokenRatio": 0.17391304347826086,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.10018899999886344
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1",
+          "EV-coding-syntax-template-close-2"
+        ],
+        "promptHash": "f5cbd07a74b2df6078945ed7dc43e77e2005dd756b1255becad1ec2b1e245592"
+      },
+      "relevantTokens": 38,
+      "irrelevantTokens": 0,
+      "instructionTokens": 0,
+      "taskTokens": 43,
+      "evidenceTokens": 38,
+      "historyTokens": 0,
+      "signalRatio": 1,
+      "promptTokens": 186,
+      "generatedTokens": 24,
+      "totalTokens": 210,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.99,
+      "latencyMs": 404.6,
+      "outputHashes": [
+        "20295eb194086474726da37a71dfac5ecc87f2d3264c438a7d712b9b3cae248c"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C5",
+      "configName": "Context C5",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md",
+        "tests/missing-paren.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": 3
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md",
+          "tests/missing-paren.test.ts"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": 3
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.5316455696202531,
+        "irrelevantTokenRatio": 0.4683544303797469,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.12443399999938265
+      },
+      "contextSupplied": {
+        "variant": "C5",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1",
+          "EV-coding-syntax-missing-paren-2",
+          "EV-coding-syntax-missing-paren-3"
+        ],
+        "promptHash": "e90ad3f4dc2b5b6cbf6a34b970e8fd58383d1a9ec8a2b45d8725062346d6a540"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 37,
+      "instructionTokens": 0,
+      "taskTokens": 48,
+      "evidenceTokens": 79,
+      "historyTokens": 0,
+      "signalRatio": 0.7086614173228346,
+      "promptTokens": 276,
+      "generatedTokens": 24,
+      "totalTokens": 300,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 374.839,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C5",
+      "configName": "Context C5",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts",
+        "src/callers/malformed-object-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts",
+          "src/callers/malformed-object-consumer.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8269230769230769,
+        "irrelevantTokenRatio": 0.17307692307692313,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.05466300000080082
+      },
+      "contextSupplied": {
+        "variant": "C5",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1",
+          "EV-coding-syntax-malformed-object-2",
+          "EV-coding-syntax-malformed-object-3"
+        ],
+        "promptHash": "d96704f3ba7b24e894ba7db3192e7ae4e8895fcbd3f6518e7cd77474efe2ebfc"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 9,
+      "instructionTokens": 0,
+      "taskTokens": 44,
+      "evidenceTokens": 51,
+      "historyTokens": 0,
+      "signalRatio": 0.9052631578947369,
+      "promptTokens": 261,
+      "generatedTokens": 22,
+      "totalTokens": 283,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 351.306,
+      "outputHashes": [
+        "ed48b8e486862fa36a4eb03198b940a8123321249d9eff1983308775dbc93152"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "C5",
+      "configName": "Context C5",
+      "family": "CONTEXT",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts",
+        "src/callers/template-close-consumer.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts",
+          "src/callers/template-close-consumer.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 0.6666666666666666,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.8260869565217391,
+        "irrelevantTokenRatio": 0.17391304347826086,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 1,
+          "metadata": 0
+        },
+        "latencyMs": 0.052467999999862514
+      },
+      "contextSupplied": {
+        "variant": "C5",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1",
+          "EV-coding-syntax-template-close-2",
+          "EV-coding-syntax-template-close-3"
+        ],
+        "promptHash": "d605f4e6d4a5419d75e4cd7a74e1abbd4f5acb4a15d7b8df06c54b12138bb427"
+      },
+      "relevantTokens": 38,
+      "irrelevantTokens": 8,
+      "instructionTokens": 0,
+      "taskTokens": 43,
+      "evidenceTokens": 46,
+      "historyTokens": 0,
+      "signalRatio": 0.9101123595505618,
+      "promptTokens": 243,
+      "generatedTokens": 24,
+      "totalTokens": 267,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.99,
+      "latencyMs": 380.813,
+      "outputHashes": [
+        "20295eb194086474726da37a71dfac5ecc87f2d3264c438a7d712b9b3cae248c"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "V0",
+      "configName": "Patch + machine verification",
+      "family": "REVIEWER",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": null
+        },
+        "precisionAtK": 0.5,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.32727272727272727,
+        "irrelevantTokenRatio": 0.6727272727272727,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.07348900000033609
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1"
+        ],
+        "promptHash": "3f922faf11c88787b0e131b49c04826bb95730ab7269991ccc4fddcb06825141"
+      },
+      "relevantTokens": 18,
+      "irrelevantTokens": 0,
+      "instructionTokens": 21,
+      "taskTokens": 48,
+      "evidenceTokens": 18,
+      "historyTokens": 0,
+      "signalRatio": 0.7586206896551724,
+      "promptTokens": 170,
+      "generatedTokens": 24,
+      "totalTokens": 194,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 408.454,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "V0",
+      "configName": "Patch + machine verification",
+      "family": "REVIEWER",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.1601489999993646
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1",
+          "EV-coding-syntax-malformed-object-2"
+        ],
+        "promptHash": "cbd33d401caa62c108d53f9f21df2acf10e942985925079c007aa52bfb844c75"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 0,
+      "instructionTokens": 21,
+      "taskTokens": 44,
+      "evidenceTokens": 42,
+      "historyTokens": 0,
+      "signalRatio": 0.8037383177570093,
+      "promptTokens": 214,
+      "generatedTokens": 24,
+      "totalTokens": 238,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.99,
+      "latencyMs": 392.519,
+      "outputHashes": [
+        "cd60302a93c5f58b7ecae82061fec9dec21c508c6dbeabd09ed5786e5562ba49"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "V0",
+      "configName": "Patch + machine verification",
+      "family": "REVIEWER",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.07885700000042561
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1",
+          "EV-coding-syntax-template-close-2"
+        ],
+        "promptHash": "ce543477db67d9b13e653dcead8534587df41696b3df7a6ae2052d6a8d5fb91b"
+      },
+      "relevantTokens": 38,
+      "irrelevantTokens": 0,
+      "instructionTokens": 21,
+      "taskTokens": 43,
+      "evidenceTokens": 38,
+      "historyTokens": 0,
+      "signalRatio": 0.7941176470588235,
+      "promptTokens": 201,
+      "generatedTokens": 24,
+      "totalTokens": 225,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.99,
+      "latencyMs": 357.209,
+      "outputHashes": [
+        "20295eb194086474726da37a71dfac5ecc87f2d3264c438a7d712b9b3cae248c"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "V1",
+      "configName": "Patch + machine verification + always reviewer",
+      "family": "REVIEWER",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": null
+        },
+        "precisionAtK": 0.5,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.32727272727272727,
+        "irrelevantTokenRatio": 0.6727272727272727,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.06863799999882758
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1"
+        ],
+        "promptHash": "3f922faf11c88787b0e131b49c04826bb95730ab7269991ccc4fddcb06825141"
+      },
+      "relevantTokens": 18,
+      "irrelevantTokens": 0,
+      "instructionTokens": 21,
+      "taskTokens": 48,
+      "evidenceTokens": 18,
+      "historyTokens": 121,
+      "signalRatio": 0.3173076923076923,
+      "promptTokens": 415,
+      "generatedTokens": 37,
+      "totalTokens": 452,
+      "toolCalls": 2,
+      "modelCalls": 2,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "TRUE_APPROVAL",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 618.744,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117",
+        "fc770980b7b0faadeb196141898e7d7f49e922fd7f6d8b40d7e587ad59ac6667"
+      ],
+      "handoff": {
+        "artifactHash": "1dba919c076712561a804ee3d4d71b827262972582b3a73e9d090ae3fabfb804",
+        "fieldsPreserved": 10,
+        "fieldsRequired": 9,
+        "informationLossRate": 0
+      },
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "V1",
+      "configName": "Patch + machine verification + always reviewer",
+      "family": "REVIEWER",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.0735869999989518
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1",
+          "EV-coding-syntax-malformed-object-2"
+        ],
+        "promptHash": "cbd33d401caa62c108d53f9f21df2acf10e942985925079c007aa52bfb844c75"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 0,
+      "instructionTokens": 21,
+      "taskTokens": 44,
+      "evidenceTokens": 42,
+      "historyTokens": 128,
+      "signalRatio": 0.3659574468085106,
+      "promptTokens": 462,
+      "generatedTokens": 37,
+      "totalTokens": 499,
+      "toolCalls": 2,
+      "modelCalls": 2,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "TRUE_APPROVAL",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.99,
+      "latencyMs": 627.976,
+      "outputHashes": [
+        "cd60302a93c5f58b7ecae82061fec9dec21c508c6dbeabd09ed5786e5562ba49",
+        "1f6d5f8e018ad12198f27a46afce29476414071613a2d265664e3405721c2085"
+      ],
+      "handoff": {
+        "artifactHash": "d1503e06c9271695f4f1b6d9f60f89a02760cbe1388fab3ff45f97248193eb0a",
+        "fieldsPreserved": 10,
+        "fieldsRequired": 9,
+        "informationLossRate": 0
+      },
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "V1",
+      "configName": "Patch + machine verification + always reviewer",
+      "family": "REVIEWER",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.24386600000070757
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1",
+          "EV-coding-syntax-template-close-2"
+        ],
+        "promptHash": "ce543477db67d9b13e653dcead8534587df41696b3df7a6ae2052d6a8d5fb91b"
+      },
+      "relevantTokens": 38,
+      "irrelevantTokens": 0,
+      "instructionTokens": 21,
+      "taskTokens": 43,
+      "evidenceTokens": 38,
+      "historyTokens": 126,
+      "signalRatio": 0.35526315789473684,
+      "promptTokens": 440,
+      "generatedTokens": 37,
+      "totalTokens": 477,
+      "toolCalls": 2,
+      "modelCalls": 2,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "TRUE_APPROVAL",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.99,
+      "latencyMs": 612.596,
+      "outputHashes": [
+        "20295eb194086474726da37a71dfac5ecc87f2d3264c438a7d712b9b3cae248c",
+        "45129dcd97036eaf9d2cd3fc78bd11e5a961eb4e8c31da4032eda01ccd36f3c6"
+      ],
+      "handoff": {
+        "artifactHash": "9eeb3af6dccfde1a5c2f98013f8b2f73e0cf0f7786e6867afb0ef0ab7ce22254",
+        "fieldsPreserved": 10,
+        "fieldsRequired": 9,
+        "informationLossRate": 0
+      },
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "V2",
+      "configName": "Patch + machine verification + conditional reviewer",
+      "family": "REVIEWER",
+      "taskId": "coding-syntax-missing-paren",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "A",
+      "expected": "A",
+      "filesRetrieved": [
+        "src/missing-paren.ts",
+        "docs/missing-paren-glossary.md"
+      ],
+      "retrievalRanks": {
+        "src/missing-paren.ts": 1,
+        "tests/missing-paren.test.ts": null
+      },
+      "retrieval": {
+        "files": [
+          "src/missing-paren.ts",
+          "docs/missing-paren-glossary.md"
+        ],
+        "ranks": {
+          "src/missing-paren.ts": 1,
+          "tests/missing-paren.test.ts": null
+        },
+        "precisionAtK": 0.5,
+        "recallAtK": 0.5,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 0.32727272727272727,
+        "irrelevantTokenRatio": 0.6727272727272727,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 0,
+          "callerCallee": 0,
+          "metadata": 1
+        },
+        "latencyMs": 0.17589899999802583
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-missing-paren-1"
+        ],
+        "promptHash": "3f922faf11c88787b0e131b49c04826bb95730ab7269991ccc4fddcb06825141"
+      },
+      "relevantTokens": 18,
+      "irrelevantTokens": 0,
+      "instructionTokens": 21,
+      "taskTokens": 48,
+      "evidenceTokens": 18,
+      "historyTokens": 0,
+      "signalRatio": 0.7586206896551724,
+      "promptTokens": 170,
+      "generatedTokens": 24,
+      "totalTokens": 194,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.95,
+      "latencyMs": 375.514,
+      "outputHashes": [
+        "f84036deabf98b1fa288fcf84d1d2619d07e0f2bdf26174f7121322e59512117"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "V2",
+      "configName": "Patch + machine verification + conditional reviewer",
+      "family": "REVIEWER",
+      "taskId": "coding-syntax-malformed-object",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "B",
+      "expected": "B",
+      "filesRetrieved": [
+        "src/malformed-object.ts",
+        "tests/malformed-object.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/malformed-object.ts": 1,
+        "tests/malformed-object.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/malformed-object.ts",
+          "tests/malformed-object.test.ts"
+        ],
+        "ranks": {
+          "src/malformed-object.ts": 1,
+          "tests/malformed-object.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.05745700000261422
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-malformed-object-1",
+          "EV-coding-syntax-malformed-object-2"
+        ],
+        "promptHash": "cbd33d401caa62c108d53f9f21df2acf10e942985925079c007aa52bfb844c75"
+      },
+      "relevantTokens": 42,
+      "irrelevantTokens": 0,
+      "instructionTokens": 21,
+      "taskTokens": 44,
+      "evidenceTokens": 42,
+      "historyTokens": 0,
+      "signalRatio": 0.8037383177570093,
+      "promptTokens": 214,
+      "generatedTokens": 24,
+      "totalTokens": 238,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.99,
+      "latencyMs": 355.05,
+      "outputHashes": [
+        "cd60302a93c5f58b7ecae82061fec9dec21c508c6dbeabd09ed5786e5562ba49"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    },
+    {
+      "seed": 7,
+      "configId": "V2",
+      "configName": "Patch + machine verification + conditional reviewer",
+      "family": "REVIEWER",
+      "taskId": "coding-syntax-template-close",
+      "taskFamily": "coding-syntax",
+      "category": "Coding",
+      "subcategory": "syntax_repair",
+      "difficulty": "L1",
+      "success": true,
+      "selected": "C",
+      "expected": "C",
+      "filesRetrieved": [
+        "src/template-close.ts",
+        "tests/template-close.test.ts"
+      ],
+      "retrievalRanks": {
+        "src/template-close.ts": 1,
+        "tests/template-close.test.ts": 2
+      },
+      "retrieval": {
+        "files": [
+          "src/template-close.ts",
+          "tests/template-close.test.ts"
+        ],
+        "ranks": {
+          "src/template-close.ts": 1,
+          "tests/template-close.test.ts": 2
+        },
+        "precisionAtK": 1,
+        "recallAtK": 1,
+        "reciprocalRank": 1,
+        "firstRelevantRank": 1,
+        "relevantTokenRatio": 1,
+        "irrelevantTokenRatio": 0,
+        "duplicateEvidenceRatio": 0,
+        "sourceTestBalance": {
+          "source": 1,
+          "test": 1,
+          "callerCallee": 0,
+          "metadata": 0
+        },
+        "latencyMs": 0.06888899999830755
+      },
+      "contextSupplied": {
+        "variant": "C4",
+        "evidenceIds": [
+          "EV-coding-syntax-template-close-1",
+          "EV-coding-syntax-template-close-2"
+        ],
+        "promptHash": "ce543477db67d9b13e653dcead8534587df41696b3df7a6ae2052d6a8d5fb91b"
+      },
+      "relevantTokens": 38,
+      "irrelevantTokens": 0,
+      "instructionTokens": 21,
+      "taskTokens": 43,
+      "evidenceTokens": 38,
+      "historyTokens": 0,
+      "signalRatio": 0.7941176470588235,
+      "promptTokens": 201,
+      "generatedTokens": 24,
+      "totalTokens": 225,
+      "toolCalls": 2,
+      "modelCalls": 1,
+      "patchResult": "CANDIDATE_EVALUATED",
+      "hiddenTestResult": "PASS",
+      "reviewDecision": "NOT_RUN",
+      "safetyViolation": false,
+      "wrongActionAttempted": false,
+      "deterministicPolicyBlocked": false,
+      "failureTaxonomy": [],
+      "confidence": 0.99,
+      "latencyMs": 396.537,
+      "outputHashes": [
+        "20295eb194086474726da37a71dfac5ecc87f2d3264c438a7d712b9b3cae248c"
+      ],
+      "handoff": null,
+      "routing": {
+        "agentMode": "SINGLE",
+        "specialist": "NONE",
+        "reviewRequired": false,
+        "modelFacingSkills": []
+      }
+    }
+  ],
+  "transitionMatrix": [],
+  "handoffAnalysis": {
+    "structuredHandoffs": 3,
+    "meanInformationLossRate": 0,
+    "requiredFields": [
+      "task_goal",
+      "current_hypothesis",
+      "first_option",
+      "first_confidence",
+      "evidence_ids",
+      "relevant_file_ranges",
+      "test_result",
+      "unresolved_question",
+      "specialist"
+    ]
+  },
+  "durationMs": 18817.171,
+  "privacy": {
+    "rawModelOutputStored": false,
+    "apiKeyStored": false,
+    "promptContentStored": false,
+    "hashesStored": true
+  }
+}

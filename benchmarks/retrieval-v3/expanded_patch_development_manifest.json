@@ -1,0 +1,975 @@
+{
+  "schemaVersion": 1,
+  "corpusId": "dca-expanded-patch-v3-development-g1",
+  "classification": "EXECUTABLE_DEVELOPMENT_CORPUS_NOT_HOLDOUT",
+  "tasks": [
+    {
+      "id": "patch-v3-001-bounded-clamp-g1",
+      "repositoryId": "ts-config-service-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "bounded-clamp",
+      "sourcePath": "src/repair_bounded_clamp_1.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_bounded_clamp_1.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-002-division-zero-g1",
+      "repositoryId": "ts-config-service-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "division-zero",
+      "sourcePath": "src/repair_division_zero_2.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_division_zero_2.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-003-duration-unit-g1",
+      "repositoryId": "ts-config-service-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "duration-unit",
+      "sourcePath": "src/repair_duration_unit_3.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_duration_unit_3.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-004-tail-selection-g1",
+      "repositoryId": "ts-config-service-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "tail-selection",
+      "sourcePath": "src/repair_tail_selection_4.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_tail_selection_4.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-005-unicode-prefix-g1",
+      "repositoryId": "python-ledger-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "unicode-prefix",
+      "sourcePath": "app/repair_unicode_prefix_5.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_unicode_prefix_5.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-006-bounded-clamp-g1",
+      "repositoryId": "python-ledger-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "bounded-clamp",
+      "sourcePath": "app/repair_bounded_clamp_6.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_bounded_clamp_6.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-007-division-zero-g1",
+      "repositoryId": "python-ledger-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "division-zero",
+      "sourcePath": "app/repair_division_zero_7.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_division_zero_7.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-008-duration-unit-g1",
+      "repositoryId": "python-ledger-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "duration-unit",
+      "sourcePath": "app/repair_duration_unit_8.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_duration_unit_8.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-009-nullable-normalization-g1",
+      "repositoryId": "mixed-portal-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "nullable-normalization",
+      "sourcePath": "src/repair_nullable_normalization_9.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_nullable_normalization_9.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-010-unicode-prefix-g1",
+      "repositoryId": "mixed-portal-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "unicode-prefix",
+      "sourcePath": "src/repair_unicode_prefix_10.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_unicode_prefix_10.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-011-bounded-clamp-g1",
+      "repositoryId": "mixed-portal-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "bounded-clamp",
+      "sourcePath": "src/repair_bounded_clamp_11.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_bounded_clamp_11.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-012-division-zero-g1",
+      "repositoryId": "mixed-portal-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "division-zero",
+      "sourcePath": "src/repair_division_zero_12.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_division_zero_12.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-013-strict-integer-g1",
+      "repositoryId": "ts-event-worker-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "strict-integer",
+      "sourcePath": "src/repair_strict_integer_13.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_strict_integer_13.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-014-nullable-normalization-g1",
+      "repositoryId": "ts-event-worker-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "nullable-normalization",
+      "sourcePath": "src/repair_nullable_normalization_14.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_nullable_normalization_14.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-015-unicode-prefix-g1",
+      "repositoryId": "ts-event-worker-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "unicode-prefix",
+      "sourcePath": "src/repair_unicode_prefix_15.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_unicode_prefix_15.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-016-bounded-clamp-g1",
+      "repositoryId": "ts-event-worker-fixture-g1",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "bounded-clamp",
+      "sourcePath": "src/repair_bounded_clamp_16.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_bounded_clamp_16.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-017-falsy-map-value-g1",
+      "repositoryId": "python-cli-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "falsy-map-value",
+      "sourcePath": "app/repair_falsy_map_value_17.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_falsy_map_value_17.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-018-strict-integer-g1",
+      "repositoryId": "python-cli-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "strict-integer",
+      "sourcePath": "app/repair_strict_integer_18.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_strict_integer_18.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-019-nullable-normalization-g1",
+      "repositoryId": "python-cli-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "nullable-normalization",
+      "sourcePath": "app/repair_nullable_normalization_19.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_nullable_normalization_19.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-020-unicode-prefix-g1",
+      "repositoryId": "python-cli-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "unicode-prefix",
+      "sourcePath": "app/repair_unicode_prefix_20.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_unicode_prefix_20.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-021-tail-selection-g1",
+      "repositoryId": "mixed-data-pipeline-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python stage + TypeScript adapter",
+      "testFramework": "unittest",
+      "faultPattern": "tail-selection",
+      "sourcePath": "app/repair_tail_selection_21.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_tail_selection_21.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-022-falsy-map-value-g1",
+      "repositoryId": "mixed-data-pipeline-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python stage + TypeScript adapter",
+      "testFramework": "unittest",
+      "faultPattern": "falsy-map-value",
+      "sourcePath": "app/repair_falsy_map_value_22.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_falsy_map_value_22.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-023-strict-integer-g1",
+      "repositoryId": "mixed-data-pipeline-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python stage + TypeScript adapter",
+      "testFramework": "unittest",
+      "faultPattern": "strict-integer",
+      "sourcePath": "app/repair_strict_integer_23.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_strict_integer_23.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-024-nullable-normalization-g1",
+      "repositoryId": "mixed-data-pipeline-fixture-g1",
+      "language": "python",
+      "buildSystem": "Python stage + TypeScript adapter",
+      "testFramework": "unittest",
+      "faultPattern": "nullable-normalization",
+      "sourcePath": "app/repair_nullable_normalization_24.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_nullable_normalization_24.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-025-bounded-clamp-g2",
+      "repositoryId": "ts-config-service-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "bounded-clamp",
+      "sourcePath": "src/repair_bounded_clamp_1.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_bounded_clamp_1.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-026-division-zero-g2",
+      "repositoryId": "ts-config-service-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "division-zero",
+      "sourcePath": "src/repair_division_zero_2.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_division_zero_2.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-027-duration-unit-g2",
+      "repositoryId": "ts-config-service-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "duration-unit",
+      "sourcePath": "src/repair_duration_unit_3.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_duration_unit_3.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-028-tail-selection-g2",
+      "repositoryId": "ts-config-service-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "tail-selection",
+      "sourcePath": "src/repair_tail_selection_4.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_tail_selection_4.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-029-unicode-prefix-g2",
+      "repositoryId": "python-ledger-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "unicode-prefix",
+      "sourcePath": "app/repair_unicode_prefix_5.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_unicode_prefix_5.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-030-bounded-clamp-g2",
+      "repositoryId": "python-ledger-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "bounded-clamp",
+      "sourcePath": "app/repair_bounded_clamp_6.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_bounded_clamp_6.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-031-division-zero-g2",
+      "repositoryId": "python-ledger-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "division-zero",
+      "sourcePath": "app/repair_division_zero_7.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_division_zero_7.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-032-duration-unit-g2",
+      "repositoryId": "python-ledger-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "duration-unit",
+      "sourcePath": "app/repair_duration_unit_8.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_duration_unit_8.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-033-nullable-normalization-g2",
+      "repositoryId": "mixed-portal-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "nullable-normalization",
+      "sourcePath": "src/repair_nullable_normalization_9.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_nullable_normalization_9.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-034-unicode-prefix-g2",
+      "repositoryId": "mixed-portal-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "unicode-prefix",
+      "sourcePath": "src/repair_unicode_prefix_10.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_unicode_prefix_10.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-035-bounded-clamp-g2",
+      "repositoryId": "mixed-portal-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "bounded-clamp",
+      "sourcePath": "src/repair_bounded_clamp_11.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_bounded_clamp_11.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-036-division-zero-g2",
+      "repositoryId": "mixed-portal-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "division-zero",
+      "sourcePath": "src/repair_division_zero_12.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_division_zero_12.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-037-strict-integer-g2",
+      "repositoryId": "ts-event-worker-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "strict-integer",
+      "sourcePath": "src/repair_strict_integer_13.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_strict_integer_13.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-038-nullable-normalization-g2",
+      "repositoryId": "ts-event-worker-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "nullable-normalization",
+      "sourcePath": "src/repair_nullable_normalization_14.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_nullable_normalization_14.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-039-unicode-prefix-g2",
+      "repositoryId": "ts-event-worker-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "unicode-prefix",
+      "sourcePath": "src/repair_unicode_prefix_15.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_unicode_prefix_15.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-040-bounded-clamp-g2",
+      "repositoryId": "ts-event-worker-fixture-g2",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "bounded-clamp",
+      "sourcePath": "src/repair_bounded_clamp_16.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_bounded_clamp_16.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-041-falsy-map-value-g2",
+      "repositoryId": "python-cli-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "falsy-map-value",
+      "sourcePath": "app/repair_falsy_map_value_17.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_falsy_map_value_17.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-042-strict-integer-g2",
+      "repositoryId": "python-cli-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "strict-integer",
+      "sourcePath": "app/repair_strict_integer_18.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_strict_integer_18.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-043-nullable-normalization-g2",
+      "repositoryId": "python-cli-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "nullable-normalization",
+      "sourcePath": "app/repair_nullable_normalization_19.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_nullable_normalization_19.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-044-unicode-prefix-g2",
+      "repositoryId": "python-cli-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "unicode-prefix",
+      "sourcePath": "app/repair_unicode_prefix_20.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_unicode_prefix_20.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-045-tail-selection-g2",
+      "repositoryId": "mixed-data-pipeline-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python stage + TypeScript adapter",
+      "testFramework": "unittest",
+      "faultPattern": "tail-selection",
+      "sourcePath": "app/repair_tail_selection_21.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_tail_selection_21.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-046-falsy-map-value-g2",
+      "repositoryId": "mixed-data-pipeline-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python stage + TypeScript adapter",
+      "testFramework": "unittest",
+      "faultPattern": "falsy-map-value",
+      "sourcePath": "app/repair_falsy_map_value_22.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_falsy_map_value_22.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-047-strict-integer-g2",
+      "repositoryId": "mixed-data-pipeline-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python stage + TypeScript adapter",
+      "testFramework": "unittest",
+      "faultPattern": "strict-integer",
+      "sourcePath": "app/repair_strict_integer_23.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_strict_integer_23.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-048-nullable-normalization-g2",
+      "repositoryId": "mixed-data-pipeline-fixture-g2",
+      "language": "python",
+      "buildSystem": "Python stage + TypeScript adapter",
+      "testFramework": "unittest",
+      "faultPattern": "nullable-normalization",
+      "sourcePath": "app/repair_nullable_normalization_24.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_nullable_normalization_24.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-049-bounded-clamp-g3",
+      "repositoryId": "ts-config-service-fixture-g3",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "bounded-clamp",
+      "sourcePath": "src/repair_bounded_clamp_1.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_bounded_clamp_1.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-050-division-zero-g3",
+      "repositoryId": "ts-config-service-fixture-g3",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "division-zero",
+      "sourcePath": "src/repair_division_zero_2.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_division_zero_2.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-051-duration-unit-g3",
+      "repositoryId": "ts-config-service-fixture-g3",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "duration-unit",
+      "sourcePath": "src/repair_duration_unit_3.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_duration_unit_3.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-052-tail-selection-g3",
+      "repositoryId": "ts-config-service-fixture-g3",
+      "language": "typescript",
+      "buildSystem": "Node type stripping",
+      "testFramework": "node:test",
+      "faultPattern": "tail-selection",
+      "sourcePath": "src/repair_tail_selection_4.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_tail_selection_4.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-053-unicode-prefix-g3",
+      "repositoryId": "python-ledger-fixture-g3",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "unicode-prefix",
+      "sourcePath": "app/repair_unicode_prefix_5.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_unicode_prefix_5.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-054-bounded-clamp-g3",
+      "repositoryId": "python-ledger-fixture-g3",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "bounded-clamp",
+      "sourcePath": "app/repair_bounded_clamp_6.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_bounded_clamp_6.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-055-division-zero-g3",
+      "repositoryId": "python-ledger-fixture-g3",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "division-zero",
+      "sourcePath": "app/repair_division_zero_7.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_division_zero_7.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-056-duration-unit-g3",
+      "repositoryId": "python-ledger-fixture-g3",
+      "language": "python",
+      "buildSystem": "Python module",
+      "testFramework": "unittest",
+      "faultPattern": "duration-unit",
+      "sourcePath": "app/repair_duration_unit_8.py",
+      "visibleTestPath": "tests/test_visible.py",
+      "hiddenTestPath": "tests/test_hidden.py",
+      "regressionTestPath": "tests/test_regression.py",
+      "allowedFiles": [
+        "app/repair_duration_unit_8.py"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-057-nullable-normalization-g3",
+      "repositoryId": "mixed-portal-fixture-g3",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "nullable-normalization",
+      "sourcePath": "src/repair_nullable_normalization_9.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_nullable_normalization_9.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-058-unicode-prefix-g3",
+      "repositoryId": "mixed-portal-fixture-g3",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "unicode-prefix",
+      "sourcePath": "src/repair_unicode_prefix_10.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_unicode_prefix_10.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-059-bounded-clamp-g3",
+      "repositoryId": "mixed-portal-fixture-g3",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "bounded-clamp",
+      "sourcePath": "src/repair_bounded_clamp_11.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_bounded_clamp_11.ts"
+      ],
+      "maxChangedLines": 8
+    },
+    {
+      "id": "patch-v3-060-division-zero-g3",
+      "repositoryId": "mixed-portal-fixture-g3",
+      "language": "typescript",
+      "buildSystem": "TypeScript frontend + Python backend",
+      "testFramework": "node:test",
+      "faultPattern": "division-zero",
+      "sourcePath": "src/repair_division_zero_12.ts",
+      "visibleTestPath": "tests/visible.test.ts",
+      "hiddenTestPath": "tests/hidden.test.ts",
+      "regressionTestPath": "tests/regression.test.ts",
+      "allowedFiles": [
+        "src/repair_division_zero_12.ts"
+      ],
+      "maxChangedLines": 8
+    }
+  ],
+  "taskCount": 60,
+  "repositoryFixtures": 15,
+  "semanticArchetypes": 8,
+  "languages": [
+    "typescript",
+    "python"
+  ],
+  "payloadSha256": "0118b422979177f53edb63a7cdd4e08c0f8a2b80b9ed177194718cfdc7e4dbea"
+}

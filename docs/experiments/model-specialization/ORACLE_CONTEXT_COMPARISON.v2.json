@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T14:03:55.688Z",
+  "classification": "CONTROLLED_MODEL_SPECIALIZATION_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "decision": "C_NO_MATERIAL_CODE_SPECIALIZATION_GAIN",
+  "baseline": {
+    "modelId": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "status": "RUN_COMPLETE"
+  },
+  "coder": {
+    "modelId": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "status": "RUN_COMPLETE",
+    "licenseUse": "NON_COMMERCIAL_RESEARCH_EVALUATION_EXPERIMENTAL_DEVELOPMENT_ONLY"
+  },
+  "inputs": {
+    "baseline": {
+      "path": "docs/experiments/model-specialization/BASELINE_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "0c907a668cc545d65c1b533e6496722208584b26a025d58ae1de4dc3fcb45a43"
+    },
+    "coder": {
+      "path": "docs/experiments/model-specialization/CODER_DEVELOPMENT_CAPABILITY_RESULT.json",
+      "sha256": "7d41c6316b508756d0c95dd688440cde334062cf9d8b94f7ed14d3cc3b32c959"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "fairness": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v2.json",
+      "sha256": "de1b2f2901d58c35c7a2a674cf6bd474a47fc87f711c07376cc3da49e147cbaa"
+    }
+  },
+  "report": "Oracle-context reasoning",
+  "comparison": {
+    "phase": "oracleContext",
+    "title": "Oracle-context reasoning",
+    "baseline": {
+      "tasks": 42,
+      "successes": 0,
+      "successRate": 0,
+      "wilson95": [
+        -6.938893903907228e-18,
+        0.08379879086570391
+      ],
+      "schemaValid": 26,
+      "schemaValidity": 0.6190476190476191,
+      "totalTokens": 78550,
+      "meanLatencyMs": 3766.439826714285
+    },
+    "coder": {
+      "tasks": 42,
+      "successes": 0,
+      "successRate": 0,
+      "wilson95": [
+        -6.938893903907228e-18,
+        0.08379879086570391
+      ],
+      "schemaValid": 19,
+      "schemaValidity": 0.4523809523809524,
+      "totalTokens": 74551,
+      "meanLatencyMs": 3010.941507428571
+    },
+    "absoluteDifference": 0,
+    "absolutePercentagePointDifference": 0,
+    "relativeDifference": null,
+    "pairedOutcomes": {
+      "BOTH_PASS": 0,
+      "BASELINE_ONLY": 0,
+      "CODER_ONLY": 0,
+      "BOTH_FAIL": 42
+    },
+    "netCoderWins": 0,
+    "pairedBootstrap95": {
+      "iterations": 10000,
+      "seed": 20260809,
+      "lower": 0,
+      "upper": 0
+    },
+    "pairedTaskIdsSha256": "c76c028d18eef4ce48fba992e03792d1f8801bb55827a6a6a0b7001ec917fe65"
+  }
+}

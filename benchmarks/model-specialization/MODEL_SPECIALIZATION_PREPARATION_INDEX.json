@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "status": "READY_BASELINE_CANDIDATE_BLOCKED_APPROVAL",
+  "artifacts": {
+    "exactManifests": {
+      "path": "benchmarks/model-specialization/EXACT_MODEL_MANIFESTS.json",
+      "sha256": "f16fa1c3d2a8c266b4c9675f3cc771362ed83b4c66ef76a9c68f18f9a449825b"
+    },
+    "developmentManifest": {
+      "path": "benchmarks/model-specialization/MODEL_COMPARISON_DEVELOPMENT_MANIFEST.json",
+      "sha256": "844bf4e3a16a0895a3d289e0b5eaec231a376ef23d77356cbf862c3344cdb556"
+    },
+    "preregistration": {
+      "path": "benchmarks/model-specialization/MODEL_SPECIALIZATION_PREREGISTRATION.json",
+      "sha256": "24f7d11f33fa5d2af168335f57c870278d602849f6c52959313adea343c02f75"
+    },
+    "acquisitionStatus": {
+      "path": "benchmarks/model-specialization/MODEL_ACQUISITION_STATUS.json",
+      "sha256": "87794df8b56c11015fd1bb6d6d8c7701e713e1fbf05c2fbf74c8643cb63f9f08"
+    }
+  },
+  "immutableInputs": {
+    "g4Manifest": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_MANIFEST.v2.json",
+      "sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7"
+    },
+    "g4Oracle": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_ORACLE.v2.sealed.json",
+      "sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6"
+    },
+    "g4Preregistration": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_EXPERIMENT_PREREGISTRATION.v2.json",
+      "sha256": "2dbcea905970ca51f1c9101ff1c870e8d9403546038814a629cb4f3c8d2aa23f"
+    },
+    "g4Seal": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_SEAL.json",
+      "sha256": "0d5e4e5c473f06b847a60843a0ac60287fe2dad08bf14dad569063fed73ef590"
+    },
+    "g3Results": {
+      "path": "benchmarks/g3/G3_RESULTS_INDEX.json",
+      "sha256": "fa9a4680cd409af1f9eb774fb2282d41147bcf6f165f23d8b8c719df5c43a063"
+    }
+  },
+  "candidateBenchmarkCallsObserved": 0,
+  "futureHoldoutCreated": false
+}

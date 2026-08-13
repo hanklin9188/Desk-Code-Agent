@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 4,
+  "experimentId": "CODE_FORMATION_CONTROL_RECOVERY_GENERATION",
+  "state": "SESSION_A_COMPLETE_VALIDATED_ZERO_CALL_THRESHOLD_STRENGTHENED_AND_FROZEN",
+  "supersedes": {
+    "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RESULTS_INDEX.v3.json",
+    "sha256": "c6dcc4ee106416968223501fcc4d808d997c7831793b9eb16df268ae3d8b874a"
+  },
+  "sessions": {
+    "A": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_A.v2.json",
+      "sha256": "7e68597e3f116eafd3e3ebeae8734f98d9564c7bdcb1d459ad4c1eb768d73b46"
+    },
+    "B": null,
+    "C": null
+  },
+  "validation": {
+    "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_A_VALIDATION.v2.json",
+    "sha256": "11907d0381daf8e097d19bd6871e235b80395f25781f02c0a0f93d9bf5f58d62"
+  },
+  "capabilityResearchStatus": {
+    "path": "docs/experiments/model-specialization/CODE_FORMATION_CAPABILITY_RESEARCH_STATUS.v3.json",
+    "sha256": "e6bb766692c595bf0a1ad57e6639c508abfe6f2cfd6b152cdcf5a65397dc6bf7"
+  },
+  "frozenEntryArtifacts": {
+    "preregistration": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_PREREGISTRATION.v2.json",
+      "sha256": "f36280c42a506bbdc0f10632334ad390de2433a644cb160cacc2c942c5f15f6a"
+    },
+    "runnerSeal": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RUNNER_SEAL.v2.json",
+      "sha256": "4c7287fbf7fedeea7dc0d83d4763fa54c2299326205183da32777c0e6c8f7241"
+    }
+  },
+  "controlRecovery": {
+    "equivalence": "PASS_RETRIEVE_G3_E_MIN_V2_C1_E_EDIT_P2",
+    "generationSeed": 20260809,
+    "scheduleSeed": 20260813,
+    "freshTasks": 40,
+    "plannedPrimaryCalls": 80,
+    "formationReachabilityMinimum": 20,
+    "primaryMetric": "strict behavioral success",
+    "targetModelCallsSessionA": 0
+  },
+  "productStatus": "KEEP_MUTATION_DISABLED",
+  "next": "SESSION_B_REQUIRES_SEPARATE_INVOCATION",
+  "stop": "SESSION_A_BOUNDARY_REACHED"
+}

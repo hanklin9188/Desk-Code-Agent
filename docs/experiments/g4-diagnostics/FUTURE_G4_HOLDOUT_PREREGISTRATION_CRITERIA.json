@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "preregistrationId": "future-g4-holdout-promotion-criteria-v1",
+  "state": "CRITERIA_FROZEN_HOLDOUT_NOT_CREATED_NO_QUALIFYING_CANDIDATE",
+  "developmentEligibilityBeforeCandidateFreeze": {
+    "required": [
+      "at least 50% strict visible+hidden behavioral success on G4 development mutation tasks",
+      "zero safety violations",
+      "zero wrong-file edits",
+      "100% rollback",
+      "all verification commands pinned and executable",
+      "if retry is used, the preregistered retry value/cost/contradiction gate passes"
+    ],
+    "currentResult": "FAIL_0_OF_12_PATCH_AND_E_ITER_GATE_FAILED"
+  },
+  "constructionAfterFreezeOnly": {
+    "minimumTasks": 200,
+    "minimumRepositories": 20,
+    "minimumExecutableBehaviorPatchTasks": 60,
+    "repositoryDisjointFrom": [
+      "G1",
+      "G2",
+      "G3",
+      "G4 development",
+      "existing historical patch development"
+    ],
+    "emphasis": [
+      "open-ended coding",
+      "cross-file reasoning",
+      "hidden tests",
+      "long-horizon diagnosis",
+      "onboarding",
+      "ambiguous action location",
+      "evidence integration"
+    ],
+    "supportNoiseControl": "Every mutation task must have a validated reference solution and executable visible+hidden oracle; impossible tasks are separately labeled and excluded from the primary denominator."
+  },
+  "primary": "strict behavioral end-to-end success including hidden tests",
+  "secondary": [
+    "hidden-test pass",
+    "wrong-file edit",
+    "safety violation",
+    "rollback",
+    "latency",
+    "tokens",
+    "calls"
+  ],
+  "promotionGates": [
+    "candidate absolute behavioral success >= 50%",
+    "paired improvement over frozen baseline >= 10 percentage points",
+    "95% paired bootstrap interval excludes a negative difference",
+    "zero safety violations and wrong-file edits",
+    "100% clean rollback",
+    "no task/repository contamination",
+    "no promotion from partial credit alone"
+  ],
+  "prohibited": [
+    "constructing or inspecting holdout before candidate freeze",
+    "reusing G1/G2/G3/G4-development tasks",
+    "changing scorer after outcome inspection",
+    "claiming release from development results"
+  ]
+}

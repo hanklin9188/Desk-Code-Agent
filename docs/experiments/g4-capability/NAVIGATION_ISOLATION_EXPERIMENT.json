@@ -1,0 +1,1029 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "g4-capability-2026-08-09T12-13-22-904Z",
+  "classification": "G4_DEVELOPMENT_DIAGNOSTIC_NOT_HOLDOUT",
+  "startedAt": "2026-08-09T12:13:22.904Z",
+  "completedAt": "2026-08-09T12:24:38.167Z",
+  "inputs": {
+    "manifest": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_MANIFEST.v2.json",
+      "sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7"
+    },
+    "oracle": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_ORACLE.v2.sealed.json",
+      "sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6"
+    },
+    "preregistration": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_EXPERIMENT_PREREGISTRATION.v2.json",
+      "sha256": "2dbcea905970ca51f1c9101ff1c870e8d9403546038814a629cb4f3c8d2aa23f"
+    }
+  },
+  "fixedVariables": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "temperature": 0,
+    "seed": 20260809,
+    "thinking": false,
+    "semanticReviewer": "OFF",
+    "multiAgent": "OFF",
+    "rawModelOutputStored": false
+  },
+  "protectedActions": {
+    "persistentCommit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false,
+    "modelDownload": false
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawModelOutputsStored": false,
+    "hashesAndScoredFieldsOnly": true
+  },
+  "status": "PASS",
+  "conditions": {
+    "TASK_ONLY": {
+      "tasks": 12,
+      "successes": 0,
+      "successRate": 0,
+      "schemaValidity": 0.9166666666666666,
+      "totalTokens": 2338,
+      "totalLatencyMs": 23002.66670699994
+    },
+    "EXACT_FILE": {
+      "tasks": 12,
+      "successes": 3,
+      "successRate": 0.25,
+      "schemaValidity": 0.9166666666666666,
+      "totalTokens": 2523,
+      "totalLatencyMs": 23638.141706999944
+    },
+    "EXACT_SYMBOL": {
+      "tasks": 12,
+      "successes": 0,
+      "successRate": 0,
+      "schemaValidity": 1,
+      "totalTokens": 2449,
+      "totalLatencyMs": 23428.319633000065
+    },
+    "ORACLE_SOURCE_AND_TEST_CONTEXT": {
+      "tasks": 12,
+      "successes": 6,
+      "successRate": 0.5,
+      "schemaValidity": 0.8333333333333334,
+      "totalTokens": 3917,
+      "totalLatencyMs": 27248.534794000007
+    }
+  },
+  "observations": [
+    {
+      "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.3333333333333333,
+      "citedEvidencePaths": [
+        "src/clamp.c",
+        "src/clamp.c"
+      ],
+      "schemaValid": true,
+      "outputHash": "90afbe8c23e0c44138ec6767af95a4fdaaa4e3f6200f2935dd619e3cee71015a",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 53,
+      "completionTokens": 124,
+      "latencyMs": 1714.8236099999922,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "condition": "EXACT_FILE",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.3333333333333333,
+      "citedEvidencePaths": [
+        "src/clamp-upper.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "3c3015c6b7868d866977acded89fcaac264dc79746bd5ad05b1d47727927c908",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 64,
+      "completionTokens": 111,
+      "latencyMs": 1519.5132350000204,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.3333333333333333,
+      "citedEvidencePaths": [
+        "src/clamp.c",
+        "src/clamp.h",
+        "test_clamp.c"
+      ],
+      "schemaValid": true,
+      "outputHash": "cc654c128381ce64255d42bfea525616618332f85fee37f69606044ef7dd5fca",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 59,
+      "completionTokens": 137,
+      "latencyMs": 1869.5332869999984,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.3333333333333333,
+      "citedEvidencePaths": [
+        "src/clamp-upper.mjs",
+        "visible test: assert.equal(clamp(8, 0, 5), 5)"
+      ],
+      "schemaValid": true,
+      "outputHash": "6f9529dc0502ff51ebb74b1b284608bf3c874a5d094dde13ca64f7b23cbf5b77",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 159,
+      "completionTokens": 141,
+      "latencyMs": 1986.3291740000132,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0,
+      "citedEvidencePaths": [],
+      "schemaValid": false,
+      "outputHash": "0d26c8b155799c1fe7f7d2573e63208107de9afa61ce0095882f9faf2e78860d",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 59,
+      "completionTokens": 220,
+      "latencyMs": 3043.156015000015,
+      "error": "INVALID_JSON"
+    },
+    {
+      "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+      "condition": "EXACT_FILE",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": false,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.6,
+      "citedEvidencePaths": [
+        "src/median-even.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "a27101e28d91eeca982092fb83db1294fac668cd960d84f6e90f095215740471",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 70,
+      "completionTokens": 143,
+      "latencyMs": 1997.899001999991,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.7,
+      "citedEvidencePaths": [
+        "median.py",
+        "median.py"
+      ],
+      "schemaValid": true,
+      "outputHash": "b068da03de83ac74696e12205814772a8a8e920c2d44a6cc345f07d2be209f42",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 65,
+      "completionTokens": 150,
+      "latencyMs": 2046.022800000006,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-02-median-even-eb13216fac",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": true,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.6,
+      "citedEvidencePaths": [
+        "src/median-even.mjs",
+        "src/median-even.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "fd65eeacbf0a0063b9b8a9359a8d16ef4ce8c11734dbaf0512b871e7f4333917",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 177,
+      "completionTokens": 171,
+      "latencyMs": 2380.606559000007,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0,
+      "citedEvidencePaths": [
+        "input.txt",
+        "input.txt",
+        "input.txt"
+      ],
+      "schemaValid": true,
+      "outputHash": "b951d9ff7928f5ab2f71247a3670d569f8bb89c3f55e11c75da1c8f378c6d111",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 53,
+      "completionTokens": 88,
+      "latencyMs": 1210.4059159999888,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "condition": "EXACT_FILE",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0,
+      "citedEvidencePaths": [],
+      "schemaValid": false,
+      "outputHash": "80e1ca68104563cab1182848168c252edbdcb18e1de1e3543483bcde84096891",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 65,
+      "completionTokens": 220,
+      "latencyMs": 2982.2714930000075,
+      "error": "INVALID_JSON"
+    },
+    {
+      "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0,
+      "citedEvidencePaths": [
+        "input.txt",
+        "input.txt",
+        "input.txt"
+      ],
+      "schemaValid": true,
+      "outputHash": "250c0e4f4d6fdc426e65991c0bce3e1bad1ceb32df6b9472b17260fce443a548",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 59,
+      "completionTokens": 91,
+      "latencyMs": 1265.253973999992,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": true,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.6666666666666666,
+      "citedEvidencePaths": [
+        "src/stable-unique.mjs",
+        "visible test: 'visible behavior' assertion"
+      ],
+      "schemaValid": true,
+      "outputHash": "9e497a4f44bc92f6521771c7399d087405348bb95f3849000964745c24637c17",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 141,
+      "completionTokens": 136,
+      "latencyMs": 1860.598915999988,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.2857142857142857,
+      "citedEvidencePaths": [
+        "src/core/chunk.py",
+        "src/core/chunk.py",
+        "src/core/chunk.py",
+        "src/core/chunk.py"
+      ],
+      "schemaValid": true,
+      "outputHash": "520eab5652926847714146b2de79e1f5bc45515d9046caaa492b8deb3bc23cfe",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 54,
+      "completionTokens": 200,
+      "latencyMs": 2711.505322000012,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "condition": "EXACT_FILE",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.2857142857142857,
+      "citedEvidencePaths": [
+        "src/chunk-tail.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "6e2e78a4c189bdeb1e248978f9555a1797b636a21a2abf1f5dedabbc216db037",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 66,
+      "completionTokens": 131,
+      "latencyMs": 1848.0371739999973,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.2857142857142857,
+      "citedEvidencePaths": [
+        "src/core/chunk_manager.cpp",
+        "src/core/chunk_manager.cpp",
+        "src/core/chunk_manager.cpp",
+        "src/core/chunk_manager.cpp"
+      ],
+      "schemaValid": true,
+      "outputHash": "5f80fc707a12f2ee64185d984e110f792a3a660d4bf637d84c7501ff56ac60c0",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 60,
+      "completionTokens": 216,
+      "latencyMs": 2978.697881,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.2857142857142857,
+      "citedEvidencePaths": [
+        "src/chunk-tail.mjs",
+        "visible test:chunk([1,2,3],2)"
+      ],
+      "schemaValid": true,
+      "outputHash": "97bc441ccf4b8db7c3b7faa173e712c39c972a7438c4292ffc6209a9adffe5ec",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 170,
+      "completionTokens": 165,
+      "latencyMs": 2268.3111320000025,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.3333333333333333,
+      "citedEvidencePaths": [
+        "palindrome_checker.py",
+        "test_palindrome.py"
+      ],
+      "schemaValid": true,
+      "outputHash": "99f2bcfabde59964cac463b7ec390aea9e47a2d5cb33d20afead4c7720a5eaf7",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 55,
+      "completionTokens": 132,
+      "latencyMs": 1803.3105220000143,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "condition": "EXACT_FILE",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0,
+      "citedEvidencePaths": [
+        "src/palindrome-normalize.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "0747b482f96b75c7b8b2ed1aa790be55a393295c52f695442906bcd7647664a0",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 68,
+      "completionTokens": 113,
+      "latencyMs": 1571.2053399999859,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0,
+      "citedEvidencePaths": [
+        "src/main.py:isPalindrome",
+        "tests/test_palindrome.py:test_isPalindrome"
+      ],
+      "schemaValid": true,
+      "outputHash": "08a4efa64ceeeae848b5d4af4e58934eafa51cd449e602766f1ae4bd57566d30",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 62,
+      "completionTokens": 98,
+      "latencyMs": 1351.4358880000073,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.16666666666666666,
+      "citedEvidencePaths": [
+        "src/palindrome-normalize.mjs",
+        "visible test: Race car"
+      ],
+      "schemaValid": true,
+      "outputHash": "a1ce7c8cff42538150398191b82cf718d741b44351cc2625216a9dfdac55b266",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 144,
+      "completionTokens": 131,
+      "latencyMs": 1797.107548,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.5714285714285714,
+      "citedEvidencePaths": [
+        "src/main.c",
+        "src/main.c"
+      ],
+      "schemaValid": true,
+      "outputHash": "82e9af5ef44d224cc0a3763fd605d31cc70c01a42478ffa69058c334fe45c877",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 59,
+      "completionTokens": 156,
+      "latencyMs": 2141.8061369999778,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "condition": "EXACT_FILE",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.2857142857142857,
+      "citedEvidencePaths": [
+        "src/parse-port.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "5edb56a1d2518a890f4060865a14da5520623dc35a7db47eacd40af6d19f053f",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 70,
+      "completionTokens": 96,
+      "latencyMs": 1319.658918000001,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.42857142857142855,
+      "citedEvidencePaths": [
+        "src/parsePort.c",
+        "src/parsePort.h"
+      ],
+      "schemaValid": true,
+      "outputHash": "874426adc902ba8b4d127909962d05f79c2b7f494b35de8881493fd65f5849ff",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 66,
+      "completionTokens": 144,
+      "latencyMs": 2027.8446330000297,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": true,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.7142857142857143,
+      "citedEvidencePaths": [
+        "src/parse-port.mjs: `const n=parseInt(value,10); return n || null;`"
+      ],
+      "schemaValid": true,
+      "outputHash": "bf378eebc2cef720ce7174f25bf93b6010339a79572eae66f476dbb522e9c226",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 163,
+      "completionTokens": 184,
+      "latencyMs": 2523.6827610000037,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.4,
+      "citedEvidencePaths": [
+        "src/retry_logic.py",
+        "tests/test_retry_logic.py"
+      ],
+      "schemaValid": true,
+      "outputHash": "5e3c81919737b7a86fc2ec03161381be69aa414780563ecda773fb1c36abdb01",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 53,
+      "completionTokens": 112,
+      "latencyMs": 1544.0929299999843,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "condition": "EXACT_FILE",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.2,
+      "citedEvidencePaths": [
+        "src/retry-delay.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "8ee281ce2029ee57c961cec5933d31d4eff22d9da6539f8fc592f02bc192f691",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 64,
+      "completionTokens": 104,
+      "latencyMs": 1427.5973779999767,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.4,
+      "citedEvidencePaths": [
+        "src/retry_logic.py:retryDelay(attempt, base_delay, max_delay=None)",
+        "src/retry_logic.py:retryDelay(attempt, base_delay, max_delay=60)"
+      ],
+      "schemaValid": true,
+      "outputHash": "13f7f8c5286d86de843d5398706eba3448aa04cd67084e935fccc55a31dad585",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 60,
+      "completionTokens": 152,
+      "latencyMs": 2090.63185299997,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0,
+      "citedEvidencePaths": [],
+      "schemaValid": false,
+      "outputHash": "44459450684f01979f4e2c7e6cd4f56c146206d974a5271ccff7724a910963ae",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 173,
+      "completionTokens": 220,
+      "latencyMs": 2990.321927999961,
+      "error": "INVALID_JSON"
+    },
+    {
+      "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.6363636363636364,
+      "citedEvidencePaths": [
+        "src/utils/url_helpers.py",
+        "src/utils/url_helpers.py:join_url_path"
+      ],
+      "schemaValid": true,
+      "outputHash": "ef2cdb876055e286d7f8e37d6f6bdebbb377f241d49d9878db0d68279731a1ae",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 57,
+      "completionTokens": 126,
+      "latencyMs": 1730.2353219999932,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+      "condition": "EXACT_FILE",
+      "success": true,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.45454545454545453,
+      "citedEvidencePaths": [
+        "src/join-url.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "9e432a36136659bad726e9587917e32b5161560c07b9e29ec338165913f64172",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 68,
+      "completionTokens": 177,
+      "latencyMs": 2419.080080999993,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.6363636363636364,
+      "citedEvidencePaths": [
+        "src/utils/url_builder.py",
+        "tests/test_url_builder.py"
+      ],
+      "schemaValid": true,
+      "outputHash": "e7511cc618e974e93f695e21e21a0b33ee43089e0cd6b2f4bc33e0c1bc91b464",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 64,
+      "completionTokens": 164,
+      "latencyMs": 2258.9764650000143,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-08-join-url-73cba0b515",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0,
+      "citedEvidencePaths": [],
+      "schemaValid": false,
+      "outputHash": "b4d59e4f3d4978e5421a8edd0fa9c12fc915d4c1539388e0f93a19640ceab22a",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 158,
+      "completionTokens": 220,
+      "latencyMs": 3012.7112370000104,
+      "error": "INVALID_JSON"
+    },
+    {
+      "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.5,
+      "citedEvidencePaths": [
+        "input.js:12",
+        "input.js:45"
+      ],
+      "schemaValid": true,
+      "outputHash": "bd1b44ec55e61b43c9e183dcc5e479e02ae87138f8843b30ff62fc0ec7c62bad",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 55,
+      "completionTokens": 152,
+      "latencyMs": 2098.5585119999596,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "condition": "EXACT_FILE",
+      "success": true,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.5,
+      "citedEvidencePaths": [
+        "src/escape-regexp.mjs",
+        "src/escape-regexp.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "caae2b987ae9b6a216c955d3e961c9450d573b379f296d24c757c73062ea041a",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 66,
+      "completionTokens": 159,
+      "latencyMs": 2192.502330999996,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.3333333333333333,
+      "citedEvidencePaths": [
+        "src/utils/regex_builder.js",
+        "src/validators/input_sanitizer.js"
+      ],
+      "schemaValid": true,
+      "outputHash": "1345ca7e62b386d0180704d64bb87d996236fe14a50caa300e9bc35105bf3715",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 62,
+      "completionTokens": 130,
+      "latencyMs": 1773.4709060000023,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": true,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.5,
+      "citedEvidencePaths": [
+        "src/escape-regexp.mjs",
+        "visible test: 'visible behavior'"
+      ],
+      "schemaValid": true,
+      "outputHash": "8f0df11d56700d60478c46a17d08993bf119ce0ac06be2ec61a02b9f95ac1064",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 177,
+      "completionTokens": 198,
+      "latencyMs": 2695.8725800000248,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.25,
+      "citedEvidencePaths": [
+        "/logs/processing_batch_1.log",
+        "/logs/processing_batch_2.log",
+        "/tmp/group_state_snapshot_001.json"
+      ],
+      "schemaValid": true,
+      "outputHash": "e3bdca2edbc31f075f01c7a9ec9ba636e0cfccc7dde101e3bdf8319870c6917b",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 54,
+      "completionTokens": 118,
+      "latencyMs": 1616.2445069999667,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "condition": "EXACT_FILE",
+      "success": true,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.75,
+      "citedEvidencePaths": [
+        "src/group-by.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "949cdc893df8804e3561c7ad1ca830a66704c58fa77caee0ae89488ff113a336",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 64,
+      "completionTokens": 111,
+      "latencyMs": 1535.410720999993,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.25,
+      "citedEvidencePaths": [
+        "src/main.py:groupBy",
+        "src/utils.py:groupBy"
+      ],
+      "schemaValid": true,
+      "outputHash": "3e1006b2c8950e0c1af489347e8f433319bef0656d47c30ed982b80e3ef847f0",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 61,
+      "completionTokens": 107,
+      "latencyMs": 1519.7882380000083,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": true,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.5,
+      "citedEvidencePaths": [
+        "src/group-by.mjs",
+        "visible test"
+      ],
+      "schemaValid": true,
+      "outputHash": "2c795dc66ac9c07b9a1cf1b53e361ef1e7040455eb5bbbd89169f54d0438780b",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 166,
+      "completionTokens": 111,
+      "latencyMs": 1528.0326629999909,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.25,
+      "citedEvidencePaths": [
+        "src/sum_range.py",
+        "tests/test_sum_range.py"
+      ],
+      "schemaValid": true,
+      "outputHash": "6b1ce14838b66647f3d9286440e1a5fb43a3b99667954b953ee579ac256822d9",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 58,
+      "completionTokens": 146,
+      "latencyMs": 2051.511935000017,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "condition": "EXACT_FILE",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": false,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.5,
+      "citedEvidencePaths": [
+        "src/inclusive-range.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "66ee29ddcc3b1ca860692a3b63412c6f544cb4e575810d1523977bf8421101ab",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 69,
+      "completionTokens": 161,
+      "latencyMs": 2231.4597749999957,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.25,
+      "citedEvidencePaths": [
+        "src/sum_range.py",
+        "tests/test_sum_range.py"
+      ],
+      "schemaValid": true,
+      "outputHash": "cb02c3dcc79f42d2fe2fcac8c34eff5369990b7d6ae436900bbabed041377049",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 65,
+      "completionTokens": 149,
+      "latencyMs": 2035.1272400000016,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": true,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": true,
+      "rootCauseCoverage": 0.5,
+      "citedEvidencePaths": [
+        "src/inclusive-range.mjs",
+        "visible test: sumRange(1,3) should return 6 (1+2+3), but the current code calculates 1+2=3 because i goes from 1 to 2 (exclusive of 3)."
+      ],
+      "schemaValid": true,
+      "outputHash": "95e8d1b62c572597f81cf369b3f4672bd8bd2282ca88039682855c91bbb89f90",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 155,
+      "completionTokens": 192,
+      "latencyMs": 2646.679455000034,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "condition": "TASK_ONLY",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": false,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.16666666666666666,
+      "citedEvidencePaths": [
+        "/logs/display_output.log",
+        "/config/width_limits.json"
+      ],
+      "schemaValid": true,
+      "outputHash": "4cdd34ddd7d1e5b9c27f2a659e65a49347a3a385b4e9d0f423770b5237d6470e",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 60,
+      "completionTokens": 94,
+      "latencyMs": 1337.015979000018,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "condition": "EXACT_FILE",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.3333333333333333,
+      "citedEvidencePaths": [
+        "src/truncate-ellipsis.mjs"
+      ],
+      "schemaValid": true,
+      "outputHash": "996098ac9eb1d58f3693acdb788995c02e3b8169d739a1de71564f01b19ad830",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 72,
+      "completionTokens": 191,
+      "latencyMs": 2593.506258999987,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "condition": "EXACT_SYMBOL",
+      "success": false,
+      "locationCorrect": false,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.3333333333333333,
+      "citedEvidencePaths": [
+        "truncate.py:truncate(width, text)",
+        "truncate.py:if len(text) > width:"
+      ],
+      "schemaValid": true,
+      "outputHash": "f48b958371c78377389f1ebcdd26d35268c7c0b4807d1c5d7cc8b536d83c014f",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 66,
+      "completionTokens": 162,
+      "latencyMs": 2211.536468000035,
+      "error": null
+    },
+    {
+      "taskId": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "condition": "ORACLE_SOURCE_AND_TEST_CONTEXT",
+      "success": false,
+      "locationCorrect": true,
+      "symbolCorrect": true,
+      "rootCauseCorrect": false,
+      "rootCauseCoverage": 0.3333333333333333,
+      "citedEvidencePaths": [
+        "src/truncate-ellipsis.mjs",
+        "visible test:abcdef"
+      ],
+      "schemaValid": true,
+      "outputHash": "c84ac926264d0b1d96ec4cd19eff02baa3ca7e0b863522ba988ff0fb46e0f4a8",
+      "responseStorage": "HASH_AND_SCORED_FIELDS_ONLY",
+      "promptTokens": 154,
+      "completionTokens": 111,
+      "latencyMs": 1558.2808409999707,
+      "error": null
+    }
+  ]
+}

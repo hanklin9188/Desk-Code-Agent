@@ -1,0 +1,637 @@
+{
+  "schemaVersion": 3,
+  "packetLevel": "L1",
+  "identity": {
+    "taskId": "observability-058-8b0b45f914ed",
+    "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+    "physicalCallId": "privacy-observability-v3-040-c18a82f2-776c-467d-b852-3a06608439c4",
+    "requestSha256": "39613ab4760a502cc2e293806374e1136dfc4d64d60d320ada3de11eed78b90f",
+    "actionIdentitySha256": "cb82113162ef43e50e6b9de3fe697fa9d00791326f720e4c0e439d4c9ecae76e"
+  },
+  "evidence": {
+    "schemaVersion": 2,
+    "level": "L1_STRUCTURED_DERIVED_EDIT_FEATURES",
+    "taskId": "observability-058-8b0b45f914ed",
+    "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+    "physicalCallId": "privacy-observability-v3-040-c18a82f2-776c-467d-b852-3a06608439c4",
+    "requestSha256": "39613ab4760a502cc2e293806374e1136dfc4d64d60d320ada3de11eed78b90f",
+    "actionIdentitySha256": "cb82113162ef43e50e6b9de3fe697fa9d00791326f720e4c0e439d4c9ecae76e",
+    "modelResponseStatus": "COMPLETED",
+    "actionParseStatus": "JSON_OBJECT",
+    "actionValidationStatus": "PASS",
+    "replacementPresent": true,
+    "afterSourceParseStatus": "PASS",
+    "astFeaturesAvailable": true,
+    "parserFailureCategory": "NONE",
+    "selectedFile": "src/case-8.mjs",
+    "range": {
+      "startLine": 2,
+      "endLine": 2
+    },
+    "targetSymbol": {
+      "digest": "0de13774e35b0a5fd5e157b5e0fa9a77e40f6e7173bdebd7d41ddac05264c781",
+      "kind": "function"
+    },
+    "replacementShape": {
+      "bytes": 462,
+      "characters": 462,
+      "lines": 15,
+      "newlines": 14,
+      "whitespaceOnly": false,
+      "indentation": [
+        {
+          "kind": "0",
+          "count": 8
+        },
+        {
+          "kind": "2",
+          "count": 4
+        },
+        {
+          "kind": "4",
+          "count": 2
+        },
+        {
+          "kind": "6",
+          "count": 1
+        }
+      ],
+      "lexicalTokenKinds": [
+        {
+          "kind": "IDENTIFIER",
+          "count": 49
+        },
+        {
+          "kind": "STRING",
+          "count": 1
+        }
+      ],
+      "operatorCategories": [
+        {
+          "kind": "-",
+          "count": 2
+        },
+        {
+          "kind": "!",
+          "count": 1
+        },
+        {
+          "kind": "/",
+          "count": 3
+        },
+        {
+          "kind": "&&",
+          "count": 1
+        },
+        {
+          "kind": "=>",
+          "count": 1
+        },
+        {
+          "kind": ">",
+          "count": 1
+        }
+      ],
+      "commentTokens": 1,
+      "delimiterBalance": {
+        "parentheses": 0,
+        "brackets": 0,
+        "braces": 0
+      },
+      "identifierDigests": [
+        {
+          "digest": "036f6e03e23c9c59f9ae5ec4a53e876c10078ab60fcf3220ebbc38cb9fd990c6",
+          "count": 3
+        },
+        {
+          "digest": "0e2b49db45de7988c62c00e95fefcec3a7cda6d979ebdf6b99e29ed527717856",
+          "count": 1
+        },
+        {
+          "digest": "10454cba63b9cb88ea49d45de2347cc6a8854a4e3e6ee5a7300991b47bf7a11d",
+          "count": 1
+        },
+        {
+          "digest": "1443c26c6ac832c65cc1b1ae2f52da496c89b4078c15171a92a9d62350222029",
+          "count": 1
+        },
+        {
+          "digest": "1d1f7f8eb47007d9e746d4d054c81835b2abf1e8f526488d32532b1c6825af44",
+          "count": 1
+        },
+        {
+          "digest": "23c556ff47ef01757b3b800987eca67bcc7c21613539e47e14f66b484f7d4379",
+          "count": 1
+        },
+        {
+          "digest": "2621a4b61a430d407e33b7595d8074ccb249f3fa5580d334540b95cfe499ebf3",
+          "count": 1
+        },
+        {
+          "digest": "29252ea6cfaed95833a94b3a86cf7a724a49824a9b12927d2181ee9105e90972",
+          "count": 2
+        },
+        {
+          "digest": "2eaa2f20d4df75fdd3541d991026dc9b0d96d3942a16b4037cae230503e7b610",
+          "count": 1
+        },
+        {
+          "digest": "3f28920c105900835313a49248d17d411ba7326d8ef05e4a8d311d11834d288f",
+          "count": 1
+        },
+        {
+          "digest": "4026b0098484e2b20a378c6b932824ce3797f6dead1462476d2da8691a684e35",
+          "count": 4
+        },
+        {
+          "digest": "408bf98c363bf7069fd62f2a171cbb783a576232ed8c582f882a9e94ef304c96",
+          "count": 2
+        },
+        {
+          "digest": "53be6d5dd9410aabc82f3f2f148f3f0123384ec58500dfd98d3f4811fbc8beb8",
+          "count": 1
+        },
+        {
+          "digest": "5904982cf10b4d73d3a2194f2f2555a543fec106da8163295eab71639696ab34",
+          "count": 1
+        },
+        {
+          "digest": "636b81fa14ee3fdcca9b7ffaf588d7b3a4f4e33b58b2f8726a8de3f3c35dbebc",
+          "count": 1
+        },
+        {
+          "digest": "73c83ba254fcb139baa25a58bd76fabbe564a55b891f816a5f1621defbeda956",
+          "count": 4
+        },
+        {
+          "digest": "7e46018e577687774acc2dce54cb56e045eaec09c4859006654c3dd7312c4315",
+          "count": 1
+        },
+        {
+          "digest": "8c5939ce2f56300887af763c1273cf3db5bf8eea3765b1ae7e6baefbaf6e7a88",
+          "count": 3
+        },
+        {
+          "digest": "9f303e9c5974912af899ca6dc6fd610fd5ef934666b7115212e6b593dc55055f",
+          "count": 1
+        },
+        {
+          "digest": "a570c54019fb8fe795a32c8f200868280845d2c8c65b5c141d82607b2b9ef981",
+          "count": 1
+        },
+        {
+          "digest": "a588ba8575770968f44041bcfd1c8dfd454ee275c83634e33d6b8af2167b254c",
+          "count": 1
+        },
+        {
+          "digest": "b240f861578a583f9043094107c2811795e207a5d689832c0d8ec59d857e2c25",
+          "count": 1
+        },
+        {
+          "digest": "b29699adc057e096d022247a025812f6089b5f357a41e5f8986bd1ded27225ee",
+          "count": 1
+        },
+        {
+          "digest": "b2b9f223c30b4d29baba54a27bee8e4865487a3467ed7c6485335b3980bfcc45",
+          "count": 1
+        },
+        {
+          "digest": "b89b2cba548ba470798d77bf41fbbd8dd49a1fb1be61be64a19f2df8f926ded9",
+          "count": 1
+        },
+        {
+          "digest": "c508058ecfc26de54c2cb4fa301b7ec1cffb0192e27c1eaf95c10aa871ce9bd4",
+          "count": 1
+        },
+        {
+          "digest": "ccd017f6014ef76efa7aea95d67b2c55c40c8c7a934d32028f27cf6f9ded6819",
+          "count": 1
+        },
+        {
+          "digest": "d8c46a7224e5383e51cb22245ffa0cede005ca3e35e121b1d0ff365e13bb7528",
+          "count": 2
+        },
+        {
+          "digest": "e699325a8408c2d1a6096346bf17f983379248989c12832bc63fe782e03a8d68",
+          "count": 5
+        },
+        {
+          "digest": "f04b45811d59a4569011e57e7a215dcf01c9055e6e42618cc828d491978642cd",
+          "count": 1
+        },
+        {
+          "digest": "fa4adc4264dd8887ff40b65a186f03791f96bfdd662ec51e63905d3eb49b41ad",
+          "count": 1
+        },
+        {
+          "digest": "fc733b3fd30218a4c6aac3c4992e84da8cdea7c3c25dda2c363fcbe3543214d8",
+          "count": 1
+        }
+      ],
+      "literalDigests": [
+        {
+          "digest": "2c62aad50a2dd91d674125363974cf6809364f144a673b916dbdb2f61c59bff3",
+          "count": 1
+        }
+      ]
+    },
+    "astFeatures": {
+      "astNodeChanges": [
+        {
+          "kind": "arguments",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "kind": "arrow_function",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "assignment_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "call_expression",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "kind": "comment",
+          "before": 1,
+          "after": 2,
+          "delta": 1
+        },
+        {
+          "kind": "export_clause",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "export_specifier",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "expression_statement",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "for_in_statement",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "function_declaration",
+          "before": 1,
+          "after": 0,
+          "delta": -1
+        },
+        {
+          "kind": "identifier",
+          "before": 5,
+          "after": 20,
+          "delta": 15
+        },
+        {
+          "kind": "if_statement",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "import_clause",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "import_specifier",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "import_statement",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "lexical_declaration",
+          "before": 0,
+          "after": 3,
+          "delta": 3
+        },
+        {
+          "kind": "member_expression",
+          "before": 0,
+          "after": 4,
+          "delta": 4
+        },
+        {
+          "kind": "named_imports",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "object",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "parenthesized_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "property_identifier",
+          "before": 0,
+          "after": 4,
+          "delta": 4
+        },
+        {
+          "kind": "required_parameter",
+          "before": 2,
+          "after": 1,
+          "delta": -1
+        },
+        {
+          "kind": "statement_block",
+          "before": 1,
+          "after": 3,
+          "delta": 2
+        },
+        {
+          "kind": "string",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "string_fragment",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "subscript_expression",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "kind": "unary_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "variable_declarator",
+          "before": 0,
+          "after": 3,
+          "delta": 3
+        }
+      ],
+      "expressionChanges": [
+        {
+          "kind": "assignment_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "call_expression",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "kind": "member_expression",
+          "before": 0,
+          "after": 4,
+          "delta": 4
+        },
+        {
+          "kind": "object",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "subscript_expression",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "kind": "unary_expression",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "controlFlowChanges": [
+        {
+          "kind": "for_in_statement",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "if_statement",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "operatorChanges": [
+        {
+          "kind": "!",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "&&",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": "-",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "kind": "/",
+          "before": 2,
+          "after": 5,
+          "delta": 3
+        },
+        {
+          "kind": "=>",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "kind": ">",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "identifierChanges": [
+        {
+          "digest": "036f6e03e23c9c59f9ae5ec4a53e876c10078ab60fcf3220ebbc38cb9fd990c6",
+          "before": 0,
+          "after": 3,
+          "delta": 3
+        },
+        {
+          "digest": "4026b0098484e2b20a378c6b932824ce3797f6dead1462476d2da8691a684e35",
+          "before": 0,
+          "after": 4,
+          "delta": 4
+        },
+        {
+          "digest": "408bf98c363bf7069fd62f2a171cbb783a576232ed8c582f882a9e94ef304c96",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "digest": "4b72068411595fe6c43126fcab9928f16ce3f7cddf0b42bbe25fe56ae9a31d18",
+          "before": 2,
+          "after": 0,
+          "delta": -2
+        },
+        {
+          "digest": "8c5939ce2f56300887af763c1273cf3db5bf8eea3765b1ae7e6baefbaf6e7a88",
+          "before": 0,
+          "after": 3,
+          "delta": 3
+        },
+        {
+          "digest": "b29699adc057e096d022247a025812f6089b5f357a41e5f8986bd1ded27225ee",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "digest": "d51e1cdd56901a7f414827fc2c5f33b3c1474f25f58de2483bbe95cfa250aeec",
+          "before": 1,
+          "after": 0,
+          "delta": -1
+        },
+        {
+          "digest": "d8c46a7224e5383e51cb22245ffa0cede005ca3e35e121b1d0ff365e13bb7528",
+          "before": 0,
+          "after": 2,
+          "delta": 2
+        },
+        {
+          "digest": "e699325a8408c2d1a6096346bf17f983379248989c12832bc63fe782e03a8d68",
+          "before": 2,
+          "after": 5,
+          "delta": 3
+        },
+        {
+          "digest": "23c556ff47ef01757b3b800987eca67bcc7c21613539e47e14f66b484f7d4379",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "digest": "29252ea6cfaed95833a94b3a86cf7a724a49824a9b12927d2181ee9105e90972",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "digest": "b2b9f223c30b4d29baba54a27bee8e4865487a3467ed7c6485335b3980bfcc45",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "digest": "fa4adc4264dd8887ff40b65a186f03791f96bfdd662ec51e63905d3eb49b41ad",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "literalChanges": [
+        {
+          "digest": "2c62aad50a2dd91d674125363974cf6809364f144a673b916dbdb2f61c59bff3",
+          "literalType": "string",
+          "length": 19,
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "apiCallChanges": [
+        {
+          "digest": "82615dacff406e72861df0e4d57babdecb81a47afe6a55f69ebd1a75d2cc3ed1",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "digest": "e4947f555ae040e209c149c4970d927d5ac480206bec956059552651bb67d787",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "importChanges": [
+        {
+          "digest": "e1152ebd552cd53678d666942bae64373e82fd58601e0566f4535c7fe12df932",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ]
+    },
+    "canonicalEditSha256": "0ce3c73ea6d19f2856d3bbecf57f0ac1b34025cb3cd3407b540e1c7824480c2f",
+    "hashKeyId": "10b76595429d293bbf0364e08dfbd6a62e71f9a5bc6fcc9d01e51213717c2c92",
+    "verification": {
+      "stage": "SYNTAX_TYPE",
+      "status": "FAIL",
+      "code": "SYNTAX_TYPE_FAILED",
+      "diagnosticSha256": null
+    },
+    "visibleBehavioralEffect": {
+      "status": "NOT_RUN",
+      "category": "NOT_RUN",
+      "diagnosticSha256": null
+    },
+    "privacy": {
+      "rawPromptStored": false,
+      "rawModelOutputStored": false,
+      "rawEditBodyStored": false,
+      "rawIdentifiersStored": false,
+      "rawLiteralsStored": false,
+      "commentsStored": false,
+      "sourceStored": false,
+      "rawParserMessageStored": false,
+      "hashKeyStored": false
+    }
+  }
+}

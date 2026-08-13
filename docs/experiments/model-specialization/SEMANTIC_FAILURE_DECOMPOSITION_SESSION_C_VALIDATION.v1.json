@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "validationId": "dca-semantic-failure-decomposition-session-c-validation-v1",
+  "status": "PASS",
+  "validatedAt": "2026-08-11T19:30:44.295Z",
+  "inputs": {
+    "report": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_FINAL_REPORT.v1.json",
+      "sha256": "fc0d70aa8ac8bd6e12c869dd97f514eb5216eaf7b73096f85ca33758999be356"
+    },
+    "gateDecision": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_GATE_DECISION.v1.json",
+      "sha256": "a2466306cb619858d23078abf905c40b214730001165384591db4f8759b01a74"
+    },
+    "observabilityCeiling": {
+      "path": "docs/experiments/model-specialization/SEMANTIC_OBSERVABILITY_CEILING.v1.json",
+      "sha256": "a8ecb303739a426ed93bbdebe71f48d15db59648c7cd3f821dd366a826071c6b"
+    },
+    "protocol": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PROTOCOL.v1.json",
+      "sha256": "8a8c5d9852eaeb05577c990b195921e44fdc4dddb235a83b816ba468eecfd643"
+    }
+  },
+  "checks": {
+    "primaryDistribution": "PASS_66",
+    "observabilityQuantification": "PASS",
+    "frozenGates": "PASS_G1_G2_G3_G4_FAIL_G5_APPLIED",
+    "exactlyOneNextExperiment": "PASS",
+    "protocolPreparedNotExecuted": "PASS",
+    "productStatePreserved": "PASS",
+    "strictTypeScript": "PASS",
+    "projectTypecheck": "PASS",
+    "completeTests": "PASS",
+    "productionBuild": "PASS",
+    "designValidation": "PASS",
+    "securityRegression": "PASS_PATCH_AND_TOOL_RUNTIME",
+    "secretScan": "PASS",
+    "classificationArtifacts": "PASS",
+    "checksums": "PASS",
+    "sourceClosure": "PASS",
+    "lineage": "PASS",
+    "worktreeCleanup": "PASS"
+  },
+  "commands": [
+    {
+      "command": "npx tsc --ignoreConfig --noEmit --strict --skipLibCheck --target ES2022 --module ESNext --moduleResolution Bundler --types node services/semantic-failure-decomposition/src/index.ts tests/semantic-failure-decomposition.test.ts scripts/finalize_semantic_failure_decomposition_session_c.ts",
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "stdoutSha256": "1fcfe57781045a818698db7cbe3c9428c10ea084583a12bb0925411079a7a5df",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 0,
+      "stdoutSha256": "d37773b386324a829d28e3c212f50cb08e09f4b3035c972c59dbb1a34bcf08bb",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "stdoutSha256": "8b77af1a812a2800d186f45432d8c401a31de9f5cb0ec7ecefa1c84ba6c3cd1d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run validate:design",
+      "exitCode": 0,
+      "stdoutSha256": "43867e87a62f0602146a6da3c74a67722bd837b2ba1e7f7f75da2353a107fea9",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npx vitest run tests/patch-interface-runtime.test.ts tests/tool-runtime.test.ts",
+      "exitCode": 0,
+      "stdoutSha256": "909784e57d79f9a4e4129be275b0a7a061f1f0f4288a612a1d162908746ef5c4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "sourceClosure": {
+    "entries": [
+      {
+        "path": "services/semantic-failure-decomposition/src/index.ts",
+        "sha256": "4f16feeb5c2764f3d819357283722590b1a3e2751290ca415e7f271a1b0ec987",
+        "bytes": 14070
+      },
+      {
+        "path": "tests/semantic-failure-decomposition.test.ts",
+        "sha256": "642081bb996c7743083a6287d9ec3dad0d58f83647cf3b5986062481af339948",
+        "bytes": 6084
+      },
+      {
+        "path": "scripts/finalize_semantic_failure_decomposition_session_c.ts",
+        "sha256": "1bb266165cde55883b8d7fef4aecb933db082ed2d5330bfa134030fdca06c799",
+        "bytes": 27749
+      },
+      {
+        "path": "package.json",
+        "sha256": "27b62e16d96615923a0868c35c404f2f3c29208855e16971eeef4e16d9f672cb",
+        "bytes": 9007
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "ee9cf88c878a481ad440675268b7f6f8807fde5c12d5fe6a67ecf4d27976c3f2",
+        "bytes": 113270
+      },
+      {
+        "path": "CONTEXT.md",
+        "sha256": "7410ee3162339b7f894a08857e6e133dbf4c1a6739a0db113811df5a1fd26c56",
+        "bytes": 23066
+      },
+      {
+        "path": "docs/exec-plans/active/MASTER_EXECUTION_PLAN.md",
+        "sha256": "6271bbd81056a2fef0c7cdae9389c098847a08ce6e5357161a67a16b81c3f6c0",
+        "bytes": 46582
+      }
+    ],
+    "sha256": "d868637453e7278eea970a14b5162fb846de6047e78243cb0e9c50cb15451834"
+  },
+  "cleanup": {
+    "targetModelCalls": 0,
+    "vllmOrModelProcesses": 0,
+    "modelComputeProcesses": 0,
+    "modelGpuAllocationMiB": 0,
+    "ambientGpuMemoryMiB": 0,
+    "port8000Clear": true,
+    "ephemeralStateAbsent": true,
+    "temporaryDirectories": 0,
+    "worktrees": 1
+  }
+}

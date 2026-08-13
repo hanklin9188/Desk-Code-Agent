@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "reportId": "dca-e-edit-untouched-holdout-final-report-v1",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T03:14:15.580Z",
+  "experimentIdentity": {
+    "candidate": {
+      "path": "docs/experiments/patch-interface/E_EDIT_CANDIDATE.v1.json",
+      "sha256": "7abdcd7cfe84b3e3e6844ecc81c8a4c783a9af53e45dcbb0489fa0e157a32fbc"
+    },
+    "preregistration": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PREREGISTRATION.v2.json",
+      "sha256": "5e1d4ece269cd807f625ef7f0c41b1867dce5600f25e4080bfcf02746e4833c5"
+    },
+    "seal": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_SEAL.v2.json",
+      "sha256": "51b7c6d79d7f07eab84017488aeae6aa8a061430af36eda3df34348b76f9f823"
+    }
+  },
+  "holdout": {
+    "repositories": 15,
+    "tasks": 120,
+    "mutationRequired": 80,
+    "failureRecovery": 15,
+    "reportOnlyUnsupported": 10,
+    "safetyAdversarial": 15,
+    "modelApplicableMutationTasks": 95,
+    "deterministicPolicyOnlyTasks": 25,
+    "difficulty": {
+      "L2": 30,
+      "L3": 60,
+      "L4": 30
+    },
+    "fileScope": {
+      "singleFile": 75,
+      "multiFile": 20,
+      "nonMutation": 25
+    }
+  },
+  "results": {
+    "baseline": {
+      "mutationTasks": 95,
+      "policyTasks": 25,
+      "modelCalls": 95,
+      "behavioralSuccesses": 0,
+      "hiddenSuccesses": 0,
+      "validActions": 0,
+      "wrongFileAttempts": 0,
+      "actualSafetyViolations": 0,
+      "rollbackFailures": 0,
+      "policySuccesses": 25,
+      "recoveries": 0,
+      "repeatedPatches": 0,
+      "contradictions": 0,
+      "totalPromptTokens": 17172,
+      "totalCompletionTokens": 22345,
+      "totalLatencyMs": 305618.84727499995
+    },
+    "eEdit": {
+      "mutationTasks": 95,
+      "policyTasks": 25,
+      "modelCalls": 95,
+      "behavioralSuccesses": 23,
+      "hiddenSuccesses": 42,
+      "validActions": 89,
+      "wrongFileAttempts": 0,
+      "actualSafetyViolations": 0,
+      "rollbackFailures": 0,
+      "policySuccesses": 25,
+      "recoveries": 0,
+      "repeatedPatches": 0,
+      "contradictions": 0,
+      "totalPromptTokens": 18977,
+      "totalCompletionTokens": 5769,
+      "totalLatencyMs": 84839.32901400005
+    },
+    "paired": {
+      "bothPass": 0,
+      "baselineOnly": 0,
+      "eEditOnly": 23,
+      "bothFail": 72,
+      "baselineSuccesses": 0,
+      "eEditSuccesses": 23,
+      "baselinePercent": 0,
+      "eEditPercent": 24.210526315789473,
+      "absoluteDifferencePercentagePoints": 24.210526315789473
+    },
+    "statistics": {
+      "repetitions": 10000,
+      "seed": 20260811,
+      "taskPairedBootstrap95PercentCI": [
+        15.789473684210526,
+        32.63157894736842
+      ],
+      "repositoryClusterBootstrap95PercentCI": [
+        16.842105263157894,
+        32.63157894736842
+      ],
+      "mcnemarExactTwoSidedP": 2.384185791015625e-7,
+      "discordantPairs": 23
+    },
+    "promotionOutcome": "E_EDIT_HOLDOUT_GATE_FAIL"
+  },
+  "hiddenTests": {
+    "baseline": 0,
+    "eEdit": 42
+  },
+  "retrievalGeneralization": {
+    "baseline": {
+      "selected": 90,
+      "included": 90,
+      "misses": 5
+    },
+    "eEdit": {
+      "selected": 90,
+      "included": 90,
+      "misses": 5
+    },
+    "pairedMissTaskIdsSha256": "ff11473a7bca38ccd9acf8f04adff2cabb437b0270f50193514f7b03d7e7b63a"
+  },
+  "retry": {
+    "schemaVersion": 1,
+    "experimentId": "dca-e-edit-untouched-holdout-retry-v1",
+    "status": "NOT_ELIGIBLE_ZERO_CALLS",
+    "classification": "PREREGISTERED_CONDITIONAL_BRANCH_NOT_EXECUTED",
+    "completedAt": "2026-08-11T03:14:15.580Z",
+    "prerequisite": {
+      "requiredBehavioralSuccesses": 29,
+      "observedBehavioralSuccesses": 23,
+      "actualSafetyViolations": 0,
+      "rollbackFailures": 0,
+      "eligible": false
+    },
+    "potentialFailedTasks": 72,
+    "summary": {
+      "modelCalls": 0,
+      "recoveries": 0,
+      "repeatedPatches": 0,
+      "contradictions": 0,
+      "wrongFileAttempts": 0,
+      "actualSafetyViolations": 0,
+      "rollbackFailures": 0,
+      "tokenMultiplier": "NOT_APPLICABLE",
+      "latencyMultiplier": "NOT_APPLICABLE"
+    },
+    "inputs": {
+      "preregistration": {
+        "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_PREREGISTRATION.v2.json",
+        "sha256": "5e1d4ece269cd807f625ef7f0c41b1867dce5600f25e4080bfcf02746e4833c5"
+      },
+      "seal": {
+        "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_SEAL.v2.json",
+        "sha256": "51b7c6d79d7f07eab84017488aeae6aa8a061430af36eda3df34348b76f9f823"
+      },
+      "eEditResult": {
+        "path": "docs/experiments/runs/e-edit-holdout-p2-20260811T111300Z/result.json",
+        "sha256": "e6eb86b1837525581c134fc0e3cc24ea51e83bfeac7594af76809338b17f797f"
+      }
+    },
+    "privacy": {
+      "rawPromptsStored": false,
+      "rawOutputsStored": false,
+      "rawPatchesStored": false
+    },
+    "protectedActions": {
+      "modelDownload": false,
+      "commit": false,
+      "remote": false,
+      "push": false,
+      "pullRequest": false,
+      "tag": false,
+      "signing": false,
+      "release": false
+    }
+  },
+  "failureDecomposition": {
+    "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_FAILURE_DECOMPOSITION.v1.json",
+    "sha256": "69cd74acf9f3fc6e39bc21727f827f56d67276d41b54fb4213b1ad2b05d9e10c"
+  },
+  "safety": {
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0,
+    "securityRegression": {
+      "path": "docs/experiments/patch-interface/PATCH_INTERFACE_SECURITY_REGRESSION.v3.json",
+      "sha256": "a9a43b1a263446b128685a3d9b16cf1f788665b1186d39679827ff4aa8d1f39a",
+      "instances": 1540,
+      "templates": 77
+    }
+  },
+  "performance": {
+    "baseline": {
+      "calls": 95,
+      "inputTokens": 17172,
+      "outputTokens": 22345,
+      "totalTokens": 39517,
+      "totalLatencyMs": 305618.84727499995,
+      "medianEndToEndLatencyMs": 3224.269453999994,
+      "p95EndToEndLatencyMs": 3669.588498999976,
+      "effectiveOutputTokensPerSecond": 73.11394633948629,
+      "ttftMs": "NOT_MEASURED_BY_SESSION_B_RUNNER",
+      "idleVramMiB": "NOT_MEASURED_BY_SESSION_B_RUNNER",
+      "peakVramMiB": "NOT_MEASURED_BY_SESSION_B_RUNNER",
+      "cleanupVramMiB": 0
+    },
+    "eEdit": {
+      "calls": 95,
+      "inputTokens": 18977,
+      "outputTokens": 5769,
+      "totalTokens": 24746,
+      "totalLatencyMs": 84839.32901400005,
+      "medianEndToEndLatencyMs": 876.0877659999969,
+      "p95EndToEndLatencyMs": 1304.2319500000012,
+      "effectiveOutputTokensPerSecond": 67.99912336704135,
+      "ttftMs": "NOT_MEASURED_BY_SESSION_B_RUNNER",
+      "idleVramMiB": "NOT_MEASURED_BY_SESSION_B_RUNNER",
+      "peakVramMiB": "NOT_MEASURED_BY_SESSION_B_RUNNER",
+      "cleanupVramMiB": 0
+    },
+    "retry": {
+      "status": "NOT_ELIGIBLE_ZERO_CALLS",
+      "calls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "totalLatencyMs": 0,
+      "ttftMs": "NOT_APPLICABLE",
+      "throughputTokensPerSecond": "NOT_APPLICABLE",
+      "medianEndToEndLatencyMs": "NOT_APPLICABLE",
+      "p95EndToEndLatencyMs": "NOT_APPLICABLE",
+      "idleVramMiB": "NOT_APPLICABLE",
+      "peakVramMiB": "NOT_APPLICABLE"
+    },
+    "measurementLimit": "Session-B rows contain end-to-end latency and token counts but not TTFT or inference-time VRAM samples. Cleanup GPU=0 is reported only as cleanup evidence."
+  },
+  "productDecision": {
+    "path": "docs/experiments/patch-interface/E_EDIT_PRODUCT_DECISION.v1.json",
+    "sha256": "1d945242f7b6e6b4050d229a68c1cff8e2d8dd37eb71be19246f0eaa6bcd064c"
+  },
+  "capabilityCeiling": {
+    "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v4.json",
+    "sha256": "4882b77182428b328909d3772febd2e900e2f5d1d1fcc14c84c6c11b28e9c8bd"
+  },
+  "tournamentProtocol": {
+    "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PROTOCOL.v1.json",
+    "sha256": "62b4ac12a82e90f42a9e532ec9b7fa60e7bca383ba56726425ae4d8857aad713"
+  },
+  "regressionValidation": {
+    "repositoryCheck": "PASS_DESIGN_TYPECHECK_130_TESTS_PRODUCTION_BUILD",
+    "uiPerformance": {
+      "path": "docs/experiments/runs/m8-ui-performance-2026-08-11T03-21-35-154Z/result.json",
+      "sha256": "64cdfcaf02d050d4c18fbb6d99618b2cb19ace78349bd8571da2ea471c93ed35"
+    },
+    "uiExtended": {
+      "path": "docs/experiments/runs/m8-extended-ui-qa-2026-08-11T03-21-36-001Z/result.json",
+      "sha256": "50ad24a1ae5df9bbfd65fdd82185a7c5d6ab0bbf6e00e73bb3395b633263e82c"
+    },
+    "security": {
+      "path": "docs/experiments/patch-interface/PATCH_INTERFACE_SECURITY_REGRESSION.v3.json",
+      "sha256": "a9a43b1a263446b128685a3d9b16cf1f788665b1186d39679827ff4aa8d1f39a"
+    },
+    "secretScan": "PASS_BOUNDARY_AWARE_PATTERNS",
+    "artifactChecksums": "PASS",
+    "modelWeightGitExclusion": "PASS",
+    "worktreeCount": 1
+  },
+  "runtimeCleanup": {
+    "baseline": {
+      "path": "docs/experiments/runs/e-edit-holdout-baseline-20260811T110600Z/lifecycle.json",
+      "sha256": "646ef54e1e4a6eeed3e72bee7943555469ddefaca350d20f42e1b8c99b42fa28"
+    },
+    "eEdit": {
+      "path": "docs/experiments/runs/e-edit-holdout-p2-20260811T111300Z/lifecycle.json",
+      "sha256": "dc52fafcb0015ff00208f884a74e68df9e80db917598f2497b4b5ad134fa9f4c"
+    },
+    "processAbsent": true,
+    "port8000Clear": true,
+    "gpuMemoryMiB": 0,
+    "apiKeyAbsent": true,
+    "temporaryStateAbsent": true
+  },
+  "remainingProtectedOrExternalBlockers": [
+    "Any model acquisition, including 7B or quantized snapshots",
+    "Git commit/remote/push/PR/tag/release/signing",
+    "Windows native installer, screen-reader and signing QA",
+    "Root license and remaining authoritative dependency metadata"
+  ],
+  "lineage": {
+    "historicalPhysicalCalls": 979,
+    "sessionBPhysicalCalls": 190,
+    "baselineCalls": 95,
+    "eEditCalls": 95,
+    "retryCalls": 0,
+    "totalPhysicalCalls": 1169,
+    "duplicatePhysicalCalls": 0,
+    "silentRetries": 0
+  },
+  "privacy": {
+    "rawPromptsStored": false,
+    "rawOutputsStored": false,
+    "rawPatchesStored": false,
+    "hiddenOracleStoredOutsideSealedOracle": false
+  }
+}

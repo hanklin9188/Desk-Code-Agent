@@ -1,0 +1,3246 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "dca-patch-interface-development-v1",
+  "authoringRevision": 1,
+  "classification": "DEVELOPMENT_ONLY_NEVER_FUTURE_HOLDOUT",
+  "visibility": "HIDDEN_FROM_MODEL_EXCEPT_EXPLICIT_ORACLE_CONDITIONS",
+  "manifestSha256": "40fc5b018467fc4615084701cc5c2dba357ee3e5d498cbb84811d264a9f22b91",
+  "sourceProvenance": {
+    "legacySelection": {
+      "path": "benchmarks/model-specialization/MODEL_COMPARISON_DEVELOPMENT_MANIFEST.json",
+      "sha256": "844bf4e3a16a0895a3d289e0b5eaec231a376ef23d77356cbf862c3344cdb556",
+      "taskIdsSha256": "73ef3b602583bc4fd3f374a110d42ccadffb4025d8ff5eba6237c5a279d31c4f"
+    },
+    "legacyManifest": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_MANIFEST.v2.json",
+      "sha256": "d3c3fe47a83230fe641aa392c017bd33f2b620409cc727d0bc35f483bbfdf2b7"
+    },
+    "legacyOracle": {
+      "path": "benchmarks/g4-development/G4_DEVELOPMENT_ORACLE.v2.sealed.json",
+      "sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6"
+    },
+    "legacyReuse": {
+      "tasks": 25,
+      "policy": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+      "unchanged": "IDs, prompts, sources, visible tests, hidden tests, commands, budgets, diagnoses, requirements, and reference fixes",
+      "addedMetadata": [
+        "mutation certification",
+        "exact 1-based symbol range",
+        "original source hash",
+        "relevant-range hash",
+        "provenance"
+      ]
+    },
+    "newTaskAuthoring": {
+      "tasks": 25,
+      "policy": "INDEPENDENT_PATCH_INTERFACE_DEVELOPMENT_AUTHORING",
+      "dependencyPolicy": "NODE_ESM_STANDARD_LIBRARY_ONLY",
+      "derivedFromG3": false,
+      "derivedFromHoldout": false,
+      "derivedFromHistoricalPatch": false
+    }
+  },
+  "rows": [
+    {
+      "task_id": "g4-dev-patch-01-clamp-upper-62e329d1de",
+      "exact_relevant_file": "src/clamp-upper.mjs",
+      "exact_relevant_symbol": "clamp",
+      "root_cause": "the implementation applies only the lower bound",
+      "behavioral_requirement": "return min for values below min, max for values above max, otherwise value",
+      "fixed_source_sha256": "f8423c430bf2694c565429257c78fd6df1428b8858ca41623b11aacc07af10c2",
+      "reference_fixed_source": "export function clamp(value, min, max) { return Math.min(max, Math.max(min, value)); }\n",
+      "hidden_files": [
+        {
+          "path": "test/clamp-upper.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { clamp } from '../src/clamp-upper.mjs';\ntest('hidden behavior',()=>{ assert.equal(clamp(-2, 0, 5), 0); assert.equal(clamp(5, 0, 5), 5); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/clamp-upper.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "835b7f1cea40f1442aa7d1213daebdd904d9b2e8c289ccf66e0fea979fa041eb",
+      "relevant_range_source_sha256": "b899d6be7f0bb00cc8d95619199941ad84b275b4569deac7e1afeb4b819c12f5",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "a0ca4bfc6aa054b7bedab8ef29c104027fe1e1ee5933cf5c055c148963bba302",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-02-median-even-eb13216fac",
+      "exact_relevant_file": "src/median-even.mjs",
+      "exact_relevant_symbol": "median",
+      "root_cause": "even-length inputs select the upper middle element instead of averaging both middle elements",
+      "behavioral_requirement": "odd median is middle; even median is average of two middle values; do not mutate input",
+      "fixed_source_sha256": "2f154b86fc19a9515582bdb53a5dcdcb38facdbbc73cabd8036c31c08b89c9d4",
+      "reference_fixed_source": "export function median(values) { const v=[...values].sort((a,b)=>a-b); const m=Math.floor(v.length/2); return v.length%2 ? v[m] : (v[m-1]+v[m])/2; }\n",
+      "hidden_files": [
+        {
+          "path": "test/median-even.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { median } from '../src/median-even.mjs';\ntest('hidden behavior',()=>{ const x=[9,1]; assert.equal(median(x),5); assert.deepEqual(x,[9,1]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/median-even.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "2dc091dcbecd49f1babbf5683a752ef419d9343d4b207dc069bf2e6a49179151",
+      "relevant_range_source_sha256": "f6df50d718b3f38ba629849c166cf34d0a1e74b2eb37f1d4ec473958464b530a",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "f3a204733d8c9763afa84091f3c5638687e61a30f42ef585d80ab098476898a2",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-03-stable-unique-bfbb248484",
+      "exact_relevant_file": "src/stable-unique.mjs",
+      "exact_relevant_symbol": "unique",
+      "root_cause": "an unnecessary sort destroys first-occurrence order",
+      "behavioral_requirement": "deduplicate using SameValueZero semantics while retaining encounter order",
+      "fixed_source_sha256": "3bf0213944897e135f69dc7b353cecd9e1ac288427607fe172c4d823d027c5f6",
+      "reference_fixed_source": "export function unique(values) { return [...new Set(values)]; }\n",
+      "hidden_files": [
+        {
+          "path": "test/stable-unique.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { unique } from '../src/stable-unique.mjs';\ntest('hidden behavior',()=>{ assert.deepEqual(unique([3,1,3,2]), [3,1,2]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/stable-unique.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "646596505c4cab98eb2a2b63738d3bf1771089c05034aec1e570b2e86b54b3c6",
+      "relevant_range_source_sha256": "114d463ed913ad11432583c256411e25cb88ac1df1fe5f361eaf349851164777",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "06f7be7a7fb4056911dc8ab72328fccf4e87db2b9ed68b2c0690c359a3693878",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-04-chunk-tail-04b7a8c083",
+      "exact_relevant_file": "src/chunk-tail.mjs",
+      "exact_relevant_symbol": "chunk",
+      "root_cause": "the loop excludes a partial tail and accepts an invalid step",
+      "behavioral_requirement": "partition all items; final group may be short; positive integer size required",
+      "fixed_source_sha256": "1048c09a4e7b998f9f9d893e35a2e1fad9e950a98b9f159cfbd90df6b7145639",
+      "reference_fixed_source": "export function chunk(values,size){ if(!Number.isInteger(size)||size<=0) throw new RangeError('size'); const out=[]; for(let i=0;i<values.length;i+=size) out.push(values.slice(i,i+size)); return out; }\n",
+      "hidden_files": [
+        {
+          "path": "test/chunk-tail.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { chunk } from '../src/chunk-tail.mjs';\ntest('hidden behavior',()=>{ assert.throws(()=>chunk([1],0),RangeError); assert.deepEqual(chunk([],2),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/chunk-tail.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "59c0132499cfd71bc5046ede470ac75555ef4359c8dbaf8b0b7cf801d0cb4bb8",
+      "relevant_range_source_sha256": "293a0988e487179771c398cfcf8153d115b63d0fb7bbc6203e05984d1304ea31",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "70d5c68420b547b411cbd897312be35463d0d1171b25df8c6745b4af707727f0",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-05-palindrome-normalize-f9b9ae1946",
+      "exact_relevant_file": "src/palindrome-normalize.mjs",
+      "exact_relevant_symbol": "isPalindrome",
+      "root_cause": "comparison uses raw text without normalization",
+      "behavioral_requirement": "compare lowercase ASCII alphanumeric characters only",
+      "fixed_source_sha256": "615100916d6e6633c093694c81cfeab27bd77f212636e16ad94eef9621e0b675",
+      "reference_fixed_source": "export function isPalindrome(text){ const value=text.toLowerCase().replace(/[^a-z0-9]/g,''); return value === [...value].reverse().join(''); }\n",
+      "hidden_files": [
+        {
+          "path": "test/palindrome-normalize.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { isPalindrome } from '../src/palindrome-normalize.mjs';\ntest('hidden behavior',()=>{ assert.equal(isPalindrome('A man, a plan, a canal: Panama!'),true); assert.equal(isPalindrome('codex'),false); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/palindrome-normalize.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "93bddd380073b58263f8fa5652986e9ab0654e91229ba94c175282f415c92504",
+      "relevant_range_source_sha256": "bff73b905e391fd5cf6bc237377db958b229b00eb638e1f033fa5561bd60fa96",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "0d80230c55a97b554aa9942fc0849d3b434ae6a15575b098a69a05a447181737",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-06-parse-port-2ad8cc00c3",
+      "exact_relevant_file": "src/parse-port.mjs",
+      "exact_relevant_symbol": "parsePort",
+      "root_cause": "parseInt accepts partial strings and no range check exists",
+      "behavioral_requirement": "return integer 1..65535 for digits-only strings, otherwise null",
+      "fixed_source_sha256": "ad87326648a60c80560b900a059a40f58bfc43dd36d5323c0d7cfd4ab157ba3c",
+      "reference_fixed_source": "export function parsePort(value){ if(!/^[0-9]+$/.test(value)) return null; const n=Number(value); return n>=1&&n<=65535 ? n : null; }\n",
+      "hidden_files": [
+        {
+          "path": "test/parse-port.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parsePort } from '../src/parse-port.mjs';\ntest('hidden behavior',()=>{ assert.equal(parsePort('0'),null); assert.equal(parsePort('65536'),null); assert.equal(parsePort('443'),443); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-port.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "a7822b9f6e3f1a26d2c3dd5c50e575aa26dd1990c2750b04e77d5b4dce7e117a",
+      "relevant_range_source_sha256": "c1f5bbcaad7dac28083982dd5f52c4c8a2879ec10a6feb16e817c62b9f01c229",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "ccb0b5730428d0f1fccdc4659f77a65051d913b14cffddd380ef0db98a89bb56",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-07-retry-delay-d9ff40e069",
+      "exact_relevant_file": "src/retry-delay.mjs",
+      "exact_relevant_symbol": "retryDelay",
+      "root_cause": "delay is linear and returns zero for the first attempt",
+      "behavioral_requirement": "min(cap, base times two to the zero-based attempt)",
+      "fixed_source_sha256": "404b0721f4a687c8c5e2544a2c57f860bcc6aa62639985022564a52441791366",
+      "reference_fixed_source": "export function retryDelay(attempt,base,cap){ return Math.min(cap, base*(2**attempt)); }\n",
+      "hidden_files": [
+        {
+          "path": "test/retry-delay.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { retryDelay } from '../src/retry-delay.mjs';\ntest('hidden behavior',()=>{ assert.equal(retryDelay(5,100,1000),1000); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/retry-delay.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "03a904e720d7847e71688ef980ddf6062f8910b7fe3a1dfac93983b3abf69c8a",
+      "relevant_range_source_sha256": "2dfdcf9b583beaed4cf46e6b5b8542f90b7b24fc8598815c2896a46059f4a0d5",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "8c997cf7f5cff5f61c4562396716f0145ea9b10b6dc30a8309ed12153877ba69",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-08-join-url-73cba0b515",
+      "exact_relevant_file": "src/join-url.mjs",
+      "exact_relevant_symbol": "joinUrl",
+      "root_cause": "global slash collapsing corrupts the URL scheme and does not isolate the join boundary",
+      "behavioral_requirement": "preserve scheme and normalize only trailing/leading boundary slashes",
+      "fixed_source_sha256": "df11f92a58f77e6047b2a23e8e60b65cfd293cd4b61da7b0f7c2f042fb664412",
+      "reference_fixed_source": "export function joinUrl(base,part){ return `${base.replace(/\\/+$/,'')}/${part.replace(/^\\/+/,'')}`; }\n",
+      "hidden_files": [
+        {
+          "path": "test/join-url.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { joinUrl } from '../src/join-url.mjs';\ntest('hidden behavior',()=>{ assert.equal(joinUrl('http://x.test','b'),'http://x.test/b'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/join-url.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "c8e05262662215ff8f109f1a8cf6e6d083046c09c3f5d1c49909ab980de3d033",
+      "relevant_range_source_sha256": "0d94367e44a54054dbc57b9b045283690e2ed6134f116116e9a0e2fbf72f92de",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "62853cd1cbec16f0bad68dfd780d5c9837db1989dbf7e2f6dd5483f959d0163b",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-09-escape-regexp-958695ce0b",
+      "exact_relevant_file": "src/escape-regexp.mjs",
+      "exact_relevant_symbol": "escapeRegExp",
+      "root_cause": "the character class omits several regex metacharacters",
+      "behavioral_requirement": "escape . * + ? ^ $ { } ( ) | [ ] and backslash",
+      "fixed_source_sha256": "cfba0cf147673376a1948e10c32b560b0379d6ce47f45afd458509d67853cc57",
+      "reference_fixed_source": "export function escapeRegExp(value){ return value.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\$&'); }\n",
+      "hidden_files": [
+        {
+          "path": "test/escape-regexp.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { escapeRegExp } from '../src/escape-regexp.mjs';\ntest('hidden behavior',()=>{ assert.equal(new RegExp(`^${escapeRegExp('[a](b)?')}$`).test('[a](b)?'),true); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/escape-regexp.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "fe093ccf69cb5e931a3da90902170a5c79ff3815defd024287c9a1257572688b",
+      "relevant_range_source_sha256": "2dafe4aa5129636f88fe68c03929d8995edf4b906cf846992a65a2f5daf219c5",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "c2866cb5a4f32483aa9a7d5b6fdeb8e19f31708af4cc8aeeeb7437fab89eb029",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-10-group-by-9ba2cf9492",
+      "exact_relevant_file": "src/group-by.mjs",
+      "exact_relevant_symbol": "groupBy",
+      "root_cause": "each assignment overwrites the existing group",
+      "behavioral_requirement": "append values to groups in encounter order",
+      "fixed_source_sha256": "b94eeabe5fb31c401856bbcf3da40d9f3fbe94ee6ddd9ad32bb87c81df3d45ed",
+      "reference_fixed_source": "export function groupBy(values,key){ const out={}; for(const value of values) (out[key(value)]??=[]).push(value); return out; }\n",
+      "hidden_files": [
+        {
+          "path": "test/group-by.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { groupBy } from '../src/group-by.mjs';\ntest('hidden behavior',()=>{ assert.deepEqual(groupBy([],x=>x),{}); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/group-by.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "f2b9beaa6b737adc52afdef18cfb320e7e6cb41932721b4b5ed485241e0d8348",
+      "relevant_range_source_sha256": "5d2f2ad9b6a2d006be940b035c404f6bc4046abc2bcc20ba2031fe8f13af3231",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "77356633bdf6c2c2b655e12ddee812e6a933fc2582c2e928abaeb8d293106e4e",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-11-inclusive-range-2f6d48f1cc",
+      "exact_relevant_file": "src/inclusive-range.mjs",
+      "exact_relevant_symbol": "sumRange",
+      "root_cause": "the loop excludes the inclusive endpoint",
+      "behavioral_requirement": "sum start through end inclusive when start <= end",
+      "fixed_source_sha256": "eab7da64a262b1f5912b22349ad293914e6236ec26d8da535a41e20e5f2b074b",
+      "reference_fixed_source": "export function sumRange(start,end){ let sum=0; for(let i=start;i<=end;i++) sum+=i; return sum; }\n",
+      "hidden_files": [
+        {
+          "path": "test/inclusive-range.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { sumRange } from '../src/inclusive-range.mjs';\ntest('hidden behavior',()=>{ assert.equal(sumRange(4,4),4); assert.equal(sumRange(5,3),0); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/inclusive-range.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "2423a2b2cc1c9b3be44686d1d51a12dc9f03a65a81e67ea7115d3b53bc5d46b7",
+      "relevant_range_source_sha256": "32ceb8e78cc8dcaea334b2042d17b04eb3827ff8e2b11cf152859422a5879aef",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "9f60781501f7ccd8e41b75ea9613152e055623e693aab714d9877b1401aa6b4b",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-12-truncate-ellipsis-45663fcc33",
+      "exact_relevant_file": "src/truncate-ellipsis.mjs",
+      "exact_relevant_symbol": "truncate",
+      "root_cause": "ellipsis is appended after taking the full width",
+      "behavioral_requirement": "result length never exceeds width; ellipsis occupies one character",
+      "fixed_source_sha256": "c45f8dd63d995d54a9e671ef90a2b70bfaf443ea99a136622da28e6339b08fdf",
+      "reference_fixed_source": "export function truncate(text,width){ if(text.length<=width) return text; if(width<=0) return ''; if(width===1) return '…'; return text.slice(0,width-1)+'…'; }\n",
+      "hidden_files": [
+        {
+          "path": "test/truncate-ellipsis.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { truncate } from '../src/truncate-ellipsis.mjs';\ntest('hidden behavior',()=>{ assert.equal(truncate('abc',3),'abc'); assert.equal(truncate('abc',1),'…'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/truncate-ellipsis.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "ef3511ec074376eeccf741e60366182f81dfa82415053359f1418221989952bc",
+      "relevant_range_source_sha256": "0c026a18b35c099d264a15ea062b8a6f5131a972182eb14db65dcc1f340a571b",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "686eb3fdf2948cc5693b66d5aa0f890d95b49e9bfe233d70414c94c366a162c5",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-13-normalize-path-3ba2860b51",
+      "exact_relevant_file": "src/normalize-path.mjs",
+      "exact_relevant_symbol": "normalizePath",
+      "root_cause": "filtering empty segments discards whether the path was rooted",
+      "behavioral_requirement": "collapse repeated separators and preserve leading root state",
+      "fixed_source_sha256": "7b14a46f78166fe2ec7c93c8770d1006888301a645107e8091e1bf9c40edefe5",
+      "reference_fixed_source": "export function normalizePath(value){ const rooted=value.startsWith('/'); const body=value.split('/').filter(Boolean).join('/'); return rooted ? '/'+body : body; }\n",
+      "hidden_files": [
+        {
+          "path": "test/normalize-path.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizePath } from '../src/normalize-path.mjs';\ntest('hidden behavior',()=>{ assert.equal(normalizePath('a///b'),'a/b'); assert.equal(normalizePath('/'),'/'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/normalize-path.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "b4e8d7864715fb3bd97e2aba3b56196fc538d7f244921bdcb59a0f480ab7d974",
+      "relevant_range_source_sha256": "df01b11a74effafda9972fadf6d938ae97d978350ad37ca4c307a12f5ea53e27",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "66953782883e48c31e13b959c822142ab05554c9354ddebb994e60671acf1114",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-14-parse-bool-8881da94ff",
+      "exact_relevant_file": "src/parse-bool.mjs",
+      "exact_relevant_symbol": "parseBool",
+      "root_cause": "string truthiness makes every non-empty value true",
+      "behavioral_requirement": "true/false case-insensitive only; invalid values yield null",
+      "fixed_source_sha256": "2a3bacc7ab01c96cdb82b927af27b9617389699c779d14054c65dc8122f64cc2",
+      "reference_fixed_source": "export function parseBool(value){ const v=value.toLowerCase(); return v==='true' ? true : v==='false' ? false : null; }\n",
+      "hidden_files": [
+        {
+          "path": "test/parse-bool.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseBool } from '../src/parse-bool.mjs';\ntest('hidden behavior',()=>{ assert.equal(parseBool('0'),null); assert.equal(parseBool(''),null); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-bool.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "3d60ab1fad695e1aa03f4247164c4e2ec3281ec39c22e658ab1036f4bdaf1285",
+      "relevant_range_source_sha256": "923a6f5769a0afcc17a9e1fed1c1e051a71aa7df306d7fdb3b90eefd870a45a8",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "cd03edbf5f7183a6b64e5f912c582943893ad9b052a90f1841f0706a0c425b52",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-15-format-bytes-5a0b763ebc",
+      "exact_relevant_file": "src/format-bytes.mjs",
+      "exact_relevant_symbol": "formatBytes",
+      "root_cause": "the implementation always uses decimal KB and mishandles sub-unit values",
+      "behavioral_requirement": "bytes below 1024 use B; otherwise binary KiB rounded to one decimal",
+      "fixed_source_sha256": "d226b5bb4ec0d6bef5c7de531b4f19c2f60032150c91b5e5dd20bef9565649d0",
+      "reference_fixed_source": "export function formatBytes(n){ if(n<1024) return `${n} B`; const value=n/1024; return `${Number(value.toFixed(1))} KiB`; }\n",
+      "hidden_files": [
+        {
+          "path": "test/format-bytes.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { formatBytes } from '../src/format-bytes.mjs';\ntest('hidden behavior',()=>{ assert.equal(formatBytes(512),'512 B'); assert.equal(formatBytes(1536),'1.5 KiB'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/format-bytes.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "32d8f0a6ec93777f51412179723e38567ad6c5438580e74176c863b8c35199a9",
+      "relevant_range_source_sha256": "09bc0b0075bcfd24a37a630a41e5b406f96141cc19c12ec1843fd47fe42428c3",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "c4838249c341a258e51b798e868ade3acad905c8b076e43a696b012e3d2d8256",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-16-intersection-multiplicity-985d47dab3",
+      "exact_relevant_file": "src/intersection-multiplicity.mjs",
+      "exact_relevant_symbol": "intersection",
+      "root_cause": "filter preserves duplicate members from the left input",
+      "behavioral_requirement": "unique intersection in first-left-occurrence order",
+      "fixed_source_sha256": "b02cd5dc256f6c2553aae2280ec559d93fe2c1c83dab92743d596a336f154555",
+      "reference_fixed_source": "export function intersection(left,right){ const r=new Set(right); return [...new Set(left)].filter(x=>r.has(x)); }\n",
+      "hidden_files": [
+        {
+          "path": "test/intersection-multiplicity.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { intersection } from '../src/intersection-multiplicity.mjs';\ntest('hidden behavior',()=>{ assert.deepEqual(intersection([3,2,1],[2,3]),[3,2]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/intersection-multiplicity.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "e211bf30b35ebdf76d2c3a38fb0cca7bf45d886a286b5691dc497efd85fc3e9f",
+      "relevant_range_source_sha256": "7f5888265536ae66e80674f5bb990fdd592ccdee86c6a8d3b2bcc736f87db306",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "309c93607eecb08393a7d2b3814480f671bdcc7fffbb44308bce80f2e74a42d8",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-17-decode-query-4535736542",
+      "exact_relevant_file": "src/decode-query.mjs",
+      "exact_relevant_symbol": "decodeQuery",
+      "root_cause": "application/x-www-form-urlencoded plus-space semantics are omitted",
+      "behavioral_requirement": "replace plus with space, then percent-decode",
+      "fixed_source_sha256": "5244ffc88815b7230d72b2d7ee6c08adf6fba32842e5da3cc0495e037bea5132",
+      "reference_fixed_source": "export function decodeQuery(value){ return decodeURIComponent(value.replace(/\\+/g,' ')); }\n",
+      "hidden_files": [
+        {
+          "path": "test/decode-query.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { decodeQuery } from '../src/decode-query.mjs';\ntest('hidden behavior',()=>{ assert.equal(decodeQuery('a%2Bb'),'a+b'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/decode-query.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "8db4c94c65d6c3e8ab24f75ca1e3f78402e3a3574233df60dc00cda96ff0bd10",
+      "relevant_range_source_sha256": "671ef76bf5d2dc1d04884a509683aec136324b03864cc4deab75fcc06ddf8ed9",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "7d6ae5a2d45540c0ef4a8e2bdd2e3e8db0707adb6cb214e6f7cc7f3b3fc0855a",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-18-title-case-a3b15a1136",
+      "exact_relevant_file": "src/title-case.mjs",
+      "exact_relevant_symbol": "titleCase",
+      "root_cause": "literal-space splitting creates empty words and preserves inconsistent casing",
+      "behavioral_requirement": "trim, split all whitespace, capitalize first and lowercase remainder",
+      "fixed_source_sha256": "148738ea70f9ae1e5ab4178953fada314b4a91e1afd5153ab21e453ca414d325",
+      "reference_fixed_source": "export function titleCase(value){ return value.trim().split(/\\s+/).filter(Boolean).map(x=>x[0].toUpperCase()+x.slice(1).toLowerCase()).join(' '); }\n",
+      "hidden_files": [
+        {
+          "path": "test/title-case.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { titleCase } from '../src/title-case.mjs';\ntest('hidden behavior',()=>{ assert.equal(titleCase('  two\\twords '),'Two Words'); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/title-case.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "d6ec450acd8c3b1ca41a43fdcd1e1716a348e91f693397e878eab87d7dd669bc",
+      "relevant_range_source_sha256": "048b67adf9ab4e36556ee70d7f95f670ee36936560a731b619ac258965421fd4",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "89956f7c32871797da5e5cab0f54f4c70503bddef2e7e799c41e65ba6b5c2c92",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-19-safe-divide-8f8f4db38c",
+      "exact_relevant_file": "src/safe-divide.mjs",
+      "exact_relevant_symbol": "safeDivide",
+      "root_cause": "truthiness rejects a valid zero numerator",
+      "behavioral_requirement": "only a zero denominator is invalid",
+      "fixed_source_sha256": "2b4fe7faaa642087c2ecb5a8ebd02dd883eb6adf5e144874e96161c4dcc9ae67",
+      "reference_fixed_source": "export function safeDivide(a,b){ return b===0 ? null : a/b; }\n",
+      "hidden_files": [
+        {
+          "path": "test/safe-divide.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { safeDivide } from '../src/safe-divide.mjs';\ntest('hidden behavior',()=>{ assert.equal(safeDivide(-6,3),-2); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/safe-divide.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "53cf74a2647e1839ae0d39f10ab1a50d779b042248e665e77f73685b1e516e0d",
+      "relevant_range_source_sha256": "abd60985de822847bff15bba55905b5f8de06cac1b55619ba5277cb9561705cc",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "f4232322724a0405593a932e763d305ab5bb719fa21277dd9f1357137386504c",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-20-rotate-array-beb86287eb",
+      "exact_relevant_file": "src/rotate-array.mjs",
+      "exact_relevant_symbol": "rotate",
+      "root_cause": "distance is not normalized and empty/negative cases are mishandled",
+      "behavioral_requirement": "normalize integer distance modulo length; negative means left; do not mutate",
+      "fixed_source_sha256": "34c37662110ad8ee2c14a3d1fc4c4a6e2999ab2d7330530b95e51bb2a0161417",
+      "reference_fixed_source": "export function rotate(values,n){ if(!values.length) return []; const k=((n%values.length)+values.length)%values.length; return k===0 ? [...values] : values.slice(-k).concat(values.slice(0,-k)); }\n",
+      "hidden_files": [
+        {
+          "path": "test/rotate-array.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rotate } from '../src/rotate-array.mjs';\ntest('hidden behavior',()=>{ const x=[1,2,3]; assert.deepEqual(rotate(x,-1),[2,3,1]); assert.deepEqual(x,[1,2,3]); assert.deepEqual(rotate([],2),[]); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/rotate-array.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "9028500909e081aa6bbe7f5597a29143f797a8e1f91d783e407cbe566539c7f1",
+      "relevant_range_source_sha256": "23a15276cf15945a0da08fd7b73d78f02b6e9752f46c73ef0e5e3650bfabc551",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "104377d70730ff5a84239dbc91f190d30290e6afe0049c5208a77b135b2716a3",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-21-binary-search-ffb6f8735f",
+      "exact_relevant_file": "src/binary-search.mjs",
+      "exact_relevant_symbol": "binarySearch",
+      "root_cause": "the initial upper bound excludes the final array element",
+      "behavioral_requirement": "standard exact binary search with inclusive bounds through length minus one",
+      "fixed_source_sha256": "0b7a339c99de7c51e1276081d9f4678b603b3466bf906adf7dd585d57e90fdf5",
+      "reference_fixed_source": "export function binarySearch(values,target){ let lo=0,hi=values.length-1; while(lo<=hi){ const m=(lo+hi)>>1; if(values[m]===target)return m; if(values[m]<target)lo=m+1;else hi=m-1; } return -1; }\n",
+      "hidden_files": [
+        {
+          "path": "test/binary-search.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { binarySearch } from '../src/binary-search.mjs';\ntest('hidden behavior',()=>{ assert.equal(binarySearch([],1),-1); assert.equal(binarySearch([2],2),0); assert.equal(binarySearch([1,3,5],5),2); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/binary-search.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "72fc3e0ff77a1a4f8331ca7b5c051c7f8490b4e22f5c7f849a894be5a633dbc3",
+      "relevant_range_source_sha256": "0190a1833aa078df841e0a9c80c002134807e133d53c030502a43f8ef346077c",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "c267e383d3b0197ff18d66825f02d5e2c766d3d91b2c1234bfe5588684960e2e",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-22-merge-headers-e4433a12bf",
+      "exact_relevant_file": "src/merge-headers.mjs",
+      "exact_relevant_symbol": "mergeHeaders",
+      "root_cause": "object spread treats header names as case-sensitive",
+      "behavioral_requirement": "later case-insensitive key wins and supplies retained casing",
+      "fixed_source_sha256": "b3ad42c8697824d5821cc7f3faf8c25245d65ca0e7534214caf2845b64191877",
+      "reference_fixed_source": "export function mergeHeaders(left,right){ const out={}; for(const [k,v] of [...Object.entries(left),...Object.entries(right)]){ const prior=Object.keys(out).find(x=>x.toLowerCase()===k.toLowerCase()); if(prior) delete out[prior]; out[k]=v; } return out; }\n",
+      "hidden_files": [
+        {
+          "path": "test/merge-headers.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { mergeHeaders } from '../src/merge-headers.mjs';\ntest('hidden behavior',()=>{ assert.deepEqual(mergeHeaders({Accept:'x'},{Other:'y'}),{Accept:'x',Other:'y'}); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/merge-headers.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "2306360935f0a2fc806ec0a443937af6a7d9f85667b5369977e00526587eaa2a",
+      "relevant_range_source_sha256": "4062a78b9dc96f2da9cf62b3afc759dae7fc61fd250f7dfb0ccc3f0174eda9f8",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "75cea26a1459170a2626a810fa48ad5a6b93f958caac223938475453a4b73a3d",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-23-min-max-72396b9df5",
+      "exact_relevant_file": "src/min-max.mjs",
+      "exact_relevant_symbol": "minMax",
+      "root_cause": "zero is injected into maximum calculation",
+      "behavioral_requirement": "extrema come only from inputs; empty yields null",
+      "fixed_source_sha256": "29c38913e10a8c849cd50287bba30c0af52c186508cc19c75c2c2cc5a2283f96",
+      "reference_fixed_source": "export function minMax(values){ if(!values.length)return null; return {min:Math.min(...values),max:Math.max(...values)}; }\n",
+      "hidden_files": [
+        {
+          "path": "test/min-max.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { minMax } from '../src/min-max.mjs';\ntest('hidden behavior',()=>{ assert.equal(minMax([]),null); assert.deepEqual(minMax([3]),{min:3,max:3}); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/min-max.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "c6ed942d2e940b8457d195ae1a6003308eb93059607168b56582a0392f556c41",
+      "relevant_range_source_sha256": "886a04b3b26bd0a387ad9a5a4c4354a5a04097cd4482ef130f874e9ae4672139",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "a02e65496d2fb35950cb6d94295b30afcf19c38fdbbed97442d6dd6e0cd704d0",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-24-count-words-bfaa1bef8c",
+      "exact_relevant_file": "src/count-words.mjs",
+      "exact_relevant_symbol": "countWords",
+      "root_cause": "literal-space splitting counts empty tokens and ignores other whitespace",
+      "behavioral_requirement": "trim and count non-empty runs separated by any whitespace",
+      "fixed_source_sha256": "b2f21be797ac22c73ee8150b7fdc404a56994928f39b29f3531a4b3bf75c61ea",
+      "reference_fixed_source": "export function countWords(text){ const value=text.trim(); return value ? value.split(/\\s+/).length : 0; }\n",
+      "hidden_files": [
+        {
+          "path": "test/count-words.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { countWords } from '../src/count-words.mjs';\ntest('hidden behavior',()=>{ assert.equal(countWords('   '),0); assert.equal(countWords('one'),1); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/count-words.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "6fb6eab81b29dd1231af359c0f7b3ce3e4a87158895cd46522dc738767fad3cf",
+      "relevant_range_source_sha256": "679e7b723843656368bc0ad89a8532100c3fd07b33f346ce72262ffeb60c2aeb",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "7a17ad8a91a8b20279531a3519d7fc6bdc3cef0c68b878e168f76b1ae4e7ed80",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "g4-dev-patch-25-has-own-de49412ce2",
+      "exact_relevant_file": "src/has-own.mjs",
+      "exact_relevant_symbol": "hasOwn",
+      "root_cause": "calling an instance method is unsafe when shadowed or absent",
+      "behavioral_requirement": "use the intrinsic hasOwnProperty with call",
+      "fixed_source_sha256": "88042e5f070846294e2c50503590455d8c17cc32a92c4670a4458e2368deb585",
+      "reference_fixed_source": "export function hasOwn(value,key){ return Object.prototype.hasOwnProperty.call(value,key); }\n",
+      "hidden_files": [
+        {
+          "path": "test/has-own.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { hasOwn } from '../src/has-own.mjs';\ntest('hidden behavior',()=>{ assert.equal(hasOwn({hasOwnProperty:false,a:1},'a'),true); assert.equal(hasOwn(Object.create({a:1}),'a'),false); });\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/has-own.hidden.test.mjs"
+      ],
+      "success_requires": [
+        "patch applies in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden test PASS",
+        "no wrong-file edit",
+        "clean rollback"
+      ],
+      "exact_relevant_range_1_based": {
+        "start_line": 1,
+        "end_line": 1,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "original_source_sha256": "7856e41d84ffb15dfdd6cdc699df8d37509de3fe37211368505b28f1aa66d3cc",
+      "relevant_range_source_sha256": "3cdadda13344c9b6820b34c333e7fd71b012cd10af160d81eef3d2b088167833",
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "The sealed G4 oracle requires one bounded source mutation and supplies independent visible and hidden behavior checks.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "METADATA_ONLY_ENRICHMENT_FROM_IMMUTABLE_G4_V2",
+        "source_oracle_sha256": "bbdce4f8a3cf3c2b2eb138abf207031560b9d0ceddbebef149e647c2c3509ed6",
+        "source_oracle_row_payload_sha256": "be479ab77c8142fcd55d06be14a0fcbcff47a923fee7cc065c6d6000a2d674b0",
+        "unchanged_behavioral_fields": [
+          "task_id",
+          "exact_relevant_file",
+          "exact_relevant_symbol",
+          "root_cause",
+          "behavioral_requirement",
+          "reference_fixed_source",
+          "fixed_source_sha256",
+          "hidden_files",
+          "trusted_hidden_command",
+          "success_requires"
+        ]
+      }
+    },
+    {
+      "task_id": "patch-interface-dev-new-01-parse-content-length-25e1045380",
+      "exact_relevant_file": "src/parse-content-length.mjs",
+      "exact_relevant_symbol": "parseContentLength",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "Number.parseInt accepts partial and non-canonical strings and the result is not constrained to safe integers",
+      "behavioral_requirement": "accept only zero or non-zero-leading decimal strings whose numeric value is a safe non-negative integer; otherwise return null",
+      "original_source_sha256": "461e85c728d75a3db041bbf5bd4b73de444f4d412cad35efbfca8cfac9810e42",
+      "relevant_range_source_sha256": "5750141ca2667acb78e9a283ccfbc12a4afa3b4784e46f1b820cb5544563cf78",
+      "fixed_source_sha256": "39eb6c2817fc2f113728b4f129674f1a5dd598283204c0207e33d77ca4bf39ad",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-parse-content-length\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseContentLengthContract() {\n  return \"canonical-decimal-safe-integer-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET parseContentLength START\nexport function parseContentLength(value) {\n  if (typeof value !== \"string\" || !/^(0|[1-9][0-9]*)$/.test(value)) return null;\n  const parsed = Number(value);\n  return Number.isSafeInteger(parsed) ? parsed : null;\n}\n// PATCH_INTERFACE_TARGET parseContentLength END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseContentLengthFixtureLabel() {\n  return \"parse-content-length\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/parse-content-length.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseContentLength, parseContentLengthContract, parseContentLengthFixtureLabel } from '../src/parse-content-length.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(parseContentLength(\"0\"), 0);\n  assert.equal(parseContentLength(\"01\"), null);\n  assert.equal(parseContentLength(\"9007199254740992\"), null);\n  assert.equal(parseContentLengthContract(), \"canonical-decimal-safe-integer-or-null\");\n  assert.equal(parseContentLengthFixtureLabel(), \"parse-content-length\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-content-length.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-02-normalize-locale-tag-db0bd6e9be",
+      "exact_relevant_file": "src/normalize-locale-tag.mjs",
+      "exact_relevant_symbol": "normalizeLocaleTag",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "the implementation lowercases the entire tag and replaces only the first underscore without validating its shape",
+      "behavioral_requirement": "normalize a two-to-three-letter language to lowercase and an optional two-letter region to uppercase; invalid shapes return null",
+      "original_source_sha256": "496ef03da0d93265f68786cf62b0d6570b078714a2639ae44f51f4fb2d6f0733",
+      "relevant_range_source_sha256": "8ad1e7b9dc6e9f6069f9b4e64ff2a8e9387767950c3a6a81ce95e9208ee5ac4a",
+      "fixed_source_sha256": "7e8cf63b4b30a7f07844782fbd7b2a9db517d07861b6da38922ca62208054d2c",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-normalize-locale-tag\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function normalizeLocaleTagContract() {\n  return \"language-lower-region-upper-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET normalizeLocaleTag START\nexport function normalizeLocaleTag(value) {\n  if (typeof value !== \"string\") return null;\n  const parts = value.trim().replace(/_/g, \"-\").split(\"-\");\n  if (!/^[A-Za-z]{2,3}$/.test(parts[0] ?? \"\")) return null;\n  if (parts.length > 2 || (parts[1] && !/^[A-Za-z]{2}$/.test(parts[1]))) return null;\n  return parts.length === 2 ? parts[0].toLowerCase() + \"-\" + parts[1].toUpperCase() : parts[0].toLowerCase();\n}\n// PATCH_INTERFACE_TARGET normalizeLocaleTag END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function normalizeLocaleTagFixtureLabel() {\n  return \"normalize-locale-tag\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/normalize-locale-tag.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeLocaleTag, normalizeLocaleTagContract, normalizeLocaleTagFixtureLabel } from '../src/normalize-locale-tag.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(normalizeLocaleTag(\"ZH-tw\"), \"zh-TW\");\n  assert.equal(normalizeLocaleTag(\"english\"), null);\n  assert.equal(normalizeLocaleTag(\"en-US-extra\"), null);\n  assert.equal(normalizeLocaleTagContract(), \"language-lower-region-upper-or-null\");\n  assert.equal(normalizeLocaleTagFixtureLabel(), \"normalize-locale-tag\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/normalize-locale-tag.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-03-merge-intervals-a4f184632f",
+      "exact_relevant_file": "src/merge-intervals.mjs",
+      "exact_relevant_symbol": "mergeIntervals",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "the implementation only sorts the caller-owned array, mutating it and never coalescing overlapping or adjacent intervals",
+      "behavioral_requirement": "return a new ascending array that merges inclusive intervals when they overlap or touch and leave every input array unchanged",
+      "original_source_sha256": "55a8b928cc8d43456abcbd2caf2390aaed91bec2df8683d3c04ea60f52916262",
+      "relevant_range_source_sha256": "10a3592dcfe248efec1a3af9515bbee698a9635086482c86174280ee89499bef",
+      "fixed_source_sha256": "bc92b87d4d48a69e5909d67a7c505326b07feb5266a0c042915886d9bb40eaa0",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-merge-intervals\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function mergeIntervalsContract() {\n  return \"sorted-inclusive-merged-copy\";\n}\n\n// PATCH_INTERFACE_TARGET mergeIntervals START\nexport function mergeIntervals(intervals) {\n  const ordered = intervals.map(([start, end]) => [start, end]).sort((left, right) => left[0] - right[0]);\n  const merged = [];\n  for (const [start, end] of ordered) {\n    const previous = merged[merged.length - 1];\n    if (!previous || start > previous[1] + 1) merged.push([start, end]);\n    else previous[1] = Math.max(previous[1], end);\n  }\n  return merged;\n}\n// PATCH_INTERFACE_TARGET mergeIntervals END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function mergeIntervalsFixtureLabel() {\n  return \"merge-intervals\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 18,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/merge-intervals.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { mergeIntervals, mergeIntervalsContract, mergeIntervalsFixtureLabel } from '../src/merge-intervals.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.deepEqual(mergeIntervals([[1, 1], [3, 4]]), [[1, 1], [3, 4]]);\n  assert.deepEqual(mergeIntervals([]), []);\n  assert.equal(mergeIntervalsContract(), \"sorted-inclusive-merged-copy\");\n  assert.equal(mergeIntervalsFixtureLabel(), \"merge-intervals\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/merge-intervals.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-04-split-universal-lines-5d98dcc91a",
+      "exact_relevant_file": "src/split-universal-lines.mjs",
+      "exact_relevant_symbol": "splitUniversalLines",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "splitting only on LF preserves carriage returns and creates an unwanted trailing empty item",
+      "behavioral_requirement": "recognize CRLF, lone CR, and LF separators, retain intentional interior blank lines, and omit one terminal phantom line",
+      "original_source_sha256": "dc4dfe9b4d2ebbcb0ea8d542c13c16a7c1d24efdeb5bcce255a06a97f4c72399",
+      "relevant_range_source_sha256": "d88a107e5f38c7b677381e2bf4d288caef127fd5ada4f802ae3b12a110212704",
+      "fixed_source_sha256": "080f8ad950374a10f00c15f62459a8d8c5794cd50c8fbe56c9c37d732d47d2fd",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-split-universal-lines\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function splitUniversalLinesContract() {\n  return \"universal-newlines-no-terminal-phantom\";\n}\n\n// PATCH_INTERFACE_TARGET splitUniversalLines START\nexport function splitUniversalLines(text) {\n  if (text === \"\") return [];\n  const lines = text.replace(/\\r\\n?/g, \"\\n\").split(\"\\n\");\n  if (lines[lines.length - 1] === \"\") lines.pop();\n  return lines;\n}\n// PATCH_INTERFACE_TARGET splitUniversalLines END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function splitUniversalLinesFixtureLabel() {\n  return \"split-universal-lines\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 14,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/split-universal-lines.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { splitUniversalLines, splitUniversalLinesContract, splitUniversalLinesFixtureLabel } from '../src/split-universal-lines.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.deepEqual(splitUniversalLines(\"a\\rb\"), [\"a\", \"b\"]);\n  assert.deepEqual(splitUniversalLines(\"\"), []);\n  assert.deepEqual(splitUniversalLines(\"a\\n\\nb\"), [\"a\", \"\", \"b\"]);\n  assert.equal(splitUniversalLinesContract(), \"universal-newlines-no-terminal-phantom\");\n  assert.equal(splitUniversalLinesFixtureLabel(), \"split-universal-lines\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/split-universal-lines.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-05-redact-token-af9834ca39",
+      "exact_relevant_file": "src/redact-token.mjs",
+      "exact_relevant_symbol": "redactToken",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "the implementation exposes the first four characters instead of the final four and does not fully mask short tokens",
+      "behavioral_requirement": "preserve token length, expose only the last four characters for lengths above four, and fully mask shorter tokens",
+      "original_source_sha256": "71692e7fa3351a8e8ac311aa1bcbc56536bf2b6dba4f6a13aa94a2178b4162b6",
+      "relevant_range_source_sha256": "4c49cd96dd3607a057d7f26a440ef685aee351649edb14cccf291b1d6e0a8f95",
+      "fixed_source_sha256": "a1b3636ac2e27e457397da26afdb424013a3a8914835d0b37df48bd773ecdfba",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-redact-token\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function redactTokenContract() {\n  return \"same-length-last-four-visible\";\n}\n\n// PATCH_INTERFACE_TARGET redactToken START\nexport function redactToken(token) {\n  if (token.length <= 4) return \"*\".repeat(token.length);\n  return \"*\".repeat(token.length - 4) + token.slice(-4);\n}\n// PATCH_INTERFACE_TARGET redactToken END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function redactTokenFixtureLabel() {\n  return \"redact-token\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/redact-token.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { redactToken, redactTokenContract, redactTokenFixtureLabel } from '../src/redact-token.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(redactToken(\"abc\"), \"***\");\n  assert.equal(redactToken(\"\"), \"\");\n  assert.equal(redactToken(\"12345\"), \"*2345\");\n  assert.equal(redactTokenContract(), \"same-length-last-four-visible\");\n  assert.equal(redactTokenFixtureLabel(), \"redact-token\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/redact-token.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-06-zip-longest-54b2859ccd",
+      "exact_relevant_file": "src/zip-longest.mjs",
+      "exact_relevant_symbol": "zipLongest",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "mapping only the left input truncates values when the right input is longer",
+      "behavioral_requirement": "produce one pair per index through the maximum input length and use undefined for either missing member",
+      "original_source_sha256": "cc79faad84f48fe3a06ca77e4c161e38796ef1306ba510ff38a6d22cfa435a41",
+      "relevant_range_source_sha256": "8e8065e8abd48d565346fc18ec8f732cbe4646c11cb5ce3cc41fac2db70e554b",
+      "fixed_source_sha256": "46bbc91a33e060f2dae9be19cd8c6a5f8a37d32baf1a50784ec8a9db511252ba",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-zip-longest\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function zipLongestContract() {\n  return \"max-length-pairs-with-undefined\";\n}\n\n// PATCH_INTERFACE_TARGET zipLongest START\nexport function zipLongest(left, right) {\n  const length = Math.max(left.length, right.length);\n  return Array.from({ length }, (_, index) => [left[index], right[index]]);\n}\n// PATCH_INTERFACE_TARGET zipLongest END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function zipLongestFixtureLabel() {\n  return \"zip-longest\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/zip-longest.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { zipLongest, zipLongestContract, zipLongestFixtureLabel } from '../src/zip-longest.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.deepEqual(zipLongest([1, 2], [\"a\"]), [[1, \"a\"], [2, undefined]]);\n  assert.deepEqual(zipLongest([], []), []);\n  assert.equal(zipLongestContract(), \"max-length-pairs-with-undefined\");\n  assert.equal(zipLongestFixtureLabel(), \"zip-longest\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/zip-longest.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-07-partition-values-2d49780853",
+      "exact_relevant_file": "src/partition-values.mjs",
+      "exact_relevant_symbol": "partitionValues",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "the predicate is applied twice to construct two identical matching groups, so rejected values are lost",
+      "behavioral_requirement": "call the predicate exactly once per value and preserve order in separate matching and rejected arrays",
+      "original_source_sha256": "998731407819969c1285f62f6ee7790e123d3fdde7624301713c1b0170876405",
+      "relevant_range_source_sha256": "cac08ea4ef5263f610cb8a3d14bc958044bf3dc2f2a270fbabc2b43d68ec5cb2",
+      "fixed_source_sha256": "c889a6b13f6f1008777d067fcd9f725d3e2f2f9d480ef7f977c459600c88a5bd",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-partition-values\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function partitionValuesContract() {\n  return \"stable-two-way-single-evaluation\";\n}\n\n// PATCH_INTERFACE_TARGET partitionValues START\nexport function partitionValues(values, predicate) {\n  const matching = [];\n  const rejected = [];\n  values.forEach((value, index) => {\n    (predicate(value, index) ? matching : rejected).push(value);\n  });\n  return [matching, rejected];\n}\n// PATCH_INTERFACE_TARGET partitionValues END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function partitionValuesFixtureLabel() {\n  return \"partition-values\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 16,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/partition-values.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { partitionValues, partitionValuesContract, partitionValuesFixtureLabel } from '../src/partition-values.mjs';\n\ntest(\"hidden behavior\", () => {\n  let calls = 0;\n  assert.deepEqual(partitionValues([\"a\", \"bb\"], (value, index) => { calls += 1; return value.length === index + 1; }), [[\"a\", \"bb\"], []]);\n  assert.equal(calls, 2);\n  assert.equal(partitionValuesContract(), \"stable-two-way-single-evaluation\");\n  assert.equal(partitionValuesFixtureLabel(), \"partition-values\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/partition-values.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-08-parse-duration-ms-b8f471c5b7",
+      "exact_relevant_file": "src/parse-duration-ms.mjs",
+      "exact_relevant_symbol": "parseDurationMs",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "the implementation ignores the unit suffix and accepts partial numeric prefixes as seconds",
+      "behavioral_requirement": "accept an unsigned integer followed by ms, s, or m, convert it safely to milliseconds, and return null for every other form",
+      "original_source_sha256": "85962a3f902a4119a2fedb391a5c3f5cd13d4dee3636d96d5ec53675a8db2ae8",
+      "relevant_range_source_sha256": "fc3a2e3652217f937401945794f5b970a5c60b1cb2eafe0a17adcc9b64c059ff",
+      "fixed_source_sha256": "fe8c8de469f3808cce0c99ca71dd6f22b8b84df43a7c203ab5e795c7ef23e8a0",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-parse-duration-ms\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseDurationMsContract() {\n  return \"integer-duration-to-milliseconds-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET parseDurationMs START\nexport function parseDurationMs(value) {\n  const match = /^([0-9]+)(ms|s|m)$/.exec(value);\n  if (!match) return null;\n  const amount = Number(match[1]);\n  const multiplier = match[2] === \"m\" ? 60000 : match[2] === \"s\" ? 1000 : 1;\n  const milliseconds = amount * multiplier;\n  return Number.isSafeInteger(milliseconds) ? milliseconds : null;\n}\n// PATCH_INTERFACE_TARGET parseDurationMs END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseDurationMsFixtureLabel() {\n  return \"parse-duration-ms\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 16,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/parse-duration-ms.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseDurationMs, parseDurationMsContract, parseDurationMsFixtureLabel } from '../src/parse-duration-ms.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(parseDurationMs(\"3m\"), 180000);\n  assert.equal(parseDurationMs(\"1.5s\"), null);\n  assert.equal(parseDurationMs(\"-1s\"), null);\n  assert.equal(parseDurationMsContract(), \"integer-duration-to-milliseconds-or-null\");\n  assert.equal(parseDurationMsFixtureLabel(), \"parse-duration-ms\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-duration-ms.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-09-encode-html-bbbf198eeb",
+      "exact_relevant_file": "src/encode-html.mjs",
+      "exact_relevant_symbol": "encodeHtml",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "only angle brackets are escaped, leaving ampersands and both quote characters unsafe",
+      "behavioral_requirement": "escape ampersand first, followed by less-than, greater-than, double quote, and apostrophe exactly once per source character",
+      "original_source_sha256": "19f92430f863e4c441c4a66a6537edb56e62e76b4fea139924f222aacb972ffa",
+      "relevant_range_source_sha256": "5a07eab39ea2e6a4eac6ef57eedfcd3c6bcaea0579efdb28f32629459127d5b0",
+      "fixed_source_sha256": "b6d3641ff7bd8917610ed27853bf4b9a378b1e1a3ad6bc61af1093d7d14bd888",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-encode-html\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function encodeHtmlContract() {\n  return \"escape-amp-angle-and-quotes\";\n}\n\n// PATCH_INTERFACE_TARGET encodeHtml START\nexport function encodeHtml(value) {\n  return value\n    .replace(/&/g, \"&amp;\")\n    .replace(/</g, \"&lt;\")\n    .replace(/>/g, \"&gt;\")\n    .replace(/\"/g, \"&quot;\")\n    .replace(/'/g, \"&#39;\");\n}\n// PATCH_INTERFACE_TARGET encodeHtml END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function encodeHtmlFixtureLabel() {\n  return \"encode-html\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 16,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/encode-html.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { encodeHtml, encodeHtmlContract, encodeHtmlFixtureLabel } from '../src/encode-html.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(encodeHtml(\"Tom's\"), \"Tom&#39;s\");\n  assert.equal(encodeHtml(\"plain\"), \"plain\");\n  assert.equal(encodeHtmlContract(), \"escape-amp-angle-and-quotes\");\n  assert.equal(encodeHtmlFixtureLabel(), \"encode-html\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/encode-html.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-10-parse-ipv4-17f15db3ae",
+      "exact_relevant_file": "src/parse-ipv4.mjs",
+      "exact_relevant_symbol": "parseIpv4",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "blind splitting and numeric coercion do not enforce four components, canonical spelling, or the octet range",
+      "behavioral_requirement": "return four numbers only for exactly four canonical decimal octets in the inclusive range zero through 255; otherwise return null",
+      "original_source_sha256": "e0521745b2926789f13736c5b8de6464192846d6d3cee63bdd2b770768e1c33b",
+      "relevant_range_source_sha256": "2c64e297908d55724b677c19ceacf55d308c5060ab931c44cab437e42ec17cf4",
+      "fixed_source_sha256": "d968d3ff421c6ccbe3ce85f80aaa8dc292fcf6056619efc7f3c3b4c46d471ad6",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-parse-ipv4\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseIpv4Contract() {\n  return \"four-canonical-octets-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET parseIpv4 START\nexport function parseIpv4(value) {\n  if (typeof value !== \"string\") return null;\n  const parts = value.split(\".\");\n  if (parts.length !== 4) return null;\n  if (!parts.every((part) => /^(0|[1-9][0-9]{0,2})$/.test(part) && Number(part) <= 255)) return null;\n  return parts.map(Number);\n}\n// PATCH_INTERFACE_TARGET parseIpv4 END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseIpv4FixtureLabel() {\n  return \"parse-ipv4\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/parse-ipv4.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseIpv4, parseIpv4Contract, parseIpv4FixtureLabel } from '../src/parse-ipv4.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(parseIpv4(\"01.2.3.4\"), null);\n  assert.equal(parseIpv4(\"1.2.3\"), null);\n  assert.deepEqual(parseIpv4(\"0.0.0.0\"), [0, 0, 0, 0]);\n  assert.equal(parseIpv4Contract(), \"four-canonical-octets-or-null\");\n  assert.equal(parseIpv4FixtureLabel(), \"parse-ipv4\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-ipv4.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-11-compare-semver-800b4bd494",
+      "exact_relevant_file": "src/compare-semver.mjs",
+      "exact_relevant_symbol": "compareSemver",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "locale string comparison orders digit characters rather than semantic-version numeric components",
+      "behavioral_requirement": "validate major.minor.patch decimal form, compare each numeric component in order, return minus one, zero, or one, and reject invalid forms",
+      "original_source_sha256": "8fe092013ab79fa45c663cc82f3c5963054c7434e45ebfea635217590d9d455c",
+      "relevant_range_source_sha256": "ddbe735f499203507993f6d6c16278005e003befec011fc9a5fe3710c109d80a",
+      "fixed_source_sha256": "da5d5647af80d95be408c107865010630a239d6ede626003afc32c674a0f02b4",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-compare-semver\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function compareSemverContract() {\n  return \"numeric-major-minor-patch-comparison\";\n}\n\n// PATCH_INTERFACE_TARGET compareSemver START\nexport function compareSemver(left, right) {\n  const pattern = /^[0-9]+\\.[0-9]+\\.[0-9]+$/;\n  if (!pattern.test(left) || !pattern.test(right)) throw new TypeError(\"semver\");\n  const leftParts = left.split(\".\").map(Number);\n  const rightParts = right.split(\".\").map(Number);\n  for (let index = 0; index < 3; index += 1) {\n    if (leftParts[index] !== rightParts[index]) return leftParts[index] < rightParts[index] ? -1 : 1;\n  }\n  return 0;\n}\n// PATCH_INTERFACE_TARGET compareSemver END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function compareSemverFixtureLabel() {\n  return \"compare-semver\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 18,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/compare-semver.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { compareSemver, compareSemverContract, compareSemverFixtureLabel } from '../src/compare-semver.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(compareSemver(\"2.0.0\", \"10.0.0\"), -1);\n  assert.equal(compareSemver(\"1.2.3\", \"1.2.4\"), -1);\n  assert.throws(() => compareSemver(\"1.0\", \"1.0.0\"), TypeError);\n  assert.equal(compareSemverContract(), \"numeric-major-minor-patch-comparison\");\n  assert.equal(compareSemverFixtureLabel(), \"compare-semver\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/compare-semver.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-12-parse-json-object-789a69d942",
+      "exact_relevant_file": "src/parse-json-object.mjs",
+      "exact_relevant_symbol": "parseJsonObject",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "raw JSON.parse throws on malformed input and returns arrays, null, and primitives even though the API promises a record",
+      "behavioral_requirement": "return a parsed non-null non-array object for valid object JSON and return null without throwing for every other input",
+      "original_source_sha256": "1406c4dc9ae163d283a1bc4db333a62fc7ee3f03603749e96ccb52517ac7217c",
+      "relevant_range_source_sha256": "77f31988dc53c162b6323027f02ed2dd1c95643b1244a38ed31bc90b0f577e61",
+      "fixed_source_sha256": "0e425ae1cef5b43813a05fc43f8cc728a6facf935ca742da3073dc1dcfc4c60f",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-parse-json-object\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseJsonObjectContract() {\n  return \"json-record-or-null-no-throw\";\n}\n\n// PATCH_INTERFACE_TARGET parseJsonObject START\nexport function parseJsonObject(value) {\n  try {\n    const parsed = JSON.parse(value);\n    return parsed !== null && typeof parsed === \"object\" && !Array.isArray(parsed) ? parsed : null;\n  } catch {\n    return null;\n  }\n}\n// PATCH_INTERFACE_TARGET parseJsonObject END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseJsonObjectFixtureLabel() {\n  return \"parse-json-object\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 16,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/parse-json-object.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseJsonObject, parseJsonObjectContract, parseJsonObjectFixtureLabel } from '../src/parse-json-object.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(parseJsonObject(\"null\"), null);\n  assert.equal(parseJsonObject(\"not json\"), null);\n  assert.deepEqual(parseJsonObject(\"{}\"), {});\n  assert.equal(parseJsonObjectContract(), \"json-record-or-null-no-throw\");\n  assert.equal(parseJsonObjectFixtureLabel(), \"parse-json-object\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-json-object.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-13-take-last-items-8d922260f9",
+      "exact_relevant_file": "src/take-last-items.mjs",
+      "exact_relevant_symbol": "takeLastItems",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "Array.slice with negative zero returns the entire array and negative counts select an unrelated prefix boundary",
+      "behavioral_requirement": "return an empty array unless count is a positive integer; otherwise return a copied suffix containing at most count values",
+      "original_source_sha256": "2262ab6bd3590a858aa8e90dedc54f93bb0f68766225b271108b17c63f3d3ad0",
+      "relevant_range_source_sha256": "420239e2fec1b1f17d0b927e6481bc2d1ee4e4721b1245716f9f8515b0be4cca",
+      "fixed_source_sha256": "18acc8f3b02122c1f4f78e6b941a8a177a2915e7ef3af04285f1530cc0abc5fe",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-take-last-items\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function takeLastItemsContract() {\n  return \"bounded-suffix-copy\";\n}\n\n// PATCH_INTERFACE_TARGET takeLastItems START\nexport function takeLastItems(values, count) {\n  if (!Number.isInteger(count) || count <= 0) return [];\n  return values.slice(-count);\n}\n// PATCH_INTERFACE_TARGET takeLastItems END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function takeLastItemsFixtureLabel() {\n  return \"take-last-items\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/take-last-items.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { takeLastItems, takeLastItemsContract, takeLastItemsFixtureLabel } from '../src/take-last-items.mjs';\n\ntest(\"hidden behavior\", () => {\n  const input = [1, 2];\n  assert.deepEqual(takeLastItems(input, 5), [1, 2]);\n  assert.notEqual(takeLastItems(input, 5), input);\n  assert.deepEqual(takeLastItems(input, -1), []);\n  assert.equal(takeLastItemsContract(), \"bounded-suffix-copy\");\n  assert.equal(takeLastItemsFixtureLabel(), \"take-last-items\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/take-last-items.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-14-move-list-item-c5fff25837",
+      "exact_relevant_file": "src/move-list-item.mjs",
+      "exact_relevant_symbol": "moveListItem",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "splice is applied directly to the input array, violating the immutable result contract",
+      "behavioral_requirement": "return a copied array with one valid indexed move applied, leave the input untouched, and return an unchanged copy for invalid indices",
+      "original_source_sha256": "64db81a8156e5430bf486b211f2736c5d5f11c5b7bcd1463ae683d661c4f00c8",
+      "relevant_range_source_sha256": "0037483f2bd4d6455ced6336b0632f30ea669a1fb4ad1780016fd783c5b66c41",
+      "fixed_source_sha256": "1a707fe2eca23c1bd6573a7c66c3f2fc72b308679da6b25bbe44cc0af43d1f33",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-move-list-item\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function moveListItemContract() {\n  return \"immutable-indexed-move\";\n}\n\n// PATCH_INTERFACE_TARGET moveListItem START\nexport function moveListItem(values, from, to) {\n  const copy = [...values];\n  if (!Number.isInteger(from) || !Number.isInteger(to) || from < 0 || to < 0 || from >= copy.length || to >= copy.length) return copy;\n  const [item] = copy.splice(from, 1);\n  copy.splice(to, 0, item);\n  return copy;\n}\n// PATCH_INTERFACE_TARGET moveListItem END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function moveListItemFixtureLabel() {\n  return \"move-list-item\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/move-list-item.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { moveListItem, moveListItemContract, moveListItemFixtureLabel } from '../src/move-list-item.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.deepEqual(moveListItem([1, 2, 3], 2, 0), [3, 1, 2]);\n  assert.deepEqual(moveListItem([1, 2], -1, 1), [1, 2]);\n  assert.equal(moveListItemContract(), \"immutable-indexed-move\");\n  assert.equal(moveListItemFixtureLabel(), \"move-list-item\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/move-list-item.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-15-weighted-average-126e8c7044",
+      "exact_relevant_file": "src/weighted-average.mjs",
+      "exact_relevant_symbol": "weightedAverage",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "the weighted sum is divided by the number of values instead of the sum of weights and invalid domains are not handled",
+      "behavioral_requirement": "divide the weighted sum by total weight and return null for empty inputs, length mismatch, or zero total weight",
+      "original_source_sha256": "ed7cc66e571ca9ac8df97a2dab69a671e0804a918877b84009cf9d81a2773f65",
+      "relevant_range_source_sha256": "f5ed4fe214bdb2ecbac158a92a78e7f54f9531adc558febb462d266c48c174cf",
+      "fixed_source_sha256": "adbabcfdab6a5cc74039e6bab821ff8539ff6318951bc70cb8a1b4a6465aad6c",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-weighted-average\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function weightedAverageContract() {\n  return \"weighted-sum-over-weight-sum-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET weightedAverage START\nexport function weightedAverage(values, weights) {\n  if (values.length === 0 || values.length !== weights.length) return null;\n  const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);\n  if (totalWeight === 0) return null;\n  const weightedSum = values.reduce((sum, value, index) => sum + value * weights[index], 0);\n  return weightedSum / totalWeight;\n}\n// PATCH_INTERFACE_TARGET weightedAverage END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function weightedAverageFixtureLabel() {\n  return \"weighted-average\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/weighted-average.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { weightedAverage, weightedAverageContract, weightedAverageFixtureLabel } from '../src/weighted-average.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(weightedAverage([], []), null);\n  assert.equal(weightedAverage([1, 2], [0, 0]), null);\n  assert.equal(weightedAverage([1], [1, 2]), null);\n  assert.equal(weightedAverageContract(), \"weighted-sum-over-weight-sum-or-null\");\n  assert.equal(weightedAverageFixtureLabel(), \"weighted-average\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/weighted-average.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-16-rolling-average-cae4a611da",
+      "exact_relevant_file": "src/rolling-average.mjs",
+      "exact_relevant_symbol": "rollingAverage",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "the loop uses a strict end boundary, dropping the final complete window, and accepts invalid window sizes",
+      "behavioral_requirement": "emit each full size-wide average through the inclusive final starting index and return empty for invalid or oversized windows",
+      "original_source_sha256": "8753274652116af50b48a1ee2fe67b0215eb6b3c857695f341854e36af33e1dc",
+      "relevant_range_source_sha256": "48104c394a8ece5a94b57c9235e18fe26517ae6b0d81ed37f89a74f58469d7b8",
+      "fixed_source_sha256": "07986a764d9c9205c16403246c8bfa6df9658066f1ee13ebd8ae6d636bde6bf0",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-rolling-average\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function rollingAverageContract() {\n  return \"all-complete-windows-positive-size\";\n}\n\n// PATCH_INTERFACE_TARGET rollingAverage START\nexport function rollingAverage(values, size) {\n  if (!Number.isInteger(size) || size <= 0 || size > values.length) return [];\n  const output = [];\n  for (let index = 0; index + size <= values.length; index += 1) {\n    output.push(values.slice(index, index + size).reduce((sum, value) => sum + value, 0) / size);\n  }\n  return output;\n}\n// PATCH_INTERFACE_TARGET rollingAverage END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function rollingAverageFixtureLabel() {\n  return \"rolling-average\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 16,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/rolling-average.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { rollingAverage, rollingAverageContract, rollingAverageFixtureLabel } from '../src/rolling-average.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.deepEqual(rollingAverage([2, 4], 2), [3]);\n  assert.deepEqual(rollingAverage([1, 2], 0), []);\n  assert.deepEqual(rollingAverage([1, 2], 3), []);\n  assert.equal(rollingAverageContract(), \"all-complete-windows-positive-size\");\n  assert.equal(rollingAverageFixtureLabel(), \"rolling-average\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/rolling-average.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-17-parse-env-assignment-af2c1c4afe",
+      "exact_relevant_file": "src/parse-env-assignment.mjs",
+      "exact_relevant_symbol": "parseEnvAssignment",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "splitting on every equals sign truncates values and no environment-key validation is performed",
+      "behavioral_requirement": "split at the first equals sign, require a shell-style identifier key, preserve all remaining value characters, and return null for invalid assignments",
+      "original_source_sha256": "367315b9e019b71cc2822c5fa7593dbc67fb19661e0c24051cf6560fcc88a5c0",
+      "relevant_range_source_sha256": "30030d8144c8f8667d768403562ffda9d9053c39eb802da4082319c318a94a4a",
+      "fixed_source_sha256": "88a4e8f808ab9809fc4d0890c8f989c33df41935f4f41438cbabb7b3bbb95217",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-parse-env-assignment\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseEnvAssignmentContract() {\n  return \"validated-key-first-equals-split\";\n}\n\n// PATCH_INTERFACE_TARGET parseEnvAssignment START\nexport function parseEnvAssignment(line) {\n  const separator = line.indexOf(\"=\");\n  if (separator < 1) return null;\n  const key = line.slice(0, separator);\n  if (!/^[A-Za-z_][A-Za-z0-9_]*$/.test(key)) return null;\n  return { key, value: line.slice(separator + 1) };\n}\n// PATCH_INTERFACE_TARGET parseEnvAssignment END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseEnvAssignmentFixtureLabel() {\n  return \"parse-env-assignment\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/parse-env-assignment.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseEnvAssignment, parseEnvAssignmentContract, parseEnvAssignmentFixtureLabel } from '../src/parse-env-assignment.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.deepEqual(parseEnvAssignment(\"EMPTY=\"), { key: \"EMPTY\", value: \"\" });\n  assert.equal(parseEnvAssignment(\"=missing\"), null);\n  assert.equal(parseEnvAssignment(\"NO_EQUALS\"), null);\n  assert.equal(parseEnvAssignmentContract(), \"validated-key-first-equals-split\");\n  assert.equal(parseEnvAssignmentFixtureLabel(), \"parse-env-assignment\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-env-assignment.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-18-get-path-value-280b061326",
+      "exact_relevant_file": "src/get-path-value.mjs",
+      "exact_relevant_symbol": "getPathValue",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "blind property reduction throws on missing intermediates and permits inherited or prototype-sensitive traversal",
+      "behavioral_requirement": "walk non-empty dotted segments through own properties only, reject prototype-sensitive keys, and return undefined for any missing or unsafe segment",
+      "original_source_sha256": "264cdc542f45c566a9fac2abf8fd27690cc114ff30249caf734dc33ca2f1ccb9",
+      "relevant_range_source_sha256": "da23139b024830d7152a903f23f42212ce35061120fa30b065d9a64c2ce601a1",
+      "fixed_source_sha256": "873b86c9ee3cb6e273374f3d69e8b838642cceb59cb6f26e3d88fb5d8f957672",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-get-path-value\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function getPathValueContract() {\n  return \"own-properties-only-undefined-on-miss\";\n}\n\n// PATCH_INTERFACE_TARGET getPathValue START\nexport function getPathValue(value, dottedPath) {\n  let current = value;\n  for (const key of dottedPath.split(\".\")) {\n    if (!key || key === \"__proto__\" || key === \"prototype\" || key === \"constructor\") return undefined;\n    if (current === null || (typeof current !== \"object\" && typeof current !== \"function\")) return undefined;\n    if (!Object.prototype.hasOwnProperty.call(current, key)) return undefined;\n    current = current[key];\n  }\n  return current;\n}\n// PATCH_INTERFACE_TARGET getPathValue END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function getPathValueFixtureLabel() {\n  return \"get-path-value\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 18,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/get-path-value.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { getPathValue, getPathValueContract, getPathValueFixtureLabel } from '../src/get-path-value.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(getPathValue(Object.create({ inherited: 1 }), \"inherited\"), undefined);\n  assert.equal(getPathValue({}, \"__proto__.polluted\"), undefined);\n  assert.equal(getPathValue({ a: { b: 0 } }, \"a.b\"), 0);\n  assert.equal(getPathValueContract(), \"own-properties-only-undefined-on-miss\");\n  assert.equal(getPathValueFixtureLabel(), \"get-path-value\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/get-path-value.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-19-apply-defaults-305d454174",
+      "exact_relevant_file": "src/apply-defaults.mjs",
+      "exact_relevant_symbol": "applyDefaults",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "object spread lets an explicitly undefined input erase a defined default",
+      "behavioral_requirement": "copy defaults, overlay every incoming value except undefined, preserve null and falsy values, and mutate neither input",
+      "original_source_sha256": "fac63d8e3f35211a08af48d50688228d5a5d4ac4361fea9c4a4a1cf0387adeaf",
+      "relevant_range_source_sha256": "47c5d7543a8aba864fa484e61cc69c4802158101256cfce20b1ca7d2a638bf3f",
+      "fixed_source_sha256": "3154c86c6bfc4e4d8f2f94dd7e8bdc72f327997c8c9aece9c5221ed0411e3622",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-apply-defaults\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function applyDefaultsContract() {\n  return \"undefined-does-not-overwrite-default\";\n}\n\n// PATCH_INTERFACE_TARGET applyDefaults START\nexport function applyDefaults(defaults, value) {\n  const output = { ...defaults };\n  for (const [key, item] of Object.entries(value)) {\n    if (item !== undefined) output[key] = item;\n  }\n  return output;\n}\n// PATCH_INTERFACE_TARGET applyDefaults END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function applyDefaultsFixtureLabel() {\n  return \"apply-defaults\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/apply-defaults.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { applyDefaults, applyDefaultsContract, applyDefaultsFixtureLabel } from '../src/apply-defaults.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.deepEqual(applyDefaults({ label: \"x\" }, { label: null }), { label: null });\n  const defaults = { count: 1 }; const value = { count: 0 }; applyDefaults(defaults, value); assert.deepEqual(defaults, { count: 1 }); assert.deepEqual(value, { count: 0 });\n  assert.equal(applyDefaultsContract(), \"undefined-does-not-overwrite-default\");\n  assert.equal(applyDefaultsFixtureLabel(), \"apply-defaults\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/apply-defaults.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-20-serialize-query-c0867650c6",
+      "exact_relevant_file": "src/serialize-query.mjs",
+      "exact_relevant_symbol": "serializeQuery",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "passing an object directly to URLSearchParams preserves insertion order, comma-coerces arrays, and serializes nullish fields",
+      "behavioral_requirement": "sort keys, append one encoded entry per scalar or array member in array order, omit null and undefined, and use URLSearchParams encoding",
+      "original_source_sha256": "1781cafbcd0b5c246035ca632c68c00b41e97853049bc3bcce9971b46fb17107",
+      "relevant_range_source_sha256": "083c93a21d3dbd6ddcabf1631f156d9a49f9ec388fed5d5cd424c2737be3ef5a",
+      "fixed_source_sha256": "5590cb3c793a28c24e357afb6eee08bf989b1331e816bec31bc1e590c8dd79f1",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-serialize-query\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function serializeQueryContract() {\n  return \"sorted-repeated-url-search-params\";\n}\n\n// PATCH_INTERFACE_TARGET serializeQuery START\nexport function serializeQuery(value) {\n  const parameters = new URLSearchParams();\n  for (const key of Object.keys(value).sort()) {\n    const items = Array.isArray(value[key]) ? value[key] : [value[key]];\n    for (const item of items) {\n      if (item !== null && item !== undefined) parameters.append(key, String(item));\n    }\n  }\n  return parameters.toString();\n}\n// PATCH_INTERFACE_TARGET serializeQuery END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function serializeQueryFixtureLabel() {\n  return \"serialize-query\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 18,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/serialize-query.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { serializeQuery, serializeQueryContract, serializeQueryFixtureLabel } from '../src/serialize-query.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(serializeQuery({ z: null, a: 0, b: false }), \"a=0&b=false\");\n  assert.equal(serializeQuery({}), \"\");\n  assert.equal(serializeQueryContract(), \"sorted-repeated-url-search-params\");\n  assert.equal(serializeQueryFixtureLabel(), \"serialize-query\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/serialize-query.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-21-match-etag-list-593647080b",
+      "exact_relevant_file": "src/match-etag-list.mjs",
+      "exact_relevant_symbol": "matchEtagList",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "direct string equality ignores comma-separated candidates, optional whitespace, wildcard matching, and weak validators",
+      "behavioral_requirement": "split and trim the candidate list, match wildcard universally, and otherwise compare tags after removing an optional weak prefix",
+      "original_source_sha256": "83287667b12958fe5e50c6808328f6432a68e3d828f5be6643d4cd508bb77c26",
+      "relevant_range_source_sha256": "a864d366e233d92b0ce368799366681900ba02464057d7f860476d56a151b9c5",
+      "fixed_source_sha256": "c11d35651b6192276a6cbad775935665c12fffcd673a9f4a7a879849ea75f5f3",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-match-etag-list\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function matchEtagListContract() {\n  return \"comma-list-wildcard-weak-comparison\";\n}\n\n// PATCH_INTERFACE_TARGET matchEtagList START\nexport function matchEtagList(header, current) {\n  const candidates = header.split(\",\").map((value) => value.trim()).filter(Boolean);\n  if (candidates.includes(\"*\")) return true;\n  const normalize = (value) => value.replace(/^W\\//, \"\");\n  const expected = normalize(current.trim());\n  return candidates.some((candidate) => normalize(candidate) === expected);\n}\n// PATCH_INTERFACE_TARGET matchEtagList END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function matchEtagListFixtureLabel() {\n  return \"match-etag-list\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/match-etag-list.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { matchEtagList, matchEtagListContract, matchEtagListFixtureLabel } from '../src/match-etag-list.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(matchEtagList(\"*\", '\"anything\"'), true);\n  assert.equal(matchEtagList('W/\"v1\"', 'W/\"v1\"'), true);\n  assert.equal(matchEtagListContract(), \"comma-list-wildcard-weak-comparison\");\n  assert.equal(matchEtagListFixtureLabel(), \"match-etag-list\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/match-etag-list.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-22-choose-language-f6b919bf2c",
+      "exact_relevant_file": "src/choose-language.mjs",
+      "exact_relevant_symbol": "chooseLanguage",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 11,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "the first comma-separated token is returned without parsing quality values or checking the supported set",
+      "behavioral_requirement": "rank positive-quality entries stably, match supported languages case-insensitively, honor wildcard as the first supported language, and return null when nothing matches",
+      "original_source_sha256": "00b8ab2b7fbda0452e96c4c08feebf2a0fa125c6761cb489958242d4453f1681",
+      "relevant_range_source_sha256": "3c8f8d3fa4abbd018952a86a86097fa80f6d148e6318b529a00576d4e1db8b78",
+      "fixed_source_sha256": "8c71d7e423d8c87a25375552d99d95de61f0fafee78a72885981f674e15e3a56",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-choose-language\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function chooseLanguageContract() {\n  return \"quality-ranked-case-insensitive-selection\";\n}\n\n// PATCH_INTERFACE_TARGET chooseLanguage START\nexport function chooseLanguage(header, supported) {\n  const ranked = header.split(\",\").map((entry, index) => {\n    const [tag, ...parameters] = entry.trim().split(\";\");\n    const qualityText = parameters.map((item) => item.trim()).find((item) => item.startsWith(\"q=\"));\n    const quality = qualityText ? Number(qualityText.slice(2)) : 1;\n    return { tag, quality: Number.isFinite(quality) ? quality : 0, index };\n  }).filter((item) => item.tag && item.quality > 0).sort((left, right) => right.quality - left.quality || left.index - right.index);\n  for (const item of ranked) {\n    if (item.tag === \"*\") return supported[0] ?? null;\n    const match = supported.find((language) => language.toLowerCase() === item.tag.toLowerCase());\n    if (match) return match;\n  }\n  return null;\n}\n// PATCH_INTERFACE_TARGET chooseLanguage END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function chooseLanguageFixtureLabel() {\n  return \"choose-language\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 22,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/choose-language.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { chooseLanguage, chooseLanguageContract, chooseLanguageFixtureLabel } from '../src/choose-language.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(chooseLanguage(\"DE, en;q=0.5\", [\"de\", \"en\"]), \"de\");\n  assert.equal(chooseLanguage(\"es;q=0, *;q=0.5\", [\"en\"]), \"en\");\n  assert.equal(chooseLanguage(\"es\", [\"en\"]), null);\n  assert.equal(chooseLanguageContract(), \"quality-ranked-case-insensitive-selection\");\n  assert.equal(chooseLanguageFixtureLabel(), \"choose-language\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/choose-language.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-23-seconds-to-clock-8fde531045",
+      "exact_relevant_file": "src/seconds-to-clock.mjs",
+      "exact_relevant_symbol": "secondsToClock",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "all elapsed minutes are emitted under a hard-coded zero hour instead of separating hours and modulo-60 minutes",
+      "behavioral_requirement": "reject negative or fractional input and format floor-free integer seconds as H:MM:SS with unbounded hours",
+      "original_source_sha256": "ac9ac0cb3c6e3891f69bf5ef0f34dabf066b8ab47990aab65d10d010e67de4bb",
+      "relevant_range_source_sha256": "d2ce7f8e511778ba606303b110d00ea6e35e2e0500ca04c876ac9bbb1f4b1508",
+      "fixed_source_sha256": "13ebe9e6a683502196befc674503e121a6e5d7a2d5a6e11c633e9cadef4296b3",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-seconds-to-clock\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function secondsToClockContract() {\n  return \"hours-colon-two-digit-minute-second\";\n}\n\n// PATCH_INTERFACE_TARGET secondsToClock START\nexport function secondsToClock(totalSeconds) {\n  if (!Number.isInteger(totalSeconds) || totalSeconds < 0) return null;\n  const hours = Math.floor(totalSeconds / 3600);\n  const minutes = Math.floor(totalSeconds / 60) % 60;\n  const seconds = totalSeconds % 60;\n  return String(hours) + \":\" + String(minutes).padStart(2, \"0\") + \":\" + String(seconds).padStart(2, \"0\");\n}\n// PATCH_INTERFACE_TARGET secondsToClock END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function secondsToClockFixtureLabel() {\n  return \"seconds-to-clock\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 15,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/seconds-to-clock.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { secondsToClock, secondsToClockContract, secondsToClockFixtureLabel } from '../src/seconds-to-clock.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(secondsToClock(59), \"0:00:59\");\n  assert.equal(secondsToClock(36000), \"10:00:00\");\n  assert.equal(secondsToClock(-1), null);\n  assert.equal(secondsToClockContract(), \"hours-colon-two-digit-minute-second\");\n  assert.equal(secondsToClockFixtureLabel(), \"seconds-to-clock\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/seconds-to-clock.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-24-intersect-ranges-b6f8538698",
+      "exact_relevant_file": "src/intersect-ranges.mjs",
+      "exact_relevant_symbol": "intersectRanges",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "a strict comparison treats one shared endpoint as empty even though both ranges are closed and inclusive",
+      "behavioral_requirement": "compute max start and min end, returning both when start is less than or equal to end and null only for a true gap",
+      "original_source_sha256": "48b97249af6dfaacd6769b00a11ec6a426e5f3416ad4ff122d196f1ad8f55dc0",
+      "relevant_range_source_sha256": "50c67898cabdaacda005c760d78795396e486e7b4e022d9969b98b607a104335",
+      "fixed_source_sha256": "f506a20a4142dc3fae3326c5c247322ac3fb12ece45fd45a6ec794eec929f684",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-intersect-ranges\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function intersectRangesContract() {\n  return \"closed-range-intersection-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET intersectRanges START\nexport function intersectRanges(left, right) {\n  const start = Math.max(left[0], right[0]);\n  const end = Math.min(left[1], right[1]);\n  return start <= end ? [start, end] : null;\n}\n// PATCH_INTERFACE_TARGET intersectRanges END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function intersectRangesFixtureLabel() {\n  return \"intersect-ranges\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 13,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/intersect-ranges.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { intersectRanges, intersectRangesContract, intersectRangesFixtureLabel } from '../src/intersect-ranges.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.deepEqual(intersectRanges([1, 5], [2, 4]), [2, 4]);\n  assert.equal(intersectRanges([1, 2], [3, 4]), null);\n  assert.equal(intersectRangesContract(), \"closed-range-intersection-or-null\");\n  assert.equal(intersectRangesFixtureLabel(), \"intersect-ranges\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/intersect-ranges.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    },
+    {
+      "task_id": "patch-interface-dev-new-25-parse-byte-range-2f2f3376de",
+      "exact_relevant_file": "src/parse-byte-range.mjs",
+      "exact_relevant_symbol": "parseByteRange",
+      "exact_relevant_range_1_based": {
+        "start_line": 9,
+        "end_line": 12,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "root_cause": "prefix replacement and numeric coercion accept malformed, reversed, and out-of-bounds ranges without validation or clamping",
+      "behavioral_requirement": "accept exactly bytes=start-end with safe inclusive integers, reject reversed or unsatisfiable starts, clamp end to size minus one, and return null for invalid input",
+      "original_source_sha256": "6401a0822a17c32b6280995ba82771bd13a3767a4b62e0d36542b3308833847d",
+      "relevant_range_source_sha256": "df0cd0f995bd9006d624aa6d2fb4f3fe4b3408b2fedd9fc9196ed76f14eae452",
+      "fixed_source_sha256": "ba257c4582540b55476883a85861619bc87ababe8912028d279aa37d8ed7f67d",
+      "reference_fixed_source": "export const FIXTURE_ID = \"patch-interface-parse-byte-range\";\n\n// This adjacent export is intentionally outside the mutation target.\nexport function parseByteRangeContract() {\n  return \"single-closed-byte-range-or-null\";\n}\n\n// PATCH_INTERFACE_TARGET parseByteRange START\nexport function parseByteRange(value, size) {\n  if (!Number.isInteger(size) || size <= 0) return null;\n  const match = /^bytes=([0-9]+)-([0-9]+)$/.exec(value);\n  if (!match) return null;\n  const start = Number(match[1]);\n  const requestedEnd = Number(match[2]);\n  if (!Number.isSafeInteger(start) || !Number.isSafeInteger(requestedEnd) || start > requestedEnd || start >= size) return null;\n  return { start, end: Math.min(requestedEnd, size - 1) };\n}\n// PATCH_INTERFACE_TARGET parseByteRange END\n\n// A bounded edit must leave this neighboring module surface unchanged.\nexport function parseByteRangeFixtureLabel() {\n  return \"parse-byte-range\";\n}\n",
+      "reference_fixed_range_1_based": {
+        "start_line": 9,
+        "end_line": 17,
+        "semantics": "FULL_SYMBOL_DEFINITION_INCLUSIVE"
+      },
+      "hidden_files": [
+        {
+          "path": "test/parse-byte-range.hidden.test.mjs",
+          "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { parseByteRange, parseByteRangeContract, parseByteRangeFixtureLabel } from '../src/parse-byte-range.mjs';\n\ntest(\"hidden behavior\", () => {\n  assert.equal(parseByteRange(\"bytes=5-2\", 10), null);\n  assert.equal(parseByteRange(\"items=1-2\", 10), null);\n  assert.equal(parseByteRange(\"bytes=10-12\", 10), null);\n  assert.equal(parseByteRangeContract(), \"single-closed-byte-range-or-null\");\n  assert.equal(parseByteRangeFixtureLabel(), \"parse-byte-range\");\n});\n"
+        }
+      ],
+      "trusted_hidden_command": [
+        "/usr/bin/node",
+        "--test",
+        "test/parse-byte-range.hidden.test.mjs"
+      ],
+      "mutation_certification": {
+        "classification": "SAFE_MUTATION_REQUIRED",
+        "certified": true,
+        "reason": "This synthetic development fixture has one allowlisted source, a known behavioral defect, and independent visible and hidden local oracles.",
+        "deterministic_runtime_controls": [
+          "isolated worktree",
+          "single-file allowlist",
+          "path and symlink policy",
+          "changed-file and changed-line budgets",
+          "trusted command registry with shell false",
+          "timeout and cancellation",
+          "visible and hidden behavioral verification",
+          "rollback"
+        ]
+      },
+      "patch_interface_source_provenance": {
+        "kind": "INDEPENDENTLY_AUTHORED_FOR_PATCH_INTERFACE_DEVELOPMENT_V1",
+        "derived_from_g3_or_holdout": false,
+        "future_holdout_eligible": false
+      },
+      "success_requires": [
+        "bounded edit accepted in isolated worktree",
+        "syntax check PASS",
+        "visible test PASS",
+        "hidden behavioral test PASS",
+        "no forbidden or wrong-file edit",
+        "no unrelated neighboring-surface regression",
+        "clean rollback"
+      ]
+    }
+  ],
+  "oraclePayloadSha256": "cfe030ce264ff0921a37502c64d08d48872ec8abbbff8fdf96d5ec6f0790713d"
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "reportId": "dca-best-7b-bounded-retry-final-report-v1",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T17:48:10.497Z",
+  "inputs": {
+    "analysis": {
+      "path": "benchmarks/model-specialization/BEST_7B_BOUNDED_RETRY_ANALYSIS.v1.json",
+      "sha256": "607cc2fbe41f4e9fd6172d3c848d4f8a2f5c2a9457b746ffd96c8a7b564c6549"
+    },
+    "admission": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_ADMISSION.v1.json",
+      "sha256": "ece52ae58b7328e73929f2325d07571f6a36931954661ab1bd18421dca671d73"
+    },
+    "productDecision": {
+      "path": "docs/experiments/model-specialization/BEST_7B_BOUNDED_RETRY_PRODUCT_DECISION.v1.json",
+      "sha256": "921b55529ce28cca8d975bc9144bc473523750aa1f9eea9fe4b88d2b8ea9abf8"
+    },
+    "capabilityMatrix": {
+      "path": "docs/experiments/model-specialization/MODEL_CAPABILITY_MATRIX.v6.json",
+      "sha256": "33c416bfc61fa18746c60801a19fcc9cf8351cfef70a9e52f0efbb345fd7fd36"
+    },
+    "capabilityCeiling": {
+      "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v6.json",
+      "sha256": "920700a606ccbaa6fe15476c808f11a4a0275d3870ef74f9c6a838c428aad59f"
+    },
+    "nextProtocol": {
+      "path": "benchmarks/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_PROTOCOL.v1.json",
+      "sha256": "0c0806e564a3fe5da3fa6fa77de694c38ff635396b1afa91b3065f1511833823"
+    }
+  },
+  "decisions": {
+    "retry": "RETRY_NO_MATERIAL_GAIN",
+    "productMutation": "KEEP_MUTATION_DISABLED",
+    "fimStatus": "BEST_RESEARCH_MODEL__STRONGEST_SCORED_RESEARCH_CANDIDATE_ASSISTED_FLOOR_ONLY",
+    "nextScientificExperiment": "SEMANTIC_FAILURE_DECOMPOSITION"
+  },
+  "scientificQuestions": {
+    "Q1": "No. Strict success increased only 29/95 to 30/95; recovery was 1/66 and failed the frozen material-gain gate.",
+    "Q2": "VISIBLE_TEST was the only recoverable class, at 1/47 (2.13%); this single recovery does not establish broad recoverability.",
+    "Q3": "No. Hidden failures recovered 0/6 and all remained HIDDEN_TEST.",
+    "Q4": "No. Syntax/type failures recovered 0/6; four stayed syntax, one moved later to visible, and one regressed to action validation.",
+    "Q5": "Exact repeated edit was dominant: 42/66 (63.64%). Overall, 55/66 remained at the same failure stage.",
+    "Q6": "No. Sixty-six extra calls and 40,362 retry tokens produced one recovery; the eligible-subset token multiplier was 3.39x and failed the 2x gate.",
+    "Q7": "Yes at the deterministic mutation boundary: zero wrong-file attempts, actual safety violations and rollback failures. Four SAFETY_REJECTED proposals were blocked before unsafe mutation.",
+    "Q8": "It retained the assisted floor only (30/95) and did not cross research 33, strong 40, or product 57.",
+    "Q9": "No. Retry remains disabled by default and protocol-only for research.",
+    "Q10": "Behavioral semantic reasoning after a valid localized edit is the strongest remaining measured bottleneck; exact-source retrieval remains a smaller 5/95 limitation."
+  },
+  "portfolioFinding": "A second evidence-driven model call did not materially improve FIM-7B: most failed patches were repeated rather than corrected, so additional agent-loop iterations did not substitute for semantic model capability in this disclosed screening set. E-EDIT P2 removed most action-interface friction, and FIM-oriented post-training materially outperformed generic Qwen Coder 7B under the matched practical 7B profile; neither result establishes production readiness.",
+  "claimLimits": [
+    "disclosed screening reuse, not untouched product evidence",
+    "FIM-7B runtime used online FP8 W8A8",
+    "semantic decomposition is prepared but not executed",
+    "no production model promotion"
+  ],
+  "modelCalls": 0
+}

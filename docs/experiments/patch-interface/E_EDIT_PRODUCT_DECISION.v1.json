@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "decisionId": "dca-e-edit-untouched-holdout-product-decision-v1",
+  "status": "PASS",
+  "decidedAt": "2026-08-11T03:14:15.580Z",
+  "productMutationDecision": "KEEP_MUTATION_DISABLED",
+  "eEditCapabilityStatus": "RESEARCH_ONLY_MUTATION_INTERFACE",
+  "eEditIsSkill": false,
+  "runtimeInterfaceRetainedForResearch": true,
+  "basis": {
+    "strictBehavioralSuccess": "23/95 (24.21%)",
+    "holdoutPromotionMinimum": "57/95",
+    "assistedOnlyFloor": "29/95",
+    "adr0014ReconsiderationThreshold": "25%",
+    "wrongFileAttempts": 0,
+    "actualSafetyViolations": 0,
+    "rollbackFailures": 0,
+    "retry": "NOT_ELIGIBLE_ZERO_CALLS"
+  },
+  "modelScaleGate": "JUSTIFIED_PROTOCOL_ONLY_NO_ACQUISITION",
+  "tournamentProtocol": {
+    "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PROTOCOL.v1.json",
+    "sha256": "62b4ac12a82e90f42a9e532ec9b7fa60e7bca383ba56726425ae4d8857aad713"
+  },
+  "adr": {
+    "path": "adrs/0015-keep-mutation-disabled-after-e-edit-holdout.md",
+    "sha256": "af67c75211b3d1a84c9f11ab2e40b6ae00d7ebf1f8acb804063593c7011e3d2e"
+  },
+  "productMutationEnabled": false,
+  "thresholdsLowered": false
+}

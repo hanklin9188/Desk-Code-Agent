@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T14:20:52.373Z",
+  "status": "PASS_RESOLVED_BEFORE_CANDIDATE_CAPABILITY_CALLS",
+  "firstAttempt": {
+    "candidateCalls": 0,
+    "result": "PRE_CALL_ENGINE_INITIALIZATION_FAILURE",
+    "cause": "vLLM Model Runner V2 requires CUDA UVA unavailable on the approved device path"
+  },
+  "resolution": {
+    "sharedModelRunner": "V1",
+    "baselineEffectiveModelRunner": "V1_BY_HYBRID_ARCHITECTURE",
+    "candidateEffectiveModelRunner": "V1_EXPLICIT_PIN",
+    "dependencyInstalled": false,
+    "modelChanged": false,
+    "precisionChanged": false,
+    "contextChanged": false,
+    "taskOrPromptChanged": false
+  },
+  "decodingParity": {
+    "status": "PASS",
+    "baseline": "SNAPSHOT_CONFIG_ABSENT_EFFECTIVE_VLLM_DEFAULTS",
+    "coder": "SNAPSHOT_CONFIG_DISABLED_WITH_GENERATION_CONFIG_VLLM",
+    "priorV2Run": "INVALIDATED_DECODING_CONFOUND"
+  },
+  "verification": {
+    "targetedTests": "5/5 PASS",
+    "typecheck": "PASS",
+    "fairnessGate": {
+      "path": "docs/experiments/model-specialization/MODEL_SPECIALIZATION_FAIRNESS_GATE.v3.json",
+      "sha256": "a86f9c0db0e489e0dd3974aa52fbcc53fb556f674491bd313dd9eba06a525045"
+    },
+    "candidateSmoke": {
+      "path": "docs/experiments/model-specialization/CODER_MODEL_SMOKE_VALIDATION.v3.json",
+      "sha256": "152e246899b0ae1e3e2b5fb1be352bcfbc6f6eb1962dcddb392954c7c01a40c5"
+    }
+  }
+}

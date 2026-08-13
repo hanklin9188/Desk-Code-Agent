@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "CODE_FORMATION_CONSTRAINT_EXPERIMENT",
+  "state": "SESSION_B_PRECALL_ABORTED_ZERO_CALLS",
+  "updatedAt": "2026-08-11T23:02:18.214Z",
+  "artifacts": {
+    "protocol": {
+      "path": "benchmarks/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_PROTOCOL.v1.json",
+      "sha256": "f60d723aa9d2a8e6cc9b9aa05f39ba26acf0c74f7f97a4aa59670e0712ac9cc0"
+    },
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_SESSION_A.v1.json",
+      "sha256": "3c9590dd51b5564894cc4c5add3dbd9d3f48c75ef63347ef2d3d3e4f8ef92fea",
+      "status": "PASS"
+    },
+    "sessionBPrecallAbort": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONSTRAINT_EXPERIMENT_SESSION_B_PRECALL_ABORT.v1.json",
+      "sha256": "7c4f58158b9314c410044d9f994e798842924bb3d00a292d61b5536636bc4a9f",
+      "status": "ABORTED_FAIL_CLOSED_BEFORE_FIRST_CALL"
+    }
+  },
+  "accounting": {
+    "plannedCalls": 80,
+    "actualCalls": 0,
+    "controlCalls": 0,
+    "treatmentCalls": 0,
+    "completedPairs": 0,
+    "retries": 0
+  },
+  "sessionBComplete": false,
+  "sessionCReady": false,
+  "next": "SEPARATE_ZERO_CALL_RUNNER_CORRECTION_AND_RESEAL_REQUIRED"
+}

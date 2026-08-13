@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "auditId": "dca-w1-windows-native-execution-path-audit-v1",
+  "auditedAt": "2026-08-12T14:44:43.7553444+08:00",
+  "phase": "WINDOWS_REFERENCE_HARDWARE_QA",
+  "status": "PASS_AUDIT_BLOCKED_EXECUTION",
+  "decision": "PATH_C",
+  "classification": "BLOCKED_NO_APPROVED_NATIVE_EXECUTION_PATH",
+  "blockingStatus": "BLOCKED_EXTERNAL_NATIVE_TOOLCHAIN_REQUIRED",
+  "priorW1Report": {
+    "path": "docs/validation/WINDOWS_REFERENCE_HARDWARE_QA_REPORT.json",
+    "sha256": "2d5ae681480eb7a1df736d0178d9dc877b5eae86799a5c9a4474d43601fea88a",
+    "integrity": "PASS"
+  },
+  "environment": {
+    "windows": {
+      "edition": "Microsoft Windows 11 Home",
+      "version": "10.0.26200",
+      "build": "26200",
+      "architecture": "64-bit"
+    },
+    "node": {
+      "status": "ABSENT",
+      "command": "node.exe",
+      "onPath": false,
+      "knownInstallPaths": false,
+      "targetedFilesystemSearch": "NO_NODE_EXE_FOUND"
+    },
+    "npm": {
+      "status": "ABSENT",
+      "command": "npm.cmd",
+      "onPath": false,
+      "knownInstallPaths": false,
+      "targetedFilesystemSearch": "NO_NPM_CMD_FOUND"
+    },
+    "rust": {
+      "status": "ABSENT",
+      "rustcOnPath": false,
+      "cargoOnPath": false,
+      "rustupOnPath": false,
+      "userCargoBinPresent": false,
+      "targetedFilesystemSearch": "NO_RUSTC_CARGO_OR_RUSTUP_FOUND",
+      "projectRequiredToolchain": "1.97.1-x86_64-pc-windows-msvc",
+      "projectRequiredComponents": ["rustfmt", "clippy"]
+    },
+    "visualStudio": {
+      "status": "PRESENT",
+      "product": "Visual Studio Community 2026",
+      "productVersion": "18.8.2",
+      "installationVersion": "18.8.12023.21",
+      "installationPath": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community",
+      "msvcX64Compiler": {
+        "status": "PRESENT_REQUIRES_DEVELOPER_ENVIRONMENT_INITIALIZATION",
+        "path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+        "fileVersion": "19.51.36252.0",
+        "sha256": "c94cdac6a780142920110e5cb8b7339817029eead696e0e97700b45e03216a00"
+      },
+      "vcvars64": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat"
+    },
+    "windowsSdk": {
+      "status": "PRESENT",
+      "version": "10.0.26100.0",
+      "resourceCompilerPath": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe",
+      "resourceCompilerVersion": "10.0.26100.7705",
+      "resourceCompilerSha256": "43da1503c262c30894c851589bf0155f8365d77e63a5f7bc13982320e3a6b42d",
+      "kernelLibraryPresent": true
+    },
+    "webView2": {
+      "status": "PRESENT",
+      "version": "150.0.4078.48",
+      "executable": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\150.0.4078.48\\msedgewebview2.exe",
+      "sha256": "30428a9075e5706b5e4a77e324b4331326566cda027f49a8922089733c728859"
+    },
+    "tauri": {
+      "projectCliVersion": "2.11.4",
+      "status": "PROJECT_DEPENDENCY_PRESENT_BUT_NOT_WINDOWS_EXECUTABLE_WITHOUT_NODE",
+      "nativeBuildUsable": false
+    }
+  },
+  "nativePackageAudit": {
+    "repositorySearchRoots": ["apps", "dist", "artifacts"],
+    "runnableExeMsiMsixAppxCandidates": 0,
+    "windowsRegistryDeskCodeAgentInstallations": 0,
+    "commonUserLocationSearch": {
+      "roots": ["C:\\Users\\User\\Desktop", "C:\\Users\\User\\Downloads", "C:\\Users\\User\\Documents"],
+      "maximumDepth": 3,
+      "candidate": {
+        "path": "C:\\Users\\User\\Downloads\\Desk-Code-Agent-v2-Design.zip",
+        "sha256": "9e7c571f23cef42cc0bc7ff7f63f555b775b6ddd8d2f992ca0fb4fcb318562d4",
+        "classification": "SOURCE_DESIGN_ARCHIVE_NOT_RUNNABLE",
+        "runnableNativeArtifacts": 0,
+        "currentSourceIdentity": "STALE_2026-08-08_DESIGN_ARCHIVE"
+      }
+    },
+    "pathBAvailable": false
+  },
+  "sourceIdentity": {
+    "gitHead": "UNBORN",
+    "currentSourceState": "UNCOMMITTED_WORKING_TREE",
+    "implication": "Any future QA binary must be built from a sealed copy of the current working tree and accompanied by its source-closure manifest and binary SHA-256; an unknown binary cannot establish current-source correspondence."
+  },
+  "pathAssessment": {
+    "pathA": {
+      "name": "USE_EXISTING_WINDOWS_TOOLCHAIN",
+      "available": false,
+      "reason": "MSVC, Windows SDK, and WebView2 exist, but Windows Node/npm and Rust/rustup/cargo do not."
+    },
+    "pathB": {
+      "name": "USE_EXISTING_NATIVE_PACKAGE",
+      "available": false,
+      "reason": "No current-source Desk Code Agent EXE, MSI, MSIX, AppX, or portable bundle was found."
+    },
+    "pathC": {
+      "name": "BLOCKED_NO_APPROVED_NATIVE_EXECUTION_PATH",
+      "selected": true
+    }
+  },
+  "minimumProvisioningChecklist": [
+    {
+      "order": 1,
+      "requirement": "Obtain explicit owner approval to install Windows-native build dependencies before changing the host.",
+      "alreadySatisfied": false
+    },
+    {
+      "order": 2,
+      "requirement": "Install Windows x64 Node.js 24.x with npm; matching the verified development runtime at Node 24.15.0 and npm 11.12.1 is preferred.",
+      "verify": ["node.exe --version", "npm.cmd --version"],
+      "alreadySatisfied": false
+    },
+    {
+      "order": 3,
+      "requirement": "Install rustup for Windows x64 and the exact project toolchain 1.97.1-x86_64-pc-windows-msvc with rustfmt and clippy.",
+      "verify": ["rustup show active-toolchain", "rustc.exe --version --verbose", "cargo.exe --version --verbose", "rustfmt.exe --version", "cargo.exe clippy --version"],
+      "alreadySatisfied": false
+    },
+    {
+      "order": 4,
+      "requirement": "Use the existing Visual Studio Community 2026 MSVC x64 compiler and Windows SDK 10.0.26100.0 through its x64 Developer PowerShell or vcvars64.bat; do not reinstall them unless their verification fails.",
+      "verify": ["cl.exe", "rc.exe /?"],
+      "alreadySatisfied": true
+    },
+    {
+      "order": 5,
+      "requirement": "Use the existing WebView2 runtime 150.0.4078.48; no WebView2 installation is currently required.",
+      "verify": ["Confirm msedgewebview2.exe file version 150.0.4078.48"],
+      "alreadySatisfied": true
+    },
+    {
+      "order": 6,
+      "requirement": "Create a Windows-native NTFS QA working copy of the current source because cmd.exe reports that the current WSL UNC working directory is unsupported. Seal a source-closure manifest and SHA-256 before building because this repository has an unborn Git HEAD.",
+      "alreadySatisfied": false
+    },
+    {
+      "order": 7,
+      "requirement": "From the sealed NTFS QA copy, run npm ci, npm run check, then start the minimal native debug shell with the project-local Tauri CLI. Do not bundle, package, sign, or publish during W1.",
+      "verify": ["npm ci", "npm run check", "cd apps/desktop", "..\\..\\node_modules\\.bin\\tauri.exe dev"],
+      "alreadySatisfied": false
+    },
+    {
+      "order": 8,
+      "requirement": "Provide an interactive Windows desktop session for native startup, real 100/125/150/200 percent OS scaling, keyboard-only checks, Narrator, fonts, motion, and artifact-viewer QA.",
+      "alreadySatisfied": false
+    }
+  ],
+  "actions": {
+    "dependenciesInstalled": 0,
+    "nativeBuildsStarted": 0,
+    "nativeApplicationsLaunched": 0,
+    "modelCalls": 0,
+    "benchmarkCalls": 0,
+    "w2Entered": false,
+    "protectedExternalActions": 0
+  }
+}

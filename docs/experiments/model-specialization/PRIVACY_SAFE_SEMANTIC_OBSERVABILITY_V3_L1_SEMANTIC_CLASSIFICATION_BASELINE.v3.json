@@ -1,0 +1,2245 @@
+{
+  "schemaVersion": 3,
+  "artifactId": "L1_SEMANTIC_CLASSIFICATION_BASELINE",
+  "state": "SEALED_IMMUTABLE",
+  "sealedAt": "2026-08-11T22:34:47.308Z",
+  "analysisScope": "L1_STRUCTURED_DERIVED_FEATURES_ONLY_BEFORE_L0_LABEL_ACCESS",
+  "sourceInputs": {
+    "taxonomy": {
+      "path": "benchmarks/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_PREREGISTRATION.v1.json",
+      "sha256": "6851a9a2a2fd25757413f71c0b331e5899a397c1928b59259f3cc6606123ed47",
+      "bytes": 19511
+    },
+    "protocol": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PROTOCOL.v1.json",
+      "sha256": "8a8c5d9852eaeb05577c990b195921e44fdc4dddb235a83b816ba468eecfd643",
+      "bytes": 10646
+    },
+    "v3Preregistration": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_PREREGISTRATION.v3.json",
+      "sha256": "edf0ea732bbb235d10e6d898b15089bc4d1f053f54510e99e58bc63b76a42cb9",
+      "bytes": 14194
+    },
+    "tasks": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_TASK_MANIFEST.v3.json",
+      "sha256": "51d6b6759c9b39cb8e4e1024039b32dca4e1c6be749936aab586460beecb8286",
+      "bytes": 75022
+    },
+    "l1Schema": {
+      "path": "benchmarks/model-specialization/PRIVACY_SAFE_OBSERVABILITY_L1_SCHEMA.v2.json",
+      "sha256": "b40cf1819135d2cc64fd0573a67880c259e2d4c717aab414e26f583e31359bad",
+      "bytes": 3723
+    },
+    "l1PacketDirectory": "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1",
+    "l1PacketCount": 80
+  },
+  "population": {
+    "total": 80,
+    "strictSuccess": 36,
+    "strictFailure": 44
+  },
+  "failureClassifications": [
+    {
+      "taskId": "observability-019-31a673e8d046",
+      "repositoryRevision": "sha256:a59ec284bc1276342fabf61dde441242404f39efd5b595d502b1d55c84f28c2a",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "safe_average",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/000.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/000.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/000.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 15,
+        "controlFlowChangeKinds": 2,
+        "operatorChangeKinds": 4,
+        "identifierRelationshipChangeCount": 14,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 4,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-022-a60d51bf2ad2",
+      "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "nullish_defaulting",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/003.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/003.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/003.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 5,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 3,
+        "identifierRelationshipChangeCount": 5,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-023-147b5330e688",
+      "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+      "primaryCategory": "T1_TASK_REQUIREMENT_MISUNDERSTANDING",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "inclusive_boundary",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/004.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/004.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/004.json#evidence.range"
+      ],
+      "rationale": "L1 removes the comparison structure central to an inclusive-boundary task while introducing a different structural form; the observable edit addresses another behavior.",
+      "featureFamilies": [
+        "AST_NODE_TYPE_CHANGES",
+        "OPERATOR_CATEGORIES",
+        "RANGE_METADATA"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 9,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 3,
+        "identifierRelationshipChangeCount": 7,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-024-bd3dc0ee3098",
+      "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "line_ending_contract",
+      "difficulty": "L4",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/005.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/005.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/005.json#evidence.range"
+      ],
+      "rationale": "L1 records a parser failure after an accepted action, directly supporting syntax/code formation failure without recovering source or edit text.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 0,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 0,
+        "identifierRelationshipChangeCount": 0,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "TREE_SITTER_SYNTAX_ERROR"
+      }
+    },
+    {
+      "taskId": "observability-028-5f8bb831b102",
+      "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "record_ownership",
+      "difficulty": "L4",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/009.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/009.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/009.json#evidence.range"
+      ],
+      "rationale": "L1 verification records syntax/type formation as the first authoritative failure; structured edit metadata supports T13 but no semantic cause.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 24,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 7,
+        "identifierRelationshipChangeCount": 16,
+        "literalTypeChangeCount": 8,
+        "apiCallRelationshipChangeCount": 5,
+        "importRelationshipChangeCount": 1,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-029-9774d005afb1",
+      "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "safe_average",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/010.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/010.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/010.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 15,
+        "controlFlowChangeKinds": 2,
+        "operatorChangeKinds": 6,
+        "identifierRelationshipChangeCount": 14,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 4,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-031-81d52418dfbc",
+      "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+      "primaryCategory": "T3_BOUNDARY_EDGE_CASE_ERROR",
+      "secondaryCategories": [],
+      "confidence": "MEDIUM",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "index_normalization",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/012.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/012.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/012.json#evidence.range"
+      ],
+      "rationale": "L1 shows a localized negative-index boundary guard with comparison, addition, assignment, and control-flow changes, followed by behavioral failure.",
+      "featureFamilies": [
+        "CONTROL_FLOW_STRUCTURE",
+        "OPERATOR_CATEGORIES",
+        "LITERAL_TYPE_STRUCTURE",
+        "RANGE_METADATA"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 8,
+        "controlFlowChangeKinds": 1,
+        "operatorChangeKinds": 2,
+        "identifierRelationshipChangeCount": 4,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-032-9b5893b7b4f0",
+      "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "nullish_defaulting",
+      "difficulty": "L4",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/013.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/013.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/013.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 5,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 3,
+        "identifierRelationshipChangeCount": 5,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-033-4dced884ffe6",
+      "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+      "primaryCategory": "T1_TASK_REQUIREMENT_MISUNDERSTANDING",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "inclusive_boundary",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/014.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/014.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/014.json#evidence.range"
+      ],
+      "rationale": "L1 removes the comparison structure central to an inclusive-boundary task while introducing a different structural form; the observable edit addresses another behavior.",
+      "featureFamilies": [
+        "AST_NODE_TYPE_CHANGES",
+        "OPERATOR_CATEGORIES",
+        "RANGE_METADATA"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 17,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 5,
+        "identifierRelationshipChangeCount": 9,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 1,
+        "importRelationshipChangeCount": 1,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-038-bfcc45d9a4be",
+      "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "record_ownership",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/019.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/019.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/019.json#evidence.range"
+      ],
+      "rationale": "L1 verification records syntax/type formation as the first authoritative failure; structured edit metadata supports T13 but no semantic cause.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 26,
+        "controlFlowChangeKinds": 1,
+        "operatorChangeKinds": 2,
+        "identifierRelationshipChangeCount": 12,
+        "literalTypeChangeCount": 5,
+        "apiCallRelationshipChangeCount": 3,
+        "importRelationshipChangeCount": 1,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-039-536bf0f91e73",
+      "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "safe_average",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/020.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/020.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/020.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 12,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 3,
+        "identifierRelationshipChangeCount": 14,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 4,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-042-6364a4725fd3",
+      "repositoryRevision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "nullish_defaulting",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/023.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/023.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/023.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 5,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 3,
+        "identifierRelationshipChangeCount": 6,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-043-7b78017d6730",
+      "repositoryRevision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d",
+      "primaryCategory": "T1_TASK_REQUIREMENT_MISUNDERSTANDING",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "inclusive_boundary",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/024.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/024.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/024.json#evidence.range"
+      ],
+      "rationale": "L1 removes the comparison structure central to an inclusive-boundary task while introducing a different structural form; the observable edit addresses another behavior.",
+      "featureFamilies": [
+        "AST_NODE_TYPE_CHANGES",
+        "OPERATOR_CATEGORIES",
+        "RANGE_METADATA"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 6,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 3,
+        "identifierRelationshipChangeCount": 6,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-044-48803af19af2",
+      "repositoryRevision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "line_ending_contract",
+      "difficulty": "L4",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/025.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/025.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/025.json#evidence.range"
+      ],
+      "rationale": "L1 records a parser failure after an accepted action, directly supporting syntax/code formation failure without recovering source or edit text.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 0,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 0,
+        "identifierRelationshipChangeCount": 0,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "TREE_SITTER_SYNTAX_ERROR"
+      }
+    },
+    {
+      "taskId": "observability-048-97af7f20b32a",
+      "repositoryRevision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "record_ownership",
+      "difficulty": "L4",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/029.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/029.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/029.json#evidence.range"
+      ],
+      "rationale": "L1 verification records syntax/type formation as the first authoritative failure; structured edit metadata supports T13 but no semantic cause.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 23,
+        "controlFlowChangeKinds": 1,
+        "operatorChangeKinds": 3,
+        "identifierRelationshipChangeCount": 9,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 2,
+        "importRelationshipChangeCount": 1,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-049-b54a588e12b6",
+      "repositoryRevision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "safe_average",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/030.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/030.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/030.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 15,
+        "controlFlowChangeKinds": 2,
+        "operatorChangeKinds": 4,
+        "identifierRelationshipChangeCount": 13,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 4,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-052-14351bb8fbfb",
+      "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "nullish_defaulting",
+      "difficulty": "L4",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/033.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/033.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/033.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 5,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 3,
+        "identifierRelationshipChangeCount": 6,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-053-8b08911482dd",
+      "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+      "primaryCategory": "T1_TASK_REQUIREMENT_MISUNDERSTANDING",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "inclusive_boundary",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/034.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/034.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/034.json#evidence.range"
+      ],
+      "rationale": "L1 removes the comparison structure central to an inclusive-boundary task while introducing a different structural form; the observable edit addresses another behavior.",
+      "featureFamilies": [
+        "AST_NODE_TYPE_CHANGES",
+        "OPERATOR_CATEGORIES",
+        "RANGE_METADATA"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 5,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 3,
+        "identifierRelationshipChangeCount": 7,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-054-c945021f60cd",
+      "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "line_ending_contract",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/035.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/035.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/035.json#evidence.range"
+      ],
+      "rationale": "L1 records a parser failure after an accepted action, directly supporting syntax/code formation failure without recovering source or edit text.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 0,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 0,
+        "identifierRelationshipChangeCount": 0,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "TREE_SITTER_SYNTAX_ERROR"
+      }
+    },
+    {
+      "taskId": "observability-058-8b0b45f914ed",
+      "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "record_ownership",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/039.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/039.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/039.json#evidence.range"
+      ],
+      "rationale": "L1 verification records syntax/type formation as the first authoritative failure; structured edit metadata supports T13 but no semantic cause.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 28,
+        "controlFlowChangeKinds": 2,
+        "operatorChangeKinds": 6,
+        "identifierRelationshipChangeCount": 13,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 2,
+        "importRelationshipChangeCount": 1,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-059-1640a8820419",
+      "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "safe_average",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/040.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/040.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/040.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 15,
+        "controlFlowChangeKinds": 2,
+        "operatorChangeKinds": 4,
+        "identifierRelationshipChangeCount": 14,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 4,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-060-4ed5b0cfc016",
+      "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "map_last_write",
+      "difficulty": "L4",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/041.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/041.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/041.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 6,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 1,
+        "identifierRelationshipChangeCount": 3,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-062-42779a10b3cd",
+      "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "nullish_defaulting",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/043.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/043.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/043.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 5,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 3,
+        "identifierRelationshipChangeCount": 5,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-063-e41f167d5fd3",
+      "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "inclusive_boundary",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/044.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/044.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/044.json#evidence.range"
+      ],
+      "rationale": "L1 verification records syntax/type formation as the first authoritative failure; structured edit metadata supports T13 but no semantic cause.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 25,
+        "controlFlowChangeKinds": 1,
+        "operatorChangeKinds": 6,
+        "identifierRelationshipChangeCount": 14,
+        "literalTypeChangeCount": 7,
+        "apiCallRelationshipChangeCount": 3,
+        "importRelationshipChangeCount": 2,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-064-fc70dc8f7482",
+      "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "line_ending_contract",
+      "difficulty": "L4",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/045.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/045.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/045.json#evidence.range"
+      ],
+      "rationale": "L1 records a parser failure after an accepted action, directly supporting syntax/code formation failure without recovering source or edit text.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 0,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 0,
+        "identifierRelationshipChangeCount": 0,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "TREE_SITTER_SYNTAX_ERROR"
+      }
+    },
+    {
+      "taskId": "observability-066-8209c4852d91",
+      "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+      "primaryCategory": "T3_BOUNDARY_EDGE_CASE_ERROR",
+      "secondaryCategories": [],
+      "confidence": "MEDIUM",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "tail_window",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/047.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/047.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/047.json#evidence.range"
+      ],
+      "rationale": "L1 shows a localized nonpositive-window guard with paired boundary operators, unary structure, and an added return path, followed by behavioral failure.",
+      "featureFamilies": [
+        "CONTROL_FLOW_STRUCTURE",
+        "OPERATOR_CATEGORIES",
+        "AST_NODE_TYPE_CHANGES"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 7,
+        "controlFlowChangeKinds": 2,
+        "operatorChangeKinds": 3,
+        "identifierRelationshipChangeCount": 3,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-068-519f762e6823",
+      "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "record_ownership",
+      "difficulty": "L4",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/049.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/049.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/049.json#evidence.range"
+      ],
+      "rationale": "L1 verification records syntax/type formation as the first authoritative failure; structured edit metadata supports T13 but no semantic cause.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 24,
+        "controlFlowChangeKinds": 1,
+        "operatorChangeKinds": 1,
+        "identifierRelationshipChangeCount": 9,
+        "literalTypeChangeCount": 3,
+        "apiCallRelationshipChangeCount": 2,
+        "importRelationshipChangeCount": 1,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-069-1961703aa2a9",
+      "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "safe_average",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/050.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/050.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/050.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 15,
+        "controlFlowChangeKinds": 2,
+        "operatorChangeKinds": 4,
+        "identifierRelationshipChangeCount": 13,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 4,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-072-fabb64d3b3bb",
+      "repositoryRevision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65",
+      "primaryCategory": "T1_TASK_REQUIREMENT_MISUNDERSTANDING",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "nullish_defaulting",
+      "difficulty": "L4",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/053.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/053.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/053.json#evidence.range"
+      ],
+      "rationale": "L1 replaces scalar defaulting structure with object/spread structure and removes the existing binary expression, observably addressing a different behavior.",
+      "featureFamilies": [
+        "AST_NODE_TYPE_CHANGES",
+        "OPERATOR_CATEGORIES"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 4,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 2,
+        "identifierRelationshipChangeCount": 6,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-073-5f9b65db9598",
+      "repositoryRevision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65",
+      "primaryCategory": "T1_TASK_REQUIREMENT_MISUNDERSTANDING",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "inclusive_boundary",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/054.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/054.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/054.json#evidence.range"
+      ],
+      "rationale": "L1 removes the comparison structure central to an inclusive-boundary task while introducing a different structural form; the observable edit addresses another behavior.",
+      "featureFamilies": [
+        "AST_NODE_TYPE_CHANGES",
+        "OPERATOR_CATEGORIES",
+        "RANGE_METADATA"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 15,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 5,
+        "identifierRelationshipChangeCount": 7,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 1,
+        "importRelationshipChangeCount": 1,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-079-5d5185e9a8c9",
+      "repositoryRevision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "safe_average",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/060.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/060.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/060.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 15,
+        "controlFlowChangeKinds": 2,
+        "operatorChangeKinds": 4,
+        "identifierRelationshipChangeCount": 14,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 4,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v2-replacement-003-938c7b9b53a9",
+      "repositoryRevision": "sha256:d1af9558ff6623432e5f965852a9c475834fed5dd98fd560add3922493266b60",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "stable_unique",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/064.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/064.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/064.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 8,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 2,
+        "identifierRelationshipChangeCount": 3,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 1,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v2-replacement-004-ed918d278624",
+      "repositoryRevision": "sha256:76f9fabffeeb40f34ef525b76dfd3ca4f144d3ba8521e13a378fdc6d6561c67b",
+      "primaryCategory": "T7_INCOMPLETE_PATCH_SCOPE",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "GENERIC_FAILURE_ONLY",
+      "firstFailureStage": "HIDDEN_TEST",
+      "taskCategory": "port_validation",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/065.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/065.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/065.json#evidence.range"
+      ],
+      "rationale": "L1 adds only fallback/null structure, with no integer or numeric-range validation structure required by the task; the observable patch scope is incomplete.",
+      "featureFamilies": [
+        "OPERATOR_CATEGORIES",
+        "LITERAL_TYPE_STRUCTURE",
+        "AST_NODE_TYPE_CHANGES"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 2,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 1,
+        "identifierRelationshipChangeCount": 0,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v3-replacement-001-eb17cb3bfd9d",
+      "repositoryRevision": "sha256:71e3a609545859728931113c0d64ff738b61635c2785ed7b31a9bd662a76fe3b",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "bounded_window",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/066.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/066.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/066.json#evidence.range"
+      ],
+      "rationale": "L1 verification records syntax/type formation as the first authoritative failure; structured edit metadata supports T13 but no semantic cause.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 0,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 0,
+        "identifierRelationshipChangeCount": 0,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v3-replacement-002-735f98e2549b",
+      "repositoryRevision": "sha256:cd0fcc220bdfbcc8d8f7818c910a88664389d4464921ac17e4fcb8a53909ab7c",
+      "primaryCategory": "T3_BOUNDARY_EDGE_CASE_ERROR",
+      "secondaryCategories": [],
+      "confidence": "MEDIUM",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "exact_host",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/067.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/067.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/067.json#evidence.range"
+      ],
+      "rationale": "L1 shows exact-or-subdomain branching with template-string and API-call structure; the resulting mismatch supports a delimiter-boundary error without exposing the literal.",
+      "featureFamilies": [
+        "OPERATOR_CATEGORIES",
+        "LITERAL_TYPE_STRUCTURE",
+        "API_CALL_STRUCTURE",
+        "AST_NODE_TYPE_CHANGES"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 9,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 1,
+        "identifierRelationshipChangeCount": 3,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 1,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v3-replacement-004-2a70a2bcbbbe",
+      "repositoryRevision": "sha256:61353a17aced36059b06f3a2e5409a5396bb2b9eae7d7fbc08abfaf1d0a933ff",
+      "primaryCategory": "T7_INCOMPLETE_PATCH_SCOPE",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "timeout_validation",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/069.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/069.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/069.json#evidence.range"
+      ],
+      "rationale": "L1 adds fallback and numeric-literal structure but no finite-number or nonnegative-range validation structure; required local work is observably absent.",
+      "featureFamilies": [
+        "OPERATOR_CATEGORIES",
+        "LITERAL_TYPE_STRUCTURE",
+        "AST_NODE_TYPE_CHANGES"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 2,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 1,
+        "identifierRelationshipChangeCount": 0,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v3-replacement-005-e3f0a485a3d6",
+      "repositoryRevision": "sha256:12bf3341908ed47997e0716dd20afb39a6490396db0364883e006f521bf9fa6d",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "safe_slice",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/070.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/070.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/070.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 1,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 0,
+        "identifierRelationshipChangeCount": 0,
+        "literalTypeChangeCount": 1,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v3-replacement-006-a9005fc75e1d",
+      "repositoryRevision": "sha256:198ff5a9f2e08c4e765de0b09b85d47dd58c20520ecce06f8e9978896d0a5db5",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "token_boundary",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/071.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/071.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/071.json#evidence.range"
+      ],
+      "rationale": "L1 verification records syntax/type formation as the first authoritative failure; structured edit metadata supports T13 but no semantic cause.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 0,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 0,
+        "identifierRelationshipChangeCount": 0,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v3-replacement-009-a44007f120cf",
+      "repositoryRevision": "sha256:11348f76943b8a55e06e492d6528eb1ba9046a204b49c2a59e9ad696b52e3ac5",
+      "primaryCategory": "T13_SYNTAX_CODE_FORMATION",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "SYNTAX_TYPE",
+      "taskCategory": "path_prefix",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/074.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/074.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/074.json#evidence.range"
+      ],
+      "rationale": "L1 verification records syntax/type formation as the first authoritative failure; structured edit metadata supports T13 but no semantic cause.",
+      "featureFamilies": [
+        "PARSER_FALLBACK_METADATA",
+        "VERIFICATION_STAGE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 6,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 0,
+        "identifierRelationshipChangeCount": 3,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v3-replacement-010-d0519a7259f8",
+      "repositoryRevision": "sha256:7e365ce98467f96ea883b3c6cdb31c26820f227ab83c17c17a4576cdbb47bb64",
+      "primaryCategory": "T3_BOUNDARY_EDGE_CASE_ERROR",
+      "secondaryCategories": [],
+      "confidence": "MEDIUM",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "limit_validation",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/075.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/075.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/075.json#evidence.range"
+      ],
+      "rationale": "L1 shows a localized validation guard with greater-than, equality, unary, numeric-type, and fallback-return structure, followed by behavioral failure.",
+      "featureFamilies": [
+        "CONTROL_FLOW_STRUCTURE",
+        "OPERATOR_CATEGORIES",
+        "LITERAL_TYPE_STRUCTURE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 10,
+        "controlFlowChangeKinds": 2,
+        "operatorChangeKinds": 4,
+        "identifierRelationshipChangeCount": 2,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v3-replacement-011-33dfef844c4b",
+      "repositoryRevision": "sha256:c345c4f799dffa3059f933ff516e8be93aa16fdf10ee6207cdb32a7b64debf2c",
+      "primaryCategory": "T7_INCOMPLETE_PATCH_SCOPE",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "own_property",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/076.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/076.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/076.json#evidence.range"
+      ],
+      "rationale": "L1 replaces conditional structure with nullish structure but adds no ownership-check API or control structure; the required ownership guard is missing.",
+      "featureFamilies": [
+        "OPERATOR_CATEGORIES",
+        "AST_NODE_TYPE_CHANGES",
+        "API_CALL_STRUCTURE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 2,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 2,
+        "identifierRelationshipChangeCount": 2,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v3-replacement-012-6e4cce7d9867",
+      "repositoryRevision": "sha256:7351a6824f0675e84de697b375123a7a7bd79846506b21212e43a5a1f5eb270f",
+      "primaryCategory": "T7_INCOMPLETE_PATCH_SCOPE",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "page_validation",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/077.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/077.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/077.json#evidence.range"
+      ],
+      "rationale": "L1 adds nullish/equality fallback structure but no integer or valid-page range guard, observably omitting required validation work.",
+      "featureFamilies": [
+        "AST_NODE_TYPE_CHANGES",
+        "OPERATOR_CATEGORIES",
+        "LITERAL_TYPE_STRUCTURE"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 6,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 4,
+        "identifierRelationshipChangeCount": 3,
+        "literalTypeChangeCount": 2,
+        "apiCallRelationshipChangeCount": 0,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v3-replacement-013-d1fd192e052f",
+      "repositoryRevision": "sha256:8e78642a20d4c72e4006d37cfb8072f6d272a5001f3150d6ed4697451bfcf4ba",
+      "primaryCategory": "T14_AMBIGUOUS_OR_INCONCLUSIVE",
+      "secondaryCategories": [],
+      "confidence": "LOW",
+      "evidenceSufficiency": "INCONCLUSIVE",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "PARTIAL_MACHINE_FEEDBACK",
+      "firstFailureStage": "VISIBLE_TEST",
+      "taskCategory": "extension_boundary",
+      "difficulty": "L2",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/078.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/078.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/078.json#evidence.range"
+      ],
+      "rationale": "Structured L1 deltas confirm a behavioral mismatch but do not identify the edit semantics needed to support a stronger frozen category.",
+      "featureFamilies": [
+        "STRUCTURED_FEATURES_NON_IDENTIFYING"
+      ],
+      "limitationReasons": [
+        "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES"
+      ],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 4,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 0,
+        "identifierRelationshipChangeCount": 1,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 1,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    },
+    {
+      "taskId": "observability-v3-replacement-014-1a4f934d1602",
+      "repositoryRevision": "sha256:1779d24e03d8e349f8e7caec6c56f5dfb7225a41edfe106daa6fb3563a19c8ee",
+      "primaryCategory": "T7_INCOMPLETE_PATCH_SCOPE",
+      "secondaryCategories": [],
+      "confidence": "HIGH",
+      "evidenceSufficiency": "SUFFICIENT",
+      "patchScope": "SINGLE_RANGE",
+      "reasoningHorizon": "LOCAL",
+      "failureObservability": "GENERIC_FAILURE_ONLY",
+      "firstFailureStage": "HIDDEN_TEST",
+      "taskCategory": "range_order",
+      "difficulty": "L3",
+      "evidenceReferences": [
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/079.json#evidence.astFeatures",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/079.json#evidence.verification",
+        "docs/experiments/runs/privacy-safe-observability-v3/restricted-l1/079.json#evidence.range"
+      ],
+      "rationale": "L1 adds an API-call relationship but no comparison or control-flow guard for reversed bounds; required local range-order handling is absent.",
+      "featureFamilies": [
+        "API_CALL_STRUCTURE",
+        "CONTROL_FLOW_STRUCTURE",
+        "OPERATOR_CATEGORIES"
+      ],
+      "limitationReasons": [],
+      "featureSummary": {
+        "astNodeTypeChangeKinds": 4,
+        "controlFlowChangeKinds": 0,
+        "operatorChangeKinds": 0,
+        "identifierRelationshipChangeCount": 1,
+        "literalTypeChangeCount": 0,
+        "apiCallRelationshipChangeCount": 1,
+        "importRelationshipChangeCount": 0,
+        "rangeLineSpan": 1,
+        "parserFallbackCategory": "NONE"
+      }
+    }
+  ],
+  "successControls": [
+    {
+      "taskId": "observability-020-db7bd01827a1",
+      "repositoryRevision": "sha256:a59ec284bc1276342fabf61dde441242404f39efd5b595d502b1d55c84f28c2a",
+      "taskCategory": "map_last_write",
+      "difficulty": "L4",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-021-e65381953077",
+      "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+      "taskCategory": "index_normalization",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-025-e96dd6b931ca",
+      "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+      "taskCategory": "numeric_ordering",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-026-3b314deac0e0",
+      "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+      "taskCategory": "tail_window",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-027-bb732140f54c",
+      "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+      "taskCategory": "finite_number_contract",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-030-a4e5b8b42b10",
+      "repositoryRevision": "sha256:af43d4062a48788a7aab4d6ef14b485683f28b89d236dbe1912a0ad548b27155",
+      "taskCategory": "map_last_write",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-034-e3a34939d583",
+      "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+      "taskCategory": "line_ending_contract",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-035-8b9eb4357dad",
+      "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+      "taskCategory": "numeric_ordering",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-036-d1eb1f5d3607",
+      "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+      "taskCategory": "tail_window",
+      "difficulty": "L4",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-037-c3b0023ba8ae",
+      "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+      "taskCategory": "finite_number_contract",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-040-6b51847cb81b",
+      "repositoryRevision": "sha256:198613bae14dea9929163a559ba1d5d0738435139bcd8eff8757660650ba67b1",
+      "taskCategory": "map_last_write",
+      "difficulty": "L4",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-041-725aade32f52",
+      "repositoryRevision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d",
+      "taskCategory": "index_normalization",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-045-4290a4816e53",
+      "repositoryRevision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d",
+      "taskCategory": "numeric_ordering",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-046-2a37664831db",
+      "repositoryRevision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d",
+      "taskCategory": "tail_window",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-047-18459c11f1ea",
+      "repositoryRevision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d",
+      "taskCategory": "finite_number_contract",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-050-174077bd69d6",
+      "repositoryRevision": "sha256:4aa4311952f3437bf798f3b6a7e5f96027f8537f102af58b6646be35d4f3598d",
+      "taskCategory": "map_last_write",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-051-c58ddebf7726",
+      "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+      "taskCategory": "index_normalization",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-055-9d51671afa66",
+      "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+      "taskCategory": "numeric_ordering",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-056-2f5190d49744",
+      "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+      "taskCategory": "tail_window",
+      "difficulty": "L4",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-057-f1cdafd46667",
+      "repositoryRevision": "sha256:02bed5f818731865b96fb0c353d95de82c0fee3e150f9a84aadd55ca975a2ff8",
+      "taskCategory": "finite_number_contract",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-061-f370e35f0d7e",
+      "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+      "taskCategory": "index_normalization",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-065-e239c7c8f5bf",
+      "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+      "taskCategory": "numeric_ordering",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-067-152f8cd81a26",
+      "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+      "taskCategory": "finite_number_contract",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-070-56e763ab65ad",
+      "repositoryRevision": "sha256:3a5df061de8215803e5d616e884ed4b474175dcdb978e03ab331adddc287d4a1",
+      "taskCategory": "map_last_write",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-071-183a479177fd",
+      "repositoryRevision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65",
+      "taskCategory": "index_normalization",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-074-addfb1f3a123",
+      "repositoryRevision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65",
+      "taskCategory": "line_ending_contract",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-075-c315b77e1351",
+      "repositoryRevision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65",
+      "taskCategory": "numeric_ordering",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-076-69919bb33042",
+      "repositoryRevision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65",
+      "taskCategory": "tail_window",
+      "difficulty": "L4",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-077-ba0e209d2f94",
+      "repositoryRevision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65",
+      "taskCategory": "finite_number_contract",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-078-ea0ef52b915d",
+      "repositoryRevision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65",
+      "taskCategory": "record_ownership",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-080-21ab7b5bdf67",
+      "repositoryRevision": "sha256:ab098e81bbefa5d7c3e6d87ac11db1d53e1140de7b5e8cdd28946b52e5dcca65",
+      "taskCategory": "map_last_write",
+      "difficulty": "L4",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-v2-replacement-001-be3440362566",
+      "repositoryRevision": "sha256:8511d6cef1309658acc95552061fff833db2cc1c819b5d9cb846a24a7fbd3c1a",
+      "taskCategory": "bounded_clamp",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-v2-replacement-002-a7a8e96db2d8",
+      "repositoryRevision": "sha256:2533a6830c3bab7467eb7a4931fbf9bf961e3d74eb0de394460d986ce11ff63b",
+      "taskCategory": "exact_segment",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-v3-replacement-003-ead2ddb99424",
+      "repositoryRevision": "sha256:3184d4f860b896f3e45cde00c1c21ab6347fd98a38b8135c34b1f3d8ecf8ac5f",
+      "taskCategory": "stable_filter",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-v3-replacement-007-40ee37a23300",
+      "repositoryRevision": "sha256:e20b1f6028557dae8bc25b3c95b31bf46d3e01628443228b3ebe349d5a0fdf00",
+      "taskCategory": "nonnegative_count",
+      "difficulty": "L2",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    },
+    {
+      "taskId": "observability-v3-replacement-008-eb0e5283c62c",
+      "repositoryRevision": "sha256:915bd2406208fbe0df73176ec6cef7e79aab757842c09a470dcbb5433e111037",
+      "taskCategory": "index_validation",
+      "difficulty": "L3",
+      "fileScope": "SINGLE_FILE",
+      "verification": {
+        "stage": "SUCCESS",
+        "status": "PASS",
+        "code": "ALL_VERIFICATION_PASS",
+        "diagnosticSha256": null
+      },
+      "privacyFlagsAllFalse": true
+    }
+  ],
+  "metrics": {
+    "primaryCategoryDistribution": {
+      "T1_TASK_REQUIREMENT_MISUNDERSTANDING": 6,
+      "T2_LOCAL_LOGIC_ERROR": 0,
+      "T3_BOUNDARY_EDGE_CASE_ERROR": 4,
+      "T4_API_CONTRACT_MISUNDERSTANDING": 0,
+      "T5_DATAFLOW_STATE_REASONING_ERROR": 0,
+      "T6_EXCEPTION_ERROR_SEMANTICS": 0,
+      "T7_INCOMPLETE_PATCH_SCOPE": 5,
+      "T8_CROSS_FILE_DEPENDENCY_MISSED": 0,
+      "T9_TEST_CONTRACT_MISUNDERSTANDING": 0,
+      "T10_EVIDENCE_MISSING_OR_INSUFFICIENT": 0,
+      "T11_RETRIEVAL_FAILURE": 0,
+      "T12_ACTION_OR_PATCH_REPRESENTATION": 0,
+      "T13_SYNTAX_CODE_FORMATION": 13,
+      "T14_AMBIGUOUS_OR_INCONCLUSIVE": 16
+    },
+    "supportedT1ToT9Coverage": {
+      "count": 15,
+      "denominator": 44,
+      "rate": 0.3409090909090909
+    },
+    "supportedNonT14Coverage": {
+      "count": 28,
+      "denominator": 44,
+      "rate": 0.6363636363636364
+    },
+    "t14Rate": {
+      "count": 16,
+      "denominator": 44,
+      "rate": 0.36363636363636365
+    },
+    "highMediumConfidenceCoverage": {
+      "count": 28,
+      "denominator": 44,
+      "rate": 0.6363636363636364
+    },
+    "confidenceDistribution": {
+      "HIGH": 24,
+      "MEDIUM": 4,
+      "LOW": 16
+    },
+    "evidenceSufficiencyDistribution": {
+      "SUFFICIENT": 28,
+      "PARTIALLY_SUFFICIENT": 0,
+      "MISSING_REQUIRED_EVIDENCE": 0,
+      "INCONCLUSIVE": 16
+    },
+    "t14ReasonDistribution": {
+      "STRUCTURED_FEATURES_DO_NOT_BIND_CHANGES_TO_SEMANTIC_ROLES": 16
+    },
+    "auditAgreement": {
+      "agreements": 22,
+      "disagreements": 0,
+      "rawAgreement": 1,
+      "cohensKappa": 1
+    }
+  },
+  "privacy": {
+    "rawModelOutputsPersisted": 0,
+    "rawEditBodiesPersisted": 0,
+    "rawIdentifiersPersisted": 0,
+    "rawLiteralsPersisted": 0,
+    "rawParserMessagesPersisted": 0,
+    "hashKeyMaterialPersisted": 0,
+    "unauthorizedL2Records": 0,
+    "targetModelCalls": 0
+  },
+  "artifacts": {
+    "qualityAudit": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_L1_QUALITY_AUDIT.v3.json",
+      "sha256": "2c94a4a269e74ca6171c14d8bc5f70049f79e8501091823e6991d76c9a0eefb8",
+      "bytes": 12020
+    },
+    "disagreements": {
+      "path": "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_L1_AUDIT_DISAGREEMENTS.v3.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

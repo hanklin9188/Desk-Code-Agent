@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "policyId": "dca-v0.1.0-release-artifact-policy-v1",
+  "version": "0.1.0",
+  "sourceRepository": {
+    "status": "BLOCKED_ROOT_LICENSE_DECISION",
+    "technicalReadiness": "READY_FOR_OWNER_APPROVED_PUBLICATION_AFTER_LICENSE_CLOSURE",
+    "binarySigningDependency": false,
+    "requiredOwnerAction": "Choose and approve the root repository license"
+  },
+  "unsignedWindows": {
+    "status": "BLOCKED_LICENSE",
+    "technicalQa": "PASS",
+    "msi": {
+      "filename": "Desk Code Agent_0.1.0_x64_en-US.msi",
+      "sha256": "d91f4a516cea760114b380758a5c9a9e48ecd88db86fde262b2aac4e1975bfcf"
+    },
+    "nsis": {
+      "filename": "Desk Code Agent_0.1.0_x64-setup.exe",
+      "sha256": "ee6877d02e20c346aa7446430ea3366eeaf15d85473c0f8f15dc196e3b9a89f0"
+    },
+    "warning": "Unsigned installers trigger Windows trust/reputation warnings.",
+    "blockers": [
+      "ROOT_LICENSE_DECISION_REQUIRED",
+      "10_DISTRIBUTED_PACKAGE_LICENSE_TEXT_GAPS_REQUIRE_AUTHORITATIVE_SOURCE_OR_LEGAL_REVIEW"
+    ]
+  },
+  "signedWindows": {
+    "status": "BLOCKED_SIGNING_CREDENTIALS",
+    "technicalQa": "PASS_UNSIGNED_ONLY",
+    "requiredOwnerAction": "Provide an authorized trusted Windows code-signing identity and signing/release approval",
+    "selfSignedProductionCertificateAllowed": false
+  },
+  "accessibility": {
+    "status": "NARRATOR_SPOKEN_OUTPUT_DEFERRED",
+    "certificationClaim": false
+  },
+  "storage": {
+    "installerBinariesInGitSourceHistory": false,
+    "approvedReleaseAttachmentAfterClosure": true,
+    "modelWeightsAllowed": false,
+    "localQaLogsAllowed": false
+  },
+  "externalActionsAuthorized": false
+}

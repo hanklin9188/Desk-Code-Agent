@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "CODE_FORMATION_CONTROL_RECOVERY_GENERATION",
+  "session": "B",
+  "status": "CONTROL_SANITY_GATE_FAIL",
+  "classification": "FAIL_CLOSED_BEFORE_PRIMARY_EXECUTION",
+  "completedAt": "2026-08-12T04:10:45.920Z",
+  "inputs": {
+    "sessionA": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_A.v2.json",
+      "sha256": "7e68597e3f116eafd3e3ebeae8734f98d9564c7bdcb1d459ad4c1eb768d73b46"
+    },
+    "result": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_B_SANITY_GATE_RESULT.v1.json",
+      "sha256": "a33b8dc28826fb315f9af59596f849bf4dae6f8b2f264077add4a46e93c3f631",
+      "bytes": 3903
+    }
+  },
+  "artifacts": {
+    "validation": {
+      "path": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_B_VALIDATION.v1.json",
+      "sha256": "5f1427c8c25e57ce0adf3e9644917d625d81481fd84a59866da3fa25f97744b7",
+      "bytes": 793
+    }
+  },
+  "accounting": {
+    "sanityCalls": 1,
+    "primaryCalls": 0,
+    "controlCalls": 0,
+    "treatmentCalls": 0,
+    "pairs": 0,
+    "retries": 0,
+    "reviewers": 0
+  },
+  "sanity": "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_SESSION_B_SANITY_GATE_RESULT.v1.json",
+  "primaryPopulationConsumed": false,
+  "privacy": {
+    "rawOutputs": 0,
+    "rawEditBodies": 0,
+    "L2": false
+  },
+  "cleanup": {
+    "modelProcesses": 0,
+    "port8000Clear": true,
+    "gpuComputeProcesses": 0,
+    "ephemeralStateAbsent": true,
+    "disposableWorkspaces": 0
+  },
+  "treatmentEffectConclusion": "NOT_PERFORMED",
+  "sessionCReady": false,
+  "next": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+  "stop": "SESSION_B_BOUNDARY_REACHED"
+}

@@ -1,0 +1,15 @@
+flowchart TD
+  classDef gate fill:#172033,stroke:#83a7ff,color:#f3f6fb
+  classDef pass fill:#13291f,stroke:#69d59c,color:#f3f6fb
+  classDef fail fill:#351c25,stroke:#ef858d,color:#f3f6fb
+  classDef limited fill:#382b18,stroke:#edbd69,color:#f3f6fb
+
+  E[Frozen experiment]:::gate --> B[Task-level benchmark]:::gate
+  B --> H[Repository-disjoint holdout]:::gate
+  H --> S[Safety + verification gate]:::gate
+  S --> Q{All preregistered<br/>thresholds pass?}:::gate
+  Q -->|yes| P[Product admission<br/>SUPPORTED / ASSISTED]:::pass
+  Q -->|development signal only| X[RESEARCH ONLY]:::limited
+  Q -->|missing oracle or failed gate| D[REPORT ONLY / DISABLED]:::fail
+  P --> M[Monitor typed outcomes<br/>without widening authority]:::gate
+

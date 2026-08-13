@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "run_id": "live-vllm-2026-08-08T19-08-18-560Z",
+  "status": "PASS",
+  "timestamp": "2026-08-08T19:08:18.560Z",
+  "environment": {
+    "model": "Qwen/Qwen3.5-4B",
+    "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "tokenizer_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16",
+    "max_model_length": 8192,
+    "serving_backend": "vllm",
+    "serving_backend_version": "0.26.0",
+    "sampling_backend": "vllm_native",
+    "endpoint": "http://127.0.0.1:8000/v1",
+    "local_only": true
+  },
+  "checks": {
+    "models": {
+      "status": "PASS",
+      "latency_ms": 22.722190000000012,
+      "model_id": "Qwen/Qwen3.5-4B"
+    },
+    "normal_completion": {
+      "status": "PASS",
+      "latency_ms": 532.296646,
+      "prompt_tokens": 25,
+      "completion_tokens": 7,
+      "output_sha256": "24cf7e657d6c3a65892da4066faef6e65adebc7a653c1e415e828f34716a1d85"
+    },
+    "structured_output": {
+      "status": "PASS",
+      "latency_ms": 979.9559680000001,
+      "schema_valid": true,
+      "output_sha256": "309415a1e82c227e0919f352c1e661c94fa6cf86d559c5d8e2c1afccf666ce4e"
+    },
+    "streaming": {
+      "status": "PASS",
+      "latency_ms": 945.0625470000002,
+      "ttft_ms": 103.03315300000008,
+      "prompt_tokens": 23,
+      "completion_tokens": 64,
+      "throughput_tokens_per_second": 76.00684780845073,
+      "output_sha256": "c260367a5971511f01684f3df096111a9de06c9910faf859f97b7be70a26fa04"
+    },
+    "timeout": {
+      "status": "PASS"
+    },
+    "cancellation": {
+      "status": "PASS"
+    },
+    "concurrency_queue": {
+      "status": "PASS",
+      "requests": 2,
+      "observed_client_queue_depth": 2,
+      "total_latency_ms": 372.2970599999999
+    },
+    "malformed_output_handling": {
+      "status": "PASS"
+    }
+  },
+  "telemetry": {
+    "idle_vram_mib": 12022,
+    "peak_vram_mib": 12022
+  },
+  "privacy": {
+    "raw_model_output_stored": false,
+    "api_key_stored": false
+  }
+}

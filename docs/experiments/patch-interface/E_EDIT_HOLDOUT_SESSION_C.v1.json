@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "sessionId": "dca-e-edit-untouched-holdout-session-c-v1",
+  "session": "C",
+  "status": "PASS",
+  "completedAt": "2026-08-11T03:14:15.580Z",
+  "phases": {
+    "failureDecomposition": "PASS",
+    "productDecision": "KEEP_MUTATION_DISABLED",
+    "capabilityStatus": "RESEARCH_ONLY_MUTATION_INTERFACE",
+    "modelScaleGate": "JUSTIFIED_PROTOCOL_ONLY",
+    "tournamentProtocol": "PREPARED_NOT_AUTHORIZED",
+    "performance": "PASS_WITH_TTFT_AND_INFERENCE_VRAM_NOT_MEASURED",
+    "security": "PASS",
+    "uiRuntime": "PASS_HEADLESS_WINDOWS_NOT_RUN",
+    "finalValidation": "PASS_WITH_EXISTING_EXTERNAL_AND_APPROVAL_BLOCKERS",
+    "durableState": "PASS"
+  },
+  "artifacts": {
+    "report": {
+      "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_FINAL_REPORT.v1.json",
+      "sha256": "d64fbe279a87781484ec1f4f245ba16fca029c56094e1d95e31f593d412fce82"
+    },
+    "index": {
+      "path": "docs/experiments/patch-interface/E_EDIT_HOLDOUT_RESULTS_INDEX.v1.json",
+      "sha256": "a0db8f1054469f7a5118be72582c8337adae739d614cfded1d28fc6d266b7eb8"
+    },
+    "failureDecomposition": {
+      "path": "benchmarks/patch-interface/E_EDIT_HOLDOUT_FAILURE_DECOMPOSITION.v1.json",
+      "sha256": "69cd74acf9f3fc6e39bc21727f827f56d67276d41b54fb4213b1ad2b05d9e10c"
+    },
+    "productDecision": {
+      "path": "docs/experiments/patch-interface/E_EDIT_PRODUCT_DECISION.v1.json",
+      "sha256": "1d945242f7b6e6b4050d229a68c1cff8e2d8dd37eb71be19246f0eaa6bcd064c"
+    },
+    "capabilityCeiling": {
+      "path": "docs/experiments/patch-interface/PATCH_CAPABILITY_CEILING.v4.json",
+      "sha256": "4882b77182428b328909d3772febd2e900e2f5d1d1fcc14c84c6c11b28e9c8bd"
+    },
+    "tournamentProtocol": {
+      "path": "benchmarks/model-specialization/PRACTICAL_LOCAL_MODEL_TOURNAMENT_PROTOCOL.v1.json",
+      "sha256": "62b4ac12a82e90f42a9e532ec9b7fa60e7bca383ba56726425ae4d8857aad713"
+    },
+    "releaseSupplement": {
+      "path": "artifacts/release/e-edit-holdout-release-gate-supplement.v1.json",
+      "sha256": "32ed64f1ed0011eeb6085058f86c6dec371df8aec8f362f7117c1bc64cddbfd9"
+    }
+  },
+  "gate": {
+    "sessionAPass": true,
+    "sessionBPass": true,
+    "sessionCPass": true,
+    "allSessionsComplete": true,
+    "modelCallsAddedInSessionC": 0,
+    "productMutationEnabled": false
+  },
+  "protectedActions": {
+    "modelDownload": false,
+    "dependencyInstall": false,
+    "sudo": false,
+    "commit": false,
+    "remote": false,
+    "push": false,
+    "pullRequest": false,
+    "tag": false,
+    "release": false,
+    "signing": false
+  }
+}

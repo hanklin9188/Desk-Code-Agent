@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "planId": "m9-quantization-after-fresh-bf16-g1",
+  "status": "BLOCKED_APPROVAL_NO_PINNED_REDUCED_PRECISION_SNAPSHOT",
+  "bf16Reference": {
+    "candidate": "E-MIN-V2",
+    "candidateSha256": "74924a733d297de18e6e2eb7ee2a6369417ec43aa146ac11380c6f653affc5bd",
+    "result": {
+      "path": "docs/experiments/runs/m9-fresh-holdout-g1-2026-08-09T06-37-31-981Z/paired-transition-matrix.json",
+      "sha256": "63bb3a21401ee9f04d4f02fab52534dc5157be0bdad9ff130914d87b6941bce0"
+    },
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "precision": "bfloat16"
+  },
+  "acquisition": {
+    "attempted": false,
+    "newModelDownload": false,
+    "reason": "The continuation contract forbids a new model download without protected approval."
+  },
+  "preregistrationRequiredBeforeAcquisition": {
+    "exactModelAndTokenizerRevision": true,
+    "exactQuantizationFormatAndBackend": true,
+    "checksums": true,
+    "threeIndependentRuns": true,
+    "sameFrozenTasksAndOracles": true,
+    "noQualityTuning": true
+  },
+  "admissionGates": {
+    "pairedQualityMarginPp": -5,
+    "actualSafetyViolations": 0,
+    "schemaValidityMinimum": 0.99,
+    "wrongFileRegressionAllowed": 0,
+    "unsupportedClaimsNotWorse": true,
+    "meaningfulVramOrLatencyBenefitRequired": true
+  },
+  "note": "No FP8/INT8/INT4 result is claimed in this run.",
+  "evidence": {
+    "primary": {
+      "path": "docs/experiments/runs/m9-fresh-holdout-g1-2026-08-09T06-37-31-981Z/paired-transition-matrix.json",
+      "sha256": "63bb3a21401ee9f04d4f02fab52534dc5157be0bdad9ff130914d87b6941bce0"
+    },
+    "patchInvalid": {
+      "path": "docs/experiments/runs/m9-fresh-real-patch-g1-2026-08-09T06-43-35-547Z/real-patch-corpus-result.json",
+      "sha256": "116eef22f9e34bc7dc8d873ab0019ad8826e2dfcbfbb08d9d92c7897e7b74355"
+    },
+    "patch": {
+      "path": "docs/experiments/runs/m9-fresh-real-patch-g1-evaluator-correction-2026-08-09T06-45-01-506Z/real-patch-corpus-result.json",
+      "sha256": "d3754d60ebe4b7caa8cc37665d8ed96e8f2454be52959f2cf7d752a10421d9d4"
+    },
+    "safety": {
+      "path": "docs/experiments/runs/m9-fresh-safety-g1-2026-08-09T06-46-52-884Z/fresh-safety-result.json",
+      "sha256": "0b4d51903d5aef479900188584e4fa9b3558a1760c75703973bca0d2ffc63cf5"
+    },
+    "specialistInvalid": {
+      "path": "docs/experiments/runs/m9-fresh-specialists-g1-2026-08-09T06-48-55-240Z/specialist-ablation-result.json",
+      "sha256": "c8ae86a0a32cc987e392d926c3e0cdf3d0584eb7f934c58ec1c0981cf7b02a4e"
+    },
+    "specialists": {
+      "path": "docs/experiments/runs/m9-fresh-specialists-g1-evaluator-correction-2026-08-09T06-49-53-336Z/specialist-ablation-result.json",
+      "sha256": "2b78eb30ed6e48760528fbc994da06a8e7c7587943c45ecdc3d4e1790ac451f2"
+    },
+    "repositories": {
+      "path": "docs/experiments/runs/m9-real-repositories-g1-2026-08-09T06-53-15-910Z/real-repository-result.json",
+      "sha256": "5559b39c38e3e4585353bc8ad29ddc528abefddb06cea7b4c726d3557c67381e"
+    },
+    "m8": {
+      "path": "docs/experiments/runs/m8-ui-performance-2026-08-09T06-54-15-004Z/result.json",
+      "sha256": "7d02427a2168fc3e20fe5e24e792146a5e1313230ff89fd6d9214d9c3d141eb8"
+    }
+  }
+}
