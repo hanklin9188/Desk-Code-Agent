@@ -15,8 +15,18 @@ describe("P5 portfolio documentation", () => {
       expect(index, heading).toBeGreaterThan(prior);
       prior = index;
     }
-    expect(readme).toContain("docs/media/releases/v0.2.0/screenshots/01-onboarding.png");
-    expect(fs.existsSync(path.join(root, "docs/media/releases/v0.2.0/screenshots/01-onboarding.png"))).toBe(true);
+    for (const filename of [
+      "01-onboarding.png",
+      "02-repository-ready.png",
+      "03-guided-demo-workspace.png",
+      "04-appearance-settings.png",
+      "05-research-archive.png"
+    ]) {
+      const relative = `docs/media/releases/v0.2.0/screenshots/${filename}`;
+      expect(readme).toContain(relative);
+      expect(fs.existsSync(path.join(root, relative))).toBe(true);
+    }
+    expect(readme).not.toContain("docs/media/screenshots/");
     expect(fs.existsSync(path.join(root, "docs/media/readme/desk-code-agent-hero.svg"))).toBe(true);
   });
 

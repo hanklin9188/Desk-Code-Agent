@@ -4,14 +4,14 @@
 
 ### A local-first desktop workspace that makes repository evidence, agent activity, and deterministic verification inspectable.
 
-[![Current public release](https://img.shields.io/badge/public_release-v0.1.0-6f8df7)](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.1.0)
-![Next release candidate](https://img.shields.io/badge/next_release-v0.2.0_RC-d97757)
+[![Current public release](https://img.shields.io/badge/public_release-v0.2.0-6f8df7)](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.2.0)
+![Unsigned Windows installers](https://img.shields.io/badge/Windows_installers-unsigned-d97757)
 ![Windows](https://img.shields.io/badge/platform-Windows-3b82f6)
 ![Local first](https://img.shields.io/badge/privacy-local--first-198754)
 [![Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-5b6b7a)](LICENSE)
 ![Mutation disabled](https://img.shields.io/badge/autonomous_mutation-disabled-b4535a)
 
-**[Download current v0.1.0](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.1.0)** · **[Preview v0.2.0 quick start](docs/productization/DESKTOP_QUICK_START.md)** · **[繁中快速上手](docs/productization/DESKTOP_QUICK_START.zh-TW.md)** · **[Architecture](docs/architecture/PRODUCT_ARCHITECTURE.md)**
+**[Download v0.2.0 for Windows](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.2.0)** · **[Quick start](docs/productization/DESKTOP_QUICK_START.md)** · **[繁中快速上手](docs/productization/DESKTOP_QUICK_START.zh-TW.md)** · **[Architecture](docs/architecture/PRODUCT_ARCHITECTURE.md)**
 
 </div>
 
@@ -22,11 +22,10 @@ Desk Code Agent is a calm, inspectable engineering workbench—not a generic cha
 ## Start in three steps
 
 > **Release status:** The screenshots and instructions below describe the
-> v0.2.0 release candidate on this branch. The current public v0.1.0 download
-> still contains the previous interface; the project will not present it as
-> the redesigned build.
+> current public v0.2.0 release. The historical [v0.1.0 release](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.1.0)
+> remains available with the previous interface.
 
-1. **Install Desk Code Agent.** Use the v0.2.0 package after its reviewed release is published; [v0.1.0](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.1.0) is the current previous-interface build.
+1. **Install Desk Code Agent.** Download the unsigned v0.2.0 MSI or NSIS package from the [public release](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.2.0).
 2. **Choose an existing local Git folder.** Your source stays where it is; Desk does not upload, copy, or modify it.
 3. **Check the observed facts.** Desk shows the repository name, repository-reported branch and HEAD text, project manifests, and a bounded file list. HEAD text remains untrusted metadata; working-tree cleanliness is deliberately not inspected because repository-controlled filters are untrusted.
 
@@ -34,7 +33,7 @@ Desk Code Agent is a calm, inspectable engineering workbench—not a generic cha
 
 ![Read-only repository summary showing repository-reported branch and HEAD metadata, working-tree safety status, project manifests, and a bounded file list.](docs/media/releases/v0.2.0/screenshots/02-repository-ready.png)
 
-The repository check starts no Git process. It reads only bounded, repository-reported `.git/HEAD` and ref text plus a bounded filesystem manifest, skipping symlinks and fixed generated directories. HEAD metadata is untrusted and the referenced Git object is not validated. It makes no model call, application-initiated network request, checkout, hook, lock, content comparison, or source edit, and the UI does not expose the absolute local path. The connected card states `Working tree status not inspected for safety` rather than claiming clean or dirty. Linked worktrees and submodule checkouts are intentionally unsupported in this release candidate; choose the primary checkout.
+The repository check starts no Git process. It reads only bounded, repository-reported `.git/HEAD` and ref text plus a bounded filesystem manifest, skipping symlinks and fixed generated directories. HEAD metadata is untrusted and the referenced Git object is not validated. It makes no model call, application-initiated network request, checkout, hook, lock, content comparison, or source edit, and the UI does not expose the absolute local path. The connected card states `Working tree status not inspected for safety` rather than claiming clean or dirty. Linked worktrees and submodule checkouts are intentionally unsupported in this release; choose the primary checkout.
 
 ## What works today
 
@@ -89,7 +88,7 @@ See the [product architecture](docs/architecture/PRODUCT_ARCHITECTURE.md) and [c
 
 ## Install on Windows
 
-After v0.2.0 is reviewed and published, download its x64 MSI or NSIS installer from [GitHub Releases](https://github.com/hanklin9188/Desk-Code-Agent/releases). Releases include a `SHA256SUMS` file; verify a download in PowerShell with:
+Download the v0.2.0 x64 MSI or NSIS installer from the [public GitHub Release](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.2.0). The release includes a `SHA256SUMS` file; verify a download in PowerShell with:
 
 ```powershell
 Get-FileHash -Algorithm SHA256 ".\Desk Code Agent_0.2.0_x64_en-US.msi"
@@ -98,7 +97,7 @@ Get-FileHash -Algorithm SHA256 ".\Desk Code Agent_0.2.0_x64-setup.exe"
 
 The installers are currently unsigned because trusted signing credentials are deferred. Windows may show its normal publisher or reputation warning. The desktop requires WebView2; when it is absent, Tauri's default installer mode may download Microsoft's WebView2 bootstrapper once. Repository inspection does not require Git. Node, Rust, Visual Studio, model weights, and a model server are not bundled.
 
-The source tree is prepared as `v0.2.0 — Repository onboarding and visual comfort`. Until that version appears on the Releases page, `v0.1.0` remains the published previous-interface build; the project does not overwrite historical release assets.
+The current source and screenshots correspond to `v0.2.0 — Repository onboarding and visual comfort`. The project preserves v0.1.0 as a historical previous-interface release.
 
 ## Research evidence
 
