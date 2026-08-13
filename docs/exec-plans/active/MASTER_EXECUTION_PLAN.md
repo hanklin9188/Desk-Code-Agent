@@ -13,7 +13,7 @@ For active continuation work, remaining gates use `READY`, `ACTIVE`,
 
 ## Active maintenance work package — DESKTOP_UX_V0_2_0_RELEASE_CANDIDATE
 
-State: `PASS_LOCAL_RELEASE_CANDIDATE_PENDING_DRAFT_PR`
+State: `V0_2_0_RELEASE_CANDIDATE_PASS_DRAFT_PR_OPEN_CI_GREEN`
 
 The owner reopened the published product for a bounded first-use, visual-
 comfort, Windows package, and GitHub presentation refinement. This does not
@@ -74,15 +74,17 @@ Validation status:
   MSI/NSIS, per-user MSI smoke lifecycle, v0.1→v0.2 NSIS upgrade, and clean-
   profile NSIS install/startup/inspection/uninstall/reinstall; superseded
   binary hashes are explicitly prohibited in v4 evidence;
-- independent Spec and Standards re-review: active final aggregation; no High
-  remains and the last documentation/evidence consistency findings have been
-  corrected.
+- independent Spec/Product and Security/Engineering re-reviews: PASS with no
+  unresolved High or Medium findings;
+- scoped staging/privacy review, intentional branch commits, normal branch
+  push, and Draft PR: PASS; GitHub PR #1 is open as a draft;
+- remote CI: PASS for both the Linux design/test/web-build job and the Windows
+  native fmt/test/clippy job.
 
-Remaining executable gates: independent dual-axis review, scoped secret/staging
-audit, intentional commit, branch push, draft PR, and remote CI. Per D11,
-merge, tag, GitHub Release, binary upload, and social-
-preview Settings upload are not performed in this work package without their
-separate post-review authorization.
+The authorized release-candidate work package is complete. Remaining actions
+are protected publication decisions: owner review/merge, tag, GitHub Release,
+binary upload, and social-preview Settings upload. They are not performed in
+this work package without separate post-review authorization.
 
 Explicitly deferred/out of scope: GitHub URL cloning, semantic indexing or task
 execution against a desktop-selected repository, mutation, a new model/research
@@ -995,9 +997,11 @@ and clean-profile NSIS lifecycle pass. Exact build-input source identity is
 `24f2bd1f71ca66c2a3f9db01e166fc8fb368bf9dd7f9ee704cab04be5bca70ec`
 (2,390 files; 89,503,124 bytes; Linux/NTFS exact). Canonical MSI/NSIS hashes
 are recorded in `WINDOWS_PACKAGING_RELEASE_QA_REPORT.v4.json`; v2/v3 packages
-are superseded and must not be published. The remaining work package is exact
-staged privacy review, two independent final reviews, commit/push/Draft PR,
-and remote CI. Target-model and benchmark calls remain zero.
+are superseded and must not be published. Exact staged privacy review and both
+independent final reviews passed; commits `c5665d9` and `8bcdeb6` are pushed to
+`agent/desktop-ux-v0.2.0`; Draft PR #1 is open; and both remote CI jobs are
+green. Target-model and benchmark calls remain zero. Merge, tag, release,
+binary upload, and social-preview mutation remain protected and unperformed.
 
 The existing Qwen3.5-4B and explicitly approved Qwen2.5-Coder-3B snapshots remain in ignored runtime caches. For tournament Session B, the owner separately authorized only the exact BF16 snapshots `Qwen/Qwen2.5-Coder-7B-Instruct@c03e6d358207e414f1eca0bb1891e29f1db0e242`, `TIGER-Lab/FIM-7B@5a1d4294185e4fa0bbd40750c87d0beab7e67a3a`, and `SWE-bench/SWE-agent-LM-7B@a44fce0216647696a7437126e82fc1eaa34008d7`, plus derived-at-load vLLM FP8 per-tensor validation. Those snapshots are now verified in the ignored cache. Authorization does not extend to another model/revision, a pre-quantized snapshot, AWQ/GPTQ/INT4, automatic fallback, dependency installation, sudo/admin operations, Git commit/remote/push/PR, tag, release, signing, or other protected external action. No external GitHub write is authorized by this plan.
 
