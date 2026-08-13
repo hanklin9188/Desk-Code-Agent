@@ -53,6 +53,14 @@ Open Repository → Understand → Ask/Plan → Observe Agents → Inspect Evide
 12. **Telemetry**
 13. **Settings / Privacy / Model Profiles**
 
+## Current desktop onboarding boundary
+
+The shipping shell starts with no repository selected and no fixture data presented as live state. The native picker validates a local Git repository read-only and exposes only observed identity plus a bounded file manifest. The selected repository is not uploaded, copied, modified, semantically indexed, or passed to a model by this bridge.
+
+Until the desktop task runtime is connected to that selection, task-only navigation and Run remain unavailable with an explanation. A separate **Try guided demo** branch carries a persistent `DEMO DATA · NO REPOSITORY ACCESSED · ZERO MODEL CALLS` label and is always reversible.
+
+The primary rail is intentionally limited to Start, Repository, Workspace, Changes, Verify, Report, Research, and History. Research dashboards are a sealed archive, not repository telemetry. Appearance preferences support System/Dark/Light, Comfortable/Compact, three text scales, and a live reduced-motion override.
+
 ## Progressive disclosure
 
 - 第一層只顯示：current stage、summary、required user action。

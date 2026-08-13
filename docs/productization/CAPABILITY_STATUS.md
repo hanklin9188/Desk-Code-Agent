@@ -34,8 +34,12 @@ Autonomous mutation is visibly disabled because no current task class or model c
 
 Desk Code Agent supports local repository mapping, typed task orchestration, cited evidence, deterministic verification, safe worktree mechanics, replay, and bounded structured planning. It may present navigation and research-only analyses with their labels and limitations.
 
+The current desktop build may specifically say that it can select a primary local checkout, observe repository-reported HEAD/ref text, and enumerate a bounded file manifest read-only. The metadata remains untrusted and does not establish object validity. It must distinguish that native onboarding slice from the separate repository-intelligence and task-runtime services.
+
 ## What the product must not say
 
 It must not claim autonomous patch readiness, general unseen-repository coding ability, a promoted 7B model, a successful code-formation intervention, or live runtime performance when only sealed historical metrics are available.
+
+It must not claim that a user-selected desktop repository has been semantically indexed or analyzed until that runtime bridge exists. Guided-demo evidence and events must never be presented as selected-repository output.
 
 Canonical sources are indexed in [BENCHMARKS.md](../../BENCHMARKS.md).

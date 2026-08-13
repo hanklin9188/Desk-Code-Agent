@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "PRIVACY_SAFE_OBSERVABILITY_PUBLIC_PROJECTION",
+  "sourceArtifact": "PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_PAIRED_REPORT",
+  "sourceSha256": "4598bb72fcdd7e03007e27efe32ec368f10220c3f097b860c2c9a1f821e34d0c",
+  "sourceBytes": 24329,
+  "projectionPolicy": "PUBLIC_AGGREGATES_ONLY_NO_HOST_PATHS_NO_TASK_ROWS_NO_RAW_OUTPUTS",
+  "population": {
+    "pairedFailures": 44
+  },
+  "comparison": {
+    "semanticCoverage": {
+      "l0": { "count": 0, "denominator": 44 },
+      "l1": { "count": 15, "denominator": 44 }
+    },
+    "t14": {
+      "l0": { "count": 31, "denominator": 44 },
+      "l1": { "count": 16, "denominator": 44 }
+    },
+    "highMediumConfidence": {
+      "l0": { "count": 13, "denominator": 44 },
+      "l1": { "count": 28, "denominator": 44 }
+    },
+    "supportedNonT14": {
+      "l0": { "count": 13, "denominator": 44 },
+      "l1": { "count": 28, "denominator": 44 }
+    }
+  },
+  "categoryUnlocks": {
+    "transitionMatrix": {
+      "L0 T14 -> L1 T14": 16,
+      "L0 T14 -> L1 T1": 6,
+      "L0 T13 -> L1 T13": 13,
+      "L0 T14 -> L1 T3": 4,
+      "L0 T14 -> L1 T7": 5
+    }
+  },
+  "privacy": {
+    "rawModelOutputsPersisted": 0,
+    "rawEditBodiesPersisted": 0,
+    "unauthorizedL2Records": 0,
+    "forbiddenLeakCount": 0
+  },
+  "productStatus": {
+    "mutation": "KEEP_MUTATION_DISABLED"
+  }
+}

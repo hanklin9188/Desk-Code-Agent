@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "dca-v0.2.0-presentation-media",
+  "release": "0.2.0",
+  "status": "PASS_CURRENT_PRODUCT_PRESENTATION",
+  "capturedAt": "2026-08-13T11:28:00+08:00",
+  "captureEnvironment": {
+    "host": "WINDOWS_11_REFERENCE_HOST",
+    "browser": "Microsoft Edge 150.0.4078.48",
+    "viewport": "1440_X_900",
+    "deviceScaleFactor": 1,
+    "network": "LOOPBACK_ONLY",
+    "reducedMotion": true
+  },
+  "productSourceIdentity": {
+    "algorithm": "SHA256_OVER_SORTED_NUL_DELIMITED_SHA256_AND_RELATIVE_PATH_PAIRS",
+    "sha256": "75a47e929d114fd65cecbd7e59278aaef6c42668024119cfd7eac21e8bc3fcd2",
+    "files": [
+      { "path": "apps/desktop/src/app/App.tsx", "sha256": "74adce916b134c8426c4bea3a5e7619f3a7f7ce8b9a62c7f5d7fee7368119727" },
+      { "path": "apps/desktop/src/app/ProductizationViews.tsx", "sha256": "a3bd659efd11dd23b0eba398950c2a283bdd57da9d3cf68d580384aba950168b" },
+      { "path": "apps/desktop/src/app/Views.tsx", "sha256": "1a52cef6c025dcd989c48237fe88a7c91f3e329d5e598ab3cdca86310b0d1931" },
+      { "path": "apps/desktop/src/app/presentationMode.ts", "sha256": "46908415fad84d4ecb39c3837b915b2f9f3a87d5014c8f1d642de94df43ddf17" },
+      { "path": "apps/desktop/src/styles.css", "sha256": "a706e02d3f32920f8b5d424d8189eb54602ec7bab2ee86f3f0648e177a8d8f53" },
+      { "path": "docs/productization/PRIVACY_SAFE_OBSERVABILITY_PUBLIC_PROJECTION.v1.json", "sha256": "3d465f3ff6be6410b794e7ce8e92040bbad165e0c2e7e0026dcec49610a6b637" },
+      { "path": "services/experiment-visualization/src/canonicalArtifacts.ts", "sha256": "07d41a08c0cfd99ee4c4b296e00132c731a56a02a8ffe9ed2852146dd1a33b36" },
+      { "path": "services/experiment-visualization/src/index.ts", "sha256": "6fb5b92d797e2a13bc17f611f446d466e836e26eaf1dffdabbfb05a292410112" }
+    ]
+  },
+  "screenshots": [
+    {
+      "id": "onboarding",
+      "route": "/?presentation=onboarding",
+      "filename": "screenshots/01-onboarding.png",
+      "role": "README_HERO",
+      "alt": "Desk Code Agent welcome screen with a prominent Choose local folder button, three setup steps, local-only status, and mutation disabled.",
+      "width": 1440,
+      "height": 900,
+      "bytes": 256783,
+      "sha256": "942aa383cf48a92ad233e72b018023a3090302f73ce21c03c4244c81ab745e09",
+      "validation": "PASS"
+    },
+    {
+      "id": "repository-ready",
+      "route": "/?presentation=repository-ready",
+      "filename": "screenshots/02-repository-ready.png",
+      "role": "READ_ONLY_REPOSITORY",
+      "alt": "Read-only repository summary showing repository-reported branch and HEAD metadata, working-tree safety status, project manifests, and a bounded file list.",
+      "width": 1440,
+      "height": 900,
+      "bytes": 177420,
+      "sha256": "9e782d0a645d8cc3a0ee5a44272b172250be19e5f55df8f46e0c86bf8d306a83",
+      "validation": "PASS_SANITIZED_FIXTURE"
+    },
+    {
+      "id": "guided-demo",
+      "route": "/?presentation=guided-demo",
+      "filename": "screenshots/03-guided-demo-workspace.png",
+      "role": "GUIDED_DEMO_BOUNDARY",
+      "alt": "Guided demo workspace showing repository files, agent flow, cited evidence, and a banner stating that no repository was accessed and zero model calls were made.",
+      "width": 1440,
+      "height": 900,
+      "bytes": 151126,
+      "sha256": "6106acd93a2bfe0e8febcbd196b60b8e85d8dd018beddfd20d6ca3b53295b7ab",
+      "validation": "PASS_FIXTURE_LABEL_VISIBLE"
+    },
+    {
+      "id": "appearance",
+      "route": "/?presentation=appearance",
+      "filename": "screenshots/04-appearance-settings.png",
+      "role": "VISUAL_COMFORT",
+      "alt": "Appearance settings for system, dark, and light themes, text scaling, workspace density, and reduced motion.",
+      "width": 1440,
+      "height": 900,
+      "bytes": 87981,
+      "sha256": "9b1fe0034aa2b2fb1b02afc8572e367e3d416d27f4afc429073c45e898eb47ae",
+      "validation": "PASS_LIGHT_125_PERCENT"
+    },
+    {
+      "id": "research",
+      "route": "/?presentation=research",
+      "filename": "screenshots/05-research-archive.png",
+      "role": "SEALED_RESEARCH_ARCHIVE",
+      "alt": "Read-only research archive showing evidence-gated capability states and sealed verification results.",
+      "width": 1440,
+      "height": 900,
+      "bytes": 226759,
+      "sha256": "e7d5f7e34435d0a4bca9a6bfbe78a4a5f7e764c5e672e99a1e5032a6fcd9fa3e",
+      "validation": "PASS"
+    }
+  ],
+  "socialPreview": {
+    "source": "social/desk-code-agent-social-preview.svg",
+    "sourceSha256": "af46d576301f0edc588d849d8e4ff514e9b89b6bae03eb02aae4111b13539a98",
+    "filename": "social/desk-code-agent-social-preview.png",
+    "width": 1280,
+    "height": 640,
+    "bytes": 221028,
+    "sha256": "34055128809128fbd652901a4b4acb2d4b7ab72f8c73f308abf6c584b5e41181",
+    "validation": "PASS_LOCAL_PENDING_GITHUB_SETTINGS_UPLOAD"
+  },
+  "privacy": {
+    "realRepositoryPaths": 0,
+    "personalIdentifiers": 0,
+    "secrets": 0,
+    "rawModelOutputs": 0,
+    "rawEditBodies": 0,
+    "sanitizedRepositoryFixture": true
+  },
+  "invariants": {
+    "targetModelCalls": 0,
+    "benchmarkCalls": 0,
+    "repositoryMutations": 0,
+    "legacyV0_1_0MediaModified": false
+  }
+}

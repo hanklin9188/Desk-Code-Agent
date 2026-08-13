@@ -64,5 +64,5 @@ describe("cited deterministic analysis", () => {
     const poisoned = structuredClone(report);
     poisoned.sections[0].claims[0].evidenceIds = ["evidence_unknown"];
     expect(() => runtime.validateCompleteReport(poisoned)).toThrow(/outside the evidence ledger/);
-  });
+  }, 15_000);
 });

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 3,
+  "reportId": "dca-v0.2.0-presentation-media-v3-security-successor",
+  "supersedes": "docs/validation/FINAL_MEDIA_CAPTURE_REPORT.v2.json",
+  "status": "PASS_LOCAL_MEDIA_READY",
+  "release": "0.2.0",
+  "reason": "Repository worktree status changed after security review; sealed v2 evidence remains historical.",
+  "changedAssets": [
+    {
+      "path": "docs/media/releases/v0.2.0/screenshots/01-onboarding.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 256783,
+      "sha256": "942aa383cf48a92ad233e72b018023a3090302f73ce21c03c4244c81ab745e09",
+      "reason": "Third-step guidance and disabled task composer made capability boundaries explicit."
+    },
+    {
+      "path": "docs/media/releases/v0.2.0/screenshots/02-repository-ready.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 175993,
+      "sha256": "c071dcb8eb8638e31788b373f89715f5ffa238e0b70258631ad9597176b5fe20",
+      "reason": "Connected repository now says working-tree status was not inspected for safety."
+    }
+  ],
+  "unchangedAssets": 5,
+  "manifest": {
+    "path": "docs/media/releases/v0.2.0/CAPTURE_MANIFEST.json",
+    "sha256": "1b08eef8137283a4158657e9a7e9a2d4489c7e7ae525570959792c74bbce2717"
+  },
+  "validation": {
+    "dimensions": "PASS",
+    "visualInspection": "PASS",
+    "worktreeCleanOrDirtyClaims": 0,
+    "privatePaths": 0,
+    "secrets": 0,
+    "unsupportedCapabilityClaims": 0,
+    "productionPresentationQueryGate": "PASS_DISABLED",
+    "targetModelCalls": 0,
+    "benchmarkCalls": 0,
+    "legacyV0_1_0AssetsChanged": 0
+  }
+}

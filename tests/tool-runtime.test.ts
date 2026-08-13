@@ -79,10 +79,18 @@ describe("constrained tool runtime", () => {
     const root = await mkdtemp(path.join(os.tmpdir(), "dca-hard-control-")); roots.push(root);
     const timeoutMarker = `dca-hard-timeout-${process.pid}-${Date.now()}`;
     const cancelMarker = `dca-hard-cancel-${process.pid}-${Date.now()}`;
+    const capabilities = await detectSandboxCapabilities();
     const executor = new TrustedVerificationExecutor(root, {
       timeout: { executable: process.execPath, args: ["-e", "setInterval(() => {}, 1000)", timeoutMarker], timeoutMs: 100, requiresHardNetworkIsolation: true },
       cancel: { executable: process.execPath, args: ["-e", "setInterval(() => {}, 1000)", cancelMarker], timeoutMs: 5_000, requiresHardNetworkIsolation: true }
-    }, { level: "HARD_ISOLATION", strategy: "unshare_user_network_pid" });
+    }, capabilities);
+    if (capabilities.level !== "HARD_ISOLATION") {
+      const unavailable = await executor.run("timeout");
+      expect(unavailable.status).toBe("NOT_RUN");
+      expect(unavailable.sandbox).toBe("NO_NETWORK_GUARANTEE_UNAVAILABLE");
+      expect(unavailable.reason).toMatch(/network.*isolation/i);
+      return;
+    }
     expect((await executor.run("timeout")).status).toBe("TIMED_OUT");
     const pending = executor.run("cancel");
     await new Promise((resolve) => setTimeout(resolve, 100));

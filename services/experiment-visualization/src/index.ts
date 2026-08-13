@@ -161,7 +161,7 @@ export function buildVisualizationState(bundle: Partial<CanonicalArtifactBundle>
         { label: "Not successful", oneShot: 95 - numberAt(fim, "strictBehavioral", [], "FIM"), intervention: 95 - numberAt(fimRetry, "successes", [], "FIM.maximumTwoCall"), denominator: 95 }
       ] },
       verificationFunnel: { title: "Strongest-candidate verification funnel", takeaway: "Syntax reliability did not translate into enough strict behavioral success for admission.", source: source(artifacts.modelMatrix, "Model capability matrix v6"), stages: funnel, denominator: 95 },
-      observability: { title: "L0 vs L1 observability", takeaway: "Structured privacy-safe features raised supported semantic and confidence coverage while reducing T14.", source: source(artifacts.observability, "Privacy-safe paired report"), denominator: pairedFailures, metrics: [
+      observability: { title: "L0 vs L1 observability", takeaway: "Structured privacy-safe features raised supported semantic and confidence coverage while reducing T14.", source: source(artifacts.observability, "Privacy-safe public projection"), denominator: pairedFailures, metrics: [
         obsMetric("semanticCoverage", "Semantic cause", "up"), obsMetric("supportedNonT14", "Supported non-T14", "up"), obsMetric("highMediumConfidence", "High / medium confidence", "up"), obsMetric("t14", "T14 inconclusive", "down")
       ] },
       modelComparison: { title: "Practical local model comparison", takeaway: "FIM-7B led scored candidates but reached only the assisted floor; no model was promoted.", source: source(artifacts.modelMatrix, "Model capability matrix v6"), rows: modelRows.map((row) => ({ model: String(row.model), value: Number(row.strictBehavioral ?? 0), denominator: Number((row.threshold as Obj)?.denominator ?? 95), status: String((row.threshold as Obj)?.highestClassification ?? row.scoringStatus), scored: String(row.scoringStatus) !== "INFRASTRUCTURE_BLOCKED_NOT_SCORED" })) },
@@ -171,7 +171,7 @@ export function buildVisualizationState(bundle: Partial<CanonicalArtifactBundle>
         { label: "p95 latency", value: `${Math.round(numberAt(m2Performance, "p95LatencyMs", [], "M2"))} ms`, detail: "Sealed tournament" },
         { label: "Inference peak VRAM", value: `${numberAt(m2Performance, "inferencePeakVramMiB", [], "M2").toLocaleString()} MiB`, detail: "Measured, not estimated" }
       ] },
-      transitions: { title: "Paired semantic transition flow", takeaway: "Fifteen L0-inconclusive failures became supported T1, T3, or T7 causes under L1.", source: source(artifacts.observability, "Privacy-safe paired report"), links: transitionLinks }
+      transitions: { title: "Paired semantic transition flow", takeaway: "Fifteen L0-inconclusive failures became supported T1, T3, or T7 causes under L1.", source: source(artifacts.observability, "Privacy-safe public projection"), links: transitionLinks }
     }
   };
   return { status: "READY", dashboard, warnings: [...new Set(warnings)] };

@@ -1,8 +1,8 @@
 # Desk Code Agent — Master Execution Plan
 
-Updated: 2026-08-12  
+Updated: 2026-08-13
 Canonical design: `DESK_CODE_AGENT_V2_MASTER_DESIGN.md`  
-Active contract: `implementation/CURRENT_TASK_CONTRACT.json`
+Active contract: `implementation/V0_2_0_RELEASE_CANDIDATE_CONTRACT.md`
 
 ## Status vocabulary
 
@@ -10,6 +10,86 @@ Active contract: `implementation/CURRENT_TASK_CONTRACT.json`
 
 For active continuation work, remaining gates use `READY`, `ACTIVE`,
 `BLOCKED_EXTERNAL`, `BLOCKED_APPROVAL`, `NOT_RUN`, `PASS`, or `FAILED`.
+
+## Active maintenance work package — DESKTOP_UX_V0_2_0_RELEASE_CANDIDATE
+
+State: `V0_2_0_RELEASE_CANDIDATE_PASS_DRAFT_PR_OPEN_CI_GREEN`
+
+The owner reopened the published product for a bounded first-use, visual-
+comfort, Windows package, and GitHub presentation refinement. This does not
+reopen capability research, model selection, or mutation.
+`RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT` and
+`KEEP_MUTATION_DISABLED` remain unchanged. The public v0.1.0 history and assets
+remain immutable; v0.2.0 is a separate review-branch release candidate.
+
+Completed implementation:
+
+- replaced fixture-populated startup with an empty, three-step repository
+  onboarding surface;
+- added a native directory picker and async, bounded, read-only repository
+  identity/file-manifest command with stable errors and no child process;
+  repository-reported branch/HEAD text comes from bounded in-tree `.git` reads;
+  the metadata remains untrusted and object validity is not claimed. Metadata
+  indirection and symlinks fail closed, and repository-local Git config is
+  never parsed. This supersedes the earlier Git-command design after canaries
+  proved status filters and config paths could trigger external execution or
+  reads;
+- separated the fixed guided demo from user repositories and labelled every
+  demo surface as fixture data with zero repository/model access;
+- consolidated navigation to eight workflow/research destinations and disabled
+  task-only surfaces until a compatible runtime or explicit demo is active;
+- added System/Dark/Light themes, 100/110/125% text sizing,
+  Comfortable/Compact density, live reduced-motion behavior, semantic colors,
+  visible focus, and responsive panels down to the native 760×520 minimum;
+- kept selected repositories read-only and kept Run disabled because the Node
+  repository-intelligence/task services are not yet bridged to the desktop;
+- added onboarding, gateway, appearance, motion, accessibility, and responsive
+  regression coverage plus English and Traditional Chinese quick starts;
+- added a deterministic v0.2.0 presentation registry, five current 1440×900
+  screenshots, and a 1280×640 social-preview asset without changing sealed
+  v0.1.0 media;
+- redesigned the GitHub README around first-run setup, current capabilities,
+  honest limitations, visual comfort, safety, and installation;
+- bumped package, Cargo, and Tauri versions coherently to 0.2.0 and produced
+  separate unsigned MSI/NSIS artifacts;
+- refreshed the locked Windows runtime SBOM, notices, and license inventory:
+  205/205 dependencies have authoritative text, 126 unique texts are pinned,
+  and unresolved distribution blockers are zero;
+- added review-branch CI for the Linux product gate and Windows Rust gate.
+
+Validation status:
+
+- full clean index-export design/type/test/build gate: PASS (2390 design files,
+  0 warnings/errors; 50 test files, 255 passed and one explicit installed-
+  runtime probe skipped; production build PASS). The contaminated developer
+  tree separately ran 256/256, without changing the clean-source result;
+- focused post-remediation UX suite: PASS (8 files, 39 tests);
+- Windows Rust `fmt`, 5/5 native tests, and `clippy -D warnings`: PASS on the
+  exact NTFS stage after the no-child-process security correction;
+- real Windows Edge visual inspection: PASS for dark/light research at
+  1440×900 and light onboarding at 980×680 and 760×520 with 125% app text;
+- current v0.2.0 media: PASS (5 screenshots and social preview, current-source
+  closure, privacy and checksum scans);
+- unsigned Windows package lifecycle: PASS for the privacy-remapped final
+  MSI/NSIS, per-user MSI smoke lifecycle, v0.1→v0.2 NSIS upgrade, and clean-
+  profile NSIS install/startup/inspection/uninstall/reinstall; superseded
+  binary hashes are explicitly prohibited in v4 evidence;
+- independent Spec/Product and Security/Engineering re-reviews: PASS with no
+  unresolved High or Medium findings;
+- scoped staging/privacy review, intentional branch commits, normal branch
+  push, and Draft PR: PASS; GitHub PR #1 is open as a draft;
+- remote CI: PASS for both the Linux design/test/web-build job and the Windows
+  native fmt/test/clippy job.
+
+The authorized release-candidate work package is complete. Remaining actions
+are protected publication decisions: owner review/merge, tag, GitHub Release,
+binary upload, and social-preview Settings upload. They are not performed in
+this work package without separate post-review authorization.
+
+Explicitly deferred/out of scope: GitHub URL cloning, semantic indexing or task
+execution against a desktop-selected repository, mutation, a new model/research
+call, modification of v0.1.0 media/installers, trusted signing, Narrator spoken-
+output certification, and unreviewed direct publication to main.
 
 ## Completed phase — PRODUCTIZATION / PORTFOLIO
 
@@ -898,6 +978,30 @@ release supplement. Use the newest immutable `m10-release-prep-*` result and
 `artifacts/release/SHA256SUMS.json`.
 
 ## Protected actions
+
+### Active v0.2.0 release-candidate closure — 2026-08-13
+
+The owner-authorized `implementation/V0_2_0_RELEASE_CANDIDATE_CONTRACT.md`
+supersedes the historical no-Git-delivery paragraph below for this narrowly
+scoped work package. It permits an intentional feature-branch commit, normal
+push, and Draft PR only; merge, tag, GitHub Release, binary upload, signing,
+force push, social-preview mutation, and direct main push remain forbidden.
+
+The final native acquisition boundary starts no Git or other child process,
+reads bounded repository-reported HEAD/ref text as untrusted metadata, does not
+validate object existence/type, rejects `.git` indirection, and reports
+`NOT_CHECKED_SAFETY_BOUNDARY`. Windows filter-canary regression, 5/5 native
+tests, clippy, clean-source full JS/TS checks, source identity, remapped Windows
+MSI/NSIS build, both installer-engine smoke lifecycles, v0.1→v0.2 NSIS upgrade,
+and clean-profile NSIS lifecycle pass. Exact build-input source identity is
+`24f2bd1f71ca66c2a3f9db01e166fc8fb368bf9dd7f9ee704cab04be5bca70ec`
+(2,390 files; 89,503,124 bytes; Linux/NTFS exact). Canonical MSI/NSIS hashes
+are recorded in `WINDOWS_PACKAGING_RELEASE_QA_REPORT.v4.json`; v2/v3 packages
+are superseded and must not be published. Exact staged privacy review and both
+independent final reviews passed; commits `c5665d9` and `8bcdeb6` are pushed to
+`agent/desktop-ux-v0.2.0`; Draft PR #1 is open; and both remote CI jobs are
+green. Target-model and benchmark calls remain zero. Merge, tag, release,
+binary upload, and social-preview mutation remain protected and unperformed.
 
 The existing Qwen3.5-4B and explicitly approved Qwen2.5-Coder-3B snapshots remain in ignored runtime caches. For tournament Session B, the owner separately authorized only the exact BF16 snapshots `Qwen/Qwen2.5-Coder-7B-Instruct@c03e6d358207e414f1eca0bb1891e29f1db0e242`, `TIGER-Lab/FIM-7B@5a1d4294185e4fa0bbd40750c87d0beab7e67a3a`, and `SWE-bench/SWE-agent-LM-7B@a44fce0216647696a7437126e82fc1eaa34008d7`, plus derived-at-load vLLM FP8 per-tensor validation. Those snapshots are now verified in the ignored cache. Authorization does not extend to another model/revision, a pre-quantized snapshot, AWQ/GPTQ/INT4, automatic fallback, dependency installation, sudo/admin operations, Git commit/remote/push/PR, tag, release, signing, or other protected external action. No external GitHub write is authorized by this plan.
 

@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 3,
+  "reportId": "dca-v0.2.0-windows-packaging-release-qa-v3-security-successor",
+  "supersedes": "dca-v0.2.0-windows-packaging-release-qa-v2",
+  "completedAt": "2026-08-13T12:10:00+08:00",
+  "status": "PASS_UNSIGNED_RELEASE_CANDIDATE",
+  "release": "0.2.0",
+  "source": {
+    "identityPolicyVersion": 3,
+    "identitySha256": "e3ae3fde1d219220a852d4cc1b9592dbd31ad4a01d416973b6c8cbe6c6e16b46",
+    "authoritativeFileCount": 2388,
+    "authoritativeBytes": 89524650,
+    "linuxWindowsNtfsequality": "PASS_EXACT",
+    "symlinks": 0,
+    "generatedBuildTreesExcluded": true,
+    "scope": "exact corrected source input used for the final Windows build"
+  },
+  "toolchain": {
+    "os": "WINDOWS_11_REFERENCE_HOST",
+    "architecture": "x86_64-pc-windows-msvc",
+    "node": "24.15.0",
+    "npm": "11.12.1",
+    "rust": "1.97.1",
+    "webView2": "150.0.4078.48",
+    "gitUsedByInstalledQa": "Visual Studio Git 2.54.0.windows.2 via bounded absolute-path application fallback"
+  },
+  "artifacts": [
+    {
+      "kind": "MSI",
+      "filename": "Desk Code Agent_0.2.0_x64_en-US.msi",
+      "bytes": 2131818,
+      "sha256": "5ba8a4ea7023be393aab91c888a1ed57cb0d154dedf1973c78bc88a2ba952221",
+      "authenticode": "NOT_SIGNED",
+      "version": "0.2.0",
+      "architecture": "x64"
+    },
+    {
+      "kind": "NSIS",
+      "filename": "Desk Code Agent_0.2.0_x64-setup.exe",
+      "bytes": 1274004,
+      "sha256": "9b517f77683bf543f30dcf9cc3b572406ee858883d6f76725b0f6a7083a9dd62",
+      "authenticode": "NOT_SIGNED",
+      "version": "0.2.0",
+      "architecture": "x64"
+    },
+    {
+      "kind": "NATIVE_EXE",
+      "filename": "desk-code-agent.exe",
+      "bytes": 3852288,
+      "sha256": "71702f77f0b04cd34ad4faafad6b836b04fd17f2a547b738ef57159f3d405885",
+      "authenticode": "NOT_SIGNED",
+      "version": "0.2.0",
+      "architecture": "x64"
+    }
+  ],
+  "securityCorrection": {
+    "reproduction": "PASS_OLD_GIT_STATUS_PATH_EXECUTED_HARMLESS_REPOSITORY_FILTER_CANARY",
+    "unsafeOperationRemoved": "git status --porcelain working-tree content comparison",
+    "gitExecutableResolution": "PASS_ABSOLUTE_TRUSTED_CANDIDATES_ONLY",
+    "repositoryOrCurrentDirectoryExecutableRejected": true,
+    "productWorktreeStatus": "NOT_CHECKED_SAFETY_BOUNDARY",
+    "windowsMaliciousFilterRegression": "PASS_CANARY_NOT_EXECUTED",
+    "safeMetadataStillResolved": "PASS_REPOSITORY_NAME_BRANCH_COMMIT_AND_BOUNDED_MANIFEST"
+  },
+  "validation": {
+    "frontendProductionBuild": "PASS",
+    "designValidation": "PASS_2484_FILES_ZERO_WARNINGS_ZERO_ERRORS",
+    "vitest": "PASS_50_FILES_256_TESTS",
+    "typecheck": "PASS",
+    "rustFormat": "PASS",
+    "rustTests": "PASS_8_OF_8_WITH_ONE_HELPER_FIXTURE_IGNORED_BY_DESIGN",
+    "rustClippyWarningsDenied": "PASS",
+    "artifactChecksums": "PASS",
+    "packageVersionMetadata": "PASS_0_2_0",
+    "authenticodeState": "PASS_EXPECTED_NOT_SIGNED",
+    "currentUserSilentInstall": "PASS",
+    "installedRegistration": "PASS_VERSION_0_2_0",
+    "installedResources": "PASS_LICENSE_NOTICES_AND_127_LICENSE_FILES",
+    "installedPathStartup": "PASS_NO_DEV_SERVER_OR_SOURCE_TREE",
+    "nativeFolderDialog": "PASS",
+    "realMaliciousFixtureRepositorySelection": "PASS",
+    "gitFallbackWithoutGitOnDefaultPath": "PASS",
+    "observedRepositoryNameBranchCommit": "PASS",
+    "worktreeCleanOrDirtyClaim": "PASS_NONE_RENDERED",
+    "worktreeSafetyLabel": "PASS_RENDERED",
+    "absolutePathNotRendered": "PASS",
+    "selectedRepositoryRunAndTaskInputDisabled": "PASS",
+    "productionPresentationQueryGate": "PASS_CANNOT_SYNTHESIZE_READY_STATE",
+    "themeControls": "PASS_SYSTEM_DARK_LIGHT",
+    "textScaleControls": "PASS_100_110_125",
+    "reducedMotionControl": "PASS_AVAILABLE",
+    "uninstall": "PASS_ZERO_REGISTRATION_DIRECTORY_SHORTCUT_OR_PROCESS",
+    "reinstall": "PASS_EXACT_SAME_CHECKSUM_VERIFIED_INSTALLER",
+    "finalCleanup": "PASS_LEFT_V0_2_0_INSTALLED_FOR_OWNER_WITH_ZERO_RUNNING_PROCESSES"
+  },
+  "distribution": {
+    "runtimeDependencies": 205,
+    "npmRuntimeDependencies": 5,
+    "cargoRuntimeDependencies": 200,
+    "dependenciesWithAuthoritativeLicenseText": 205,
+    "uniquePinnedLicenseTexts": 126,
+    "unresolvedLicenseBlockers": 0,
+    "sbom": {
+      "path": "artifacts/release/v0.2.0/sbom.spdx.json",
+      "sha256": "ef90d1777a7d8074cd9afe5b573f97e3d4d9098c9e3a96bd8756f028ef50faa2",
+      "packages": 206,
+      "relationships": 206,
+      "documentDescribesApplication": true,
+      "invalidSlashLicenseExpressions": 0
+    },
+    "licenseInventory": {
+      "path": "artifacts/release/v0.2.0/third-party-license-inventory.json",
+      "sha256": "6d824ce9b4503b64508bc967d395aa145697e5d66c88d16ce7e7fb7ca25c2117"
+    },
+    "noticesSha256": "6576f62b9b62eab38feed8dc6865b037ab2c099a1850e8fc083d3addfd7dbf4c"
+  },
+  "privacyAndSafety": {
+    "targetModelCalls": 0,
+    "benchmarkCalls": 0,
+    "networkCloneCalls": 0,
+    "repositoryWrites": 0,
+    "repositoryExternalFilterExecutions": 0,
+    "repositoryAbsolutePathRendered": 0,
+    "secretsInArtifacts": 0,
+    "modelWeightsInArtifacts": 0,
+    "mutation": "KEEP_MUTATION_DISABLED"
+  },
+  "publication": {
+    "githubBranch": "agent/desktop-ux-v0.2.0",
+    "draftPullRequest": "PENDING",
+    "mainMerged": false,
+    "tagCreated": false,
+    "releaseCreated": false,
+    "binaryAssetsUploaded": false,
+    "socialPreviewUploaded": false
+  },
+  "deferred": [
+    "TRUSTED_WINDOWS_CODE_SIGNING",
+    "NARRATOR_SPOKEN_OUTPUT_VALIDATION",
+    "SELECTED_REPOSITORY_TASK_RUNTIME",
+    "GITHUB_URL_CLONING"
+  ]
+}

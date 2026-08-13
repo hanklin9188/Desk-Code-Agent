@@ -3,7 +3,7 @@ import modelMatrix from "../../../docs/experiments/model-specialization/MODEL_CA
 import tournament from "../../../docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_D.v2.json";
 import tournamentReport from "../../../docs/experiments/model-specialization/MODEL_TOURNAMENT_FINAL_REPORT.v1.json";
 import semanticFailure from "../../../docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_SESSION_B.v1.json";
-import observability from "../../../docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_PAIRED_OBSERVABILITY_REPORT.v3.json";
+import observability from "../../../docs/productization/PRIVACY_SAFE_OBSERVABILITY_PUBLIC_PROJECTION.v1.json";
 import codeFormation from "../../../docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RESULTS_INDEX.v6.json";
 
 export interface RawArtifact {
@@ -28,7 +28,7 @@ export const canonicalArtifacts: CanonicalArtifactBundle = {
   tournament: { path: "docs/experiments/model-specialization/MODEL_TOURNAMENT_SESSION_D.v2.json", data: tournament },
   tournamentReport: { path: "docs/experiments/model-specialization/MODEL_TOURNAMENT_FINAL_REPORT.v1.json", data: tournamentReport },
   semanticFailure: { path: "docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_SESSION_B.v1.json", data: semanticFailure },
-  observability: { path: "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_PAIRED_OBSERVABILITY_REPORT.v3.json", data: observability },
+  observability: { path: "docs/productization/PRIVACY_SAFE_OBSERVABILITY_PUBLIC_PROJECTION.v1.json", data: observability },
   codeFormation: { path: "docs/experiments/model-specialization/CODE_FORMATION_CONTROL_RECOVERY_RESULTS_INDEX.v6.json", data: codeFormation }
 };
 

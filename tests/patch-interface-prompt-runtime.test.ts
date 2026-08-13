@@ -74,22 +74,22 @@ describe("patch-interface prompt runtime", () => {
     type Oracle = { task_id: string; behavioral_requirement: string; exact_relevant_file: string; exact_relevant_symbol: string; exact_relevant_range_1_based: { start_line: number; end_line: number }; root_cause: string; reference_fixed_source: string; hidden_files: SourceFile[] };
     type Preflight = { taskId: string; before: { visible: { status: string }; hidden: { status: string } } };
     const readJson = async <T,>(relative: string): Promise<T> => JSON.parse(await readFile(path.join(root, relative), "utf8")) as T;
-    const [manifest, oracle, preflight, preregistration] = await Promise.all([
+    const [manifest, oracle, preflight, promptContract] = await Promise.all([
       readJson<{ tasks: Task[] }>("benchmarks/patch-interface/PATCH_INTERFACE_DEVELOPMENT_MANIFEST.v1.json"),
       readJson<{ rows: Oracle[] }>("benchmarks/patch-interface/PATCH_INTERFACE_DEVELOPMENT_ORACLE.v1.sealed.json"),
       readJson<{ rows: Preflight[] }>("benchmarks/patch-interface/PATCH_INTERFACE_ORACLE_PREFLIGHT.v2.json"),
-      readJson<{ fixedInformationContract: { promptTemplate: string }; taskAssignment: { architectureBaseline: { taskIds: string[] } } }>("benchmarks/patch-interface/PATCH_INTERFACE_PREREGISTRATION.v2.json")
+      readJson<{ promptTemplate: string }>("tests/fixtures/patch-interface-prompt-contract.json")
     ]);
     const tasks = new Map(manifest.tasks.map((task) => [task.task_id, task]));
     const oracles = new Map(oracle.rows.map((row) => [row.task_id, row]));
     const preflights = new Map(preflight.rows.map((row) => [row.taskId, row]));
-    const rows = preregistration.taskAssignment.architectureBaseline.taskIds.map((taskId) => {
+    const rows = manifest.tasks.map(({ task_id: taskId }) => {
       const task = tasks.get(taskId); const oracleRow = oracles.get(taskId); const preflightRow = preflights.get(taskId);
       expect(task, taskId).toBeDefined(); expect(oracleRow, taskId).toBeDefined(); expect(preflightRow, taskId).toBeDefined();
       const source = task!.visible_files.find((file) => file.path === oracleRow!.exact_relevant_file);
       const visible = task!.visible_files.find((file) => file.path !== oracleRow!.exact_relevant_file && file.path.includes("visible.test"));
       expect(source, taskId).toBeDefined(); expect(visible, taskId).toBeDefined();
-      const prompt = renderPatchInterfacePrompt(preregistration.fixedInformationContract.promptTemplate, {
+      const prompt = renderPatchInterfacePrompt(promptContract.promptTemplate, {
         behavioral_requirement: oracleRow!.behavioral_requirement,
         exact_relevant_file: oracleRow!.exact_relevant_file,
         exact_relevant_symbol: oracleRow!.exact_relevant_symbol,

@@ -1,34 +1,37 @@
 # Third-Party Notices
 
-This inventory covers dependencies included in the Desk Code Agent 0.1.0 Windows x86_64 distributable. It was generated only from locked local package metadata and package-provided license/notice files. It is a technical inventory, not legal advice.
+This inventory covers dependencies included in the Desk Code Agent 0.2.0 Windows x86_64 distributable. It was generated from locked Windows-target package metadata and package-provided or previously pinned authoritative license texts. It is a technical inventory, not legal advice.
 
 ## Distribution boundary
 
-- Desktop frontend runtime: React, React DOM, and Scheduler.
+- Desktop frontend runtime: Tauri API/dialog bindings, React, React DOM, and Scheduler.
 - Windows native runtime: the normal-dependency Cargo closure compiled into the Tauri executable.
-- npm development/build dependencies, Cargo build-only dependencies, the separately configured Python model runtime, model weights, research corpora, and adaptation-inspiration sources are not distributed in the installer.
-- Desk Code Agent is licensed under Apache-2.0; see [`LICENSE`](LICENSE).
+- npm development/build dependencies, Cargo build/proc-macro-only dependencies, the separately configured Python model runtime, model weights, research corpora, and adaptation-inspiration sources are not distributed.
+- The application source is licensed under Apache-2.0. The installer also carries the root LICENSE, this notice, and the pinned text directory as resources.
 
-## Closure of the prior 139 unexplained rows
+## Counts
 
 | Classification | Count |
 |---|---:|
-| Resolved license | 22 |
-| Not distributed | 110 |
-| Build-only, not distributed | 6 |
-| Owner/legal review required | 1 |
-| Raw unexplained `NOASSERTION` remaining | 0 |
+| Distributed runtime dependencies | 205 |
+| npm runtime packages | 5 |
+| Cargo runtime packages | 200 |
+| Packages with authoritative text | 205 |
+| Unique pinned texts | 126 |
+| Unresolved distributed blockers | 0 |
 
 ## Distributed runtime dependencies
 
-| Ecosystem | Package | Version | Declared license | Pinned local text |
+| Ecosystem | Package | Version | Declared license | Pinned text |
 |---|---|---:|---|---|
+| npm | `@tauri-apps/api` | `2.11.1` | Apache-2.0 OR MIT | [0d542e0c8804](third_party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt), [9dd42ea92cff](third_party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt) |
+| npm | `@tauri-apps/plugin-dialog` | `2.7.2` | MIT OR Apache-2.0 | [eb8a6c846304](third_party/licenses/eb8a6c84630461b352badcab1dbe5d0168c56d377358b2b8c86b51003272d5ef.txt) |
 | npm | `react` | `19.2.8` | MIT | [da6d3703ed11](third_party/licenses/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt) |
 | npm | `react-dom` | `19.2.8` | MIT | [da6d3703ed11](third_party/licenses/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt) |
 | npm | `scheduler` | `0.27.0` | MIT | [da6d3703ed11](third_party/licenses/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt) |
 | cargo | `aho-corasick` | `1.1.5` | Unlicense OR MIT | [01c266bced4a](third_party/licenses/01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f.txt), [0f96a83840e1](third_party/licenses/0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f.txt) |
 | cargo | `alloc-no-stdlib` | `2.0.4` | BSD-3-Clause | [c0c56f26d9c0](third_party/licenses/c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae.txt) |
-| cargo | `alloc-stdlib` | `0.2.4` | BSD-3-Clause | Not present in local package payload |
+| cargo | `alloc-stdlib` | `0.2.4` | BSD-3-Clause | [c0c56f26d9c0](third_party/licenses/c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae.txt) |
 | cargo | `anyhow` | `1.0.104` | MIT OR Apache-2.0 | [62c7a1e35f56](third_party/licenses/62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
 | cargo | `base64` | `0.22.1` | MIT OR Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [0dd882e53de1](third_party/licenses/0dd882e53de11566d50f8e8e2d5a651bcf3fabee4987d70f306233cf39094ba7.txt) |
 | cargo | `bit-set` | `0.8.0` | Apache-2.0 OR MIT | [8173d5c29b4f](third_party/licenses/8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90.txt), [f51ac2c59a22](third_party/licenses/f51ac2c59a222f7476ce507ca879960e2b64ea64bb2786eefdbeb7b0b538d1b7.txt) |
@@ -115,7 +118,7 @@ This inventory covers dependencies included in the Desk Code Agent 0.1.0 Windows
 | cargo | `phf_shared` | `0.13.1` | MIT | [0ab4d106b6fa](third_party/licenses/0ab4d106b6faac07fb6a051815fd1b4d862d730895e2d7d7358c2f13565e7a38.txt) |
 | cargo | `phf` | `0.13.1` | MIT | [0ab4d106b6fa](third_party/licenses/0ab4d106b6faac07fb6a051815fd1b4d862d730895e2d7d7358c2f13565e7a38.txt) |
 | cargo | `pin-project-lite` | `0.2.17` | Apache-2.0 OR MIT | [0d542e0c8804](third_party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
-| cargo | `plist` | `1.10.0` | MIT | Not present in local package payload |
+| cargo | `plist` | `1.10.0` | MIT | [5b0ae40d1a35](third_party/licenses/5b0ae40d1a35f7ae6591a28e44771240e6a88cb03a66c9189a45b9681639b466.txt) |
 | cargo | `potential_utf` | `0.1.5` | Unicode-3.0 | [f367c1b8e1aa](third_party/licenses/f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2.txt) |
 | cargo | `powerfmt` | `0.2.0` | MIT OR Apache-2.0 | [155420c6403d](third_party/licenses/155420c6403d4e0fca34105e3c03fdd6939b64c393c7ec6f95f5b72c5474eab0.txt), [070dbc7dda03](third_party/licenses/070dbc7dda03a29296f2d58bdb9b7331af90f2abc9f31df22875d1eabaf29852.txt) |
 | cargo | `precomputed-hash` | `0.1.1` | MIT | [7ca6700600df](third_party/licenses/7ca6700600dfa9c9497bf5556365067daa802c871ea78239f129309c7a2048f7.txt) |
@@ -127,13 +130,14 @@ This inventory covers dependencies included in the Desk Code Agent 0.1.0 Windows
 | cargo | `regex-automata` | `0.4.18` | MIT OR Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [6485b8ed310d](third_party/licenses/6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb.txt) |
 | cargo | `regex-syntax` | `0.8.11` | MIT OR Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [6485b8ed310d](third_party/licenses/6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb.txt) |
 | cargo | `regex` | `1.13.1` | MIT OR Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [6485b8ed310d](third_party/licenses/6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb.txt) |
+| cargo | `rfd` | `0.16.0` | MIT | [65fc947f4bac](third_party/licenses/65fc947f4bac882a2cd104ef73c246b1b037059df9f2b3a58b7f77f0b9e56071.txt) |
 | cargo | `rustc-hash` | `2.1.3` | Apache-2.0 OR MIT | [95bd3988beee](third_party/licenses/95bd3988beee069fa2848f648dab43cc6e0b2add2ad6bcb17360caf749802bcc.txt), [30fefc3a7d6a](third_party/licenses/30fefc3a7d6a0041541858293bcbea2dde4caa4c0a5802f996a7f7e8c0085652.txt) |
 | cargo | `same-file` | `1.0.6` | Unlicense/MIT | [01c266bced4a](third_party/licenses/01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f.txt), [cb3c929a05e6](third_party/licenses/cb3c929a05e6cbc9de9ab06a4c57eeb60ca8c724bef6c138c87d3a577e27aa14.txt) |
 | cargo | `schemars` | `0.8.22` | MIT | [1954992a2b32](third_party/licenses/1954992a2b32e8a2af24a4c11b726902e344c1934b947a77f04d404908f8db30.txt) |
 | cargo | `schemars` | `0.9.0` | MIT | [1954992a2b32](third_party/licenses/1954992a2b32e8a2af24a4c11b726902e344c1934b947a77f04d404908f8db30.txt) |
 | cargo | `schemars` | `1.2.2` | MIT | [1954992a2b32](third_party/licenses/1954992a2b32e8a2af24a4c11b726902e344c1934b947a77f04d404908f8db30.txt) |
 | cargo | `scopeguard` | `1.2.0` | MIT OR Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [fb77f0a9c53e](third_party/licenses/fb77f0a9c53e473abe5103c8632ef9f0f2874d4fb3f17cb2d8c661aab9cee9d7.txt) |
-| cargo | `selectors` | `0.36.1` | MPL-2.0 | Not present in local package payload |
+| cargo | `selectors` | `0.36.1` | MPL-2.0 | [fab3dd6bdab2](third_party/licenses/fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85.txt) |
 | cargo | `semver` | `1.0.28` | MIT OR Apache-2.0 | [62c7a1e35f56](third_party/licenses/62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
 | cargo | `serde_core` | `1.0.229` | MIT OR Apache-2.0 | [62c7a1e35f56](third_party/licenses/62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
 | cargo | `serde_json` | `1.0.151` | MIT OR Apache-2.0 | [62c7a1e35f56](third_party/licenses/62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
@@ -156,6 +160,8 @@ This inventory covers dependencies included in the Desk Code Agent 0.1.0 Windows
 | cargo | `syn` | `3.0.3` | MIT OR Apache-2.0 | [62c7a1e35f56](third_party/licenses/62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
 | cargo | `synstructure` | `0.13.2` | MIT | [219920e865ee](third_party/licenses/219920e865eee70b7dcfc948a86b099e7f4fe2de01bcca2ca9a20c0a033f2b59.txt) |
 | cargo | `tao` | `0.35.3` | Apache-2.0 | [6dc0e068dcf3](third_party/licenses/6dc0e068dcf3a5bc8e054205b85b7720e1d49265bbc64bf515d2cf79197df69a.txt), [02b6448337b7](third_party/licenses/02b6448337b757772d90e5f31caaa0f9e6afaad2221c01771d0a3deaa4d4196c.txt) |
+| cargo | `tauri-plugin-dialog` | `2.7.2` | Apache-2.0 OR MIT | [eb8a6c846304](third_party/licenses/eb8a6c84630461b352badcab1dbe5d0168c56d377358b2b8c86b51003272d5ef.txt), [0cec06e0e55f](third_party/licenses/0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9.txt), [89ff9689dcf9](third_party/licenses/89ff9689dcf9dd53968785d05a26f7898bb169dbfcada8d032b3e68cf0d55607.txt) |
+| cargo | `tauri-plugin-fs` | `2.5.1` | Apache-2.0 OR MIT | [eb8a6c846304](third_party/licenses/eb8a6c84630461b352badcab1dbe5d0168c56d377358b2b8c86b51003272d5ef.txt), [0cec06e0e55f](third_party/licenses/0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9.txt), [89ff9689dcf9](third_party/licenses/89ff9689dcf9dd53968785d05a26f7898bb169dbfcada8d032b3e68cf0d55607.txt) |
 | cargo | `tauri-runtime-wry` | `2.11.4` | Apache-2.0 OR MIT | [0d542e0c8804](third_party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt), [9dd42ea92cff](third_party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt) |
 | cargo | `tauri-runtime` | `2.11.3` | Apache-2.0 OR MIT | [0d542e0c8804](third_party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt), [9dd42ea92cff](third_party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt) |
 | cargo | `tauri-utils` | `2.9.3` | Apache-2.0 OR MIT | [0d542e0c8804](third_party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt), [9dd42ea92cff](third_party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt) |
@@ -177,11 +183,11 @@ This inventory covers dependencies included in the Desk Code Agent 0.1.0 Windows
 | cargo | `tracing` | `0.1.44` | MIT | [898b1ae9821e](third_party/licenses/898b1ae9821e98daf8964c8d6c7f61641f5f5aa78ad500020771c0939ee0dea1.txt) |
 | cargo | `tray-icon` | `0.24.2` | MIT OR Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [2ab5537b8c0c](third_party/licenses/2ab5537b8c0cb1d475e2145b6a7994b04e7c71e6e5bd836f7f9c47c221a5ad9a.txt), [6c1e5d0ccf5e](third_party/licenses/6c1e5d0ccf5e8951401cb964036ae664d52fc8d1148173b53bc54fc534f5d404.txt) |
 | cargo | `typeid` | `1.0.3` | MIT OR Apache-2.0 | [62c7a1e35f56](third_party/licenses/62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
-| cargo | `unic-char-property` | `0.9.0` | MIT/Apache-2.0 | Not present in local package payload |
-| cargo | `unic-char-range` | `0.9.0` | MIT/Apache-2.0 | Not present in local package payload |
-| cargo | `unic-common` | `0.9.0` | MIT/Apache-2.0 | Not present in local package payload |
-| cargo | `unic-ucd-ident` | `0.9.0` | MIT/Apache-2.0 | Not present in local package payload |
-| cargo | `unic-ucd-version` | `0.9.0` | MIT/Apache-2.0 | Not present in local package payload |
+| cargo | `unic-char-property` | `0.9.0` | MIT/Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
+| cargo | `unic-char-range` | `0.9.0` | MIT/Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
+| cargo | `unic-common` | `0.9.0` | MIT/Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
+| cargo | `unic-ucd-ident` | `0.9.0` | MIT/Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
+| cargo | `unic-ucd-version` | `0.9.0` | MIT/Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
 | cargo | `unicode-ident` | `1.0.24` | (MIT OR Apache-2.0) AND Unicode-3.0 | [62c7a1e35f56](third_party/licenses/62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a.txt), [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt), [f7db81051789](third_party/licenses/f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1.txt) |
 | cargo | `unicode-segmentation` | `1.13.3` | MIT OR Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [7b63ecd5f190](third_party/licenses/7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0.txt) |
 | cargo | `url` | `2.5.8` | MIT OR Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [b38f11f60967](third_party/licenses/b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5.txt) |
@@ -190,11 +196,12 @@ This inventory covers dependencies included in the Desk Code Agent 0.1.0 Windows
 | cargo | `uuid` | `1.24.0` | Apache-2.0 OR MIT | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [436bc5a105d8](third_party/licenses/436bc5a105d8e57dcd8778730f3754f7bf39c14d2f530e4cde4bd2d17a83ec3d.txt) |
 | cargo | `walkdir` | `2.5.0` | Unlicense/MIT | [01c266bced4a](third_party/licenses/01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f.txt), [0f96a83840e1](third_party/licenses/0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f.txt) |
 | cargo | `web_atoms` | `0.2.5` | MIT OR Apache-2.0 | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [86dd7f026f91](third_party/licenses/86dd7f026f916daf7511e39951ad8ea8cf55a8db67ae64060dacf829761c18f3.txt) |
-| cargo | `webview2-com-sys` | `0.38.2` | MIT | Not present in local package payload |
-| cargo | `webview2-com` | `0.38.2` | MIT | Not present in local package payload |
+| cargo | `webview2-com-sys` | `0.38.2` | MIT | [0dcf41516e60](third_party/licenses/0dcf41516e608bbcb6cdc5229feb7b86fe4a643b85e7df251133c93408fdac73.txt) |
+| cargo | `webview2-com` | `0.38.2` | MIT | [0dcf41516e60](third_party/licenses/0dcf41516e608bbcb6cdc5229feb7b86fe4a643b85e7df251133c93408fdac73.txt) |
 | cargo | `winapi-util` | `0.1.11` | Unlicense OR MIT | [01c266bced4a](third_party/licenses/01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f.txt), [cb3c929a05e6](third_party/licenses/cb3c929a05e6cbc9de9ab06a4c57eeb60ca8c724bef6c138c87d3a577e27aa14.txt) |
 | cargo | `window-vibrancy` | `0.6.0` | Apache-2.0 OR MIT | [a60eea817514](third_party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt), [617b85f62a4f](third_party/licenses/617b85f62a4f1b6a62d3d9f28f6d7003b7f68a70b7675a8174bbcc68401ac62d.txt), [7ccef0d35e85](third_party/licenses/7ccef0d35e8507fa02d7e904a5277d62723f9ec576d52f6a865cab7b4dbf12ad.txt) |
 | cargo | `windows_x86_64_msvc` | `0.52.6` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
+| cargo | `windows_x86_64_msvc` | `0.53.1` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
 | cargo | `windows-collections` | `0.2.0` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
 | cargo | `windows-core` | `0.61.2` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
 | cargo | `windows-future` | `0.2.1` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
@@ -204,8 +211,10 @@ This inventory covers dependencies included in the Desk Code Agent 0.1.0 Windows
 | cargo | `windows-result` | `0.3.4` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
 | cargo | `windows-strings` | `0.4.2` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
 | cargo | `windows-sys` | `0.59.0` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
+| cargo | `windows-sys` | `0.60.2` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
 | cargo | `windows-sys` | `0.61.2` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
 | cargo | `windows-targets` | `0.52.6` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
+| cargo | `windows-targets` | `0.53.5` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
 | cargo | `windows-threading` | `0.1.0` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
 | cargo | `windows-version` | `0.1.7` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
 | cargo | `windows` | `0.61.3` | MIT OR Apache-2.0 | [c16f8dcf1a36](third_party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt), [c2cfccb812fe](third_party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt) |
@@ -221,24 +230,11 @@ This inventory covers dependencies included in the Desk Code Agent 0.1.0 Windows
 | cargo | `zerovec` | `0.11.6` | Unicode-3.0 | [f367c1b8e1aa](third_party/licenses/f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2.txt) |
 | cargo | `zmij` | `1.0.23` | MIT | [23f18e03dc49](third_party/licenses/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt) |
 
-## Final text-gap closure
-
-All ten previously explicit text gaps are closed with authoritative package,
-exact upstream-commit, or official license-custodian text. The final
-classification is `TEXT_PINNED_AUTHORITATIVE` for all ten, with zero
-`LEGAL_REVIEW_REQUIRED` rows and zero unresolved distributed-license blockers.
-Exact provenance and checksums are recorded in the
-[v2 machine-readable inventory](artifacts/release/third-party-license-inventory.v2.json).
-
-The final audit found no root or dependency attribution content requiring a
-separate root `NOTICE`, so the recorded decision is
-`ROOT_NOTICE_NOT_REQUIRED_BY_CURRENT_AUDIT`.
-
 ## Adaptation lineage
 
 - mattpocock/skills: design-workflow inspiration only; no third-party Skill body is distributed.
-- Animate UI: design inspiration only; no copied component path was identified in the final product source.
+- Animate UI: design inspiration only; no copied component path is distributed.
 
-Checksums and per-package evidence are recorded in the [v1 local inventory](artifacts/release/third-party-license-inventory.v1.json) and [final v2 closure](artifacts/release/third-party-license-inventory.v2.json).
+Checksums and per-package evidence are recorded in [the v0.2.0 machine-readable inventory](artifacts/release/v0.2.0/third-party-license-inventory.json).
 
 Attribution does not imply endorsement.

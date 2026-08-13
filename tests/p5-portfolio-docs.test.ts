@@ -6,15 +6,27 @@ const root = path.resolve(import.meta.dirname, "..");
 const read = (relative: string) => fs.readFileSync(path.join(root, relative), "utf8");
 
 describe("P5 portfolio documentation", () => {
-  it("keeps the requested README reading hierarchy", () => {
+  it("keeps the current first-run README hierarchy and historical media", () => {
     const readme = read("README.md");
-    const headings = ["What Desk Code Agent is", "Why it exists", "Key capabilities", "Architecture", "Product workflow", "Verification and safety", "Research findings", "Benchmarks", "Capability boundaries", "Privacy", "Local hardware and runtime requirements", "Windows install status", "Documentation", "Known limitations", "Roadmap"];
+    const headings = ["Start in three steps", "What works today", "A workspace, not a chat box", "Designed for visual comfort", "Safety by construction", "Install on Windows", "Research evidence", "Develop locally", "Documentation", "Known limitations", "License"];
     let prior = -1;
     for (const heading of headings) {
       const index = readme.indexOf(`## ${heading}`);
       expect(index, heading).toBeGreaterThan(prior);
       prior = index;
     }
+    for (const filename of [
+      "01-onboarding.png",
+      "02-repository-ready.png",
+      "03-guided-demo-workspace.png",
+      "04-appearance-settings.png",
+      "05-research-archive.png"
+    ]) {
+      const relative = `docs/media/releases/v0.2.0/screenshots/${filename}`;
+      expect(readme).toContain(relative);
+      expect(fs.existsSync(path.join(root, relative))).toBe(true);
+    }
+    expect(readme).not.toContain("docs/media/screenshots/");
     expect(fs.existsSync(path.join(root, "docs/media/readme/desk-code-agent-hero.svg"))).toBe(true);
   });
 
