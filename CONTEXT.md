@@ -41,7 +41,7 @@
 - Final code-formation recovery consumed one non-primary sanity call, zero primary calls, and supports no formation-effect conclusion.
 - W1 is `PASS_WITH_EXPLICIT_NONBLOCKING_ACCESSIBILITY_LIMITATION`, W2 `FINAL_MEDIA_CAPTURE` is `PASS`, and W3 `WINDOWS_PACKAGING_RELEASE_QA` is `PASS_WITH_RELEASE_BLOCKERS`: current-source unsigned x64 MSI/NSIS builds, content audits, installed 18-surface runtime, and install/uninstall/reinstall lifecycle pass.
 - W4 local publication-readiness engineering is complete. All 139 formerly unexplained component rows have explicit classifications. The owner selected Apache-2.0 for the root project, and all ten formerly open distributed package-text gaps are now pinned from authoritative package, exact upstream-commit, or official license-custodian sources. `UNRESOLVED_DISTRIBUTED_LICENSE_BLOCKERS = 0`.
-- Final state is `PROJECT_IMPLEMENTATION_COMPLETE`, `PORTFOLIO_COMPLETE`, and `WINDOWS_LOCAL_RELEASE_QA_COMPLETE`. Source and owner-authorized unsigned binary publication are approved for v0.1.0. Trusted signing credentials are unavailable, so signing is deferred future hardening. Narrator spoken-output QA remains deferred without a certification claim.
+- Final state is `PROJECT_IMPLEMENTATION_COMPLETE`, `ENGINEERING_COMPLETE`, `PORTFOLIO_COMPLETE`, `WINDOWS_LOCAL_RELEASE_QA_COMPLETE`, `SOURCE_REPOSITORY_PUBLISHED`, `V0_1_0_RELEASE_PUBLISHED`, and `UNSIGNED_WINDOWS_RELEASE_PUBLISHED`. Trusted signing credentials are unavailable, so signing is deferred future hardening. Narrator spoken-output QA remains deferred without a certification claim.
 
 ## Canonical workflow verbs
 
@@ -65,7 +65,7 @@
 - G3 holdout E1/V2/V3 success is 6/96, 3/96, and 2/96; exact historical-patch success is 0/60 for all three.
 - “Production default” means the selected bounded harness, not autonomous-patch readiness.
 - Canonical G3 evidence is `benchmarks/g3/G3_RESULTS_INDEX.json`; decision rationale is ADR 0012.
-- This historical G3 capability decision remains unchanged. Current release readiness is tracked separately: implementation, local Windows QA, Apache-2.0 licensing, and distributed dependency license closure are complete. Owner-authorized publication is the active operation; trusted signing and Narrator spoken-output validation remain deferred hardening without blocking the unsigned v0.1.0 release.
+- This historical G3 capability decision remains unchanged. The public source repository and unsigned v0.1.0 Windows release are published at `hanklin9188/Desk-Code-Agent`. Trusted signing and Narrator spoken-output validation remain optional future hardening; no further engineering phase is required.
 
 ## Current verified decision (2026-08-09 G4 and model specialization)
 

@@ -149,11 +149,11 @@ Final engineering state: `PROJECT_IMPLEMENTATION_COMPLETE`,
 | 10 | M8 Windows QA | PASS_WITH_EXPLICIT_NONBLOCKING_ACCESSIBILITY_LIMITATION | sealed v6 evidence + scope amendment | portfolio-media native gate complete; Narrator speech deferred visibly to public-release accessibility QA |
 | 10a | W2 final media capture | PASS | amended W1 gate complete | 5 PNG + 3 GIF assets, manifest, README, consistency/privacy validation sealed |
 | 10b | W3 Windows packaging/release QA | PASS_WITH_RELEASE_BLOCKERS | W2 PASS | unsigned x64 MSI + NSIS build/content/install/reinstall/uninstall QA sealed; license texts, root license, signing, and deferred Narrator speech remain release blockers |
-| 10c | W4 GitHub publication readiness | PASS_LOCAL_FINALIZATION_WITH_OWNER_AND_EXTERNAL_BLOCKERS | W3 PASS_WITH_RELEASE_BLOCKERS | final audits, notices, presentation, release documents, and owner handoff sealed; no protected external action |
+| 10c | W4 GitHub publication readiness | PASS_PUBLISHED | W3 PASS_WITH_RELEASE_BLOCKERS | public source, v0.1.0 tag/release, unsigned MSI/NSIS, and checksum asset verified |
 | 11 | M7 offline write adapter | PASS | approval contracts | injected-transport rehearsal and security suite |
-| 12 | M7 external delivery | BLOCKED_APPROVAL | commit + GitHub write approvals | verified remote checkpoint |
+| 12 | M7 external delivery | PASS_PUBLISHED | explicit owner approval | public `main` published normally; no force push or history rewrite |
 | 13 | M10 offline release preparation | PASS | completed local gates | fresh M9-linked 840-component SBOM, locally resolved licenses, manifests and release-gate JSON |
-| 14 | M10 commit/sign/publish | BLOCKED_APPROVAL | explicit protected approvals/credentials | signed published release |
+| 14 | M10 commit/sign/publish | PASS_UNSIGNED_PUBLISHED | explicit protected approvals; signing credential unavailable | source, tag, release, MSI/NSIS and checksums public; signing deferred |
 
 ## Milestones
 
@@ -166,10 +166,10 @@ Final engineering state: `PROJECT_IMPLEMENTATION_COMPLETE`,
 | M4 | WP-04 analysis | cited overview/findings/onboarding/report | PASS | preserve corpus/live regression evidence |
 | M5 | WP-05 bounded coding | repro, patch, verification, rollback/review | PASS | preserve 20-task hidden-oracle regression evidence |
 | M6 | WP-06 Skill runtime | registry, L0–L3 validation, flags | PASS | expanded L3 admits R09 C1; 8 candidates remain EXPERIMENTAL |
-| M7 | WP-07 GitHub | snapshot, exact approval, draft delivery | PUBLICATION_AUTHORIZED | offline implementation PASS; owner explicitly authorized the initial commit, public remote, main push, tag, and release |
+| M7 | WP-07 GitHub | snapshot, exact approval, draft delivery | PASS_PUBLISHED | public repository and normal main push verified; owner correction preserved append-only |
 | M8 | WP-08 UX beta | a11y/performance/reduced motion/installer | PASS_WITH_EXPLICIT_NONBLOCKING_ACCESSIBILITY_LIMITATION | W1/W2/W3 local engineering complete; Narrator speech remains deferred to public-release accessibility QA |
 | M9 | WP-09 evaluation | E1–E7, ablation, G3 naturalistic/long-horizon/reliability, Patch Interface V3, E-EDIT holdout, practical 7B tournament | PASS_AS_MEASURED | final code-formation recovery stopped at its one-call non-primary CONTROL sanity gate; 0 primary calls; research complete inconclusive; move to product/portfolio/release polish; mutation disabled |
-| M10 | WP-10 release | SBOM, checksums, clean install/release | PUBLICATION_AUTHORIZED | Apache-2.0 and distributed-license gate PASS; unsigned v0.1.0 publication authorized; signing and Narrator speech remain future hardening |
+| M10 | WP-10 release | SBOM, checksums, clean install/release | PASS_UNSIGNED_PUBLISHED | Apache-2.0 source, v0.1.0 release, unsigned MSI/NSIS, and SHA256SUMS public; signing and Narrator speech remain future hardening |
 
 ## Requirement traceability
 
@@ -199,7 +199,7 @@ Final engineering state: `PROJECT_IMPLEMENTATION_COMPLETE`,
 | RQ-022 | Calm/Spatial/Observable/Reversible UI | Desktop/M1,M8 | UI/a11y/motion | usability | PARTIAL |
 | RQ-023 | BF16 Qwen quality baseline | Model/M2,M9 | live suite | G3 24-repo primary/long-horizon/real-patch/onboarding corpora | PASS_AS_MEASURED_WITH_LOW_NATURALISTIC_QUALITY; no autonomous-patch readiness claim |
 | RQ-024 | Precision admission by task evidence | Benchmark/M9 | manifest gate | BF16 reference PASS; reduced absent | BLOCKED_APPROVAL |
-| RQ-025 | Approval-gated GitHub delivery | Delivery/M7 | policy/target/hash/replay/secret | offline rehearsal | PUBLICATION_AUTHORIZED: exact target and protected writes owner-approved; execution pending final green gate |
+| RQ-025 | Approval-gated GitHub delivery | Delivery/M7 | policy/target/hash/replay/secret | offline rehearsal | PASS_PUBLISHED: corrected exact target owner-approved; normal main and tag pushes verified |
 | RQ-026 | Installer/SBOM/checksums/clean clone | Release/M8,M10 | Rust + SBOM + package/content/install lifecycle manifests | refreshed release prep + W3 | PASS_FOR_UNSIGNED_RELEASE: x64 MSI/NSIS lifecycle, Apache-2.0 root license, dependency obligations, and checksum gate pass; trusted signing and Narrator speech remain deferred |
 
 ## Active tracer tickets

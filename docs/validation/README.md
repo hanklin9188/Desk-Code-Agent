@@ -17,14 +17,18 @@ W3 `WINDOWS_PACKAGING_RELEASE_QA` is `PASS_WITH_RELEASE_BLOCKERS`; the canonical
 record is [`WINDOWS_PACKAGING_RELEASE_QA_REPORT.v1.json`](WINDOWS_PACKAGING_RELEASE_QA_REPORT.v1.json).
 W4 local publication-readiness engineering is complete. The owner selected
 Apache-2.0, all ten distributed package-text gaps are authoritatively closed,
-and source plus unsigned Windows binary publication are approved for v0.1.0.
+and the source plus unsigned Windows v0.1.0 release are publicly published.
 Trusted signing credentials are unavailable, so signing is deferred future
 hardening. Narrator spoken output remains deferred without a certification
-claim. Historical v1 reports remain immutable; v2 publication records carry
-the release closure.
+claim. Historical v1 reports remain immutable; v2 publication records and the
+append-only public-release report carry the release closure.
 
 ## Final completion evidence
 
+- [`PUBLIC_RELEASE_v0.1.0_REPORT.v1.json`](PUBLIC_RELEASE_v0.1.0_REPORT.v1.json)
+- [`FINAL_APACHE_PUBLICATION_CLOSURE_REPORT.v1.json`](FINAL_APACHE_PUBLICATION_CLOSURE_REPORT.v1.json)
+- [`FINAL_PROJECT_STATE.v2.json`](FINAL_PROJECT_STATE.v2.json)
+- [`GITHUB_OWNER_CORRECTION.v1.json`](GITHUB_OWNER_CORRECTION.v1.json)
 - [`GITHUB_PUBLICATION_READINESS_REPORT.v1.json`](GITHUB_PUBLICATION_READINESS_REPORT.v1.json)
 - [`FINAL_PROJECT_COMPLETION_REPORT.v1.json`](FINAL_PROJECT_COMPLETION_REPORT.v1.json)
 - [`FINAL_PROJECT_STATE.v1.json`](FINAL_PROJECT_STATE.v1.json)
