@@ -3,7 +3,7 @@
 > 文件版本：v0.2.0-design  
 > 文件狀態：Implementation-ready specification  
 > 產品工作名稱：**Desk Code Agent**  
-> 建議 GitHub Repository：`https://github.com/hanklin91888/Desk-Code-Agent`  
+> 建議 GitHub Repository：`https://github.com/hanklin9188/Desk-Code-Agent`  
 > 目標平台：Windows 11 Desktop，RTX 4080 SUPER 16GB，WSL2 + NVIDIA CUDA  
 > 預設本機模型：`Qwen/Qwen3.5-4B`  
 > 主要推論後端：vLLM local OpenAI-compatible server  
@@ -39,7 +39,7 @@ d. **Verify**：用真正的 compiler、test runner、linter、type checker 與 
 - UI/UX、動畫語言、效能預算與 Animate UI 元件映射。
 - 安全、權限、sandbox、prompt injection 與 Git 操作策略。
 - Benchmark、ablation、量化比較與產品 acceptance criteria。
-- 每一個成熟里程碑必須同步推送至 `hanklin91888` GitHub 的發布政策。
+- 每一個成熟里程碑必須同步推送至 `hanklin9188` GitHub 的發布政策。
 
 ---
 
@@ -52,7 +52,7 @@ d. **Verify**：用真正的 compiler、test runner、linter、type checker 與 
 - 不把第三方 Skill bodies 整包送進 Qwen，也不讓外部更新直接改變 production behavior。
 - 每個 Desk Skill 都有 trigger/non-trigger、artifact schema、state、tool allowlist、LLM/context/retry budget、completion criteria、security與paired evaluation。
 - UI 選擇性參考 Animate UI components，以 copy-first internal package、Desk tokens、reduced motion與效能 gate重新實作。
-- 每一個通過 acceptance 的 milestone 都必須準備同步至 `https://github.com/hanklin91888/Desk-Code-Agent`；實際外部寫入仍需明確批准。
+- 每一個通過 acceptance 的 milestone 都必須準備同步至 `https://github.com/hanklin9188/Desk-Code-Agent`；實際外部寫入仍需明確批准。
 
 # Part I — Product Definition
 
@@ -1483,9 +1483,9 @@ Action: Safe local patch
 ## 36. Canonical GitHub target
 
 ```text
-Owner: hanklin91888
+Owner: hanklin9188
 Repository: Desk-Code-Agent
-URL: https://github.com/hanklin91888/Desk-Code-Agent
+URL: https://github.com/hanklin9188/Desk-Code-Agent
 ```
 
 這是預定的 canonical project repository。設計文件不能把目標 URL 寫錯，也不能因本機目錄或第三方 source repo而改變 upload target。
@@ -1924,7 +1924,7 @@ D01 if ambiguous
 10. Reviewer 顯示 decision 與 remaining risk。
 11. 使用者 Accept／Revert／Export／Commit／Push。
 12. Task summary 顯示 LLM calls、tokens、latency、VRAM、files read／modified。
-13. 每個 milestone 的 source、docs、tests 都同步至 `hanklin91888/Desk-Code-Agent`。
+13. 每個 milestone 的 source、docs、tests 都同步至 `hanklin9188/Desk-Code-Agent`。
 
 最終產品不是讓使用者感覺「在跟模型聊天」，而是：
 

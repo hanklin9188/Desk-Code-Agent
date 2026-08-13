@@ -133,7 +133,7 @@ const manifest = {
   proposedCommitMessage: "feat: complete Desk Code Agent v0.1.0 portfolio release candidate",
   proposedTag: "v0.1.0",
   proposedReleaseTitle: "Desk Code Agent v0.1.0",
-  targetRepository: "github.com/hanklin91888/Desk-Code-Agent",
+  targetRepository: "github.com/hanklin9188/Desk-Code-Agent",
   sourceClosure: {
     algorithm: "SHA256_OVER_SORTED_SHA256_RELATIVE_PATH_NUL_RECORDS",
     sha256: closure.digest("hex"),

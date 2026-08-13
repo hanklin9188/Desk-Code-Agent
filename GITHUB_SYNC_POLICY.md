@@ -2,9 +2,9 @@
 
 ## 1. Target
 
-- **Owner:** `hanklin91888`
+- **Owner:** `hanklin9188`
 - **Proposed repository:** `Desk-Code-Agent`
-- **Canonical URL:** `https://github.com/hanklin91888/Desk-Code-Agent`
+- **Canonical URL:** `https://github.com/hanklin9188/Desk-Code-Agent`
 - **Default branch:** `main`
 - **Milestone branches:** `milestone/mN-short-name`
 - **Feature branches:** `feat/<ticket>-<slug>`

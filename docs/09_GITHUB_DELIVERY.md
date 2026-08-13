@@ -2,7 +2,7 @@
 
 Canonical target:
 
-`https://github.com/hanklin91888/Desk-Code-Agent`
+`https://github.com/hanklin9188/Desk-Code-Agent`
 
 Every accepted M0–M10 milestone must prepare a GitHub checkpoint. Actual repository creation, push, PR, merge, tag and release require separate explicit approvals.
 

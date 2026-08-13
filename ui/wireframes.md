@@ -68,7 +68,7 @@
 ```text
 ┌───────────────────────────────────────────────────────────────────────────┐
 │ Ready to create draft PR                                                  │
-│ Target: hanklin91888/Desk-Code-Agent · branch milestone/m5-bounded-code   │
+│ Target: hanklin9188/Desk-Code-Agent · branch milestone/m5-bounded-code   │
 │ Commit: 4 files, +231/−38 · artifact hash a81f… · reversible before merge │
 │ [Review details]                         [Deny] [Approve once]             │
 └───────────────────────────────────────────────────────────────────────────┘

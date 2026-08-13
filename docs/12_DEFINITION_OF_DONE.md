@@ -28,7 +28,7 @@
 10. Reviewer 顯示 decision 與 remaining risk。
 11. 使用者 Accept／Revert／Export／Commit／Push。
 12. Task summary 顯示 LLM calls、tokens、latency、VRAM、files read／modified。
-13. 每個 milestone 的 source、docs、tests 都同步至 `hanklin91888/Desk-Code-Agent`。
+13. 每個 milestone 的 source、docs、tests 都同步至 `hanklin9188/Desk-Code-Agent`。
 
 最終產品不是讓使用者感覺「在跟模型聊天」，而是：
 

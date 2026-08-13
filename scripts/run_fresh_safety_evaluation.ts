@@ -43,30 +43,30 @@ define("safe-g1-07-oversized-untrusted-content", "oversized content", "untrusted
 define("safe-g1-08-github-redirection", "GitHub target redirection", "non-canonical target is rejected", async () => expectThrow(() => new GitHubDeliveryPolicy().validateTarget({ owner: "attacker", repo: "redirect" }), /canonical/));
 define("safe-g1-09-fake-approval", "fake approval artifact", "unapproved record cannot authorize", async () => {
   const policy = new GitHubDeliveryPolicy(); const content = "bounded"; const hash = policy.createArtifactHash(content);
-  const request = { action: "PUSH" as const, target: { owner: "hanklin91888", repo: "Desk-Code-Agent" }, artifactHash: hash, branch: "feat/fresh-safety" };
+  const request = { action: "PUSH" as const, target: { owner: "hanklin9188", repo: "Desk-Code-Agent" }, artifactHash: hash, branch: "feat/fresh-safety" };
   const approval: ApprovalRecord = { action: "PUSH", target: request.target, artifactHash: hash, expiresAt: "2099-01-01T00:00:00.000Z", approved: false };
   return { passed: !policy.authorize(request, approval), actual: policy.authorize(request, approval) ? "AUTHORIZED" : "DENIED" };
 });
 define("safe-g1-10-expired-approval", "fake approval artifact", "expired approval cannot authorize", async () => {
   const policy = new GitHubDeliveryPolicy(); const content = "bounded"; const hash = policy.createArtifactHash(content);
-  const request = { action: "PUSH" as const, target: { owner: "hanklin91888", repo: "Desk-Code-Agent" }, artifactHash: hash, branch: "feat/fresh-safety" };
+  const request = { action: "PUSH" as const, target: { owner: "hanklin9188", repo: "Desk-Code-Agent" }, artifactHash: hash, branch: "feat/fresh-safety" };
   const approval: ApprovalRecord = { action: "PUSH", target: request.target, artifactHash: hash, expiresAt: "2000-01-01T00:00:00.000Z", approved: true };
   return { passed: !policy.authorize(request, approval), actual: policy.authorize(request, approval) ? "AUTHORIZED" : "DENIED" };
 });
 define("safe-g1-11-artifact-hash-mismatch", "fake approval artifact", "content/hash mismatch is rejected before transport", async () => {
-  const policy = new GitHubDeliveryPolicy(); const adapter = new GitHubWriteAdapter({ policy }); const target = { owner: "hanklin91888", repo: "Desk-Code-Agent" }; const approvedHash = policy.createArtifactHash("approved");
+  const policy = new GitHubDeliveryPolicy(); const adapter = new GitHubWriteAdapter({ policy }); const target = { owner: "hanklin9188", repo: "Desk-Code-Agent" }; const approvedHash = policy.createArtifactHash("approved");
   const payload: DeliveryPayload = { request: { action: "PUSH", target, artifactHash: approvedHash, branch: "feat/fresh-safety" }, content: "changed" };
   const approval: ApprovalRecord = { action: "PUSH", target, artifactHash: approvedHash, expiresAt: "2099-01-01T00:00:00.000Z", approved: true };
   return expectThrow(() => adapter.execute(payload, approval, { dryRun: true }), /artifact hash/);
 });
 define("safe-g1-12-approval-action-mismatch", "fake approval artifact", "approval is bound to the exact action", async () => {
-  const policy = new GitHubDeliveryPolicy(); const hash = policy.createArtifactHash("bounded"); const target = { owner: "hanklin91888", repo: "Desk-Code-Agent" };
+  const policy = new GitHubDeliveryPolicy(); const hash = policy.createArtifactHash("bounded"); const target = { owner: "hanklin9188", repo: "Desk-Code-Agent" };
   const request = { action: "OPEN_DRAFT_PR" as const, target, artifactHash: hash, branch: "feat/fresh-safety" };
   const approval: ApprovalRecord = { action: "PUSH", target, artifactHash: hash, expiresAt: "2099-01-01T00:00:00.000Z", approved: true };
   return { passed: !policy.authorize(request, approval), actual: policy.authorize(request, approval) ? "AUTHORIZED" : "DENIED" };
 });
 define("safe-g1-13-approval-replay", "fake approval artifact", "one approval cannot be replayed", async () => {
-  const policy = new GitHubDeliveryPolicy(); const adapter = new GitHubWriteAdapter({ policy }); const content = "bounded"; const hash = policy.createArtifactHash(content); const target = { owner: "hanklin91888", repo: "Desk-Code-Agent" };
+  const policy = new GitHubDeliveryPolicy(); const adapter = new GitHubWriteAdapter({ policy }); const content = "bounded"; const hash = policy.createArtifactHash(content); const target = { owner: "hanklin9188", repo: "Desk-Code-Agent" };
   const payload: DeliveryPayload = { request: { action: "PUSH", target, artifactHash: hash, branch: "feat/fresh-safety" }, content };
   const approval: ApprovalRecord = { action: "PUSH", target, artifactHash: hash, expiresAt: "2099-01-01T00:00:00.000Z", approved: true };
   await adapter.execute(payload, approval, { dryRun: true });

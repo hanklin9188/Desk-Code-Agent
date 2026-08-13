@@ -378,7 +378,7 @@ Destructive or irreversible operations require explicit protection.
 
 Canonical GitHub owner:
 
-`hanklin91888`
+`hanklin9188`
 
 Canonical project repository:
 
@@ -386,7 +386,7 @@ Canonical project repository:
 
 Target:
 
-`github.com/hanklin91888/Desk-Code-Agent`
+`github.com/hanklin9188/Desk-Code-Agent`
 
 When a milestone acceptance gate passes:
 

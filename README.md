@@ -128,7 +128,7 @@ The local development UI is served at `http://127.0.0.1:4173`.
 
 ## Windows install status
 
-Version `0.1.0` provides validated x64 MSI and NSIS installers through [GitHub Releases](https://github.com/hanklin91888/Desk-Code-Agent/releases/tag/v0.1.0). Build, install, installed-path startup, WebView2, 18/18 product surfaces, resource paths, uninstall, and reinstall pass. The v0.1.0 Windows packages are unsigned; Windows may display its normal publisher/reputation warning.
+Version `0.1.0` provides validated x64 MSI and NSIS installers through [GitHub Releases](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.1.0). Build, install, installed-path startup, WebView2, 18/18 product surfaces, resource paths, uninstall, and reinstall pass. The v0.1.0 Windows packages are unsigned; Windows may display its normal publisher/reputation warning.
 
 The local model runtime and weights are configured separately and are not bundled. End users do not need Node, Rust, or Visual Studio; WebView2 is expected from a supported Windows environment.
 
@@ -156,7 +156,7 @@ Package identities and checksums are recorded in [the W3 report](docs/validation
 
 Project implementation, portfolio media, local Windows release QA, Apache-2.0 licensing, and v0.1.0 publication are complete. Capability research remains closed and mutation remains disabled. Optional future maintenance includes trusted Windows signing and human Narrator spoken-output validation; neither creates a new engineering phase.
 
-Canonical GitHub target: `https://github.com/hanklin91888/Desk-Code-Agent`.
+Canonical GitHub target: `https://github.com/hanklin9188/Desk-Code-Agent`.
 
 ## License
 

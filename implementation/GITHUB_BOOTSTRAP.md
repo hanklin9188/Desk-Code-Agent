@@ -1,12 +1,12 @@
 # GitHub Bootstrap Plan
 
-Target: `https://github.com/hanklin91888/Desk-Code-Agent`
+Target: `https://github.com/hanklin9188/Desk-Code-Agent`
 
 This is a plan only. Execute each protected action after explicit approval.
 
 ## Before repository creation
 
-- Confirm account spelling: `hanklin91888`.
+- Confirm account spelling: `hanklin9188`.
 - Decide public/private visibility.
 - Confirm repository name and license.
 - Run M0 validator, secret/license scan and hashes.

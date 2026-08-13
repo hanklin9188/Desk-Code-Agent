@@ -6,7 +6,7 @@ v1 proved the product direction but mixed runtime Skills with the process used t
 
 ## Major changes
 
-1. Correct GitHub target to `https://github.com/hanklin91888/Desk-Code-Agent`.
+1. Correct GitHub target to `https://github.com/hanklin9188/Desk-Code-Agent`.
 2. Split Skills into **11 Development Skills** and **28 Runtime Skills**.
 3. Selectively adapted engineering principles from `mattpocock/skills`; no wholesale runtime import.
 4. Added exact trigger/non-trigger, tools, states, LLM/context/retry budgets and completion criteria to every Skill.

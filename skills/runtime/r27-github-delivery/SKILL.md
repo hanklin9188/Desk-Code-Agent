@@ -18,7 +18,7 @@ schema_version: 1
 
 ## 1. Purpose
 
-在明確批准後，把已驗證 Desk Code Agent milestone 安全同步至 hanklin91888/Desk-Code-Agent 的 branch/draft PR/tag。
+在明確批准後，把已驗證 Desk Code Agent milestone 安全同步至 hanklin9188/Desk-Code-Agent 的 branch/draft PR/tag。
 
 ## 2. Boundedness contract
 
@@ -107,7 +107,7 @@ metrics: {}
 
 ## 8. Procedure
 
-1. 確認目標固定為 `hanklin91888/Desk-Code-Agent`，除非使用者另行明示。
+1. 確認目標固定為 `hanklin9188/Desk-Code-Agent`，除非使用者另行明示。
 2. 禁止上傳模型權重、使用者 repo、secrets、private prompts、build caches。
 3. 產生 commit/branch/PR plan 與 changelog，等待逐項批准。
 4. 只 push feature/milestone branch，不直接 main。

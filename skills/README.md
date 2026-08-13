@@ -16,7 +16,7 @@
 5. 所有 mutation 走 worktree、verification 與 approval。
 6. 每個 Skill 都有 paired evaluation 與 production admission gate。
 7. UI 可由 typed event 精確呈現，不靠解析模型自然語言。
-8. GitHub action 綁定 `hanklin91888/Desk-Code-Agent` 與人工批准。
+8. GitHub action 綁定 `hanklin9188/Desk-Code-Agent` 與人工批准。
 
 ## Skill 不是 Agent
 

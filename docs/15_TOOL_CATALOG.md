@@ -43,7 +43,7 @@ These are selected by deterministic verification policy. The model may request a
 
 ## Git/GitHub tools
 
-Clone/fetch/worktree/status/diff are runtime capabilities. Commit/push/tag/release require human approval and `github_publish_request.schema.json`. The allowed remote for milestone publication is exactly `https://github.com/hanklin91888/Desk-Code-Agent` after the user confirms repository creation and visibility.
+Clone/fetch/worktree/status/diff are runtime capabilities. Commit/push/tag/release require human approval and `github_publish_request.schema.json`. The allowed remote for milestone publication is exactly `https://github.com/hanklin9188/Desk-Code-Agent` after the user confirms repository creation and visibility.
 
 ## Tool failure semantics
 

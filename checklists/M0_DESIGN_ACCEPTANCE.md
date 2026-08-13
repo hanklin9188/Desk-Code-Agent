@@ -1,7 +1,7 @@
 # M0 v2 Design Acceptance
 
 - [ ] Master design has no v1 runtime IDs except migration.
-- [ ] GitHub target is `hanklin91888/Desk-Code-Agent`.
+- [ ] GitHub target is `hanklin9188/Desk-Code-Agent`.
 - [ ] 11 Development and 28 Runtime Skill specs exist.
 - [ ] Every Skill passes metadata/section/tool/state/budget lint.
 - [ ] Adaptation matrix and MIT notices exist.

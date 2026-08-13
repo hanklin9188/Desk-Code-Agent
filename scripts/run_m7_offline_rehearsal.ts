@@ -9,7 +9,7 @@ const transport: GitHubWriteTransport = {
   async push(target, branch, content) { calls.push({ action: "PUSH", target: `${target.owner}/${target.repo}`, branch, contentHash: createHash("sha256").update(content).digest("hex") }); return "offline-fixture-sha"; },
   async openDraftPr(target, branch, base, title, body) { calls.push({ action: "OPEN_DRAFT_PR", target: `${target.owner}/${target.repo}`, branch, base, metadataHash: createHash("sha256").update(`${title}\n${body}`).digest("hex") }); return "offline://draft-pr/1"; }
 };
-const policy = new GitHubDeliveryPolicy(); const adapter = new GitHubWriteAdapter({ policy, transport }); const target = { owner: "hanklin91888", repo: "Desk-Code-Agent" }; const branch = "milestone/m7-offline"; const content = "sanitized offline milestone artifact\n"; const artifactHash = policy.createArtifactHash(content);
+const policy = new GitHubDeliveryPolicy(); const adapter = new GitHubWriteAdapter({ policy, transport }); const target = { owner: "hanklin9188", repo: "Desk-Code-Agent" }; const branch = "milestone/m7-offline"; const content = "sanitized offline milestone artifact\n"; const artifactHash = policy.createArtifactHash(content);
 const approval = (action: ApprovalRecord["action"], offset: number): ApprovalRecord => ({ action, target, artifactHash, approved: true, expiresAt: new Date(Date.now() + 60_000 + offset).toISOString() });
 const receipts = [
   await adapter.execute({ request: { action: "CREATE_BRANCH", target, artifactHash, branch }, content }, approval("CREATE_BRANCH", 1)),

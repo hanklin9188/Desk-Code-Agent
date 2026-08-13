@@ -44,7 +44,7 @@
 
 ## ADR-008 — GitHub sync is a release gate
 
-**Decision**：M0–M10 每個 milestone 通過 checklist 後，必須同步至 `hanklin91888/Desk-Code-Agent`；未同步不能視為 milestone complete。
+**Decision**：M0–M10 每個 milestone 通過 checklist 後，必須同步至 `hanklin9188/Desk-Code-Agent`；未同步不能視為 milestone complete。
 
 **Why**：避免作品只停留在本機，確保履歷展示、版本追蹤、CI 與可重現性。
 

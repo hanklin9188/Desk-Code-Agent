@@ -18,7 +18,7 @@ schema_version: 1
 
 ## 1. Purpose
 
-將已通過 local acceptance 的里程碑整理成可重現 handoff，經人工批准後同步至 hanklin91888/Desk-Code-Agent。
+將已通過 local acceptance 的里程碑整理成可重現 handoff，經人工批准後同步至 hanklin9188/Desk-Code-Agent。
 
 ## 2. Boundedness contract
 
@@ -113,7 +113,7 @@ metrics: {}
 2. 建立 handoff：完成內容、未完成內容、known risks、下一個 entry point、重現指令。
 3. 執行 secret/private-repo/model-weight scan；任何疑慮立即 BLOCK。
 4. 產出精確 branch/commit/PR/tag plan，逐項向使用者取得批准。
-5. 批准後才推送至 `https://github.com/hanklin91888/Desk-Code-Agent`；不得直接 push main。
+5. 批准後才推送至 `https://github.com/hanklin9188/Desk-Code-Agent`；不得直接 push main。
 6. 遠端 CI green 後才能合併與 tag；記錄 URL/SHA/tag 到 checkpoint ledger。
 
 ## 9. Completion criteria

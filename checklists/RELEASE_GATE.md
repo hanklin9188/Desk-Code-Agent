@@ -13,7 +13,7 @@ For every M0–M10 milestone:
 9. [ ] D07 review has no blocker.
 10. [ ] D11 handoff identifies completed/open/risks/next entry.
 11. [ ] User explicitly approves exact GitHub action.
-12. [ ] Branch pushed to `https://github.com/hanklin91888/Desk-Code-Agent`.
+12. [ ] Branch pushed to `https://github.com/hanklin9188/Desk-Code-Agent`.
 13. [ ] Draft PR and required CI green.
 14. [ ] Merge/tag/release only after separate approval.
 

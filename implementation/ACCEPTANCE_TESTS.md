@@ -46,4 +46,4 @@ Compare candidate profile against BF16 on fixed tasks. Assert profile cannot bec
 
 ## AT-12 Clean clone
 
-From a clean clone of `hanklin91888/Desk-Code-Agent`, execute documented setup/test/package commands and verify checksums.
+From a clean clone of `hanklin9188/Desk-Code-Agent`, execute documented setup/test/package commands and verify checksums.

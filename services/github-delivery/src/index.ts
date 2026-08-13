@@ -13,7 +13,7 @@ export interface GitHubWriteTransport {
 
 export class GitHubDeliveryPolicy {
   readonly #canonical: GitHubTarget;
-  constructor(canonical: GitHubTarget = { owner: "hanklin91888", repo: "Desk-Code-Agent" }) { this.#canonical = canonical; }
+  constructor(canonical: GitHubTarget = { owner: "hanklin9188", repo: "Desk-Code-Agent" }) { this.#canonical = canonical; }
   validateTarget(target: GitHubTarget): void {
     if (target.owner !== this.#canonical.owner || target.repo !== this.#canonical.repo) throw new Error("GitHub target does not match canonical owner/repository");
   }

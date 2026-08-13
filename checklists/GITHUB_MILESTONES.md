@@ -1,6 +1,6 @@
 # GitHub Milestone Checklist
 
-Canonical target: `hanklin91888/Desk-Code-Agent`.
+Canonical target: `hanklin9188/Desk-Code-Agent`.
 
 | Milestone | Local acceptance | Manifest/hash | Secret/license | Approval | Branch pushed | Draft PR | CI | Tag |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|

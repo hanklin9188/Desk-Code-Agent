@@ -33,7 +33,7 @@ DESIGN PACK VALIDATION: PASS
 
 ## Assertions covered
 
-- Canonical GitHub target is `hanklin91888/Desk-Code-Agent`.
+- Canonical GitHub target is `hanklin9188/Desk-Code-Agent`.
 - No remote GitHub action is claimed or performed by the design pack.
 - Skill IDs are exactly D01–D11 and R01–R28.
 - Every Skill has required metadata, bounds, tools, state, completion, security and evaluation sections.

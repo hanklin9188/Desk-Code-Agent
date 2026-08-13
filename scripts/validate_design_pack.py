@@ -59,13 +59,13 @@ for p in project_files():
         except Exception as exc:
             err(f"UTF-8 read failed {p.relative_to(ROOT)}: {exc}")
             continue
-        if "hanklin9188/Desk-Code-Agent" in txt and "hanklin91888/Desk-Code-Agent" not in txt:
+        if "hanklin9188/Desk-Code-Agent" in txt and "hanklin9188/Desk-Code-Agent" not in txt:
             err(f"stale GitHub owner in {p.relative_to(ROOT)}")
 master=(ROOT/"DESK_CODE_AGENT_V2_MASTER_DESIGN.md")
 if master.exists():
     mtxt=master.read_text(encoding="utf-8")
     if len(mtxt.splitlines()) < 1500: err("master design unexpectedly short")
-    if "https://github.com/hanklin91888/Desk-Code-Agent" not in mtxt: err("master missing canonical GitHub target")
+    if "https://github.com/hanklin9188/Desk-Code-Agent" not in mtxt: err("master missing canonical GitHub target")
     for token in ["11 Development","28 Runtime","Animate UI","paired evaluation","M10"]:
         if token not in mtxt: err(f"master missing v2 marker: {token}")
 
@@ -161,7 +161,7 @@ gh=(ROOT/"config/github_policy.example.yaml")
 if gh.exists():
     data=yaml.safe_load(gh.read_text())
     target=data.get("target",{})
-    if target.get("owner")!="hanklin91888" or target.get("repository")!="Desk-Code-Agent":
+    if target.get("owner")!="hanklin9188" or target.get("repository")!="Desk-Code-Agent":
         err("GitHub target config incorrect")
     if set(data.get("milestones",{}))!={f"M{i}" for i in range(11)}:
         err("GitHub milestones must be M0-M10")
