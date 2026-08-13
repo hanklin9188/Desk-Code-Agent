@@ -1,163 +1,148 @@
+<div align="center">
+
 # Desk Code Agent
 
-> **A local-first, verification-first software engineering workbench for small language models.**
+### A local-first desktop workspace that makes repository evidence, agent activity, and deterministic verification inspectable.
 
-<p align="center">
-  <img src="docs/media/screenshots/01-hero-workspace.png" alt="Desk Code Agent workspace showing local repository evidence, bounded agent flow, and deterministic verification state." width="100%" />
-</p>
+[![Current public release](https://img.shields.io/badge/public_release-v0.1.0-6f8df7)](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.1.0)
+![Next release candidate](https://img.shields.io/badge/next_release-v0.2.0_RC-d97757)
+![Windows](https://img.shields.io/badge/platform-Windows-3b82f6)
+![Local first](https://img.shields.io/badge/privacy-local--first-198754)
+[![Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-5b6b7a)](LICENSE)
+![Mutation disabled](https://img.shields.io/badge/autonomous_mutation-disabled-b4535a)
 
-## What Desk Code Agent is
+**[Download current v0.1.0](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.1.0)** · **[Preview v0.2.0 quick start](docs/productization/DESKTOP_QUICK_START.md)** · **[繁中快速上手](docs/productization/DESKTOP_QUICK_START.zh-TW.md)** · **[Architecture](docs/architecture/PRODUCT_ARCHITECTURE.md)**
 
-Desk Code Agent turns a repository into an inspectable engineering workspace. It maps code, retrieves cited evidence, bounds model proposals, delegates truth to deterministic verification, and keeps rejection and rollback visible. It is neither a Codex replacement nor a fully autonomous coding system.
+</div>
 
-## Why it exists
+![Desk Code Agent welcome screen with a prominent Choose local folder button, three setup steps, local-only status, and mutation disabled.](docs/media/releases/v0.2.0/screenshots/01-onboarding.png)
 
-Small local models can be useful engineering components, but fluent output is not proof of a correct repair. Desk Code Agent surrounds one shared local model with repository intelligence, typed state, constrained tools, machine oracles, exact approvals, and an evidence-backed UI. Capabilities enter the product only when measured task behavior supports them.
+Desk Code Agent is a calm, inspectable engineering workbench—not a generic chat box and not an autonomous coding system. It keeps repository facts, fixture data, model activity, proposed changes, and machine verification visibly separate.
 
-## Key capabilities
+## Start in three steps
 
-- Local repository acquisition, mapping, symbol search, dependency evidence, and cited retrieval
-- Immutable task contracts, feasibility routing, scoped tools, and replayable typed events
-- Evidence-backed analysis with explicit facts, hypotheses, confidence, and unknowns
-- Worktree isolation, deterministic verification, exact approval, and byte-correct rollback
-- Research dashboards with read-only access to canonical bundled artifacts
-- Evidence-gated states: Production, Assisted, Research Only, and Disabled
+> **Release status:** The screenshots and instructions below describe the
+> v0.2.0 release candidate on this branch. The current public v0.1.0 download
+> still contains the previous interface; the project will not present it as
+> the redesigned build.
 
-## Architecture
+1. **Install Desk Code Agent.** Use the v0.2.0 package after its reviewed release is published; [v0.1.0](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.1.0) is the current previous-interface build.
+2. **Choose an existing local Git folder.** Your source stays where it is; Desk does not upload, copy, or modify it.
+3. **Check the observed facts.** Desk shows the repository name, repository-reported branch and HEAD text, project manifests, and a bounded file list. HEAD text remains untrusted metadata; working-tree cleanliness is deliberately not inspected because repository-controlled filters are untrusted.
 
-One shared local model sits behind repository intelligence, bounded context packaging, a permissioned tool boundary, deterministic verification, exact approval, and append-only event/artifact storage. Logical roles do not duplicate model weights.
+> **Repository only on GitHub?** Clone it first with Git or GitHub Desktop, then choose the local folder. URL cloning is not available in this build. Repository inspection itself starts no Git process and has no Git installation requirement.
 
-![Evidence-gated architecture and privacy-safe observability dashboard](docs/media/screenshots/05-architecture-evidence.png)
+![Read-only repository summary showing repository-reported branch and HEAD metadata, working-tree safety status, project manifests, and a bounded file list.](docs/media/releases/v0.2.0/screenshots/02-repository-ready.png)
 
-- [Product architecture overview](docs/architecture/PRODUCT_ARCHITECTURE.md)
-- [End-to-end architecture](docs/architecture/diagrams/end-to-end-product-architecture.mmd)
-- [Evidence-gated admission](docs/architecture/diagrams/evidence-gated-capability-admission.mmd)
-- [Privacy-safe observability](docs/architecture/diagrams/privacy-safe-observability.mmd)
+The repository check starts no Git process. It reads only bounded, repository-reported `.git/HEAD` and ref text plus a bounded filesystem manifest, skipping symlinks and fixed generated directories. HEAD metadata is untrusted and the referenced Git object is not validated. It makes no model call, application-initiated network request, checkout, hook, lock, content comparison, or source edit, and the UI does not expose the absolute local path. The connected card states `Working tree status not inspected for safety` rather than claiming clean or dirty. Linked worktrees and submodule checkouts are intentionally unsupported in this release candidate; choose the primary checkout.
 
-## Product workflow
+## What works today
+
+| Available now | Intentionally not connected |
+|---|---|
+| Native local-folder picker | GitHub URL cloning |
+| Read-only observation of HEAD/ref text and a bounded file manifest | Semantic indexing for a desktop-selected repository |
+| Explicit guided demo with typed events and cited fixture evidence | Task execution against a desktop-selected repository |
+| System, Dark, and Light themes | Bundled model runtime or model weights |
+| 100%, 110%, and 125% text size; density and reduced-motion controls | Autonomous mutation or default retry |
+| Read-only sealed research archive | Any claim that `NOT_RUN`, timeout, or unknown means PASS |
+
+**Run remains disabled for a selected repository until the real task/index bridge is connected.** Desk does not replay sample activity and present it as work performed on your code.
+
+## A workspace, not a chat box
+
+![Guided demo workspace showing repository files, agent flow, cited evidence, and a banner stating that no repository was accessed and zero model calls were made.](docs/media/releases/v0.2.0/screenshots/03-guided-demo-workspace.png)
+
+The optional guided demo is a deterministic product tour:
+
+- **Evidence stays cited.** File, range, confidence, source hash, and trust remain visible.
+- **Activity stays typed.** The UI projects replayable runtime events instead of guessing state from model prose.
+- **Verification stays authoritative.** Tests, type checks, policy gates, approval, and rollback control the result.
+
+Every demo surface is labelled `DEMO DATA · NO REPOSITORY ACCESSED · ZERO MODEL CALLS`. Exit the demo at any time; fixture state never becomes user-repository state.
+
+## Designed for visual comfort
+
+![Appearance settings for system, dark, and light themes, text scaling, workspace density, and reduced motion.](docs/media/releases/v0.2.0/screenshots/04-appearance-settings.png)
+
+The interface uses a 14px UI base, a 12px compact floor, readable code/report text, semantic dark and light palettes, strong keyboard focus, responsive panels, and live reduced-motion behavior. Preferences are stored only on the local computer.
+
+## Safety by construction
 
 ```mermaid
 flowchart LR
-  A[Repository + task] --> B[Map and retrieve]
-  B --> C[Bounded local-model proposal]
-  C --> D{Deterministic gates}
-  D -->|Verified + approved| E[Accept in worktree]
-  D -->|Failed / unsafe| F[Reject or roll back]
-  E --> G[Evidence-backed report]
-  F --> G
+  A[Local Git repository] --> B[Bounded read-only evidence]
+  B --> C[Typed task contract]
+  C --> D[Bounded proposal]
+  D --> E{Deterministic gates}
+  E -->|Verified + exact approval| F[Reversible worktree action]
+  E -->|Failed / unknown / denied| G[Reject or report only]
 ```
 
-The desktop renders typed runtime and artifact state. Model prose cannot fabricate tool execution or turn `NOT_RUN`, timeout, cancellation, or unknown into `PASS`.
+- Repository text, issues, comments, logs, and tool output are untrusted data—not instructions.
+- One shared local-model boundary sits behind bounded retrieval and a permissioned tool layer.
+- Writes, when a future capability is admitted, must use an isolated worktree and exact approval.
+- `NOT_RUN`, timeout, cancellation, and unknown never render as PASS.
+- Current durable product state: `KEEP_MUTATION_DISABLED`.
 
-![Deterministic task workflow from repository evidence to bounded verification](docs/media/screenshots/03-task-workflow.png)
+See the [product architecture](docs/architecture/PRODUCT_ARCHITECTURE.md) and [current capability status](docs/productization/CAPABILITY_STATUS.md).
 
-## Verification and safety
+## Install on Windows
 
-- Repository content and tool output are untrusted data, never authority.
-- Tools are allowlisted, path-bounded, timed, and executed outside the UI thread.
-- Writes use isolated worktrees; protected actions require exact scoped approval.
-- Tests, compilers, linters, and verification artifacts—not model narration—control PASS.
-- Failed or denied work remains inspectable and reversible.
+After v0.2.0 is reviewed and published, download its x64 MSI or NSIS installer from [GitHub Releases](https://github.com/hanklin9188/Desk-Code-Agent/releases). Releases include a `SHA256SUMS` file; verify a download in PowerShell with:
 
-![Deterministic safety and verification view with mutation locked](docs/media/screenshots/04-safety-verification.png)
+```powershell
+Get-FileHash -Algorithm SHA256 ".\Desk Code Agent_0.2.0_x64_en-US.msi"
+Get-FileHash -Algorithm SHA256 ".\Desk Code Agent_0.2.0_x64-setup.exe"
+```
 
-The short [verification and rollback flow](docs/media/gifs/03-verification-rollback.gif) shows exact review, denial, and reversible final state without implying that autonomous mutation is enabled.
+The installers are currently unsigned because trusted signing credentials are deferred. Windows may show its normal publisher or reputation warning. The desktop requires WebView2; when it is absent, Tauri's default installer mode may download Microsoft's WebView2 bootstrapper once. Repository inspection does not require Git. Node, Rust, Visual Studio, model weights, and a model server are not bundled.
 
-## Research findings
+The source tree is prepared as `v0.2.0 — Repository onboarding and visual comfort`. Until that version appears on the Releases page, `v0.1.0` remains the published previous-interface build; the project does not overwrite historical release assets.
 
-| Finding | Sealed result | Product consequence |
-|---|---:|---|
-| Structured cross-file planning | 12/12 development tasks | Production-supported only inside its read-only machine-checkable boundary |
-| Complete-context navigation | 6/12 | Assisted; user verification required |
-| Strongest scored 7B candidate | 29/95 strict behavior | Assisted floor only; no model promotion |
-| Bounded retry | 29/95 → 30/95 | No default retry admission |
-| Privacy-safe semantic coverage | 0/44 L0 → 15/44 L1 | Research instrumentation justified |
-| Raw model outputs / edit bodies retained | 0 / 0 | Privacy gate passed |
-| Final formation-recovery primary calls | 0 | Formation effect remains inconclusive |
+## Research evidence
 
-Capability research is frozen at `RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT`.
+![Read-only research archive showing evidence-gated capability states and sealed verification results.](docs/media/releases/v0.2.0/screenshots/05-research-archive.png)
 
-![Research dashboard showing sealed capability, model, verification, and observability evidence](docs/media/screenshots/02-research-dashboard.png)
+Research is presented as a separate, read-only archive. Syntax-valid output is not described as successful repair, denominators remain attached to their original task populations, and disabled capabilities stay disabled. The final formation-recovery result is preserved as `RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT`.
 
-## Benchmarks
+- [Benchmark definitions and results](BENCHMARKS.md)
+- [Capability boundaries](docs/productization/CAPABILITY_STATUS.md)
+- [Visualization and evidence sources](docs/productization/VISUALIZATION_DASHBOARD.md)
 
-The project distinguishes five outcome levels:
+## Develop locally
 
-1. **Valid action** — the response matches the constrained action contract.
-2. **Syntax validity** — the proposed or resulting source parses or type-checks at that stage.
-3. **Visible behavioral verification** — declared visible behavior passes executable checks.
-4. **Hidden verification** — held-out behavior passes without exposing the oracle to the model.
-5. **Strict success** — every required retrieval, action, safety, syntax, visible/hidden behavior, and rollback gate passes.
-
-Syntax-valid output is not described as successful software repair. FIM measurements use a practical FP8 7B serving configuration and are not a pure model-scale comparison. Mutation findings remain research-only, denominators do not transfer across task populations, bounded retry was not admitted, and the code-formation branch is inconclusive. See [BENCHMARKS.md](BENCHMARKS.md) for sources and qualifiers.
-
-## Capability boundaries
-
-| Capability | State | Current boundary |
-|---|---|---|
-| Repository navigation | Assisted | Measured support; user verification required |
-| Repository explanation | Assisted | Evidence-backed analysis with explicit unknowns |
-| Retrieval and evidence | Production | Deterministic indexing, bounded retrieval, and citations |
-| Diagnosis | Disabled | Report-only; insufficient reliability for product admission |
-| Task planning | Production | Structured cross-file planning in a read-only machine-checkable boundary |
-| Patch preview / suggestion | Research Only | Candidate actions remain experimental and non-authoritative |
-| Bounded mutation | Disabled | No task class/model passed promotion |
-| Retry | Disabled | One recovery in 66 failures did not justify admission |
-| Autonomous mutation | Disabled | Reliability threshold not crossed |
-| Safety verification | Production | Deterministic policy, command, test, and approval gates |
-| Rollback | Production | Exact pre-patch snapshot restoration |
-| Semantic observability | Research Only | Privacy-safe L1 instrumentation justified, not a coding capability |
-
-Autonomous mutation remains disabled because it has not crossed the preregistered reliability threshold. The durable state is `KEEP_MUTATION_DISABLED`.
-
-## Privacy
-
-Normal startup does not automatically launch a model. Repository contents remain local; bounded evidence is retrieved per task. Privacy-safe L1 instrumentation retained zero raw model outputs and zero raw edit bodies. The Windows installers contain no model weights, local repositories, benchmark corpora, credentials, or development caches.
-
-## Local hardware and runtime requirements
-
-Development uses Node 24.x, npm, Rust 1.97.1 MSVC, and the Tauri toolchain. The installed Windows desktop does not require Node, Rust, or Visual Studio to launch. It expects Windows WebView2. The local inference runtime and model weights are configured separately and are not bundled.
+Requirements: Node.js 24.x, npm, Rust, and the Tauri platform toolchain.
 
 ```bash
-npm install
+npm ci
 npm run dev
 npm run check
+npm run tauri:build -- --bundles msi,nsis --no-sign
 ```
 
-The local development UI is served at `http://127.0.0.1:4173`.
-
-## Windows install status
-
-Version `0.1.0` provides validated x64 MSI and NSIS installers through [GitHub Releases](https://github.com/hanklin9188/Desk-Code-Agent/releases/tag/v0.1.0). Build, install, installed-path startup, WebView2, 18/18 product surfaces, resource paths, uninstall, and reinstall pass. The v0.1.0 Windows packages are unsigned; Windows may display its normal publisher/reputation warning.
-
-The local model runtime and weights are configured separately and are not bundled. End users do not need Node, Rust, or Visual Studio; WebView2 is expected from a supported Windows environment.
-
-Package identities and checksums are recorded in [the W3 report](docs/validation/WINDOWS_PACKAGING_RELEASE_QA_REPORT.v1.json). Installer binaries are not stored in Git source history.
+The development UI is served at `http://127.0.0.1:4173`. Model/runtime setup is separate and normal startup makes no automatic model call.
 
 ## Documentation
 
-1. [Current capability status](docs/productization/CAPABILITY_STATUS.md)
-2. [Benchmarks and research findings](BENCHMARKS.md)
-3. [Architecture overview](docs/architecture/PRODUCT_ARCHITECTURE.md)
-4. [Visualization system](docs/productization/VISUALIZATION_DASHBOARD.md)
-5. [Demo and media index](docs/media/README.md)
-6. [v0.1.0 release notes](docs/releases/v0.1.0.md)
-7. [Third-party notices](THIRD_PARTY_NOTICES.md)
-8. [Documentation index](docs/README.md)
+- [Desktop quick start](docs/productization/DESKTOP_QUICK_START.md)
+- [繁中快速上手](docs/productization/DESKTOP_QUICK_START.zh-TW.md)
+- [Architecture overview](docs/architecture/PRODUCT_ARCHITECTURE.md)
+- [Information architecture](ui/INFORMATION_ARCHITECTURE.md)
+- [UI/UX system](ui/UI_UX_SYSTEM.md)
+- [Benchmarks](BENCHMARKS.md)
+- [Documentation index](docs/README.md)
+- [Third-party notices](THIRD_PARTY_NOTICES.md)
 
 ## Known limitations
 
-- Autonomous mutation and default retry are disabled.
-- Model/runtime installation is separate from the desktop installer.
-- Human-observed Narrator spoken-output validation is deferred; no accessibility certification is claimed.
-- Windows v0.1.0 installers are unsigned; trusted code signing is future hardening.
-
-## Roadmap
-
-Project implementation, portfolio media, local Windows release QA, Apache-2.0 licensing, and v0.1.0 publication are complete. Capability research remains closed and mutation remains disabled. Optional future maintenance includes trusted Windows signing and human Narrator spoken-output validation; neither creates a new engineering phase.
-
-Canonical GitHub target: `https://github.com/hanklin9188/Desk-Code-Agent`.
+- Task execution and semantic indexing are not yet connected to a repository selected in the desktop app.
+- GitHub URL cloning is unavailable; clone locally first.
+- Autonomous mutation and default retry remain disabled.
+- The model runtime and weights are configured separately and are not bundled.
+- Windows packages are unsigned; trusted signing is future hardening.
+- Narrator spoken-output validation is deferred; no accessibility certification is claimed.
 
 ## License
 
-Desk Code Agent is licensed under the [Apache License 2.0](LICENSE). Third-party dependency terms and pinned notices are recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Desk Code Agent is licensed under the [Apache License 2.0](LICENSE). Distributed dependency terms and pinned notices are recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

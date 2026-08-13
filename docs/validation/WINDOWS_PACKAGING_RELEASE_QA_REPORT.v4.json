@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 4,
+  "reportId": "dca-v0.2.0-windows-packaging-release-qa-v4-no-git-process",
+  "supersedes": "dca-v0.2.0-windows-packaging-release-qa-v3-security-successor",
+  "status": "PASS_UNSIGNED_RELEASE_CANDIDATE",
+  "release": "0.2.0",
+  "source": {
+    "identityPolicyVersion": 3,
+    "identitySha256": "24f2bd1f71ca66c2a3f9db01e166fc8fb368bf9dd7f9ee704cab04be5bca70ec",
+    "authoritativeFileCount": 2390,
+    "authoritativeBytes": 89503124,
+    "linuxWindowsNtfsEquality": "PASS_EXACT",
+    "scope": "exact whole-index export used for build; later changes are append-only or checksum/documentation evidence and do not alter compiled or bundled inputs",
+    "postBuildNonBuildEvidencePaths": [
+      "artifacts/release/v0.2.0/SHA256SUMS-v0.2.0.txt",
+      "docs/exec-plans/active/MASTER_EXECUTION_PLAN.md",
+      "docs/releases/v0.2.0.md",
+      "docs/releases/v0.2.0.md.sha256",
+      "docs/validation/README.md",
+      "docs/validation/WINDOWS_PACKAGING_RELEASE_QA_REPORT.v4.json",
+      "docs/validation/WINDOWS_PACKAGING_RELEASE_QA_REPORT.v4.json.sha256"
+    ],
+    "compiledOrBundledInputsChangedAfterBuild": 0
+  },
+  "toolchain": {
+    "os": "WINDOWS_11_REFERENCE_HOST",
+    "architecture": "x86_64-pc-windows-msvc",
+    "node": "24.15.0",
+    "npm": "11.12.1",
+    "rust": "1.97.1",
+    "webView2": "150.0.4078.48",
+    "rustPathRemap": "PASS_RUST_BUILD_ROOT_161_HOST_PATHS_0"
+  },
+  "artifacts": [
+    { "kind": "MSI", "filename": "Desk Code Agent_0.2.0_x64_en-US.msi", "bytes": 2123626, "sha256": "279f4a8dc6c97db5e1af540627d3892c6827f2b607d25ecd72adc6ccfc854f86", "authenticode": "NOT_SIGNED" },
+    { "kind": "NSIS", "filename": "Desk Code Agent_0.2.0_x64-setup.exe", "bytes": 1271455, "sha256": "732b2319f9a1dd4618c650d7dd1c1d88b60358edc6ccc840f65139603c132b4b", "authenticode": "NOT_SIGNED" },
+    { "kind": "NATIVE_EXE_LOOSE", "filename": "desk-code-agent.exe", "bytes": 3833856, "sha256": "8c11b610b433848abdb93689465153976c7c1f48a5bfd3545e5cef153e9da365", "authenticode": "NOT_SIGNED" },
+    { "kind": "NATIVE_EXE_INSTALLED_NSIS", "bytes": 3833856, "sha256": "a48f2a110da5d5f593de3a22c11e1bcb69eed41cbc319c6e7c9319c03c5ec172", "bundleMarker": "NSIS" },
+    { "kind": "NATIVE_EXE_INSTALLED_MSI", "bytes": 3833856, "sha256": "c379c3cf0deb4b899d116b617ca94d29553bf96f57d2e086861e7246b32b5cca", "bundleMarker": "MSI" }
+  ],
+  "securityCorrection": {
+    "unsafeGitStatusReproduction": "PASS_HARMLESS_FILTER_CANARY_EXECUTED_ON_OLD_PATH",
+    "finalAcquisition": "DIRECT_BOUNDED_METADATA_READER_NO_GIT_OR_CHILD_PROCESS",
+    "productWorktreeStatus": "NOT_CHECKED_SAFETY_BOUNDARY",
+    "repositoryReportedHeadObjectValidated": false,
+    "nativeMaliciousFilterRegression": "PASS_CANARY_NOT_EXECUTED",
+    "installedNativeInvocation": "PASS_NAME_BRANCH_HEAD_MANIFEST_STATUS",
+    "absolutePathRendered": false,
+    "linkedWorktreeAndSubmoduleIndirection": "REJECTED_UNSUPPORTED"
+  },
+  "validation": {
+    "design": "PASS_2390_FILES_ZERO_WARNINGS_ERRORS",
+    "vitest": "PASS_50_FILES_255_PASSED_1_SKIPPED_INSTALLED_RUNTIME_PROBE",
+    "typecheck": "PASS",
+    "frontendBuild": "PASS",
+    "rustFmt": "PASS",
+    "rustTests": "PASS_5_OF_5_WINDOWS",
+    "rustClippyWarningsDenied": "PASS",
+    "npmAudit": "PASS_ZERO_VULNERABILITIES",
+    "cargoAudit": "PASS_ZERO_VULNERABILITIES_16_UNMAINTAINED_1_UNSOUND_INFORMATIONAL_WARNINGS_REVIEWED",
+    "sourceAndBundlePrivatePaths": 0,
+    "msiInstallStartupUninstall": "PASS_PER_USER_DUAL_MODE_ALLUSERS_2_MSIINSTALLPERUSER_1",
+    "msiDefaultElevatedUiPath": "NOT_RUN",
+    "nsisV0_1_0Upgrade": "PASS_TO_0_2_0_NO_DUPLICATE_REGISTRATION",
+    "nsisCleanInstallStartupUninstallReinstall": "PASS",
+    "nativePickerDialog": "PASS_OPENED",
+    "nativeInspectionBoundary": "PASS_INSTALLED_COMMAND_WITH_HARMLESS_HOSTILE_FIXTURE",
+    "installedLicenseTexts": 127,
+    "freshWebViewProfileFilesAfterUninstall": 170,
+    "freshWebViewProfileBytesAfterUninstall": 9265403,
+    "freshProfileSelectedPathCanaryOrPrivatePathHits": 0,
+    "finalState": "PASS_V0_2_0_NSIS_INSTALLED_ZERO_RUNNING_PROCESSES"
+  },
+  "distribution": {
+    "runtimeDependencies": 205,
+    "npm": 5,
+    "cargo": 200,
+    "authoritativeLicenseTexts": 205,
+    "uniquePinnedLicenseTexts": 126,
+    "unresolvedLicenseBlockers": 0,
+    "sbomSha256": "a4276b84e5263ef26acee8d5bff33b96b3cdaf773df723838796bff2a31c7ba0"
+  },
+  "privacy": { "targetModelCalls": 0, "benchmarkCalls": 0, "repositoryWrites": 0, "rawModelOutputs": 0, "rawEditBodies": 0, "modelWeights": 0 },
+  "limitations": ["UNSIGNED_INSTALLERS", "WEBVIEW2_BOOTSTRAPPER_PATH_NOT_RUN_RUNTIME_ALREADY_PRESENT", "WEBVIEW_PROFILE_MAY_PERSIST_AFTER_UNINSTALL", "SELECTED_REPOSITORY_TASK_RUNTIME_DISCONNECTED", "GITHUB_URL_CLONING_UNAVAILABLE"],
+  "mustNotPublishSupersededArtifactHashes": ["5ba8a4ea7023be393aab91c888a1ed57cb0d154dedf1973c78bc88a2ba952221", "9b517f77683bf543f30dcf9cc3b572406ee858883d6f76725b0f6a7083a9dd62", "8c2e5c62866edf0914dacb86574f0f693c1e05c7d719c474ec494eec662a0e19", "0aee91457d8a4bce7a7e8deb9e16331dfb29eda4eaeb3729be3bae2ca03f3989", "2c644344b8a7fb766ae5792340a3f85d1a001f04b19d68005414c0363c107d59", "2fad3d23b27057f4a54fdcab67a4603f3c9a943973f9a764affe074be1a43b9b"]
+}

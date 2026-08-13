@@ -2,6 +2,26 @@
 
 All notable public milestones for Desk Code Agent are recorded here.
 
+## [Unreleased]
+
+## [0.2.0] — 2026-08-13
+
+Repository onboarding and visual comfort.
+
+### Added
+
+- Empty-first desktop onboarding with a concise three-step repository guide
+- Native local-folder picker and bounded read-only Git identity/file-manifest inspection
+- Explicit, reversible guided demo with persistent fixture and zero-model-call labelling
+- System/Dark/Light themes, Comfortable/Compact density, three text sizes, and live reduced-motion settings
+
+### Changed
+
+- Consolidated the primary rail to eight workflow-oriented destinations
+- Raised interface typography to a 12px compact floor, 14px UI base, 15px body, and 13px code
+- Reworked responsive panels, focus visibility, contrast, colors, and state-driven motion
+- Disabled task execution for a selected repository until the real desktop runtime bridge exists, instead of replaying demo activity
+
 ## [0.1.0] — 2026-08-13
 
 First public portfolio milestone, licensed under Apache-2.0.

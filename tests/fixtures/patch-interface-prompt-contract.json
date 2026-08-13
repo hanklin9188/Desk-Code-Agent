@@ -1,0 +1,3 @@
+{
+  "promptTemplate": "TASK\n{behavioral_requirement}\n\nCERTIFICATION\nSAFE_MUTATION_REQUIRED\n\nEXACT TARGET\nfile={exact_relevant_file}\nsymbol={exact_relevant_symbol}\nrange={start_line}-{end_line} (1-based inclusive)\n\nKNOWN CORRECT ROOT CAUSE\n{root_cause}\n\nCURRENT SOURCE [{exact_relevant_file}]\n{source}\n\nVISIBLE TEST EVIDENCE [{visible_test_path}]\nPreflight status against current source: {visible_preflight_status}.\n{visible_test}\n\nSEALED HIDDEN ORACLE EVIDENCE\nPreflight status against current source: {hidden_preflight_status}. The hidden test source and assertions are not shown. At least one trusted behavioral oracle fails against the current source. Do not modify tests."
+}

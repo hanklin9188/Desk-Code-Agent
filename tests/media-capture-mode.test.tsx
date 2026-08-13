@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { App } from "../apps/desktop/src/app/App";
@@ -11,6 +11,7 @@ afterEach(() => {
   cleanup();
   window.history.replaceState({}, "", "/");
 });
+beforeEach(() => window.localStorage.clear());
 
 describe("deterministic media capture mode", () => {
   it("defines five stable, unique capture presets", () => {
@@ -44,11 +45,15 @@ describe("deterministic media capture mode", () => {
   });
 
   it("opens chart evidence in the in-app read-only artifact viewer", async () => {
-    const user = userEvent.setup(); render(<App />);
-    const sourceButton = screen.getByRole("button", { name: /Open source: Privacy-safe paired report/ });
+    const user = userEvent.setup();
+    render(<App />);
+    expect(screen.getByRole("heading", { name: "Start with a repository" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /Research \(Ctrl\+7\)/ }));
+    await user.click(screen.getByRole("button", { name: "View experiment evidence" }));
+    const sourceButton = screen.getAllByRole("button", { name: /Open source: Privacy-safe public projection/ })[0];
     await user.click(sourceButton);
     const dialog = screen.getByRole("dialog", { name: "Canonical artifact" });
-    expect(dialog).toHaveTextContent("PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_PAIRED_OBSERVABILITY_REPORT.v3.json");
+    expect(dialog).toHaveTextContent("PRIVACY_SAFE_OBSERVABILITY_PUBLIC_PROJECTION.v1.json");
     expect(dialog).toHaveTextContent("READ-ONLY BUNDLED EVIDENCE");
 
     const closeButton = screen.getByRole("button", { name: "Close artifact" });
@@ -63,7 +68,7 @@ describe("deterministic media capture mode", () => {
   });
 
   it("normalizes safe Windows artifact separators without allowing arbitrary files", () => {
-    const path = "docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_PAIRED_OBSERVABILITY_REPORT.v3.json";
+    const path = "docs/productization/PRIVACY_SAFE_OBSERVABILITY_PUBLIC_PROJECTION.v1.json";
     expect(resolveCanonicalArtifact(path)?.path).toBe(path);
     expect(resolveCanonicalArtifact(path.replaceAll("/", "\\"))?.path).toBe(path);
     expect(resolveCanonicalArtifact("docs\\evidence\\Report With Spaces.json")).toBeUndefined();

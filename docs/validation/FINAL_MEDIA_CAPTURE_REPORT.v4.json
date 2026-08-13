@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 4,
+  "reportId": "dca-v0.2.0-presentation-media-v4-observed-head-successor",
+  "supersedes": "docs/validation/FINAL_MEDIA_CAPTURE_REPORT.v3.json",
+  "status": "PASS_LOCAL_MEDIA_READY",
+  "release": "0.2.0",
+  "reason": "Repository metadata wording was narrowed after security review; sealed v3 evidence remains historical.",
+  "changedAssets": [
+    {
+      "path": "docs/media/releases/v0.2.0/screenshots/02-repository-ready.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 177420,
+      "sha256": "9e782d0a645d8cc3a0ee5a44272b172250be19e5f55df8f46e0c86bf8d306a83",
+      "reason": "The UI now labels branch and HEAD as repository-reported untrusted metadata and makes no Git object-validity claim."
+    },
+    {
+      "path": "docs/media/releases/v0.2.0/screenshots/05-research-archive.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 226759,
+      "sha256": "e7d5f7e34435d0a4bca9a6bfbe78a4a5f7e764c5e672e99a1e5032a6fcd9fa3e",
+      "reason": "The source label now truthfully identifies the bounded privacy-safe public projection rather than the excluded paired report."
+    }
+  ],
+  "unchangedAssets": 5,
+  "manifest": {
+    "path": "docs/media/releases/v0.2.0/CAPTURE_MANIFEST.json",
+    "sha256": "2112cc52cf75de5706ba4e8f4672cfa48e310cacd64fb47492b6681e7ec2075b"
+  },
+  "validation": {
+    "dimensions": "PASS",
+    "visualInspection": "PASS",
+    "gitObjectValidityClaims": 0,
+    "worktreeCleanOrDirtyClaims": 0,
+    "privatePaths": 0,
+    "secrets": 0,
+    "unsupportedCapabilityClaims": 0,
+    "productionPresentationQueryGate": "PASS_DISABLED",
+    "targetModelCalls": 0,
+    "benchmarkCalls": 0,
+    "legacyV0_1_0AssetsChanged": 0
+  }
+}

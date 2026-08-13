@@ -12,21 +12,17 @@ describe("final publication readiness", () => {
     const value = read("README.md");
     const headings = [
       "# Desk Code Agent",
-      "## What Desk Code Agent is",
-      "## Why it exists",
-      "## Key capabilities",
-      "## Architecture",
-      "## Product workflow",
-      "## Verification and safety",
-      "## Research findings",
-      "## Benchmarks",
-      "## Capability boundaries",
-      "## Privacy",
-      "## Local hardware and runtime requirements",
-      "## Windows install status",
+      "## Start in three steps",
+      "## What works today",
+      "## A workspace, not a chat box",
+      "## Designed for visual comfort",
+      "## Safety by construction",
+      "## Install on Windows",
+      "## Research evidence",
+      "## Develop locally",
       "## Documentation",
       "## Known limitations",
-      "## Roadmap"
+      "## License"
     ];
     let previous = -1;
     for (const heading of headings) {
@@ -34,9 +30,10 @@ describe("final publication readiness", () => {
       expect(next, heading).toBeGreaterThan(previous);
       previous = next;
     }
-    expect(value).toContain("A local-first, verification-first software engineering workbench for small language models.");
-    expect(value).toContain("Autonomous mutation remains disabled because it has not crossed the preregistered reliability threshold.");
-    expect(value).toContain("It is neither a Codex replacement nor a fully autonomous coding system.");
+    expect(value).toContain("A local-first desktop workspace that makes repository evidence, agent activity, and deterministic verification inspectable.");
+    expect(value).toContain("Current durable product state: `KEEP_MUTATION_DISABLED`.");
+    expect(value).toContain("not a generic chat box and not an autonomous coding system");
+    expect(value).toContain("Run remains disabled for a selected repository");
     expect(value).not.toContain("production autonomous mutation agent");
   });
 
@@ -73,6 +70,22 @@ describe("final publication readiness", () => {
     for (const item of finalInventory.closure as Array<{ finalClassification: string }>) {
       expect(item.finalClassification).toBe("TEXT_PINNED_AUTHORITATIVE");
     }
+
+    const currentInventory = JSON.parse(read("artifacts/release/v0.2.0/third-party-license-inventory.json"));
+    expect(currentInventory.status).toBe("PASS_ALL_DISTRIBUTED_LICENSE_TEXTS_PINNED");
+    expect(currentInventory.counts).toMatchObject({
+      distributedRuntimeDependencies: 205,
+      distributedNpm: 5,
+      distributedCargo: 200,
+      packagesWithAuthoritativeText: 205,
+      uniquePinnedTexts: 126,
+      unresolvedDistributedLicenseBlockers: 0
+    });
+    expect(currentInventory.distributedRuntime).toHaveLength(205);
+    for (const item of currentInventory.pinnedTexts as Array<{ path: string; sha256: string }>) {
+      expect(existsSync(path.join(root, item.path)), item.path).toBe(true);
+      expect(sha256(item.path), item.path).toBe(item.sha256);
+    }
   });
 
   it("applies the owner-approved Apache-2.0 root license without fabricating a NOTICE", () => {
@@ -86,29 +99,35 @@ describe("final publication readiness", () => {
     expect(inventory.rootNotice.status).toBe("ROOT_NOTICE_NOT_REQUIRED_BY_CURRENT_AUDIT");
   });
 
-  it("keeps version 0.1.0 consistent across release surfaces", () => {
+  it("keeps version 0.2.0 consistent while preserving the v0.1.0 release record", () => {
     const npm = JSON.parse(read("package.json"));
     const npmLock = JSON.parse(read("package-lock.json"));
     const tauri = JSON.parse(read("apps/desktop/src-tauri/tauri.conf.json"));
-    expect([npm.version, npmLock.version, tauri.version]).toEqual(["0.1.0", "0.1.0", "0.1.0"]);
-    expect(read("apps/desktop/src-tauri/Cargo.toml")).toMatch(/^version = "0\.1\.0"$/mu);
+    expect([npm.version, npmLock.version, tauri.version]).toEqual(["0.2.0", "0.2.0", "0.2.0"]);
+    expect(read("apps/desktop/src-tauri/Cargo.toml")).toMatch(/^version = "0\.2\.0"$/mu);
     expect([npm.license, npmLock.packages[""].license]).toEqual(["Apache-2.0", "Apache-2.0"]);
     expect(read("apps/desktop/src-tauri/Cargo.toml")).toMatch(/^license = "Apache-2\.0"$/mu);
+    expect(read("CHANGELOG.md")).toContain("## [0.2.0]");
     expect(read("CHANGELOG.md")).toContain("## [0.1.0]");
     expect(read("docs/releases/v0.1.0.md")).toContain("Desk Code Agent v0.1.0");
+    expect(tauri.bundle.resources).toMatchObject({
+      "../../../LICENSE": "LICENSE",
+      "../../../THIRD_PARTY_NOTICES.md": "THIRD_PARTY_NOTICES.md",
+      "../../../third_party/licenses/": "third_party/licenses/"
+    });
   });
 
-  it("provides a valid 1280x640 social preview with the audited identity", () => {
-    const relativePath = "docs/media/social/desk-code-agent-social-preview.png";
+  it("provides a valid current 1280x640 social preview with the audited identity", () => {
+    const relativePath = "docs/media/releases/v0.2.0/social/desk-code-agent-social-preview.png";
     const bytes = readFileSync(path.join(root, relativePath));
     expect(bytes.subarray(1, 4).toString("ascii")).toBe("PNG");
     expect(bytes.readUInt32BE(16)).toBe(1280);
     expect(bytes.readUInt32BE(20)).toBe(640);
-    const audit = JSON.parse(read("docs/validation/SOCIAL_PREVIEW_AUDIT.v1.json"));
-    expect(audit.status).toBe("PASS_LOCAL_NOT_UPLOADED");
-    expect(audit.asset.sha256).toBe(sha256(relativePath));
-    expect(audit.checks.unsupportedCapabilityClaims).toBe(0);
-    expect(audit.checks.privatePaths).toBe(0);
-    expect(audit.checks.secretFindings).toBe(0);
+    const manifest = JSON.parse(read("docs/media/releases/v0.2.0/CAPTURE_MANIFEST.json"));
+    expect(manifest.socialPreview.sha256).toBe(sha256(relativePath));
+    expect(manifest.socialPreview.validation).toBe("PASS_LOCAL_PENDING_GITHUB_SETTINGS_UPLOAD");
+    expect(manifest.privacy.realRepositoryPaths).toBe(0);
+    expect(manifest.privacy.personalIdentifiers).toBe(0);
+    expect(manifest.privacy.secrets).toBe(0);
   });
 });

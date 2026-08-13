@@ -1,11 +1,14 @@
 // @vitest-environment node
 import path from "node:path";
+import { existsSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { readModelSpecializationRegistry } from "../services/model-specialization-runtime/src/index";
 import { assertExactInstalledModelRuntime, probeInstalledModelRuntime, sanitizedLaunchArgs, type InstalledModelRuntime } from "../scripts/model_serving_attestation";
 
 describe("model serving attestation", () => {
-  it("binds the exact installed local model runtime without starting a model", async () => {
+  const installedRuntimeAvailable = existsSync(path.resolve(process.cwd(), "runtime/model/.venv/bin/python"));
+
+  it.skipIf(!installedRuntimeAvailable)("binds the exact installed local model runtime without starting a model", async () => {
     const installed = await probeInstalledModelRuntime(path.resolve(process.cwd()));
     expect(installed.packages).toEqual({ vllm: "0.26.0", transformers: "5.14.1", torch: "2.11.0+cu130" });
     expect(installed.pythonExecutableSha256).toMatch(/^[0-9a-f]{64}$/);

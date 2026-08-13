@@ -2,6 +2,14 @@
 
 Records here contain exact commands, environment, status, artifact hashes and open risks. `NOT_RUN`, `TIMEOUT`, `CANCELLED` and `UNKNOWN` are never converted to `PASS`. Conversation statements are not evidence.
 
+## Current v0.2.0 release-candidate validation
+
+- [`2026-08-13-desktop-ux-onboarding-refinement.md`](2026-08-13-desktop-ux-onboarding-refinement.md) — empty-first onboarding, native read-only repository inspection, typography/theme/motion/responsive refinement, and explicit guided-demo separation.
+- [`FINAL_MEDIA_CAPTURE_REPORT.v2.json`](FINAL_MEDIA_CAPTURE_REPORT.v2.json) — current 1440×900 presentation media, social preview, source closure, privacy scan, and checksums.
+- [`FINAL_MEDIA_CAPTURE_REPORT.v3.json`](FINAL_MEDIA_CAPTURE_REPORT.v3.json) — append-only security successor for the two recaptured onboarding/repository assets and the production presentation-query gate.
+- [`FINAL_MEDIA_CAPTURE_REPORT.v4.json`](FINAL_MEDIA_CAPTURE_REPORT.v4.json) — append-only media successor for repository-reported, untrusted HEAD wording and the privacy-safe aggregate projection.
+- [`WINDOWS_PACKAGING_RELEASE_QA_REPORT.v4.json`](WINDOWS_PACKAGING_RELEASE_QA_REPORT.v4.json) — final exact no-Git-process Windows build, privacy-remapped binaries, MSI/NSIS lifecycle, malicious-filter non-execution, SBOM and license evidence. v2/v3 remain superseded historical evidence and their binary hashes must not be published.
+
 ## Current Windows reference-hardware QA state
 
 W1 is `PASS_WITH_EXPLICIT_NONBLOCKING_ACCESSIBILITY_LIMITATION`. The canonical

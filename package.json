@@ -1,6 +1,6 @@
 {
   "name": "desk-code-agent-v2",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "Apache-2.0",
   "private": true,
   "type": "module",
@@ -116,6 +116,8 @@
     "check": "npm run validate:design && npm run typecheck && npm run test && npm run build"
   },
   "dependencies": {
+    "@tauri-apps/api": "^2.11.1",
+    "@tauri-apps/plugin-dialog": "^2.7.2",
     "@vitejs/plugin-react": "latest",
     "ajv": "^8.18.0",
     "ajv-formats": "^3.0.1",

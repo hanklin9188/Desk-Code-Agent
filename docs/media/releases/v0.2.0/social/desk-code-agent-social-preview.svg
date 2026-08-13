@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Desk Code Agent social preview</title>
+  <desc id="desc">A local-first desktop engineering workspace with a clear three-step repository onboarding path and deterministic safety boundaries.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0b1320"/>
+      <stop offset="1" stop-color="#111d2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#9ab2ff"/>
+      <stop offset="1" stop-color="#6f8df7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#020610" flood-opacity=".42"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="url(#background)"/>
+  <circle cx="1080" cy="60" r="330" fill="#243b70" opacity=".18"/>
+  <circle cx="70" cy="640" r="250" fill="#244b46" opacity=".12"/>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <g transform="translate(68 60)">
+      <rect width="44" height="44" rx="12" fill="url(#accent)"/>
+      <path d="M22 10 11 16v13l11 6 11-6V16zM16 20l6 3 6-3M22 23v7" fill="none" stroke="#09111e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="60" y="31" fill="#f5f8fd" font-size="25" font-weight="750">Desk Code Agent</text>
+    </g>
+
+    <text x="68" y="178" fill="#f5f8fd" font-size="50" font-weight="760" letter-spacing="-1.8">Open a repository.</text>
+    <text x="68" y="233" fill="#f5f8fd" font-size="42" font-weight="760" letter-spacing="-1.4">Keep every boundary visible.</text>
+    <text x="68" y="283" fill="#aebbd0" font-size="19">A local-first desktop workspace for evidence, typed activity,</text>
+    <text x="68" y="311" fill="#aebbd0" font-size="19">and deterministic verification.</text>
+
+    <g transform="translate(68 365)" font-size="13" font-weight="700">
+      <rect width="137" height="38" rx="19" fill="#123326" stroke="#2d6c50"/>
+      <circle cx="21" cy="19" r="4" fill="#66dfa1"/>
+      <text x="34" y="24" fill="#8ce3b4">LOCAL ONLY</text>
+      <rect x="150" width="180" height="38" rx="19" fill="#162746" stroke="#38568d"/>
+      <text x="171" y="24" fill="#b1c2ff">READ-ONLY REPO</text>
+      <rect x="343" width="190" height="38" rx="19" fill="#351e27" stroke="#6d3744"/>
+      <text x="363" y="24" fill="#f2a5ad">MUTATION DISABLED</text>
+    </g>
+
+    <g transform="translate(68 455)" fill="#b8c4d5" font-size="14">
+      <g><rect width="36" height="36" rx="10" fill="#1b3159" stroke="#4869aa"/><text x="14" y="23" fill="#c8d4ff" font-weight="800">1</text><text x="50" y="17" fill="#f2f6fb" font-weight="700">Choose folder</text><text x="50" y="38">Existing local Git repository</text></g>
+      <g transform="translate(0 62)"><rect width="36" height="36" rx="10" fill="#1b3159" stroke="#4869aa"/><text x="14" y="23" fill="#c8d4ff" font-weight="800">2</text><text x="50" y="17" fill="#f2f6fb" font-weight="700">Confirm facts</text><text x="50" y="38">Branch · commit · bounded files</text></g>
+      <g transform="translate(0 124)"><rect width="36" height="36" rx="10" fill="#1b3159" stroke="#4869aa"/><text x="14" y="23" fill="#c8d4ff" font-weight="800">3</text><text x="50" y="17" fill="#f2f6fb" font-weight="700">Inspect safely</text><text x="50" y="38">No upload · no source mutation</text></g>
+    </g>
+
+    <g transform="translate(690 92)" filter="url(#shadow)">
+      <rect width="522" height="468" rx="22" fill="#101a29" stroke="#40516b"/>
+      <rect x="1" y="1" width="520" height="55" rx="21" fill="#131f30"/>
+      <circle cx="25" cy="28" r="5" fill="#66dfa1"/>
+      <text x="40" y="33" fill="#aebbd0" font-size="13">PRIVATE BY DEFAULT · READ ONLY</text>
+
+      <g transform="translate(30 84)">
+        <text x="0" y="30" fill="#f5f8fd" font-size="29" font-weight="750">Start with a repository</text>
+        <text x="0" y="62" fill="#aebbd0" font-size="14">Choose a Git folder already on this computer.</text>
+        <rect y="88" width="148" height="42" rx="9" fill="url(#accent)"/>
+        <text x="22" y="114" fill="#08111f" font-size="13" font-weight="800">Choose local folder</text>
+        <rect x="158" y="88" width="132" height="42" rx="9" fill="#152235" stroke="#3a4c68"/>
+        <text x="178" y="114" fill="#e9eef7" font-size="13" font-weight="700">Try guided demo</text>
+
+        <g transform="translate(0 160)">
+          <rect width="140" height="112" rx="13" fill="#172438" stroke="#354861"/>
+          <text x="18" y="31" fill="#a9bcff" font-size="12" font-weight="800">01</text>
+          <text x="18" y="57" fill="#f2f6fb" font-size="14" font-weight="700">Choose Git folder</text>
+          <text x="18" y="80" fill="#aebbd0" font-size="12">Local and existing</text>
+          <text x="18" y="98" fill="#aebbd0" font-size="12">No upload</text>
+
+          <rect x="151" width="140" height="112" rx="13" fill="#172438" stroke="#354861"/>
+          <text x="169" y="31" fill="#a9bcff" font-size="12" font-weight="800">02</text>
+          <text x="169" y="57" fill="#f2f6fb" font-size="14" font-weight="700">Confirm boundary</text>
+          <text x="169" y="80" fill="#aebbd0" font-size="12">Read-only identity</text>
+          <text x="169" y="98" fill="#aebbd0" font-size="12">Mutation locked</text>
+
+          <rect x="302" width="140" height="112" rx="13" fill="#172438" stroke="#354861"/>
+          <text x="320" y="31" fill="#a9bcff" font-size="12" font-weight="800">03</text>
+          <text x="320" y="57" fill="#f2f6fb" font-size="14" font-weight="700">Inspect evidence</text>
+          <text x="320" y="80" fill="#aebbd0" font-size="12">Typed activity</text>
+          <text x="320" y="98" fill="#aebbd0" font-size="12">Machine truth</text>
+        </g>
+
+        <g transform="translate(0 298)">
+          <rect width="442" height="54" rx="12" fill="#102a22" stroke="#2e664f"/>
+          <circle cx="24" cy="27" r="5" fill="#66dfa1"/>
+          <text x="40" y="24" fill="#ecf8f2" font-size="13" font-weight="700">Your source stays where it is.</text>
+          <text x="40" y="42" fill="#91c8ac" font-size="12">No upload · no checkout · no model call</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

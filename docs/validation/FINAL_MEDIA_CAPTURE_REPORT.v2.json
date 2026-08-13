@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 2,
+  "reportId": "dca-v0.2.0-presentation-media-v2",
+  "phase": "V0_2_0_PRODUCT_PRESENTATION",
+  "status": "PASS_LOCAL_MEDIA_READY",
+  "release": "0.2.0",
+  "manifest": {
+    "path": "docs/media/releases/v0.2.0/CAPTURE_MANIFEST.json",
+    "sidecar": "docs/media/releases/v0.2.0/CAPTURE_MANIFEST.json.sha256"
+  },
+  "validation": {
+    "screenshots": "PASS_5_OF_5_1440_X_900",
+    "socialPreview": "PASS_1280_X_640_UNDER_1_MIB",
+    "presentationRegistryTests": "PASS",
+    "sourceClosure": "PASS",
+    "reducedMotion": "PASS_ALL_PRESENTATION_PRESETS",
+    "readmeLinks": "PASS_LOCAL",
+    "privacyScan": "PASS_ZERO_FINDINGS",
+    "checksums": "PASS",
+    "visualInspection": "PASS"
+  },
+  "content": {
+    "onboarding": "PASS_CLEAR_PRIMARY_ACTION_AND_THREE_STEPS",
+    "repositoryReady": "PASS_SANITIZED_READ_ONLY_FACTS_NO_ABSOLUTE_PATH",
+    "guidedDemo": "PASS_PERSISTENT_ZERO_REPOSITORY_ZERO_MODEL_LABEL",
+    "appearance": "PASS_LIGHT_THEME_125_PERCENT_TEXT_REDUCED_MOTION",
+    "research": "PASS_SEALED_ARCHIVE_BOUNDARY",
+    "unsupportedCapabilityClaims": 0
+  },
+  "privacy": {
+    "secrets": 0,
+    "privatePaths": 0,
+    "personalIdentifiers": 0,
+    "rawModelOutputs": 0,
+    "rawEditBodies": 0
+  },
+  "invariants": {
+    "targetModelCalls": 0,
+    "benchmarkCalls": 0,
+    "mutation": "KEEP_MUTATION_DISABLED",
+    "research": "RESEARCH_COMPLETE_INCONCLUSIVE_FORMATION_RESULT",
+    "legacyV0_1_0AssetsChanged": 0,
+    "githubSocialPreviewUploaded": false
+  },
+  "decision": {
+    "readmeMedia": "READY_FOR_DRAFT_PR",
+    "githubSocialPreview": "READY_FOR_MANUAL_SETTINGS_UPLOAD_AFTER_MERGE",
+    "windowsRelease": "SEPARATE_NATIVE_PACKAGE_AND_INSTALL_QA_REQUIRED"
+  }
+}

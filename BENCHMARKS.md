@@ -49,7 +49,7 @@ The first L0 decomposition classified 66 failures: T11 retrieval 5, T12 action r
 
 The L1 path retained zero raw model outputs, raw edit bodies, raw identifiers, raw literals, parser messages, or HMAC key material. No additional model calls were required.
 
-Sources: [`SEMANTIC_FAILURE_DECOMPOSITION_SESSION_B.v1.json`](docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_SESSION_B.v1.json), [`PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_PAIRED_OBSERVABILITY_REPORT.v3.json`](docs/experiments/model-specialization/PRIVACY_SAFE_SEMANTIC_OBSERVABILITY_V3_PAIRED_OBSERVABILITY_REPORT.v3.json)
+Sources: [`SEMANTIC_FAILURE_DECOMPOSITION_SESSION_B.v1.json`](docs/experiments/model-specialization/SEMANTIC_FAILURE_DECOMPOSITION_SESSION_B.v1.json), [`PRIVACY_SAFE_OBSERVABILITY_PUBLIC_PROJECTION.v1.json`](docs/productization/PRIVACY_SAFE_OBSERVABILITY_PUBLIC_PROJECTION.v1.json). The public projection contains only aggregate counts and zero-retention invariants; sealed machine-local provenance is not bundled or published.
 
 ## Code-formation closure
 
